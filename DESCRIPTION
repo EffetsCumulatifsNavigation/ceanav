@@ -1,0 +1,27 @@
+Package: ceanavR
+Type: Package
+Title: Cumulative effects assessments of marine activities in the St. Lawrence
+Version: 1.0.0
+Authors@R: c(
+    person(given = "David",
+           family = "Beauchesne",
+           role = c("aut", "cre"),
+           email = "david.beauchesne@hotmail.com"))
+Description: Functions and data for the cumulative effects assessments of marine activities in the St. Lawrence
+URL: https://github.com/EffetsCumulatifsNavigation/ceanavR
+BugReports: https://github.com/EffetsCumulatifsNavigation/ceanavR/issues
+License: GPL (>= 2)
+Encoding: UTF-8
+LazyData: true
+Depends:
+    R (>= 4.0)
+Imports:
+    sf,
+    stars,
+    tidyverse,
+    magrittr
+Suggests:
+    knitr,
+    rmarkdown
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
