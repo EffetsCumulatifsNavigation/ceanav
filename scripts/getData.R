@@ -39,10 +39,19 @@ library(magrittr)
 # ---------------------------------------
 #
 # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+# URL
 studyarea <- 'https://github.com/EffetsCumulatifsNavigation/ZoneEtude/raw/main/Data/StudyArea/StudyArea.geojson'
+
+# Download
 download.file(studyarea, destfile = './data/StudyArea.geojson')
+
+# Import
 studyarea <- st_read('./data/StudyArea.geojson')
+
+# Export
 save(studyarea, file = './data/studyarea.RData')
+
+# Delete
 file.remove('./data/StudyArea.geojson')
 # _____________________________________________________________________________ #
 
@@ -82,4 +91,17 @@ file.remove('./data/Grid_Poly1000.geojson')
 file.remove('./data/Grid_Poly2000.geojson')
 file.remove('./data/Grid_Raster1000.gpkg')
 file.remove('./data/Grid_Raster2000.gpkg')
+# _____________________________________________________________________________ #
+
+
+# =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+# Simple EGSL outline from eDrivers
+# ---------------------------------------
+#
+# =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+# URL
+egslSimple <- 'https://github.com/eDrivers/eDriversGrids/raw/master/Data/egslSimple.RData'
+
+# Download
+download.file(egslSimple, destfile = './data/egslSimple.RData')
 # _____________________________________________________________________________ #
