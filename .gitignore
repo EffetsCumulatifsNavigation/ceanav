@@ -19,4 +19,5 @@
 # User-specific files ----
 README.html
 
-data/
+# Project-specific files ----
+./data/
