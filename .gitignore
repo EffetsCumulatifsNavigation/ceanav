@@ -20,4 +20,5 @@
 README.html
 
 # Project-specific files ----
-./data/
+data/
+output/

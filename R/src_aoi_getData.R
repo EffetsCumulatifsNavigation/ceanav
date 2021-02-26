@@ -1,24 +1,18 @@
+getAOI <- function () {
 # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
 # Notes
 # ---------------------------------------
 #
 # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
-# This script is built to get the data from various sources on the internet and
-# locally
+# This script is built to get the data for the study area, which is hosted
+# in a different GH repo:
+#   https://github.com/EffetsCumulatifsNavigation/ZoneEtude
 #
-# The package is not meant for publication, and this script is also not meant
-# to be reprpducible
+# I may at some point migrate the code for the study area directly in this
+# research compendium.
 #
-# The goal is to facilitate the analyses and remove the need to load the data
-# from various repos all the time
-#
-# The actual repos should be fully reproducible, and the final workflow should
-# not call data from the package
-#
-# This is mostly for exploration purposes and ease of work in the future
-#
-# Use to see list of data available in the package:
-# data(package = "ceanavR")
+# For now I will keep it seperate because I am likely to share the data for
+# the study area with outside collaborators.
 # _____________________________________________________________________________ #
 
 
@@ -43,16 +37,13 @@ library(magrittr)
 studyarea <- 'https://github.com/EffetsCumulatifsNavigation/ZoneEtude/raw/main/Data/StudyArea/StudyArea.geojson'
 
 # Download
-download.file(studyarea, destfile = './data/StudyArea.geojson')
+download.file(studyarea, destfile = './analysis/output/aoi/StudyArea.geojson')
 
 # Import
-studyarea <- st_read('./data/StudyArea.geojson')
+studyarea <- st_read('./analysis/output/aoi/StudyArea.geojson')
 
-# Export
+# Export as package data
 save(studyarea, file = './data/studyarea.RData')
-
-# Delete
-file.remove('./data/StudyArea.geojson')
 # _____________________________________________________________________________ #
 
 
@@ -69,28 +60,22 @@ grid1000ras <- 'https://github.com/EffetsCumulatifsNavigation/ZoneEtude/raw/main
 grid2000ras <- 'https://github.com/EffetsCumulatifsNavigation/ZoneEtude/raw/main/Data/StudyGrid/Grid_Raster2000.gpkg'
 
 # Download
-download.file(grid1000poly, destfile = './data/Grid_Poly1000.geojson')
-download.file(grid2000poly, destfile = './data/Grid_Poly2000.geojson')
-download.file(grid1000ras, destfile = './data/Grid_Raster1000.gpkg')
-download.file(grid2000ras, destfile = './data/Grid_Raster2000.gpkg')
+download.file(grid1000poly, destfile = './analysis/output/aoi/Grid_Poly1000.geojson')
+download.file(grid2000poly, destfile = './analysis/output/aoi/Grid_Poly2000.geojson')
+download.file(grid1000ras, destfile = './analysis/output/aoi/Grid_Raster1000.gpkg')
+download.file(grid2000ras, destfile = './analysis/output/aoi/Grid_Raster2000.gpkg')
 
 # Import
-grid1000poly <- st_read('./data/Grid_Poly1000.geojson')
-grid2000poly <- st_read('./data/Grid_Poly2000.geojson')
-grid1000ras <- read_stars('./data/Grid_Raster1000.gpkg')
-grid2000ras <- read_stars('./data/Grid_Raster2000.gpkg')
+grid1000poly <- st_read('./analysis/output/aoi/Grid_Poly1000.geojson')
+grid2000poly <- st_read('./analysis/output/aoi/Grid_Poly2000.geojson')
+# grid1000ras <- read_stars('./analysis/output/aoi/Grid_Raster1000.gpkg')
+# grid2000ras <- read_stars('./analysis/output/aoi/Grid_Raster2000.gpkg')
 
-# Export
+# Export as package data
 save(grid1000poly, file = './data/grid1000poly.RData')
 save(grid2000poly, file = './data/grid2000poly.RData')
-save(grid1000ras, file = './data/grid1000ras.RData')
-save(grid2000ras, file = './data/grid2000ras.RData')
-
-# Delete
-file.remove('./data/Grid_Poly1000.geojson')
-file.remove('./data/Grid_Poly2000.geojson')
-file.remove('./data/Grid_Raster1000.gpkg')
-file.remove('./data/Grid_Raster2000.gpkg')
+# save(grid1000ras, file = './data/grid1000ras.RData')
+# save(grid2000ras, file = './data/grid2000ras.RData')
 # _____________________________________________________________________________ #
 
 
@@ -98,6 +83,7 @@ file.remove('./data/Grid_Raster2000.gpkg')
 # Simple EGSL outline from eDrivers
 # ---------------------------------------
 #
+# Import only for convenience, directly as package data
 # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
 # URL
 egslSimple <- 'https://github.com/eDrivers/eDriversGrids/raw/master/Data/egslSimple.RData'
@@ -105,3 +91,4 @@ egslSimple <- 'https://github.com/eDrivers/eDriversGrids/raw/master/Data/egslSim
 # Download
 download.file(egslSimple, destfile = './data/egslSimple.RData')
 # _____________________________________________________________________________ #
+}
