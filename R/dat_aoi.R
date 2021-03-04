@@ -17,18 +17,6 @@ getAOI <- function () {
 
 
 # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
-# Libraries
-# ---------------------------------------
-#
-# =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
-library(sf)
-library(stars)
-library(tidyverse)
-library(magrittr)
-# _____________________________________________________________________________ #
-
-
-# =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
 # Study area
 # ---------------------------------------
 #
@@ -43,7 +31,7 @@ download.file(studyarea, destfile = './analysis/output/aoi/StudyArea.geojson')
 studyarea <- st_read('./analysis/output/aoi/StudyArea.geojson')
 
 # Export as package data
-save(studyarea, file = './data/studyarea.RData')
+save(studyarea, file = './data/aoi_studyarea.RData')
 # _____________________________________________________________________________ #
 
 
@@ -66,14 +54,18 @@ download.file(grid1000ras, destfile = './analysis/output/aoi/Grid_Raster1000.gpk
 download.file(grid2000ras, destfile = './analysis/output/aoi/Grid_Raster2000.gpkg')
 
 # Import
-grid1000poly <- st_read('./analysis/output/aoi/Grid_Poly1000.geojson')
-grid2000poly <- st_read('./analysis/output/aoi/Grid_Poly2000.geojson')
+aoi <- st_read('./analysis/output/aoi/Grid_Poly1000.geojson')
+aoi2 <- st_read('./analysis/output/aoi/Grid_Poly2000.geojson')
 # grid1000ras <- read_stars('./analysis/output/aoi/Grid_Raster1000.gpkg')
 # grid2000ras <- read_stars('./analysis/output/aoi/Grid_Raster2000.gpkg')
 
+# Remove unnecessary column
+aoi <- select(aoi, -val_ras)
+aoi2 <- select(aoi2, -val_ras)
+
 # Export as package data
-save(grid1000poly, file = './data/grid1000poly.RData')
-save(grid2000poly, file = './data/grid2000poly.RData')
+save(aoi, file = './data/aoi_grid1000poly.RData')
+save(aoi2, file = './data/aoi_grid2000poly.RData')
 # save(grid1000ras, file = './data/grid1000ras.RData')
 # save(grid2000ras, file = './data/grid2000ras.RData')
 # _____________________________________________________________________________ #
@@ -89,6 +81,6 @@ save(grid2000poly, file = './data/grid2000poly.RData')
 egslSimple <- 'https://github.com/eDrivers/eDriversGrids/raw/master/Data/egslSimple.RData'
 
 # Download
-download.file(egslSimple, destfile = './data/egslSimple.RData')
+download.file(egslSimple, destfile = './data/aoi_egslSimple.RData')
 # _____________________________________________________________________________ #
 }
