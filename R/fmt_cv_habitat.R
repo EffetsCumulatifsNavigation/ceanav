@@ -53,3 +53,14 @@ fmtZostere <- function () {
   # Save data
   save(zostere, file = './data/cv_hab_zostere.RData')
 }
+
+
+# Format milieu humide db
+fmtMilieu_humide <- function () {
+  folder <- './analysis/data/cv/habitats/milieu_humide/'
+
+  # Load milieu humide data
+  # dataID: 0004
+  # Milieux humides lac Saint-Pierre
+  milieu_humide_lsp <- read_table(paste0(folder, 'milieu_humide_lac_saint-pierre/MilieuxHumides-lacSaintPierre-sites-2012.csv'))
+}
