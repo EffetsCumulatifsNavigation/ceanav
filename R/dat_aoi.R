@@ -25,10 +25,10 @@ getAOI <- function () {
 studyarea <- 'https://github.com/EffetsCumulatifsNavigation/ZoneEtude/raw/main/Data/StudyArea/StudyArea.geojson'
 
 # Download
-download.file(studyarea, destfile = './analysis/output/aoi/StudyArea.geojson')
+download.file(studyarea, destfile = './analysis/data/aoi/StudyArea.geojson')
 
 # Import
-studyarea <- st_read('./analysis/output/aoi/StudyArea.geojson')
+studyarea <- st_read('./analysis/data/aoi/StudyArea.geojson')
 
 # Export as package data
 save(studyarea, file = './data/aoi_studyarea.RData')
@@ -48,16 +48,16 @@ grid1000ras <- 'https://github.com/EffetsCumulatifsNavigation/ZoneEtude/raw/main
 grid2000ras <- 'https://github.com/EffetsCumulatifsNavigation/ZoneEtude/raw/main/Data/StudyGrid/Grid_Raster2000.gpkg'
 
 # Download
-download.file(grid1000poly, destfile = './analysis/output/aoi/Grid_Poly1000.geojson')
-download.file(grid2000poly, destfile = './analysis/output/aoi/Grid_Poly2000.geojson')
-download.file(grid1000ras, destfile = './analysis/output/aoi/Grid_Raster1000.gpkg')
-download.file(grid2000ras, destfile = './analysis/output/aoi/Grid_Raster2000.gpkg')
+download.file(grid1000poly, destfile = './analysis/data/aoi/Grid_Poly1000.geojson')
+download.file(grid2000poly, destfile = './analysis/data/aoi/Grid_Poly2000.geojson')
+download.file(grid1000ras, destfile = './analysis/data/aoi/Grid_Raster1000.gpkg')
+download.file(grid2000ras, destfile = './analysis/data/aoi/Grid_Raster2000.gpkg')
 
 # Import
-aoi <- st_read('./analysis/output/aoi/Grid_Poly1000.geojson')
-aoi2 <- st_read('./analysis/output/aoi/Grid_Poly2000.geojson')
-# grid1000ras <- read_stars('./analysis/output/aoi/Grid_Raster1000.gpkg')
-# grid2000ras <- read_stars('./analysis/output/aoi/Grid_Raster2000.gpkg')
+aoi <- st_read('./analysis/data/aoi/Grid_Poly1000.geojson')
+aoi2 <- st_read('./analysis/data/aoi/Grid_Poly2000.geojson')
+# grid1000ras <- read_stars('./analysis/data/aoi/Grid_Raster1000.gpkg')
+# grid2000ras <- read_stars('./analysis/data/aoi/Grid_Raster2000.gpkg')
 
 # Remove unnecessary column
 aoi <- select(aoi, -val_ras)
