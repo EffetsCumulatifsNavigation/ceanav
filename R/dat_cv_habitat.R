@@ -3,6 +3,8 @@
 getHabitat <- function() {
   getZostere()
   getMilieu_humide()
+  getMarais()
+  getMilieu_sableux
 }
 
 # Function to download Zostere datasets
@@ -176,5 +178,80 @@ getMilieu_humide <- function() {
 
     # Unzip
     unzip(zipfile = paste0(folder, 'milieuxhum_publ_janv2019.zip'), exdir = folder)
+  }
+}
+
+
+
+# Function to download milieux humides datasets
+getMarais <- function() {
+  output <- './analysis/data/cv/habitats/marais/'
+  if (!file.exists(output)) dir.create(output)
+
+
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  # Milieux côtiers
+  # ------------------------------------
+  # dataID: 0005
+  # ~~~~~~~~~~~~
+  #
+  # Atlas des milieux côtiers d’intérêt pour la conservation dans l’estuaire et
+  # le golfe du Saint-Laurent
+  #
+  # https://catalogue.ogsl.ca/fr/dataset/0a232214-05cc-438a-b914-6a8b53ac184e
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  # Output folder
+  folder <- paste0(output, 'marais_saint-laurent/')
+  if (!file.exists(folder)) dir.create(folder)
+
+  # Proceed only if data is not already loaded
+  if (!file.exists(paste0(folder, 'atlas_estuairegolfe_rapport_final_fr.pdf'))) {
+    # URL
+    marais_stl <- c('https://catalogue.ogsl.ca/data/pasl/0a232214-05cc-438a-b914-6a8b53ac184e/atlas_estuairegolfe_rapport_final_fr.pdf',
+                    'https://catalogue.ogsl.ca/data/pasl/0a232214-05cc-438a-b914-6a8b53ac184e/maraiscotiers_publ_janv2019.zip')
+
+    # Download
+    download.file(marais_stl[1], destfile = paste0(folder, 'atlas_estuairegolfe_rapport_final_fr.pdf'))
+    download.file(marais_stl[2], destfile = paste0(folder, 'maraiscotiers_publ_janv2019.zip'))
+
+    # Unzip
+    unzip(zipfile = paste0(folder, 'maraiscotiers_publ_janv2019.zip'), exdir = folder)
+  }
+}
+
+
+# Function to download milieux humides datasets
+getMilieu_sableux <- function() {
+  output <- './analysis/data/cv/habitats/milieu_sableux/'
+  if (!file.exists(output)) dir.create(output)
+
+
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  # Milieux côtiers
+  # ------------------------------------
+  # dataID: 0005
+  # ~~~~~~~~~~~~
+  #
+  # Atlas des milieux côtiers d’intérêt pour la conservation dans l’estuaire et
+  # le golfe du Saint-Laurent
+  #
+  # https://catalogue.ogsl.ca/fr/dataset/0a232214-05cc-438a-b914-6a8b53ac184e
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  # Output folder
+  folder <- paste0(output, 'milieu_sableux_saint-laurent/')
+  if (!file.exists(folder)) dir.create(folder)
+
+  # Proceed only if data is not already loaded
+  if (!file.exists(paste0(folder, 'atlas_estuairegolfe_rapport_final_fr.pdf'))) {
+    # URL
+    milieu_sableux_stl <- c('https://catalogue.ogsl.ca/data/pasl/0a232214-05cc-438a-b914-6a8b53ac184e/atlas_estuairegolfe_rapport_final_fr.pdf',
+                            'https://catalogue.ogsl.ca/data/pasl/0a232214-05cc-438a-b914-6a8b53ac184e/milieuxsableux_publ_janv2019.zip')
+
+    # Download
+    download.file(milieu_sableux_stl[1], destfile = paste0(folder, 'atlas_estuairegolfe_rapport_final_fr.pdf'))
+    download.file(milieu_sableux_stl[2], destfile = paste0(folder, 'milieuxsableux_publ_janv2019.zip'))
+
+    # Unzip
+    unzip(zipfile = paste0(folder, 'milieuxsableux_publ_janv2019.zip'), exdir = folder)
   }
 }
