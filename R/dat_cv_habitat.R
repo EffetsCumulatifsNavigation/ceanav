@@ -148,4 +148,33 @@ getMilieu_humide <- function() {
     download.file(milieu_humide_lsp[1], destfile = paste0(folder, 'MilieuxHumides-lacSaintPierre-inventaire-2012.csv'))
     download.file(milieu_humide_lsp[2], destfile = paste0(folder, 'MilieuxHumides-lacSaintPierre-sites-2012.csv'))
   }
+
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  # Milieux côtiers
+  # ------------------------------------
+  # dataID: 0005
+  # ~~~~~~~~~~~~
+  #
+  # Atlas des milieux côtiers d’intérêt pour la conservation dans l’estuaire et
+  # le golfe du Saint-Laurent
+  #
+  # https://catalogue.ogsl.ca/fr/dataset/0a232214-05cc-438a-b914-6a8b53ac184e
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  # Output folder
+  folder <- paste0(output, 'milieu_humide_saint-laurent/')
+  if (!file.exists(folder)) dir.create(folder)
+
+  # Proceed only if data is not already loaded
+  if (!file.exists(paste0(folder, 'atlas_estuairegolfe_rapport_final_fr.pdf'))) {
+    # URL
+    milieu_humide_stl <- c('https://catalogue.ogsl.ca/data/pasl/0a232214-05cc-438a-b914-6a8b53ac184e/atlas_estuairegolfe_rapport_final_fr.pdf',
+                           'https://catalogue.ogsl.ca/data/pasl/0a232214-05cc-438a-b914-6a8b53ac184e/milieuxhum_publ_janv2019.zip')
+
+    # Download
+    download.file(milieu_humide_stl[1], destfile = paste0(folder, 'atlas_estuairegolfe_rapport_final_fr.pdf'))
+    download.file(milieu_humide_stl[2], destfile = paste0(folder, 'milieuxhum_publ_janv2019.zip'))
+
+    # Unzip
+    unzip(zipfile = paste0(folder, 'milieuxhum_publ_janv2019.zip'), exdir = folder)
+  }
 }
