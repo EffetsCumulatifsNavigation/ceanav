@@ -22,3 +22,8 @@ README.html
 # Project-specific files ----
 data/
 output/
+
+# Data-specific files that cannot be shared ----
+analysis/data/cv/habitats/alevinage/alevinage_mffp/
+analysis/data/cv/habitats/frayere/frayere_mffp/
+analysis/data/cv/habitats/espece_statut/espece_statut_mffp/

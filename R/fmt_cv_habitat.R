@@ -4,6 +4,9 @@ fmtHabitat <- function() {
   fmtMilieu_humide()
   fmtMarais()
   fmtMilieu_sableux()
+  fmtAlevinage()
+  fmtFrayere()
+  fmtEspece_statut()
 }
 
 
@@ -244,6 +247,186 @@ fmtMilieu_sableux <- function () {
   #
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   save(milieu_sableux, file = './data/cv_hab_milieu_sableux.RData')
+  # ------------------------------------------------------------------------- #
+
+}
+
+
+# Format alevinage db
+fmtAlevinage <- function () {
+
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  # Load data
+  # ------------------------------------
+  #
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  folder <- './analysis/data/cv/habitats/alevinage/'
+
+  # dataID: 0006
+  # Sites d'alevinage dans le Saint-Laurent fluvial
+  alevinage_mffp <- st_read(paste0(folder, 'alevinage_mffp/DonneesMFFP_PourPASL.gdb'), layer = 'Alevinage_DEFA_s_CEGRIM') %>%
+                    st_transform(32198)
+  # ------------------------------------------------------------------------- #
+
+
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  # Format data
+  # ------------------------------------
+  #
+  # All we will do for now for this dataset is include it as presence-absence
+  # in the study grid
+  #
+  # So I intersect the milieu humide db with the grid to identify which grid
+  # cell intersect with the db
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  # Load grid
+  data(aoi_grid1000poly)
+
+  # Identify grid cells with zostera
+  uid <- st_intersects(alevinage_mffp, aoi) %>%
+               unlist() %>%
+               unique()
+
+  # Add info to grid
+  alevinage <- aoi %>% mutate(alevinage = 0)
+  alevinage$alevinage[uid] <- 1
+  # ------------------------------------------------------------------------- #
+
+
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  # Export data
+  # ------------------------------------
+  #
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  save(alevinage, file = './data/cv_hab_alevinage.RData')
+  # ------------------------------------------------------------------------- #
+
+}
+
+
+# Format frayere db
+fmtFrayere <- function () {
+
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  # Load data
+  # ------------------------------------
+  #
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  folder <- './analysis/data/cv/habitats/frayere/'
+  # dataID: 0006
+  # Frayères dans le Saint-Laurent fluvial
+  frayere_mffp <- st_read(paste0(folder, 'frayere_mffp/DonneesMFFP_PourPASL.gdb'),
+                          layer = 'Frayere_s_CEGRIM_25_02_2020') %>%
+                  st_transform(32198)
+
+  # WARNING: For some reason, this layer from the geodatabase does not play
+  # nice with `sf`.
+  #
+  # See https://github.com/r-spatial/sf/issues/427
+  #
+  # For now, I export and reimport as geojson and it works, so I will leave it
+  # at that.
+  geoj <- paste0(folder, 'frayere_mffp/frayere.geojson')
+  if (!file.exists(geoj)) st_write(frayere_mffp, geoj)
+  frayere_mffp <- st_read(paste0(folder, 'frayere_mffp/frayere.geojson'))
+  # ------------------------------------------------------------------------- #
+
+
+
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  # Format data
+  # ------------------------------------
+  #
+  # All we will do for now for this dataset is include it as presence-absence
+  # in the study grid
+  #
+  # So I intersect the milieu humide db with the grid to identify which grid
+  # cell intersect with the db
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  # Load grid
+  data(aoi_grid1000poly)
+
+  # Identify grid cells with zostera
+  uid <- st_intersects(frayere_mffp, aoi) %>%
+               unlist() %>%
+               unique()
+
+  # Add info to grid
+  frayere <- aoi %>% mutate(frayere = 0)
+  frayere$frayere[uid] <- 1
+  # ------------------------------------------------------------------------- #
+
+
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  # Export data
+  # ------------------------------------
+  #
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  save(frayere, file = './data/cv_hab_frayere.RData')
+  # ------------------------------------------------------------------------- #
+
+}
+
+
+# Format frayere db
+fmtEspece_statut <- function () {
+
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  # Load data
+  # ------------------------------------
+  #
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  folder <- './analysis/data/cv/habitats/espece_statut/'
+
+  # dataID: 0006
+  # Frayères dans le Saint-Laurent fluvial
+  espece_statut_mffp <- st_read(paste0(folder, 'espece_statut_mffp/DonneesMFFP_PourPASL.gdb'),
+                        layer = 'CDPNQ_CEGRIM_29_04_2020_3') %>%
+                        st_transform(32198)
+
+  # WARNING: For some reason, this layer from the geodatabase does not play
+  # nice with `sf`.
+  #
+  # See https://github.com/r-spatial/sf/issues/427
+  #
+  # For now, I export and reimport as geojson and it works, so I will leave it
+  # at that.
+  geoj <- paste0(folder, 'espece_statut_mffp/frayere.geojson')
+  if (!file.exists(geoj)) st_write(espece_statut_mffp, geoj)
+  espece_statut_mffp <- st_read(paste0(folder, 'espece_statut_mffp/frayere.geojson'))
+  # ------------------------------------------------------------------------- #
+
+
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  # Format data
+  # ------------------------------------
+  #
+  # All we will do for now for this dataset is include it as presence-absence
+  # in the study grid
+  #
+  # So I intersect the milieu humide db with the grid to identify which grid
+  # cell intersect with the db
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  # Load grid
+  data(aoi_grid1000poly)
+
+  # Identify grid cells with zostera
+  uid <- st_intersects(espece_statut_mffp, aoi) %>%
+               unlist() %>%
+               unique()
+
+  # Add info to grid
+  espece_statut <- aoi %>% mutate(espece_statut = 0)
+  espece_statut$espece_statut[uid] <- 1
+  # ------------------------------------------------------------------------- #
+
+
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  # Export data
+  # ------------------------------------
+  #
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  save(espece_statut, file = './data/cv_hab_espece_statut.RData')
   # ------------------------------------------------------------------------- #
 
 }

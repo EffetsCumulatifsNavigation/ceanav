@@ -4,7 +4,10 @@ getHabitat <- function() {
   getZostere()
   getMilieu_humide()
   getMarais()
-  getMilieu_sableux
+  getMilieu_sableux()
+  getAlevinage()
+  getFrayere()
+  getEspece_statut()
 }
 
 # Function to download Zostere datasets
@@ -254,4 +257,67 @@ getMilieu_sableux <- function() {
     # Unzip
     unzip(zipfile = paste0(folder, 'milieuxsableux_publ_janv2019.zip'), exdir = folder)
   }
+}
+
+
+# Function to download milieux humides datasets
+getAlevinage <- function() {
+  output <- './analysis/data/cv/habitats/alevinage/'
+
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  # Sites d'alevinage
+  # ------------------------------------
+  # dataID: 0006
+  # ~~~~~~~~~~~~
+  #
+  # WARNING: Données provenant du MFFP, non disponible en ligne
+  # WARNING: Données ne peuvent être partagées
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  # Output folder
+  folder <- paste0(output, 'alevinage_mffp/')
+
+  # Unzip file
+  unzip(zipfile = paste0(folder, 'DonneesMFFP_PourPASL.gdb.zip'), exdir = folder)
+}
+
+
+# Function to download milieux humides datasets
+getFrayere <- function() {
+  output <- './analysis/data/cv/habitats/frayere/'
+
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  # Sites d'alevinage
+  # ------------------------------------
+  # dataID: 0006
+  # ~~~~~~~~~~~~
+  #
+  # WARNING: Données provenant du MFFP, non disponible en ligne
+  # WARNING: Données ne peuvent être partagées
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  # Output folder
+  folder <- paste0(output, 'frayere_mffp/')
+
+  # Unzip file
+  unzip(zipfile = paste0(folder, 'DonneesMFFP_PourPASL.gdb.zip'), exdir = folder)
+}
+
+
+# Function to download milieux humides datasets
+getEspece_statut <- function() {
+  output <- './analysis/data/cv/habitats/espece_statut/'
+
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  # Sites d'alevinage
+  # ------------------------------------
+  # dataID: 0006
+  # ~~~~~~~~~~~~
+  #
+  # WARNING: Données provenant du MFFP, non disponible en ligne
+  # WARNING: Données ne peuvent être partagées
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  # Output folder
+  folder <- paste0(output, 'espece_statut_mffp/')
+
+  # Unzip file
+  unzip(zipfile = paste0(folder, 'DonneesMFFP_PourPASL.gdb.zip'), exdir = folder)
 }
