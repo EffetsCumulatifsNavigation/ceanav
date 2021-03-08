@@ -18,7 +18,8 @@ Depends:
     sf (>= 0.9-7),
     stars (>= 0.5-1),
     tidyverse (>= 1.3.0),
-    magrittr (>= 2.0.1)
+    magrittr (>= 2.0.1),
+    mapview(>= 2.9.8)
 Imports:
 Suggests:
     knitr,

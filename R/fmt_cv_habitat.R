@@ -1,5 +1,6 @@
 # Functions to format the habitats data for the project
 fmtHabitat <- function() {
+  # Format all habitat data
   fmtZostere()
   fmtMilieu_humide()
   fmtMarais()
@@ -7,6 +8,8 @@ fmtHabitat <- function() {
   fmtAlevinage()
   fmtFrayere()
   fmtEspece_statut()
+  fmtShoreline()
+  fmtZone_inondable()
 }
 
 
@@ -421,7 +424,7 @@ fmtEspece_statut <- function () {
 }
 
 
-fmtCote <- function () {
+fmtShoreline <- function () {
   # WARNING: For now, I will keep all coastline types in a single dataset.
   # Longterm, I should do like the other datasets, however, and seperate by
   # habitat types. Once I am better aware of the datasets available, I should
@@ -485,6 +488,79 @@ fmtCote <- function () {
   #
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   save(cote, file = './data/cv_hab_cote.RData')
+  # ------------------------------------------------------------------------- #
+
+}
+
+
+# Format milieu humide db
+fmtZone_inondable <- function () {
+
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  # Load data
+  # ------------------------------------
+  #
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  folder <- './analysis/data/cv/habitats/zone_inondable/'
+
+  # dataID: 0008
+  # Zones inondables MRC
+  zone_inondable_mrc <- st_read(paste0(folder, 'zone_inondable_mrc/grillepresencezoneinondable.geojson')) %>%
+                        st_transform(32198)
+
+
+  # dataID: 0009
+  # Zones inondables BDZI
+  # WARNING: La limite des hautes eaux dans le Lac Saint-Pierre est disponible
+  #          dans ce jeu de données
+  # WARNING: Les polygones non-simplifiés (`ZOI_s`) sont énormes et la
+  #          résolution est assurément supérieure à ce dont on a besoin
+  #
+  # Pour visualiser les données disponibles dans la geodatabase:
+  # st_layers(paste0(folder, 'zone_inondable_bdzi/BDZI.gdb'))
+  zone_inondable_bdzi <- st_read(paste0(folder, 'zone_inondable_bdzi/BDZI.gdb'), layer = 'ZOI_s_Simplify') %>%
+                         st_transform(32198)
+  # ------------------------------------------------------------------------- #
+
+
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  # Format data
+  # ------------------------------------
+  #
+  # All we will do for now for this dataset is include it as presence-absence
+  # in the study grid
+  #
+  # So I intersect the milieu humide db with the grid to identify which grid
+  # cell intersect with the db
+  #
+  # WARNING: Both datasets are very similar, but do have some differences.
+  #          I use them both for now, but I should make sure that I can
+  #          properly understand the differences between the datasets, or the
+  #          similarities.
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  # Combine datasets
+  zone_inondable <- bind_rows(zone_inondable_mrc, zone_inondable_bdzi)
+
+  # Load grid
+  data(aoi_grid1000poly)
+
+  # Identify grid cells with zostera
+  uid <- st_intersects(zone_inondable, aoi) %>%
+               unlist() %>%
+               unique()
+
+  # Add info to grid
+  zone_inondable <- aoi %>% mutate(zone_inondable = 0)
+  zone_inondable$zone_inondable[uid] <- 1
+  # ------------------------------------------------------------------------- #
+
+
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  # Export data
+  # ------------------------------------
+  #
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  save(zone_inondable, file = './data/cv_hab_zone_inondable.RData')
   # ------------------------------------------------------------------------- #
 
 }
