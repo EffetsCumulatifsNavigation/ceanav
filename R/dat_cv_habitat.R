@@ -321,3 +321,44 @@ getEspece_statut <- function() {
   # Unzip file
   unzip(zipfile = paste0(folder, 'DonneesMFFP_PourPASL.gdb.zip'), exdir = folder)
 }
+
+
+# Function to download milieux humides datasets
+getShoreline <- function() {
+  output <- './analysis/data/cv/habitats/cote/'
+  if (!file.exists(output)) dir.create(output)
+
+
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  # Milieux côtiers
+  # ------------------------------------
+  # dataID: 0007
+  # ~~~~~~~~~~~~
+  #
+  # Classification des Rivages du Québec - Fleuve Saint-Laurent
+  #
+  # https://ouvert.canada.ca/data/fr/dataset/ba580518-59e8-4d1c-b3ef-41d2658e6965
+  #
+  # Sergy, G. (2008). The Shoreline Classification Scheme for SCAT and Oil
+  #   Spill Response in Canada. Proceedings of the 31stArctic and Marine
+  #   Oil Spill Program Technical Seminar.Environment Canada, Ottawa, ON,
+  #   Pp. 811-819.
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  # Output folder
+  folder <- paste0(output, 'cote_classification/')
+  if (!file.exists(folder)) dir.create(folder)
+
+  # Proceed only if data is not already loaded
+  if (!file.exists(paste0(folder, 'How_To_Guide_-_Navigating_Through_Open_Data_Portals_-_for_ECCC_Shoreline_Data.pdf'))) {
+    # URL
+    cote_classification <- c('http://data.ec.gc.ca/data/sites/emergencies/shoreline-segmentation-with-shoreline-cleanup-assessment-technique-scat-classification/quebec-saint-lawrence-river-shoreline-classification/How_To_Guide_-_Navigating_Through_Open_Data_Portals_-_for_ECCC_Shoreline_Data.pdf',
+                             'http://data.ec.gc.ca/data/sites/emergencies/shoreline-segmentation-with-shoreline-cleanup-assessment-technique-scat-classification/quebec-saint-lawrence-river-shoreline-classification/ShorelineClassification_QC_OpenDataCatalogue.gdb.zip')
+
+    # Download
+    download.file(cote_classification[1], destfile = paste0(folder, 'How_To_Guide_-_Navigating_Through_Open_Data_Portals_-_for_ECCC_Shoreline_Data.pdf'))
+    download.file(cote_classification[2], destfile = paste0(folder, 'ShorelineClassification_QC_OpenDataCatalogue.gdb.zip'))
+
+    # Unzip
+    unzip(zipfile = paste0(folder, 'ShorelineClassification_QC_OpenDataCatalogue.gdb.zip'), exdir = folder)
+  }
+}
