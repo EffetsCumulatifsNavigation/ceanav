@@ -10,6 +10,7 @@ fmtHabitat <- function() {
   fmtEspece_statut()
   fmtShoreline()
   fmtZone_inondable()
+  fmtBenthic()
 }
 
 
@@ -561,6 +562,79 @@ fmtZone_inondable <- function () {
   #
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   save(zone_inondable, file = './data/cv_hab_zone_inondable.RData')
+  # ------------------------------------------------------------------------- #
+
+}
+
+
+
+fmtBenthic <- function() {
+
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  # Load data
+  # ------------------------------------
+  #
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  folder <- './analysis/data/cv/habitats/benthique/'
+
+  # dataID: 0011
+  # Mégahabitats
+  benthique_mega <- st_read(paste0(folder, 'benthique_mega/Megahabitats_DB.shp')) %>%
+                    st_transform(32198)
+
+  # dataID: 0010
+  # Géologie Loring et Nota
+  # WARNING: Non considéré, inclu dans mégahabitats benthiques dataID: 0011
+  # benthique_ln <- st_read(paste0(folder, 'benthique_ln/Seafloor_SubstratBenthique.shp')) %>%
+  #                 st_transform(32198)
+  # ------------------------------------------------------------------------- #
+
+
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  # Format data
+  # ------------------------------------
+  #
+  # All we will do for now for this dataset is include it as presence-absence
+  # in the study grid
+  #
+  # So I intersect the zostere db with the grid to identify which grid cell
+  # intersect with the db
+  #
+  # See report for a description of the different habitat types
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  # Load grid
+  data(aoi_grid1000poly)
+
+  # Use grid as dataset
+  benthique <- aoi
+
+  # For each coastal habitat type
+  hab <- unique(benthique_mega$Megahabita) %>%
+         .[!is.na(.)]
+
+  for(i in hab) {
+    # Segments for habitat i
+    habid <- benthique_mega$Megahabita == i
+
+    # Identify grid cells with coast habitat types
+    uid <- st_intersects(benthique_mega[habid, ], aoi) %>%
+           unlist() %>%
+           unique()
+
+    # Add info to grid
+    dat <- numeric(nrow(benthique))
+    dat[uid] <- 1
+    benthique <- cbind(benthique, dat) %>%
+                 rename(!!i:=dat)
+  }
+  # ------------------------------------------------------------------------- #
+
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  # Export data
+  # ------------------------------------
+  #
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  save(benthique, file = './data/cv_hab_benthique.RData')
   # ------------------------------------------------------------------------- #
 
 }

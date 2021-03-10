@@ -11,6 +11,7 @@ getHabitat <- function() {
   getEspece_statut()
   getShoreline()
   getZone_inondable()
+  getBenthic()
 }
 
 # Function to download Zostere datasets
@@ -456,7 +457,8 @@ getBenthic <- function() {
   #
   # https://ouvert.canada.ca/data/fr/dataset/8c269a91-d3a2-4f49-943d-6b2401c42cba
   #
-  # Loring, D. H., and D. J. G. Nota. 1973. Morphology and sediments of the Gulf of St. Lawrence. Bull. Fish. Res. Bd. Can. 182. 147 p. + 7 charts.
+  # Loring, D. H., and D. J. G. Nota. 1973. Morphology and sediments of the Gulf
+  # of St. Lawrence. Bull. Fish. Res. Bd. Can. 182. 147 p. + 7 charts.
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   # Output folder
   folder <- paste0(output, 'benthique_ln/')
@@ -487,7 +489,10 @@ getBenthic <- function() {
   #
   # https://open.canada.ca/data/en/dataset/3e89da6c-fd76-4e53-af62-dfec141ffda5
   #
-  # Dutil, J.-D., Proulx, S., Chouinard, P.-M., and Borcard. D. 2011. A hierarchical classification of the seabed based on physiographic and oceanographic features in the St. Lawrence. Can. Tech. Rep. Fish. Aquat. Sci. 2916: vii + 72 p.
+  # Dutil, J.-D., Proulx, S., Chouinard, P.-M., and Borcard. D. 2011. A
+  # hierarchical classification of the seabed based on physiographic and
+  # oceanographic features in the St. Lawrence. Can. Tech. Rep. Fish. Aquat.
+  # Sci. 2916: vii + 72 p.
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   # Output folder
   folder <- paste0(output, 'benthique_mega/')
@@ -506,5 +511,4 @@ getBenthic <- function() {
     # Unzip
     unzip(zipfile = paste0(folder, 'Megahabitats_DB.zip'), exdir = folder)
   }
-
 }
