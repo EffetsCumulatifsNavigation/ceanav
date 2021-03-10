@@ -2,18 +2,40 @@
 
 pipeline <- function(pipeline_data = FALSE,
                      pipeline_format = FALSE,
-                     pipeline_analysis = FALSE) {
+                     pipeline_analysis = FALSE,
+                     pipeline_figure = FALSE) {
 
-  if (pipeData) {
+  if (pipeline_data) {
+    # -----------------------------------
     # Study area
-      getAOI()
+    getAOI()
 
+    # -----------------------------------
     # Composantes valorisées
     # Habitats
-      getHabitat()
+    getHabitat()
 
+    # -----------------------------------
     # Stressors
-    ## Navigation
-    # nav_ais()
+    ## Anchorages
+    getAncrage()
+
+    ## Déversements accidentels
+    getDeversement()
   }
+
+  if (pipeline_format)
+    # -----------------------------------
+    # Composantes valorisées
+    # Habitats
+    fmtHabitat()
+
+    # -----------------------------------
+    # Stressors
+    ## Anchorages
+    fmtAncrage()
+
+    ## Déversements accidentels
+    fmtDeversement()
+
 }
