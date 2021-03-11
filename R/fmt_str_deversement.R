@@ -40,6 +40,12 @@ fmtDeversement <- function () {
   #        st_as_sf(coords = c('LONGITUDE','LATITUDE'), crs = 4326, remove = FALSE) %>%
   #        mapview() %>%
   #        mapshot(url = 'delete/positionnement.html')
+  #
+  # # Exemple c arte obtenue
+  # x <- deversement %>%
+  #      mutate(deversement = ifelse(deversement == 0, NA, deversement)) %>%
+  #      mapview() %>%
+  #      mapshot(url = 'delete/exploration.html')
   # # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 
@@ -76,7 +82,7 @@ fmtDeversement <- function () {
   # Identify grid cells with zostera
   dev <- st_buffer(dev, 5000) %>%
          st_intersects(aoi,.) %>%
-         lapply(., sum) %>%
+         lapply(., function(x) sum(dev$volume[x])) %>%
          unlist()
 
   # Add info to grid
