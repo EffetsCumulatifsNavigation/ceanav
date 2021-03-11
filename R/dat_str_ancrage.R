@@ -1,5 +1,5 @@
 getAncrage <- function() {
-  output <- './analysis/data/cv/stresseurs/ancrages/'
+  output <- './analysis/data/stresseurs/ancrages/'
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   # Ancrages INNAV DFO
