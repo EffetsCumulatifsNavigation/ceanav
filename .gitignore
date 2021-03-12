@@ -22,6 +22,7 @@ README.html
 # Project-specific files ----
 data/
 output/
+share/
 
 # Data-specific files that cannot be shared ----
 analysis/data/cv/habitats/alevinage/alevinage_mffp/

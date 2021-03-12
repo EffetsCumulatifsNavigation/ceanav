@@ -76,5 +76,4 @@ getDeversement <- function() {
   # ------------------
   # Export
   write.csv(dev, file = paste0(folder, 'deversements_modifs.csv'), row.names = FALSE)
-
 }
