@@ -8,34 +8,26 @@ pipeline <- function(pipeline_data = FALSE,
   if (pipeline_data) {
     # -----------------------------------
     # Study area
-    getAOI()
+    getAOI() # Study area and grids
 
     # -----------------------------------
     # Composantes valorisées
-    # Habitats
-    getHabitat()
+    getHabitat() # Habitats
 
     # -----------------------------------
     # Stressors
-    ## Anchorages
-    getAncrage()
-
-    ## Déversements accidentels
-    getDeversement()
+    getAncrage() ## Anchorages
+    getDeversement() ## Déversements accidentels
   }
 
   if (pipeline_format)
     # -----------------------------------
     # Composantes valorisées
-    # Habitats
-    fmtHabitat()
+    fmtHabitat() # Habitats
 
     # -----------------------------------
     # Stressors
-    ## Anchorages
-    fmtAncrage()
-
-    ## Déversements accidentels
-    fmtDeversement()
+    fmtAncrage() ## Anchorages
+    fmtDeversement() ## Déversements accidentels
 
 }

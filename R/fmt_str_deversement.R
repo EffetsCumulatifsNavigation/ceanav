@@ -43,50 +43,18 @@ fmtDeversement <- function () {
   dev$volume[is.na(dev$volume)] <- 6
 
   # Classify by spill type
-  # |Hydrocarbures        |  Autres polluants               | Inconnus            |
-  # |:--------------------| :-------------------------------|:------------|
-  # |bunker C             | Acide d'hypochlorite            | Inconnu      |
-  # |Carburant diésel     | Asphalte liquide                | 0            |
-  # |Diesel               | Ballast                         | non identifi |
-  # |Essence              | bilge                           | P            |
-  # |Gaoline              | BioSpec Hyd 32                  | |
-  # |hydrocarbure inconnu | Débris                          | |
-  # |Petcoke              | Déchet                          | |
-  # |Pètrole brut         | Eau de cale                     | |
-  # |Propane              | eau huileuse                    | |
-  # |Tar                  | Eau usée                        | |
-  # |Huile de graissage   | Eaux us                         | |
-  # |Huile Hydraulique    | Lait                            | |
-  # |Huile moteur         | Matière organique               | |
-  # | |MINERAI DE FER                  | |
-  # | |Oxyde de calcium (chaux)        | |
-  # | |Phosphate d'ammonium            | |
-  # | |Pollution                       | |
-  # | |Sludge                          | |
-  # | |Hydrox Bio 100                  | |
-  # | |Suie                            | |
-  # | |Soude caustique                 | |
-  # | |Lub oil                         | |
-  # | |Huile lapio                     | |
-  # | |Huile hydraulique biodégradable | |
-  # | |Huile Hydraulique Végétale      | |
-  # | |Huile végétale                  | |
-  # | |Mélange huileux                 | |
-  # | |Charbon                         | |
+  hydrocarbures <- c("bunker C","Carburant diésel","Diesel","Essence","Gaoline",
+                     "hydrocarbure inconnu","Petcoke","Pètrole brut","Propane",
+                     "Tar","Huile de graissage","Huile Hydraulique","Huile moteur",
+                     "bilge","BioSpec Hyd 32","Hydrox Bio 100","Lub oil",
+                     "Huile hydraulique biodégradable","Asphalte liquide")
 
-  hydrocarbures <- c("bunker C","Carburant diésel","Diesel","Essence",
-                     "Gaoline","hydrocarbure inconnu","Petcoke","Pètrole brut",
-                     "Propane","Tar","Huile de graissage","Huile Hydraulique",
-                     "Huile moteur")
-
-  autres <- c("Acide d'hypochlorite","Asphalte liquide","Ballast","bilge",
-              "BioSpec Hyd 32","Débris","Déchet","Eau de cale","eau huileuse",
-              "Eau usée","Eaux us","Lait","Matière organique","MINERAI DE FER",
-              "Oxyde de calcium (chaux)","Phosphate d'ammonium","Pollution",
-              "Sludge","Hydrox Bio 100","Suie","Soude caustique","Lub oil",
-              "Huile lapio","Huile hydraulique biodégradable",
-              "Huile Hydraulique Végétale","Huile végétale",
-              "Mélange huileux","Charbon")
+  autres <- c("Acide d'hypochlorite","Ballast","Débris","Déchet","Eau de cale",
+              "eau huileuse","Eau usée","Eaux us","Lait","Matière organique",
+              "MINERAI DE FER","Oxyde de calcium (chaux)","Phosphate d'ammonium",
+              "Pollution","Sludge","Suie","Soude caustique","Huile lapio",
+              "Huile Hydraulique Végétale","Huile végétale","Mélange huileux",
+              "Charbon")
 
   inconnus <- c('Inconnu',"0","non identifi","P")
 
