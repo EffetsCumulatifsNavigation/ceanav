@@ -1,21 +1,18 @@
 
-
-
-nav_ais <- function() {
+fmtNavigation <- function() {
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
-  # Info
-  # ---------
+  # Load data
+  # -------------------------
   #
+  # Info:
+  # ~~~~~~~~~~~~~
   #
-  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   # https://www.marinecadastre.gov/ais/
   # https://coast.noaa.gov/data/marinecadastre/ais/AISTrackBuilder.pdf
   # https://coast.noaa.gov/data/marinecadastre/ais/AISVesselTransitCounterTool.pdf
   # https://www.stat.berkeley.edu/~s133/dates.html
   # https://gis.stackexchange.com/questions/289608/calculating-distances-between-consecutive-points-using-r
-  #
-  # Hi David,
   #
   # The fields vary by message type (even though they are all stored together in
   # CSV files). The reference I use for each message type is
@@ -36,63 +33,36 @@ nav_ais <- function() {
   # in this vessel database can be merged with the AIS data (or datasets derived
   # from the AIS data). I can share this database with you but please note that,
   # like the AIS data, it contains information that can only be used as part of
-  # the contract and must be deleted/destroyed once the work is completed. If
-  # this is ok, I can upload it and send you a link.
+  # the contract and must be deleted/destroyed once the work is completed.
   #
-  # Thanks,
-  #
-  # Jeff
-  # 
   # https://tcgis-hub.maps.arcgis.com/home/item.html?id=60e7e3f631944e7a8a8574fb09e4b402
-  # _____________________________________________________________________________ #
-
-
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
-  # Load AIS data and segment
-  # -------------------------
-  #
-  #
-  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
-  # Unzip data -----
-  # 2017
-  unzip(zipfile = './analysis/data/stresseurs/navigation/ais/2017-AIS.zip',
-        exdir = './analysis/data/stresseurs/navigation/ais/2017-AIS')
-
-  # 2018
-  unzip(zipfile = './analysis/data/stresseurs/navigation/ais/2018-AIS.zip',
-        exdir = './analysis/data/stresseurs/navigation/ais/2018-AIS')
-
-  # 2019
-  unzip(zipfile = './analysis/data/stresseurs/navigation/ais/2019-AIS.zip',
-        exdir = './analysis/data/stresseurs/navigation/ais/2019-AIS')
+  folder <- './analysis/data/stresseurs/navigation/navigation_ais/'
 
   # Import and segment -----
   # 2017
-  folder <- dir('./analysis/data/stresseurs/navigation/ais/2017-AIS', full.names = TRUE)
+  files <- dir(paste0(folder, '2017-AIS/'), full.names = TRUE)
   ais2017 <- list()
-  for(i in 1:length(folder)) {
-    ais2017[[i]] <- read.csv(folder[i]) %>%
+  for(i in 1:length(files)) {
+    ais2017[[i]] <- read.csv(files[i])[1:100, ] %>%
                     ais_segment()
   }
 
   # 2018
-  folder <- dir('./analysis/data/stresseurs/navigation/ais/2018-AIS', full.names = TRUE)
+  files <- dir(paste0(folder, '2018-AIS/'), full.names = TRUE)
   ais2018 <- list()
-  for(i in 1:length(folder)) {
-    ais2018[[i]] <- read.csv(folder[i]) %>%
+  for(i in 1:length(files)) {
+    ais2018[[i]] <- read.csv(files[i])[1:100, ] %>%
                     ais_segment()
   }
-
 
   # 2019
-  folder <- dir('./analysis/data/stresseurs/navigation/ais/2019-AIS', full.names = TRUE)
+  files <- dir(paste0(folder, '2019-AIS/'), full.names = TRUE)
   ais2019 <- list()
-  for(i in 1:length(folder)) {
-    ais2019[[i]] <- read.csv(folder[i]) %>%
+  for(i in 1:length(files)) {
+    ais2019[[i]] <- read.csv(files[i])[1:100, ] %>%
                     ais_segment()
   }
-
-  # mapview::mapview(ais[[1]], color = '#50d7c3', alpha = 0.1)
   # _____________________________________________________________________________ #
 
 
@@ -105,8 +75,9 @@ nav_ais <- function() {
   # 2017
   for(i in 1:length(ais2017)) {
     ais2017[[i]] $year <- 2017
-    ais2017[[i]]$month <- i+2
+    ais2017[[i]]$month <- i+2 #
   }
+  message("WARNING: Modifier données AIS navigation pour 2017 si les données sont éventuellement ajoutées à la base de données")
 
   # 2018
   for(i in 1:length(ais2018)) {
@@ -119,9 +90,8 @@ nav_ais <- function() {
     ais2019[[i]]$year <- 2019
     ais2019[[i]]$month <- i
   }
-
-
   # _____________________________________________________________________________ #
+
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   # Single dataset
@@ -129,11 +99,6 @@ nav_ais <- function() {
   #
   #
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
-  # Load data (to remove)
-  # load('./output/data/ais2019.rdata')
-  # load('./output/data/ais2018.rdata')
-  # load('./output/data/ais2017.rdata')
-  #
   # 2017
   ais2017 <- bind_rows(ais2017)
 
@@ -145,9 +110,10 @@ nav_ais <- function() {
 
   # All years
   ais <- bind_rows(ais2017, ais2018, ais2019)
+
+  # Remove partial objects to save memory
   rm(ais2017,ais2018,ais2019)
   # _____________________________________________________________________________ #
-
 
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
@@ -157,8 +123,8 @@ nav_ais <- function() {
   #
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   # Load data from `ceanav` package
-  data(studyarea)
-  data(egslSimple)
+  data(aoi_studyarea)
+  data(aoi_egslSimple)
 
   # Union
   sa <- bind_rows(studyarea, egslSimple) %>%
@@ -194,7 +160,7 @@ nav_ais <- function() {
   #
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   # Load vessel type dataset
-  df <- read.csv('./analysis/data/stresseurs/navigation/ais/STATIC_DATA_2015_to_2019_forULAVAL.csv')
+  df <- read.csv(paste0(folder, '/STATIC_DATA_2015_to_2019_forULAVAL.csv'))
 
   # Unique vessel types
   vessel_type <- unique(df$NTYPE)
@@ -210,7 +176,6 @@ nav_ais <- function() {
     vessels[[i]] <- ais[uid, ]
   }
   names(vessels) <- vessel_type
-  # mapview::mapview(vessels[[1]], color = '#50d7c3', alpha = 0.1)
   # _____________________________________________________________________________ #
 
 
@@ -222,33 +187,33 @@ nav_ais <- function() {
   #
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   # Study grid
-  data(grid1000poly)
+  data(aoi_grid1000poly)
 
   system.time({
   grd <- list()
   # Intensity for each vessel type (~15 minutes to run on my laptop)
   for(i in 1:length(vessels)) {
-    grd[[i]] <- st_intersects(grid1000poly, vessels[[i]]) %>%
+    grd[[i]] <- st_intersects(aoi, vessels[[i]]) %>%
            lapply(length) %>%
            unlist() %>%
            ifelse(. == 0, NA, .) %>%
-           mutate(grid1000poly, intensity = .)
+           mutate(aoi, intensity = .)
   }
   })
 
   # In matrix
-  df <- matrix(NA, nrow = nrow(grid1000poly), ncol = length(vessel_type), dimnames = list(c(), vessel_type))
+  df <- matrix(NA, nrow = nrow(aoi), ncol = length(vessel_type), dimnames = list(c(), vessel_type))
   for(i in 1:length(grd)) df[,i] <- grd[[i]]$intensity
 
   # As single sf object
-  navivation_ais <- cbind(grid1000poly, df) %>% select(-val_ras)
+  navigation <- cbind(aoi, df)
 
 
   # # Vessel type viz
   # vesselID <- gsub(' ', '.', vessel_type) %>% gsub('/','.',.) %>% gsub('-','.',.)
   # mapview::mapview(nav, border = 'transparent', zcol = vesselID)
 
-
+  # mapview::mapview(ais[[1]], color = '#50d7c3', alpha = 0.1)
 
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
@@ -257,7 +222,6 @@ nav_ais <- function() {
   #
   #
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
-  st_write(navivation_ais, dsn = './analysis/output/stresseurs/navigation/Navigation_AIS.geojson', append = FALSE)
-  save(navigation_ais, './data/navigation_ais.RData')
+  save(navigation, file = './data/str_navigation.RData')
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
 }

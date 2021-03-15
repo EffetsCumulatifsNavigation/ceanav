@@ -19,9 +19,10 @@ pipeline <- function(pipeline_data = FALSE,
     # Stressors
     getAncrage() ## Anchorages
     getDeversement() ## Déversements accidentels
+    getNavigation() ## Navigation
   }
 
-  if (pipeline_format)
+  if (pipeline_format) {
     # -----------------------------------
     # Composantes valorisées
     fmtHabitat() # Habitats
@@ -32,5 +33,7 @@ pipeline <- function(pipeline_data = FALSE,
     # Stressors
     fmtAncrage() ## Anchorages
     fmtDeversement() ## Déversements accidentels
+    fmtNavigation() ## Navigation
 
+  }
 }
