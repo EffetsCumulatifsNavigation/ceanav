@@ -13,6 +13,7 @@ pipeline <- function(pipeline_data = FALSE,
     # -----------------------------------
     # Composantes valorisées
     getHabitat() # Habitats
+    getBerge() # Intégrité berges
 
     # -----------------------------------
     # Stressors
@@ -24,6 +25,8 @@ pipeline <- function(pipeline_data = FALSE,
     # -----------------------------------
     # Composantes valorisées
     fmtHabitat() # Habitats
+    fmtBerge() # Intégrité berges
+
 
     # -----------------------------------
     # Stressors
