@@ -44,7 +44,7 @@ fmtNavigation <- function() {
   files <- dir(paste0(folder, '2017-AIS/'), full.names = TRUE)
   ais2017 <- list()
   for(i in 1:length(files)) {
-    ais2017[[i]] <- read.csv(files[i])[1:100, ] %>%
+    ais2017[[i]] <- read.csv(files[i]) %>%
                     ais_segment()
   }
 
@@ -52,7 +52,7 @@ fmtNavigation <- function() {
   files <- dir(paste0(folder, '2018-AIS/'), full.names = TRUE)
   ais2018 <- list()
   for(i in 1:length(files)) {
-    ais2018[[i]] <- read.csv(files[i])[1:100, ] %>%
+    ais2018[[i]] <- read.csv(files[i]) %>%
                     ais_segment()
   }
 
@@ -60,7 +60,7 @@ fmtNavigation <- function() {
   files <- dir(paste0(folder, '2019-AIS/'), full.names = TRUE)
   ais2019 <- list()
   for(i in 1:length(files)) {
-    ais2019[[i]] <- read.csv(files[i])[1:100, ] %>%
+    ais2019[[i]] <- read.csv(files[i]) %>%
                     ais_segment()
   }
   # _____________________________________________________________________________ #
