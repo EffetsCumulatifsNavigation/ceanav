@@ -1,3 +1,11 @@
+# These functions download selected datasets from various sources
+
+# Global function to download all "sites importants" datasets
+getSites <- function() {
+  getPeche()
+
+}
+
 
 
 getPeche <- function() {
