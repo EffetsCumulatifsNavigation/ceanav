@@ -19,7 +19,7 @@ fmtPeche <- function () {
   peche_aghamm <- list()
   for(i in 1:length(uid$name)) {
     peche_aghamm[[i]] <- st_read(paste0(folder, 'peche_commerciale_aghamm/Peches_commerciales.gdb'),
-                            layer = uid$name[i]) %>%
+                                 layer = uid$name[i], quiet = TRUE) %>%
                     st_transform(32198)
   }
   names(peche_aghamm) <- uid$name
@@ -58,20 +58,48 @@ fmtPeche <- function () {
     dat[uid] <- 1
     peche_secteur <- cbind(peche_secteur, dat) %>%
                      rename(!!i:=dat)
+
   }
+
+  # Remove fisheries with no data in aoi
+  uid <- which(colSums(st_drop_geometry(peche_secteur)) == 0)
+  peche_secteur <- peche_secteur[,-uid]
 
 
   # Kg - Capture totale -------------------------------
   peche_kg <- aoi
+  peche_kg$ID <- 1:nrow(aoi)
   for(i in kg) {
     # Identify grid cells within fisheries sectors
-    uid <- st_intersection(peche_aghamm[[i]], aoi) %>%
-           mutate(area = st_area())
+    uid <- suppressWarnings(st_intersection(peche_kg, peche_aghamm[[i]]))
 
-    # Add info to grid
-    dat <- numeric(nrow(aoi))
-    dat[uid] <- 1
-    peche_kg <- cbind(peche_kg, dat) %>%
-                     rename(!!i:=dat)
+    # If there are intersections, calculate sum of kg / area
+    if (nrow(uid) > 0) {
+      peche_kg <- uid %>%
+                  mutate(area = st_area(.)/1000000) %>%
+                  group_by(ID) %>%
+                  summarize(awa = sum((Qte_kg+1)*area)) %>%
+                  mutate(awa = as.numeric(awa)) %>%
+                  st_drop_geometry() %>%
+                  left_join(peche_kg, ., by = 'ID') %>%
+                  mutate_each(funs(replace(., which(is.na(.)), 0))) %>% # WARNING: TO CHANGE!
+                  rename(!!i:=awa)
+    }
   }
+
+  # Remove ID column from grid
+  peche_kg <- select(peche_kg, -ID)
+
+  # Single dataset
+  peche <- cbind(peche_secteur, st_drop_geometry(peche_kg))
+
+
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  # Export data
+  # ------------------------------------
+  #
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  save(peche, file = './data/cv_ste_peche.RData')
+  # ------------------------------------------------------------------------- #
+
 }
