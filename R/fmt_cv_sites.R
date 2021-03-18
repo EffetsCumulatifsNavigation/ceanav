@@ -1,5 +1,5 @@
 # Functions to format the "sites d'importance" data for the project
-fmtHabitat <- function() {
+fmtSite <- function() {
   fmtPeche()
 }
 
@@ -82,7 +82,6 @@ fmtPeche <- function () {
                   mutate(awa = as.numeric(awa)) %>%
                   st_drop_geometry() %>%
                   left_join(peche_kg, ., by = 'ID') %>%
-                  mutate_each(funs(replace(., which(is.na(.)), 0))) %>% # WARNING: TO CHANGE!
                   rename(!!i:=awa)
     }
   }
@@ -90,6 +89,9 @@ fmtPeche <- function () {
   # Remove ID column from grid
   peche_kg <- select(peche_kg, -ID)
 
+  # Change NAs for 0
+  peche_kg[is.na(peche_kg)] <- 0
+  # 3886
   # Single dataset
   peche <- cbind(peche_secteur, st_drop_geometry(peche_kg))
 
