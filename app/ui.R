@@ -2,7 +2,7 @@ ui <- fluidPage(
   sidebarLayout(
     sidebarPanel(
       h1("Sidebar"),
-      selectInput(inputId = "layers", label = "Select layer", choices = "placeholder"))#,
+      selectInput(inputId = "layers", label = "Select layer", choices = dat)#,
       # actionButton('save', 'Save from Map', icon = icon("download"))
     ),
     mainPanel(

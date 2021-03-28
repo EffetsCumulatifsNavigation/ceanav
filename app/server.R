@@ -1,12 +1,22 @@
 server <- function(input, output, session) {
-  updateSelectInput(session, "layers", choices = colnames(ceanav_data))
+  updateSelectInput(session, "layers", choices = dat)
   observeEvent(input$layers, {
-    tmp <- ceanav_data %>% select(!!input$layers)
+    # Data
+    # tmp <- alevinage %>% st_transform(crs = 4326)
+    tmp <- get(input$layers) %>% st_transform(crs = 4326)
+
+    # Colors
+    # Create a continuous palette function
+    pal <- colorNumeric(palette = "Blues",
+                        domain = tmp$alevinage)
+
+    # Map
     map <- leaflet(tmp) %>%
       setView(lng = -63, lat = 48, zoom = 5) %>%
       addProviderTiles("CartoDB.Positron") %>%
-      addCircleMarkers(
-        stroke = FALSE)#,
+      addPolygons(stroke = FALSE, smoothFactor = 0.2, fillOpacity = 1, color = ~pal(alevinage))
+      # addCircleMarkers(
+        # stroke = FALSE)#,
         # popup = ~as.character(Nom.de.colonie.Colony.name))
     edits <<- callModule(editMod, leafmap = map, id = "map")
   })
