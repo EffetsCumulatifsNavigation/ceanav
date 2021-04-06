@@ -12,7 +12,11 @@ getNavigation <- function() {
   #
   # Données AIS - à décrire
   #
-  # WARNING: Données provenant du MFFP, non disponible en ligne
+  # The data provided was produced by Maerospace Corporation,
+  # and was acquired via a contract with PWGSC on behalf of the Canadian Space
+  # Agency. No metadata came with the source and there are no specific requirement
+  # for citation/attribution.
+  #
   # WARNING: Données ne peuvent être partagées
   # WARNING: Données brutes doivent être supprimées suite au projet
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
