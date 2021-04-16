@@ -21,6 +21,7 @@ pipeline <- function(pipeline_data = FALSE,
     getAncrage() ## Anchorages
     getDeversement() ## Déversements accidentels
     getNavigation() ## Navigation
+    getPecheCommerciale() ## Pêches commerciales
   }
 
   if (pipeline_format) {
@@ -36,6 +37,7 @@ pipeline <- function(pipeline_data = FALSE,
     fmtAncrage() ## Anchorages
     fmtDeversement() ## Déversements accidentels
     fmtNavigation() ## Navigation
+    fmtPecheCommerciale() ## Pêches commerciales
 
   }
 }
