@@ -1,0 +1,7 @@
+## Activités et facteurs de stress {#stress}
+
+Une caractérisation de la répartition spatiale et de l’intensité des facteurs de stress reliées aux activités maritimes au sein de la zone d’étude est l’un des éléments les plus importants afin de dresser le portrait de la zone d’étude pour une évaluation d’effets cumulatifs. Les activités maritimes et les facteurs de stress qui seront utilisés pour l’étude pilote sont décrits au tableau 1. Les données disponibles permettant de caractériser ces facteurs de stress provenant des ces activités maritimes seront recensées.
+
+
+
+La répartition spatiale et l’intensité de chaque facteur de stress seront caractérisées individuellement. Par exemple, les déplacements des embarcations pourraient être caractérisés en utilisant les tracés de navigation et les types de navires; les activités de dragage pourraient être caractérisées selon la quantité totale de sédiments dragués (c.-à-d. enlevés d’un site ou déposés dans un autre). En fait, les données et approches spécifiques utilisées dépendront de la qualité et de la disponibilité des données existantes. Au terme de la caractérisation individuelle des facteurs de stress, ils seront colligés au sein d’une base de données pouvant être croisée à la [caractérisation des composantes valorisées](#cv). Ces deux bases de données permettront l’analyse des effets cumulatifs des facteurs de stress sur les composantes valorisées dans la zone d’étude.

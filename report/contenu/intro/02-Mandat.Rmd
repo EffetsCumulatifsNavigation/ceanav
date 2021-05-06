@@ -1,0 +1,24 @@
+# Mandat
+
+Transports Canada a engagé une équipe de l’Université Laval pour développer une méthodologie d’analyse et effectuer l’évaluation des effets cumulatifs des activités maritimes dans le Saint-Laurent (tronçon fluvial et estuaire) et la rivière Saguenay (partie en eau profonde) au Québec.
+
+Pour ce projet d’effets cumulatifs, l’approche adoptée est une approche sectorielle qui examine les questions et les effets environnementaux se rattachant à un secteur particulier (c.-à-d. un cadre axé sur l’évaluation d’un seul secteur d’activités), puisque l’objectif est de gérer la façon dont les effets des activités maritimes, en particulier, agissent cumulativement sur l’environnement humain et biophysique. Les activités maritimes incluent non seulement les navires commerciaux, mais aussi les bateaux de croisières, traversiers, bateaux de pêche, plaisanciers. Les infrastructures portuaires ne sont pas incluses dans ce projet. La localisation, l’intensité et/ou le mouvement de ces divers type d’embarcations peuvent imposer un ou plusieurs facteurs de stress aux écosystèmes.
+
+Ce contrat appuiera le Gouvernement du Canada et le Gouvernement du Québec dans la conception d’un cadre commun d’évaluation des effets cumulatifs des activités maritimes; et permettra d’identifier des outils et des stratégies d’atténuation pouvant s’appliquer aux déplacements actuels de navires et au développement de projets futurs. Le tout sera effectué de façon collaborative avec les Premières Nations, les scientifiques de diverses provenances et les organismes de réglementation, afin de prendre des décisions fondées sur les éléments les plus probants.
+
+## Description des besoins
+
+L’équipe de l’Université Laval développera une méthodologie d’analyse des effets cumulatifs des activités maritimes qui sera présentée aux différents collaborateurs. En utilisant cette méthodologie, l’équipe de l’Université Laval effectuera l’évaluation des effets cumulatifs des activités maritimes sur les composantes valorisées identifiées par l’ensemble des participants impliqués dans le projet pour le Saint-Laurent (tronçon fluvial et estuaire) et la rivière Saguenay (partie en eau profonde).
+
+À partir de cette évaluation, l’équipe de l’Université Laval produira un rapport résumant la méthodologie employée, l’analyse effectuée, les résultats et les conclusions qui seront présentés aux différents collaborateurs.
+
+L’équipe de l’Université Laval participera aux ateliers de travail et discussion avec tous les participants impliqués dans le projet afin de bien intégrer les commentaires et l’apport de chacun.
+
+## Développement de la méthodologie
+
+La méthode d’analyse utilisée devra être en mesure :
+
+- d’intégrer les connaissances autochtones et traditionnelles recueillies;
+- d’utiliser différents types de données, notamment les données géo-spatiales et tabulaires (non géo-référencées);
+- de considérer plusieurs facteurs de stress issus des activités maritimes;
+- d’évaluer de façon intégrée les effets cumulés des différents facteurs de stress sur les composantes valorisées identifiées lors des ateliers de travail, notamment les composantes biologiques, environnementales, culturelles et socioéconomiques.

@@ -81,6 +81,6 @@ save(aoi2, file = './data/aoi_grid2000poly.RData')
 egslSimple <- 'https://github.com/eDrivers/eDriversGrids/raw/master/Data/egslSimple.RData'
 
 # Download
-download.file(egslSimple, destfile = './data/aoi_egslSimple.RData')
+download.file(egslSimple, destfile = './data/aoi_egsl.RData')
 # _____________________________________________________________________________ #
 }

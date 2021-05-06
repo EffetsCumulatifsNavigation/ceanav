@@ -3,8 +3,10 @@
 pipeline <- function(pipeline_data = FALSE,
                      pipeline_format = FALSE,
                      pipeline_analysis = FALSE,
-                     pipeline_figure = FALSE) {
+                     pipeline_figure = FALSE,
+                     pipeline_report = TRUE) {
 
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~
   if (pipeline_data) {
     # -----------------------------------
     # Study area
@@ -24,6 +26,7 @@ pipeline <- function(pipeline_data = FALSE,
     getPecheCommerciale() ## Pêches commerciales
   }
 
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~
   if (pipeline_format) {
     # -----------------------------------
     # Composantes valorisées
@@ -38,6 +41,16 @@ pipeline <- function(pipeline_data = FALSE,
     fmtDeversement() ## Déversements accidentels
     fmtNavigation() ## Navigation
     fmtPecheCommerciale() ## Pêches commerciales
+  }
 
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~
+  if (pipeline_report) {
+    suppressWarnings({
+      setwd('./report/')
+      bookdown::render_book(input = "index.Rmd",
+                            output_format = "bookdown::gitbook",
+                            config_file = "_bookdown.yml")
+      setwd('../')
+    })
   }
 }

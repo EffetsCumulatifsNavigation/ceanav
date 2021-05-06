@@ -1,0 +1,9 @@
+## Composantes valorisées {#cv}
+
+Les composantes valorisées -- *c.-à-d.* les éléments sur lesquels l’analyse d’effets cumulatifs est effectuée -- ont été identifiées au préalable lors d’activités de concertation et d’ateliers de travail avec des experts du milieu, des représentants autochtones et de multiples parties prenantes. Les composantes valorisées ont été sélectionnées séparément pour les secteurs fluvial (Montréal à la rivière Saguenay) et maritime (rivière Saguenay et l’estuaire) du Saint-Laurent. La liste des composantes valorisées identifiées sera utilisée pour ce rapport et nous recenserons les données disponibles nous permettant d’effectuer une caractérisation spatiale de ces dernières  (Tableau 2).
+
+
+
+
+
+Tout comme pour les facteurs de stress, les composantes valorisées seront caractérisées individuellement. Par exemple, les habitats fauniques et floristiques pourraient être délimités en fonction de connaissances sur les habitats essentiels pour les poissons dans la zone d’étude et par la répartition connue d’espèces en péril; les mammifères marins pourraient être caractérisés selon la répartition des populations ou selon les milieux d’importance pour leur alimentation. Les données et les approches spécifiques utilisées dépendront de la qualité et de la disponibilité des données existantes. Au terme de la caractérisation individuelle, les composantes valorisées seront colligées au sein d’une base de données intégrative pouvant être croisée à la [caractérisation des facteurs de stress](#stress), qui permettra l’étude des effets cumulatifs dans la zone d’étude.

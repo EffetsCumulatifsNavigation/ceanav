@@ -20,9 +20,10 @@
 README.html
 
 # Project-specific files ----
-data/
+analysis/data/
 output/
 share/
+report/docs/
 
 # Data-specific files that cannot be shared ----
 analysis/data/cv/habitats/alevinage/alevinage_mffp/
@@ -30,3 +31,22 @@ analysis/data/cv/habitats/frayere/frayere_mffp/
 analysis/data/cv/habitats/espece_statut/espece_statut_mffp/
 analysis/data/stresseurs/deversements/deversement_gcc/20210223_Demande_UL.csv
 analysis/data/stresseurs/deversements/deversement_gcc/20210223_Demande_UL.xlsx
+
+# R data ----
+data/cv_berge.RData
+data/cv_hab_alevinage.RData
+data/cv_hab_benthique.RData
+data/cv_hab_cote.RData
+data/cv_hab_espece_statut.RData
+data/cv_hab_frayere.RData
+data/cv_hab_marais.RData
+data/cv_hab_milieu_humide.RData
+data/cv_hab_milieu_sableux.RData
+data/cv_hab_zone_inondable.RData
+data/cv_hab_zostere.RData
+data/cv_ste_peche.RData
+data/cv_ste_saumon.RData
+data/str_ancrage.RData
+data/str_deversement.RData
+data/str_navigation.RData
+data/str_peche_commerciale.RData

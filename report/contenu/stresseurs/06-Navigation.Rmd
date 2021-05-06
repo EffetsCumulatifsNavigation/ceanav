@@ -1,0 +1,41 @@
+## Navigation
+
+### Données AIS
+
+#### Types de navires disponibles
+
+| Types de navires         | Vessel types          |
+| :----------------------- | :-------------------- |
+| Cargo                    | Cargo                 |
+| Porte-conteneurs         | Containers            |
+| Cargaison sèche          | Dry bulk              |
+| Traversier / roulier     | Ferry / ro-ro         |
+| Pêche                    | Fishing               |
+| Gouvernement / recherche | Government / research |
+| Autres                   | Others                |
+| Passager                 | Passenger             |
+| Navires de plaisance     | Pleasure vessels      |
+| Navires spéciaux         | Special ships         |
+| Pétrolier                | Tanker                |
+| Remorqueur / port        | Tugboat / port        |
+
+
+Ressources pertinentes:
+
+- [AIS MESSAGES](https://www.navcen.uscg.gov/?pageName=AISMessages)
+- [Marine cadastre](https://www.marinecadastre.gov/tools/)
+- [Track builder tutorial](https://coast.noaa.gov/data/digitalcoast/pdf/track-builder-tutorial.pdf)
+- [Marine regions](https://www.marineregions.org/gazetteer.php?p=details&id=62961)
+- [Diva-GIS](https://www.diva-gis.org/gdata)
+- [Marine Cadastre Track Builder](https://coast.noaa.gov/digitalcoast/tools/track-builder.html)
+
+
+
+#### Data formatting
+
+Vessel tracks are built for each vessel with the following parameters:
+
+- Maximum distance between points: 50 miles
+- Maximum time between points: 300 minutes
+
+There are also messages (field = `Message_Type`) that are used to characterize vessel points in AIS data. See [here](https://www.navcen.uscg.gov/?pageName=AISMessages) for message description
