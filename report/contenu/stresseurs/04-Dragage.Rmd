@@ -1,1 +1,3 @@
 ## Dragage
+
+La voie navigable du Saint-Laurent a historiquement été draguée partout où la profondeur naturelle ne permettrait pas le passage sécuritaire des bateaux. Entre Montréal et Cap Gribane, la voie navigable est d'une longueur totale d'environ 340 km et elle a été artificialisée sur une longueur d'environ 210 km afin d'y assurer une navigation sécuriatire [@ghb2019]. Sur cette longueur, une certaine proportion doit être draguée à intervalle régulier -- *i.e.* dragages d'entretien -- dû à la dynamique sédimentaire des milieux.
