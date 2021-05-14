@@ -16,11 +16,23 @@ getDragage <- function() {
   #
   # Degrees minutes seconds to degrees decimals converter:
   # https://www.rapidtables.com/convert/number/degrees-minutes-seconds-to-degrees.html
+  #
+  #
+  # ------------------------------------
+  # Pour plusieurs sites de dépôts et dragage, les données sur l'entretien
+  # de la voie maritime de la garde côtière canadienne sont utilisés
+  #
+  # dataID: 0029
+  # ~~~~~~~~~~~~
+  #
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   # Output folder
   folder <- paste0(output, 'dragage_eccc/')
   if (!file.exists(folder)) dir.create(folder)
 
+  # Importer données de la GCC
+  secteurs <- st_read(paste0(output, 'dragage_gcc/secteurs.shp')) %>%
+              st_transform(4326)
 
   # -------------------------------------------------------------------------
   # Halte Nautique de Saint-Michel-de-Bellechasse
@@ -171,5 +183,58 @@ getDragage <- function() {
             cbind(df, .) %>%
             st_sf()
 
+
+  # -------------------------------------------------------------------------
+  # Traverse Nord de l’Île d’Orléans
+  ## Secteur de la voie navigable du Saint-Laurent
+
+  ## Sites de dragage
+  uid <- c('G04amont','G04aval','G05','G06','G07','G08','G09','G10',
+           'G11amont','G11centre','G11aval','G12','G13','G14','G15')
+  tn_dg <- secteurs[secteurs$name %in% uid, ] %>%
+           st_union()
+
+  ## Data.frame
+  df <- data.frame(municipalite = "NA",
+                   site_dragage = "Traverse Nord I.O.",
+                   promoteur = "Garde côtière canadienne",
+                   organisme = "Gouvernement du Canada",
+                   type_dragage = "Entretien",
+                   classification = "Chenal",
+                   type_equipement = "Hydraulique",
+                   depot = "Eau libre",
+                   superficie_m2 = NA,
+                   volume_m3 = c(51162,51484,55945,53627,52694,55040,53032,49616),
+                   annees  = c(2009:2016),
+                   type = 'Dragage')
+
+  ## Spatial object
+  tn_dg <- cbind(df, tn_dg[rep(1, nrow(df)), ]) %>% st_sf()
+
+  ## Sites de dépôt
+  ## Maximum de de 10 000 m^3 pour X-02
+  uid <- c('X02','X03')
+  tn_dp <- secteurs[secteurs$name %in% uid, ] %>%
+           select(geometry)
+
+  dfx02 <- df %>%
+           mutate(type = 'Depot',
+                  volume_m3 = 10000)
+
+  dfx03 <- dfx02 %>%
+           mutate(volume_m3 = df$volume_m3 - 10000)
+
+  ## Spatial objects
+  x02 <- cbind(dfx02, tn_dp[rep(1, nrow(dfx02)), ])
+  x03 <- cbind(dfx03, tn_dp[rep(2, nrow(dfx03)), ])
+  tn_dp <- rbind(x02,x03) %>% st_sf()
+
+
+# Bind together
+dragage <- rbind(smdb_dg, cnib_dg, hbm_dg, tn_dg)
+depot <- rbind(smdb_dp, cnib_dp, hbm_dp)
+secteurs <- st_read(paste0(output, 'dragage_gcc/secteurs.shp'))
+
+mapview(secteurs) + dragage + smdb_dp + cnib_dp + hbm_dp
 
 }
