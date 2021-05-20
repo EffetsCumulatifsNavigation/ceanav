@@ -77,7 +77,10 @@ getDragage <- function() {
   smdb_dp <- st_point(coords) %>%
              st_sfc(.,.,.,.,.,.,.,.,crs = 4326) %>%
              cbind(df,.) %>%
-             st_sf()
+             st_sf() %>%
+             st_transform(32198) %>%
+             st_buffer(200) %>%
+             st_transform(4326)
 
 
   # -------------------------------------------------------------------------
@@ -123,7 +126,10 @@ getDragage <- function() {
   cnib_dp <- st_point(coords) %>%
              st_sfc(.,.,crs = 4326) %>%
              cbind(df,.) %>%
-             st_sf()
+             st_sf() %>%
+             st_transform(32198) %>%
+             st_buffer(200) %>%
+             st_transform(4326)
 
 
   # -------------------------------------------------------------------------
@@ -229,12 +235,241 @@ getDragage <- function() {
   x03 <- cbind(dfx03, tn_dp[rep(2, nrow(dfx03)), ])
   tn_dp <- rbind(x02,x03) %>% st_sf()
 
+  # -------------------------------------------------------------------------
+  # Quai de Saint-Antoine-de-l’Isle-aux-Grues (Montmagny)
+  ## Position du quai : 47° 3'18.75"N  70°31'54.43"O
+  ## Data.frame
+  df <- data.frame(X = -70.53179, Y = 47.05521,
+                   municipalite = "Isle-aux-Grues",
+                   site_dragage = "Quai de l'ïle-aux-Grues",
+                   promoteur = "Société des traversiers du Québec",
+                   organisme = "Gouvernement du Québec",
+                   type_dragage = "Entretien",
+                   classification = "Quai de traversier",
+                   type_equipement = "Mécanique",
+                   depot = "Eau libre",
+                   superficie_m2 = NA,
+                   volume_m3 = c(5052,4836,4609,4404,4781,5271,5666),
+                   annees  = c(2009:2015),
+                   type = 'Dragage')
 
-# Bind together
-dragage <- rbind(smdb_dg, cnib_dg, hbm_dg, tn_dg)
-depot <- rbind(smdb_dp, cnib_dp, hbm_dp)
-secteurs <- st_read(paste0(output, 'dragage_gcc/secteurs.shp'))
+  ## sf object
+  qiag_dg <- st_as_sf(df, coords = c('X','Y'), crs = 4326) %>%
+             st_transform(32198) %>%
+             st_buffer(100) %>%
+             st_transform(4326)
 
-mapview(secteurs) + dragage + smdb_dp + cnib_dp + hbm_dp
+  # Coordonnées où les sédiments sont gérés, aka site de dépôt
+  coords <- rbind(c(-70.49969, 47.05239), # 47°03’ 08.6’’ N / 70°29’58,9’’ O
+                  c(-70.49767, 47.05125), # 47°03’ 04,5’’ N / 70°29’ 51,6’’ O
+                  c(-70.49936, 47.04986), # 47°02’ 59,5’’ N / 70°29’ 57,7’’ O
+                  c(-70.50139, 47.05103), # 47°03’ 03,7’’ N / 70°30’ 05,0’’ O
+                  c(-70.49969, 47.05239))
+
+  ## Data.frame
+  df$type <- 'Depot'
+  df <- select(df, -X, -Y)
+
+  ## sf object
+  qiag_dp <- list(coords) %>%
+             st_polygon() %>%
+             st_sfc(.,.,.,.,.,.,.,crs = 4326) %>%
+             cbind(df, .) %>%
+             st_sf()
+
+
+  # -------------------------------------------------------------------------
+  # Parc nautique de Saint-Jean-Port-Joli (marina)
+  ## Coordonnées de la marina
+  coords <- rbind(c(-70.27263, 47.21520),
+                  c(-70.27379, 47.21420),
+                  c(-70.27492, 47.21478),
+                  c(-70.27549, 47.21601),
+                  c(-70.27537, 47.21640),
+                  c(-70.27490, 47.21701),
+                  c(-70.27462, 47.21684),
+                  c(-70.27448, 47.21656),
+                  c(-70.27445, 47.21633),
+                  c(-70.27460, 47.21614),
+                  c(-70.27263, 47.21520))
+
+  ## Data.frame
+  df <- data.frame(municipalite = "Saint-Jean-Port-Joli",
+                   site_dragage = "Parc nautique de Saint-Jean-Port-Joli",
+                   promoteur = "Parc nautique de Saint-Jean-Port-Joli",
+                   organisme = "Marina privée",
+                   type_dragage = "Entretien",
+                   classification = "Marina",
+                   type_equipement = "Hydraulique",
+                   depot = "Eau libre",
+                   superficie_m2 = NA,
+                   volume_m3 = rep(10000,6),
+                   annees  = c(2009:2011, 2014:2016),
+                   type = 'Dragage')
+
+  ## sf object
+  sjpj_dg <- list(coords) %>%
+             st_polygon() %>%
+             st_sfc(.,.,.,.,.,.,crs = 4326) %>%
+             cbind(df, .) %>%
+             st_sf()
+
+  # Site de dépôt: 600m de la jetée
+  # Figure et coorodnnées disponible dans un rapport d'évaluation environnementale:
+  # http://collections.banq.qc.ca/ark:/52327/bs47822
+  # "Ce site de rejet des sédiments est situé à 70° 18 de longitude ouest et
+  # 47° 15 de latitude nord (Figure 1)"
+  ## sf object
+  df$X <- -70.3
+  df$Y <- 47.25
+  df$type <- 'depot'
+  sjpj_dp <- st_as_sf(df, coords = c('X','Y'), crs = 4326) %>%
+             st_transform(32198) %>%
+             st_buffer(200) %>%
+             st_transform(4326)
+
+
+  # -------------------------------------------------------------------------
+  # Traverse de Saint-Joseph-de-la-Rive à l’Isle-aux-Coudres (quai de traversiers)
+  #
+  # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  # Quai de l’Isle-aux-Coudres : 47°25'14.75'' N, 70°23'32.48'' O
+  ## Data.frame
+  df <- data.frame(X = -70.39236, Y = 47.42076,
+                   municipalite = "Isle-aux-coudres",
+                   site_dragage = "Quai de l'Île-aux-Coudres",
+                   promoteur = "Société des traversiers du Québec",
+                   organisme = "Gouvernement du Québec",
+                   type_dragage = "Entretien",
+                   classification = "Quai de traversier",
+                   type_equipement = "Mécanique",
+                   depot = "Eau libre",
+                   superficie_m2 = c(8500,13500,11000,11000,7000,NA,5000,44300),
+                   volume_m3 = c(26450,25304,24019,21447,25656,15914,16142,74190),
+                   annees  = c(2009:2016),
+                   type = 'Dragage')
+
+  ## sf object
+  qiac_dg <- st_as_sf(df, coords = c('X','Y'), crs = 4326) %>%
+             st_transform(32198) %>%
+             st_buffer(100) %>%
+             st_transform(4326)
+
+  # Coordonnées où les sédiments sont gérés, aka site de dépôt
+  coords <- rbind(c(-70.38958, 47.4391), # 47°26,346’ N, 70°23,375’ O
+                  c(-70.3865, 47.4391), # 47°26,346’ N, 70°23,190’ O
+                  c(-70.3865, 47.4375), # 47°26,250’ N, 70°23,190’ O
+                  c(-70.38958, 47.4375), # 47°26,250’ N, 70°23,375’ O
+                  c(-70.38958, 47.4391))
+
+  ## Data.frame
+  df$type <- 'Depot'
+  df <- select(df, -X, -Y)
+
+  ## sf object
+  qiac_dp <- list(coords) %>%
+             st_polygon() %>%
+             st_sfc(.,.,.,.,.,.,.,.,crs = 4326) %>%
+             cbind(df, .) %>%
+             st_sf()
+
+  # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  # Quai de Saint-Joseph-de-la-Rive : 47.448753, -70.365030
+  ## Data.frame
+  df <- data.frame(X = -70.365030, Y = 47.448753,
+                   municipalite = "Saint-Joseph-de-la-Rive",
+                   site_dragage = "Quai de Saint-Joseph-de-la-Rive",
+                   promoteur = "Société des traversiers du Québec",
+                   organisme = "Gouvernement du Québec",
+                   type_dragage = "Entretien",
+                   classification = "Quai de traversier",
+                   type_equipement = "Mécanique",
+                   depot = "Eau libre",
+                   superficie_m2 = c(2800,8500,1500),
+                   volume_m3 = c(1909,6500,2399),
+                   annees  = c(2011,2012,2015),
+                   type = 'Dragage')
+
+  ## sf object
+  qsjr_dg <- st_as_sf(df, coords = c('X','Y'), crs = 4326) %>%
+             st_transform(32198) %>%
+             st_buffer(100) %>%
+             st_transform(4326)
+
+  # Coordonnées où les sédiments sont gérés, aka site de dépôt
+  # Même site de dépôt que le Quai de l'Ise-aux-Coudres
+  coords <- rbind(c(-70.38958, 47.4391), # 47°26,346’ N, 70°23,375’ O
+                  c(-70.3865, 47.4391), # 47°26,346’ N, 70°23,190’ O
+                  c(-70.3865, 47.4375), # 47°26,250’ N, 70°23,190’ O
+                  c(-70.38958, 47.4375), # 47°26,250’ N, 70°23,375’ O
+                  c(-70.38958, 47.4391))
+
+  ## Data.frame
+  df$type <- 'Depot'
+  df <- select(df, -X, -Y)
+
+  ## sf object
+  qsjr_dp <- list(coords) %>%
+             st_polygon() %>%
+             st_sfc(.,.,.,crs = 4326) %>%
+             cbind(df, .) %>%
+             st_sf()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  # -------------------------------------------------------------------------
+  ## Bind together
+  dragage  <- rbind(smdb_dg, cnib_dg, hbm_dg, tn_dg, qiag_dg, sjpj_dg, qiac_dg, qsjr_dg)
+  depot    <- rbind(smdb_dp, cnib_dp, hbm_dp, tn_dp, qiag_dp, sjpj_dp, qiac_dp, qsjr_dp)
+  secteurs <- st_read(paste0(output, 'dragage_gcc/secteurs.shp'))
+
+  mapview(secteurs) + dragage + depot
 
 }
