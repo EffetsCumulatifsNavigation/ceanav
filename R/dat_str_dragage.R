@@ -1,6 +1,6 @@
 getDragage <- function() {
   output <- './analysis/data/stresseurs/dragages/'
-
+  # WARNING: Vérifier années avec les quantités
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   # Dragages ECCC - Simon Blais
   # ------------------------------------
@@ -415,6 +415,175 @@ getDragage <- function() {
              cbind(df, .) %>%
              st_sf()
 
+  # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  # Secteur de Rivière-du-Loup (quai de traversier et marina)
+  ## ------------------------------------------
+  ## Quai de traversier : 47.847816, -69.570059
+  ## Coordonnées de la marina
+  coords <- rbind(c(-69.56939, 47.84786),
+                  c(-69.57083, 47.84784),
+                  c(-69.57080, 47.84752),
+                  c(-69.56935, 47.84756),
+                  c(-69.56939, 47.84786))
+
+  ## Data.frame
+  df <- data.frame(municipalite = "Rivière-du-Loup",
+                   site_dragage = "Désserte",
+                   promoteur = "Société des traversiers du Québec",
+                   organisme = "Gouvernement du Québec",
+                   type_dragage = "Entretien",
+                   classification = "Quai de traversier",
+                   type_equipement = "Mécanique",
+                   depot = "Eau libre",
+                   superficie_m2 = NA,
+                   volume_m3 = c(32371,31770,29528,29257,36970,29899,42125,51625,50609),
+                   annees  = c(2009:2015, 2017, 2016),
+                   type = 'Dragage')
+
+
+  ## sf object
+  qrdl_dg <- list(coords) %>%
+             st_polygon() %>%
+             st_sfc(.,.,.,.,.,.,.,.,.,crs = 4326) %>%
+             cbind(df, .) %>%
+             st_sf()
+
+  # Coordonnées site de dépôt 1 (2009:2015, 2017)
+  coords1 <- rbind(c(-69.57778, 47.86222), # A) 47°51’44’’ N, 69°34’40’’ O;
+                   c(-69.59139, 47.86667), # B) 47°52’00’’ N, 69°35’29’’ O;
+                   c(-69.57389, 47.88944), # C) 47°53’22’’ N, 69°34’26’’ O;
+                   c(-69.56083, 47.86222), # D) 47°51’44’’ N, 69°33’39’’ O
+                   c(-69.57778, 47.86222))
+
+  # Coordonnées site de dépôt 2 (2016)
+  coords2 <- rbind(c(-69.56676, 47.87908), # A) 47°52’44.6816’’N – 69°34’00.3367 O
+                   c(-69.56442, 47.88231), # C) 47°52’56.3321’’N – 69°33’51.9119 O
+                   c(-69.56923, 47.88389), # D) 47°53’01.9994’’ N – 69°34’09.2316 O
+                   c(-69.57157, 47.88065), # B) 47°52’50.3485’’N – 69°34’17.6557 O
+                   c(-69.56676, 47.87908))
+
+  ## Data.frame
+  df$type <- 'Depot'
+
+  ## sf object
+  ## Premier site de depot pour les années 2009 à 2015 et 2017
+  qrdl_dp1 <- list(coords1) %>%
+              st_polygon() %>%
+              st_sfc(.,.,.,.,.,.,.,.,crs = 4326) %>%
+              cbind(df[df$annees %in% c(2009:2015,2017), ], .) %>%
+              st_sf()
+
+  ## Deuxième site de depot pour l'année 2016
+  ## sf object
+  qrdl_dp2 <- list(coords2) %>%
+              st_polygon() %>%
+              st_sfc(.,crs = 4326) %>%
+              cbind(df[df$annees %in% c(2016), ], .) %>%
+              st_sf()
+
+
+  ## ---------------------------------------------
+  ## Marina : 47.846733, -69.569109
+  coords <- rbind(c(-69.56964, 47.84726),
+                  c(-69.57028, 47.84699),
+                  c(-69.57045, 47.84628),
+                  c(-69.57207, 47.84622),
+                  c(-69.57215, 47.84572),
+                  c(-69.56764, 47.84591),
+                  c(-69.56783, 47.84738),
+                  c(-69.56964, 47.84726))
+
+  ## Data.frame
+  df <- data.frame(municipalite = "Rivière-du-Loup",
+                   site_dragage = "Parc maritime de Rivière-du-Loup",
+                   promoteur = "Société Duvetnor ltée; La Corporation du Carrefour maritime de Rivière-du-Loup",
+                   organisme = "Transport Québec",
+                   type_dragage = c("Entretien","Entretien","Hybride","Entretien","Entretien","Entretien","Entretien","Entretien"),
+                   classification = "Marina",
+                   type_equipement = c(rep("Mécanique",5), rep("Hydraulique",3)),
+                   depot = "Eau libre",
+                   superficie_m2 = NA,
+                   volume_m3 = c(6042,8550,25000,1600,2000,45000,11500,11500),
+                   annees  = c(2016,2015,2014,2011,2010,2018,2019,2020),
+                   type = 'Dragage')
+
+
+  ## sf object
+  mrdl_dg <- list(coords) %>%
+             st_polygon() %>%
+             st_sfc(.,.,.,.,.,.,.,.,crs = 4326) %>%
+             cbind(df, .) %>%
+             st_sf()
+
+  # Coordonnées site de dépôt: pour l'instant utilisation du site 1 du quai de Rivière-du-Loup
+  # WARNING: Vérifier s'il s'agit réellement du bon site de dépôt
+  coords <- coords1
+
+  ## Data.frame
+  df$type <- 'Depot'
+
+  ## sf object
+  ## Premier site de depot pour les années 2009 à 2015 et 2017
+  mrdl_dp <- list(coords) %>%
+              st_polygon() %>%
+              st_sfc(.,.,.,.,.,.,.,.,crs = 4326) %>%
+              cbind(df, .) %>%
+              st_sf()
+
+
+  # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  # Port de Gros Cacouna (port de marchandises)
+  ## Centroide du port (manuel) : 47.93021664372833, -69.51570540967386
+  ## Coordonnées (avec mapedit)
+  coords <- rbind(c(-69.50984, 47.93378),
+                  c(-69.51883, 47.93625),
+                  c(-69.52223, 47.93105),
+                  c(-69.52180, 47.92788),
+                  c(-69.51387, 47.92444),
+                  c(-69.50984, 47.93378))
+
+  ## Data.frame
+  df <- data.frame(municipalite = "Gros-Cacouna",
+                   site_dragage = "Port de Gros-Cacouna",
+                   promoteur = NA,
+                   organisme = NA,
+                   type_dragage = "Entretien",
+                   classification = "Port",
+                   type_equipement = "Hydraulique",
+                   depot = "Terrestre",
+                   superficie_m2 = NA,
+                   volume_m3 = 69250,
+                   annees  = 2019,
+                   type = 'Dragage')
+
+  ## sf object
+  pgc_dg <- list(coords) %>%
+            st_polygon() %>%
+            st_sfc(crs = 4326) %>%
+            cbind(df, .) %>%
+            st_sf()
+
+
+
+  # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  # Notre-Dame de-l’Îsle-Verte, L’Isle-Verte (quai de traversiers)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -466,8 +635,10 @@ getDragage <- function() {
 
   # -------------------------------------------------------------------------
   ## Bind together
-  dragage  <- rbind(smdb_dg, cnib_dg, hbm_dg, tn_dg, qiag_dg, sjpj_dg, qiac_dg, qsjr_dg)
-  depot    <- rbind(smdb_dp, cnib_dp, hbm_dp, tn_dp, qiag_dp, sjpj_dp, qiac_dp, qsjr_dp)
+  dragage  <- rbind(smdb_dg, cnib_dg, hbm_dg, tn_dg, qiag_dg, sjpj_dg, qiac_dg,
+                    qsjr_dg, qrdl_dg, mrdl_dg, pgc_dg)
+  depot    <- rbind(smdb_dp, cnib_dp, hbm_dp, tn_dp, qiag_dp, sjpj_dp, qiac_dp,
+                    qsjr_dp, qrdl_dp1, qrdl_dp2, mrdl_dp)
   secteurs <- st_read(paste0(output, 'dragage_gcc/secteurs.shp'))
 
   mapview(secteurs) + dragage + depot
