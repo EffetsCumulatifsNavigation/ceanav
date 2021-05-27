@@ -17,7 +17,10 @@ getDragage <- function() {
   # Degrees minutes seconds to degrees decimals converter:
   # https://www.rapidtables.com/convert/number/degrees-minutes-seconds-to-degrees.html
   #
-  #
+  # Code to visualize point, draw polygon and extract coordinates
+  # x <- st_point(matrix(c(-67.2848, 49.4214), nrow = 1)) %>% st_sfc(crs = 4326)
+  # x <- mapview(x) %>% editMap()
+  # st_coordinates(x[[1]])
   # ------------------------------------
   # Pour plusieurs sites de dépôts et dragage, les données sur l'entretien
   # de la voie maritime de la garde côtière canadienne sont utilisés
@@ -567,78 +570,575 @@ getDragage <- function() {
 
   # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   # Notre-Dame de-l’Îsle-Verte, L’Isle-Verte (quai de traversiers)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  ## Coordonnées du quai : 48.039772, -69.406583
+  ## Aucun détail disponible sur les activités de dragage
+  ## Contact à la STQ : Michel Lefrançois
+  df <- data.frame(X = -69.406583, Y = 48.039772,
+                   municipalite = "Notre-Dame de-l’Îsle-Verte",
+                   site_dragage = "Quai de la traverse de l'Îsle-Verte",
+                   promoteur = "Société des traversiers du Québec",
+                   organisme = "Gouvernement du Québec",
+                   type_dragage = "Entretien",
+                   classification = "Quai de traversier",
+                   type_equipement = NA,
+                   depot = NA,
+                   superficie_m2 = NA,
+                   volume_m3 = NA,
+                   annees  = NA,
+                   type = 'Dragage')
+
+  ## sf object
+  qiv_dg <- st_as_sf(df, coords = c('X','Y'), crs = 4326) %>%
+             st_transform(32198) %>%
+             st_buffer(100) %>%
+             st_transform(4326)
+
+
+  # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  # Tadoussac (quai de traversier et marina)
+  ## --------------------------------------------------
+  ## Marina de Tadoussac (48° 8'19.60"N ; 69°43'4.69"O)
+  ## Coordonnées de la marina
+  coords <- rbind(c(-69.71762, 48.13832),
+                  c(-69.71746, 48.13921),
+                  c(-69.71452, 48.13855),
+                  c(-69.71497, 48.13770),
+                  c(-69.71762, 48.13832))
+
+  ## Data.frame
+  df <- data.frame(municipalite = "Tadoussac",
+                   site_dragage = "Marina",
+                   promoteur = NA,
+                   organisme = "Marina privée",
+                   type_dragage = "Entretien",
+                   classification = "Marina",
+                   type_equipement = "Mécanique",
+                   depot = "Eau libre",
+                   superficie_m2 = NA,
+                   volume_m3 = 6000,
+                   annees  = 2017,
+                   type = 'Dragage')
+
+  ## sf object
+  mtad_dg <- list(coords) %>%
+             st_polygon() %>%
+             st_sfc(.,crs = 4326) %>%
+             cbind(df, .) %>%
+             st_sf()
+
+  # Coordonnées site de dépôt
+  # Site d’immersion des Bergeronnes : (48°12’00’’N ; 69°34’48’’O)
+  coords <- matrix(c(48.2, -69.58), nrow = 1)
+  coords <- coords[,c(2,1)]
+
+  ## Data.frame
+  df$type <- 'Depot'
+
+  ## sf object
+  mtad_dp <- st_point(coords) %>%
+             st_sfc(.,crs = 4326) %>%
+             cbind(df,.) %>%
+             st_sf() %>%
+             st_transform(32198) %>%
+             st_buffer(200) %>%
+             st_transform(4326)
+
+  ## --------------------------------------------------
+  ## Desserte de la traverse Taddousac - Baie-Sainte-Catherine
+  ## =====================
+  ## Desserte est
+  coords <- rbind(c(-69.72755, 48.13854),
+                  c(-69.72688, 48.13941),
+                  c(-69.72614, 48.13918),
+                  c(-69.72687, 48.13833),
+                  c(-69.72755, 48.13854))
+
+  ## Data.frame
+  df <- data.frame(municipalite = "Tadoussac",
+                   site_dragage = "Desserte est traverse Tadoussac - Baie-Sainte-Catherine",
+                   promoteur = "Société des traversiers du Québec",
+                   organisme = "Gouvernement du Québec",
+                   type_dragage = "Entretien",
+                   classification = "Quai de traversier ",
+                   type_equipement = "Mécanique",
+                   depot = "Eau libre",
+                   superficie_m2 = NA,
+                   volume_m3 = 1146,
+                   annees  = 2014,
+                   type = 'Dragage')
+
+  ## sf object
+  detd_dg <- list(coords) %>%
+             st_polygon() %>%
+             st_sfc(.,crs = 4326) %>%
+             cbind(df, .) %>%
+             st_sf()
+
+  ## Site de dépôt
+  ## WARNING: À vérifier que le site est le bon!!
+  df$type <- 'Depot'
+  detg_dp <- cbind(df, st_geometry(mtad_dp)) %>% st_sf()
+
+  ## =====================
+  ## Desserte ouest
+  coords <- rbind(c(-69.73103, 48.12714),
+                  c(-69.73011, 48.12770),
+                  c(-69.72878, 48.12671),
+                  c(-69.72959, 48.12613),
+                  c(-69.73103, 48.12714))
+
+  ## Data.frame
+  df <- data.frame(municipalite = "Tadoussac",
+                   site_dragage = "Desserte ouest traverse Tadoussac - Baie-Sainte-Catherine",
+                   promoteur = "Société des traversiers du Québec",
+                   organisme = "Gouvernement du Québec",
+                   type_dragage = "Entretien",
+                   classification = "Quai de traversier ",
+                   type_equipement = "Mécanique",
+                   depot = "Eau libre",
+                   superficie_m2 = NA,
+                   volume_m3 = 1146,
+                   annees  = 2014,
+                   type = 'Dragage')
+
+  ## sf object
+  dotd_dg <- list(coords) %>%
+             st_polygon() %>%
+             st_sfc(.,crs = 4326) %>%
+             cbind(df, .) %>%
+             st_sf()
+
+  ## Site de dépôt
+  ## WARNING: À vérifier que le site est le bon!!
+  df$type <- 'Depot'
+  dotg_dp <- cbind(df, st_geometry(mtad_dp)) %>% st_sf()
+
+
+  # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  # Secteur port de Rimouski Est (port de marchandises et marina)
+  ## --------------------------------------------------
+  ## Coordonnées de la marina (mapedit)
+  coords <- rbind(c(-68.50995, 48.47923),
+                  c(-68.51281, 48.48108),
+                  c(-68.51503, 48.48117),
+                  c(-68.51602, 48.48049),
+                  c(-68.51195, 48.47784),
+                  c(-68.50995, 48.47923))
+
+  ## Data.frame
+  df <- data.frame(municipalite = "Rimouski",
+                   site_dragage = "Marina de Rimouski",
+                   promoteur = NA,
+                   organisme = NA,
+                   type_dragage = "Entretien",
+                   classification = "Marina",
+                   type_equipement = "Mécanique",
+                   depot = "Eau libre",
+                   superficie_m2 = NA,
+                   volume_m3 = 3500,
+                   annees  = 2019,
+                   type = 'Dragage')
+
+  ## sf object
+  mrim_dg <- list(coords) %>%
+             st_polygon() %>%
+             st_sfc(.,crs = 4326) %>%
+             cbind(df, .) %>%
+             st_sf()
+
+  # Site de dépôt:
+  ## Coordonnées du site de dépôt
+  coords <- rbind(c(-68.55113, 48.52129), # 68° 33' 04.06" W; 48° 31' 16.65" N
+                  c(-68.54856, 48.51892), # 68° 32' 54.80" W; 48° 31' 08.11" N
+                  c(-68.55212, 48.51721), # 68° 33' 07.64" W; 48° 31' 01.96" N
+                  c(-68.5547, 48.51958), # 68° 33' 16.91" W; 48° 31' 10.49" N
+                  c(-68.55113, 48.52129))
+
+  ## Data.frame
+  df$type <- 'Depot'
+
+  ## sf object
+  mrim_dp <- list(coords) %>%
+            st_polygon() %>%
+            st_sfc(.,.,.,crs = 4326) %>%
+            cbind(df, .) %>%
+            st_sf()
+
+  ## --------------------------------------------------
+  ## Port: https://buyandsell.gc.ca/cds/public/2018/07/19/03b09a391aa4b24241247b8a1c2cb162/ABES.PROD.PW_QCM.B008.B17442.ATTA002.PDF
+  ## Coordonnées du port (mapedit)
+  coords <- rbind(c(-68.51351, 48.47823),
+                  c(-68.51531, 48.47710),
+                  c(-68.51735, 48.47842),
+                  c(-68.51769, 48.47820),
+                  c(-68.52002, 48.47978),
+                  c(-68.51932, 48.48203),
+                  c(-68.51868, 48.48230),
+                  c(-68.51852, 48.48703),
+                  c(-68.51774, 48.48697),
+                  c(-68.51801, 48.48202),
+                  c(-68.51751, 48.48106),
+                  c(-68.51775, 48.48094),
+                  c(-68.51351, 48.47823))
+
+  ## Data.frame
+  df <- data.frame(municipalite = "Rimouski",
+                   site_dragage = "Port de Rimouski",
+                   promoteur = NA,
+                   organisme = NA,
+                   type_dragage = "Entretien",
+                   classification = "Port",
+                   type_equipement = c("Mécanique","Hybride","Mécanique"),
+                   depot = "Eau libre",
+                   superficie_m2 = NA,
+                   volume_m3 = c(134701,129613,5169),
+                   annees  = c(2010,2019,2014),
+                   type = 'Dragage')
+
+  ## sf object
+  prim_dg <- list(coords) %>%
+             st_polygon() %>%
+             st_sfc(.,.,.,crs = 4326) %>%
+             cbind(df, .) %>%
+             st_sf()
+
+  ## Site de dépôt
+  ## WARNING: À vérifier que le site est le bon pour 2014!!
+  df$type <- 'Depot'
+  prim_dp <- cbind(df, st_geometry(mrim_dp)) %>% st_sf()
+
+
+  # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  # Secteur de Matane (port de marchandises, quai des pêcheurs et marina)
+  ## --------------------------------------------------
+  ## Coordonnées de la port (mapedit)
+  coords <- rbind(c(-67.57563, 48.83775),
+                  c(-67.58122, 48.84495),
+                  c(-67.58095, 48.84660),
+                  c(-67.57995, 48.84761),
+                  c(-67.57752, 48.84912),
+                  c(-67.57005, 48.84175),
+                  c(-67.57563, 48.83775))
+
+  ## Data.frame
+  df <- data.frame(municipalite = "Matane",
+                   site_dragage = "Port de Matane",
+                   promoteur = NA,
+                   organisme = NA,
+                   type_dragage = "Entretien",
+                   classification = "Port",
+                   type_equipement = c("Mécanique","Hybride"),
+                   depot = "Eau libre",
+                   superficie_m2 = NA,
+                   volume_m3 = c(16168, 9225),
+                   annees  = c(2009, 2015),
+                   type = 'Dragage')
+
+  ## sf object
+  pmat_dg <- list(coords) %>%
+             st_polygon() %>%
+             st_sfc(.,.,crs = 4326) %>%
+             cbind(df, .) %>%
+             st_sf()
+
+  # Site de dépôt:
+  ## Coordonnées du site de dépôt: 48°51’ 35’’ N; 67°35’50’’ O.
+  ## Coordonnées du site de dépôt
+  coords <- matrix(c(48.85972, -67.59722), nrow = 1)
+  coords <- coords[,c(2,1)]
+
+  ## Data.frame
+  df$type <- 'Depot'
+
+  ## sf object
+  pmat_dp <- st_point(coords) %>%
+             st_sfc(.,.,crs = 4326) %>%
+             cbind(df,.) %>%
+             st_sf() %>%
+             st_transform(32198) %>%
+             st_buffer(200) %>%
+             st_transform(4326)
+
+
+  ## --------------------------------------------------
+  ## Coordonnées de la marina: 48° 51’ 9’’ N ; 67° 31’ 44’’ O
+  ## 48.8525, -67.52889
+  ## Polygon with mapedit
+  coords <- rbind(c(-67.52713, 48.85286),
+                  c(-67.52950, 48.85287),
+                  c(-67.53087, 48.85256),
+                  c(-67.53072, 48.85207),
+                  c(-67.52710, 48.85228),
+                  c(-67.52713, 48.85286))
+
+  ## Data.frame
+  df <- data.frame(municipalite = "Matane",
+                   site_dragage = "Marina de Matane",
+                   promoteur = NA,
+                   organisme = NA,
+                   type_dragage = "Entretien",
+                   classification = "Marina",
+                   type_equipement = "Mécanique",
+                   depot = "Eau libre",
+                   superficie_m2 = NA,
+                   volume_m3 = 21000,
+                   annees  = 2019,
+                   type = 'Dragage')
+
+  ## sf object
+  mmat_dg <- list(coords) %>%
+             st_polygon() %>%
+             st_sfc(.,crs = 4326) %>%
+             cbind(df, .) %>%
+             st_sf()
+
+  ## Site de dépôt
+  ## WARNING: À vérifier que le site est le bon pour 2014!!
+  df$type <- 'Depot'
+  mmat_dp <- cbind(df, st_geometry(pmat_dp)) %>% st_sf()
+
+
+  # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  # Quai de Godbout: 49° 19'21.25" N ; 67°35'30.49" O
+  # x <- st_point(matrix(c(-67.5918, 49.32257), nrow = 1)) %>% st_sfc(crs = 4326)
+  # x <- mapview(x) %>% editMap()
+  coords <- rbind(c(-67.59252, 49.32208),
+                  c(-67.59093, 49.32265),
+                  c(-67.59125, 49.32301),
+                  c(-67.59285, 49.32243),
+                  c(-67.59252, 49.32208))
+
+  ## Data.frame
+  df <- data.frame(municipalite = "Godbout",
+                   site_dragage = "Quai de Godbout",
+                   promoteur = "Société des Traversiers du Québec",
+                   organisme = "Gouvernement du Québec",
+                   type_dragage = "Entretien",
+                   classification = "Quai de traversier",
+                   type_equipement = NA,
+                   depot = "Eau libre",
+                   superficie_m2 = NA,
+                   volume_m3 = 4932,
+                   annees  = 2017,
+                   type = 'Dragage')
+
+  ## sf object
+  qgod_dg <- list(coords) %>%
+             st_polygon() %>%
+             st_sfc(.,crs = 4326) %>%
+             cbind(df, .) %>%
+             st_sf()
+
+  # Site de dépôt:
+  ## Coordonnées du site de dépôt:49.2835; -67.5590
+  coords <- matrix(c(-67.5590, 49.2835), nrow = 1)
+
+  ## Data.frame
+  df$type <- 'Depot'
+
+  ## sf object
+  qgod_dp <- st_point(coords) %>%
+             st_sfc(.,crs = 4326) %>%
+             cbind(df,.) %>%
+             st_sf() %>%
+             st_transform(32198) %>%
+             st_buffer(200) %>%
+             st_transform(4326)
+
+
+  # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  # Les Méchins 49º0'17.65"N; 66º58'27.11"O
+  # x <- st_point(matrix(c(-66.9742, 49.0049), nrow = 1)) %>% st_sfc(crs = 4326)
+  # x <- mapview(x) %>% editMap()
+  coords <- rbind(c(-66.97288, 49.00407),
+                  c(-66.97299, 49.00442),
+                  c(-66.97355, 49.00467),
+                  c(-66.97383, 49.00439),
+                  c(-66.97323, 49.00391),
+                  c(-66.97288, 49.00407))
+
+  ## Data.frame
+  df <- data.frame(municipalite = "Les Méchins",
+                   site_dragage = "Quai de Les Méchins",
+                   promoteur = "Groupe Maritime Verreault Inc.",
+                   organisme = NA,
+                   type_dragage = "Entretien",
+                   classification = "Quai",
+                   type_equipement = NA,
+                   depot = "Terrestre",
+                   superficie_m2 = NA,
+                   volume_m3 = 4000,
+                   annees  = 2016,
+                   type = 'Dragage')
+
+  ## sf object
+  qmec_dg <- list(coords) %>%
+             st_polygon() %>%
+             st_sfc(.,crs = 4326) %>%
+             cbind(df, .) %>%
+             st_sf()
+
+  # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  # Havre de Baie-Trinité
+  ## Coordonnées: 49º25'17.03"N; 67º17'5.27"O
+  coords <- rbind(c(-67.28354, 49.42130),
+                  c(-67.28397, 49.42101),
+                  c(-67.28451, 49.42012),
+                  c(-67.28539, 49.42028),
+                  c(-67.28452, 49.42157),
+                  c(-67.28354, 49.42130))
+
+  ## Data.frame
+  df <- data.frame(municipalite = "Baie-Trinité",
+                   site_dragage = "Havre de Baie-Trinité",
+                   promoteur = NA,
+                   organisme = NA,
+                   type_dragage = "Entretien",
+                   classification = "Quai",
+                   type_equipement = NA,
+                   depot = "Terrestre",
+                   superficie_m2 = NA,
+                   volume_m3 = 3000,
+                   annees  = 2016,
+                   type = 'Dragage')
+
+  ## sf object
+  hbtr_dg <- list(coords) %>%
+             st_polygon() %>%
+             st_sfc(.,crs = 4326) %>%
+             cbind(df, .) %>%
+             st_sf()
+
+
+  # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  # Secteur de Baie-Comeau (ports de marchandises, quai de traversiers)
+
+  ## ------------------------------
+  ## Havre de Baie-Comeau
+  coords <- rbind(c(-68.13563, 49.22962),
+                  c(-68.13324, 49.23028),
+                  c(-68.13186, 49.22977),
+                  c(-68.13203, 49.22887),
+                  c(-68.13358, 49.22840),
+                  c(-68.13466, 49.22839),
+                  c(-68.13563, 49.22962))
+
+  ## Data.frame
+  df <- data.frame(municipalite = "Baie-Comeau",
+                   site_dragage = "Havre de Baie-Comeau",
+                   promoteur = NA,
+                   organisme = NA,
+                   type_dragage = "Entretien",
+                   classification = "Quai",
+                   type_equipement = NA,
+                   depot = "Eau libre",
+                   superficie_m2 = NA,
+                   volume_m3 = c(5100, 3328),
+                   annees  = c(2017, 2014),
+                   type = 'Dragage')
+
+  ## sf object
+  hbc_dg <- list(coords) %>%
+             st_polygon() %>%
+             st_sfc(.,.,crs = 4326) %>%
+             cbind(df, .) %>%
+             st_sf()
+
+  ## Site de dépôt de la Baie-des-Anglais
+  ## Environ 1 km du quai
+  ## Voir rapport: https://www.bape.gouv.qc.ca/fr/dossiers/programme-decennal-dragage-abords-quais-cargill-limitee-baie-comeau/documentation/
+  ## Coordonnées du site de dépôt: 49.256618, -68.119232
+  coords <- matrix(c(-68.119232, 49.256618), nrow = 1)
+
+  ## Data.frame
+  df$type <- 'Depot'
+
+  ## sf object
+  hbc_dp <- st_point(coords) %>%
+             st_sfc(.,.,crs = 4326) %>%
+             cbind(df,.) %>%
+             st_sf() %>%
+             st_transform(32198) %>%
+             st_buffer(200) %>%
+             st_transform(4326)
+
+  ## ------------------------------
+  ## Quai de Cargill
+  ## 49°15'17.02'' N ; 68°8'0.31'' O
+  coords <- rbind(c(-68.13773, 49.24890),
+                  c(-68.13546, 49.24908),
+                  c(-68.13556, 49.24930),
+                  c(-68.13692, 49.24920),
+                  c(-68.13695, 49.24942),
+                  c(-68.13527, 49.24955),
+                  c(-68.13490, 49.24848),
+                  c(-68.13761, 49.24834),
+                  c(-68.13773, 49.24890))
+
+  ## Data.frame
+  df <- data.frame(municipalite = "Baie-Comeau",
+                   site_dragage = "Quai de Cargill",
+                   promoteur = NA,
+                   organisme = NA,
+                   type_dragage = "Entretien",
+                   classification = "Quai",
+                   type_equipement = NA,
+                   depot = "Terrestre",
+                   superficie_m2 = NA,
+                   volume_m3 = 2240,
+                   annees  = 2017,
+                   type = 'Dragage')
+
+  ## sf object
+  carg_dg <- list(coords) %>%
+             st_polygon() %>%
+             st_sfc(.,crs = 4326) %>%
+             cbind(df, .) %>%
+             st_sf()
+
+  ## ------------------------------
+  ## Société Alcoa - secteur de l’Anse-du moulin
+  coords <- rbind(c(-68.13292, 49.25245),
+                  c(-68.13055, 49.25468),
+                  c(-68.13348, 49.25536),
+                  c(-68.13400, 49.25424),
+                  c(-68.13391, 49.25348),
+                  c(-68.13292, 49.25245))
+
+  ## Data.frame
+  df <- data.frame(municipalite = "Baie-Comeau",
+                   site_dragage = "Quai Société Alcoa",
+                   promoteur = NA,
+                   organisme = NA,
+                   type_dragage = "Entretien",
+                   classification = "Quai",
+                   type_equipement = NA,
+                   depot = "Terrestre",
+                   superficie_m2 = NA,
+                   volume_m3 = 56000,
+                   annees  = 2017,
+                   type = 'Dragage')
+
+  ## sf object
+  alco_dg <- list(coords) %>%
+             st_polygon() %>%
+             st_sfc(.,crs = 4326) %>%
+             cbind(df, .) %>%
+             st_sf()
 
 
   # -------------------------------------------------------------------------
   ## Bind together
+  # TODO: s'assurer que j'ai tous les sites
+  # TODO: Modifier pour tout insérer dans une liste unique, comme ça un
+  #       bind_rows va permettre d'être certain qu'il n'en manque aucun
   dragage  <- rbind(smdb_dg, cnib_dg, hbm_dg, tn_dg, qiag_dg, sjpj_dg, qiac_dg,
-                    qsjr_dg, qrdl_dg, mrdl_dg, pgc_dg)
+                    qsjr_dg, qrdl_dg, mrdl_dg, pgc_dg, qiv_dg, mtad_dg, detd_dg,
+                    dotd_dg, prim_dg, mrim_dg, pmat_dg, mmat_dg, qmec_dg, hbtr_dg,
+                    qgod_dg, hbc_dg, carg_dg, alco_dg)
   depot    <- rbind(smdb_dp, cnib_dp, hbm_dp, tn_dp, qiag_dp, sjpj_dp, qiac_dp,
-                    qsjr_dp, qrdl_dp1, qrdl_dp2, mrdl_dp)
+                    qsjr_dp, qrdl_dp1, qrdl_dp2, mrdl_dp, mtad_dp, detg_dp,
+                    dotg_dp, prim_dp, mrim_dp, mmat_dp, pmat_dp, hbc_dp, qgod_dp)
   secteurs <- st_read(paste0(output, 'dragage_gcc/secteurs.shp'))
 
   mapview(secteurs) + dragage + depot
