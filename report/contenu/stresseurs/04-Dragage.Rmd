@@ -1,3 +1,36 @@
 ## Dragage
 
 La voie navigable du Saint-Laurent a historiquement été draguée partout où la profondeur naturelle ne permettrait pas le passage sécuritaire des bateaux. Entre Montréal et Cap Gribane, la voie navigable est d'une longueur totale d'environ 340 km et elle a été artificialisée sur une longueur d'environ 210 km afin d'y assurer une navigation sécuriatire [@ghb2019]. Sur cette longueur, une certaine proportion doit être draguée à intervalle régulier -- *i.e.* dragages d'entretien -- dû à la dynamique sédimentaire des milieux.
+
+
+### Communications avec Simon
+
+#### 2021-05-07
+
+Bonjour David,
+
+je crois que ta compréhension est assez exacte. En termes simples, le chenal de navigation a été dragué (ou artificialisé) partout (entre Montréal et Cap Gribane) où la profondeur naturelle ne permettait pas d’avoir la profondeur voulue, sur la largeur voulue pour un passage sécuritaire des bateaux dans les différentes phases successives de dragage de conception/amélioration de la voie navigable. Je ne sais pas combien de km ont été « artificialisés », mais j’imagine que la responsable de la GCC pourrait te donner cette info. La profondeur naturelle du fleuve à certains endroit est suffisante, ce qui explique que les zones ayant dû être draguées ne sont pas nécessairement continues. Il y a eu quelques phases d’amélioration (lire approfondissement/élargissement par rapport au design original) de la voie navigable, dont je ne connais pas les dates, principalement en raison de l’agrandissement de la taille des bateaux et de l’augmentation du trafic maritime dans le fleuve avec les années. Quand on parle d’approfondissement de la voie de navigation, on appelle ça du dragage de capitalisation.
+
+L’aspect qui est traité dans les rapports de la GCC est relié plutôt au dragage d’entretien (respect du design actuel (profondeur et largeur minimum), sans approfondir) de la voie de navigation, car certains secteurs sont plus sujets à l’ensablement et doivent être entretenus selon une fréquence variable. Je n’ai pas les chiffres non plus (distances en kilomètres entretenus, fréquence…) mais les rapports ou u contact à GCC peux certainement te renseigner à ce sujet.
+
+Pour les shapefiles, je ne les ai pas. Je te mets ici les contact de la remplaçante de Pierre Dion à la GCC : Fortier, Denise (Denise.Fortier@dfo-mpo.gc.ca)
+
+Elle pourrait certainement te répondre/rediriger.
+
+Bonne journée
+
+Simon
+
+#### 2021-05-31
+
+Bonjour David
+
+À ma connaissance, il n’y a pas eu d’exercice similaire entre Qc et Mtl. J’ai fait la zone de l’Estuaire, à la demande du comité fed/prov pour la mise en place d’une aire marine protégée dans l’Estuaire du S. Laurent. J’avais comme projet de le faire au besoin, avec les données de l’étudiant de Transport Québec (fichier Excel que je t’ai transmis en novembre 2020), celles de la GCC et celles de mes collèges du MPO et de TC, mais je crains que le temps ne me manque… J’ai demandé du financement pour un projet au sujet des sites de dépôts de dragage et je pourrais intégrer cet aspect… Cependant, c’est pour un Mémoire au cabinet en novembre prochain… alors ça va prendre un bout avant de savoir si j’ai des ressources supplémentaires.
+
+Pour ton courriel de ce matin, j’ai-je té un œil au fichier et à tes questions… Plusieurs de ces questions sont très bonnes et semblent démontrer une certaine problématique de la fiabilité des données… Faudrait que je me replonge la dedans pour aller voir ce qu’il en est. Une chose est certaine, il n’y a pas eu de mise à jour ou de changement de données depuis l’envoi du rapport. C’est plutôt la source des données qui pose problème. Certaines extraites des archives de TC, d’autres des archives du MPO, dans des dossiers de projet analysés il y a plusieurs année, d’autres de certificats d’autorisations du MELCC pour des dragages, puis d’internet… bref, il y a de tout et ça fait réaliser qu’il n’y a pas de façon officielle ou uniforme de consigner ces données, ni même d’obligation de le faire… Le but du Registre de planification des activités de dragage (plateforme pour entrer ce genre de données sur le site web du PASL) était justement de répertorier et conserver ces données, mais il n’a jamais été obligatoire et maintenant, plateforme n’est plus à jour.
+
+Bref, je vais essayer de répondre à tes questions LPTP, mais quels sont tes délais? Je devrais re-consulter les collègues qui détiennent l’information.
+
+Merci et bonne journée
+
+Simon
