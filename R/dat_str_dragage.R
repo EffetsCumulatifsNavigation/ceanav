@@ -37,6 +37,12 @@ getDragage <- function() {
   secteurs <- st_read(paste0(output, 'dragage_gcc/secteurs.shp')) %>%
               st_transform(4326)
 
+  # Listes pour stocker les sites de dragage et de depot
+  dragage <- depot <- list()
+
+  # Rayon des buffers pour les sites de depot identifiés uniquement par un point
+  buf <- 100
+
   # -------------------------------------------------------------------------
   # Halte Nautique de Saint-Michel-de-Bellechasse
   ## Coordonnées de la halte nautique
@@ -62,11 +68,11 @@ getDragage <- function() {
                    type = 'Dragage')
 
   ## sf object
-  smdb_dg <- list(coords) %>%
-             st_polygon() %>%
-             st_sfc(.,.,.,.,.,.,.,.,crs = 4326) %>%
-             cbind(df, .) %>%
-             st_sf()
+  dragage[["smdb"]] <- list(coords) %>%
+                          st_polygon() %>%
+                          st_sfc(.,.,.,.,.,.,.,.,crs = 4326) %>%
+                          cbind(df, .) %>%
+                          st_sf()
 
   # Site de dépôt: 46˚53'01"N / 70˚54'33"O
   ## Coordonnées du site de dépôt
@@ -77,13 +83,13 @@ getDragage <- function() {
   df$type <- 'Depot'
 
   ## sf object
-  smdb_dp <- st_point(coords) %>%
-             st_sfc(.,.,.,.,.,.,.,.,crs = 4326) %>%
-             cbind(df,.) %>%
-             st_sf() %>%
-             st_transform(32198) %>%
-             st_buffer(200) %>%
-             st_transform(4326)
+  depot[["smdb"]] <- st_point(coords) %>%
+                        st_sfc(.,.,.,.,.,.,.,.,crs = 4326) %>%
+                        cbind(df,.) %>%
+                        st_sf() %>%
+                        st_transform(32198) %>%
+                        st_buffer(buf) %>%
+                        st_transform(4326)
 
 
   # -------------------------------------------------------------------------
@@ -107,15 +113,15 @@ getDragage <- function() {
                    depot = "Eau libre",
                    superficie_m2 = c(560, 2725),
                    volume_m3 = c(2000,4675),
-                   annees  = c(2012,2014),
+                   annees  = c(2014,2012),
                    type = 'Dragage')
 
   ## sf object
-  cnib_dg <- list(coords) %>%
-             st_polygon() %>%
-             st_sfc(.,.,crs = 4326) %>%
-             cbind(df, .) %>%
-             st_sf()
+  dragage[["cnib"]] <- list(coords) %>%
+                          st_polygon() %>%
+                          st_sfc(.,.,crs = 4326) %>%
+                          cbind(df, .) %>%
+                          st_sf()
 
   # Site de dépôt: 46˚53'01"N / 70˚54'33"O
   ## Coordonnées du site de dépôt
@@ -126,12 +132,12 @@ getDragage <- function() {
   df$type <- 'Depot'
 
   ## sf object
-  cnib_dp <- st_point(coords) %>%
+  depot[["cnib"]] <- st_point(coords) %>%
              st_sfc(.,.,crs = 4326) %>%
              cbind(df,.) %>%
              st_sf() %>%
              st_transform(32198) %>%
-             st_buffer(200) %>%
+             st_buffer(buf) %>%
              st_transform(4326)
 
 
@@ -168,11 +174,11 @@ getDragage <- function() {
                    type = 'Dragage')
 
   ## sf object
-  hbm_dg <- list(coords) %>%
-             st_polygon() %>%
-             st_sfc(.,.,.,crs = 4326) %>%
-             cbind(df, .) %>%
-             st_sf()
+  dragage[["hbm"]] <- list(coords) %>%
+                         st_polygon() %>%
+                         st_sfc(.,.,.,crs = 4326) %>%
+                         cbind(df, .) %>%
+                         st_sf()
 
   # Site de dépôt: 46˚53'01"N / 70˚54'33"O
   ## Coordonnées du site de dépôt
@@ -186,7 +192,7 @@ getDragage <- function() {
   df$type <- 'Depot'
 
   ## sf object
-  hbm_dp <- list(coords) %>%
+  depot[["hbm"]] <- list(coords) %>%
             st_polygon() %>%
             st_sfc(.,.,.,crs = 4326) %>%
             cbind(df, .) %>%
@@ -200,7 +206,7 @@ getDragage <- function() {
   ## Sites de dragage
   uid <- c('G04amont','G04aval','G05','G06','G07','G08','G09','G10',
            'G11amont','G11centre','G11aval','G12','G13','G14','G15')
-  tn_dg <- secteurs[secteurs$name %in% uid, ] %>%
+  tn <- secteurs[secteurs$name %in% uid, ] %>%
            st_union()
 
   ## Data.frame
@@ -214,16 +220,16 @@ getDragage <- function() {
                    depot = "Eau libre",
                    superficie_m2 = NA,
                    volume_m3 = c(51162,51484,55945,53627,52694,55040,53032,49616),
-                   annees  = c(2009:2016),
+                   annees  = c(2016:2009),
                    type = 'Dragage')
 
   ## Spatial object
-  tn_dg <- cbind(df, tn_dg[rep(1, nrow(df)), ]) %>% st_sf()
+  dragage[["tn"]] <- cbind(df, tn[rep(1, nrow(df)), ]) %>% st_sf()
 
   ## Sites de dépôt
   ## Maximum de de 10 000 m^3 pour X-02
   uid <- c('X02','X03')
-  tn_dp <- secteurs[secteurs$name %in% uid, ] %>%
+  tn <- secteurs[secteurs$name %in% uid, ] %>%
            select(geometry)
 
   dfx02 <- df %>%
@@ -234,9 +240,9 @@ getDragage <- function() {
            mutate(volume_m3 = df$volume_m3 - 10000)
 
   ## Spatial objects
-  x02 <- cbind(dfx02, tn_dp[rep(1, nrow(dfx02)), ])
-  x03 <- cbind(dfx03, tn_dp[rep(2, nrow(dfx03)), ])
-  tn_dp <- rbind(x02,x03) %>% st_sf()
+  x02 <- cbind(dfx02, tn[rep(1, nrow(dfx02)), ])
+  x03 <- cbind(dfx03, tn[rep(2, nrow(dfx03)), ])
+  depot[["tn"]] <- rbind(x02,x03) %>% st_sf()
 
   # -------------------------------------------------------------------------
   # Quai de Saint-Antoine-de-l’Isle-aux-Grues (Montmagny)
@@ -253,11 +259,11 @@ getDragage <- function() {
                    depot = "Eau libre",
                    superficie_m2 = NA,
                    volume_m3 = c(5052,4836,4609,4404,4781,5271,5666),
-                   annees  = c(2009:2015),
+                   annees  = c(2015:2009),
                    type = 'Dragage')
 
   ## sf object
-  qiag_dg <- st_as_sf(df, coords = c('X','Y'), crs = 4326) %>%
+  dragage[["qiag"]] <- st_as_sf(df, coords = c('X','Y'), crs = 4326) %>%
              st_transform(32198) %>%
              st_buffer(100) %>%
              st_transform(4326)
@@ -274,7 +280,7 @@ getDragage <- function() {
   df <- select(df, -X, -Y)
 
   ## sf object
-  qiag_dp <- list(coords) %>%
+  depot[["qiag"]] <- list(coords) %>%
              st_polygon() %>%
              st_sfc(.,.,.,.,.,.,.,crs = 4326) %>%
              cbind(df, .) %>%
@@ -311,7 +317,7 @@ getDragage <- function() {
                    type = 'Dragage')
 
   ## sf object
-  sjpj_dg <- list(coords) %>%
+  dragage[["sjpj"]] <- list(coords) %>%
              st_polygon() %>%
              st_sfc(.,.,.,.,.,.,crs = 4326) %>%
              cbind(df, .) %>%
@@ -326,9 +332,9 @@ getDragage <- function() {
   df$X <- -70.3
   df$Y <- 47.25
   df$type <- 'depot'
-  sjpj_dp <- st_as_sf(df, coords = c('X','Y'), crs = 4326) %>%
+  depot[["sjpj"]] <- st_as_sf(df, coords = c('X','Y'), crs = 4326) %>%
              st_transform(32198) %>%
-             st_buffer(200) %>%
+             st_buffer(buf) %>%
              st_transform(4326)
 
 
@@ -349,11 +355,11 @@ getDragage <- function() {
                    depot = "Eau libre",
                    superficie_m2 = c(8500,13500,11000,11000,7000,NA,5000,44300),
                    volume_m3 = c(26450,25304,24019,21447,25656,15914,16142,74190),
-                   annees  = c(2009:2016),
+                   annees  = c(2016:2009),
                    type = 'Dragage')
 
   ## sf object
-  qiac_dg <- st_as_sf(df, coords = c('X','Y'), crs = 4326) %>%
+  dragage[["qiac"]] <- st_as_sf(df, coords = c('X','Y'), crs = 4326) %>%
              st_transform(32198) %>%
              st_buffer(100) %>%
              st_transform(4326)
@@ -370,7 +376,7 @@ getDragage <- function() {
   df <- select(df, -X, -Y)
 
   ## sf object
-  qiac_dp <- list(coords) %>%
+  depot[["qiac"]] <- list(coords) %>%
              st_polygon() %>%
              st_sfc(.,.,.,.,.,.,.,.,crs = 4326) %>%
              cbind(df, .) %>%
@@ -390,11 +396,11 @@ getDragage <- function() {
                    depot = "Eau libre",
                    superficie_m2 = c(2800,8500,1500),
                    volume_m3 = c(1909,6500,2399),
-                   annees  = c(2011,2012,2015),
+                   annees  = c(2015,2012,2011),
                    type = 'Dragage')
 
   ## sf object
-  qsjr_dg <- st_as_sf(df, coords = c('X','Y'), crs = 4326) %>%
+  dragage[["qsjr"]] <- st_as_sf(df, coords = c('X','Y'), crs = 4326) %>%
              st_transform(32198) %>%
              st_buffer(100) %>%
              st_transform(4326)
@@ -412,7 +418,7 @@ getDragage <- function() {
   df <- select(df, -X, -Y)
 
   ## sf object
-  qsjr_dp <- list(coords) %>%
+  depot[["qsjr"]] <- list(coords) %>%
              st_polygon() %>%
              st_sfc(.,.,.,crs = 4326) %>%
              cbind(df, .) %>%
@@ -440,12 +446,12 @@ getDragage <- function() {
                    depot = "Eau libre",
                    superficie_m2 = NA,
                    volume_m3 = c(32371,31770,29528,29257,36970,29899,42125,51625,50609),
-                   annees  = c(2009:2015, 2017, 2016),
+                   annees  = c(2015:2009, 2017, 2016),
                    type = 'Dragage')
 
 
   ## sf object
-  qrdl_dg <- list(coords) %>%
+  dragage[["qrdl"]] <- list(coords) %>%
              st_polygon() %>%
              st_sfc(.,.,.,.,.,.,.,.,.,crs = 4326) %>%
              cbind(df, .) %>%
@@ -470,7 +476,7 @@ getDragage <- function() {
 
   ## sf object
   ## Premier site de depot pour les années 2009 à 2015 et 2017
-  qrdl_dp1 <- list(coords1) %>%
+  depot[["qrdl1"]] <- list(coords1) %>%
               st_polygon() %>%
               st_sfc(.,.,.,.,.,.,.,.,crs = 4326) %>%
               cbind(df[df$annees %in% c(2009:2015,2017), ], .) %>%
@@ -478,7 +484,7 @@ getDragage <- function() {
 
   ## Deuxième site de depot pour l'année 2016
   ## sf object
-  qrdl_dp2 <- list(coords2) %>%
+  depot[["qrdl2"]] <- list(coords2) %>%
               st_polygon() %>%
               st_sfc(.,crs = 4326) %>%
               cbind(df[df$annees %in% c(2016), ], .) %>%
@@ -512,7 +518,7 @@ getDragage <- function() {
 
 
   ## sf object
-  mrdl_dg <- list(coords) %>%
+  dragage[["mrdl"]] <- list(coords) %>%
              st_polygon() %>%
              st_sfc(.,.,.,.,.,.,.,.,crs = 4326) %>%
              cbind(df, .) %>%
@@ -527,7 +533,7 @@ getDragage <- function() {
 
   ## sf object
   ## Premier site de depot pour les années 2009 à 2015 et 2017
-  mrdl_dp <- list(coords) %>%
+  depot[["mrdl"]] <- list(coords) %>%
               st_polygon() %>%
               st_sfc(.,.,.,.,.,.,.,.,crs = 4326) %>%
               cbind(df, .) %>%
@@ -560,7 +566,7 @@ getDragage <- function() {
                    type = 'Dragage')
 
   ## sf object
-  pgc_dg <- list(coords) %>%
+  dragage[["pgc"]] <- list(coords) %>%
             st_polygon() %>%
             st_sfc(crs = 4326) %>%
             cbind(df, .) %>%
@@ -588,7 +594,7 @@ getDragage <- function() {
                    type = 'Dragage')
 
   ## sf object
-  qiv_dg <- st_as_sf(df, coords = c('X','Y'), crs = 4326) %>%
+  dragage[["qiv"]] <- st_as_sf(df, coords = c('X','Y'), crs = 4326) %>%
              st_transform(32198) %>%
              st_buffer(100) %>%
              st_transform(4326)
@@ -620,7 +626,7 @@ getDragage <- function() {
                    type = 'Dragage')
 
   ## sf object
-  mtad_dg <- list(coords) %>%
+  dragage[["mtad"]] <- list(coords) %>%
              st_polygon() %>%
              st_sfc(.,crs = 4326) %>%
              cbind(df, .) %>%
@@ -635,12 +641,12 @@ getDragage <- function() {
   df$type <- 'Depot'
 
   ## sf object
-  mtad_dp <- st_point(coords) %>%
+  depot[["mtad"]] <- st_point(coords) %>%
              st_sfc(.,crs = 4326) %>%
              cbind(df,.) %>%
              st_sf() %>%
              st_transform(32198) %>%
-             st_buffer(200) %>%
+             st_buffer(buf) %>%
              st_transform(4326)
 
   ## --------------------------------------------------
@@ -668,7 +674,7 @@ getDragage <- function() {
                    type = 'Dragage')
 
   ## sf object
-  detd_dg <- list(coords) %>%
+  dragage[["detd"]] <- list(coords) %>%
              st_polygon() %>%
              st_sfc(.,crs = 4326) %>%
              cbind(df, .) %>%
@@ -677,7 +683,7 @@ getDragage <- function() {
   ## Site de dépôt
   ## WARNING: À vérifier que le site est le bon!!
   df$type <- 'Depot'
-  detg_dp <- cbind(df, st_geometry(mtad_dp)) %>% st_sf()
+  depot[["detg"]] <- cbind(df, st_geometry(depot[["mtad"]])) %>% st_sf()
 
   ## =====================
   ## Desserte ouest
@@ -702,7 +708,7 @@ getDragage <- function() {
                    type = 'Dragage')
 
   ## sf object
-  dotd_dg <- list(coords) %>%
+  dragage[["dotd"]] <- list(coords) %>%
              st_polygon() %>%
              st_sfc(.,crs = 4326) %>%
              cbind(df, .) %>%
@@ -711,7 +717,7 @@ getDragage <- function() {
   ## Site de dépôt
   ## WARNING: À vérifier que le site est le bon!!
   df$type <- 'Depot'
-  dotg_dp <- cbind(df, st_geometry(mtad_dp)) %>% st_sf()
+  depot[["dotg"]] <- cbind(df, st_geometry(depot[["mtad"]])) %>% st_sf()
 
 
   # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -740,7 +746,7 @@ getDragage <- function() {
                    type = 'Dragage')
 
   ## sf object
-  mrim_dg <- list(coords) %>%
+  dragage[["mrim"]] <- list(coords) %>%
              st_polygon() %>%
              st_sfc(.,crs = 4326) %>%
              cbind(df, .) %>%
@@ -758,7 +764,7 @@ getDragage <- function() {
   df$type <- 'Depot'
 
   ## sf object
-  mrim_dp <- list(coords) %>%
+  depot[["mrim"]] <- list(coords) %>%
             st_polygon() %>%
             st_sfc(.,.,.,crs = 4326) %>%
             cbind(df, .) %>%
@@ -796,7 +802,7 @@ getDragage <- function() {
                    type = 'Dragage')
 
   ## sf object
-  prim_dg <- list(coords) %>%
+  dragage[["prim"]] <- list(coords) %>%
              st_polygon() %>%
              st_sfc(.,.,.,crs = 4326) %>%
              cbind(df, .) %>%
@@ -805,7 +811,7 @@ getDragage <- function() {
   ## Site de dépôt
   ## WARNING: À vérifier que le site est le bon pour 2014!!
   df$type <- 'Depot'
-  prim_dp <- cbind(df, st_geometry(mrim_dp)) %>% st_sf()
+  depot[["prim"]] <- cbind(df, st_geometry(depot[["mrim"]])) %>% st_sf()
 
 
   # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -835,7 +841,7 @@ getDragage <- function() {
                    type = 'Dragage')
 
   ## sf object
-  pmat_dg <- list(coords) %>%
+  dragage[["pmat"]] <- list(coords) %>%
              st_polygon() %>%
              st_sfc(.,.,crs = 4326) %>%
              cbind(df, .) %>%
@@ -851,12 +857,12 @@ getDragage <- function() {
   df$type <- 'Depot'
 
   ## sf object
-  pmat_dp <- st_point(coords) %>%
+  depot[["pmat"]] <- st_point(coords) %>%
              st_sfc(.,.,crs = 4326) %>%
              cbind(df,.) %>%
              st_sf() %>%
              st_transform(32198) %>%
-             st_buffer(200) %>%
+             st_buffer(buf) %>%
              st_transform(4326)
 
 
@@ -886,7 +892,7 @@ getDragage <- function() {
                    type = 'Dragage')
 
   ## sf object
-  mmat_dg <- list(coords) %>%
+  dragage[["mmat"]] <- list(coords) %>%
              st_polygon() %>%
              st_sfc(.,crs = 4326) %>%
              cbind(df, .) %>%
@@ -895,7 +901,7 @@ getDragage <- function() {
   ## Site de dépôt
   ## WARNING: À vérifier que le site est le bon pour 2014!!
   df$type <- 'Depot'
-  mmat_dp <- cbind(df, st_geometry(pmat_dp)) %>% st_sf()
+  depot[["mmat"]] <- cbind(df, st_geometry(depot[["pmat"]])) %>% st_sf()
 
 
   # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -923,7 +929,7 @@ getDragage <- function() {
                    type = 'Dragage')
 
   ## sf object
-  qgod_dg <- list(coords) %>%
+  dragage[["qgod"]] <- list(coords) %>%
              st_polygon() %>%
              st_sfc(.,crs = 4326) %>%
              cbind(df, .) %>%
@@ -937,12 +943,12 @@ getDragage <- function() {
   df$type <- 'Depot'
 
   ## sf object
-  qgod_dp <- st_point(coords) %>%
+  depot[["qgod"]] <- st_point(coords) %>%
              st_sfc(.,crs = 4326) %>%
              cbind(df,.) %>%
              st_sf() %>%
              st_transform(32198) %>%
-             st_buffer(200) %>%
+             st_buffer(buf) %>%
              st_transform(4326)
 
 
@@ -972,7 +978,7 @@ getDragage <- function() {
                    type = 'Dragage')
 
   ## sf object
-  qmec_dg <- list(coords) %>%
+  dragage[["qmec"]] <- list(coords) %>%
              st_polygon() %>%
              st_sfc(.,crs = 4326) %>%
              cbind(df, .) %>%
@@ -1003,7 +1009,7 @@ getDragage <- function() {
                    type = 'Dragage')
 
   ## sf object
-  hbtr_dg <- list(coords) %>%
+  dragage[["hbtr"]] <- list(coords) %>%
              st_polygon() %>%
              st_sfc(.,crs = 4326) %>%
              cbind(df, .) %>%
@@ -1038,7 +1044,7 @@ getDragage <- function() {
                    type = 'Dragage')
 
   ## sf object
-  hbc_dg <- list(coords) %>%
+  dragage[["hbc"]] <- list(coords) %>%
              st_polygon() %>%
              st_sfc(.,.,crs = 4326) %>%
              cbind(df, .) %>%
@@ -1054,12 +1060,12 @@ getDragage <- function() {
   df$type <- 'Depot'
 
   ## sf object
-  hbc_dp <- st_point(coords) %>%
+  depot[["hbc"]] <- st_point(coords) %>%
              st_sfc(.,.,crs = 4326) %>%
              cbind(df,.) %>%
              st_sf() %>%
              st_transform(32198) %>%
-             st_buffer(200) %>%
+             st_buffer(buf) %>%
              st_transform(4326)
 
   ## ------------------------------
@@ -1090,7 +1096,7 @@ getDragage <- function() {
                    type = 'Dragage')
 
   ## sf object
-  carg_dg <- list(coords) %>%
+  dragage[["carg"]] <- list(coords) %>%
              st_polygon() %>%
              st_sfc(.,crs = 4326) %>%
              cbind(df, .) %>%
@@ -1120,7 +1126,7 @@ getDragage <- function() {
                    type = 'Dragage')
 
   ## sf object
-  alco_dg <- list(coords) %>%
+  dragage[["alco"]] <- list(coords) %>%
              st_polygon() %>%
              st_sfc(.,crs = 4326) %>%
              cbind(df, .) %>%
@@ -1129,18 +1135,13 @@ getDragage <- function() {
 
   # -------------------------------------------------------------------------
   ## Bind together
-  # TODO: s'assurer que j'ai tous les sites
-  # TODO: Modifier pour tout insérer dans une liste unique, comme ça un
-  #       bind_rows va permettre d'être certain qu'il n'en manque aucun
-  dragage  <- rbind(smdb_dg, cnib_dg, hbm_dg, tn_dg, qiag_dg, sjpj_dg, qiac_dg,
-                    qsjr_dg, qrdl_dg, mrdl_dg, pgc_dg, qiv_dg, mtad_dg, detd_dg,
-                    dotd_dg, prim_dg, mrim_dg, pmat_dg, mmat_dg, qmec_dg, hbtr_dg,
-                    qgod_dg, hbc_dg, carg_dg, alco_dg)
-  depot    <- rbind(smdb_dp, cnib_dp, hbm_dp, tn_dp, qiag_dp, sjpj_dp, qiac_dp,
-                    qsjr_dp, qrdl_dp1, qrdl_dp2, mrdl_dp, mtad_dp, detg_dp,
-                    dotg_dp, prim_dp, mrim_dp, mmat_dp, pmat_dp, hbc_dp, qgod_dp)
-  secteurs <- st_read(paste0(output, 'dragage_gcc/secteurs.shp'))
+  dragage  <- bind_rows(dragage)
+  depot <- bind_rows(depot)
+  # mv <- mapview(dragage) + depot
 
-  mapview(secteurs) + dragage + depot
 
+  # -------------------------------------------------------------------------
+  ## Export
+  st_write(dragage, paste0(folder, "dragage_eccc.geojson"))
+  st_write(depot, paste0(folder, "depot_eccc.geojson"))
 }
