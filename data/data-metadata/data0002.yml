@@ -1,0 +1,13 @@
+data_description:
+  id: "0002"
+  name: "Inventaire zostères"
+  description: "Inventaire de la zostère marine dans la Baie James, la Baie des Chaleurs, l'estuaire et le golfe du Saint-Laurent"
+  access_date: 2021-06-08
+  temporal_start: 1987
+  temporal_end: 2009
+  contact_id:
+    - "0001"
+    - "0003"
+  url: "https://ouvert.canada.ca/data/fr/dataset/c9ab948f-5009-4dbc-9129-2f6e373f17f6"
+  open_canada_id: "c9ab948f-5009-4dbc-9129-2f6e373f17f6"
+  availability: "open source"
