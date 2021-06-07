@@ -28,7 +28,7 @@ Research Compendium of the ___________ article.
 
 
 
-Please cite this compendium as: 
+Please cite this compendium as:
 
 > ___________
 
@@ -73,7 +73,8 @@ contains all the figures created during the workflow
 Clone the repository and run this command in R/RStudio:
 
 ```{r eval=FALSE}
-source("make.R")
+R -e 'library(devtools);document()'
+R CMD INSTALL .
 ```
 
 

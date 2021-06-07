@@ -1,25 +1,23 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# ceanav
+# ceanavR
 
-Compendium de recherche pour le projet d'évaluation des effets cumulatifs des activités maritimes dans le Système du Saint-Laurent entre Montréal et Pointe-des-Monts.
+Research Compendium of the \_\_\_\_\_\_\_\_\_\_\_ article.
 
+### How to cite
 
-### Comment citer
-
-Citer ce compendium de recherche comme suit :
+Please cite this compendium as:
 
 > ------------------------------------------------------------------------
 
-## Contenu
+## Content
 
-Ce compendium de recherche est structuré de la façon suivante :
+This repository is structured as follow:
 
 -   :file\_folder:
-     [**R/**](https://github.com/EffetsCumulatifsNavigation/ceanav/tree/master/R) :
-     contient les scripts et fonctions R utilisées pour ce projet
-
+     [**R/**](https://github.com/ahasverus/ceanavR/tree/master/R):
+    contains R functions developed especially for this project
 
 -   :file\_folder:
      [**man/**](https://github.com/ahasverus/ceanavR/tree/master/man):
@@ -55,7 +53,8 @@ Ce compendium de recherche est structuré de la façon suivante :
 Clone the repository and run this command in R/RStudio:
 
 ``` r
-source("make.R")
+R CMD INSTALL .
+R -e 'library(devtools);document()'
 ```
 
 ## Notes
@@ -66,3 +65,13 @@ source("make.R")
 -   Figures will be stored in `figures/`
 
 :warning:  Some computations may take time.
+
+## Usage
+
+Clone the repository and run this command in R/RStudio:
+
+``` r
+source("make.R")
+```
+
+Cheers!

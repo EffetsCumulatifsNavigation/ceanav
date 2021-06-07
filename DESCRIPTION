@@ -22,7 +22,8 @@ Depends:
     mapview(>= 2.9.8),
     graphicsutils(>= 1.6.0)
 Imports:
-    stringr(>= 1.4.0)
+    stringr(>= 1.4.0),
+    yaml(>= 2.2.1)
 Suggests:
     knitr,
     rmarkdown

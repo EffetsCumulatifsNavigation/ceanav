@@ -24,6 +24,7 @@ analysis/data/
 output/
 share/
 report/docs/
+comm_webinaire.Rmd
 
 # Data-specific files that cannot be shared ----
 analysis/data/cv/habitats/alevinage/alevinage_mffp/
@@ -32,7 +33,7 @@ analysis/data/cv/habitats/espece_statut/espece_statut_mffp/
 analysis/data/stresseurs/deversements/deversement_gcc/20210223_Demande_UL.csv
 analysis/data/stresseurs/deversements/deversement_gcc/20210223_Demande_UL.xlsx
 
-# R data ----
+# R data ---- delete this list
 data/cv_berge.RData
 data/cv_hab_alevinage.RData
 data/cv_hab_benthique.RData
@@ -50,3 +51,10 @@ data/str_ancrage.RData
 data/str_deversement.RData
 data/str_navigation.RData
 data/str_peche_commerciale.RData
+
+
+# R data ----
+data/data-format/
+data/data-raw/
+data/data-output/
+data0001.RData

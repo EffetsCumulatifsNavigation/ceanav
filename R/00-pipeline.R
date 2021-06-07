@@ -17,6 +17,7 @@ pipeline <- function(pipeline_data = FALSE,
     getHabitat() # Habitats
     getBerge() # Intégrité berges
     getSite() # Sites d'importance
+    getMammiferesMarins() # Distribution de mammifères marins
 
     # -----------------------------------
     # Stressors
@@ -33,6 +34,8 @@ pipeline <- function(pipeline_data = FALSE,
     fmtHabitat() # Habitats
     fmtBerge() # Intégrité berges
     fmtSite() # Sites d'importance
+    fmtMammiferesMarins() # Distribution de mammifères marins
+
 
 
     # -----------------------------------
