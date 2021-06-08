@@ -1,10 +1,21 @@
 
 
-pipeline <- function(pipeline_data = FALSE,
+pipeline <- function(pipeline_metadata = FALSE,
+                     pipeline_data = FALSE,
                      pipeline_format = FALSE,
                      pipeline_analysis = FALSE,
                      pipeline_figure = FALSE,
                      pipeline_report = TRUE) {
+
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~
+  if (pipeline_metadata) {
+    # Metadata
+    ceanav_metadata('metadata')
+
+    # Contacts
+    ceanav_metadata('contact')
+  }
+
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~
   if (pipeline_data) {
