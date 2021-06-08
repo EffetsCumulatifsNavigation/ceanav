@@ -3,3 +3,4 @@
 export(ais_segment)
 export(ceanav_metadata)
 export(get_data0001)
+export(get_data0002)

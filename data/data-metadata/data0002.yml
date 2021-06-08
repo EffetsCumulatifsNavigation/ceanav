@@ -1,0 +1,11 @@
+data_description:
+  id: "0002"
+  name: "Zostères Pointe au père"
+  description: "Données d'un projet de restauration de l'herbier de zostère marine dans l'anse de Point-au-Père"
+  access_date: 2021-06-08
+  temporal_start: 2017
+  temporal_end: 2018
+  contact_id: "0006"
+  url: "https://catalogue.ogsl.ca/fr/dataset/3d0c057b-ab39-4a7b-8809-4367d5028c11"
+  availability: "open source"
+  citation: "Bois, P., Joubert, J-E, Pothier, J. 2018. RESTAURATION DE L’HERBIER DE ZOSTÈRE MARINE DANS L’ANSE DE POINTE-AU-PÈRE, RIMOUSKI – Rapport de travaux et de suivis, Rimouski, 32 p."

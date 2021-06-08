@@ -25,7 +25,25 @@ pipeline <- function(pipeline_metadata = FALSE,
 
     # -----------------------------------
     # Individual datasets
-    dat0001()
+    get_data0001()
+    # get_data0002()
+    # get_data0003()
+    # get_data0004()
+    # get_data0005()
+    # get_data0006()
+    # get_data0007()
+    # get_data0008()
+    # get_data0009()
+    # get_data0010()
+    # get_data0011()
+    # get_data0012()
+    # get_data0013()
+    # get_data0014()
+    # get_data0015()
+    # get_data0016()
+    # get_data0017()
+    # get_data0018()
+    # get_data0019()
   }
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~
