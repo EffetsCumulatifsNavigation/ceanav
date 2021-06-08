@@ -2,6 +2,8 @@
 
 export(ais_segment)
 export(ceanav_metadata)
+export(cv_habitats)
 export(get_data0001)
 export(get_data0002)
 export(get_data0003)
+export(get_data0004)
