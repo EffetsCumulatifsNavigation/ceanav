@@ -1,6 +1,6 @@
 #' Data 0001 : Inventaire zostère
 #'
-#' Inventaire de la zostère marine dans la Baie James, la Baie des Chaleurs, l'estuaire et le golfe du Saint-Laurent
+#' Inventaire de la zostère marine dans la Baie James, la Baie des Chaleurs, l'estuaire et le golfe du Saint-Laurent provenant d'une revue de littérature de documents entre 1987 et 2009
 #'
 #' @keywords zostère
 #' @keywords habitat
@@ -10,10 +10,10 @@
 #'
 #' @export
 #'
-#' @details Cette fonction télécharge les données et les préparent pour les analyses
+#' @details Cette fonction télécharge et formatte les données
 #'
 
-data0001_zostere <- function() {
+get_data0001 <- function() {
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   # Download data
   # ----------------------------------------
@@ -54,9 +54,9 @@ data0001_zostere <- function() {
   # Export data
   # ----------------------------------------
   # Output
-  folder <- paste0("./data/data-format/", output)
-  if (!file.exists(folder)) dir.create(folder)
-  st_write(data0001, dsn = paste0(folder, "data0001-zostere.geojson"))
+  st_write(obj = data0001,
+           dsn = "./data/data-format/data0001-zostere.geojson",
+           delete_dsn = TRUE)
 
   # RData
   save(data0001, file = "./data/data0001.RData")
