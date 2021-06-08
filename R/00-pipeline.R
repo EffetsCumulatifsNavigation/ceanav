@@ -26,9 +26,9 @@ pipeline <- function(pipeline_metadata = FALSE,
     # -----------------------------------
     # Individual datasets
     get_data0001()
-    # get_data0002()
-    # get_data0003()
-    # get_data0004()
+    get_data0002()
+    get_data0003()
+    get_data0004()
     # get_data0005()
     # get_data0006()
     # get_data0007()

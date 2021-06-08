@@ -5,31 +5,6 @@ getMilieu_humide <- function() {
   output <- './analysis/data/cv/habitats/milieu_humide/'
   if (!file.exists(output)) dir.create(output)
 
-  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
-  # Milieux humides lac Saint-Pierre
-  # ------------------------------------
-  # dataID: 0004
-  # ~~~~~~~~~~~~
-  #
-  # Données de terrain pour la cartographie des milieux humides du lac
-  # Saint-Pierre (fleuve Saint-Laurent), 2012
-  #
-  # https://ouvert.canada.ca/data/fr/dataset/9c52df44-7a34-4a73-a92a-5e3b20de6c73
-  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
-  # Output folder
-  folder <- paste0(output, 'milieu_humide_lac_saint-pierre/')
-  if (!file.exists(folder)) dir.create(folder)
-
-  # Proceed only if data is not already loaded
-  if (!file.exists(paste0(folder, 'MilieuxHumides-lacSaintPierre-inventaire-2012.csv'))) {
-    # URL
-    milieu_humide_lsp <- c('http://donnees.ec.gc.ca/data/sites/scientificknowledge/field-data-for-the-mapping-of-the-lake-st.-pierre-wetlands-st.-lawrence-river-2012/MilieuxHumides-lacSaintPierre-inventaire-2012.csv',
-                           'http://donnees.ec.gc.ca/data/sites/scientificknowledge/field-data-for-the-mapping-of-the-lake-st.-pierre-wetlands-st.-lawrence-river-2012/MilieuxHumides-lacSaintPierre-sites-2012.csv')
-
-    # Download
-    download.file(milieu_humide_lsp[1], destfile = paste0(folder, 'MilieuxHumides-lacSaintPierre-inventaire-2012.csv'))
-    download.file(milieu_humide_lsp[2], destfile = paste0(folder, 'MilieuxHumides-lacSaintPierre-sites-2012.csv'))
-  }
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   # Milieux côtiers
