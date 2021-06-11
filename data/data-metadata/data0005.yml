@@ -1,13 +1,15 @@
 data_description:
   id: "0005"
-  name: "Milieux côtiers Saint-Laurent"
-  description: "Atlas des milieux côtiers d’intérêt pour la conservation dans l’estuaire et le golfe du Saint-Laurent"
-  access_date: 2021-06-08
-  temporal_start: 2008
-  temporal_end: 2016
-  contact_id: ""
-  url: "https://catalogue.ogsl.ca/fr/dataset/0a232214-05cc-438a-b914-6a8b53ac184e"
+  name: "Milieux humides Saint-Laurent"
+  description: "Cartographie détaillée des milieux humides pour les basses-terres du Saint-Laurent, la plaine du Lac Saint-Jean et d'autres secteurs au sud du Québec"
+  access_date: 2021-06-09
+  temporal_start: 2009
+  temporal_end: 2020
+  contact_id:
+    - "0009"
+    - "0010"
+  url: "https://www.donneesquebec.ca/recherche/dataset/eafec419-d67d-449e-a157-d22230314d36"
+  identifiant: "eafec419-d67d-449e-a157-d22230314d36"
   availability: "open source"
   citation:
-    - "Plan d'action Saint-Laurent. (2020). Atlas des milieux côtiers d’intérêt pour la conservation dans l’estuaire et le golfe du Saint-Laurent (Version 1.0) [Data set]. Observatoire Global du Saint-Laurent. https://doi.org/10.26071/OGSL-0A232214-05CC"
-    - "JOBIN, B., L. GRATTON ET P. DESAUTELS. 2019. Atlas des milieux côtiers d’intérêt pour la conservation dans l’estuaire et le golfe du Saint-Laurent – Rapport méthodologique. Environnement et Changement climatique Canada et ministère de l’Environnement et de la Lutte contre les changements climatiques, Plan d’action Saint-Laurent, Québec, 93 p."
+    - "Canards Illimités Canada et le ministère de l'Environnement et Lutte contre les changements climatiques (MELCC), 2020. Cartographie détaillée des milieux humides des secteurs habités du sud du Québec – Données du projet global"

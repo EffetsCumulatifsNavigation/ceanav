@@ -2,25 +2,21 @@
 % Please edit documentation in R/data0005-milieu_cotier.R
 \name{get_data0005}
 \alias{get_data0005}
-\title{Data 0005 : Milieux côtiers Saint-Laurent}
+\title{Data 0005 : Milieux humides cartographie détaillée}
 \source{
-https://catalogue.ogsl.ca/fr/dataset/0a232214-05cc-438a-b914-6a8b53ac184e
+https://www.donneesquebec.ca/recherche/dataset/eafec419-d67d-449e-a157-d22230314d36
 }
 \usage{
 get_data0005()
 }
 \description{
-Atlas des milieux côtiers d’intérêt pour la conservation dans l’estuaire et # le golfe du Saint-Laurent
+Cartographie détaillée des milieux humides pour les basses-terres du Saint-Laurent, la plaine du Lac Saint-Jean et d'autres secteurs au sud du Québec
 }
 \details{
 Cette fonction télécharge et formatte les données
 }
 \keyword{composante}
-\keyword{côte}
-\keyword{côtier}
 \keyword{habitat}
 \keyword{humide}
-\keyword{marais}
 \keyword{milieu}
-\keyword{sableuse}
 \keyword{valorisée}

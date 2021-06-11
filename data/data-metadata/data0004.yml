@@ -7,5 +7,5 @@ data_description:
   temporal_end: 2012
   contact_id: "0007"
   url: "https://ouvert.canada.ca/data/fr/dataset/9c52df44-7a34-4a73-a92a-5e3b20de6c73"
-  open_canada_id: "9c52df44-7a34-4a73-a92a-5e3b20de6c73"
+  identifiant: "9c52df44-7a34-4a73-a92a-5e3b20de6c73"
   availability: "open source"

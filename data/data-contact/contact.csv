@@ -1,9 +1,12 @@
-"id","nom","prenom","organisation","role","telephone","courriel","url","phone"
-"0001","Beauchesne","David","Université Laval","Stagiaire postdoctoral","1-514-553-4974","david.beauchesne@hotmail.com",NA,NA
-"0002","Archambault","Philippe","Université Laval","Professeur","1-418-656-2131 #405967","philippe.archambault@bio.ulaval.ca",NA,NA
-"0003","Grant","Cindy","Université Laval","Professionnelle de recherche","1-418-656-2131 #417944","cindy.grant@bio.ulaval.ca",NA,NA
-"0004","Guillemette","Catherine","Transports Canada","Senior Environmental Advisor at Transport Canada","1-613-608-5399","catherine.guillemette@tc.gc.ca",NA,NA
-"0005",NA,NA,"Pêches et Océans Canada",NA,NA,"Oceans-QC@dfo-mpo.gc.ca",NA,NA
-"0006",NA,NA,"Comité ZIP du Sud-de-l'Estuaire",NA,NA,"zipse@globetrotter.net","https://www.zipsud.org/",NA
-"0007",NA,NA,"Environnement et Changement climatique Canada",NA,NA,"open-ouvert@tbs-sct.gc.ca",NA,NA
-"0008",NA,NA,"Plan d'action Saint-Laurent",NA,NA,"ec.plandactionsaint-laurent-st-lawrenceactionplan.ec@canada.ca","https://www.planstlaurent.qc.ca/","1-418-648-3444"
+"id","nom","prenom","organisation","role","telephone","courriel","url"
+"0001","Beauchesne","David","Université Laval","Stagiaire postdoctoral","1-514-553-4974","david.beauchesne@hotmail.com",NA
+"0002","Archambault","Philippe","Université Laval","Professeur","1-418-656-2131 #405967","philippe.archambault@bio.ulaval.ca",NA
+"0003","Grant","Cindy","Université Laval","Professionnelle de recherche","1-418-656-2131 #417944","cindy.grant@bio.ulaval.ca",NA
+"0004","Guillemette","Catherine","Transports Canada","Senior Environmental Advisor at Transport Canada","1-613-608-5399","catherine.guillemette@tc.gc.ca",NA
+"0005",NA,NA,"Pêches et Océans Canada",NA,NA,"Oceans-QC@dfo-mpo.gc.ca",NA
+"0006",NA,NA,"Comité ZIP du Sud-de-l'Estuaire",NA,NA,"zipse@globetrotter.net","https://www.zipsud.org/"
+"0007",NA,NA,"Environnement et Changement climatique Canada",NA,NA,"open-ouvert@tbs-sct.gc.ca",NA
+"0008",NA,NA,"Plan d'action Saint-Laurent",NA,"1-418-648-3444","ec.plandactionsaint-laurent-st-lawrenceactionplan.ec@canada.ca","https://www.planstlaurent.qc.ca/"
+"0009","Picard","Sylvie","Canards Illimités Canada",NA,"1-800-665-3825","outils@canards.ca","https://www.ducks.ca/"
+"0010",NA,NA,"Ministère de l'Environnement et Lutte contre les changements climatiques",NA,NA,NA,"https://www.environnement.gouv.qc.ca/"
+"0011","Samuel","Turgeon","Parc marin du Saguenay–Saint-Laurent","Écologiste, chef d'équipe","1-581-572-2313","samuel.turgeon@canada.ca",NA

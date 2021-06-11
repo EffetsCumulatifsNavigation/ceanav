@@ -7,5 +7,5 @@ data_description:
   temporal_end: 2009
   contact_id: "0005"
   url: "https://ouvert.canada.ca/data/fr/dataset/c9ab948f-5009-4dbc-9129-2f6e373f17f6"
-  open_canada_id: "c9ab948f-5009-4dbc-9129-2f6e373f17f6"
+  identifiant: "c9ab948f-5009-4dbc-9129-2f6e373f17f6"
   availability: "open source"
