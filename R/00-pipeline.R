@@ -1,4 +1,13 @@
-
+#' Pipeline d'analyse
+#'
+#' Pipeline d'analyse du projet d'évaluation des effets cumulatifs de la navigation dans le Saguenay et le Saint-Laurent
+#'
+#' @keywords pipeline
+#'
+#' @export
+#'
+#' @details Cette fonction exécute l'ensemble des fonctions pour effectuer l'analyse des effets cumulatifs
+#'
 
 pipeline <- function(pipeline_metadata = FALSE,
                      pipeline_data = FALSE,
@@ -39,8 +48,8 @@ pipeline <- function(pipeline_metadata = FALSE,
     get_data0012()
     get_data0013()
     get_data0014()
-    # get_data0015()
-    # get_data0016()
+    get_data0015()
+    get_data0016()
     # get_data0017()
     # get_data0018()
     # get_data0019()
@@ -48,6 +57,12 @@ pipeline <- function(pipeline_metadata = FALSE,
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~
   if (pipeline_integration) {
+    # Composantes valorisées
+    cv_habitat()
+
+    # Stresseurs
+    st_ancrage()
+    st_deversement()
 
   }
 

@@ -1,26 +1,33 @@
-getDeversement <- function() {
-  output <- './analysis/data/stresseurs/deversements/'
+#' Data 0016 : Déversements accidentels
+#'
+#' Distribution des sites de déversements accidentels répertoriés dans le Saint-Laurent
+#'
+#' @keywords déversement accidentel
+#' @keywords stresseurs
+#'
+#' @source Garde côtière canadienne, Direction des Interventions, Intervention environnementale, région du Centre. Base de données SGI-WEB -2007-2020.
+#'
+#' @export
+#'
+#' @details Cette fonction formatte les données
+#'
 
+get_data0016 <- function() {
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
-  # Déversements accidentels GCC
-  # ------------------------------------
-  # dataID: 0013
-  # ~~~~~~~~~~~~
-  #
-  # Garde côtière canadienne, Direction des Interventions, Intervention
-  # environnementale, région du Centre. Base de données SGI-WEB -2007-2020.
-  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  # Download data
+
   # Output folder
-  folder <- paste0(output, 'deversement_gcc/')
+  output <- "data0016-deversement/"
+  folder <- paste0("./data/data-raw/", output)
+  if (!file.exists(folder)) dir.create(folder)
 
-  # Data on disk, unavailable through the web
-  # ------------------------------------------------------------------------- #
+  # WARNING: Data transfered physically, no cloud access currently
+
+  # _________________________________________________________________________ #
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
-  # Data cleanup
-  # ------------------------------------
-  #
-  # I format the data here, since there are errors and some confidentiality
+  # Import and format data
+  # ----------------------------------------
   # aspects to respect
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   # Load data
@@ -75,5 +82,26 @@ getDeversement <- function() {
 
   # ------------------
   # Export
+  ## That file will be sharable
   write.csv(dev, file = paste0(folder, 'deversements_modifs.csv'), row.names = FALSE)
+
+  # ------------------
+  # Spatial object
+  data0016 <- read.csv(paste0(folder, 'deversements_modifs.csv'), na.strings = '') %>%
+              drop_na('LATITUDE') %>%
+              st_as_sf(coords = c('LONGITUDE','LATITUDE'), crs = 4326, remove = FALSE)
+  # _________________________________________________________________________ #
+
+
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  # Export data
+  # ----------------------------------------
+  # Output
+  st_write(obj = data0016,
+           dsn = "./data/data-format/data0016-deversement.geojson",
+           delete_dsn = TRUE)
+
+  # RData
+  save(data0016, file = "./data/data0016.RData")
+  # _________________________________________________________________________ #
 }

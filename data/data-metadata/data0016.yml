@@ -1,0 +1,11 @@
+data_description:
+  id: "0016"
+  name: "Déversements accidentels"
+  description: "Distribution des sites de déversements accidentels répertoriés dans le Saint-Laurent"
+  access_date: 2021-02-23
+  temporal_start: 2016
+  temporal_end: 2020
+  contact_id: "0018"
+  availability: "available"
+  citation:
+    - "Garde côtière canadienne, Direction des Interventions, Intervention environnementale, région du Centre. Base de données SGI-WEB -2007-2020."

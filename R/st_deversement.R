@@ -1,21 +1,16 @@
-fmtDeversement <- function () {
+#' Déversements accidentels
+#'
+#' Couche de données transformées pour les déversements accidentels dans le Saint-Laurent
+#'
+#' @keywords déversement accidentel
+#' @keywords stresseurs
+#'
+#' @export
+#'
+#' @details Cette fonction importe et formatte les données pour l'analyse d'effets cumulatifs
+#'
 
-  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
-  # Load data
-  # ------------------------------------
-  #
-  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
-  folder <- './analysis/data/stresseurs/deversements/deversement_gcc/'
-
-  # dataID: 0013
-  # Déversements accidentels GCC
-  dev <- read.csv(paste0(folder, 'deversements_modifs.csv'), na.strings = '') %>%
-         drop_na('LATITUDE') %>%
-         st_as_sf(coords = c('LONGITUDE','LATITUDE'), crs = 4326, remove = FALSE) %>%
-         st_transform(32198)
-  # ------------------------------------------------------------------------- #
-
-
+st_deversement <- function() {
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   # Format data
   # ------------------------------------
