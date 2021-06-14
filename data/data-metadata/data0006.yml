@@ -1,0 +1,13 @@
+data_description:
+  id: "0006"
+  name: "Milieux humides Saint-Laurent"
+  description: "Atlas des milieux côtiers d’intérêt pour la conservation dans l’estuaire et le golfe du Saint-Laurent"
+  access_date: 2021-06-14
+  temporal_start: 2016
+  temporal_end: 2016
+  contact_id: "0008"
+  url: "https://catalogue.ogsl.ca/fr/dataset/0a232214-05cc-438a-b914-6a8b53ac184e"
+  availability: "open source"
+  citation:
+    - "Plan d'action Saint-Laurent. (2020). Atlas des milieux côtiers d’intérêt pour la conservation dans l’estuaire et le golfe du Saint-Laurent (Version 1.0) [Milieux humides]. Observatoire Global du Saint-Laurent. https://doi.org/10.26071/OGSL-0A232214-05CC"
+    - "JOBIN, B., L. GRATTON ET P. DESAUTELS. 2019. Atlas des milieux côtiers d’intérêt pour la conservation dans l’estuaire et le golfe du Saint-Laurent – Rapport méthodologique. Environnement et Changement climatique Canada et ministère de l’Environnement et de la Lutte contre les changements climatiques, Plan d’action Saint-Laurent, Québec, 93 p."
