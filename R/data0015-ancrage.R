@@ -1,12 +1,21 @@
-getAncrage <- function() {
-  output <- './analysis/data/stresseurs/ancrages/'
+#' Data 0015 : Ancrages
+#'
+#' Distribution des sites d'ancrages de SIGTM-INNAV dans l'Est du Canada
+#'
+#' @keywords ancrage
+#' @keywords stresseurs
+#'
+#' @source INNAV
+#'
+#' @export
+#'
+#' @details Cette fonction formatte les données
+#'
 
+get_data0015 <- function() {
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
-  # Ancrages INNAV DFO
-  # ------------------------------------
-  # dataID: 0012
-  # ~~~~~~~~~~~~
-  #
+  # Download data
+  # ----------------------------------------
   # WARNING: Data cannot be shared
   #
   # For use in CEA for St Lawrence pilot site.
@@ -90,11 +99,33 @@ getAncrage <- function() {
   # Format:
   # Format name: File Geodatabase Feature Class
   # Format version:
-  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  # ----------------------------------------------------------------------------
+
   # Output folder
-  folder <- paste0(output, 'ancrage_innav/')
+  output <- "data0015-ancrage/"
+  folder <- paste0("./data/data-raw/", output)
+  if (!file.exists(folder)) dir.create(folder)
 
-  # Data on disk, nothing to load yet
+  # WARNING: Data transfered physically, no cloud access currently
+
+  # _________________________________________________________________________ #
+
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  # Import data
+  # ----------------------------------------
+  data0015 <- st_read(paste0(folder, 'INNAV_Marine_Navigation_Objects_ANCHORAGES_2019_EAST.geojson'))
+  # _________________________________________________________________________ #
+
+
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  # Export data
+  # ----------------------------------------
+  # Output
+  st_write(obj = data0015,
+           dsn = "./data/data-format/data0015-ancrage.geojson",
+           delete_dsn = TRUE)
+
+  # RData
+  save(data0015, file = "./data/data0015.RData")
+  # _________________________________________________________________________ #
 }
-
-#

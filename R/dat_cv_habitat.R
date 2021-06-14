@@ -1,79 +1,4 @@
 
-getZone_inondable <- function() {
-  output <- './analysis/data/cv/habitats/zone_inondable/'
-  if (!file.exists(output)) dir.create(output)
-
-  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
-  # Zones inondables MRC
-  # ------------------------------------
-  # dataID: 0008
-  # ~~~~~~~~~~~~
-  #
-  # Grille de présence de zone inondable identifiée par les MRC
-  #
-  # WARNING:
-  # > Cette grille est une représentation spatiale des secteurs où une
-  #   cartographie a été produite par les municipalités régionales de comté
-  #   (MRC) ou les villes à compétence de MRC. Elle indique qu’une cartographie
-  #   des zones inondables a été intégrée dans le schéma d’aménagement et de
-  #   développement (SAD) ou dans un règlement de contrôle intérimaire (RCI)
-  #   en vigueur dans la MRC.
-  #
-  # > Cette information est fournie à titre indicatif et n’a aucune valeur
-  #   légale. L'utilisateur est invité à communiquer avec les municipalités ou
-  #   les MRC afin de connaitre les limites exactes des zones inondables
-  #   cartographiées et la réglementation en vigueur applicable sur leur
-  #   territoire.
-  #
-  # https://www.donneesquebec.ca/recherche/fr/dataset/0d9de0d6-9873-4a8c-adc7-0e94d51b3fa0
-  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
-  # Output folder
-  folder <- paste0(output, 'zone_inondable_mrc/')
-  if (!file.exists(folder)) dir.create(folder)
-
-  # Proceed only if data is not already loaded
-  if (!file.exists(paste0(folder, 'grillepresencezoneinondable.geojson'))) {
-    # URL
-    zone_inondable_mrc <- c('https://donneesouvertes.affmunqc.net/zones_inondables/grillepresencezoneinondable.json')
-
-    # Download
-    download.file(zone_inondable_mrc[1], destfile = paste0(folder, 'grillepresencezoneinondable.geojson'))
-  }
-
-
-  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
-  # Zones inondables BDZI
-  # ------------------------------------
-  # dataID: 0009
-  # ~~~~~~~~~~~~
-  #
-  # Base de données des zones à risque d'inondation (BDZI)
-  #
-  # https://www.donneesquebec.ca/recherche/fr/dataset/3ac8ddff-fe0a-4a7a-8393-d5938e8f35e5
-  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
-  # Output folder
-  folder <- paste0(output, 'zone_inondable_bdzi/')
-  if (!file.exists(folder)) dir.create(folder)
-
-  # Proceed only if data is not already loaded
-  if (!file.exists(paste0(folder, 'Struc_physique_20BDZI_V3.0.pdf'))) {
-    # URL
-    zone_inondable_bdzi <- c('ftp://ftp.mddelcc.gouv.qc.ca/DONNEES_OUVERTES/Base_donnees_zones_inondables/Struc_physique_%20BDZI_V3.0.pdf',
-                             'ftp://ftp.mddelcc.gouv.qc.ca/DONNEES_OUVERTES/Base_donnees_zones_inondables/BDZI.gdb.zip')
-
-    # Download
-    # Default R options limit download time to 60 seconds. Modify for larger files
-    oldopt <- options()$timeout
-    options(timeout=500)
-    download.file(zone_inondable_bdzi[1], destfile = paste0(folder, 'Struc_physique_20BDZI_V3.0.pdf'))
-    download.file(zone_inondable_bdzi[2], destfile = paste0(folder, 'BDZI.gdb.zip'))
-    options(timeout=oldopt)
-
-    # Unzip
-    unzip(zipfile = paste0(folder, 'BDZI.gdb.zip'), exdir = folder)
-  }
-}
-
 getBenthic <- function() {
   output <- './analysis/data/cv/habitats/benthique/'
   if (!file.exists(output)) dir.create(output)
@@ -143,4 +68,76 @@ getBenthic <- function() {
     # Unzip
     unzip(zipfile = paste0(folder, 'Megahabitats_DB.zip'), exdir = folder)
   }
+}
+
+
+fmtBenthic <- function() {
+
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  # Load data
+  # ------------------------------------
+  #
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  folder <- './analysis/data/cv/habitats/benthique/'
+
+  # dataID: 0011
+  # Mégahabitats
+  benthique_mega <- st_read(paste0(folder, 'benthique_mega/Megahabitats_DB.shp')) %>%
+                    st_transform(32198)
+
+  # dataID: 0010
+  # Géologie Loring et Nota
+  # WARNING: Non considéré, inclu dans mégahabitats benthiques dataID: 0011
+  # benthique_ln <- st_read(paste0(folder, 'benthique_ln/Seafloor_SubstratBenthique.shp')) %>%
+  #                 st_transform(32198)
+  # ------------------------------------------------------------------------- #
+
+
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  # Format data
+  # ------------------------------------
+  #
+  # All we will do for now for this dataset is include it as presence-absence
+  # in the study grid
+  #
+  # So I intersect the zostere db with the grid to identify which grid cell
+  # intersect with the db
+  #
+  # See report for a description of the different habitat types
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  # Load grid
+  data(aoi_grid1000poly)
+
+  # Use grid as dataset
+  benthique <- aoi
+
+  # For each coastal habitat type
+  hab <- unique(benthique_mega$Megahabita) %>%
+         .[!is.na(.)]
+
+  for(i in hab) {
+    # Segments for habitat i
+    habid <- benthique_mega$Megahabita == i
+
+    # Identify grid cells with coast habitat types
+    uid <- st_intersects(benthique_mega[habid, ], aoi) %>%
+           unlist() %>%
+           unique()
+
+    # Add info to grid
+    dat <- numeric(nrow(benthique))
+    dat[uid] <- 1
+    benthique <- cbind(benthique, dat) %>%
+                 rename(!!i:=dat)
+  }
+  # ------------------------------------------------------------------------- #
+
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  # Export data
+  # ------------------------------------
+  #
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  save(benthique, file = './data/cv_hab_benthique.RData')
+  # ------------------------------------------------------------------------- #
+
 }

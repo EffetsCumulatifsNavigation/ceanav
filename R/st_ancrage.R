@@ -1,19 +1,16 @@
-fmtAncrage <- function () {
+#' Ancrages
+#'
+#' Couche de données transformées pour les sites d'ancrages dans le Saint-Laurent
+#'
+#' @keywords ancrage
+#' @keywords stresseurs
+#'
+#' @export
+#'
+#' @details Cette fonction importe et formatte les données pour l'analyse d'effets cumulatifs
+#'
 
-  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
-  # Load data
-  # ------------------------------------
-  #
-  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
-  folder <- './analysis/data/stresseurs/ancrages/ancrages_innav/'
-
-  # dataID: 0012
-  # Ancrages INNAV
-  ancrage <- st_read(paste0(folder, 'INNAV_Marine_Navigation_Objects_ANCHORAGES_2019_EAST.geojson')) %>%
-             st_transform(32198)
-  # ------------------------------------------------------------------------- #
-
-
+st_ancrage <- function() {
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   # Format data
   # ------------------------------------

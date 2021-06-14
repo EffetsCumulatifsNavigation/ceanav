@@ -1,0 +1,13 @@
+data_description:
+  id: "0015"
+  name: "Ancrages"
+  description: "Distribution des sites d'ancrages de SIGTM-INNAV dans l'Est du Canada"
+  access_date: 2020-07-29
+  temporal_start: 2019
+  temporal_end: 2019
+  contact_id:
+    - "0016"
+    - "0017"
+  availability: "data sharing agreement"
+  citation:
+    - "Garde Côtière Canadienne (2019) Distribution des sites d'ancrages de SIGTM-INNAV dans l'Est du Canada. url: https://www.innav.gc.ca/home.aspx"

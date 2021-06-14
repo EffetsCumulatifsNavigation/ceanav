@@ -12,7 +12,7 @@
 #' @details Cette fonction télécharge et formatte les données
 #'
 
-cv_habitats <- function() {
+cv_habitat <- function() {
   # Load grid
   data(aoi_grid1000poly)
 
@@ -166,5 +166,19 @@ cv_habitats <- function() {
     cote <- cbind(cote, dat) %>%
             rename(!!i:=dat)
   }
+
+  zone_inondable <- bind_rows(zone_inondable_mrc, zone_inondable_bdzi)
+
+  # Load grid
+  data(aoi_grid1000poly)
+
+  # Identify grid cells with zostera
+  uid <- st_intersects(zone_inondable, aoi) %>%
+               unlist() %>%
+               unique()
+
+  # Add info to grid
+  zone_inondable <- aoi %>% mutate(zone_inondable = 0)
+  zone_inondable$zone_inondable[uid] <- 1
 
 }
