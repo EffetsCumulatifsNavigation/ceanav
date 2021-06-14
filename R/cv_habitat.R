@@ -143,5 +143,28 @@ cv_habitats <- function() {
 
   }
 
+  # Load grid
+  data(aoi_grid1000poly)
+
+  # Use grid as dataset
+  cote <- aoi
+
+  # For each coastal habitat type
+  hab <- unique(cote_classification$SCAT_Class_EN)
+  for(i in hab) {
+    # Segments for habitat i
+    habid <- cote_classification$SCAT_Class_EN == i
+
+    # Identify grid cells with coast habitat types
+    uid <- st_intersects(cote_classification[habid, ], aoi) %>%
+                 unlist() %>%
+                 unique()
+
+    # Add info to grid
+    dat <- numeric(nrow(cote))
+    dat[uid] <- 1
+    cote <- cbind(cote, dat) %>%
+            rename(!!i:=dat)
+  }
 
 }

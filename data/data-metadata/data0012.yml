@@ -1,0 +1,13 @@
+data_description:
+  id: "0012"
+  name: "Classification rivages côtiers"
+  description: "Classification des Rivages du Québec - Fleuve Saint-Laurent"
+  access_date: 2021-06-14
+  temporal_start: 2017
+  temporal_end: 2019
+  contact_id: "0013"
+  url: "https://ouvert.canada.ca/data/fr/dataset/ba580518-59e8-4d1c-b3ef-41d2658e6965"
+  identifiant: "ba580518-59e8-4d1c-b3ef-41d2658e6965"
+  availability: "open access"
+  citation:
+    - "Sergy, G. (2008). The Shoreline Classification Scheme for SCAT and Oil Spill Response in Canada. Proceedings of the 31st Arctic and Marine Oil Spill Program Technical Seminar.Environment Canada, Ottawa, ON, Pp. 811-819."
