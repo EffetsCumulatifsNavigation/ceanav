@@ -50,7 +50,7 @@ pipeline <- function(pipeline_metadata = FALSE,
     get_data0014()
     get_data0015()
     get_data0016()
-    # get_data0017()
+    get_data0017()
     # get_data0018()
     # get_data0019()
   }
@@ -59,6 +59,7 @@ pipeline <- function(pipeline_metadata = FALSE,
   if (pipeline_integration) {
     # Composantes valorisées
     cv_habitat()
+    cv_berge()
 
     # Stresseurs
     st_ancrage()

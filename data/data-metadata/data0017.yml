@@ -1,0 +1,15 @@
+data_description:
+  id: "0017"
+  name: "Caractérisation des berges"
+  description: "Caractérisation des berges de la partie fluviale du Saint-Laurent et analyse de l'évolution des facteurs hydro-climatiques influençant les aléas d'érosion et d'inondation"
+  access_date: 2021-06-14
+  temporal_start: 2013
+  temporal_end: 2020
+  contact_id:
+    - "0019"
+    - "0020"
+  url: "https://www.donneesquebec.ca/recherche/dataset/caracterisation-des-berges-et-analyse-de-l-evolution-des-facteurs-hydro-climatiques"
+  identifiant: "8301c7ed-6b27-4319-9150-435246634b90"
+  availability: "open access"
+  citation:
+    - "Bernier, J.-F., Chassiot, L., Ouellet, C. et Lajeunesse, P. 2020. Caractérisation des berges de la partie fluviale du Saint-Laurent. Laboratoire de géosciences marines, Département de Géographie, Université Laval, Rapport soumis au Ministère de l’Environnement et de la Lutte contre les changements climatiques. 120 pp + annexes"
