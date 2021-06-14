@@ -1,0 +1,11 @@
+data_description:
+  id: "0011"
+  name: "Espèces à statut"
+  description: "Zones d'importance pour les espèces à statut dans le Saint-Laurent fluvial"
+  access_date: 2020-10-20
+  temporal_start: 2020
+  temporal_end: 2020
+  contact_id: "0012"
+  availability: "data sharing agreement"
+  citation:
+    - "Centre de données sur le patrimoine naturel du Québec (2020) Espèces à statut dans le Saint-Laurent fluvial."

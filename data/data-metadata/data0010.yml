@@ -1,0 +1,26 @@
+data_description:
+  id: "0010"
+  name: "Frayères"
+  description: "Identification des frayères dans le Saint-Laurent fluvial"
+  access_date: 2020-10-20
+  temporal_start: 2020
+  temporal_end: 2020
+  contact_id: "0012"
+  availability: "data sharing agreement"
+  citation:
+    - "Ministère des Forêts, de la Faune et des Parcs (25 mars 2013) Frayère de Shooner [shp]. V.2013, 1 : 400 000, DGFa 04-17, Trois-Rivières."
+    - "Mingelbier, M. et J., Leclerc. 2001. Preliminary atlas of fish habitat in the fluvial St. Lawrence River. 8th Annual International Conference on the St Lawrence River Ecosystem, Cornwall, Ontario."
+    - "Massé, G. 1974. Frayères à poissons d’eau chaude du couloir fluvial, entre Montréal et el lac Saint-Pierre. Service de l’Aménagement de la Faune, Ministère du Tourisme, de la Chasse et de la Pêche. 20 p."
+    - "Bouchard, D. 1976. Localisation des frayères des principales espèces de poissons d'intérêt sportif et commercial, dans le fleuve Saint-Laurent. (Phase 1). Québec, Ministère du Loisir, de la Chasse et de la Pêche, Service de la recherche biologique."
+    - "Benoit, J., J.-C. Bourgeois, S. Desjardins et J. Picard. 1988. Plan de conservation et de mise en valeur des habitats et de la faune de la région du lac Saint-Pierre. Ministère des Loisirs, de la Chasse et de la Pêche du Québec, Directions régionale."
+    - "Ministère des Forêts, de la Faune et des Parcs (2019b) Géobase-Faune -  Hab_aqua_part_s [FGDB]. V2019-11-19, MFFP, Québec, Qc."
+    - "Ministère de l’Environnement et de la Faune. 1994. Cartographie des sites d’intérêt et des sites protégés et fiches synthèses descriptives des sites d’intérêt faunique. Direction régionale de la Montérégie, Service de l’aménagement et de l’exploitat"
+    - "Société de la faune et des parcs du Québec. 2000. Atlas des habitats critiques connus ou d’intérêt particulier pour les poissons du fleuve Saint-Laurent entre le port de Montréal et l’Île aux Coudres. Direction du développement de la faune."
+    - "L’italien, L. (2017) Frayère d’esturgeon noir [shp]. V.2017, 1 : 50 000, DGFa 03-12, Québec."
+    - "Mailhot, Y. et R. Morrissette (20 juin 2012) Atlas des habitats fauniques critiques et des exploitations halieutiques d’importance dans le fleuve Saint-Laurent et l’aval des tributaires à privilégier pour les interventions en cas d’urgence maritime"
+    - "Mailhot, Y. et R. Morrissette (20 juin 2012) Atlas des frayères potentielles ou confirmées et de certains autres sites d’intérêt dans les rivières de la plaine du Saint-Laurent. V.2012, 1 : 400 000, MFFP – DGFa 04-17, Trois-Rivières."
+    - "Ministère des Ressources naturelles (2013) Habitats essentiels [shp]. 2e trimestre, 1 : 170 000, Direction de l’expertise Énergie -Faune -Forêt-Mines-Territoire de la Mauricie et du Centre -du-Québec, Québec."
+    - "Ministère des Forêts, de la Faune et des Parcs (2019b) Géobase-Faune - SFI_s  [FGDB]. V2019-11-19, MFFP, Québec, Qc"
+    - "VALIQUETTE, E., M. LEGAULT et V. HARVEY. 2016. État référence de la faune aquatique et de ses habitats dans le secteur du pont de l’île d’Orléans : Rapport final. Première partie — Description physique et inventaires biologiques, Ministère des Forêt"
+    - "DGFa 05-06-13-16 (2020) Base de données frayères [FGDB]. V.2020, 1 : 20 000, DGFa 05-06-13-16, Longueuil."
+    - "Alliance Environnement GDG Conseil-Daniel Arbour & Associés (n.d.) Frayère PLIO adapté de Lavoie et Talbot  1984 [document cartographique]. 1 : 340 000, Alliance Environnement GDG Conseil-Daniel Arbour & Associés, Trois-Rivières, Québec."
