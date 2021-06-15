@@ -190,30 +190,6 @@ get_data0021 <- function() {
   ais <- ais[-uid, ]
   # _____________________________________________________________________________ #
 
-  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
-  # Divide by boat type
-  # -------------------------
-  #
-  #
-  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
-  # Load vessel type dataset
-  df <- read.csv(paste0(folder, '/STATIC_DATA_2015_to_2019_forULAVAL.csv'))
-
-  # Unique vessel types
-  vessel_type <- unique(df$NTYPE)
-
-  # Add vessel type to ais data
-  ais <- ais %>%
-         left_join(df, 'MMSI')
-
-  # Divide vessel data by type
-  vessels <- list()
-  for(i in 1:length(vessel_type)) {
-    uid <- ais$NTYPE == vessel_type[i]
-    vessels[[i]] <- ais[uid, ]
-  }
-  names(vessels) <- vessel_type
-  # _____________________________________________________________________________ #
 
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
