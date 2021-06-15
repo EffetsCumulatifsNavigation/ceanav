@@ -51,7 +51,7 @@ pipeline <- function(pipeline_metadata = FALSE,
     get_data0015()
     get_data0016()
     get_data0017()
-    # get_data0018()
+    get_data0018()
     # get_data0019()
   }
 

@@ -1,0 +1,11 @@
+data_description:
+  id: "0018"
+  name: "Chenal de navigation et dragage"
+  description: "Chenal de navigation entretenu par des activités de dragage au sein du Saint-Laurent et localisation des sites de dépôts utilisés"
+  access_date: 2021-05-13
+  contact_id:
+    - "0021"
+    - "0022"
+  availability: "available"
+  citation:
+    - "Garde Côtières Canadienne (2021) Programme de gestion des voies navigables de la Garde Côtière Canadienne."
