@@ -1,0 +1,10 @@
+data_description:
+  id: "0020"
+  name: "Index des navires données AIS (id: 0021)"
+  description: "Base de données contenant les informations des navires pour lesquels des données AIS satellitaire (id: 0021) sont disponibles"
+  access_date: 2020-07-29
+  temporal_start: 2019
+  temporal_end: 2015
+  contact_id: "0016"
+  availability: "data sharing agreement"
+  citation: "Transports Canada (2020) Static vessel information per MMSI that travelled in Canadian waters between 2015 and 2019."

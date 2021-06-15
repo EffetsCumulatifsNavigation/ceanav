@@ -41,7 +41,7 @@ ais_segment <- function(df, time_interval = (300/60), distance = (50 * 1.61 * 10
   POSIXct <- paste0(yr, '-', mt, '-', dy, ' ', hr, ':', mn, ':', sc)
 
   # Add time to AIS data
-  ais$POSIXct <- as.POSIXct(POSIXct)
+  ais$POSIXct <- as.POSIXct(POSIXct,  format = "%Y-%m-%d %H:%M:%OS", tz = "UTC")
 
   # Order data by ship and date/time
   ais <- arrange(ais, MMSI, POSIXct)
@@ -72,7 +72,9 @@ ais_segment <- function(df, time_interval = (300/60), distance = (50 * 1.61 * 10
   ais %>%
   group_by(MMSI, group) %>%
   arrange(POSIXct) %>%
-  summarize(n = n(), .groups = "drop", do_union = FALSE) %>% # do_union = FALSE is important to preserve order
+  summarize(n = n(), .groups = "drop", do_union = FALSE,
+            Date_UTC_start = min(POSIXct),
+            Date_UTC_end = max(POSIXct)) %>% # do_union = FALSE is important to preserve order
   filter(n > 2) %>%
   st_cast("LINESTRING")
 }
