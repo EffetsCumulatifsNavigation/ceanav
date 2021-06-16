@@ -1,0 +1,10 @@
+data_description:
+  id: ""
+  name: ""
+  description: ""
+  access_date: YYYY-MM-DD
+  temporal_start: YYYY
+  temporal_end: YYYY
+  contact_id: ""
+  availability: ""
+  citation: ""

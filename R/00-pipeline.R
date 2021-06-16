@@ -52,7 +52,9 @@ pipeline <- function(pipeline_metadata = FALSE,
     get_data0016()
     get_data0017()
     get_data0018()
-    # get_data0019()
+    get_data0019()
+    get_data0020()
+    get_data0021()
   }
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~
@@ -64,6 +66,7 @@ pipeline <- function(pipeline_metadata = FALSE,
     # Stresseurs
     st_ancrage()
     st_deversement()
+    st_navigation()
 
   }
 
