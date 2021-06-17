@@ -1,0 +1,16 @@
+data_description:
+  id: "0024"
+  name: "Sites d'importance communauté Essipit"
+  description: "Collection de sites d'intérêt sociaux, culturels, archéologiques et de pratiques Innu-Aitun issue de l'intégration d'ouvrages divers"
+  access_date: 2021-04-27
+  contact_id:
+    - "0025"
+    - "0026"
+  availability: "data sharing agreement"
+  citation:
+    - "Bouchard D., Tremblay P. (communication personnelle)  Collection de sites d'intérêt sociaux, culturels, archéologiques et de pratiques Innu-Aitun issue de l'intégration d'ouvrages divers. Secteur Territoire et Consultation, Conseil de Bande Essipit."
+    - "Inventaire des sites archéologiques du Québec."
+    - "Suivi Innu-Aitun, 2004 à 2018, Essipit."
+    - "Historique des pêches commerciales (crabe des neiges, oursin) et alimentaire (flétan atlantique), 1996 à 2020, Essipit. "
+    - "Atlas des usages côtiers et marins du Saint-Laurent par les Innus de la Côte-Nord, Agence Mamu Innu Kaikusseht​, 2019."
+    ​- "Collecte de données sur la récolte d’oiseaux migrateurs dans sept communautés innues de la Côte-Nord, Agence Mamu Innu Kaikusseht​, 2014."

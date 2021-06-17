@@ -57,6 +57,7 @@ pipeline <- function(pipeline_metadata = FALSE,
     get_data0021()
     get_data0022()
     get_data0023()
+    get_data0024()
   }
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~
