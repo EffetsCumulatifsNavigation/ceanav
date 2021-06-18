@@ -32,8 +32,6 @@ get_data0026 <- function() {
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   # Import and format data
   # ----------------------------------------
-  # WARNING: Retirer information sur les débarquements et uniquement utiliser la
-  #          délimitation des sites pêchés
   data0026 <- list()
   data0026[[1]] <- st_read(paste0(folder, "Oursins_zones_exploitation_potentielleA.shp"))
   data0026[[2]] <- st_read(paste0(folder, "Oursins_zones_exploitation_potentielleB.shp"))

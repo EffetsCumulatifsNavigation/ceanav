@@ -58,6 +58,8 @@ pipeline <- function(pipeline_metadata = FALSE,
     get_data0022()
     get_data0023()
     get_data0024()
+    get_data0025()
+    get_data0026()
   }
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~
@@ -65,6 +67,7 @@ pipeline <- function(pipeline_metadata = FALSE,
     # Composantes valorisées
     cv_habitat()
     cv_berge()
+    # cv_mammiferes_marins()
 
     # Stresseurs
     st_ancrage()
