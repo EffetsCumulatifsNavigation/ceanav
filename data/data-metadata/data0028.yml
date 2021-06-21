@@ -1,0 +1,10 @@
+data_description:
+  id: "0028"
+  name: "Observation en mer de mammifères marins"
+  description: "Activité d'observation en mer de mammifères marins sur des embarcations avec permis de classe 1 en 2017"
+  access_date: 2021-05-21
+  temporal_start: 2017
+  temporal_end: 2017
+  contact_id: "0011"
+  availability: "available"
+  citation: "Turgeon, S., 2019. Portrait de la navigation dans le parc marin du Saguenay–Saint-Laurent - 2017. Parcs Canada, 59 pages + annexes"
