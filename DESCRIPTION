@@ -23,7 +23,8 @@ Depends:
     graphicsutils(>= 1.6.0)
 Imports:
     stringr(>= 1.4.0),
-    yaml(>= 2.2.1)
+    yaml(>= 2.2.1),
+    mdbr(>= 0.1.2)
 Suggests:
     knitr,
     rmarkdown
