@@ -2,7 +2,7 @@
 % Please edit documentation in R/data0027-mammiferes_marins.R
 \name{get_data0027}
 \alias{get_data0027}
-\title{Data 0027 :}
+\title{Data 0027 : Mammifères marins}
 \source{
 Le WWF-Canada et le Réseau d’observation de mammifères marins. Données cartographiques : Navires et baleines de l’Atlantique Nord-Ouest : Guide à l’intention de l’industrie maritime, 2e édition. 2021. Données disponibles sur le site https://www.navigationbaleines.ca/fr/accueil/
 }
@@ -10,12 +10,33 @@ Le WWF-Canada et le Réseau d’observation de mammifères marins. Données cart
 get_data0027()
 }
 \description{
-Data 0027 :
+Données cartographiques : Navires et baleines de l’Atlantique Nord-Ouest : Guide à l’intention de l’industrie maritime, 2e édition
 }
 \details{
 Cette fonction formatte les données
 }
+\keyword{Nord}
+\keyword{Saint-Laurent}
+\keyword{baleine}
+\keyword{bec}
+\keyword{bleu}
+\keyword{boréal}
+\keyword{bosse}
+\keyword{béluga}
+\keyword{cachalot}
+\keyword{commun}
+\keyword{commune}
 \keyword{composante}
+\keyword{de}
+\keyword{du}
+\keyword{l'atlantique}
+\keyword{luth}
+\keyword{macrocéphale}
 \keyword{mammifères}
 \keyword{marins}
+\keyword{noire}
+\keyword{petit}
+\keyword{rorqual}
+\keyword{tortue}
 \keyword{valorisée}
+\keyword{à}
