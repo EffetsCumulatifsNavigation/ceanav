@@ -94,8 +94,5 @@ get_data0022 <- function() {
   st_write(obj = data0022,
            dsn = "./data/data-format/data0022-peche_aghamm.geojson",
            delete_dsn = TRUE)
-
-  # RData
-  save(data0022, file = "./data/data0022.RData")
   # _________________________________________________________________________ #
 }

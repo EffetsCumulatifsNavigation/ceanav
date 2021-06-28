@@ -46,8 +46,5 @@ get_data0025 <- function() {
   st_write(obj = data0025,
            dsn = "./data/data-format/data0025-wolastoqiyik_wahsipekuk.geojson",
            delete_dsn = TRUE)
-
-  # RData
-  save(data0025, file = "./data/data0025.RData")
   # _________________________________________________________________________ #
 }

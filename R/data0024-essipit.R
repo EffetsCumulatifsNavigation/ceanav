@@ -196,8 +196,5 @@ get_data0024 <- function() {
   st_write(obj = data0024,
            dsn = "./data/data-format/data0024-essipit.geojson",
            delete_dsn = TRUE)
-
-  # RData
-  save(data0024, file = "./data/data0024.RData")
   # _________________________________________________________________________ #
 }

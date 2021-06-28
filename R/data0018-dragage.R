@@ -41,8 +41,5 @@ get_data0018 <- function() {
   st_write(obj = data0018,
            dsn = "./data/data-format/data0018-dragage.geojson",
            delete_dsn = TRUE)
-
-  # RData
-  save(data0018, file = "./data/data0018.RData")
   # _________________________________________________________________________ #
 }

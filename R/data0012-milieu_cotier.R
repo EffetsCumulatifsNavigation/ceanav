@@ -53,8 +53,5 @@ get_data0012 <- function() {
   st_write(obj = data0012,
            dsn = "./data/data-format/data0012-classification_cote.geojson",
            delete_dsn = TRUE)
-
-  # RData
-  save(data0012, file = "./data/data0012.RData")
   # _________________________________________________________________________ #
 }

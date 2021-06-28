@@ -43,9 +43,5 @@ get_data0020 <- function() {
   write.csv(x = data0020,
             file = "./data/data-format/data0020-navigation.csv",
             row.names = FALSE)
-
-
-  # RData
-  save(data0020, file = "./data/data0020.RData")
   # _________________________________________________________________________ #
 }

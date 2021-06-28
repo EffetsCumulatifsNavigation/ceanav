@@ -51,8 +51,5 @@ get_data0008 <- function() {
   st_write(obj = data0008,
            dsn = "./data/data-format/data0008-milieu_sableux.geojson",
            delete_dsn = TRUE)
-
-  # RData
-  save(data0008, file = "./data/data0008.RData")
   # _________________________________________________________________________ #
 }

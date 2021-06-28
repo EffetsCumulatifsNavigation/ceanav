@@ -100,8 +100,5 @@ get_data0016 <- function() {
   st_write(obj = data0016,
            dsn = "./data/data-format/data0016-deversement.geojson",
            delete_dsn = TRUE)
-
-  # RData
-  save(data0016, file = "./data/data0016.RData")
   # _________________________________________________________________________ #
 }

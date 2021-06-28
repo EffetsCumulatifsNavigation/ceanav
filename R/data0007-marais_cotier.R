@@ -51,8 +51,5 @@ get_data0007 <- function() {
   st_write(obj = data0007,
            dsn = "./data/data-format/data0007-marais_cotier.geojson",
            delete_dsn = TRUE)
-
-  # RData
-  save(data0007, file = "./data/data0007.RData")
   # _________________________________________________________________________ #
 }

@@ -61,8 +61,5 @@ get_data0013 <- function() {
   st_write(obj = data0013,
            dsn = "./data/data-format/data0013-zone_inondable.geojson",
            delete_dsn = TRUE)
-
-  # RData
-  save(data0013, file = "./data/data0013.RData")
   # _________________________________________________________________________ #
 }

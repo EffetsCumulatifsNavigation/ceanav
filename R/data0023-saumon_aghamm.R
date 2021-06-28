@@ -61,7 +61,7 @@ get_data0023 <- function() {
   # Simply add a buffer around points and add as presence to the grid
   # WARNING: Buffer size is arbitrary, to confirm
   message("Le buffer (3000m) autour des embouchures de rivères d'importance pour le saumon Atlantique est arbitraire et devrait être révisé au besoin.")
-  data0023 <- st_transform(data0023, crs = 32198) %>% 
+  data0023 <- st_transform(data0023, crs = 32198) %>%
               st_buffer(3000)
   # _________________________________________________________________________ #
 
@@ -73,8 +73,5 @@ get_data0023 <- function() {
   st_write(obj = data0023,
            dsn = "./data/data-format/data0023-saumon_aghamm.geojson",
            delete_dsn = TRUE)
-
-  # RData
-  save(data0023, file = "./data/data0023.RData")
   # _________________________________________________________________________ #
 }

@@ -75,8 +75,5 @@ get_data0005 <- function() {
   st_write(obj = data0005,
            dsn = "./data/data-format/data0005-milieu_humide.geojson",
            delete_dsn = TRUE)
-
-  # RData
-  save(data0005, file = "./data/data0005.RData")
   # _________________________________________________________________________ #
 }

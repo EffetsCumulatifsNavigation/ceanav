@@ -85,8 +85,5 @@ get_data0003 <- function() {
   st_write(obj = data0003,
            dsn = "./data/data-format/data0003-zostere.geojson",
            delete_dsn = TRUE)
-
-  # RData
-  save(data0003, file = "./data/data0003.RData")
   # _________________________________________________________________________ #
 }

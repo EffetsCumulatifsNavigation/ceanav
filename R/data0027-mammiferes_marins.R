@@ -115,8 +115,5 @@ get_data0027 <- function() {
   write_stars(data0027,
               dsn = "./data/data-format/data0027-mammiferes_marins.tif",
               driver = "GTiff", delete_dsn = TRUE)
-
-  # RData
-  save(data0027, file = "./data/data0027.RData")
   # _________________________________________________________________________ #
 }
