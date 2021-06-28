@@ -6,101 +6,83 @@ output: github_document
 
 
 ```{r, include = FALSE}
-knitr::opts_chunk$set(
-  collapse  = TRUE,
-  comment   = "#>",
-  fig.path  = "man/figures/README-",
-  out.width = "100%"
-)
+knitr::opts_chunk$set(collapse  = TRUE,
+                      comment   = "#>",
+                      out.width = "100%",
+                      fig.path = "man/figures/")
+#
+# rmarkdown::html_dependency_font_awesome()
+# library(glue)
+# library(icons)
+# options(htmltools.dir.version = FALSE, htmltools.preserve.raw = FALSE)
+# rfa <- function(...) icons::fontawesome(...)
+# gh <- function() rfa("github")
+# rp <- function() rfa("r-project")
+# ch <- function() rfa("check")
+# ck <- function() rfa("clock")
+# db <- function() rfa("database")
+# nf <- function() rfa("info-circle")
+# lk <- function() rfa("link")
+# bk <- function() rfa("book")
+# fl <- function() rfa("file")
+# fd <- function() rfa("folder")
+# pd <- function() rfa("file-pdf")
+# ar <- function() rfa("arrow-right")
+# cg <- function() rfa("cogs")
+# tr <- function() rfa("exclamation-triangle")
+# cb <- function() rfa("clipboard")
+# ey <- function() rfa("eye")
+# lc <- function() rfa("laptop-code")
 ```
 
 
+# ceanav
 
-# ceanavR
-
-
-
-Research Compendium of the ___________ article.
+Ce dépôt contient le compendium de recherche pour le projet pilote d'évaluation des effets cumulatifs des activités maritimes sur le Saint-Laurent et la rivière Saguenay.
 
 
+### Comment citer
 
-### How to cite
+Veillez citer ce compendium de recherche comme suit:
 
+> Beauchesne D., Grant C., Archambault P. (2021) Compendium de recherche pour le projet pilote d'évaluation des effets cumulatifs des activités maritimes sur le Saint-Laurent et la rivière Saguenay. Consulté le [AAAA-MM-JJ]. https://github.com/EffetsCumulatifsNavigation/ceanav.
 
+## Contenu
 
-Please cite this compendium as:
+Ce dépôt est structuré comme suit:
 
-> ___________
+- [**data/**](https://github.com/EffetsCumulatifsNavigation/ceanav/tree/main/data): contient les données du projet
+  - [*data-contact/*](): contient les données sur les différentes personnes ressources
+  - [*data-format/*](): contient les données formatées
+  - [*data-metadata/*](): contient les métadonnées pour les données brutes
+  - [*data-output/*](): contient les données intégrées et les résultats d'analyse du projet
+  - [*data-raw/*](): contient les données brutes. :warning: l'ensemble des données du projet ne sont pas disponibles puisque certaines données sont protégées par des ententes de confidentialité. Consultez les métadonnées pour de plus amples informations.
 
+- [**man/**](https://github.com/EffetsCumulatifsNavigation/ceanav/tree/main/man): contient la documentation des fonctions R
 
-
-## Content
-
-
-
-This repository is structured as follow:
-
-- :file_folder: &nbsp;[**R/**](https://github.com/ahasverus/ceanavR/tree/master/R):
+- [**R/**](https://github.com/EffetsCumulatifsNavigation/ceanav/tree/main/R):
 contains R functions developed especially for this project
+  - [*00-pipeline.R*](): contient une fonction qui permet d'accéder aux données brutes, les formater, l'intégration des données, les analyses, les figures et tableaux, et le rapport du projet. :warning: cette fonction prend un temps considérable è executer.
+  - [*dataXXXX-nom.R*](): contient les routines pour accéder aux données brutes et les formater
+  - [*int-cv_nom*](): contient les routines pour faire l'intégration des composantes valorisées
+  - [*int-st_nom*](): contient les routines pour faire l'intégration des stresseurs environnementaux
+  - [*fnc_nom*](): contient des fonctions R utilisées pour le projet d'évaluation des effets cumulatifs
 
-- :file_folder: &nbsp;[**man/**](https://github.com/ahasverus/ceanavR/tree/master/man):
-contains help files of R functions
+- [**report/**](https://github.com/EffetsCumulatifsNavigation/ceanav/tree/main/report): contient le rapport du projet
 
-- :page_facing_up: &nbsp;[**DESCRIPTION**](https://github.com/ahasverus/ceanavR/tree/master/DESCRIPTION):
-contains project metadata (author, date, dependencies, etc.)
-
-- :page_facing_up: &nbsp;[**make.R**](https://github.com/ahasverus/ceanavR/tree/master/make.R):
-master R script to run the entire project by calling each R script stored in the **analyses/rscripts/** folder
-
-- :file_folder: &nbsp;[**analyses/data/**](https://github.com/ahasverus/ceanavR/tree/master/analyses/data):
-contains all raw data required to perform analyses
-
-- :file_folder: &nbsp;[**analyses/rscripts/**](https://github.com/ahasverus/ceanavR/tree/master/analyses/rscripts/):
-contains R scripts to run each step of the workflow
-
-- :file_folder: &nbsp;[**analyses/outputs/**](https://github.com/ahasverus/ceanavR/tree/master/analyses/outputs):
-contains all the results created during the workflow
-
-- :file_folder: &nbsp;[**analyses/figures/**](https://github.com/ahasverus/ceanavR/tree/master/analyses/figures):
-contains all the figures created during the workflow
+- [**DESCRIPTION**](https://github.com/EffetsCumulatifsNavigation/ceanav/tree/main/DESCRIPTION):
+contient les métadonnées du projet (auteurs, date, dépendences, etc.)
 
 
 
-## Usage
+## Utilisation
 
-
-
-Clone the repository and run this command in R/RStudio:
+Clonez ce dépôt et executez ces commandes dans votre terminal:
 
 ```{r eval=FALSE}
 R -e 'library(devtools);document()'
 R CMD INSTALL .
+R
+library(ceanav)
+pipeline()
 ```
-
-
-
-## Notes
-
-
-
-- All required packages, listed in the `DESCRIPTION` file, will be installed (if necessary)
-- All required packages and R functions will be loaded
-- Figures will be stored in `figures/`
-
-
-:warning: &nbsp;Some computations may take time.
-
-
-
-## Usage
-
-
-
-Clone the repository and run this command in R/RStudio:
-
-```r
-source("make.R")
-```
-
-
-Cheers!
