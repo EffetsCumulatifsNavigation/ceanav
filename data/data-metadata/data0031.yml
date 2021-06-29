@@ -1,0 +1,10 @@
+data_description:
+  id: "0031"
+  name: "Phoque commun fjord du Saguenay"
+  description: "Données du suivi du phoque commun dans le fjord du Saguenay entre 2007 et 2020 exprimées en pourcentage d'individus observés selon la grille d'étude du projet d'évaluation des effets cumulatifs des activités maritime dans le Saint-Laurent et le Saguenay"
+  access_date: 2021-05-21
+  temporal_start: 2007
+  temporal_end: 2020
+  contact_id: "0011"
+  availability: "available"
+  citation: "Agence Parcs Canada (2021) Données du suivi du phoque commun dans le fjord du Saguenay entre 2007 et 2020 exprimées en pourcentage d'individus observés selon la grille d'étude du projet d'évaluation des effets cumulatifs des activités maritime dans le Saint-Laurent et le Saguenay"
