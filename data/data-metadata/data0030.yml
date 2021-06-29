@@ -1,0 +1,8 @@
+data_description:
+  id: "data0030"
+  name: "Mesures spatiales de gestion parc marin"
+  description: "Limites des différentes mesures spatiales de gestion en place au parc marin"
+  access_date: 2021-05-21
+  contact_id: "0011"
+  availability: "available"
+  citation: "Agence Parcs Canada (2021) Limites des différentes mesures spatiales de gestion en place au parc marin"
