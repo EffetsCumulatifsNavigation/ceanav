@@ -188,6 +188,9 @@ get_data0021 <- function() {
   uid <- st_intersects(sa, ais) %>%
          unlist()
   ais <- ais[-uid, ]
+
+  # Object name
+  data0021 <- ais
   # _____________________________________________________________________________ #
 
 

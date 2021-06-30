@@ -2,7 +2,7 @@
 % Please edit documentation in R/data0031-phoque_commun.R
 \name{get_data0031}
 \alias{get_data0031}
-\title{Data 0031 :}
+\title{Data 0031 : Phoque commun fjord du Saguenay}
 \source{
 Agence Parcs Canada (2021) Données du suivi du phoque commun dans le fjord du Saguenay entre 2007 et 2020 exprimées en pourcentage d'individus observés selon la grille d'étude du projet d'évaluation des effets cumulatifs des activités maritime dans le Saint-Laurent et le Saguenay
 }

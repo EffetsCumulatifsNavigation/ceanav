@@ -60,7 +60,7 @@ get_data0029 <- function() {
   tab <- mdb_tables(filepath)
 
   # Get data
-  # dat <- read_mdb(filepath, tab[3])
+  dat <- read_mdb(filepath, tab[3])
 
 
   # data0029 <- st_read(paste0(folder, "grille_classe1/grille_500m_classe1.shp"))
