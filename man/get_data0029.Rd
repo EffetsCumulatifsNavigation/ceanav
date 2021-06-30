@@ -2,19 +2,27 @@
 % Please edit documentation in R/data0029-marais.R
 \name{get_data0029}
 \alias{get_data0029}
-\title{Data 0029 :}
+\title{Data 0029 : Zones herbacées}
 \source{
-
+Gilbert., H. 2004. Portrait des zones herbacées du Parc marin du Saguenay- Saint-Laurent. Bureau d’écologie appliquée, 21 p
 }
 \usage{
 get_data0029()
 }
 \description{
-Data 0029 :
+Les données spatiales accompagnant le Portrait des zones herbacées du Parc marin du Saguenay–Saint-Laurent (Gilbert, 2004)
 }
 \details{
 Cette fonction formatte les données
 }
+\keyword{alternes}
 \keyword{composante}
+\keyword{habitat}
+\keyword{herbacée}
 \keyword{marais}
+\keyword{pectinée}
+\keyword{scirpe}
+\keyword{spartine}
 \keyword{valorisée}
+\keyword{zone}
+\keyword{zostère}

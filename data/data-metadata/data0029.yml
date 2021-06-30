@@ -1,0 +1,10 @@
+data_description:
+  id: "0029"
+  name: "Zones herbacées"
+  description: "Les données spatiales accompagnant le Portrait des zones herbacées du Parc marin du Saguenay–Saint-Laurent (Gilbert, 2004)"
+  access_date: 2021-05-21
+  temporal_start: 2003
+  temporal_end: 2003
+  contact_id: "0011"
+  availability: "available"
+  citation: "Gilbert., H. 2004. Portrait des zones herbacées du Parc marin du Saguenay- Saint-Laurent. Bureau d’écologie appliquée, 21 p"
