@@ -24,16 +24,16 @@ st_ancrage <- function() {
   #   3. Number of buffers intersecting grid cell
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   # Load grid
-  data(aoi_grid1000poly)
+  data(grid1p)
 
   # Identify grid cells with zostera
   ancrage <- st_buffer(ancrage, 5000) %>%
-             st_intersects(aoi,.) %>%
+             st_intersects(grid1p,.) %>%
              lapply(., length) %>%
              unlist()
 
   # Add info to grid
-  ancrage <- aoi %>% mutate(ancrage = ancrage)
+  ancrage <- grid1p %>% mutate(ancrage = ancrage)
   # ------------------------------------------------------------------------- #
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #

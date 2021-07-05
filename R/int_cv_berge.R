@@ -25,15 +25,15 @@ cv_berge <- function() {
   # TODO: see if if makes sense to divide by erosion processes identified in dataset
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   # Load grid
-  data(aoi_grid1000poly)
+  data(grid1p)
 
   # Identify grid cells with zostera
-  bergeID <- st_intersects(berge, aoi) %>%
+  bergeID <- st_intersects(berge, grid1p) %>%
              unlist() %>%
              unique()
 
   # Add info to grid
-  berge <- aoi %>% mutate(berge = 0)
+  berge <- grid1p %>% mutate(berge = 0)
   berge$berge[bergeID] <- 1
   # ------------------------------------------------------------------------- #
 

@@ -1,0 +1,14 @@
+data_description:
+  id: "00XX"
+  name: "Territoires d’intérêt pour la conservation"
+  description: "Atlas des territoires d’intérêt pour la conservation dans les Basses-terres du Saint-Laurent"
+  access_date: 2021-07-05
+  temporal_start:
+  temporal_end:
+  contact_id: "0010"
+  url: "https://www.donneesquebec.ca/recherche/dataset/atlas-des-territoires-interet-conservation-btsl#"
+  identifiant: "8f47fd37-7bb5-4d91-9bc1-9fe3c0467989"
+  availability: "open source"
+  citation:
+    - "Jobin, B., L. Gratton, M.-J. C t , O. Pfister, D. Lachance, M. Mingelbier, D. Blais, A. Blais et D. Leclair. 2019. Atlas des territoires d’intérêt pour la conservation dans les Basses-terres du Saint-Laurent - Rapport méthodologique version 2, incluant la région de l’Outaouais. Environnement et Changement climatique Canada, Ministère de l’Environnement et de la Lutte contre les changements climatiques, Ministère des Forêts, de la Faune et des Parcs. Plan d’action Saint-Laurent, Québec, 170 p."
+    - "Environnement et Changement climatique Canada, Ministère de l’Environnement et de la Lutte contre les changements climatiques, Ministàre des Forêts, de la Faune et des Parc, Plan d’action Saint-Laurent, 2019. Atlas des territoires d’intérêt pour la conservation dans les Basses-terres du Saint-Laurent [Données numériques vectorielles]. Version de diffusion Juin 2019. Québec, Québec."

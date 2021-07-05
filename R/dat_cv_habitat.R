@@ -106,10 +106,10 @@ fmtBenthic <- function() {
   # See report for a description of the different habitat types
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   # Load grid
-  data(aoi_grid1000poly)
+  data(grid1p)
 
   # Use grid as dataset
-  benthique <- aoi
+  benthique <- grid1p
 
   # For each coastal habitat type
   hab <- unique(benthique_mega$Megahabita) %>%
@@ -120,7 +120,7 @@ fmtBenthic <- function() {
     habid <- benthique_mega$Megahabita == i
 
     # Identify grid cells with coast habitat types
-    uid <- st_intersects(benthique_mega[habid, ], aoi) %>%
+    uid <- st_intersects(benthique_mega[habid, ], grid1p) %>%
            unlist() %>%
            unique()
 

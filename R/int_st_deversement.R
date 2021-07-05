@@ -30,7 +30,7 @@ st_deversement <- function() {
   #   4. Sum of intersects in each grid cell
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   # Load grid
-  data(aoi_grid1000poly)
+  data(grid1p)
 
   # Classify by volume
   lvls <- c('0 litre','0 - 100 litres','100 - 1000 litres','1000 - 7000 litres','100000 - 1000000 litres')
@@ -56,7 +56,7 @@ st_deversement <- function() {
 
   # Identify grid cells ---------
   # Use grid as dataset
-  deversement <- aoi
+  deversement <- grid1p
 
   # Buffer around points
   dev <- st_buffer(dev, 5000)
@@ -64,24 +64,24 @@ st_deversement <- function() {
   # Intersect polluant types with grid
   # Hydrocarbures
   hydrocarbures <- dev[dev$TYPE_POLLUANT %in% hydrocarbures, ] %>%
-                   st_intersects(aoi,.) %>%
+                   st_intersects(grid1p,.) %>%
                    lapply(., function(x) sum(dev$volume[x])) %>%
                    unlist()
 
   # Autres polluants
   autres <- dev[dev$TYPE_POLLUANT %in% autres, ] %>%
-            st_intersects(aoi,.) %>%
+            st_intersects(grid1p,.) %>%
             lapply(., function(x) sum(dev$volume[x])) %>%
             unlist()
 
   # Inconnus
   inconnus <- dev[dev$TYPE_POLLUANT %in% inconnus, ] %>%
-              st_intersects(aoi,.) %>%
+              st_intersects(grid1p,.) %>%
               lapply(., function(x) sum(dev$volume[x])) %>%
               unlist()
 
   # Add info to grid
-  deversement <- aoi %>%
+  deversement <- grid1p %>%
                  mutate(hydrocarbures = hydrocarbures,
                         autres = autres,
                         inconnus = inconnus)

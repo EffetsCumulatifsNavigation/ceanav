@@ -55,11 +55,11 @@ get_data0005 <- function() {
   intersects with our study area to get the whole dataset")
 
   # Study area grid
-  data(aoi_grid1000poly)
-  aoi <- st_transform(aoi, st_crs(data0005))
+  data(grid1p)
+  grid1p <- st_transform(grid1p, st_crs(data0005))
 
   # Identify polygons intersecting study area
-  uid <- st_intersects(aoi, data0005) %>%
+  uid <- st_intersects(grid1p, data0005) %>%
          unlist() %>%
          unique() %>%
          sort()

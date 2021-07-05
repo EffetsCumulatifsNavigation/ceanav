@@ -11,7 +11,7 @@
 #' @keywords habitat
 #' @keywords composante valorisée
 #'
-#' @source Gilbert., H. 2004. Portrait des zones herbacées du Parc marin du Saguenay- Saint-Laurent. Bureau d’écologie appliquée, 21 p
+#' @source Gilbert H. 2004. Portrait des zones herbacées du Parc marin du Saguenay- Saint-Laurent. Bureau d’écologie appliquée, 21 p
 #'
 #' @export
 #'

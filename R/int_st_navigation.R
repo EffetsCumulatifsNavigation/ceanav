@@ -43,26 +43,26 @@ st_navigation <- function() {
   #
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   # Study grid
-  data(aoi_grid1000poly)
+  data(grid1p)
 
   system.time({
   grd <- list()
   # Intensity for each vessel type (~15 minutes to run on my laptop)
   for(i in 1:length(vessels)) {
-    grd[[i]] <- st_intersects(aoi, vessels[[i]]) %>%
+    grd[[i]] <- st_intersects(grid1p, vessels[[i]]) %>%
            lapply(length) %>%
            unlist() %>%
            ifelse(. == 0, NA, .) %>%
-           mutate(aoi, intensity = .)
+           mutate(grid1p, intensity = .)
   }
   })
 
   # In matrix
-  df <- matrix(NA, nrow = nrow(aoi), ncol = length(vessel_type), dimnames = list(c(), vessel_type))
+  df <- matrix(NA, nrow = nrow(grid1p), ncol = length(vessel_type), dimnames = list(c(), vessel_type))
   for(i in 1:length(grd)) df[,i] <- grd[[i]]$intensity
 
   # As single sf object
-  navigation <- cbind(aoi, df)
+  navigation <- cbind(grid1p, df)
 
 
   # # Vessel type viz

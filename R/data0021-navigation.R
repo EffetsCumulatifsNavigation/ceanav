@@ -161,17 +161,17 @@ get_data0021 <- function() {
   #
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   # Load data from `ceanav` package
-  data(aoi_studyarea)
-  data(aoi_egsl)
+  data(aoi)
+  data(egsl)
   message("Change data names in package and adjust in function `data0021-navigation()`")
 
   # Union
-  sa <- bind_rows(studyarea, egslSimple) %>%
+  sa <- bind_rows(aoi, egsl) %>%
         st_union()
 
   # Add buffer around study area to make sure I do not remove data in ports
-  tc <- st_buffer(studyarea, 2000)
-  stl <- st_buffer(egslSimple, 2000)
+  tc <- st_buffer(aoi, 2000)
+  stl <- st_buffer(egsl, 2000)
 
   # Combine and union
   sabuf <- bind_rows(tc, stl) %>%

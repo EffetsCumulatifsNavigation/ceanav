@@ -14,30 +14,30 @@
 
 cv_habitat <- function() {
   # Load grid
-  data(aoi_grid1000poly)
+  data(grid1p)
 
   # Identify grid cells with zostera
-  zostereID <- st_intersects(zostere_inv, aoi) %>%
+  zostereID <- st_intersects(zostere_inv, grid1p) %>%
                unlist() %>%
                unique()
 
   # Add info to grid
-  zostere <- aoi %>% mutate(zostere = 0)
+  zostere <- grid1p %>% mutate(zostere = 0)
   zostere$zostere[zostereID] <- 1
 
   # # Combine datasets
   # milieu_humide <- bind_rows(milieu_humide_lsp, milieu_humide_stl)
   #
   # # Load grid
-  # data(aoi_grid1000poly)
+  # data(grid1p)
   #
   # # Identify grid cells with zostera
-  # uid <- st_intersects(milieu_humide, aoi) %>%
+  # uid <- st_intersects(milieu_humide, grid1p) %>%
   #              unlist() %>%
   #              unique()
   #
   # # Add info to grid
-  # milieu_humide <- aoi %>% mutate(milieu_humide = 0)
+  # milieu_humide <- grid1p %>% mutate(milieu_humide = 0)
   # milieu_humide$milieu_humide[uid] <- 1
 
   # Format milieu humide db
@@ -68,15 +68,15 @@ cv_habitat <- function() {
     # cell intersect with the db
     # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
     # Load grid
-    data(aoi_grid1000poly)
+    data(grid1p)
 
     # Identify grid cells with zostera
-    uid <- st_intersects(marais_stl, aoi) %>%
+    uid <- st_intersects(marais_stl, grid1p) %>%
                  unlist() %>%
                  unique()
 
     # Add info to grid
-    marais <- aoi %>% mutate(marais = 0)
+    marais <- grid1p %>% mutate(marais = 0)
     marais$marais[uid] <- 1
     # ------------------------------------------------------------------------- #
 
@@ -120,15 +120,15 @@ cv_habitat <- function() {
     # cell intersect with the db
     # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
     # Load grid
-    data(aoi_grid1000poly)
+    data(grid1p)
 
     # Identify grid cells with zostera
-    uid <- st_intersects(milieu_sableux_stl, aoi) %>%
+    uid <- st_intersects(milieu_sableux_stl, grid1p) %>%
                  unlist() %>%
                  unique()
 
     # Add info to grid
-    milieu_sableux <- aoi %>% mutate(milieu_sableux = 0)
+    milieu_sableux <- grid1p %>% mutate(milieu_sableux = 0)
     milieu_sableux$milieu_sableux[uid] <- 1
     # ------------------------------------------------------------------------- #
 
@@ -144,10 +144,10 @@ cv_habitat <- function() {
   }
 
   # Load grid
-  data(aoi_grid1000poly)
+  data(grid1p)
 
   # Use grid as dataset
-  cote <- aoi
+  cote <- grid1p
 
   # For each coastal habitat type
   hab <- unique(cote_classification$SCAT_Class_EN)
@@ -156,7 +156,7 @@ cv_habitat <- function() {
     habid <- cote_classification$SCAT_Class_EN == i
 
     # Identify grid cells with coast habitat types
-    uid <- st_intersects(cote_classification[habid, ], aoi) %>%
+    uid <- st_intersects(cote_classification[habid, ], grid1p) %>%
                  unlist() %>%
                  unique()
 
@@ -170,15 +170,15 @@ cv_habitat <- function() {
   zone_inondable <- bind_rows(zone_inondable_mrc, zone_inondable_bdzi)
 
   # Load grid
-  data(aoi_grid1000poly)
+  data(grid1p)
 
   # Identify grid cells with zostera
-  uid <- st_intersects(zone_inondable, aoi) %>%
+  uid <- st_intersects(zone_inondable, grid1p) %>%
                unlist() %>%
                unique()
 
   # Add info to grid
-  zone_inondable <- aoi %>% mutate(zone_inondable = 0)
+  zone_inondable <- grid1p %>% mutate(zone_inondable = 0)
   zone_inondable$zone_inondable[uid] <- 1
 
 }
