@@ -20,10 +20,10 @@ bookdown::html_chapters:
   css: [css/style.css, css/toc.css]
 bookdown::pdf_book:
   keep_tex: no
-  dev: "cairo_pdf"
-  latex_engine: xelatex
-  citation_package: natbib
-  template: null
+  dev: "pdf"
+  # latex_engine: xelatex
+  # citation_package: natbib
+  template: default
   pandoc_args: --top-level-division=chapter
   toc_depth: 3
   toc_unnumbered: no

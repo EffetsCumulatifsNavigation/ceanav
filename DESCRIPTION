@@ -23,10 +23,10 @@ Depends:
     graphicsutils(>= 1.6.0)
 Imports:
     stringr(>= 1.4.0),
-    yaml(>= 2.2.1),
-    mdbr(>= 0.1.2)
+    yaml(>= 2.2.1)
 Suggests:
     knitr,
+    kableExtra,
     rmarkdown
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1

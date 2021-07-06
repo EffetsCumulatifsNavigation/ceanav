@@ -55,6 +55,8 @@ Ce dépôt est structuré comme suit:
         l’intégration des stresseurs environnementaux
     -   [*fnc\_nom*](): contient des fonctions R utilisées pour le
         projet d’évaluation des effets cumulatifs
+    -   [*rep\_nom*](): contien des fonctions R utilisées pour générer
+        des portions du rapport d’étude
 
 -   [**report/**](https://github.com/EffetsCumulatifsNavigation/ceanav/tree/main/report):
     contient le rapport du projet

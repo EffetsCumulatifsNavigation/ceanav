@@ -30,7 +30,7 @@ pipeline <- function(pipeline_metadata = FALSE,
   if (pipeline_data) {
     # -----------------------------------
     # Study area
-
+    get_data0000()
 
     # -----------------------------------
     # Individual datasets
@@ -72,14 +72,14 @@ pipeline <- function(pipeline_metadata = FALSE,
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~
   if (pipeline_integration) {
     # Composantes valorisées
-    cv_habitat()
-    cv_berge()
+    int_cv_habitat()
+    int_cv_berge()
     # cv_mammiferes_marins()
 
     # Stresseurs
-    st_ancrage()
-    st_deversement()
-    st_navigation()
+    int_st_ancrage()
+    int_st_deversement()
+    int_st_navigation()
 
   }
 
@@ -87,9 +87,21 @@ pipeline <- function(pipeline_metadata = FALSE,
   if (pipeline_report) {
     suppressWarnings({
       setwd('./report/')
+
+      # HTML format
       bookdown::render_book(input = "index.Rmd",
                             output_format = "bookdown::gitbook",
                             config_file = "_bookdown.yml")
+
+      # PDF format
+      bookdown::render_book(input = "index.Rmd",
+                            output_format = "bookdown::pdf_book",
+                            config_file = "_bookdown.yml")
+
+      pdf_book(toc = TRUE, number_sections = TRUE, fig_caption = TRUE,
+               pandoc_args = NULL, ..., base_format = rmarkdown::pdf_document,
+               toc_unnumbered = TRUE, toc_appendix = FALSE, toc_bib = FALSE,
+               quote_footer = NULL, highlight_bw = FALSE)
       setwd('../')
     })
   }

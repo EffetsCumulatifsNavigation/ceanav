@@ -10,6 +10,7 @@ rmd_subdir:
   # - "contenu/analyse"
   - "contenu/accronymes"
   - "contenu/references"
+  - "contenu/annexes"
 clean: [packages.bib, bookdown.bbl]
 delete_merged_file: true
 language:

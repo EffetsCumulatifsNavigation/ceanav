@@ -67,6 +67,7 @@ contains R functions developed especially for this project
   - [*int-cv_nom*](): contient les routines pour faire l'intégration des composantes valorisées
   - [*int-st_nom*](): contient les routines pour faire l'intégration des stresseurs environnementaux
   - [*fnc_nom*](): contient des fonctions R utilisées pour le projet d'évaluation des effets cumulatifs
+  - [*rep_nom*](): contien des fonctions R utilisées pour générer des portions du rapport d'étude
 
 - [**report/**](https://github.com/EffetsCumulatifsNavigation/ceanav/tree/main/report): contient le rapport du projet
 
