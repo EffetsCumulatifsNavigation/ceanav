@@ -18,7 +18,7 @@
 #' # Contacts
 #' ceanav_metadata('contact')
 
-ceanav_metadata <- function(type) {
+ceanav_update_metadata <- function(type) {
 
   # Folder
   if (type == "metadata") folder <- './data/data-metadata/'

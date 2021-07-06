@@ -4,7 +4,7 @@ subtitle: "Présentation du mandat et de l'approche méthodologique"
 author: "David Beauchesne, Cindy Grant, Philippe Archambault"
 date: "`r Sys.Date()`"
 knit: "bookdown::render_book"
-documentclass: krantz
+documentclass: scrbook
 bibliography: [TC.bib]
 biblio-style: apalike
 link-citations: yes

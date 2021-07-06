@@ -19,10 +19,10 @@ pipeline <- function(pipeline_metadata = FALSE,
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~
   if (pipeline_metadata) {
     # Metadata
-    ceanav_metadata('metadata')
+    ceanav_update_metadata('metadata')
 
     # Contacts
-    ceanav_metadata('contact')
+    ceanav_update_metadata('contact')
   }
 
 
@@ -98,10 +98,6 @@ pipeline <- function(pipeline_metadata = FALSE,
                             output_format = "bookdown::pdf_book",
                             config_file = "_bookdown.yml")
 
-      pdf_book(toc = TRUE, number_sections = TRUE, fig_caption = TRUE,
-               pandoc_args = NULL, ..., base_format = rmarkdown::pdf_document,
-               toc_unnumbered = TRUE, toc_appendix = FALSE, toc_bib = FALSE,
-               quote_footer = NULL, highlight_bw = FALSE)
       setwd('../')
     })
   }
