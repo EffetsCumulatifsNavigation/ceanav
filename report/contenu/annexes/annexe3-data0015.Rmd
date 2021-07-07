@@ -1,0 +1,40 @@
+### 0015 : Ancrages {-}
+
+<!-- -------------------------------------------------- -->
+**Description** : Distribution des sites d'ancrages de SIGTM-INNAV dans l'Est du Canada
+
+<!-- -------------------------------------------------- -->
+
+
+<!-- -------------------------------------------------- -->
+
+  **Couverture temporelle** : 2019 - 2019
+
+
+
+<!-- -------------------------------------------------- -->
+**Contact** :
+
+
+  - 0016 : **Jeff** **Campagnola**, *Transports Canada*
+
+  - 0017 : *Canadian Coast Guard*
+
+
+
+<!-- -------------------------------------------------- -->
+**Citation** :
+
+
+  - Garde Côtière Canadienne (2019) Distribution des sites d'ancrages de SIGTM-INNAV dans l'Est du Canada. url: https://www.innav.gc.ca/home.aspx
+
+
+
+
+<!-- -------------------------------------------------- -->
+
+
+
+
+<hr>
+<br>

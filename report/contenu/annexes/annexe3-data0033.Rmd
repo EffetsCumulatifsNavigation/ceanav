@@ -1,0 +1,42 @@
+### 0033 : Pêche commerciale {-}
+
+<!-- -------------------------------------------------- -->
+**Description** : A compilation of landing data from Zonal Interchange File Format (ZIFF) data between 2000 and 2020
+
+<!-- -------------------------------------------------- -->
+
+
+<!-- -------------------------------------------------- -->
+
+  **Couverture temporelle** : 2000 - 2020
+
+
+
+<!-- -------------------------------------------------- -->
+**Contact** :
+
+
+  - 0032 : **Denis** **Bernier**, *Fisheries and Oceans Canada*
+
+  - 0033 : *Fisheries and Oceans Canada*
+
+  - 0034 : **Brian** **Boivin**, *Fisheries and Oceans Canada*
+
+
+
+<!-- -------------------------------------------------- -->
+**Citation** :
+
+
+  - Fisheries and Oceans Canada (2021). Departement of Fisheries and Oceans Canada’s Fisheries and Oceans Canada Zonal Interchange File Format (ZIFF) data. A compilation of landing data from logbook data between 2000 and 2020. [Data accessed 2021-06-11]
+
+
+
+
+<!-- -------------------------------------------------- -->
+
+
+
+
+<hr>
+<br>

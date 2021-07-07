@@ -1,0 +1,48 @@
+### 0009 : Sites d'alevinage {-}
+
+<!-- -------------------------------------------------- -->
+**Description** : Identification des sites d'alevinage dans le Saint-Laurent fluvial
+
+<!-- -------------------------------------------------- -->
+
+
+<!-- -------------------------------------------------- -->
+
+  **Couverture temporelle** : 2020 - 2020
+
+
+
+<!-- -------------------------------------------------- -->
+**Contact** :
+
+
+  - 0012 : **Marc** **Mingelbier**, *Ministère des Forêts, de la Faune et des Parcs du Québec*
+
+
+
+<!-- -------------------------------------------------- -->
+**Citation** :
+
+
+  - Mingelbier, M. et J., Leclerc. 2001. Preliminary atlas of fish habitat in the fluvial St. Lawrence River. 8th Annual Internation al Conference on the St Lawrence River Ecosystem, Cornwall, Ontario.
+
+  - Ministère de l’Environnement et de la Faune. 1994. Cartographie des sites d’intérêt et des sites protégés et fiches synthèses descriptives des sites d’intérêt faunique. Direction régionale de la Montérégie, Service de l’aménagement et de l’exploitat
+
+  - ARGUS. 2001. Mise en valeur du littoral de l’agglomération de la Capitale nationale du Québec: élaboration d’un cadre d’analyse régional. Commission de la Capitale nationale. 54 p. + annexes.
+
+  - Mailhot, Y. et R. Morrissette (20 juin 2012) Atlas des habitats fauniques critiques et des exploitations halieutiques d’importance dans le fleuve Saint-Laurent et l’aval des tributaires à privilégier pour les interventions en cas d’urgence maritime.
+
+  - Ministère des Ressources naturelles (2013) Habitats essentiels [shp]. 2e trimestre, 1 : 170 000, Direction de l’expertise Énergie -Faune -Forêt-Mines-Territoire de la Mauricie et du Centre -du-Québec, Québec.
+
+  - DGFa 05-06-13-16 (2020) Base de données frayères [FGDB]. V.2020, 1 : 20 000, DGFa 05-06-13-16, Longueuil.
+
+
+
+
+<!-- -------------------------------------------------- -->
+
+
+
+
+<hr>
+<br>

@@ -25,7 +25,7 @@ rep_data_summary <- function() {
                                     data_description.url)) %>%
 
          # Sélectionner et renommer les colonnes à intérer au tableau
-         select(ID = data_description.id,
+         select(Données_id = data_description.id,
                 Nom,
                 Citation,
                 Disponibilité = data_description.availability) %>%

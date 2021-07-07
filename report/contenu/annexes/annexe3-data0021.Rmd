@@ -1,0 +1,38 @@
+### 0021 : Données AIS satellite de navigation {-}
+
+<!-- -------------------------------------------------- -->
+**Description** : Satellite navigation data from automatic identification system (AIS) in the St. Lawrence estuary from 2017 to 2019.
+
+<!-- -------------------------------------------------- -->
+
+
+<!-- -------------------------------------------------- -->
+
+  **Couverture temporelle** : 2019 - 2015
+
+
+
+<!-- -------------------------------------------------- -->
+**Contact** :
+
+
+  - 0016 : **Jeff** **Campagnola**, *Transports Canada*
+
+
+
+<!-- -------------------------------------------------- -->
+**Citation** :
+
+
+  - Transports Canada (2020) Satellite navigation data from automatic identification system (AIS) in the St. Lawrence estuary from 2017 to 2019. Data provided by Maerospace Corporation via a contract with PWGSC on behalf of the Canadian Space Agency.
+
+
+
+
+<!-- -------------------------------------------------- -->
+
+
+
+
+<hr>
+<br>

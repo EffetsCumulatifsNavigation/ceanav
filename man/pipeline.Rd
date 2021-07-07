@@ -10,7 +10,7 @@ pipeline(
   pipeline_integration = FALSE,
   pipeline_analysis = FALSE,
   pipeline_figure = FALSE,
-  pipeline_annexes = FALSE,
+  pipeline_annexes = TRUE,
   pipeline_report = TRUE
 )
 }
