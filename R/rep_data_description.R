@@ -3,6 +3,8 @@
 #' Fonction utilisée pour générer une fiches descriptive pour chaque données incluse au tableau récapitulatif des données à l'Annexe 1
 #'
 #' @param data_id `character` id of data to import in R session with format `dataXXXX`
+#' @param output_folder `character` output folder for exported document
+#' @param suffix `character` if provided, add suffix before data name
 #'
 #' @keywords fiche descriptive
 #'
@@ -11,20 +13,39 @@
 #' @details Cette fonction permet de générer une fiche descriptive pour la base de données sélectionnée
 #'
 #' @examples
-#' rep_data_description("data0001")
+#' rep_data_description("data0001","report/contenu/annexes/","annexe2-")
 
-rep_data_summary <- function(data_id) {
+rep_data_description <- function(data_id, output_folder, suffix = NULL) {
   # Data and libraries
-  data_id <- "data0017"
-  ceanav_load_all(data_id)
-  library(knitr)
-  library(kableExtra)
+  ceanav_load_metadata(data_id)
+  ceanav_load_contact(data_id)
 
-  # Single objects to work with
-  dat <- get(data_id)
-  metadata <- get(paste0("metadata_", data_id))
-  contact <- get(paste0("contact_", data_id))
+  # -------
+  out <- list()
+  # out$dat <- get(data_id)
+  out$metadata <- get(paste0("metadata_", data_id))
+  out$contact <- get(paste0("contact_", data_id))
 
-  # Print desired information
+  # -------
+  use_template(
+    template = "templates/fiche_descriptive.Rmd",
+    data = out,
+    save_as = glue("{output_folder}{suffix}{data_id}.Rmd")
+  )
+}
 
+#' @rdname rep_data_description
+#' @aliases rep_data_description_all
+#' @export
+rep_data_description_all <- function(output_folder, suffix) {
+  dataname <- dir("./data/data-metadata/", pattern = ".yml") %>%
+              gsub(".yml","",.)
+
+  for(i in dataname) {
+    rep_data_description(
+      data_id = i,
+      output_folder = output_folder,
+      suffix = suffix
+    )
+  }
 }

@@ -30,7 +30,7 @@ ceanav_update_metadata <- function(type) {
   # Names of files
   dat <- list()
   for(i in 1:length(paths)) {
-    dat[[i]] <- yaml::read_yaml(paths[i]) %>%
+    dat[[i]] <- read_yaml(paths[i]) %>%
                 as.data.frame()
   }
 

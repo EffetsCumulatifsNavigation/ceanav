@@ -14,6 +14,7 @@ pipeline <- function(pipeline_metadata = FALSE,
                      pipeline_integration = FALSE,
                      pipeline_analysis = FALSE,
                      pipeline_figure = FALSE,
+                     pipeline_annexes = FALSE,
                      pipeline_report = TRUE) {
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~
@@ -84,6 +85,14 @@ pipeline <- function(pipeline_metadata = FALSE,
   }
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~
+  if (pipeline_annexes) {
+    # Générer fiches descriptives
+    rep_data_description_all(
+      output_folder = "./report/contenu/annexes/",
+      suffix =  "annexe2-"
+    )
+  }
+
   if (pipeline_report) {
     suppressWarnings({
       setwd('./report/')

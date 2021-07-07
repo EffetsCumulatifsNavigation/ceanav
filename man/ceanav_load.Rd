@@ -2,9 +2,18 @@
 % Please edit documentation in R/fnc_load.R
 \name{ceanav_load_data}
 \alias{ceanav_load_data}
+\alias{ceanav_load_metadata}
+\alias{ceanav_load_contact}
+\alias{ceanav_load_all}
 \title{Load data, metadata and contact information}
 \usage{
 ceanav_load_data(data_id)
+
+ceanav_load_metadata(data_id)
+
+ceanav_load_contact(data_id)
+
+ceanav_load_all(data_id)
 }
 \arguments{
 \item{data_id}{\code{character} id of data to import in R session with format \code{dataXXXX} for \code{ceanav_load_data()}, \code{metadata_dataXXXX} for \code{ceanav_load_metadata()}, and \code{contact_dataXXXX} for \code{ceanav_load_contact()}. \code{ceanav_load_all()} loads data, metadata and contact for \code{data_id}}

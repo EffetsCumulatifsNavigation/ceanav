@@ -8,6 +8,8 @@
 #' @keywords contact
 #' @keywords data
 #'
+#' @rdname ceanav_load
+#'
 #' @export
 #'
 #' @details This function is used to avoid putting all formatted dataset in lazy load, yet still make it easy for them to be loaded. The user simply provides the id of the dataset and the function imports it in the R session, along with its metadata and contact information if desired
@@ -53,19 +55,19 @@ ceanav_load_data <- function(data_id) {
 }
 
 # =================================================================
-#' @name ceanav_load_metadata
+#' @rdname ceanav_load
 #' @export
 ceanav_load_metadata <- function(data_id) {
   ## ---------------------------------------------
   ## YAML (metatada)
   path <- paste0("./data/data-metadata/", data_id, ".yml")
   assign(x = paste0("metadata_", data_id),
-         value = yaml::read_yaml(path),
+         value = read_yaml(path),
          envir = globalenv())
 }
 
 # =================================================================
-#' @name ceanav_load_contact
+#' @rdname ceanav_load
 #' @export
 ceanav_load_contact <- function(data_id) {
   ## ---------------------------------------------
@@ -77,7 +79,7 @@ ceanav_load_contact <- function(data_id) {
   # -----
   dat <- list()
   for(i in 1:length(path)) {
-    dat[[i]] <- yaml::read_yaml(path[i])
+    dat[[i]] <- read_yaml(path[i])
   }
 
   # ------
@@ -87,7 +89,7 @@ ceanav_load_contact <- function(data_id) {
 }
 
 # =================================================================
-#' @name ceanav_load_all
+#' @rdname ceanav_load
 #' @export
 ceanav_load_all <- function(data_id) {
   ceanav_load_data(data_id)
