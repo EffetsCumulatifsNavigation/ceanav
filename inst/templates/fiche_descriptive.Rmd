@@ -1,3 +1,42 @@
-## {{ metadata.data_description.name }}
+### {{ metadata.data_description.id }} : {{ metadata.data_description.name }} {-}
 
-This is some text contained in {{ metadata.data_description.description }}
+<!-- -------------------------------------------------- -->
+**Description** : {{ metadata.data_description.description }}
+
+<!-- -------------------------------------------------- -->
+{{ #metadata.data_description.url }}
+  **Hyperlien** : [{{ metadata.data_description.url }}]({{ metadata.data_description.url }})
+{{ /metadata.data_description.url }}
+
+<!-- -------------------------------------------------- -->
+{{ #metadata.data_description.temporal_start }}
+  **Couverture temporelle** : {{ metadata.data_description.temporal_start }} - {{ metadata.data_description.temporal_end }}
+{{ /metadata.data_description.temporal_start }}
+
+
+<!-- -------------------------------------------------- -->
+**Contact** :
+
+{{ #contact }}
+  - {{ id }} : {{ #prenom }}**{{ prenom }}** **{{ nom }}**, {{/prenom}}*{{ organisation }}*
+{{ /contact }}
+
+
+<!-- -------------------------------------------------- -->
+**Citation** :
+
+{{#metadata.data_description.citation}}
+  - {{ . }}
+{{/metadata.data_description.citation}}
+
+
+
+<!-- -------------------------------------------------- -->
+{{ #metadata.data_description.disclaimer }}
+  **Avis** : *{{ metadata.data_description.disclaimer }}*
+{{ /metadata.data_description.disclaimer }}
+
+
+
+<hr>
+<br>

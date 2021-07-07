@@ -14,7 +14,7 @@ pipeline <- function(pipeline_metadata = FALSE,
                      pipeline_integration = FALSE,
                      pipeline_analysis = FALSE,
                      pipeline_figure = FALSE,
-                     pipeline_annexes = FALSE,
+                     pipeline_annexes = TRUE,
                      pipeline_report = TRUE) {
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~
@@ -89,7 +89,7 @@ pipeline <- function(pipeline_metadata = FALSE,
     # Générer fiches descriptives
     rep_data_description_all(
       output_folder = "./report/contenu/annexes/",
-      suffix =  "annexe2-"
+      suffix =  "annexe3-"
     )
   }
 
@@ -102,10 +102,10 @@ pipeline <- function(pipeline_metadata = FALSE,
                             output_format = "bookdown::gitbook",
                             config_file = "_bookdown.yml")
 
-      # PDF format
-      bookdown::render_book(input = "index.Rmd",
-                            output_format = "bookdown::pdf_book",
-                            config_file = "_bookdown.yml")
+      # # PDF format
+      # bookdown::render_book(input = "index.Rmd",
+      #                       output_format = "bookdown::pdf_book",
+      #                       config_file = "_bookdown.yml")
 
       setwd('../')
     })
