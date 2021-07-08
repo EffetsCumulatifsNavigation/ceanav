@@ -1,0 +1,6 @@
+project: ceanav
+crs: 32198
+col:
+  coastline: "#00000044"
+  palette:
+    - "#246e4f"

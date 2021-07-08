@@ -53,7 +53,10 @@ data/str_navigation.RData
 data/str_peche_commerciale.RData
 
 
-# R data ----
+# Data ----
 data/data-format/
 data/data-raw/
 data/data-output/
+
+# Figures ----
+figures/figures-format/
