@@ -3,4 +3,11 @@ crs: 32198
 col:
   coastline: "#00000044"
   palette:
+    - "#b96136"
     - "#246e4f"
+bbox:
+  base:
+    xmin: -400000
+    xmax: 130000
+    ymin: 170000
+    ymax: 590000
