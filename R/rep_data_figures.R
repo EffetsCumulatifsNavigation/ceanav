@@ -19,7 +19,8 @@ rep_data_figures <- function(data_id) {
     dat <- st_transform(dat, global_parameters()$crs)
 
     # Simple plot
-    pdf(glue('./figures/figures-format/{data_id}.pdf'), width = 7, height = 5, pointsize = 12)
+    # pdf(glue('./figures/figures-format/{data_id}.pdf'), width = 7, height = 5, pointsize = 12)
+    png(glue('./figures/figures-format/{data_id}.png'), res = 300, width = 100, height = 70, units = "mm", pointsize = 12)
     ceanav_plot(dat)
     dev.off()
   }

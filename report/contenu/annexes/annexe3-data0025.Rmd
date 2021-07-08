@@ -19,6 +19,11 @@
   - 0027 : **David** **Poissant**, *Association de gestion halieutique autochtone Mi'kmaq et Malécite*
 
 
+<!-- -------------------------------------------------- -->
+**Figure** :
+
+![](../figures/figures-format/data0025.png)
+
 
 <!-- -------------------------------------------------- -->
 **Citation** :
@@ -30,7 +35,6 @@
 
 
 <!-- -------------------------------------------------- -->
-
 
 
 

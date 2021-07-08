@@ -21,6 +21,11 @@
   - {{ id }} : {{ #prenom }}**{{ prenom }}** **{{ nom }}**, {{/prenom}}*{{ organisation }}*
 {{ /contact }}
 
+<!-- -------------------------------------------------- -->
+**Figure** :
+
+![](../figures/figures-format/data{{ metadata.data_description.id }}.png)
+
 
 <!-- -------------------------------------------------- -->
 **Citation** :
@@ -35,7 +40,6 @@
 {{ #metadata.data_description.disclaimer }}
   **Avis** : *{{ metadata.data_description.disclaimer }}*
 {{ /metadata.data_description.disclaimer }}
-
 
 
 <hr>
