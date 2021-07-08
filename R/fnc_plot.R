@@ -14,7 +14,6 @@ ceanav_plot <- function(dat, ...) {
 
 #' @method ceanav_plot sf
 #' @name ceanav_plot
-#'
 #' @export
 ceanav_plot.sf <- function(dat, ...) {
   # ------------------
@@ -45,4 +44,13 @@ ceanav_plot.sf <- function(dat, ...) {
     col = global_parameters()$col$palette[1],
     border = global_parameters()$col$palette[1]
   )
+}
+
+#' @method ceanav_plot stars
+#' @name ceanav_plot
+#' @export
+ceanav_plot.stars <- function(dat, ...) {
+  # WARNING: Make this better at some point
+  # ------------------
+  plot(dat)
 }

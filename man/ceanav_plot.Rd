@@ -3,11 +3,14 @@
 \name{ceanav_plot}
 \alias{ceanav_plot}
 \alias{ceanav_plot.sf}
+\alias{ceanav_plot.stars}
 \title{plot ceanav data}
 \usage{
 ceanav_plot(dat, ...)
 
 \method{ceanav_plot}{sf}(dat, ...)
+
+\method{ceanav_plot}{stars}(dat, ...)
 }
 \arguments{
 \item{dat}{object of class sf, stars}
