@@ -54,10 +54,14 @@ data/str_peche_commerciale.RData
 
 
 # Data ----
-data/data-raw/
-data/data-format/
-data/data-integrated/
-data/data-output/
+data/data-raw/data*
+data/data-format/*.geojson
+data/data-format/*.csv
+data/data-format/*.tif
+data/data-integrated/*.geojson
+data/data-integrated/*.csv
+data/data-integrated/*.tif
+data/data-basemap/*.geojson
 
 # Figures ----
 figures/figures-format/

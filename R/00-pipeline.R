@@ -33,8 +33,9 @@ pipeline <- function(
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~
   if (pipeline_data) {
     # -----------------------------------
-    # Study area
-    get_data0000()
+    # Study area and basemaps
+    get_aoi()
+    get_basemap()
 
     # -----------------------------------
     # Individual datasets

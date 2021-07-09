@@ -10,7 +10,7 @@
 #' @details Cette fonction télécharge les données
 #'
 
-get_data0000 <- function () {
+get_aoi <- function () {
 # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
 # Notes
 # ---------------------------------------

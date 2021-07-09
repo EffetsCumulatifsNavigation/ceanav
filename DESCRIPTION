@@ -22,8 +22,10 @@ Depends:
     mapview(>= 2.9.8),
     graphicsutils(>= 1.6.0)
 Imports:
+    exactextractr,
     fs,
     glue,
+    raster,
     stringr(>= 1.4.0),
     whisker,
     yaml(>= 2.2.1)
