@@ -23,6 +23,9 @@ st_ancrage <- function() {
   #   2. Intersect with grid
   #   3. Number of buffers intersecting grid cell
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  # Load data
+  ceanav_load_data("data0015")
+
   # Load grid
   data(grid1p)
 
@@ -41,7 +44,10 @@ st_ancrage <- function() {
   # ------------------------------------
   #
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
-  save(ancrage, file = './data/str_ancrage.RData')
+  # Output
+  st_write(obj = ancrage,
+           dsn = "./data/data-integrated/ancrage.geojson",
+           delete_dsn = TRUE)
   # ------------------------------------------------------------------------- #
 
 }

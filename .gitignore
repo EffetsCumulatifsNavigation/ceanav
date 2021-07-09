@@ -62,3 +62,5 @@ data/data-output/
 # Figures ----
 figures/figures-format/
 report/figures/figures-format/
+
+clean/
