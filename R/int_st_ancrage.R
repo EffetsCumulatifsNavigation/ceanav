@@ -44,9 +44,8 @@ st_ancrage <- function() {
   # ------------------------------------
   #
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
-  # Output
   st_write(obj = ancrage,
-           dsn = "./data/data-integrated/ancrage.geojson",
+           dsn = "./data/data-integrated/st_ancrage.geojson",
            delete_dsn = TRUE)
   # ------------------------------------------------------------------------- #
 

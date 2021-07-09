@@ -73,9 +73,8 @@ st_navigation <- function() {
   #
   #
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
-  # Output
   st_write(obj = navigation,
-           dsn = "./data/data-integrated/navigation.geojson",
+           dsn = "./data/data-integrated/st_navigation.geojson",
            delete_dsn = TRUE)
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
 }
