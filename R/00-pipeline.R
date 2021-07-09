@@ -9,13 +9,16 @@
 #' @details Cette fonction exécute l'ensemble des fonctions pour effectuer l'analyse des effets cumulatifs
 #'
 
-pipeline <- function(pipeline_metadata = FALSE,
-                     pipeline_data = FALSE,
-                     pipeline_integration = FALSE,
-                     pipeline_analysis = FALSE,
-                     pipeline_figures = FALSE,
-                     pipeline_annexes = TRUE,
-                     pipeline_report = TRUE) {
+pipeline <- function(
+  pipeline_metadata = FALSE,
+  pipeline_data = FALSE,
+  pipeline_integration = FALSE,
+  pipeline_analysis = FALSE,
+  pipeline_figures = FALSE,
+  pipeline_annexes = TRUE,
+  pipeline_report = TRUE
+) {
+
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~
   if (pipeline_metadata) {
@@ -70,24 +73,27 @@ pipeline <- function(pipeline_metadata = FALSE,
     get_data0033()
   }
 
+
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~
   if (pipeline_integration) {
     # Composantes valorisées
-    int_cv_habitat()
-    int_cv_berge()
-    # cv_mammiferes_marins()
+    cv_berge()
+    cv_mammiferes_marins()
 
     # Stresseurs
-    int_st_ancrage()
-    int_st_deversement()
-    int_st_navigation()
+    st_ancrage()
+    st_deversement()
+    st_navigation()
   }
+
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~
   if (pipeline_figures) {
     # Données formatées (annexe)
     rep_data_figures_all()
   }
+
+
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~
   if (pipeline_annexes) {
     # Générer fiches descriptives
@@ -96,6 +102,7 @@ pipeline <- function(pipeline_metadata = FALSE,
       suffix =  "annexe3-"
     )
   }
+
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~
   if (pipeline_report) {
