@@ -54,8 +54,9 @@ data/str_peche_commerciale.RData
 
 
 # Data ----
-data/data-format/
 data/data-raw/
+data/data-format/
+data/data-integrated/
 data/data-output/
 
 # Figures ----

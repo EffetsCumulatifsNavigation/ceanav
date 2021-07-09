@@ -11,21 +11,16 @@
 #'
 
 st_navigation <- function() {
-  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
-  # Divide by boat type
-  # -------------------------
-  #
-  #
-  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
-  # Load vessel type dataset
-  df <- read.csv(paste0(folder, '/STATIC_DATA_2015_to_2019_forULAVAL.csv'))
+  # Load vessel type dataset and shipping tracks
+  ceanav_load_data("data0020")
+  ceanav_load_data("data0021")
 
-  # Unique vessel types
-  vessel_type <- unique(df$NTYPE)
+  # ---------
+  vessel_type <- unique(data0020$NTYPE)
 
   # Add vessel type to ais data
-  ais <- ais %>%
-         left_join(df, 'MMSI')
+  ais <- data0021 %>%
+         left_join(data0020, 'MMSI')
 
   # Divide vessel data by type
   vessels <- list()
@@ -78,6 +73,9 @@ st_navigation <- function() {
   #
   #
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
-  save(navigation, file = './data/str_navigation.RData')
+  # Output
+  st_write(obj = navigation,
+           dsn = "./data/data-integrated/navigation.geojson",
+           delete_dsn = TRUE)
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
 }
