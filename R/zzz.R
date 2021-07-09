@@ -1,4 +1,5 @@
 # Internals
+#' @importFrom exactextractr exact_extract
 #' @importFrom fs path path_package
 #' @importFrom glue glue glue_sql
 #' @importFrom whisker whisker.render
