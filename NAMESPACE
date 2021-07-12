@@ -3,6 +3,7 @@
 S3method(ceanav_plot,sf)
 S3method(ceanav_plot,stars)
 export(ais_segment)
+export(basemap)
 export(ceanav_load_all)
 export(ceanav_load_contact)
 export(ceanav_load_data)

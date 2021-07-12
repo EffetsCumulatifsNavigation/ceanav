@@ -87,25 +87,4 @@ save(grid2p, file = './data/grid2p.RData')
 # save(grid1r, file = './data/grid1r.RData')
 # save(grid2r, file = './data/grid2r.RData')
 # _____________________________________________________________________________ #
-
-
-# =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
-# Simple EGSL outline from eDrivers
-# ---------------------------------------
-#
-# Import only for convenience, directly as package data
-# =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
-# URL
-egsl <- 'https://github.com/eDrivers/eDriversGrids/raw/master/Data/egslSimple.RData'
-
-# Download
-download.file(egsl, destfile = paste0(folder,'egsl.RData'))
-
-# Load
-load(paste0(folder,'egsl.RData'))
-egsl <- egslSimple
-
-# Export as package data for lazy load
-save(egsl, file = './data/egsl.RData')
-# _____________________________________________________________________________ #
 }
