@@ -9,9 +9,9 @@
 #' @details Cette fonction permet de générer le tableau récapitulatif des personnes et organisations ressources pour le projet
 #'
 #' @examples
-#' rep_contact_summary()
+#' rep_annexe_contact()
 
-rep_contact_summary <- function() {
+rep_annexe_contact <- function() {
   # Data and libraries
   data(data_contact)
   library(knitr)

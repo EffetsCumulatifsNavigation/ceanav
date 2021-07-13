@@ -9,9 +9,9 @@
 #' @details Cette fonction permet de générer le tableau récapitulatif des données utilisées pour le rapport
 #'
 #' @examples
-#' rep_data_summary()
+#' rep_annexe_data_summary()
 
-rep_data_summary <- function() {
+rep_annexe_data_summary <- function() {
   # Data and libraries
   data(data_metadata)
   library(knitr)

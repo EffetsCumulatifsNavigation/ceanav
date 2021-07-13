@@ -91,14 +91,14 @@ pipeline <- function(
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~
   if (pipeline_figures) {
     # Données formatées (annexe)
-    rep_data_figures_all()
+    rep_annexe_data_figures_all()
   }
 
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~
   if (pipeline_annexes) {
     # Générer fiches descriptives
-    rep_data_description_all(
+    rep_annexe_data_description_all(
       output_folder = "./report/contenu/annexes/",
       suffix =  "annexe3-"
     )

@@ -13,9 +13,9 @@
 #' @details Cette fonction permet de générer une fiche descriptive pour la base de données sélectionnée
 #'
 #' @examples
-#' rep_data_description("data0001","report/contenu/annexes/","annexe2-")
+#' rep_annexe_data_description("data0001","report/contenu/annexes/","annexe2-")
 
-rep_data_description <- function(data_id, output_folder, suffix = NULL) {
+rep_annexe_data_description <- function(data_id, output_folder, suffix = NULL) {
   # Data and libraries
   load_metadata(data_id)
   load_contact(data_id)
@@ -37,12 +37,12 @@ rep_data_description <- function(data_id, output_folder, suffix = NULL) {
 #' @rdname rep_data_description
 #' @aliases rep_data_description_all
 #' @export
-rep_data_description_all <- function(output_folder, suffix) {
+rep_annexe_data_description_all <- function(output_folder, suffix) {
   dataname <- dir("./data/data-metadata/", pattern = ".yml") %>%
               gsub(".yml","",.)
 
   for(i in dataname) {
-    rep_data_description(
+    rep_annexe_data_description(
       data_id = i,
       output_folder = output_folder,
       suffix = suffix

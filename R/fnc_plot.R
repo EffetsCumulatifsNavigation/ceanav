@@ -1,4 +1,4 @@
-#' plot ceanav data
+#' plot ceanav formatted data
 #'
 #' base plot functions for ceanav project
 #'
@@ -8,14 +8,14 @@
 #'
 #' @export
 
-ceanav_plot <- function(dat, ...) {
-  UseMethod("ceanav_plot", dat)
+plot_format <- function(dat, ...) {
+  UseMethod("plot_format", dat)
 }
 
-#' @method ceanav_plot sf
-#' @name ceanav_plot
+#' @method plot_format sf
+#' @name plot_format
 #' @export
-ceanav_plot.sf <- function(dat, ...) {
+plot_format.sf <- function(dat, ...) {
   # ------------------
   data(aoi)
   bbox <- global_parameters()$bbox$base
@@ -46,10 +46,10 @@ ceanav_plot.sf <- function(dat, ...) {
   )
 }
 
-#' @method ceanav_plot stars
-#' @name ceanav_plot
+#' @method plot_format stars
+#' @name plot_format
 #' @export
-ceanav_plot.stars <- function(dat, ...) {
+plot_format.stars <- function(dat, ...) {
   # WARNING: Make this better at some point
   # ------------------
   plot(dat)
