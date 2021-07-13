@@ -4,6 +4,7 @@
 #'
 #' @param data_id `character` id of data to import in R session with format `dataXXXX` for `load_format()`, `metadata_dataXXXX` for `load_metadata()`, and `contact_dataXXXX` for `load_contact()`.
 #' @param data_name `character` name of integrated data to load in R session with format, one of `navigation`, `peche`, `deversement`, `dragage`, `ancrage`, `rejet`, `epaves` for stressors, and one of `habitat`, `site`, `berge`, `mammifere_marin`, `quality` for valued components.
+#' @param basemap_name `character` name of basemap data to load, one of `egsl`, `quebec`, `canada`, `usa`
 
 #' @keywords metadata
 #' @keywords contact
@@ -115,4 +116,26 @@ load_integrated <- function(data_name) {
   assign(x = data_name,
          value = st_read(files[uid], quiet = TRUE),
          envir = globalenv())
+}
+
+# =================================================================
+#' @rdname load
+#' @export
+basemap <- function(basemap_name) {
+  files <- dir('./data/data-basemap', full.names = TRUE)
+
+  # Identify dataset to load
+  uid <- str_detect(files, basemap_name)
+
+  # Identify extensions
+  ext <- last(str_split(files[uid], "\\.")[[1]])
+
+  # Load according to extension type
+  ## ---------------------------------------------
+  ## GEOJSON
+  if (ext == "geojson") {
+    assign(x = basemap_name,
+           value = st_read(files[uid], quiet = TRUE),
+           envir = globalenv())
+  }
 }
