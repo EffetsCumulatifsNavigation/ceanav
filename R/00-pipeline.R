@@ -23,10 +23,10 @@ pipeline <- function(
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~
   if (pipeline_metadata) {
     # Metadata
-    ceanav_update_metadata('metadata')
+    update_metadata()
 
     # Contacts
-    ceanav_update_metadata('contact')
+    update_contact()
   }
 
 

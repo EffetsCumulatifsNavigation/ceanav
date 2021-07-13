@@ -31,7 +31,7 @@ cv_berge <- function() {
   # WARNING: there is still work to do here, at this phase this is exploratory
   # TODO: see if if makes sense to divide by erosion processes identified in dataset
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
-  ceanav_load_data("data0017")
+  load_format("data0017")
   data(grid1p)
 
   # ----------

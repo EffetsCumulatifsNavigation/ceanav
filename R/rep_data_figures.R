@@ -19,7 +19,7 @@
 
 rep_data_figures <- function(data_id) {
   # Data and libraries
-  ceanav_load_data(data_id)
+  load_format(data_id)
   dat <- get(data_id)
 
   # -----------------

@@ -16,7 +16,7 @@ cv_mammiferes_marins <- function() {
   # ------------------------------------
   #
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
-  ceanav_load_data("data0027")
+  load_format("data0027")
   data(grid1p)
   data0027 <- as(data0027, "Raster")
 

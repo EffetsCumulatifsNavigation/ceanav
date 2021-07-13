@@ -30,7 +30,7 @@ st_deversement <- function() {
   #   4. Sum of intersects in each grid cell
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   # Load  data
-  ceanav_load_data("data0016")
+  load_format("data0016")
   dev <- data0016
   dev <- st_transform(dev, global_parameters()$crs)
   message("int_st_deversement.R: remove st_transform() once all data are transformed in data-format/")

@@ -17,8 +17,8 @@
 
 rep_data_description <- function(data_id, output_folder, suffix = NULL) {
   # Data and libraries
-  ceanav_load_metadata(data_id)
-  ceanav_load_contact(data_id)
+  load_metadata(data_id)
+  load_contact(data_id)
 
   # -------
   out <- list()

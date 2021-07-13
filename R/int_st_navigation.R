@@ -12,8 +12,8 @@
 
 st_navigation <- function() {
   # Load vessel type dataset and shipping tracks
-  ceanav_load_data("data0020")
-  ceanav_load_data("data0021")
+  load_format("data0020")
+  load_format("data0021")
 
   # ---------
   vessel_type <- unique(data0020$NTYPE)

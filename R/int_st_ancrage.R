@@ -24,7 +24,7 @@ st_ancrage <- function() {
   #   3. Number of buffers intersecting grid cell
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   # Load data
-  ceanav_load_data("data0015")
+  load_format("data0015")
 
   # Load grid
   data(grid1p)
