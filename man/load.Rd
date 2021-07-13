@@ -13,10 +13,12 @@ load_metadata(data_id)
 
 load_contact(data_id)
 
-load_integrated(data_id)
+load_integrated(data_name)
 }
 \arguments{
 \item{data_id}{\code{character} id of data to import in R session with format \code{dataXXXX} for \code{load_format()}, \code{metadata_dataXXXX} for \code{load_metadata()}, and \code{contact_dataXXXX} for \code{load_contact()}.}
+
+\item{data_name}{\code{character} name of integrated data to load in R session with format, one of \code{navigation}, \code{peche}, \code{deversement}, \code{dragage}, \code{ancrage}, \code{rejet}, \code{epaves} for stressors, and one of \code{habitat}, \code{site}, \code{berge}, \code{mammifere_marin}, \code{quality} for valued components.}
 }
 \description{
 The function imports data available in \verb{./data/data-format/} regardless of its format.

@@ -3,7 +3,8 @@
 #' The function imports data available in `./data/data-format/` regardless of its format.
 #'
 #' @param data_id `character` id of data to import in R session with format `dataXXXX` for `load_format()`, `metadata_dataXXXX` for `load_metadata()`, and `contact_dataXXXX` for `load_contact()`.
-#'
+#' @param data_name `character` name of integrated data to load in R session with format, one of `navigation`, `peche`, `deversement`, `dragage`, `ancrage`, `rejet`, `epaves` for stressors, and one of `habitat`, `site`, `berge`, `mammifere_marin`, `quality` for valued components.
+
 #' @keywords metadata
 #' @keywords contact
 #' @keywords data
@@ -91,8 +92,27 @@ load_contact <- function(data_id) {
 # =================================================================
 #' @rdname load
 #' @export
-load_integrated <- function(data_id) {
-  load_format(data_id)
-  load_metadata(data_id)
-  load_contact(data_id)
+load_integrated <- function(data_name) {
+  # Possible values
+  st <- c("navigation", "peche", "deversement", "dragage", "ancrage", "rejet", "epaves")
+  cv <- c("habitat", "site", "berge", "mammiferes_marins", "quality")
+  nm <- paste(c(st, cv), collapse = ", ")
+  if (!data_name %in% c(st,cv)) stop(glue("Les données identifiées ne sont pas disponibles. Utilisez plutôt un des identifiants suivants: {nm}"))
+
+  # List files
+  # WARNING: This might not be the best way. Perhaps I should create a table of data automatically.
+  files <- dir('./data/data-integrated/', full.names = TRUE)
+
+  # Identify dataset to load
+  uid <- str_detect(files, data_name)
+
+  # Identify extensions
+  # ext <- last(str_split(files[uid], "\\.")[[1]])
+
+  # Load according to extension type
+  ## ---------------------------------------------
+  ## GEOJSON
+  assign(x = data_name,
+         value = st_read(files[uid], quiet = TRUE),
+         envir = globalenv())
 }
