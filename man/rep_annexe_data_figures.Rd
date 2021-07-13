@@ -2,9 +2,15 @@
 % Please edit documentation in R/rep_annexe_data_figures.R
 \name{rep_annexe_data_figures}
 \alias{rep_annexe_data_figures}
+\alias{rep_annexe_data_figures_all}
+\alias{rep_annexe_data_figures_update}
 \title{Figures données formatées}
 \usage{
 rep_annexe_data_figures(data_id)
+
+rep_annexe_data_figures_all()
+
+rep_annexe_data_figures_update()
 }
 \description{
 Fonctions pour générer des figures pour les données formatées

@@ -30,7 +30,7 @@ plot_format.sf <- function(dat, ...) {
   plot(
     st_geometry(aoi),
     lwd = .5,
-    border = global_parameters()$col$coastline,
+    border = global_parameters()$col$format$coastline,
     add = TRUE
   )
 

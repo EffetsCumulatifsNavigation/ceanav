@@ -1,7 +1,12 @@
 project: ceanav
 crs: 32198
 col:
-  coastline: "#00000044"
+  format:
+    coastline: "#00000044"
+  integrated:
+    coastline: "#000000"
+    offset: "#25364A"
+    focus: "#2196a8"
   palette:
     - "#b96136"
     - "#246e4f"

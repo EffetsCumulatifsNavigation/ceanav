@@ -2,9 +2,12 @@
 % Please edit documentation in R/rep_annexe_data_description.R
 \name{rep_annexe_data_description}
 \alias{rep_annexe_data_description}
+\alias{rep_annexe_data_description_all}
 \title{Fiches descriptives des données}
 \usage{
 rep_annexe_data_description(data_id, output_folder, suffix = NULL)
+
+rep_annexe_data_description_all(output_folder, suffix)
 }
 \arguments{
 \item{data_id}{\code{character} id of data to import in R session with format \code{dataXXXX}}

@@ -4,6 +4,8 @@
 #'
 #' @keywords figure
 #'
+#' @rdname rep_annexe_data_figures
+#'
 #' @export
 #'
 #' @examples
@@ -41,8 +43,8 @@ rep_annexe_data_figures <- function(data_id) {
 }
 
 
-#' @rdname rep_data_figures
-#' @aliases rep_data_figures_all
+#' @rdname rep_annexe_data_figures
+#' @aliases rep_annexe_data_figures_all
 #' @export
 rep_annexe_data_figures_all <- function() {
   dataname <- dir("./data/data-format/") %>% substring(1,8)
@@ -50,8 +52,8 @@ rep_annexe_data_figures_all <- function() {
 }
 
 
-#' @rdname rep_data_figures
-#' @aliases rep_data_figures_update
+#' @rdname rep_annexe_data_figures
+#' @aliases rep_annexe_data_figures_update
 #' @export
 rep_annexe_data_figures_update <- function() {
   fig_done <- dir("./figures/figures-format/") %>% substring(1,8)

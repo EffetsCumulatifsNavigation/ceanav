@@ -6,11 +6,13 @@
 #' @export
 
 get_basemap <- function() {
+  global_parameters()
   # Quebec
   canada <- getData('GADM', country = 'CAN', level = 1, path = 'data/data-basemap/')
   canada <- st_as_sf(canada)
   quebec <- canada[canada$NAME_1 %in% c('Québec', 'Nova Scotia','New Brunswick', 'Newfoundland and Labrador', 'Prince Edward Island'),]
-  quebec <- suppressWarnings(st_simplify(quebec, dTolerance = 100, preserveTopology = F))
+  quebec <- suppressWarnings(st_simplify(quebec, dTolerance = 100, preserveTopology = F)) %>%
+            st_transform(crs = global_param$crs)
   st_write(obj = quebec,
            dsn = "./data/data-basemap/quebec.geojson",
            delete_dsn = TRUE)
@@ -18,7 +20,8 @@ get_basemap <- function() {
   # Canada
   canada <- getData('GADM', country = 'CAN', level = 0, path = 'data/data-basemap/')
   canada <- st_as_sf(canada)
-  canada <- suppressWarnings(st_simplify(canada, dTolerance = 150, preserveTopology = F))
+  canada <- suppressWarnings(st_simplify(canada, dTolerance = 150, preserveTopology = F)) %>%
+            st_transform(crs = global_param$crs)
   st_write(obj = canada,
            dsn = "./data/data-basemap/canada.geojson",
            delete_dsn = TRUE)
@@ -26,7 +29,8 @@ get_basemap <- function() {
   # Load needed data
   usa <- getData('GADM', country = 'USA', level = 0, path = 'data/data-basemap/')
   usa <- st_as_sf(usa)
-  usa <- suppressWarnings(st_simplify(usa, dTolerance = 150, preserveTopology = F))
+  usa <- suppressWarnings(st_simplify(usa, dTolerance = 150, preserveTopology = F)) %>%
+            st_transform(crs = global_param$crs)
   st_write(obj = usa,
            dsn = "./data/data-basemap/usa.geojson",
            delete_dsn = TRUE)
