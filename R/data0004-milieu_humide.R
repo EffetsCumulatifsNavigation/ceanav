@@ -41,7 +41,8 @@ get_data0004 <- function() {
   # Milieux humides lac Saint-Pierre
   data0004 <- read.csv(paste0(folder, 'MilieuxHumides-lacSaintPierre-sites-2012.csv')) %>%
               filter(Type.de.milieux %in% c('Bas marais','Haut marais','Marécage arbustif','Marécage arboré','Eau peu profonde')) %>%
-              st_as_sf(coords = c("Longitude","Latitude"), crs = 4326)
+              st_as_sf(coords = c("Longitude","Latitude"), crs = 4326) %>%
+              st_transform(crs = global_parameters()$crs)
   # _________________________________________________________________________ #
 
 

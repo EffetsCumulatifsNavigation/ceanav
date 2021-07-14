@@ -35,6 +35,8 @@ get_data0009 <- function() {
   data0009 <- st_read(paste0(folder, 'DonneesMFFP_PourPASL.gdb'),
                       layer = 'Alevinage_DEFA_s_CEGRIM')
 
+  # Transform projection
+  data0009 <- st_transform(data0009, crs = global_parameters()$crs)
   # _________________________________________________________________________ #
 
 

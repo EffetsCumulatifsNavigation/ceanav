@@ -51,6 +51,9 @@ get_data0013 <- function() {
   # Import data
   # ----------------------------------------
   data0013 <- st_read(paste0(folder, 'grillepresencezoneinondable.geojson'))
+
+  # Transform projection
+  data0013 <- st_transform(data0013, crs = global_parameters()$crs)
   # _________________________________________________________________________ #
 
 

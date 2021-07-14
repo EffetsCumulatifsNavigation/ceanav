@@ -39,6 +39,9 @@ get_data0031 <- function() {
   # Remove NAs
   uid <- is.na(data0031$perc)
   data0031 <- data0031[!uid, ]
+
+  # Transform projection
+  data0031 <- st_transform(data0031, crs = global_parameters()$crs)
   # _________________________________________________________________________ #
 
 

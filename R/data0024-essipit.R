@@ -186,6 +186,9 @@ get_data0024 <- function() {
   # --------------------------------------------------
   # Single dataset
   data0024 <- bind_rows(data0024)
+
+  # Transform projection
+  data0024 <- st_transform(data0024, crs = global_parameters()$crs)
   # _________________________________________________________________________ #
 
 

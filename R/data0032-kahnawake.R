@@ -68,6 +68,9 @@ get_data0032 <- function() {
   # Add certain names
   data0032$description[c(3,9,11,12,18)] <- "Waterfowl hunting"
   data0032$category[c(4,17,19,25)] <- "Near Shore Fishing"
+
+  # Transform projection
+  data0032 <- st_transform(data0032, crs = global_parameters()$crs)
   # _________________________________________________________________________ #
 
 

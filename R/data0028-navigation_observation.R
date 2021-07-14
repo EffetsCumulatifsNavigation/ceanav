@@ -36,6 +36,9 @@ get_data0028 <- function() {
         exdir = paste0(folder, "grille_classe1"))
 
   data0028 <- st_read(paste0(folder, "grille_classe1/grille_500m_classe1.shp"))
+
+  # Transform projection
+  data0028 <- st_transform(data0028, crs = global_parameters()$crs)
   # _________________________________________________________________________ #
 
 

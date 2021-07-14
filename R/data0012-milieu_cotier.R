@@ -43,6 +43,9 @@ get_data0012 <- function() {
   # ----------------------------------------
   data0012 <- st_read(paste0(folder, 'ShorelineClassification_QC_OpenDataCatalogue.gdb'),
                       layer = "O14Oceans_ShorelineClass_QC")
+
+  # Transform projection
+  data0012 <- st_transform(data0012, crs = global_parameters()$crs)
   # _________________________________________________________________________ #
 
 

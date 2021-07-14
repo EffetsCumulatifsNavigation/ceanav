@@ -35,6 +35,8 @@ get_data0011 <- function() {
   data0011 <- st_read(paste0(folder, 'DonneesMFFP_PourPASL.gdb'),
                       layer = 'CDPNQ_CEGRIM_29_04_2020_3')
 
+  # Transform projection
+  data0011 <- st_transform(data0011, crs = global_parameters()$crs)
   # _________________________________________________________________________ #
 
 

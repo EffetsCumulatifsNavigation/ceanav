@@ -63,6 +63,9 @@ get_data0023 <- function() {
   message("Le buffer (3000m) autour des embouchures de rivères d'importance pour le saumon Atlantique est arbitraire et devrait être révisé au besoin.")
   data0023 <- st_transform(data0023, crs = 32198) %>%
               st_buffer(3000)
+
+  # Transform projection
+  data0023 <- st_transform(data0023, crs = global_parameters()$crs)
   # _________________________________________________________________________ #
 
 

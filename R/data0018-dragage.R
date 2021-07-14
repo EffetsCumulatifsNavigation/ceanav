@@ -31,6 +31,8 @@ get_data0018 <- function() {
   # ----------------------------------------
   data0018 <- st_read(paste0(folder, 'secteurs.shp'))
 
+  # Transform projection
+  data0018 <- st_transform(data0018, crs = global_parameters()$crs)
   # _________________________________________________________________________ #
 
 

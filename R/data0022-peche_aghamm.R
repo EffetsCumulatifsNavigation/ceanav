@@ -84,6 +84,9 @@ get_data0022 <- function() {
   # Sommaire des pêches
   data0022 <- st_read(paste0(folder, 'Peches_commerciales.gdb'),
                       layer = "Sommaire_peches_commerciales", quiet = TRUE)
+
+  # Transform projection
+  data0022 <- st_transform(data0022, crs = global_parameters()$crs)
   # _________________________________________________________________________ #
 
 

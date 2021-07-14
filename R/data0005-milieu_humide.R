@@ -66,6 +66,9 @@ get_data0005 <- function() {
 
   # Select polygons intersecting study area
   data0005 <- data0005[uid, ]
+
+  # Transform projection
+  data0005 <- st_transform(data0005, crs = global_parameters()$crs)
   # _________________________________________________________________________ #
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #

@@ -114,6 +114,9 @@ get_data0015 <- function() {
   # Import data
   # ----------------------------------------
   data0015 <- st_read(paste0(folder, 'INNAV_Marine_Navigation_Objects_ANCHORAGES_2019_EAST.geojson'))
+
+  # Transform projection
+  data0015 <- st_transform(data0015, crs = global_parameters()$crs)
   # _________________________________________________________________________ #
 
 

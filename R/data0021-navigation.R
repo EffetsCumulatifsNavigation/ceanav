@@ -191,6 +191,9 @@ get_data0021 <- function() {
 
   # Object name
   data0021 <- ais
+
+  # Transform projection
+  data0021 <- st_transform(data0021, crs = global_parameters()$crs)
   # _____________________________________________________________________________ #
 
 

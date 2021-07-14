@@ -41,6 +41,9 @@ get_data0006 <- function() {
   # Import data
   # ----------------------------------------
   data0006 <- st_read(paste0(folder, 'MilieuxHum_Publ_janv2019/MilieuxHum_Publ_janv2019.shp'))
+
+  # Transform projection
+  data0006 <- st_transform(data0006, crs = global_parameters()$crs)
   # _________________________________________________________________________ #
 
 

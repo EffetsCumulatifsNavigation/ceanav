@@ -57,7 +57,8 @@ get_data0002 <- function() {
                             mutate(Type = "Plantation")
 
 
-  data0002 <- bind_rows(zostere_pap, zostere_pap_plantation)
+  data0002 <- bind_rows(zostere_pap, zostere_pap_plantation) %>%
+              st_transform(crs = global_parameters()$crs)
   # _________________________________________________________________________ #
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #

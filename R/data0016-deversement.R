@@ -90,6 +90,9 @@ get_data0016 <- function() {
   data0016 <- read.csv(paste0(folder, 'deversements_modifs.csv'), na.strings = '') %>%
               drop_na('LATITUDE') %>%
               st_as_sf(coords = c('LONGITUDE','LATITUDE'), crs = 4326, remove = FALSE)
+
+  # Transform projection
+  data0016 <- st_transform(data0016, crs = global_parameters()$crs)
   # _________________________________________________________________________ #
 
 

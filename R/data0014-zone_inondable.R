@@ -51,6 +51,9 @@ get_data0014 <- function() {
   # Import data
   # ----------------------------------------
   data0014 <- st_read(paste0(folder, 'BDZI.gdb'), layer = 'ZOI_s_Simplify')
+
+  # Transform projection
+  data0014 <- st_transform(data0014, crs = global_parameters()$crs)
   # _________________________________________________________________________ #
 
 

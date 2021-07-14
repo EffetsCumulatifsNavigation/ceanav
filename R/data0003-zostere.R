@@ -68,7 +68,8 @@ get_data0003 <- function() {
                    mutate(Annee = 2014)
 
   # Single object
-  data0003 <- bind_rows(data0003)
+  data0003 <- bind_rows(data0003) %>%
+              st_transform(crs = global_parameters()$crs)
   # _________________________________________________________________________ #
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #

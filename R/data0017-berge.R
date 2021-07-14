@@ -89,6 +89,9 @@ get_data0017 <- function() {
 
   ## Single dataset
   data0017 <- bind_rows(berge_lsp, berge_qc, berge_hslgm, berge_ef)
+
+  # Transform projection
+  data0017 <- st_transform(data0017, crs = global_parameters()$crs)
   # _________________________________________________________________________ #
 
 

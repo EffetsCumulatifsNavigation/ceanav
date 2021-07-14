@@ -36,6 +36,9 @@ get_data0025 <- function() {
   #          délimitation des sites pêchés
   data0025 <- st_read(paste0(folder, "Debarquement_homard.shp")) %>%
               select(-Debar.lbs.)
+
+  # Transform projection
+  data0025 <- st_transform(data0025, crs = global_parameters()$crs)
   # _________________________________________________________________________ #
 
 

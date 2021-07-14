@@ -1148,6 +1148,9 @@ get_data0019 <- function() {
   depot <- bind_rows(depot)
   # mv <- mapview(dragage) + depot
   data0019 <- bind_rows(dragage, depot)
+
+  # Transform projection
+  data0019 <- st_transform(data0019, crs = global_parameters()$crs)
   # _________________________________________________________________________ #
 
 

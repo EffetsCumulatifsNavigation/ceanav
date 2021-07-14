@@ -105,6 +105,9 @@ get_data0027 <- function() {
 
   # Single object
   data0027 <- dat
+
+  # Transform projection
+  data0027 <- st_transform(data0027, crs = global_parameters()$crs)
   # _________________________________________________________________________ #
 
 
