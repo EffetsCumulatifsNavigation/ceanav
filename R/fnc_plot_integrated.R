@@ -3,9 +3,14 @@
 #' base plot functions for ceanav project
 #'
 #' @param dat object of class sf
+#' @param main main title
+#' @param subtitle subtitle
 #' @param ... further specifications, see \link{plot} and details.
 #'
 #'
+#' @example
+#' load_integrated("navigation")
+#' plot_integrated(navigation[,10], "Navigation", "Recherche gouvernementale")
 #' @export
 
 plot_integrated <- function(dat, ...) {
@@ -15,13 +20,13 @@ plot_integrated <- function(dat, ...) {
 #' @method plot_integrated sf
 #' @name plot_integrated
 #' @export
-plot_integrated.sf <- function(dat, ...) {
-  # load_integrated("mammiferes_marins")
-  # dat <- mammiferes_marins
+plot_integrated.sf <- function(dat, main = NULL, subtitle = NULL, ...) {
+
+  # ------------------
   dat <- st_transform(dat, global_parameters()$crs)
 
   # pdf(glue('./figures/figures-format/{data_id}.pdf'), width = 7, height = 5, pointsize = 12)
-  png(glue('./figures/delete.png'), res = 300, width = 100, height = 70, units = "mm", pointsize = 12)
+  # png(glue('./figures/delete.png'), res = 300, width = 100, height = 70, units = "mm", pointsize = 12)
 
   # ------------------
   global_parameters()
@@ -34,12 +39,28 @@ plot_integrated.sf <- function(dat, ...) {
   plot0(x = c(bbox$xmin, bbox$xmax), y = c(bbox$ymin, bbox$ymax))
 
   # ------------------
-  text(
-    x = bbox$xmin + 1000,
-    y = bbox$ymax - 10000,
-    colnames(dat)[1],
-    adj = c(0,.5)
-  )
+  if (!is.null(main)) {
+    text(
+      x = bbox$xmin + 1000,
+      y = bbox$ymax - 10000,
+      labels = main,
+      font = 2,
+      adj = c(0,.5)
+    )
+  }
+
+  # ------------------
+  if (!is.null(subtitle)) {
+    text(
+      x = bbox$xmin + 1000,
+      y = bbox$ymax - 40000,
+      labels = subtitle,
+      adj = c(0,.5),
+      font = 3,
+      cex = .75
+    )
+  }
+
 
   # # ------------------
   # basemap("quebec")
@@ -87,5 +108,5 @@ plot_integrated.sf <- function(dat, ...) {
     add = TRUE
   )
 
-  dev.off()
+  # dev.off()
 }

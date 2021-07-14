@@ -7,12 +7,16 @@
 \usage{
 plot_integrated(dat, ...)
 
-\method{plot_integrated}{sf}(dat, ...)
+\method{plot_integrated}{sf}(dat, main = NULL, subtitle = NULL, ...)
 }
 \arguments{
 \item{dat}{object of class sf}
 
 \item{...}{further specifications, see \link{plot} and details.}
+
+\item{main}{main title}
+
+\item{subtitle}{subtitle}
 }
 \description{
 base plot functions for ceanav project
