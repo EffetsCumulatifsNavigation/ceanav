@@ -72,6 +72,7 @@ pipeline <- function(
     get_data0031()
     get_data0032()
     get_data0033()
+    get_data0034()
   }
 
 
@@ -79,12 +80,14 @@ pipeline <- function(
   if (pipeline_integration) {
     # Composantes valorisées
     cv_berge()
+    cv_habitat()
     cv_mammiferes_marins()
 
     # Stresseurs
     st_ancrage()
     st_deversement()
     st_navigation()
+    st_peche_commerciale()
   }
 
 
