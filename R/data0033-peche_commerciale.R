@@ -32,8 +32,8 @@ get_data0033 <- function() {
   # ----------------------------------------
   # WARNING: This dataset is very big, hence I only select data that intersect
   #          our area of interest.
-  data(grid1p)
-  grid1p <- st_transform(grid1p, crs = 4326)
+  data(aoi)
+  aoi <- st_transform(aoi, crs = 4326)
 
   # Function to import ZIFF data
   import_ziff <- function(filename) {
@@ -48,7 +48,7 @@ get_data0033 <- function() {
              crs = 4326) %>%
 
     # Select points in study area
-    .[grid1p, ]
+    .[aoi, ]
   }
 
   # Import in list

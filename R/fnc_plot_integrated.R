@@ -8,9 +8,10 @@
 #' @param ... further specifications, see \link{plot} and details.
 #'
 #'
-#' @example
-#' load_integrated("navigation")
-#' plot_integrated(navigation[,10], "Navigation", "Recherche gouvernementale")
+#' @examples
+#'  load_integrated("navigation")
+#'  plot_integrated(navigation[,10], "Navigation", "Recherche gouvernementale")
+#'
 #' @export
 
 plot_integrated <- function(dat, ...) {

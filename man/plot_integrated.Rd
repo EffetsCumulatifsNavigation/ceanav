@@ -21,3 +21,8 @@ plot_integrated(dat, ...)
 \description{
 base plot functions for ceanav project
 }
+\examples{
+ load_integrated("navigation")
+ plot_integrated(navigation[,10], "Navigation", "Recherche gouvernementale")
+
+}
