@@ -14,7 +14,6 @@ st_peche_commerciale <- function() {
   # Load gear type dataset and fishing data
   load_format("data0033")
   load_format("data0034")
-  # load_metadata("int_st_peche_commerciale")
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   # Classify gear types
@@ -187,6 +186,11 @@ st_peche_commerciale <- function() {
            filter(as.Date(date_cap) >= as.Date("2010-01-01"))
 
   # -----
+  # NOTE: For metadata
+  species_cible <- length(unique(peche$prespvis))
+  species_capture <- length(unique(peche$prespcap))
+
+  # -----
   peche <- peche %>%
            group_by(date_cap, latit_ori, longit_ori, gearClass, mobility) %>%
            summarise(catch = sum(pd_deb))
@@ -259,8 +263,29 @@ st_peche_commerciale <- function() {
   # ----------------------------------
   #
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  meta <- load_metadata("int_st_peche_commerciale")
+  meta <- metadata_int_st_peche_commerciale
 
+  # -----
+  meta$dataDescription$spatial$extent <- st_bbox(data0033)
 
+  # -----
+  peche$years <- format(as.Date(peche$date_cap), "%Y")
+  meta$dataDescription$temporal$start <- min(peche$years)
+  meta$dataDescription$temporal$end <- max(peche$years)
+
+  # -----
+  obs <- peche %>% group_by(years) %>% summarize(total = n())
+  meta$dataDescription$observations$total <- sum(obs$total)
+  meta$dataDescription$observations$moyenne <- round(mean(obs$total), 0)
+  meta$dataDescription$observations$sd <- round(sd(obs$total), 0)
+
+  # -----
+  meta$dataDescription$especes$cible <- species_cible
+  meta$dataDescription$especes$capture <- species_capture
+
+  # -----
+  write_yaml(meta, "./data/data-metadata/int_st_peche_commerciale.yml")
   # --------------------------------------------------------------------------------
 
 

@@ -5,12 +5,12 @@
 \alias{update_contact}
 \title{Update metadata and contacts}
 \usage{
-update_metadata()
+update_metadata(type)
 
 update_contact()
 }
 \arguments{
-\item{type}{type of metadate, one of \code{metadata} or \code{contact}}
+\item{type}{type of metadata, one of \code{raw} or \code{integrated}}
 }
 \description{
 The function updates the existing metadata file based on individual metadata files in \code{data-metadata}
@@ -20,7 +20,7 @@ These functions take '.yml' files in specified folder to generate an individual 
 }
 \examples{
 # Metadata
-update_metadata()
+update_metadata("raw")
 
 # Contacts
 update_contact()
