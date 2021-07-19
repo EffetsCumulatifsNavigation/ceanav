@@ -15,7 +15,7 @@ pipeline <- function(
   pipeline_integration = FALSE,
   pipeline_analysis = FALSE,
   pipeline_figures = FALSE,
-  pipeline_annexes = TRUE,
+  pipeline_annexes = FALSE,
   pipeline_report = TRUE
 ) {
 
@@ -23,7 +23,8 @@ pipeline <- function(
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~
   if (pipeline_metadata) {
     # Metadata
-    update_metadata()
+    update_metadata("raw")
+    update_metadata("integrated")
 
     # Contacts
     update_contact()

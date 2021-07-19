@@ -1,5 +1,5 @@
 # Annexe 2 {-}
 
 ```{r}
-rep_contact_summary()
+rep_annexe_contact()
 ```

@@ -14,6 +14,7 @@ st_peche_commerciale <- function() {
   # Load gear type dataset and fishing data
   load_format("data0033")
   load_format("data0034")
+  # load_metadata("int_st_peche_commerciale")
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   # Classify gear types
@@ -31,7 +32,8 @@ st_peche_commerciale <- function() {
   #  - demersal destructive (DD),
   #  - demersal, non-destructive, low-bycatch (DNL),
   #  - demersal, non-destructive, high-bycatch (DNH),
-  #  - pelagic, low-bycatch (PLB) and pelagic, high-bycatch (PHB),
+  #  - pelagic, low-bycatch (PLB),
+  #  - pelagic, high-bycatch (PHB),
   #  - hunting (HN)
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   data0034$gearClass <- ""
@@ -251,6 +253,17 @@ st_peche_commerciale <- function() {
                          PHB = ifelse(PHB == 0, NA, PHB)
                        )
   # --------------------------------------------------------------------------------
+
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  # Update metadata
+  # ----------------------------------
+  #
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+
+
+  # --------------------------------------------------------------------------------
+
+
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   # Export
