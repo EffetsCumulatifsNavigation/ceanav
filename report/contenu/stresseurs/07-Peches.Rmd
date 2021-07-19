@@ -1,7 +1,7 @@
 ## Pêches
 
 ```{r peche_setup, echo = FALSE}
-dat <- read_yaml("../data/data-metadata/int_st_peche_commerciale.yml")
+meta <- read_yaml("../data/data-metadata/int_st_peche_commerciale.yml")
 ```
 
 Les effets des activités de pêche commerciale au sein de la zone d'étude ont été
@@ -11,12 +11,12 @@ obligatoires pour toutes les pêches, ils fournissent tout de même une évaluat
 suffisamment exhaustive de la distribution et de l'intensité des activités de pêche
 comemrciale dans la zone d'étude.
 
-Nous avons utilisé des données entre `r dat$temporal_start` et `r dat$temporal_end`
+Nous avons utilisé des données entre `r meta$dataDescription$temporal$start` et `r meta$dataDescription$temporal$end`
 pour caractériser la distribution et l'intensité de la pêche commerciale dans la
-zone d'étude. Cette période est caractérisée par `r dat$observation_total` observations
-d'activités de pêche (`r dat$observation_moy` $\pm$ `r dat$observation_sd` observations
-par année). Il y avait un total de `r dat$species_target` espèces ciblées et
-`r dat$species_caught` espèces capturées rapportées pour les activités de pêche.
+zone d'étude. Cette période est caractérisée par `r meta$dataDescription$observations$total` observations
+d'activités de pêche (`r meta$dataDescription$observations$moyenne` $\pm$ `r meta$dataDescription$observations$sd` observations
+par année). Il y avait un total de `r meta$dataDescription$especes$cible` espèces ciblées et
+`r meta$dataDescription$especes$capture` espèces capturées rapportées pour les activités de pêche.
 
 Les activités de pêche commerciale sont effectuées à l'aide d'une grande variété
 d'engins de pêche comme des casiers, des chaluts, des dragues, des filets maillants
@@ -65,7 +65,7 @@ tab %>%
 
 Pour caractériser l'intensité des activités de pêche ($I_{peche}$), nous avons
 utisés un indice de biomasse totale capturée en multipliant la biomasse totale
-capturée pendant la période totale visée (`r dat$temporal_start`-`r dat$temporal_end`)
+capturée pendant la période totale visée (`r meta$dataDescription$temporal$start` - `r meta$dataDescription$temporal$end`)
 au sein de chaque cellule $j$ de la grille d'étude par la proportion de la zone
 d'effet de l'activité de pêche couvrant la cellule $j$:
 
