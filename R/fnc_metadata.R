@@ -2,7 +2,7 @@
 #'
 #' The function updates the existing metadata file based on individual metadata files in `data-metadata`
 #'
-#' @param type type of metadate, one of `metadata` or `contact`
+#' @param type type of metadata, one of `raw` or `integrated`
 #' @keywords metadata
 #' @keywords contact
 #'
@@ -15,17 +15,26 @@
 #'
 #' @examples
 #' # Metadata
-#' update_metadata()
+#' update_metadata("raw")
 #'
 #' # Contacts
 #' update_contact()
 
-update_metadata <- function() {
+update_metadata <- function(type) {
   # Folder
   folder <- './data/data-metadata/'
 
   # Identify files and paths of files in `folder`
   paths <- dir(folder, full.names = TRUE, pattern = '.yml')
+  uid <- stringr::str_detect(paths, "int")
+
+  if (type == "raw") {
+    paths <- paths[!uid]
+  } else if (type == "integrated") {
+    paths <- paths[uid]
+  } else {
+    stop("Wrong metadata type. See documentation for more information.")
+  }
 
   # Names of files
   dat <- list()
@@ -39,8 +48,17 @@ update_metadata <- function() {
 
   # Export
   metadata <- dat
-  write.csv(metadata, file = './data/data-metadata/metadata.csv', row.names = FALSE)
-  save(metadata, file = './data/data_metadata.RData')
+
+  if (type == "raw") {
+    write.csv(metadata, file = './data/data-metadata/metadata.csv', row.names = FALSE)
+    save(metadata, file = './data/data_metadata.RData')
+  }
+
+  if (type == "integrated") {
+    write.csv(metadata, file = './data/data-metadata/metadata_integrated.csv', row.names = FALSE)
+    save(metadata, file = './data/integrated_metadata.RData')
+  }
+
 }
 
 # =================================================================
