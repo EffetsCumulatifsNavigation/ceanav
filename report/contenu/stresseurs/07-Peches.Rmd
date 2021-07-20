@@ -4,8 +4,8 @@
 meta <- read_yaml("../data/data-metadata/int_st_peche_commerciale.yml")
 ```
 
-Les effets des activités de pêche commerciale au sein de la zone d'étude ont été
-évaluées à l'aide de données provenant du programme de journaux de bord de Pêches
+L'intensité des activités de pêche commerciale au sein de la zone d'étude a été
+évaluée à l'aide de données provenant du programme de journaux de bord de Pêches
 et Océans Canada [@dfo2021]. Bien que les journaux de bord ne soient pas
 obligatoires pour toutes les pêches, ils fournissent tout de même une évaluation
 suffisamment exhaustive de la distribution et de l'intensité des activités de pêche
