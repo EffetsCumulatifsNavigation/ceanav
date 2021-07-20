@@ -11,9 +11,14 @@
 #'
 
 st_navigation <- function() {
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  # AIS data
+  # -------------------------
+  #
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   # Load vessel type dataset and shipping tracks
-  load_format("data0020")
-  load_format("data0021")
+  load_format("data0020") # Vessel index
+  load_format("data0021") # AIS
 
   # ---------
   vessel_type <- unique(data0020$NTYPE)
@@ -29,15 +34,9 @@ st_navigation <- function() {
     vessels[[i]] <- ais[uid, ]
   }
   names(vessels) <- vessel_type
-  # _____________________________________________________________________________ #
 
-  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
-  # Evaluate intensity
   # -------------------------
-  #
-  #
-  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
-  # Study grid
+  # Evaluate intensity
   data(grid1p)
 
   system.time({
@@ -59,18 +58,34 @@ st_navigation <- function() {
   # As single sf object
   navigation <- cbind(grid1p, df)
 
+  # Remove others
+  navigation <- select(navigation, -OTHERS, -FISHING)
 
-  # # Vessel type viz
-  # vesselID <- gsub(' ', '.', vessel_type) %>% gsub('/','.',.) %>% gsub('-','.',.)
-  # mapview::mapview(nav, border = 'transparent', zcol = vesselID)
+  # Set cells that do not touch water to NA
+  data(aoi)
+  uid <- st_intersects(aoi, grid1p) %>% unlist()
+  for(i in 1:(ncol(navigation)-1)) navigation[-uid,i] <- NA
 
-  # mapview::mapview(ais[[1]], color = '#50d7c3', alpha = 0.1)
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  # Parc marin
+  # ----------
+  #
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  load_format("data0028") # Parc marin observation
 
+  # -----
+  library(raster)
+  obs <- st_rasterize(data0028[,'nb_transit']) %>%
+         as("Raster") %>%
+         exact_extract(grid1p, 'sum', progress = FALSE) %>%
+         ifelse(. == 0, NA, .)
+
+  # -----
+  navigation$Observation <- obs
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   # Export
   # ------
-  #
   #
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   st_write(obj = navigation,

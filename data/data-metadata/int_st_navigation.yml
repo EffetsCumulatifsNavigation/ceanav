@@ -1,0 +1,19 @@
+title: Navigation
+description: Intensité de la navigation dans le Saint-Laurent et le Saguenay
+rawData:
+- data0020
+- data0021
+- data0028
+dataDescription:
+  units: n transit * km^-2
+  spatial:
+    resolution: 1km^2
+    extent:
+  temporal:
+    resolution: Event based
+    start: '2017'
+    end: '2019'
+  observations:
+    total:
+    moyenne:
+    sd:
