@@ -82,14 +82,19 @@ pipeline <- function(
   if (pipeline_integration) {
     # Composantes valorisées
     cv_berge()
-    cv_habitat()
+    # cv_habitat()
     cv_mammiferes_marins()
+    # cv_qualite()
+    # cv_sites()
 
     # Stresseurs
     st_ancrage()
     st_deversement()
+    # st_dragage()
+    # st_naufrages()
     st_navigation()
     st_peche_commerciale()
+    # st_rejets()
   }
 
 
