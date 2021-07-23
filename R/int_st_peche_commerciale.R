@@ -14,6 +14,7 @@ st_peche_commerciale <- function() {
   # Load gear type dataset and fishing data
   load_format("data0033")
   load_format("data0034")
+  load_format("data0035")
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   # Classify gear types
@@ -186,9 +187,24 @@ st_peche_commerciale <- function() {
            filter(as.Date(date_cap) >= as.Date("2010-01-01"))
 
   # -----
+  # LBS to KG
+  uid <- peche$un_mes == "P"
+  peche$pd_deb[uid] <- peche$pd_deb[uid] *  0.453592
+
+  # -----
+  peche <- unique(peche)
+
+  # ------------------------------------------------------------
   # NOTE: For metadata
-  species_cible <- length(unique(peche$prespvis))
-  species_capture <- length(unique(peche$prespcap))
+  species_cible <- sort(unique(peche$prespvis))
+  species <- table(peche$cod_esp) %>%
+             as.data.frame() %>%
+             rename(ESP_STAT = Var1) %>%
+             mutate(ESP_STAT = as.numeric(as.character(ESP_STAT))) %>%
+             left_join(data0035, by = "ESP_STAT") %>%
+             select(ID = ESP_STAT, Scientific = DL_ESP, Espece = DF_ESP,
+                    Species = DA_ESP, Freq)
+  # ------------------------------------------------------------
 
   # -----
   peche <- peche %>%
@@ -282,7 +298,7 @@ st_peche_commerciale <- function() {
 
   # -----
   meta$dataDescription$especes$cible <- species_cible
-  meta$dataDescription$especes$capture <- species_capture
+  meta$dataDescription$especes$capture <- species
 
   # -----
   write_yaml(meta, "./data/data-metadata/int_st_peche_commerciale.yml")

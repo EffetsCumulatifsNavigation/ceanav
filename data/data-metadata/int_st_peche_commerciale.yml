@@ -21,5 +21,124 @@ dataDescription:
     moyenne: 2499.0
     sd: 336.0
   especes:
-    cible: 14
-    capture: 16
+    cible:
+    - 130.0
+    - 144.0
+    - 170.0
+    - 200.0
+    - 250.0
+    - 608.0
+    - 612.0
+    - 615.0
+    - 619.0
+    - 700.0
+    - 702.0
+    - 704.0
+    - 705.0
+    - 909.0
+    capture:
+      ID:
+      - 100.0
+      - 120.0
+      - 130.0
+      - 140.0
+      - 142.0
+      - 144.0
+      - 171.0
+      - 177.0
+      - 200.0
+      - 250.0
+      - 356.0
+      - 608.0
+      - 612.0
+      - 615.0
+      - 619.0
+      - 700.0
+      - 702.0
+      - 704.0
+      - 705.0
+      - 909.0
+      Scientific:
+      - Gadus morhua
+      - Sebastes sp
+      - Hippoglossus hippoglossus
+      - Hippoglossoides platessoides
+      - Glyptocephalus cynoglossus
+      - Reinhardtius hippoglossoides
+      - Urophycis tenuis
+      - Lophius americanus
+      - Clupea harengus
+      - Scomber scombrus
+      - Raja sp
+      - Mactromeris polynyma
+      - Pectinidae
+      - Buccinum sp
+      - ''
+      - Homarus americanus
+      - Pandalus sp
+      - Cancer irroratus
+      - Chionoecetes opilio
+      - Strongylocentrotus sp
+      Espece:
+      - Morue
+      - Sébaste
+      - Flétan Atlantique
+      - Plie canadienne
+      - Plie grise
+      - Flétan du Groenland
+      - Merluche blanche
+      - Baudroie
+      - Hareng
+      - Maquereau
+      - Raie
+      - Mactre de Stimpson
+      - Pétoncle
+      - Buccin
+      - Concombre de mer
+      - Homard
+      - Crevette
+      - Crabe commun
+      - Crabe des neiges
+      - Oursin
+      Species:
+      - Cod
+      - Redfish
+      - Atlantic halibut
+      - American plaice
+      - Greysole (Witch)
+      - Greenland halibut
+      - White hake
+      - Monkfish
+      - Herring
+      - Mackerel
+      - Skate
+      - Stimpson's Surf clam
+      - Scallop
+      - Whelk
+      - Sea cucumber
+      - Lobster
+      - Shrimp
+      - Rock crab
+      - Snow crab
+      - Sea urchins
+      Freq:
+      - 169
+      - 98
+      - 1621
+      - 2310
+      - 3
+      - 3206
+      - 464
+      - 122
+      - 393
+      - 40
+      - 25
+      - 212
+      - 62
+      - 4879
+      - 54
+      - 186
+      - 2662
+      - 13
+      - 13699
+      - 6399
