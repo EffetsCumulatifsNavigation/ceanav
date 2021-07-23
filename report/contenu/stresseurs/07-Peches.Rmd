@@ -15,8 +15,26 @@ Nous avons utilisé des données entre `r meta$dataDescription$temporal$start` e
 pour caractériser la distribution et l'intensité de la pêche commerciale dans la
 zone d'étude. Cette période est caractérisée par `r meta$dataDescription$observations$total` observations
 d'activités de pêche (`r meta$dataDescription$observations$moyenne` $\pm$ `r meta$dataDescription$observations$sd` observations
-par année). Il y avait un total de `r meta$dataDescription$especes$cible` espèces ciblées et
-`r meta$dataDescription$especes$capture` espèces capturées rapportées pour les activités de pêche.
+par année). Il y avait un total de `r length(meta$dataDescription$especes$cible)` espèces ciblées et
+`r length(meta$dataDescription$especes$capture$ID)` espèces capturées rapportées pour les activités de pêche (Tableau \@ref(tab:pecheEspece)).
+
+<br/>
+
+```{r pecheEspece}
+tab <- as.data.frame(meta$dataDescription$especes$capture)
+tab$Freq <- as.character(tab$Freq)
+uid <- tab$ID %in% meta$dataDescription$especes$cible
+tab[uid,] <- apply(tab[uid, ], 2, function(x) glue("**{x}**"))
+
+tab %>%
+  knitr::kable(
+    col.names = c("ID", "Nom scientifique", "Nom français","Nom anglais","Fréquence"),
+    caption = "Espèces capturées par la pêche commerciale dans la zone d'étude [@dfo2021]. Les espèces identifiées en gras sont les espèces ciblées par les activités de pêche. Les identifiants uniques proviennent d'une base de données fournissant un index des espèces pour la pêche commerciale conjointe à la base de données des journaux de bord [@dfo2021c]"
+  )
+```
+
+<br/>
+
 
 Les activités de pêche commerciale sont effectuées à l'aide d'une grande variété
 d'engins de pêche comme des casiers, des chaluts, des dragues, des filets maillants
@@ -25,7 +43,7 @@ et des palangres. Chaque engin de pêche peut engendrer des effets différents s
 de casiers a des effets très différents que la pêche au chalut. Nous avons ainsi
 divisé les activités de pêche en fonction de leurs effets environnementaux selon
 les catégories proposées par @halpern2008a et reprises par @beauchesne2020 pour
-l'estuaire et le golfe du Saint-Laurent (Tableau \@ref(tab:enginPeche)):
+l'estuaire et le golfe du Saint-Laurent (Tableau \@ref(tab:pecheEngin)):
 démersales, destructives, prises accessoires élevées (DD),
 démersales, non-destructives, prises accessoires élevées (DNH),
 démersales, non-destructives, prises accessoires faibles (DNL),
@@ -46,8 +64,9 @@ Les engins ont été caractérisés grâce à une base de données fournissant u
 index des engins de pêche pour la pêche commerciale conjointe à la base
 de données des journaux de bord [@dfo2021b]
 
+<br/>
 
-```{r enginPeche}
+```{r pecheEngin}
 tab <- data.frame(
   gear = c("Casier","Chalut de fond","Drague","Filet maillant","Peche a la ligne",
            "Palangre","Plongee","Senne bourse","Senne Danoise ou Ecossaise",
@@ -62,6 +81,8 @@ tab %>%
     caption = "Classification des types d'engins selon leur effets environnementaux et leur mobilité. DD: démersales, destructives, prises accessoires élevées; DNH: démersales, non-destructives, prises accessoires élevées; DNL: démersales, non-destructives, prises accessoires faibles; PHB: pélagiques, prises accessoires élevées; PLB: pélagiques, prises accessoires faibles. Adapté de [@beauchesne2020]"
   )
 ```
+
+<br/>
 
 Pour caractériser l'intensité des activités de pêche ($I_{peche}$), nous avons
 utisés un indice de biomasse totale capturée en multipliant la biomasse totale

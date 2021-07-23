@@ -83,18 +83,18 @@ Jean-François Senecal
 
 Plus grosse limitation, lorsque la zone est très grande
 
-# Aire d'étude
+#### Aire d'étude
 library(ceanav)
 mapview(studyarea)
 mapview(aoi)
 
-# Données
+#### Données
 
 The data provided was produced by Maerospace Corporation, and was acquired via
 a contract with PWGSC on behalf of the Canadian Space Agency. No metadata came
 with the source and there are no specific requirement for citation/attribution.
 
-# Traitement des données
+#### Traitement des données
 
 1. Segmenter données
   - 5 heures
@@ -117,7 +117,7 @@ with the source and there are no specific requirement for citation/attribution.
   - Nombre de segment qui intersectent des cellules de 1km^2
 
 
-# Visualisation
+#### Visualisation
 
 Rapport 2009 au parc marin
 2 types d'informations
@@ -141,7 +141,7 @@ Biais des vitesses plus faibles si on ne fait pas le distance weighted speed (à
 Hubard article sur les données AIS et les vitesses
 
 
-# Lecture
+#### Lecture
 
 - https://pdfs.semanticscholar.org/908d/93279526e373b2d03fcd5cd987d67d240302.pdf
 - https://www.erudit.org/en/journals/natcan/1900-v1-n1-natcan03735/1047154ar.pdf
@@ -161,4 +161,4 @@ Hubard article sur les données AIS et les vitesses
 - https://github.com/GlobalFishingWatch/4wings/blob/develop/src/importer/README.md
 
 
-# Infos
+#### Infos
