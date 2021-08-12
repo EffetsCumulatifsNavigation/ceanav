@@ -1,0 +1,12 @@
+data_description:
+  id: "0036"
+  name: "Habitat faunique"
+  description: "La géodatabase (GDB) des habitats fauniques (HAFA) contient les données des 11 habitats fauniques légaux situés sur les terres du domaine de l’État qui respectent la définition du Règlement sur les habitats fauniques (RHF). On trouve aussi les HAFA situés sur terres mixtes et privées à titre informationnel."
+  access_date: 2021-08-12
+  temporal_start: 2021
+  temporal_end: 2021
+  contact_id: "0035"
+  url: "https://www.donneesquebec.ca/recherche/dataset/habitats-fauniques"
+  identifiant: "626f2aaa-1574-409c-b327-1315c18fb0f0"
+  availability: "open source"
+  citation: "Ministère des Forêts, de la Faune et des Parcs (2021) Géodatabase des habitats fauniques. url: https://www.donneesquebec.ca/recherche/dataset/habitats-fauniques"
