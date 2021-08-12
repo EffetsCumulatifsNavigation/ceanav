@@ -1,0 +1,12 @@
+data_description:
+  id: "0038"
+  name: "Registre des aires protégées au Québec"
+  description: "Ces thématiques présentent la compilation des aires protégées au Québec."
+  access_date: 2021-08-12
+  temporal_start: 2021
+  temporal_end: 2021
+  contact_id: "0037"
+  url: "https://www.donneesquebec.ca/recherche/dataset/aires-protegees-au-quebec"
+  identifiant: "f0250998-eac1-46a8-8e0c-d7278ae85506"
+  availability: "open source"
+  citation: "Ministère de l’Environnement et de la Lutte contre les changements climatiques (2021) Registre des aires protégées au Québec. url: https://www.donneesquebec.ca/recherche/dataset/aires-protegees-au-quebec"
