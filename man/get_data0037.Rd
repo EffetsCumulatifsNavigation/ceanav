@@ -15,4 +15,7 @@ Un habitat floristique est une aire protégée qui abrite au moins une espèce f
 \details{
 This function loads and formats the data
 }
-\keyword{}
+\keyword{composantes}
+\keyword{floristiques}
+\keyword{habitats}
+\keyword{valorisées}

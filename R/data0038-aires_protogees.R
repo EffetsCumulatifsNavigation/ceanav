@@ -1,10 +1,8 @@
 #' Data 0040 : Registre des aires protégées au Québec
 #'
-#' Ces thématiques présentent la compilation des aires protégées au Québec. 
+#' Ces thématiques présentent la compilation des aires protégées au Québec.
 #'
-#' @keywords
-#' @keywords
-#' @keywords
+#' @keywords aire protégée
 #'
 #' @source https://www.donneesquebec.ca/recherche/dataset/aires-protegees-au-quebec
 #'

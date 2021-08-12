@@ -1,0 +1,12 @@
+data_description:
+  id: "0039"
+  name: "Other Effective Area-Based Conservation Measures"
+  description: "This dataset contains area-based management measures that constitute 'other effective area-based conservation measures' ('other measures') according to DFO's Operational Guidance for Identifying ‘Other Effective Area-Based Conservation Measures’ in Canada’s Marine Environment."
+  access_date: 2021-08-12
+  temporal_start: 2016
+  temporal_end: 2021
+  contact_id: "0038"
+  url: "https://open.canada.ca/data/en/dataset/44769543-7a23-4991-a53f-c2cf7c7a946f"
+  identifiant: "44769543-7a23-4991-a53f-c2cf7c7a946f"
+  availability: "open source"
+  citation: "Fisheries and Oceans Canada (2021) Other Effective Area-Based Conservation Measures. url: https://open.canada.ca/data/en/dataset/44769543-7a23-4991-a53f-c2cf7c7a946f"

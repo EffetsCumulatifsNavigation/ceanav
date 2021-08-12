@@ -2,9 +2,8 @@
 #'
 #' Un habitat floristique est une aire protégée qui abrite au moins une espèce floristique désignée menacée ou vulnérable et qui est identifié à l’article 7 du Règlement sur les espèces floristiques menacées ou vulnérables et leurs habitats.
 #'
-#' @keywords
-#' @keywords
-#' @keywords
+#' @keywords habitats floristiques
+#' @keywords composantes valorisées
 #'
 #' @source https://www.donneesquebec.ca/recherche/dataset/habitats-floristiques
 #'

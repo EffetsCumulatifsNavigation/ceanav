@@ -15,4 +15,7 @@ La géodatabase (GDB) des habitats fauniques (HAFA) contient les données des 11
 \details{
 This function loads and formats the data
 }
-\keyword{}
+\keyword{composantes}
+\keyword{fauniques}
+\keyword{habitats}
+\keyword{valorisées}

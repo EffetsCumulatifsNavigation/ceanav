@@ -15,4 +15,5 @@ Ces thématiques présentent la compilation des aires protégées au Québec.
 \details{
 This function loads and formats the data
 }
-\keyword{}
+\keyword{aire}
+\keyword{protégée}

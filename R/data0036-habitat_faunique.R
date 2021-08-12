@@ -2,9 +2,8 @@
 #'
 #' La géodatabase (GDB) des habitats fauniques (HAFA) contient les données des 11 habitats fauniques légaux situés sur les terres du domaine de l’État qui respectent la définition du Règlement sur les habitats fauniques (RHF). On trouve aussi les HAFA situés sur terres mixtes et privées à titre informationnel.
 #'
-#' @keywords
-#' @keywords
-#' @keywords
+#' @keywords habitats fauniques
+#' @keywords composantes valorisées
 #'
 #' @source https://www.donneesquebec.ca/recherche/dataset/habitats-fauniques
 #'

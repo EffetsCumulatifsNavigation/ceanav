@@ -1,10 +1,8 @@
-#' Data XXXX : Other Effective Area-Based Conservation Measures
+#' Data 0039 : Other Effective Area-Based Conservation Measures
 #'
-#' Oceans Act Marine Protected Areas
+#' This dataset contains area-based management measures that constitute 'other effective area-based conservation measures' ('other measures') according to DFO's Operational Guidance for Identifying ‘Other Effective Area-Based Conservation Measures’ in Canada’s Marine Environment.
 #'
-#' @keywords
-#' @keywords
-#' @keywords
+#' @keywords aires protégées
 #'
 #' @source https://open.canada.ca/data/en/dataset/44769543-7a23-4991-a53f-c2cf7c7a946f
 #'
@@ -13,31 +11,42 @@
 #' @details This function loads and formats the data
 #'
 
-get_dataXXXX <- function() {
-  # # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
-  # # Download data
-  # # ----------------------------------------
-  # # Output folder
-  # output <- "data0001-bioregions/"
-  # folder <- paste0("./data/data-raw/", output)
-  # if (!file.exists(folder)) dir.create(folder)
-  #
-  # if (!file.exists(paste0(output, 'DFO_Marine_Bioregions.zip'))) {
-  #   # Download from Open Canada portal
-  #   uid <- "23eb8b56-dac8-4efc-be7c-b8fa11ba62e9"
-  #   library(rgovcan)
-  #   govcan_dl_resources(uid, path = folder)
-  #
-  #   # Unzip file
-  #   unzip(zipfile = paste0(folder, 'DFO_Marine_Bioregions.zip'), exdir = folder)
-  # }
-  # # _________________________________________________________________________ #
-  #
-  # # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
-  # # Import data
-  # # ----------------------------------------
-  # data0001 <- st_read(paste0(folder, 'DFO_Marine_Bioregions/DFO_Marine_Bioregions.gdb'),
-  #                     layer = 'DFO_Marine_Bioregions') %>%
-  #             st_transform(4326)
-  # # _________________________________________________________________________ #
+get_data0039 <- function() {
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  # Download data
+  # ----------------------------------------
+  # Output folder
+  output <- "data0039-aire_protegee/"
+  folder <- paste0("./data/data-raw/", output)
+  if (!file.exists(folder)) dir.create(folder)
+
+  # Proceed only if data is not already loaded
+  if (!file.exists(paste0(folder, 'DFO_OEABCM_MPO_AMCEZ_SHP.zip'))) {
+    # URL
+    dat <- c('https://pacgis01.dfo-mpo.gc.ca/FGPPublic/Oceans_Act_Marine_Protected_Areas/DFO_OEABCM_MPO_AMCEZ_SHP.zip')
+
+    # Download
+    download.file(dat[1], destfile = paste0(folder, 'DFO_OEABCM_MPO_AMCEZ_SHP.zip'))
+
+    # Unzip
+    unzip(zipfile = paste0(folder, 'DFO_OEABCM_MPO_AMCEZ_SHP.zip'), exdir = folder)
+  }
+  # _________________________________________________________________________ #
+
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  # Import data
+  # ----------------------------------------
+  data0039 <- st_read(paste0(folder, 'DFO_OEABCM_MPO_AMCEZ_SHP/DFO_OEABCM_MPO_AMCEZ.shp'), quiet = TRUE) %>%
+              st_transform(crs = global_parameters()$crs)
+  # _________________________________________________________________________ #
+
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  # Export data
+  # ----------------------------------------
+  # Output
+  st_write(obj = data0039,
+           dsn = "./data/data-format/data0039-aire_protegee.geojson",
+           delete_dsn = TRUE)
+  # _________________________________________________________________________ #
+
 }
