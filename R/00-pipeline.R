@@ -24,7 +24,7 @@ pipeline <- function(
   if (pipeline_metadata) {
     # Metadata
     update_metadata("raw")
-    update_metadata("integrated")
+    # update_metadata("integrated")
 
     # Contacts
     update_contact()
@@ -80,6 +80,7 @@ pipeline <- function(
     get_data0038()
     get_data0039()
     get_data0040()
+    get_data0041()
   }
 
 
