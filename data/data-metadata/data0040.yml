@@ -1,0 +1,12 @@
+data_description:
+  id: "0040"
+  name: "Oceans Act Marine Protected Areas"
+  description: "Fisheries and Oceans Canada has a number of Marine Protected Areas designated under the Oceans Act and Areas of Interest for new Marine Protected Areas at various stages of progress towards designation. These areas are ecologically significant, with species and/or properties that require special management consideration."
+  access_date: 2021-08-12
+  temporal_start: 2016
+  temporal_end: 2021
+  contact_id: "0038"
+  url: "https://open.canada.ca/data/en/dataset/a1e18963-25dd-4219-a33f-1a38c4971250"
+  identifiant: "a1e18963-25dd-4219-a33f-1a38c4971250"
+  availability: "open source"
+  citation: "Fisheries and Oceans Canada (2021) Oceans Act Marine Protected Areas. url: https://open.canada.ca/data/en/dataset/a1e18963-25dd-4219-a33f-1a38c4971250"
