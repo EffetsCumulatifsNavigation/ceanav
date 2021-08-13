@@ -2,8 +2,8 @@
 #'
 #' Atlas des territoires d’intérêt pour la conservation dans les Basses-terres du Saint-Laurent
 #'
-#' @keywords territoire d'intérêt pour la conservation
-#' @keywords site d'impoetance
+#' @keywords milieux humides
+#' @keywords habitats
 #' @keywords composante valorisée
 #'
 #' @source https://www.donneesquebec.ca/recherche/dataset/atlas-des-territoires-interet-conservation-btsl#

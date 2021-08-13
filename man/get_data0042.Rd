@@ -16,11 +16,7 @@ Atlas des territoires d’intérêt pour la conservation dans les Basses-terres 
 Cette fonction télécharge et formatte les données
 }
 \keyword{composante}
-\keyword{conservation}
-\keyword{d'impoetance}
-\keyword{d'intérêt}
-\keyword{la}
-\keyword{pour}
-\keyword{site}
-\keyword{territoire}
+\keyword{habitats}
+\keyword{humides}
+\keyword{milieux}
 \keyword{valorisée}

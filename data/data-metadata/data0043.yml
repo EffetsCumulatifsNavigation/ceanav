@@ -1,0 +1,10 @@
+data_description:
+  id: "0043"
+  name: "Computerized Database of Québec Seabirds (CDQS)"
+  description: "The Computerized Database of Quebec Seabirds (CDQS) was set and has been updated by the Canadian Wildlife Service (CWS), (Quebec region,) for over 20 years. The CDSQ contains information on seabird colonies part of the following species: Gaviidae (loons), Hydrobatidae (petrels), Sulidae (gannets/boobies), Phalacrocoracidae (cormorants), Laridae (seagulls, gulls, terns), Auks (guillemots, penguins, puffins) aud Anatidae."
+  access_date: 2021-08-13
+  contact_id: "0040"
+  url: "https://catalogue.ogsl.ca/en/dataset/b04cc62f-8774-4978-9a6f-6beae584d6b5"
+  identifiant: "b04cc62f-8774-4978-9a6f-6beae584d6b5"
+  availability: "open source"
+  citation: ""
