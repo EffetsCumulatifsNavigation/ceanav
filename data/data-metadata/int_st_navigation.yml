@@ -1,9 +1,9 @@
 title: Navigation
 description: Intensité de la navigation dans le Saint-Laurent et le Saguenay
 rawData:
-- data0020
-- data0021
-- data0028
+- 0020
+- 0021
+- 0028
 dataDescription:
   units: n transit * km^-2
   spatial:

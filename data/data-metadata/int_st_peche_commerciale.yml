@@ -1,8 +1,9 @@
 title: Pêche commerciale
 description: Intensité des activités de pêche commerciale dans le Saint-Laurent
 rawData:
-- data0033
-- data0034
+- 0033
+- 0034
+- 0035
 dataDescription:
   units: kg*km^-2
   spatial:

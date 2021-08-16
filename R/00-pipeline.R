@@ -89,7 +89,7 @@ pipeline <- function(
   if (pipeline_integration) {
     # Composantes valorisées
     cv_berge()
-    # cv_habitat()
+    cv_habitat()
     cv_mammiferes_marins()
     # cv_qualite()
     # cv_sites()

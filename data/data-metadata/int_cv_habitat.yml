@@ -1,0 +1,33 @@
+title: Habitats
+description: Distribution des habitats dans le Saint-Laurent et le Saguenay
+dataDescription:
+  units: kg*km^-2
+  spatial:
+    resolution: 1km^2
+    extent:
+    - -112309.1104231
+    - 392532.8504619
+    - 127370.787435
+    - 591702.328144
+  temporal:
+    resolution: Event based
+    start: '2010'
+    end: '2020'
+rawData:
+- '0001'
+- '0002'
+- '0003'
+- '0013'
+- '0014'
+- '0004'
+- '0005'
+- '0006'
+- '0042'
+- '0007'
+- 0009
+- '0010'
+- 0029
+- '0011'
+- '0036'
+- '0037'
+- '0043'
