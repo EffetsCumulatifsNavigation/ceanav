@@ -64,7 +64,8 @@ data/data-integrated/*.tif
 data/data-basemap/*.geojson
 
 # Figures ----
-figures/figures-format/
+figures/figures-format/data*
 report/figures/figures-format/
+figures/figures-integrated/*.png
 
 clean/

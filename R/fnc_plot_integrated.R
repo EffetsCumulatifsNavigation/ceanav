@@ -23,9 +23,6 @@ plot_integrated <- function(dat, ...) {
 #' @export
 plot_integrated.sf <- function(dat, main = NULL, subtitle = NULL, ...) {
 
-  # ------------------
-  dat <- st_transform(dat, global_parameters()$crs)
-
   # pdf(glue('./figures/figures-format/{data_id}.pdf'), width = 7, height = 5, pointsize = 12)
   # png(glue('./figures/delete.png'), res = 300, width = 100, height = 70, units = "mm", pointsize = 12)
 
@@ -61,6 +58,16 @@ plot_integrated.sf <- function(dat, main = NULL, subtitle = NULL, ...) {
       cex = .75
     )
   }
+
+  # ------------------
+  data(aoi)
+  aoi <- suppressWarnings(st_simplify(aoi, dTolerance = 100, preserveTopology = F))
+  plot(
+    st_geometry(aoi),
+    lwd = .5,
+    border = global_parameters()$col$integrated$coastline,
+    add = TRUE
+  )
 
 
   # # ------------------
@@ -99,15 +106,15 @@ plot_integrated.sf <- function(dat, main = NULL, subtitle = NULL, ...) {
     border = cols
   )
 
-  # ------------------
-  data(aoi)
-  aoi <- suppressWarnings(st_simplify(aoi, dTolerance = 100, preserveTopology = F))
-  plot(
-    st_geometry(aoi),
-    lwd = .5,
-    border = global_parameters()$col$integrated$coastline,
-    add = TRUE
-  )
+  # # ------------------
+  # data(aoi)
+  # aoi <- suppressWarnings(st_simplify(aoi, dTolerance = 100, preserveTopology = F))
+  # plot(
+  #   st_geometry(aoi),
+  #   lwd = .5,
+  #   border = global_parameters()$col$integrated$coastline,
+  #   add = TRUE
+  # )
 
   # dev.off()
 }
