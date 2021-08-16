@@ -300,11 +300,7 @@ st_peche_commerciale <- function() {
   meta$dataDescription$especes$cible <- species_cible
   meta$dataDescription$especes$capture <- species
 
-  # -----
-  write_yaml(meta, "./data/data-metadata/int_st_peche_commerciale.yml")
   # --------------------------------------------------------------------------------
-
-
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   # Export
@@ -312,8 +308,19 @@ st_peche_commerciale <- function() {
   #
   #
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  # -----
+  write_yaml(meta, "./data/data-metadata/int_st_peche_commerciale.yml")
+
+  # -----
   st_write(obj = peche_commerciale,
            dsn = "./data/data-integrated/st_peche_commerciale.geojson",
            delete_dsn = TRUE)
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  # Clean global environment
+  #
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  clean()
+  # ------------------------------------------------------------------------- #}
 }

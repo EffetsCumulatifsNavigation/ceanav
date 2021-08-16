@@ -35,3 +35,12 @@ rep_hyperlien <- function(texte, url) {
   # Return
   hyperlien
 }
+
+
+
+# ------------------------------------------------------------------------------
+# Clean global environment
+clean <- function() {
+  objs <- ls(envir = globalenv())
+  rm(list = objs, pos = ".GlobalEnv")
+}
