@@ -34,3 +34,4 @@ Lisa M. Arsenault <lisa.m.arsenault@aghamm.ca>
 ### Kahnawake
 
 TODO: Vérifier la catégorie traffic identifiée par la communauté. Est-ce qu'on devrait l'ajouter aux stresseurs de navigation?
+TODO: Même chose avec la seigneurie
