@@ -78,7 +78,7 @@ get_data0024 <- function() {
   data0024 <- list()
 
   # Names of columns to retain
-  nm <- c("Type", "Source", "Description", "Sous_cat", "Commentaire", "Nom_secteur", "Geometry")
+  nm <- c("Type", "Source", "Description","Categorie", "Sous_cat", "Commentaire", "Nom_secteur", "Geometry")
 
   # WARNING: This could all be done more simply in a loop, but I keep them seperate
   #          for human redeability
@@ -89,6 +89,7 @@ get_data0024 <- function() {
   data0024[[1]] <- geom_format(dat) %>%
                    mutate(Type = lay$name[1]) %>%
                    rename(Geometry = ".") %>%
+                   mutate(Categorie = "Culture et patrimoine") %>%
                    .[,nm]
 
 
@@ -98,6 +99,7 @@ get_data0024 <- function() {
   data0024[[2]] <- geom_format(dat) %>%
                    mutate(Type = lay$name[2]) %>%
                    rename(Geometry = ".") %>%
+                   mutate(Categorie = "Pêche traditionnelle") %>%
                    .[,nm]
 
   # --------------------------------------------------
@@ -106,6 +108,7 @@ get_data0024 <- function() {
   data0024[[3]] <- geom_format(dat) %>%
                    mutate(Type = lay$name[3]) %>%
                    rename(Geometry = ".") %>%
+                   mutate(Categorie = "Chasse oiseaux migrateurs") %>%
                    .[,nm]
 
   # --------------------------------------------------
@@ -114,6 +117,7 @@ get_data0024 <- function() {
   data0024[[4]] <- geom_format(dat) %>%
                    mutate(Type = lay$name[4]) %>%
                    rename(Geometry = ".") %>%
+                   mutate(Categorie = "Chasse phoque") %>%
                    .[,nm]
 
   # --------------------------------------------------
@@ -122,6 +126,7 @@ get_data0024 <- function() {
   data0024[[5]] <- geom_format(dat) %>%
                    mutate(Type = lay$name[5]) %>%
                    rename(Geometry = ".") %>%
+                   mutate(Categorie = "Pêche commerciale") %>%
                    .[,nm]
 
 
@@ -144,13 +149,14 @@ get_data0024 <- function() {
           # present rather than only the desired geometry
           st_union() %>%
           st_cast("POLYGON") %>%
-          .[2, ] %>%
+          .[2] %>%
           st_sf(st_drop_geometry(dat), crs = st_crs(dat)) %>%
           mutate(Type = lay$name[6])
 
   # Bind with rest of data
   data0024[[6]] <- rbind(data0024[[6]], geom) %>%
                    rename(Geometry = ".") %>%
+                   mutate(Categorie = "Activités touristiques") %>%
                    .[,nm]
 
   # --------------------------------------------------
@@ -161,6 +167,7 @@ get_data0024 <- function() {
                    st_buffer(300) %>%
                    mutate(Type = lay$name[7]) %>%
                    rename(Geometry = Shape) %>%
+                   mutate(Categorie = "Activités touristiques") %>%
                    .[,nm]
 
 
@@ -172,6 +179,7 @@ get_data0024 <- function() {
                    st_buffer(300) %>%
                    mutate(Type = lay$name[8]) %>%
                    rename(Geometry = Shape) %>%
+                   mutate(Categorie = "Accès au plan d'eau") %>%
                    .[,nm]
 
   # --------------------------------------------------
@@ -180,6 +188,7 @@ get_data0024 <- function() {
   data0024[[9]] <- geom_format(dat) %>%
                    mutate(Type = lay$name[9]) %>%
                    rename(Geometry = ".") %>%
+                   mutate(Categorie = "Stresseur trophique") %>%
                    .[,nm]
 
 
