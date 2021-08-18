@@ -1,0 +1,12 @@
+title: Sites d’intérêt culturels, patrimoniaux et archéologiques
+description: Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay
+dataDescription:
+  units: présence-absence
+  spatial:
+    resolution: 1km^2
+    extent:
+    - -112309.1104231
+    - 392532.8504619
+    - 127370.787435
+    - 591702.328144
+rawData:
