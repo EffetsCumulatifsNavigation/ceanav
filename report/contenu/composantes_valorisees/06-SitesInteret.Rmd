@@ -29,3 +29,8 @@ Lisa M. Arsenault <lisa.m.arsenault@aghamm.ca>
 - Les données de saumon Atlantique, pour nos besoins, correspondraient à l’embouchure des Rivières Rimouski et Métis puisque le bassin versant n’est pas inclu dans notre aire d’étude. Je pourrai être en mesure de cibler les embouchures moi-même et j’utiliserai le rapport sur l’Atlas comme citation.
 - Il faudrait que tu vérifies le site de bar rayé identifé à Matane (voir capture d’écran ci-joint) et si nous devrions le considérer comme un site d’importance pour la communauté.
 - Je vais vous recontacter ultérieurement pour m’assurer que l’utilisation que nous faisons des données issues de l’Atlas est correcte.
+
+
+### Kahnawake
+
+TODO: Vérifier la catégorie traffic identifiée par la communauté. Est-ce qu'on devrait l'ajouter aux stresseurs de navigation?
