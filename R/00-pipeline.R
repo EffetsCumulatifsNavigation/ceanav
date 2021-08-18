@@ -92,7 +92,7 @@ pipeline <- function(
     cv_habitat()
     cv_mammiferes_marins()
     # cv_qualite()
-    # cv_sites()
+    cv_site()
 
     # Stresseurs
     st_ancrage()
