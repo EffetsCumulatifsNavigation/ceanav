@@ -49,6 +49,7 @@ cv_site <- function() {
   #   - Kahnawake - Traffic : 0032
   #   - Kahnawake - Vegetation : 0032
   #   - Milieux protégés : 0030, 0038, 0039, 0040
+  #   - Sites patrimoniaux : 0044, 0045
   #
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   # ------------------------------------------------------
@@ -216,6 +217,18 @@ cv_site <- function() {
 
   # -----
   site$milieu_protege <- uid(data0030, data0038, data0039, data0040)
+
+
+  # ----------------------------
+  # Sites patrimoniaux : 0044, 0045
+  meta$rawData <- c(meta$rawData, "0044", "0045")
+
+  # -----
+  load_format("data0044")
+  load_format("data0045")
+
+  # -----
+  site$sites_patrimoniaux <- uid(data0044, data0045)
 
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
