@@ -101,7 +101,7 @@ cv_site <- function() {
 
   # ----------------------------
   # Essipit - Culture et patrimoine : 0024
-  meta$rawData <- c(meta$rawData, "data0024")
+  meta$rawData <- c(meta$rawData, "0024")
 
   # -----
   load_format("data0024")
@@ -226,6 +226,8 @@ cv_site <- function() {
   # -----
   load_format("data0044")
   load_format("data0045")
+  data0044 <- select(data0044, geometry)
+  data0045 <- select(data0045, geometry)
 
   # -----
   site$sites_patrimoniaux <- uid(data0044, data0045)
@@ -237,6 +239,7 @@ cv_site <- function() {
   #
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   # -----
+  meta$rawData <- as.character(meta$rawData)
   write_yaml(meta, "./data/data-metadata/int_cv_site.yml")
 
   # -----
