@@ -161,10 +161,10 @@ get_data0024 <- function() {
 
   # --------------------------------------------------
   # Utilis_terr_activ_touristique_p
-  message("Utilisation d'un buffer de 300m autour des pooints pour l'instant. Pourrait être revisité plus tard au besoin.")
+  message("Utilisation d'un buffer de 500m autour des pooints pour l'instant. Pourrait être revisité plus tard au besoin.")
   dat <- st_read(paste0(folder, "Effets_cumul_datas_Essipit.gdb"), layer = lay$name[7], quiet = TRUE)
   data0024[[7]] <- st_zm(dat) %>%
-                   st_buffer(300) %>%
+                   st_buffer(500) %>%
                    mutate(Type = lay$name[7]) %>%
                    rename(Geometry = Shape) %>%
                    mutate(Categorie = "Activités touristiques") %>%
@@ -176,7 +176,7 @@ get_data0024 <- function() {
   # Utils_terr_acces_plans_eau
   dat <- st_read(paste0(folder, "Effets_cumul_datas_Essipit.gdb"), layer = lay$name[8], quiet = TRUE)
   data0024[[8]] <- st_zm(dat) %>%
-                   st_buffer(300) %>%
+                   st_buffer(500) %>%
                    mutate(Type = lay$name[8]) %>%
                    rename(Geometry = Shape) %>%
                    mutate(Categorie = "Accès au plan d'eau") %>%
