@@ -18,7 +18,7 @@ get_data0018 <- function() {
   # Download data
 
   # Output folder
-  output <- "data0018-dragage/"
+  output <- "data0018-voie_navigation_dragage/"
   folder <- paste0("./data/data-raw/", output)
   if (!file.exists(folder)) dir.create(folder)
 
@@ -41,7 +41,7 @@ get_data0018 <- function() {
   # ----------------------------------------
   # Output
   st_write(obj = data0018,
-           dsn = "./data/data-format/data0018-dragage.geojson",
+           dsn = "./data/data-format/data0018-voie_navigation_dragage.geojson",
            delete_dsn = TRUE)
   # _________________________________________________________________________ #
 }

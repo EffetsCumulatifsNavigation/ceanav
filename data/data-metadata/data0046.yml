@@ -1,0 +1,12 @@
+data_description:
+  id: "0046"
+  name: "Dragage"
+  description: "Dragage d'entretien annuel de la voie navigable du Saint-Laurent"
+  access_date: 2021-02-19
+  temporal_start: 1985
+  temporal_end: 2018
+  contact_id:
+    - "0021"
+    - "0022"
+  availability: "available"
+  citation: "GHD (2019) Évaluation des Effets Environnementaux. Dragage d’entretien Annuel de La Voie Navigable Du Saint-Laurent (Années 2019 à 2023). ÉEE 2019 à 2023 de Montréal à Cap Gribane. En Vertu de La Loi Canadienne Sur l’évalation Environnementale (2012). Pêches et Océans Canada, Garde côtière canadienne, 2019."
