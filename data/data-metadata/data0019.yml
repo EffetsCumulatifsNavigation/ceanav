@@ -1,11 +1,15 @@
 data_description:
   id: "0019"
   name: "Sites de dragage et de dépôt"
-  description: "Bilan des activités de dragage dans l'estuaire du Saint-Laurent"
+  description: "Compilation des dragages dans l’ensemble du Saint-Laurent entre 2001 et 2016"
   access_date: 2020-11-02
+  temporal_start: 2016
+  temporal_end: 2001
   contact_id:
     - "0023"
+    - "0042"
   availability: "available"
   citation:
-    - "ECCC 2020. Bilan des activités de dragage dans l’Estuaire du Saint-Laurent de 2009 à 2016. Document de travail."
-    - "Transport Québec 2016. Compilation des dragages dans l’ensemble du Saint-Laurent entre 2001 et 2016. Document de travail."
+    - "Environnement et Changement Climatique Canada (2020) Bilan des activités de dragage dans l’Estuaire du Saint-Laurent de 2009 à 2016. Document de travail."
+    - "Ministères des Transports du Québec (2016) Compilation des dragages dans l’ensemble du Saint-Laurent entre 2001 et 2016. Document de travail."
+    - "Ministères des Transports du Québec (2017) Bref portrait des activités de dragage dans la voie navigable du fleuve Saint-Laurent de 2001 à 2016. 50 + iv."
