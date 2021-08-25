@@ -97,6 +97,64 @@ get_data0019 <- function() {
              st_transform(4326)
 
   # ==================================================================
+  # Baie-Comeau
+  # Quai de Cargill
+  # ==================================================================
+  # Dragage
+  # 49°15'17.02'' N ; 68°8'0.31'' O
+  coords <- rbind(c(-68.13773, 49.24890),
+                  c(-68.13546, 49.24908),
+                  c(-68.13556, 49.24930),
+                  c(-68.13692, 49.24920),
+                  c(-68.13695, 49.24942),
+                  c(-68.13527, 49.24955),
+                  c(-68.13490, 49.24848),
+                  c(-68.13761, 49.24834),
+                  c(-68.13773, 49.24890))
+
+  dragage[["carg"]] <- list(coords) %>%
+           st_polygon() %>%
+           st_sfc(crs = 4326) %>%
+           st_sf(id_dragage = "carg")
+
+  # ==================================================================
+  # Baie-Comeau
+  # Quai Société Alcoa
+  # ==================================================================
+  # Dragage
+  coords <- rbind(c(-68.13292, 49.25245),
+                  c(-68.13055, 49.25468),
+                  c(-68.13348, 49.25536),
+                  c(-68.13400, 49.25424),
+                  c(-68.13391, 49.25348),
+                  c(-68.13292, 49.25245))
+
+  dragage[["alco"]] <- list(coords) %>%
+           st_polygon() %>%
+           st_sfc(crs = 4326) %>%
+           st_sf(id_dragage = "alco")
+
+
+  # ==================================================================
+  # Baie-Trinité
+  # Havre de Baie-Trinité
+  # ==================================================================
+  # Dragage
+  ## Coordonnées: 49º25'17.03"N; 67º17'5.27"O
+  coords <- rbind(c(-67.28354, 49.42130),
+                  c(-67.28397, 49.42101),
+                  c(-67.28451, 49.42012),
+                  c(-67.28539, 49.42028),
+                  c(-67.28452, 49.42157),
+                  c(-67.28354, 49.42130))
+
+  dragage[["hbtr"]] <- list(coords) %>%
+           st_polygon() %>%
+           st_sfc(crs = 4326) %>%
+           st_sf(id_dragage = "hbtr")
+
+
+  # ==================================================================
   # Bécancour
   # Port de Bécancour
   # TODO
@@ -173,49 +231,91 @@ get_data0019 <- function() {
   # ==================================================================
   # Chenal de navigation du fleuve Saint-Laurent
   # Bécancour à Batiscan
-  # TODO
+  # NOTE: Utilisation des données de l'évaluation des effets
+  #       environnementaux (data : 0046), qui fournit des données
+  #       entre 1985 et 2018
   # ==================================================================
 
   # ==================================================================
   # Chenal de navigation du fleuve Saint-Laurent
   # Cap Santé
-  # TODO
+  # NOTE: Utilisation des données de l'évaluation des effets
+  #       environnementaux (data : 0046), qui fournit des données
+  #       entre 1985 et 2018
   # ==================================================================
 
   # ==================================================================
   # Chenal de navigation du fleuve Saint-Laurent
   # Champlain à Deschambault
-  # TODO
+  # NOTE: Utilisation des données de l'évaluation des effets
+  #       environnementaux (data : 0046), qui fournit des données
+  #       entre 1985 et 2018
   # ==================================================================
 
   # ==================================================================
   # Chenal de navigation du fleuve Saint-Laurent
   # Lac Saint-Pierre
-  # TODO
+  # NOTE: Utilisation des données de l'évaluation des effets
+  #       environnementaux (data : 0046), qui fournit des données
+  #       entre 1985 et 2018
   # ==================================================================
 
   # ==================================================================
   # Chenal de navigation du fleuve Saint-Laurent
   # Sorel
-  # TODO
+  # NOTE: Utilisation des données de l'évaluation des effets
+  #       environnementaux (data : 0046), qui fournit des données
+  #       entre 1985 et 2018
   # ==================================================================
 
   # ==================================================================
   # Chenal de navigation du fleuve Saint-Laurent
   # Traverse Nord I.O.
-  # TODO
+  # NOTE: Utilisation des données de l'évaluation des effets
+  #       environnementaux (data : 0046), qui fournit des données
+  #       entre 1985 et 2018
   # ==================================================================
 
   # ==================================================================
   # Chenal de navigation du fleuve Saint-Laurent
   # Trois-Rivière à Bécancour
-  # TODO
+  # NOTE: Utilisation des données de l'évaluation des effets
+  #       environnementaux (data : 0046), qui fournit des données
+  #       entre 1985 et 2018
   # ==================================================================
 
   # ==================================================================
   # Gaspé
   # WARNING: Not done, outside the study area
   # ==================================================================
+
+  # ==================================================================
+  # Godbout
+  # Quai de Godbout
+  # ==================================================================
+  # Dragage
+  # Quai de Godbout: 49° 19'21.25" N ; 67°35'30.49" O
+  coords <- rbind(c(-67.59252, 49.32208),
+                  c(-67.59093, 49.32265),
+                  c(-67.59125, 49.32301),
+                  c(-67.59285, 49.32243),
+                  c(-67.59252, 49.32208))
+
+  dragage[["qgod"]] <- list(coords) %>%
+            st_polygon() %>%
+            st_sfc(crs = 4326) %>%
+            st_sf(id_dragage = "qgod")
+
+  # Depot
+  # Coordonnées du site de dépôt: 49.2835; -67.5590
+  coords <- matrix(c(-67.5590, 49.2835), nrow = 1)
+  depot[["dqgod"]] <- st_point(coords) %>%
+             st_sfc(crs = 4326) %>%
+             st_sf(id_depot = "dqgod") %>%
+             st_transform(32198) %>%
+             st_buffer(buf) %>%
+             st_transform(4326)
+
 
   # ==================================================================
   # Hudson/Oka
@@ -289,6 +389,25 @@ get_data0019 <- function() {
   # ==================================================================
 
   # ==================================================================
+  # Les Méchins
+  # Quai de Les Méchins
+  # ==================================================================
+  # Dragage
+  # Les Méchins 49º0'17.65"N; 66º58'27.11"O
+  coords <- rbind(c(-66.97288, 49.00407),
+                  c(-66.97299, 49.00442),
+                  c(-66.97355, 49.00467),
+                  c(-66.97383, 49.00439),
+                  c(-66.97323, 49.00391),
+                  c(-66.97288, 49.00407))
+
+  dragage[["qmec"]] <- list(coords) %>%
+            st_polygon() %>%
+            st_sfc(crs = 4326) %>%
+            st_sf(id_dragage = "qmec")
+
+
+  # ==================================================================
   # Matane
   # Port de Matane
   # ==================================================================
@@ -308,10 +427,10 @@ get_data0019 <- function() {
 
   # Depot
   # Coordonnées du site de dépôt: 48°51’ 35’’ N; 67°35’50’’ O.
-  coords <- matrix(c(48.85972, -67.59722), nrow = 1)
+  coords <- matrix(c(-67.59722, 48.85972), nrow = 1)
   depot[["dpmat"]] <- st_point(coords) %>%
              st_sfc(crs = 4326) %>%
-             st_sf(id_dragage = "dpmat") %>%
+             st_sf(id_depot = "dpmat") %>%
              st_transform(32198) %>%
              st_buffer(buf) %>%
              st_transform(4326)
@@ -407,21 +526,103 @@ get_data0019 <- function() {
   # Rivière-du-Loup
   # Desserte
   # ==================================================================
+  # Dragage
+  # Quai de traversier : 47.847816, -69.570059
+  coords <- rbind(c(-69.56939, 47.84786),
+                  c(-69.57083, 47.84784),
+                  c(-69.57080, 47.84752),
+                  c(-69.56935, 47.84756),
+                  c(-69.56939, 47.84786))
 
-  # ==================================================================
-  # Rivière-du-Loup
-  # Marina de Rivière-du-Loup
-  # ==================================================================
+  dragage[["qrdl"]] <- list(coords) %>%
+            st_polygon() %>%
+            st_sfc(crs = 4326) %>%
+            st_sf(id_dragage = "qrdl")
+
+  # Depot 1
+  coords <- rbind(c(-69.57778, 47.86222), # A) 47°51’44’’ N, 69°34’40’’ O;
+                 c(-69.59139, 47.86667), # B) 47°52’00’’ N, 69°35’29’’ O;
+                 c(-69.57389, 47.88944), # C) 47°53’22’’ N, 69°34’26’’ O;
+                 c(-69.56083, 47.86222), # D) 47°51’44’’ N, 69°33’39’’ O
+                 c(-69.57778, 47.86222))
+
+  depot[["dqrdl1"]] <- list(coords) %>%
+            st_polygon() %>%
+            st_sfc(crs = 4326) %>%
+            st_sf(id_depot = "dqrdl1")
+
+  # Depot 2
+  coords <- rbind(c(-69.56676, 47.87908), # A) 47°52’44.6816’’N – 69°34’00.3367 O
+                 c(-69.56442, 47.88231), # C) 47°52’56.3321’’N – 69°33’51.9119 O
+                 c(-69.56923, 47.88389), # D) 47°53’01.9994’’ N – 69°34’09.2316 O
+                 c(-69.57157, 47.88065), # B) 47°52’50.3485’’N – 69°34’17.6557 O
+                 c(-69.56676, 47.87908))
+
+  depot[["dqrdl2"]] <- list(coords) %>%
+            st_polygon() %>%
+            st_sfc(crs = 4326) %>%
+            st_sf(id_depot = "dqrdl2")
+
 
   # ==================================================================
   # Rivière-du-Loup
   # Parc maritime de Rivière-du-Loup
   # ==================================================================
+  # Dragage
+  # Marina : 47.846733, -69.569109
+  coords <- rbind(c(-69.56964, 47.84726),
+                  c(-69.57028, 47.84699),
+                  c(-69.57045, 47.84628),
+                  c(-69.57207, 47.84622),
+                  c(-69.57215, 47.84572),
+                  c(-69.56764, 47.84591),
+                  c(-69.56783, 47.84738),
+                  c(-69.56964, 47.84726))
+
+  dragage[["mrdl"]] <- list(coords) %>%
+            st_polygon() %>%
+            st_sfc(crs = 4326) %>%
+            st_sf(id_dragage = "mrdl")
+
+  # Depot
+  # Même site que dépôt 1 pour la desserte de Rivière-du-Loup: qrdl1
+  # WARNING: Vérifier s'il s'agit réellement du bon site de dépôt
 
   # ==================================================================
   # Saint-Jean-Port-Joli
   # Parc nautique de Saint-Jean-Port-Joli
   # ==================================================================
+  # Dragage
+  coords <- rbind(c(-70.27263, 47.21520),
+                  c(-70.27379, 47.21420),
+                  c(-70.27492, 47.21478),
+                  c(-70.27549, 47.21601),
+                  c(-70.27537, 47.21640),
+                  c(-70.27490, 47.21701),
+                  c(-70.27462, 47.21684),
+                  c(-70.27448, 47.21656),
+                  c(-70.27445, 47.21633),
+                  c(-70.27460, 47.21614),
+                  c(-70.27263, 47.21520))
+
+  dragage[["sjpj"]] <- list(coords) %>%
+            st_polygon() %>%
+            st_sfc(crs = 4326) %>%
+            st_sf(id_dragage = "sjpj")
+
+  # Depot
+  # Site de dépôt: 600m de la jetée
+  # Figure et coorodnnées disponible dans un rapport d'évaluation environnementale:
+  # http://collections.banq.qc.ca/ark:/52327/bs47822
+  # "Ce site de rejet des sédiments est situé à 70° 18 de longitude ouest et
+  # 47° 15 de latitude nord (Figure 1)"
+  coords <- matrix(c(-70.365030, 47.448753), nrow = 1)
+  depot[["dsjpj"]] <- st_point(coords) %>%
+             st_sfc(crs = 4326) %>%
+             st_sf(id_depot = "dsjpj") %>%
+             st_transform(32198) %>%
+             st_buffer(buf) %>%
+             st_transform(4326)
 
   # ==================================================================
   # Saint-Joseph-de-la-Rive
@@ -450,11 +651,53 @@ get_data0019 <- function() {
   # Saint-Laurent-de-L'Île-D'Orléans
   # Port de refuge de St-Laurent-de-L'Île-D'Orléans
   # ==================================================================
+  # Dragage
+  coords <- rbind(c(-71.00592195539443, 46.85883628359575),
+                  c(-71.00401319047153, 46.85942860450257),
+                  c(-71.00326961538109, 46.8584064537137),
+                  c(-71.00530869758786, 46.85779315390031),
+                  c(-71.00592195539443, 46.85883628359575))
+
+  dragage[["cnib"]] <- list(coords) %>%
+            st_polygon() %>%
+            st_sfc(crs = 4326) %>%
+            st_sf(id_dragage = "cnib")
+
+  # Depot
+  # Site de dépôt: 46˚53'01"N / 70˚54'33"O
+  coords <- matrix(c(-71.00324129280196, 46.85683960985289), nrow = 1)
+  depot[["dcnib"]] <- st_point(coords) %>%
+             st_sfc(crs = 4326) %>%
+             st_sf(id_depot = "dcnib") %>%
+             st_transform(32198) %>%
+             st_buffer(buf) %>%
+             st_transform(4326)
 
   # ==================================================================
   # Saint-Michel-de-Bellechasse
   # Halte nautique de Saint-Michel-de-Bellechasse
   # ==================================================================
+  # Dragage
+  coords <- rbind(c(-70.90834133311455, 46.87879077008841),
+                  c(-70.9100442274937, 46.87822770301899),
+                  c(-70.90990605635466, 46.877006174053804),
+                  c(-70.90781046074576, 46.877893989103704),
+                  c(-70.90834133311455, 46.87879077008841))
+
+  dragage[["smdb"]] <- list(coords) %>%
+            st_polygon() %>%
+            st_sfc(crs = 4326) %>%
+            st_sf(id_dragage = "smdb")
+
+  # Depot
+  # Site de dépôt: 46˚53'01"N / 70˚54'33"O
+  coords <- matrix(c(-70.90917, 46.88361), nrow = 1)
+  depot[["dsmdb"]] <- st_point(coords) %>%
+             st_sfc(crs = 4326) %>%
+             st_sf(id_depot = "dsmdb") %>%
+             st_transform(32198) %>%
+             st_buffer(buf) %>%
+             st_transform(4326)
 
   # ==================================================================
   # Sept-Îles
@@ -474,7 +717,9 @@ get_data0019 <- function() {
   # ==================================================================
 
   # ==================================================================
-  # Sorel-Tracy - Marina de Saurel
+  # Sorel-Tracy
+  # Marina de Saurel
+  # TODO
   # ==================================================================
 
   # ==================================================================
@@ -483,11 +728,74 @@ get_data0019 <- function() {
   # ==================================================================
 
   # ==================================================================
-  # Tadoussac - Desserte
+  # Tadoussac
+  # Desserte est
   # ==================================================================
+  # Dragage
+  coords <- rbind(c(-69.72755, 48.13854),
+                  c(-69.72688, 48.13941),
+                  c(-69.72614, 48.13918),
+                  c(-69.72687, 48.13833),
+                  c(-69.72755, 48.13854))
+
+  dragage[["detd"]] <- list(coords) %>%
+            st_polygon() %>%
+            st_sfc(crs = 4326) %>%
+            st_sf(id_dragage = "detd")
+
+  # Depot
+  # Site d’immersion des Bergeronnes : (48°12’00’’N ; 69°34’48’’O)
+  coords <- matrix(c(-69.58, 48.2), nrow = 1)
+  depot[["drtd"]] <- st_point(coords) %>%
+             st_sfc(crs = 4326) %>%
+             st_sf(id_depot = "drtd") %>%
+             st_transform(32198) %>%
+             st_buffer(buf) %>%
+             st_transform(4326)
 
   # ==================================================================
-  # Valleyfield - Port de Valleyfield
+  # Tadoussac
+  # Desserte ouest
+  # ==================================================================
+  # Dragage
+  coords <- rbind(c(-69.73103, 48.12714),
+                  c(-69.73011, 48.12770),
+                  c(-69.72878, 48.12671),
+                  c(-69.72959, 48.12613),
+                  c(-69.73103, 48.12714))
+
+  dragage[["dotd"]] <- list(coords) %>%
+            st_polygon() %>%
+            st_sfc(crs = 4326) %>%
+            st_sf(id_dragage = "dotd")
+
+  # Depot
+  # Même que desserte est : drtd
+
+  # ==================================================================
+  # Tadoussac
+  # Marina de Tadoussac
+  # ==================================================================
+  # Dragage
+  # Marina de Tadoussac (48° 8'19.60"N ; 69°43'4.69"O)
+  coords <- rbind(c(-69.71762, 48.13832),
+                  c(-69.71746, 48.13921),
+                  c(-69.71452, 48.13855),
+                  c(-69.71497, 48.13770),
+                  c(-69.71762, 48.13832))
+
+  dragage[["mtad"]] <- list(coords) %>%
+            st_polygon() %>%
+            st_sfc(crs = 4326) %>%
+            st_sf(id_dragage = "mtad")
+
+  # Depot
+  # Même que desserte est : drtd
+
+
+  # ==================================================================
+  # Valleyfield
+  # Port de Valleyfield
   # TODO
   # ==================================================================
 
@@ -499,6 +807,26 @@ get_data0019 <- function() {
 
 
   # _________________________________________________________________________ #
+
+
+  # -------------------------------------------------------------------------
+  ## Bind together
+  dragage  <- bind_rows(dragage)
+  depot <- bind_rows(depot)
+
+
+
+
+
+
+  
+  # mv <- mapview(dragage) + depot
+  data0019 <- bind_rows(dragage, depot)
+
+  # Transform projection
+  data0019 <- st_transform(data0019, crs = global_parameters()$crs)
+  # _________________________________________________________________________ #
+
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   # Export data
