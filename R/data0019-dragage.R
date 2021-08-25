@@ -32,10 +32,10 @@ get_data0019 <- function() {
   #   https://www.rapidtables.com/convert/number/degrees-minutes-seconds-to-degrees.html
   #
   #   Code to visualize point, draw polygon and extract coordinates
-  #   x <- st_point(matrix(c(-67.2848, 49.4214), nrow = 1)) %>%
-  #        st_sfc(crs = 4326)
-  #   x <- mapview(x) %>% editMap()
-  #   st_coordinates(x[[1]])
+    x <- st_point(matrix(c(-67.2848, 49.4214), nrow = 1)) %>%
+         st_sfc(crs = 4326)
+    x <- mapview(x) %>% mapedit::editMap()
+    st_coordinates(x[[1]])
   # _________________________________________________________________________ #
 
 
@@ -157,8 +157,25 @@ get_data0019 <- function() {
   # ==================================================================
   # Bécancour
   # Port de Bécancour
-  # TODO
   # ==================================================================
+  # Dragage
+  # https://archives.bape.gouv.qc.ca/sections/mandats/dragage-becancour/documents/PR3.2.pdf
+  coords <- rbind(
+      c(-72.37972, 46.40020),
+      c(-72.37594, 46.40095),
+      c(-72.37198, 46.40200),
+      c(-72.37386, 46.40660),
+      c(-72.37847, 46.40531),
+      c(-72.38006, 46.40439),
+      c(-72.38007, 46.40210),
+      c(-72.37972, 46.40020)
+    )
+
+  dragage[["pbec"]] <- list(coords) %>%
+           st_polygon() %>%
+           st_sfc(crs = 4326) %>%
+           st_sf(id_dragage = "pbec")
+
 
   # ==================================================================
   # Berthier-sur-Mer
@@ -462,6 +479,9 @@ get_data0019 <- function() {
   # Port de Montréal
   # TODO
   # ==================================================================
+  # Dragage
+
+
 
   # ==================================================================
   # Rimouski
@@ -643,9 +663,23 @@ get_data0019 <- function() {
 
 
   # ==================================================================
-  # Saint-Joseph-de-Sorel - zone portuaire QIT-Fer et Titane inc.
-  # TODO
+  # Saint-Joseph-de-Sorel
+  # Zone portuaire QIT-Fer et Titane inc.
   # ==================================================================
+  # Dragage
+  # https://www.environnement.gouv.qc.ca/evaluations/decret/2018/799-2018-rae.pdf
+  coords <- rbind(
+    c(-73.13460, 46.04883),
+    c(-73.13527, 46.04986),
+    c(-73.14184, 46.04783),
+    c(-73.14122, 46.04687),
+    c(-73.13460, 46.04883)
+  )
+
+  dragage[["sjds"]] <- list(coords) %>%
+           st_polygon() %>%
+           st_sfc(crs = 4326) %>%
+           st_sf(id_dragage = "sjds")
 
   # ==================================================================
   # Saint-Laurent-de-L'Île-D'Orléans
@@ -718,14 +752,49 @@ get_data0019 <- function() {
 
   # ==================================================================
   # Sorel-Tracy
-  # Marina de Saurel
-  # TODO
+  # Marina de Sorel
   # ==================================================================
+  coords <- rbind(
+      c(-73.09273, 46.04931),
+      c(-73.08984, 46.05037),
+      c(-73.09060, 46.05133),
+      c(-73.09105, 46.05121),
+      c(-73.09160, 46.05116),
+      c(-73.09173, 46.05125),
+      c(-73.09296, 46.05085),
+      c(-73.09289, 46.05073),
+      c(-73.09355, 46.05037),
+      c(-73.09273, 46.04931)
+    )
+
+  dragage[["msor"]] <- list(coords) %>%
+           st_polygon() %>%
+           st_sfc(crs = 4326) %>%
+           st_sf(id_dragage = "msor")
+
 
   # ==================================================================
-  # Sorel-Tracy - Port de Sorel-Tracy
-  # TODO
+  # Sorel-Tracy
+  # Port de Sorel-Tracy
   # ==================================================================
+  # Dragage
+  coords <- rbind(
+    c(-73.11810, 46.04653),
+    c(-73.11714, 46.04821),
+    c(-73.11568, 46.04843),
+    c(-73.11545, 46.04867),
+    c(-73.11571, 46.04937),
+    c(-73.11408, 46.04948),
+    c(-73.11360, 46.04801),
+    c(-73.11585, 46.04769),
+    c(-73.11570, 46.04715),
+    c(-73.11810, 46.04653)
+  )
+
+  dragage[["psor"]] <- list(coords) %>%
+            st_polygon() %>%
+            st_sfc(crs = 4326) %>%
+            st_sf(id_dragage = "psor")
 
   # ==================================================================
   # Tadoussac
@@ -796,7 +865,7 @@ get_data0019 <- function() {
   # ==================================================================
   # Valleyfield
   # Port de Valleyfield
-  # TODO
+  # WARNING: Not done, outside the study area
   # ==================================================================
 
   # ==================================================================
@@ -819,7 +888,7 @@ get_data0019 <- function() {
 
 
 
-  
+
   # mv <- mapview(dragage) + depot
   data0019 <- bind_rows(dragage, depot)
 
