@@ -263,6 +263,7 @@ get_data0046 <- function() {
 
   # -----
   data0046 <- bind_rows(dragage, depot) %>%
+              mutate(municipalite = "Chenal de navigation du fleuve Saint-Laurent") %>% # voir data0019
               st_transform(crs = global_parameters()$crs)
 
 

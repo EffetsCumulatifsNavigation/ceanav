@@ -1,0 +1,20 @@
+title: Dragage
+description: Distribution des sites de dragage et de dépôt de dragage dans le Saint-Laurent
+  et le Saguenay
+dataDescription:
+  units: m^3 * km^-2
+  spatial:
+    resolution: 1km^2
+    extent:
+    - -112309.1104231
+    - 392532.8504619
+    - 127370.787435
+    - 591702.328144
+  temporal:
+    resolution: Event based
+    start: '2001'
+    end: '2019'
+rawData:
+- 0018
+- 0019
+- '0046'

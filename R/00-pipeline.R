@@ -101,7 +101,7 @@ pipeline <- function(
     # Stresseurs
     st_ancrage()
     st_deversement()
-    # st_dragage()
+    st_dragage()
     # st_naufrages()
     st_navigation()
     st_peche_commerciale()
