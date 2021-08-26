@@ -32,10 +32,10 @@ get_data0019 <- function() {
   #   https://www.rapidtables.com/convert/number/degrees-minutes-seconds-to-degrees.html
   #
   #   Code to visualize point, draw polygon and extract coordinates
-    x <- st_point(matrix(c(-67.2848, 49.4214), nrow = 1)) %>%
-         st_sfc(crs = 4326)
-    x <- mapview(x) %>% mapedit::editMap()
-    st_coordinates(x[[1]])
+  #   x <- st_point(matrix(c(-67.2848, 49.4214), nrow = 1)) %>%
+  #        st_sfc(crs = 4326)
+  #   x <- mapview(x) %>% mapedit::editMap()
+  #   st_coordinates(x[[1]])
   # _________________________________________________________________________ #
 
 
@@ -49,10 +49,6 @@ get_data0019 <- function() {
 
   # BD manuellement formatée
   dat <- read.csv(paste0(folder, "dragage_format_DavidBeauchesne_UniversiteLaval.csv"))
-
-  # Importer données de la GCC
-  secteurs <- st_read("./data/data-raw/data0018-dragage/secteurs.shp") %>%
-              st_transform(4326)
 
   # Rayon des buffers pour les sites de depot identifiés uniquement par un point
   buf <- 100
@@ -478,10 +474,12 @@ get_data0019 <- function() {
   # Montréal
   # Port de Montréal
   # TODO
+  message("Il manque les informations pour la localisation des activités de dragage recensées pour le Port de Montréal")
   # ==================================================================
   # Dragage
 
-
+  # Depot
+  # Bassin Vickers
 
   # ==================================================================
   # Rimouski
@@ -878,22 +876,27 @@ get_data0019 <- function() {
   # _________________________________________________________________________ #
 
 
-  # -------------------------------------------------------------------------
-  ## Bind together
-  dragage  <- bind_rows(dragage)
-  depot <- bind_rows(depot)
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  # Spatial dataset
+  # ----------------------------------------
+  # Dragage
+  dragage  <- bind_rows(dragage) %>%
+              left_join(dat, ., by = "id_dragage") %>%
+              st_as_sf() %>%
+              mutate(type = "dragage") %>%
+              filter(!is.na(id_dragage))
+
+  # Depot
+  depot  <- bind_rows(depot) %>%
+              left_join(dat, ., by = "id_depot") %>%
+              st_as_sf() %>%
+              mutate(type = "depot") %>%
+              filter(!is.na(id_depot))
 
 
-
-
-
-
-
-  # mv <- mapview(dragage) + depot
-  data0019 <- bind_rows(dragage, depot)
-
-  # Transform projection
-  data0019 <- st_transform(data0019, crs = global_parameters()$crs)
+  # -----
+  data0019 <- bind_rows(dragage, depot) %>%
+              st_transform(crs = global_parameters()$crs)
   # _________________________________________________________________________ #
 
 

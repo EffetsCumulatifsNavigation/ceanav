@@ -4,13 +4,17 @@
 \alias{get_data0019}
 \title{Data 0019 : Sites de dragage et de dépôt}
 \source{
-ECCC 2020. Bilan des activités de dragage dans l’Estuaire du Saint-Laurent de 2009 à 2016. Document de travail.
+Environnement et Changement Climatique Canada (2020) Bilan des activités de dragage dans l’Estuaire du Saint-Laurent de 2009 à 2016. Document de travail
+
+Ministères des Transports du Québec (2016) Compilation des dragages dans l’ensemble du Saint-Laurent entre 2001 et 2016. Document de travail
+
+Ministères des Transports du Québec (2017) Bref portrait des activités de dragage dans la voie navigable du fleuve Saint-Laurent de 2001 à 2016. 50 + iv
 }
 \usage{
 get_data0019()
 }
 \description{
-Bilan des activités de dragage dans l'estuaire du Saint-Laurent
+Compilation des dragages dans l’ensemble du Saint-Laurent entre 2001 et 2016.
 }
 \details{
 Cette fonction formatte les données
