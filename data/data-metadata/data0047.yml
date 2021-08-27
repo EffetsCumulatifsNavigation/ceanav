@@ -1,0 +1,10 @@
+data_description:
+  id: "0047"
+  name: "Délimitation des zones industrialo-portuaires"
+  description: "Données géolocalisées et cartes illustrant la délimitation des zones industrialo-portuaires"
+  access_date: 2021-08-27
+  contact_id: "0043"
+  url: "https://www.donneesquebec.ca/recherche/dataset/delimitation-des-zones-ip-industrialo-portuaires"
+  identifiant: "7c346a57-fa74-4dc2-ab97-d5cf3d46d310"
+  availability: "open source"
+  citation: "Ministère de l'Économie et de l'Innovation (2021) Délimitation des zones industrialo-portuaires. url: https://www.donneesquebec.ca/recherche/dataset/delimitation-des-zones-ip-industrialo-portuaires"
