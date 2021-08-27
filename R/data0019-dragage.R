@@ -823,21 +823,22 @@ get_data0019 <- function() {
   # ==================================================================
   # Tadoussac
   # Desserte ouest
+  # NOTE: not used
   # ==================================================================
-  # Dragage
-  coords <- rbind(c(-69.73103, 48.12714),
-                  c(-69.73011, 48.12770),
-                  c(-69.72878, 48.12671),
-                  c(-69.72959, 48.12613),
-                  c(-69.73103, 48.12714))
-
-  dragage[["dotd"]] <- list(coords) %>%
-            st_polygon() %>%
-            st_sfc(crs = 4326) %>%
-            st_sf(id_dragage = "dotd")
-
-  # Depot
-  # Même que desserte est : drtd
+  # # Dragage
+  # coords <- rbind(c(-69.73103, 48.12714),
+  #                 c(-69.73011, 48.12770),
+  #                 c(-69.72878, 48.12671),
+  #                 c(-69.72959, 48.12613),
+  #                 c(-69.73103, 48.12714))
+  #
+  # dragage[["dotd"]] <- list(coords) %>%
+  #           st_polygon() %>%
+  #           st_sfc(crs = 4326) %>%
+  #           st_sf(id_dragage = "dotd")
+  #
+  # # Depot
+  # # Même que desserte est : drtd
 
   # ==================================================================
   # Tadoussac
