@@ -1,0 +1,11 @@
+title: Influence de la navigation en zone portuaire
+description: Couche de données transformées pour l'influence de la navigation en zone
+  portuaire dans le Saint-Laurent et le Saguenay
+dataDescription:
+  units: NA
+  spatial:
+    resolution: 1km^2
+    extent: NA
+rawData:
+- '0041'
+- '0047'

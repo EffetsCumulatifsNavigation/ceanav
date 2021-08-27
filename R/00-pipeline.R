@@ -106,6 +106,7 @@ pipeline <- function(
     # st_naufrages()
     st_navigation()
     st_peche_commerciale()
+    st_port()
     # st_rejets()
   }
 
