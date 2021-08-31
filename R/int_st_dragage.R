@@ -20,10 +20,12 @@ st_dragage <- function() {
   load_format("data0019")
   load_format("data0046")
   load_format("data0048")
+  load_format("data0049")
+  load_format("data0050")
 
   # ------------------------------------------------------
   meta <- load_metadata("int_st_dragage")
-  meta$rawData <- c("0018", "0019", "0046", "0048")
+  meta$rawData <- c("0018", "0019", "0046", "0048", "0049", "0050")
   # ------------------------------------------------------------------------- #
 
 
@@ -70,10 +72,24 @@ st_dragage <- function() {
   #
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   dat0048 <- data0048 %>%
-              mutate(type = "dragage",
-                     area_tot = as.numeric(st_area(.)) * 1e-6) %>%
-              select(municipalite, name, annee, volume, type, area_tot, geometry) %>%
-              filter(annee > 2021)
+             filter(annee > 2021) %>%
+             mutate(area_tot = as.numeric(st_area(.)) * 1e-6) %>%
+             select(municipalite, name, annee, volume, area_tot, geometry)
+
+  # -----
+  dat0049 <- data0049 %>%
+             mutate(area_tot = as.numeric(st_area(.)) * 1e-6) %>%
+             select(municipalite, name, annee, volume, area_tot, geometry)
+
+  # -----
+  dat0050 <- data0050 %>%
+             mutate(area_tot = as.numeric(st_area(.)) * 1e-6) %>%
+             select(municipalite, name, annee, volume, area_tot, geometry)
+
+  # -----
+  dragage_prevu <- bind_rows(dat0048, dat0049, dat0050) %>%
+                   group_by(municipalite, name, area_tot) %>%
+                   summarise(volume = sum(volume))
 
 
   # ------------------------------------------------------------------------- #
@@ -105,9 +121,19 @@ st_dragage <- function() {
            st_drop_geometry()
 
   # -----
+  dragage_prevu <- st_intersection(grid1p, dragage_prevu) %>%
+                   mutate(area = as.numeric(st_area(.)) * 1e-6,
+                          area_prop = area / area_tot,
+                          intensite = volume * area_prop) %>%
+                   group_by(id) %>%
+                   summarise(dragage_prevu = sum(intensite)) %>%
+                   st_drop_geometry()
+
+  # -----
   grid1p <- grid1p %>%
             left_join(dragage, by = "id") %>%
-            left_join(depot, by = "id")
+            left_join(depot, by = "id") %>%
+            left_join(dragage_prevu, by = "id")
 
   # -----
   dragage <- grid1p %>%
