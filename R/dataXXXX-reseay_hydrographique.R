@@ -2,9 +2,7 @@
 #'
 #'
 #'
-#' @keywords
-#' @keywords
-#' @keywords
+#' @keywords a
 #'
 #' @source https://www.donneesquebec.ca/recherche/dataset/grhq
 #'
