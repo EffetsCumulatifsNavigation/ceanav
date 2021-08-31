@@ -20,7 +20,7 @@ get_data0048 <- function() {
   #   Les sites de dragage du port Alfred sont adjacent aux 2 quais. Toutefois,
   #   compte tenu l'échelle de notre analyse, un seul polygone regroupant les
   #   différents sites de dragage a été tracé.
-  message("Les sites de dragage du port Alfred sont adjacent aux 2 quais. Toutefois, compte tenu l'échelle de notre analyse, un seul polygone regroupant les différents sites de dragage a été tracé.")
+  message("Data 0048 : les sites de dragage du port Alfred sont adjacent aux 2 quais. Toutefois, compte tenu l'échelle de notre analyse, un seul polygone regroupant les différents sites de dragage a été tracé.")
   #
   # RESOURCES:
   #   Degrees minutes seconds to degrees decimals converter:
@@ -45,8 +45,8 @@ get_data0048 <- function() {
   # Données
   dat <- data.frame(municipalite = "Saguenay",
                     name = "Port Alfred",
-                    annee = c(2010,2014,2018),
-                    volume = c(1300,900,2886))
+                    annee = c(2010,2014,2018,2022,2026),
+                    volume = c(1300,900,2886,2886,2886))
 
   # Dragage
   coords <- rbind(
@@ -60,7 +60,7 @@ get_data0048 <- function() {
   data0048 <- list(coords) %>%
               st_polygon() %>%
               st_sfc(crs = 4326) %>%
-              st_sf(dat) %>%
+              st_sf(dat, row.names = "") %>%
               st_transform(crs = global_parameters()$crs)
   # _________________________________________________________________________ #
 
@@ -70,6 +70,7 @@ get_data0048 <- function() {
   # Output
   st_write(obj = data0048,
            dsn = "./data/data-format/data0048-dragage_port_alfred.geojson",
-           delete_dsn = TRUE)
+           delete_dsn = TRUE,
+           quiet = TRUE)
   # _________________________________________________________________________ #
 }

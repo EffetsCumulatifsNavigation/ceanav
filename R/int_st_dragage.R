@@ -12,7 +12,7 @@
 
 st_dragage <- function() {
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
-  # Load  data
+  # Load data
   # ------------------------------------
   #
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
@@ -29,41 +29,54 @@ st_dragage <- function() {
 
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
-  # Format and combine data
+  # Format and combine data for historic dredging
   # ------------------------------------
   #
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   # -----
-  data0019 <- rename(data0019, name = site_dragage,  volume = volume_m3) %>%
+  dat0019 <- rename(data0019, name = site_dragage,  volume = volume_m3) %>%
               mutate(volume = as.numeric(volume),
                      area_tot = as.numeric(st_area(.)) * 1e-6) %>%
               select(municipalite, name, annee, volume, type, area_tot, geometry)
 
   # -----
-  data0046 <- filter(data0046, annee > 2000 & volume > 0) %>%
+  dat0046 <- filter(data0046, annee > 2000 & volume > 0) %>%
               mutate(area_tot = as.numeric(st_area(.)) * 1e-6) %>%
               select(municipalite, name, annee, volume, type, area_tot, geometry)
 
   # -----
-  data0048 <- data0048 %>%
+  dat0048 <- data0048 %>%
               mutate(type = "dragage",
                      area_tot = as.numeric(st_area(.)) * 1e-6) %>%
-              select(municipalite, name, annee, volume, type, area_tot, geometry)
-
+              select(municipalite, name, annee, volume, type, area_tot, geometry) %>%
+              filter(annee <= 2021)
 
   # -----
-  dragage <- bind_rows(data0019, data0046, data0048) %>%
+  dragage <- bind_rows(dat0019, dat0046, dat0048) %>%
              filter(type == "dragage") %>%
              group_by(municipalite, name, type, area_tot) %>%
              summarise(volume = sum(volume))
 
   # -----
-  depot <- bind_rows(data0019, data0046) %>%
+  depot <- bind_rows(dat0019, dat0046) %>%
            filter(type == "depot") %>%
            group_by(municipalite, name, type, area_tot) %>%
            summarise(volume = sum(volume))
   # ------------------------------------------------------------------------- #
 
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  # Format and combine data for future dredging
+  # ------------------------------------
+  #
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  dat0048 <- data0048 %>%
+              mutate(type = "dragage",
+                     area_tot = as.numeric(st_area(.)) * 1e-6) %>%
+              select(municipalite, name, annee, volume, type, area_tot, geometry) %>%
+              filter(annee > 2021)
+
+
+  # ------------------------------------------------------------------------- #
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   # Integrate to study grid
@@ -107,14 +120,15 @@ st_dragage <- function() {
   # ------------------------------------
   #
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
-  message("Warning: still missing Montreal, Quebec & Saguenay")
+  message("Dragage: Warning: still missing Montreal and Quebec")
   # -----
   write_yaml(meta, "./data/data-metadata/int_st_dragage.yml")
 
   # -----
   st_write(obj = dragage,
            dsn = "./data/data-integrated/st_dragage.geojson",
-           delete_dsn = TRUE)
+           delete_dsn = TRUE,
+           quiet = TRUE)
   # ------------------------------------------------------------------------- #
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
