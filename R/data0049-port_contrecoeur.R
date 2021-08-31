@@ -5,8 +5,9 @@
 #' @keywords dragage
 #' @keywords stresseurs
 #'
-#' @source Ministère de l'Environnement et Lutte Contre les Changement Climatiques (2019) Rapport d’analyse environnementale Programme décennal de dragage d’entretien des installations portuaires de Port-Alfred sur le territoire de la ville de Saguenay. Direction générale de l'évaluation environnementale et stratégique. Direction de l'évaluation environnementale des projets hydriques et industriels. Dossier 3211-02-299. 29p. + viii
-#' @source Englobe (2016) Programme décennal de dragage d’entretien et réfection des quais – Installations portuaires Port-Alfred, La Baie, Québec. Étude d’impact sur l’environnement. Rapport final 045-P-0008779-0-01-291-EN-R-0200-00. 132p. + ix
+#' @source SNC Lavalin (2017) Agrandissement du terminal portuaire de Contrecoeur. Étude d’impact environnemental - Volume 1 – Rapport principal. Rapport final - F00. Ref. Interne 639223. 889p
+#' @source SNC Lavalin (2017) Contrecoeur Maritime Terminal Expansion Project. Environmental Impact Assessment – Summary. Final Report > Rev. F02. Internal ref. 639223. 109p.
+#' @source Impact Assessment Agency of Canada (2021) Contrecoeur Port Terminal Expansion Project. Environmental Assessment Report. Catalog Number: En106-236/2021E-PD. ISBN: 978-0-660-37365-2. 336p. + xiii.
 #'
 #' @export
 #'
