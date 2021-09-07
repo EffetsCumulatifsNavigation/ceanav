@@ -117,6 +117,12 @@ pipeline <- function(
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~
   if (pipeline_alaysis) {
+    # Stresseurs
+    ana_stresseurs_raw()
+
+    # Composantes valorisées
+    ana_composantes_valorisees()
+
     # Transformer stresseurs
     ana_stresseurs_format()
 

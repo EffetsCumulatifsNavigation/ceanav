@@ -62,6 +62,7 @@ data/data-integrated/*.geojson
 data/data-integrated/*.csv
 data/data-integrated/*.tif
 data/data-basemap/*.geojson
+data/data-output/*.geojson
 
 # Figures ----
 figures/figures-format/data*
