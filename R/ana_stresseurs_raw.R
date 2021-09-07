@@ -26,7 +26,7 @@ ana_stresseurs_raw <- function() {
   # -----
   change_colnames <- function(x, suffix) {
     x <- st_drop_geometry(x)
-    colnames(x)[-ncol(x)] <- glue("{suffix}_{colnames(x)[-ncol(x)]}")
+    colnames(x) <- glue("{suffix}_{colnames(x)}")
     x
   }
 
