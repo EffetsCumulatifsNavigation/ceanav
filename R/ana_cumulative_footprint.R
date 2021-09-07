@@ -25,11 +25,45 @@ ana_cumulative_footprint <- function() {
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
 
   # -----
-  load_output("stresseurs_format")
+  data(grid1p)
 
   # -----
-  cumulative_footprint <- cumul_foot(stresseurs_format)
-  
+  load_output("stresseurs_format")
+  dr <- st_drop_geometry(stresseurs_format)
+
+  # -----
+  stressor_cumul <- function(x, stress, normaliser = FALSE) {
+    uid <- str_detect(colnames(x), stress)
+    dat <- cumulativeFootprint(x[,uid, drop = FALSE], normaliser)
+    dat
+  }
+
+  # -----
+  ancrage <- stressor_cumul(dr, "ancrage", normaliser = TRUE)
+  deversement <- stressor_cumul(dr, "deversement", normaliser = TRUE)
+  dragage <- stressor_cumul(dr, "dragage", normaliser = TRUE)
+  navigation <- stressor_cumul(dr, "navigation", normaliser = TRUE)
+  peche_commerciale <- stressor_cumul(dr, "peche_commerciale", normaliser = TRUE)
+  port <- stressor_cumul(dr, "port", normaliser = TRUE)
+
+  # -----
+  cumulative_footprint <- cumulativeFootprint(dr)
+
+  # -----
+  cumulative_footprint_norm <- ancrage + deversement + dragage + navigation + peche_commerciale + port
+
+  # -----
+  cumulative_footprint <- cbind(
+    grid1p,
+    cumulative_footprint,
+    cumulative_footprint_norm,
+    ancrage,
+    deversement,
+    dragage,
+    navigation,
+    peche_commerciale,
+    port
+   )
 
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
@@ -40,7 +74,8 @@ ana_cumulative_footprint <- function() {
   # -----
   st_write(obj = cumulative_footprint,
            dsn = "./data/data-output/cumulative_footprint.geojson",
-           delete_dsn = TRUE)
+           delete_dsn = TRUE,
+           quiet = TRUE)
   # ------------------------------------------------------------------------- #}
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
