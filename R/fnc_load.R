@@ -139,3 +139,26 @@ basemap <- function(basemap_name) {
            envir = globalenv())
   }
 }
+
+
+# =================================================================
+#' @rdname load
+#' @export
+load_output <- function(data_name) {
+  files <- dir('./data/data-output', full.names = TRUE)
+
+  # Identify dataset to load
+  uid <- str_detect(files, data_name)
+
+  # Identify extensions
+  ext <- last(str_split(files[uid], "\\.")[[1]])
+
+  # Load according to extension type
+  ## ---------------------------------------------
+  ## GEOJSON
+  if (ext == "geojson") {
+    assign(x = data_name,
+           value = st_read(files[uid], quiet = TRUE),
+           envir = globalenv())
+  }
+}

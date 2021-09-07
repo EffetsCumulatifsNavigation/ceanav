@@ -6,6 +6,7 @@
 \alias{load_contact}
 \alias{load_integrated}
 \alias{basemap}
+\alias{load_output}
 \title{Load data, metadata and contact information}
 \usage{
 load_format(data_id)
@@ -17,6 +18,8 @@ load_contact(data_id)
 load_integrated(data_name)
 
 basemap(basemap_name)
+
+load_output(data_name)
 }
 \arguments{
 \item{data_id}{\code{character} id of data to import in R session with format \code{dataXXXX} for \code{load_format()}, \code{metadata_dataXXXX} for \code{load_metadata()}, and \code{contact_dataXXXX} for \code{load_contact()}.}
