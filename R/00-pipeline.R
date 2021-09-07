@@ -116,6 +116,22 @@ pipeline <- function(
 
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~
+  if (pipeline_alaysis) {
+    # Transformer stresseurs
+    ana_stresseurs_format()
+
+    # Cumulative footprint
+    ana_cumulative_footprint()
+
+    # Cumulative valued components
+
+    # Cumulative exposure
+
+    # Cumulative effects
+  }
+
+
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~
   if (pipeline_figures) {
     # Données formatées (annexe)
     rep_annexe_data_figures_all()
