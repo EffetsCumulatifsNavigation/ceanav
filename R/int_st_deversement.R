@@ -33,7 +33,6 @@ st_deversement <- function() {
   load_format("data0016")
   dev <- data0016
   dev <- st_transform(dev, global_parameters()$crs)
-  message("int_st_deversement.R: remove st_transform() once all data are transformed in data-format/")
 
   # Load grid
   data(grid1p)
@@ -92,6 +91,16 @@ st_deversement <- function() {
                         autres = autres,
                         inconnus = inconnus)
 
+
+  # -------
+  # Identify cells in the aoi that are only terrestrial and hence shouldn't be included.
+  data(aoi)
+  uid <- st_intersects(aoi, deversement) %>% unlist()
+  nid <- !1:nrow(deversement) %in% uid
+  deversement <- st_drop_geometry(deversement)
+  for(i in 1:ncol(deversement)) deversement[nid, i] <- 0
+  deversement <- cbind(grid1p, deversement)
+
   # exportMapview(deversement[, 'hydrocarbures'], './share/hydrocarbures.html')
   # exportMapview(deversement[, 'autres'], './share/autres.html')
   # exportMapview(deversement[, 'inconnus'], './share/inconnus.html')
@@ -104,7 +113,8 @@ st_deversement <- function() {
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   st_write(obj = deversement,
            dsn = "./data/data-integrated/st_deversement.geojson",
-           delete_dsn = TRUE)
+           delete_dsn = TRUE,
+           quiet = TRUE)
   # ------------------------------------------------------------------------- #
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #

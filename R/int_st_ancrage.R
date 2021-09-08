@@ -37,6 +37,13 @@ st_ancrage <- function() {
 
   # -----
   ancrage <- grid1p %>% mutate(ancrage = ancrage)
+
+  # -------
+  # Identify cells in the aoi that are only terrestrial and hence shouldn't be included.
+  data(aoi)
+  uid <- st_intersects(aoi, ancrage) %>% unlist()
+  nid <- !1:nrow(ancrage) %in% uid
+  ancrage$ancrage[nid] <- 0
   # ------------------------------------------------------------------------- #
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
