@@ -32,11 +32,11 @@ st_port <- function() {
   #
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   # WARNING: For visualization purposes, simply a 5 km buffer for now
-  data0041 <- st_buffer(data0041, 5000)
-  data0047 <- st_buffer(data0047, 5000)
+  data0041 <- st_buffer(data0041, 2000)
+  data0047 <- st_buffer(data0047, 4000)
 
   # -----
-  port <- bind_rows(data0041, data0047)
+  # port <- bind_rows(data0041, data0047)
 
   # ------------------------------------------------------------------------- #
 
@@ -48,15 +48,28 @@ st_port <- function() {
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   data(grid1p)
 
+  # Ports
   # -----
-  uid <- st_intersects(port, grid1p) %>%
-       unlist() %>%
-       unique()
+  uid <- st_intersects(data0041, grid1p) %>%
+         unlist() %>%
+         unique()
 
   # -----
   port <- grid1p %>%
-          mutate(navigation_portuaire = 0)
-  port$navigation_portuaire[uid] <- 1
+          mutate(port = 0)
+  port$port[uid] <- 1
+
+  # Zones industrialo-portuaires
+  # -----
+  uid <- st_intersects(data0047, grid1p) %>%
+         unlist() %>%
+         unique()
+
+  # -----
+  port <- port %>%
+          mutate(zone_portuaire = 0)
+  port$zone_portuaire[uid] <- 1
+
   # ------------------------------------------------------------------------- #
 
 
