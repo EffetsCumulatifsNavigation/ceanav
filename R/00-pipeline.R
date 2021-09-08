@@ -130,6 +130,7 @@ pipeline <- function(
     ana_cumulative_composantes_valorisees()
 
     # Cumulative exposure
+    ana_cumulative_exposure()
 
     # Cumulative effects
   }
