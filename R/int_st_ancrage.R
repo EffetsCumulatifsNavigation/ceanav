@@ -19,7 +19,7 @@ st_ancrage <- function() {
   # https://github.com/EffetsCumulatifsNavigation/ceanav/issues/6
   #
   # For now, I will do something simple:
-  #   1. 5km buffer around anchorages (totally arbitrary)
+  #   1. 2km buffer around anchorages (totally arbitrary)
   #   2. Intersect with grid
   #   3. Number of buffers intersecting grid cell
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
@@ -29,13 +29,13 @@ st_ancrage <- function() {
   # Load grid
   data(grid1p)
 
-  # Identify grid cells with zostera
-  ancrage <- st_buffer(ancrage, 5000) %>%
+  # -----
+  ancrage <- st_buffer(data0015, 2000) %>%
              st_intersects(grid1p,.) %>%
              lapply(., length) %>%
              unlist()
 
-  # Add info to grid
+  # -----
   ancrage <- grid1p %>% mutate(ancrage = ancrage)
   # ------------------------------------------------------------------------- #
 
@@ -46,7 +46,8 @@ st_ancrage <- function() {
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   st_write(obj = ancrage,
            dsn = "./data/data-integrated/st_ancrage.geojson",
-           delete_dsn = TRUE)
+           delete_dsn = TRUE,
+           quiet = TRUE)
   # ------------------------------------------------------------------------- #
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
