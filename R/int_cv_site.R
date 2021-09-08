@@ -216,8 +216,15 @@ cv_site <- function() {
   load_format("data0040")
 
   # -----
+  nm <- c("Habitat faunique","Habitat d'une espèce floristique menacée ou vulnérable",
+          "Réserve de territoire aux fins d'aire protégée")
+  iid <- data0038$DESIG_GR %in% nm
+  data0038 <- data0038[!iid, ]
+
+  # -----
   site$milieu_protege <- uid(data0030, data0038, data0039, data0040)
 
+  mapview(site[,'milieu_protege'])
 
   # ----------------------------
   # Sites patrimoniaux : 0044, 0045
@@ -245,7 +252,8 @@ cv_site <- function() {
   # -----
   st_write(obj = site,
            dsn = "./data/data-integrated/cv_site.geojson",
-           delete_dsn = TRUE)
+           delete_dsn = TRUE,
+           quiet = TRUE)
   # ------------------------------------------------------------------------- #}
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
