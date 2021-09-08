@@ -7,15 +7,15 @@
 cumulativeFootprint(dat, normaliser = FALSE)
 }
 \arguments{
-\item{dat}{data.frame with stressors intensity}
+\item{dat}{data.frame with stressors intensity or valued components}
 
 \item{normaliser}{logical, whether to normalize footprint}
 }
 \description{
-Function to evaluate cumulative footprint of stressors
+Function to evaluate cumulative footprint of stressors and valued components
 }
 \details{
-This function uses fisheries data to evaluate the intensity of fishing over a regular grid. If \code{normaliser} is TRUE, then the cumulative footprint is divided by the number of cumulated stressors.
+
 }
 \keyword{cumulative}
 \keyword{footprint}

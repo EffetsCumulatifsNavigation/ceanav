@@ -1,4 +1,4 @@
-#' Empreinte cumulée
+#' Empreinte cumulée des stressurs environnementaux
 #'
 #' Évaluation de l'empreinte cumulée des stresseurs environnementaux considérés
 #'
@@ -10,7 +10,7 @@
 #' @details Cette fonction effectue une partie des analyses du projet d'évaluation des effets cumulatifs
 #'
 
-ana_cumulative_footprint <- function() {
+ana_cumulative_stressors <- function() {
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   # Notes
   # ------------------------------------

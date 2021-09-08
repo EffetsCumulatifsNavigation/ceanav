@@ -1,15 +1,15 @@
 #' Cumulative footprint
 #'
-#' Function to evaluate cumulative footprint of stressors
+#' Function to evaluate cumulative footprint of stressors and valued components
 #'
-#' @param dat data.frame with stressors intensity
+#' @param dat data.frame with stressors intensity or valued components
 #' @param normaliser logical, whether to normalize footprint
 #'
 #' @keywords cumulative footprint
 #'
 #' @export
 #'
-#' @details This function uses fisheries data to evaluate the intensity of fishing over a regular grid. If `normaliser` is TRUE, then the cumulative footprint is divided by the number of cumulated stressors.
+#' @details 
 #'
 
 cumulativeFootprint <- function(dat, normaliser = FALSE) {

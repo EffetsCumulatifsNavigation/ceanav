@@ -117,19 +117,17 @@ pipeline <- function(
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~
   if (pipeline_alaysis) {
-    # Stresseurs
+    # Stresseurs et composantes valorisées
     ana_stresseurs_raw()
+    ana_composantes_valorisees_raw()
 
-    # Composantes valorisées
-    ana_composantes_valorisees()
-
-    # Transformer stresseurs
+    # Transformer stresseurs et composantes valorisées
     ana_stresseurs_format()
+    ana_composantes_valorisees_format()
 
-    # Cumulative footprint
-    ana_cumulative_footprint()
-
-    # Cumulative valued components
+    # Stresseurs et composantes valorisées cumulés
+    ana_cumulative_stressors()
+    ana_cumulative_composantes_valorisees()
 
     # Cumulative exposure
 
