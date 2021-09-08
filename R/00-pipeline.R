@@ -126,7 +126,7 @@ pipeline <- function(
     ana_composantes_valorisees_format()
 
     # Stresseurs et composantes valorisées cumulés
-    ana_cumulative_stressors()
+    ana_cumulative_stresseurs()
     ana_cumulative_composantes_valorisees()
 
     # Cumulative exposure

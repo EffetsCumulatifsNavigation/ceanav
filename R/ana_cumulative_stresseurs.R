@@ -10,7 +10,7 @@
 #' @details Cette fonction effectue une partie des analyses du projet d'évaluation des effets cumulatifs
 #'
 
-ana_cumulative_stressors <- function() {
+ana_cumulative_stresseurs <- function() {
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   # Notes
   # ------------------------------------
@@ -47,16 +47,16 @@ ana_cumulative_stressors <- function() {
   port <- stressor_cumul(dr, "port", normaliser = TRUE)
 
   # -----
-  cumulative_footprint <- cumulativeFootprint(dr)
+  cumulative_stresseurs <- cumulativeFootprint(dr)
 
   # -----
-  cumulative_footprint_norm <- ancrage + deversement + dragage + navigation + peche_commerciale + port
+  cumulative_stresseurs_norm <- ancrage + deversement + dragage + navigation + peche_commerciale + port
 
   # -----
-  cumulative_footprint <- cbind(
+  cumulative_stresseurs <- cbind(
     grid1p,
-    cumulative_footprint,
-    cumulative_footprint_norm,
+    cumulative_stresseurs,
+    cumulative_stresseurs_norm,
     ancrage,
     deversement,
     dragage,
@@ -72,8 +72,8 @@ ana_cumulative_stressors <- function() {
   #
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   # -----
-  st_write(obj = cumulative_footprint,
-           dsn = "./data/data-output/cumulative_footprint.geojson",
+  st_write(obj = cumulative_stresseurs,
+           dsn = "./data/data-output/cumulative_stresseurs.geojson",
            delete_dsn = TRUE,
            quiet = TRUE)
   # ------------------------------------------------------------------------- #}
