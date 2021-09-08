@@ -27,6 +27,11 @@ plot_integrated.sf <- function(dat, main = NULL, subtitle = NULL, ...) {
   # png(glue('./figures/delete.png'), res = 300, width = 100, height = 70, units = "mm", pointsize = 12)
 
   # ------------------
+  uid <- !is.na(dat[, 1, drop = TRUE]) &
+         dat[, 1, drop = TRUE] > 0
+  dat <- dat[uid, ]
+
+  # ------------------
   global_parameters()
 
   # ------------------
