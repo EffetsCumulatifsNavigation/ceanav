@@ -55,3 +55,26 @@ quantNorm <- function(x) {
   x[x < 0] <- 0
   x
 }
+
+
+# ------------------------------------------------------------------------------
+# Remove cells that do not intersect water
+removeCoast <- function(dat) {
+  # -----
+  data(aoi)
+  data(grid1p)
+
+  # -----
+  uid <- st_intersects(aoi, dat) %>% unlist()
+  nid <- !1:nrow(dat) %in% uid
+
+  # -----
+  dat <- st_drop_geometry(dat)
+  for(i in 1:ncol(dat)) dat[nid, i] <- NA
+
+  # -----
+  dat <- cbind(grid1p, dat)
+
+  # -----
+  dat
+}
