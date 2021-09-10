@@ -141,7 +141,7 @@ cv_habitat <- function() {
   load_format("data0029")
 
   # -----
-  habitat$milieu_humide <- uid(data0029)
+  habitat$zone_herbacee <- uid(data0029)
 
 
   # ------------------------------------------------------
