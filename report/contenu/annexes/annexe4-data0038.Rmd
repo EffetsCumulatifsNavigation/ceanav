@@ -1,0 +1,44 @@
+### 0038 : Registre des aires protégées au Québec {-}
+
+<!-- -------------------------------------------------- -->
+**Description** : Ces thématiques présentent la compilation des aires protégées au Québec.
+
+<!-- -------------------------------------------------- -->
+
+  **Hyperlien** : [https://www.donneesquebec.ca/recherche/dataset/aires-protegees-au-quebec](https://www.donneesquebec.ca/recherche/dataset/aires-protegees-au-quebec)
+
+
+<!-- -------------------------------------------------- -->
+
+  **Couverture temporelle** : 2021 - 2021
+
+
+
+<!-- -------------------------------------------------- -->
+**Contact** :
+
+
+  - 0037 : *Ministère de l’Environnement et de la Lutte contre les changements climatiques*
+
+
+<!-- -------------------------------------------------- -->
+**Figure** :
+
+![](../figures/figures-format/data0038.png)
+
+
+<!-- -------------------------------------------------- -->
+**Citation** :
+
+
+  - Ministère de l’Environnement et de la Lutte contre les changements climatiques (2021) Registre des aires protégées au Québec. url: https://www.donneesquebec.ca/recherche/dataset/aires-protegees-au-quebec
+
+
+
+
+<!-- -------------------------------------------------- -->
+
+
+
+<hr>
+<br>

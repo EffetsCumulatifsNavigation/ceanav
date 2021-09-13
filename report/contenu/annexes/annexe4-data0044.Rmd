@@ -1,0 +1,42 @@
+### 0044 : Site patrimoniaux {-}
+
+<!-- -------------------------------------------------- -->
+**Description** : Sites patrimoniaux classés par le ministre de la Culture et des Communications
+
+<!-- -------------------------------------------------- -->
+
+  **Hyperlien** : [https://www.donneesquebec.ca/recherche/fr/dataset/578d182d-4897-4c11-aa7f-ee0cfed222a0](https://www.donneesquebec.ca/recherche/fr/dataset/578d182d-4897-4c11-aa7f-ee0cfed222a0)
+
+
+<!-- -------------------------------------------------- -->
+
+
+
+<!-- -------------------------------------------------- -->
+**Contact** :
+
+
+  - 0041 : *Ministère de la Culture et des Communications*
+
+
+<!-- -------------------------------------------------- -->
+**Figure** :
+
+![](../figures/figures-format/data0044.png)
+
+
+<!-- -------------------------------------------------- -->
+**Citation** :
+
+
+  - Ministère de la Culture et des Communications (2021) Sites patrimoniaux classés par le ministre de la Culture et des Communications. [Accès aux données 2021-08-19]. url : https://www.donneesquebec.ca/recherche/fr/dataset/578d182d-4897-4c11-aa7f-ee0cfed222a0
+
+
+
+
+<!-- -------------------------------------------------- -->
+
+
+
+<hr>
+<br>

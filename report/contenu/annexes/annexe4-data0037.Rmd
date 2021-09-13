@@ -1,0 +1,44 @@
+### 0037 : Habitat floristique {-}
+
+<!-- -------------------------------------------------- -->
+**Description** : Un habitat floristique est une aire protégée qui abrite au moins une espèce floristique désignée menacée ou vulnérable et qui est identifié à l’article 7 du Règlement sur les espèces floristiques menacées ou vulnérables et leurs habitats.
+
+<!-- -------------------------------------------------- -->
+
+  **Hyperlien** : [https://www.donneesquebec.ca/recherche/dataset/habitats-floristiques](https://www.donneesquebec.ca/recherche/dataset/habitats-floristiques)
+
+
+<!-- -------------------------------------------------- -->
+
+  **Couverture temporelle** : 2021 - 2021
+
+
+
+<!-- -------------------------------------------------- -->
+**Contact** :
+
+
+  - 0036 : **Benoît** **Tremblay**, *Ministère de l’Environnement et de la Lutte contre les changements climatiques*
+
+
+<!-- -------------------------------------------------- -->
+**Figure** :
+
+![](../figures/figures-format/data0037.png)
+
+
+<!-- -------------------------------------------------- -->
+**Citation** :
+
+
+  - Ministère de l’Environnement et de la Lutte contre les changements climatiques (2021) Habitats floristiques. url: https://www.donneesquebec.ca/recherche/dataset/habitats-floristiques
+
+
+
+
+<!-- -------------------------------------------------- -->
+
+
+
+<hr>
+<br>

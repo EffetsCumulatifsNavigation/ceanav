@@ -3,6 +3,7 @@ data_description:
   name: "Dragage prévu Port de Montréal à Contrecoeur"
   description: "Identification des activités de dragage prévus au Port de Montréal à Contrecoeur"
   access_date: 2021-08-31
+  contact: "none"
   availability: "available"
   citation:
     - "SNC Lavalin (2017) Agrandissement du terminal portuaire de Contrecoeur. Étude d’impact environnemental - Volume 1 – Rapport principal. Rapport final - F00. Ref. Interne 639223. 889p"

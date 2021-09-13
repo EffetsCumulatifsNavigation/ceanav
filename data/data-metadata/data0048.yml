@@ -3,6 +3,7 @@ data_description:
   name: "Dragage Port Alfred"
   description: "Identification des sites de dragage au Port Alfred"
   access_date: 2021-08-27
+  contact: "none"
   availability: "available"
   citation:
     - "Ministère de l'Environnement et Lutte Contre les Changement Climatiques (2019) Rapport d’analyse environnementale Programme décennal de dragage d’entretien des installations portuaires de Port-Alfred sur le territoire de la ville de Saguenay. Direction générale de l'évaluation environnementale et stratégique. Direction de l'évaluation environnementale des projets hydriques et industriels. Dossier 3211-02-299. 29p. + viii"

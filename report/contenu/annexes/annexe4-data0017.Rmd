@@ -1,0 +1,46 @@
+### 0017 : Caractérisation des berges {-}
+
+<!-- -------------------------------------------------- -->
+**Description** : Caractérisation des berges de la partie fluviale du Saint-Laurent et analyse de l'évolution des facteurs hydro-climatiques influençant les aléas d'érosion et d'inondation
+
+<!-- -------------------------------------------------- -->
+
+  **Hyperlien** : [https://www.donneesquebec.ca/recherche/dataset/caracterisation-des-berges-et-analyse-de-l-evolution-des-facteurs-hydro-climatiques](https://www.donneesquebec.ca/recherche/dataset/caracterisation-des-berges-et-analyse-de-l-evolution-des-facteurs-hydro-climatiques)
+
+
+<!-- -------------------------------------------------- -->
+
+  **Couverture temporelle** : 2013 - 2020
+
+
+
+<!-- -------------------------------------------------- -->
+**Contact** :
+
+
+  - 0019 : **Patrick** **Lajeunesse**, *Université Laval*
+
+  - 0020 : **Jean-François** **Bernier**, *Université Laval*
+
+
+<!-- -------------------------------------------------- -->
+**Figure** :
+
+![](../figures/figures-format/data0017.png)
+
+
+<!-- -------------------------------------------------- -->
+**Citation** :
+
+
+  - Bernier, J.-F., Chassiot, L., Ouellet, C. et Lajeunesse, P. 2020. Caractérisation des berges de la partie fluviale du Saint-Laurent. Laboratoire de géosciences marines, Département de Géographie, Université Laval, Rapport soumis au Ministère de l’Environnement et de la Lutte contre les changements climatiques. 120 pp + annexes
+
+
+
+
+<!-- -------------------------------------------------- -->
+
+
+
+<hr>
+<br>

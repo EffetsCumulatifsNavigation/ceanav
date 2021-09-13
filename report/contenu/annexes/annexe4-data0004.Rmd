@@ -1,0 +1,42 @@
+### 0004 : Milieux humides Lac St-Pierre {-}
+
+<!-- -------------------------------------------------- -->
+**Description** : Données de terrain pour la cartographie des milieux humides du lac Saint-Pierre (fleuve Saint-Laurent), 2012
+
+<!-- -------------------------------------------------- -->
+
+  **Hyperlien** : [https://ouvert.canada.ca/data/fr/dataset/9c52df44-7a34-4a73-a92a-5e3b20de6c73](https://ouvert.canada.ca/data/fr/dataset/9c52df44-7a34-4a73-a92a-5e3b20de6c73)
+
+
+<!-- -------------------------------------------------- -->
+
+  **Couverture temporelle** : 2012 - 2012
+
+
+
+<!-- -------------------------------------------------- -->
+**Contact** :
+
+
+  - 0007 : *Environnement et Changement climatique Canada*
+
+
+<!-- -------------------------------------------------- -->
+**Figure** :
+
+![](../figures/figures-format/data0004.png)
+
+
+<!-- -------------------------------------------------- -->
+**Citation** :
+
+
+
+
+
+<!-- -------------------------------------------------- -->
+
+
+
+<hr>
+<br>

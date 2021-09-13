@@ -43,6 +43,9 @@ rep_annexe_data_description_all <- function(output_folder, suffix) {
   dataname <- dir("./data/data-metadata/", pattern = ".yml") %>%
               gsub(".yml","",.)
 
+  uid <- str_detect(dataname, "data")
+  dataname <- dataname[uid]
+
   for(i in dataname) {
     rep_annexe_data_description(
       data_id = i,

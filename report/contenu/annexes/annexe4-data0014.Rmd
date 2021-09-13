@@ -1,0 +1,44 @@
+### 0014 : Zones inondables BDZI {-}
+
+<!-- -------------------------------------------------- -->
+**Description** : Base de données des zones à risque d'inondation (BDZI)
+
+<!-- -------------------------------------------------- -->
+
+  **Hyperlien** : [https://www.donneesquebec.ca/recherche/fr/dataset/3ac8ddff-fe0a-4a7a-8393-d5938e8f35e5](https://www.donneesquebec.ca/recherche/fr/dataset/3ac8ddff-fe0a-4a7a-8393-d5938e8f35e5)
+
+
+<!-- -------------------------------------------------- -->
+
+  **Couverture temporelle** : 2018 - 2020
+
+
+
+<!-- -------------------------------------------------- -->
+**Contact** :
+
+
+  - 0015 : **Stéphane** **Comtois**, *Ministère de l’Environnement et de la Lutte contre les changements climatiques*
+
+
+<!-- -------------------------------------------------- -->
+**Figure** :
+
+![](../figures/figures-format/data0014.png)
+
+
+<!-- -------------------------------------------------- -->
+**Citation** :
+
+
+  - Ministère de l’Environnement et de la Lutte contre les changements climatiques (2020) Base de données des zones à risque d'inondation (BDZI) url: https://www.donneesquebec.ca/recherche/fr/dataset/3ac8ddff-fe0a-4a7a-8393-d5938e8f35e5
+
+
+
+
+<!-- -------------------------------------------------- -->
+
+
+
+<hr>
+<br>

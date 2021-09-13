@@ -1,0 +1,46 @@
+### 0003 : Zostères Mitis {-}
+
+<!-- -------------------------------------------------- -->
+**Description** : Données d'un projet de restauration expérimentale d’une zostéraie dans la Baie de Mitis
+
+<!-- -------------------------------------------------- -->
+
+  **Hyperlien** : [https://catalogue.ogsl.ca/fr/dataset/93fd20e8-c80b-4304-9eb4-80ac13a2d365](https://catalogue.ogsl.ca/fr/dataset/93fd20e8-c80b-4304-9eb4-80ac13a2d365)
+
+
+<!-- -------------------------------------------------- -->
+
+  **Couverture temporelle** : 2012 - 2014
+
+
+
+<!-- -------------------------------------------------- -->
+**Contact** :
+
+
+  - 0006 : *Comité ZIP du Sud-de-l'Estuaire*
+
+
+<!-- -------------------------------------------------- -->
+**Figure** :
+
+![](../figures/figures-format/data0003.png)
+
+
+<!-- -------------------------------------------------- -->
+**Citation** :
+
+
+  - Comité ZIP du Sud-de-l'Estuaire. (2012, 2013, 2014 du jeu de données téléchargé). Restauration expérimentale d’une zostéraie dans la Baie de Mitis. Données diffusées sur l'Observatoire global du Saint-Laurent-OGSL. [https://ogsl.ca]. Consulté le [2021-06-08]
+
+  - Bachand, É., Joubert, J-É, 2014. RESTAURATION DE L’HERBIER DE ZOSTÈRE MARINE (Zostera marina L.) DANS LA BAIE DE MITIS, GRAND-MÉTIS – Rapport des travaux et de suivi, Rimouski, 42p.
+
+
+
+
+<!-- -------------------------------------------------- -->
+
+
+
+<hr>
+<br>

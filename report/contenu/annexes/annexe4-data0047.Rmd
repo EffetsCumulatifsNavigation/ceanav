@@ -1,0 +1,42 @@
+### 0047 : Délimitation des zones industrialo-portuaires {-}
+
+<!-- -------------------------------------------------- -->
+**Description** : Données géolocalisées et cartes illustrant la délimitation des zones industrialo-portuaires
+
+<!-- -------------------------------------------------- -->
+
+  **Hyperlien** : [https://www.donneesquebec.ca/recherche/dataset/delimitation-des-zones-ip-industrialo-portuaires](https://www.donneesquebec.ca/recherche/dataset/delimitation-des-zones-ip-industrialo-portuaires)
+
+
+<!-- -------------------------------------------------- -->
+
+
+
+<!-- -------------------------------------------------- -->
+**Contact** :
+
+
+  - 0043 : *Ministère de l'Économie et de l'Innovation*
+
+
+<!-- -------------------------------------------------- -->
+**Figure** :
+
+![](../figures/figures-format/data0047.png)
+
+
+<!-- -------------------------------------------------- -->
+**Citation** :
+
+
+  - Ministère de l'Économie et de l'Innovation (2021) Délimitation des zones industrialo-portuaires. url: https://www.donneesquebec.ca/recherche/dataset/delimitation-des-zones-ip-industrialo-portuaires
+
+
+
+
+<!-- -------------------------------------------------- -->
+
+
+
+<hr>
+<br>

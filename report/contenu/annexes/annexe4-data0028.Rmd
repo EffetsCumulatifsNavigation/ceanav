@@ -1,0 +1,42 @@
+### 0028 : Observation en mer de mammifères marins {-}
+
+<!-- -------------------------------------------------- -->
+**Description** : Activité d'observation en mer de mammifères marins sur des embarcations avec permis de classe 1 en 2017
+
+<!-- -------------------------------------------------- -->
+
+
+<!-- -------------------------------------------------- -->
+
+  **Couverture temporelle** : 2017 - 2017
+
+
+
+<!-- -------------------------------------------------- -->
+**Contact** :
+
+
+  - 0011 : **Turgeon** **Samuel**, *Parc marin du Saguenay–Saint-Laurent*
+
+
+<!-- -------------------------------------------------- -->
+**Figure** :
+
+![](../figures/figures-format/data0028.png)
+
+
+<!-- -------------------------------------------------- -->
+**Citation** :
+
+
+  - Turgeon, S., 2019. Portrait de la navigation dans le parc marin du Saguenay–Saint-Laurent - 2017. Parcs Canada, 59 pages + annexes
+
+
+
+
+<!-- -------------------------------------------------- -->
+
+
+
+<hr>
+<br>

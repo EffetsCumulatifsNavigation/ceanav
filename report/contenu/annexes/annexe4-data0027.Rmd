@@ -1,0 +1,44 @@
+### 0027 : Mammifères marins {-}
+
+<!-- -------------------------------------------------- -->
+**Description** : Données cartographiques : Navires et baleines de l’Atlantique Nord-Ouest : Guide à l’intention de l’industrie maritime, 2e édition
+
+<!-- -------------------------------------------------- -->
+
+
+<!-- -------------------------------------------------- -->
+
+  **Couverture temporelle** : 2015 - 2020
+
+
+
+<!-- -------------------------------------------------- -->
+**Contact** :
+
+
+  - 0028 : **Aurélie** **Cosandey-Godin**, *WWF-Canada*
+
+  - 0029 : **Sonia** **Giroux**, *Réseau d'observation de mammifères marins*
+
+
+<!-- -------------------------------------------------- -->
+**Figure** :
+
+![](../figures/figures-format/data0027.png)
+
+
+<!-- -------------------------------------------------- -->
+**Citation** :
+
+
+  - Le WWF-Canada et le Réseau d’observation de mammifères marins. Données cartographiques : Navires et baleines de l’Atlantique Nord-Ouest : Guide à l’intention de l’industrie maritime, 2e édition. 2021. Données disponibles sur le site https://www.navigationbaleines.ca/fr/accueil/
+
+
+
+
+<!-- -------------------------------------------------- -->
+
+
+
+<hr>
+<br>

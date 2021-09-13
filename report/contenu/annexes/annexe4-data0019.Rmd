@@ -1,0 +1,48 @@
+### 0019 : Sites de dragage et de dépôt {-}
+
+<!-- -------------------------------------------------- -->
+**Description** : Compilation des dragages dans l’ensemble du Saint-Laurent entre 2001 et 2016
+
+<!-- -------------------------------------------------- -->
+
+
+<!-- -------------------------------------------------- -->
+
+  **Couverture temporelle** : 2019 - 2001
+
+
+
+<!-- -------------------------------------------------- -->
+**Contact** :
+
+
+  - 0023 : **Simon** **Blais**, *Environnement et Changement climatique Canada*
+
+  - 0042 : **Pierre** **Michon**, *Ministère de l'Environnement et de la Lutte contre les changements climatiques du Québec*
+
+
+<!-- -------------------------------------------------- -->
+**Figure** :
+
+![](../figures/figures-format/data0019.png)
+
+
+<!-- -------------------------------------------------- -->
+**Citation** :
+
+
+  - Environnement et Changement Climatique Canada (2020) Bilan des activités de dragage dans l’Estuaire du Saint-Laurent de 2009 à 2016. Document de travail
+
+  - Ministère des Transports du Québec (2016) Compilation des dragages dans l’ensemble du Saint-Laurent entre 2001 et 2016. Document de travail
+
+  - Ministère des Transports du Québec (2017) Bref portrait des activités de dragge dans la voir navigable du fleuve Saint-Laurent de 2001 à 2016. 50 + iv
+
+
+
+
+<!-- -------------------------------------------------- -->
+
+
+
+<hr>
+<br>
