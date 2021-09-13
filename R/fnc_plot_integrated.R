@@ -35,11 +35,12 @@ plot_integrated.sf <- function(dat, main = NULL, subtitle = NULL, ...) {
   global_parameters()
 
   # ------------------
-  par(family = 'serif', mar = c(0, 0, 0, 0))
+  par(family = 'serif', mar = c(.5, .5, .5, .5))
 
   # ------------------
   bbox <- global_param$bbox$base
   plot0(x = c(bbox$xmin, bbox$xmax), y = c(bbox$ymin, bbox$ymax))
+  box()
 
   # ------------------
   if (!is.null(main)) {
@@ -64,16 +65,16 @@ plot_integrated.sf <- function(dat, main = NULL, subtitle = NULL, ...) {
     )
   }
 
-  # ------------------
-  data(aoi)
-  aoi <- suppressWarnings(st_simplify(aoi, dTolerance = 100, preserveTopology = F))
-  plot(
-    st_geometry(aoi),
-    lwd = .5,
-    border = global_parameters()$col$integrated$coastline,
-    add = TRUE
-  )
-
+  # # ------------------
+  # data(aoi)
+  # aoi <- suppressWarnings(st_simplify(aoi, dTolerance = 100, preserveTopology = F))
+  # plot(
+  #   st_geometry(aoi),
+  #   lwd = .5,
+  #   border = global_parameters()$col$integrated$coastline,
+  #   add = TRUE
+  # )
+  #
 
   # # ------------------
   # basemap("quebec")
@@ -98,9 +99,22 @@ plot_integrated.sf <- function(dat, main = NULL, subtitle = NULL, ...) {
 
 
   # ------------------
-  # pal <- colorRampPalette(global_param$col$palette)
   pal <- colorRampPalette(viridis::viridis(100))
-  cols <- pal(101)[((dat[,1,drop = TRUE] / max(dat[,1,drop = TRUE], na.rm = T))*100)+1]
+  # pal <- colorRampPalette(global_param$col$integrated$palette)
+
+  # -----
+  bin <- dat[,1,drop = TRUE] %>%
+         table() %>%
+         names()
+
+  if (length(bin) == 2 | length(bin) == 1) {
+    cols <- global_param$col$integrated$palette[4]
+  } else {
+    maxDat <- max(dat[,1,drop = TRUE], na.rm = TRUE)
+    cols <- pal(101)[((dat[,1,drop = TRUE] / maxDat)*100)+1]
+  }
+
+  # -----
   plot(
     st_geometry(dat),
     lwd = .25,
@@ -111,15 +125,15 @@ plot_integrated.sf <- function(dat, main = NULL, subtitle = NULL, ...) {
     border = cols
   )
 
-  # # ------------------
-  # data(aoi)
-  # aoi <- suppressWarnings(st_simplify(aoi, dTolerance = 100, preserveTopology = F))
-  # plot(
-  #   st_geometry(aoi),
-  #   lwd = .5,
-  #   border = global_parameters()$col$integrated$coastline,
-  #   add = TRUE
-  # )
+  # ------------------
+  data(aoi)
+  aoi <- suppressWarnings(st_simplify(aoi, dTolerance = 100, preserveTopology = F))
+  plot(
+    st_geometry(aoi),
+    lwd = .5,
+    border = global_parameters()$col$integrated$coastline,
+    add = TRUE
+  )
 
   # dev.off()
 }

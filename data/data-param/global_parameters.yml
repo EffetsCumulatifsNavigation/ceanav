@@ -4,9 +4,15 @@ col:
   format:
     coastline: "#00000044"
   integrated:
-    coastline: "#000000"
+    coastline: "#00000066"
     offset: "#25364A"
     focus: "#2196a8"
+    palette:
+      - "#A8D5D7"
+      - "#68C0BD"
+      - "#2DB4AB"
+      - "#228982"
+      - "#1C615D"
   palette:
     - "#b96136"
     - "#246e4f"
