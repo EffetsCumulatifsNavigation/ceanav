@@ -1,7 +1,0 @@
-# Composantes valorisées
-
-Un exercice de partage d'informations avec des experts du milieux et les communautés locales a été amorcé en début de projet afin d'appuyer la quête de données. Tout l'exercice a été fait à partir de google sheets aux adresses suivantes:
-
-- [Stresseurs et composantes valorisées 1](https://docs.google.com/spreadsheets/d/1C3HEsIMhFXhfkYSmgdoFrHpCU24W4L03V3WSscqxv9Q/edit#gid=0){target="_blank"}
-
-- [Stresseurs et composantes valorisées 2](https://docs.google.com/spreadsheets/d/1_v3SBoiYBwVF3qwWjglFn9uerL-1ZwaaThAWuQIahOk/edit#gid=0){target="_blank"}

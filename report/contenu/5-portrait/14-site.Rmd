@@ -1,0 +1,37 @@
+### Sites d’intérêt culturels, patrimoniaux et archéologiques
+
+
+####  AGHAMM
+
+
+OGSL
+
+    [Fisheries](ttps://catalogue.ogsl.ca/en/dataset/bbe35312-987a-42d7-ae2f-41c1a0715dc3)
+
+    [Habitat bar rayé](https://catalogue.ogsl.ca/en/dataset/26e8b968-43af-4914-88c9-dc3cd90aa447)
+
+[Atlas](http://atlas.aghamm.ca/)
+
+    [Bar rayé Matane](https://aghamm.maps.arcgis.com/apps/Cascade/index.html?appid=bfa444495fae4aa4bf8760100b8b6bf2)
+        Zone de Matane
+
+    [Communal fishing: Atlantic salmon](https://aghamm.maps.arcgis.com/apps/Cascade/index.html?appid=73f20ada030f424d89200b8c5473f849)
+        Métis
+        Rimouski
+
+
+#### 2021-02-12
+
+Conversation avec Lisa M. Arsenault
+Lisa M. Arsenault <lisa.m.arsenault@aghamm.ca>
+
+- Les données de pêche commerciale sont accessibles sur l’OGSL
+- Les données de saumon Atlantique, pour nos besoins, correspondraient à l’embouchure des Rivières Rimouski et Métis puisque le bassin versant n’est pas inclu dans notre aire d’étude. Je pourrai être en mesure de cibler les embouchures moi-même et j’utiliserai le rapport sur l’Atlas comme citation.
+- Il faudrait que tu vérifies le site de bar rayé identifé à Matane (voir capture d’écran ci-joint) et si nous devrions le considérer comme un site d’importance pour la communauté.
+- Je vais vous recontacter ultérieurement pour m’assurer que l’utilisation que nous faisons des données issues de l’Atlas est correcte.
+
+
+#### Kahnawake
+
+TODO: Vérifier la catégorie traffic identifiée par la communauté. Est-ce qu'on devrait l'ajouter aux stresseurs de navigation?
+TODO: Même chose avec la seigneurie

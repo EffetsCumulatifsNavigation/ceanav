@@ -1,0 +1,164 @@
+### Navigation
+
+```{r navigation_setup, echo = FALSE}
+meta <- read_yaml("../data/data-metadata/int_st_navigation.yml")
+```
+
+L'intensité de la navigation au sein de la zone d'étude a été évaluée à l'aide
+de données provenant de Système d'Identification Automatique (SIA) -- ou
+*Automatic Identification Système* (AIS) en anglais -- satellitaire entre
+`r meta$dataDescription$temporal$start` et `r meta$dataDescription$temporal$end`
+[@transportscanada2020].
+
+Cette base de données contiennent `r meta$dataDescription$observations$total`
+observations.
+
+Plusieurs types de navires naviguent sur les eaux du Saint-Laurent. Chaque type
+de navire peut engendrer des effets différents selon leur taille, leur vitesse,
+etc <!-- Compléter liste + référence --> [@addref].
+
+Nous avons ainsi considéré 11 types de navires différents.
+
+Des données caractérisant les activités d'observation en mer de mammifères marins ne
+sont pas aisément accessible à travers ces données. Nous avons ainsi utilisé
+les résultats d'une caractérisation des activités d'observation en mer des mammifères
+marins sur des embarcations avec permis de classe 1 en 2017 [@turgeon2019].
+Bien que cet exercice soit limité au parc marin du Saguenay–Saint-Laurent,
+il s'agit de l'endroit où se déroule la majorité des excursions d'observation de
+mammifères marins au sein de la zone d'étude.
+
+
+
+#### Données AIS
+
+##### Types de navires disponibles
+
+| Types de navires              | Vessel types               |
+| :---------------------------- | :------------------------- |
+| Cargo                         | Cargo                      |
+| Porte-conteneurs              | Containers                 |
+| Cargaison sèche               | Dry bulk                   |
+| Traversier / roulier          | Ferry / ro-ro              |
+| Gouvernement / recherche      | Government / research      |
+| Observation mammifères marins | Marine mammals observation |
+| Passager                      | Passenger                  |
+| Navires de plaisance          | Pleasure vessels           |
+| Navires spéciaux              | Special ships              |
+| Pétrolier                     | Tanker                     |
+| Remorqueur / port             | Tugboat / port             |
+
+
+Ressources pertinentes:
+
+- [AIS MESSAGES](https://www.navcen.uscg.gov/?pageName=AISMessages)
+- [Marine cadastre](https://www.marinecadastre.gov/tools/)
+- [Track builder tutorial](https://coast.noaa.gov/data/digitalcoast/pdf/track-builder-tutorial.pdf)
+- [Marine regions](https://www.marineregions.org/gazetteer.php?p=details&id=62961)
+- [Diva-GIS](https://www.diva-gis.org/gdata)
+- [Marine Cadastre Track Builder](https://coast.noaa.gov/digitalcoast/tools/track-builder.html)
+
+
+
+##### Data formatting
+
+Vessel tracks are built for each vessel with the following parameters:
+
+- Maximum distance between points: 50 miles
+- Maximum time between points: 300 minutes
+
+There are also messages (field = `Message_Type`) that are used to characterize vessel points in AIS data. See [here](https://www.navcen.uscg.gov/?pageName=AISMessages) for message description
+
+
+##### Observation mammifères marins
+
+Permis de classe 1, qui leur permet de faire des observations en mer
+Pondéré par le nombre d'excursions réelles
+Navigation de plaisance = pas assez de données
+Étudiante au doctorat de Clément focus là-dessus
+
+
+##### Notes Clément & JF
+
+Jean-François Senecal
+
+Plus grosse limitation, lorsque la zone est très grande
+
+##### Aire d'étude
+library(ceanav)
+mapview(studyarea)
+mapview(aoi)
+
+##### Données
+
+The data provided was produced by Maerospace Corporation, and was acquired via
+a contract with PWGSC on behalf of the Canadian Space Agency. No metadata came
+with the source and there are no specific requirement for citation/attribution.
+
+##### Traitement des données
+
+1. Segmenter données
+  - 5 heures
+  - 50 miles
+2. Retirer segments qui superposent le milieu terrestre (beaucoup)
+3. Diviser par type de navire
+  1. Autres
+  2. Vrac sec
+  3. Remorqueurs
+  4. Marchandise
+  5. Passager
+  6. Plaisance
+  7. Pêche
+  8. Pétrolier
+  9. Navires spéciaux
+  10. Recherche gouvernementale
+  11. Traversier
+  12. Porte-conteneur
+4. Évaluer intensité
+  - Nombre de segment qui intersectent des cellules de 1km^2
+
+
+##### Visualisation
+
+Rapport 2009 au parc marin
+2 types d'informations
+Intensité en terme d'utilisation unique (passages)
+Temps d'utilisation (passage rapide, ou très long)
+Dépend du type de pression qu'on veut effectuer
+Zones 50%, genre 50% du temps de navigation s'y passe
+Zones d'ancrages pas enlevées, zone des rasades
+Largeur
+Vitesse d'un navire
+Interprétation et les nuances, expliquer les limites, les nuances, etc.
+
+AIS A vs B? Qu'est-ce que j'ai entre les mains
+Densité?
+
+Vitesse :
+Indépendant du segment ligne
+SOG par rapport
+Biais des vitesses plus faibles si on ne fait pas le distance weighted speed (à voir)
+
+Hubard article sur les données AIS et les vitesses
+
+
+##### Lecture
+
+- https://pdfs.semanticscholar.org/908d/93279526e373b2d03fcd5cd987d67d240302.pdf
+- https://www.erudit.org/en/journals/natcan/1900-v1-n1-natcan03735/1047154ar.pdf
+- https://ouvert.canada.ca/data/fr/dataset/6ab2803a-aace-4e60-83ed-44a7e0ccd1d8
+- https://www.marinfo.gc.ca/fr/publications/vn200.php
+- http://complexity.ok.ubc.ca/files/2013/05/Rapport-sur-le-trafic-maritime-dans-le-PMSSL-en-2007_Chion-et-al_version-finale.pdf
+- https://pubmed.ncbi.nlm.nih.gov/26093451/
+- https://www.youtube.com/watch?v=kloW8F5ChhQ
+- https://wwf.ca/fr/habitat/ocean/la-navigation-dans-les-aires-marines-protegees/
+- https://wwf.ca/wp-content/uploads/2021/02/WWF-MPA-2-Impacts-Marine-Birds-v6.pdf
+- https://wwf.ca/wp-content/uploads/2021/02/WWF-MPA-3-Impacts-Benthic-Habitat-v4.pdf
+- https://wwf.ca/wp-content/uploads/2021/02/WWF-MPA-4-Impacts-Marine-Habitat-v4.pdf
+- https://www.dfo-mpo.gc.ca/csas-sccs/Publications/ResDocs-DocRech/2016/2016_090-fra.html
+- https://parlonstransport.ca/comprendre-les-effets-des-navires-sur-les-milieux-cotiers
+- https://parlonstransport.ca/ectm
+- https://globalfishingwatch.org/our-technology/
+- https://github.com/GlobalFishingWatch/4wings/blob/develop/src/importer/README.md
+
+
+##### Infos

@@ -3,7 +3,7 @@ bookdown::gitbook:
   dev: svglite
   css: css/style.css
   split_by: chapter
-  toc_depth: 2
+  toc_depth: 3
   config:
     toc:
       collapse: no

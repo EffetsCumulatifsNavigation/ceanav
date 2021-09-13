@@ -2,13 +2,20 @@ book_filename: bookdown
 repo: https://github.com/david-beauchesne/rapport
 output_dir: docs
 rmd_subdir:
-  - "contenu/intro"
-  - "contenu/portrait"
-  - "contenu/stresseurs"
-  - "contenu/composantes_valorisees"
-  # - "contenu/contacts"
-  # - "contenu/analyse"
   - "contenu/accronymes"
+  - "contenu/glossaire"
+  - "contenu/0-resume"
+  - "contenu/1-introduction"
+  - "contenu/2-effets_cumulatifs"
+  - "contenu/3-portee"
+  - "contenu/4-collecte_donnees"
+  - "contenu/5-portrait"
+  - "contenu/6-vulnerabilite"
+  - "contenu/7-resultats"
+  - "contenu/8-discussion"
+  - "contenu/9-limites"
+  - "contenu/10-perspectives"
+  - "contenu/remerciements"
   - "contenu/references"
   - "contenu/annexes"
 clean: [packages.bib, bookdown.bbl]

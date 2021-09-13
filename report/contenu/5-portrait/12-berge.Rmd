@@ -1,0 +1,36 @@
+### Intégrité des berges
+
+Les sites vulnérables à l'érosion proviennent de ...
+
+Dans ce rapport, les auteurs ont identifié des sites vulnérables à l'érosion en faisant XXX
+
+Dans le cadre de notre projet, nous avons divisé les
+
+La base de données identifie des processus dominants menant à la vulnérabilité des sites identifiés. Il faudrait déterminer s'il serait pertinent de considérer ces processus dominants dans la création de catégories de sites.
+
+Pour l'instant, je vais séparer selon leur catégorisation d'état de la berge et d'état des artificialisations.
+
+Dans le rapport, l'état de la berge est caractérisé (Tableau FF; @lajeunesse):
+
+- Active ou vive (VIVE) : Érosion apparente ou couvert végétal < 25%
+- Semi-végétalisée (SV) : Érosion apparente ou couvert végétal de 25 à 75%
+- Stable ou végétalisé (VEGE) : Aucun signe d'érosion pparent, et couvert végétal > 75% ou présence d'une structure de protection
+
+L'état des milieux artificialisés est caractérisé ainsi (Annexe C; @lajeunesse):
+
+- Bon (B) : Altération de 0 à 25%
+- Partiellement endommagé (PE) : Altération de 25 à 50%
+- Très endommagé (TE) : Altération de 50 à 75% et aucune protection côtière
+- Complètement endommagé (CE) : Alération > 75% et aucune protection côtière
+- N/A (NA) : absence d'artificialité
+
+Pour notre analyse, nous avons combiner l'état de la berge et l'état des milieux artificialisés en 8 catégories distinctes:
+
+- Naturelle - Semi-végétalisée (N_SV)
+- Naturelle - Vive (N_V)
+- Artificielle - Semi-végétalisée - Partiellement endommagée (A_SV_PE)
+- Artificielle - Semi-végétalisée - Très endommagée (A_SV_TE)
+- Artificielle - Semi-végétalisée - Complètement endommagée (A_SV_CE)
+- Artificielle - Vive - Partiellement endommagée (A_V_PE)
+- Artificielle - Vive - Très endommagée (A_V_TE)
+- Artificielle - Vive - Complètement endommagée (A_V_CE)

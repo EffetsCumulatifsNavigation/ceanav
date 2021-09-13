@@ -1,5 +1,0 @@
-# Annexe 1 {-}
-
-```{r}
-rep_annexe_data_summary()
-```

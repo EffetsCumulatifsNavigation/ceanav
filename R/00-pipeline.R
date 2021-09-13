@@ -116,7 +116,7 @@ pipeline <- function(
 
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~
-  if (pipeline_alaysis) {
+  if (pipeline_analysis) {
     # Stresseurs et composantes valorisées
     ana_stresseurs_raw()
     ana_composantes_valorisees_raw()
@@ -156,7 +156,7 @@ pipeline <- function(
     # Générer fiches descriptives
     rep_annexe_data_description_all(
       output_folder = "./report/contenu/annexes/",
-      suffix =  "annexe3-"
+      suffix =  "annexe4-"
     )
   }
 
