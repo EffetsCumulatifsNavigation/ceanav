@@ -9,7 +9,7 @@
   <figcaption>Fig.1 - Trulli, Puglia, Italy.</figcaption>
 </figure> -->
 
-```{r, fig.cap = "Intensité des activités de pêche commerciale dans le Saint-Laurent - Démersale destructive", out.width = '100%'}
+```{r DD, fig.cap = "Intensité des activités de pêche commerciale dans le Saint-Laurent - Démersale destructive", out.width = '100%'}
 knitr::include_graphics("../figures/figures-integrated/peche_commerciale-DD.png")
 ```
 
