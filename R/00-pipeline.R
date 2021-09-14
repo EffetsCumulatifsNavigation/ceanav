@@ -15,7 +15,7 @@ pipeline <- function(
   pipeline_integration = FALSE,
   pipeline_analysis = FALSE,
   pipeline_figures = FALSE,
-  pipeline_annexes = FALSE,
+  pipeline_fiches = FALSE,
   pipeline_report = TRUE
 ) {
 
@@ -139,29 +139,39 @@ pipeline <- function(
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~
   if (pipeline_figures) {
     # Données formatées (annexe)
-    rep_annexe_data_figures_all()
+    fig_format_all()
 
     # Données intégrées (portrait)
-    rep_portrait_data_figures_int_all()
+    fig_integrated_all()
     # TODO: ajuster légende tick text
     # TODO: ajouter métadonnées pour ajuster titres et unités
     # TODO: références
 
+    # Analyses
+    fig_analyses()
   }
 
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~
-  if (pipeline_annexes) {
-    # Générer fiches descriptives
+  if (pipeline_fiches) {
+    # Données formatées (annexe)
     rep_annexe_data_description_all(
       output_folder = "./report/contenu/annexes/",
       suffix =  "annexe4-"
+    )
+
+    # Données intégrées (portrait)
+    rep_portrait_data_description(
+      data_id = "int_st_peche_commerciale",
+      output_folder = "report/contenu/5-portrait/1-stresseurs/",
+      suffix = "peche_commerciale"
     )
   }
 
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~
   if (pipeline_report) {
+
     suppressWarnings({
       setwd('./report/')
 

@@ -1,4 +1,4 @@
-#' plot ceanav integrated data
+#' plot ceanav data maps
 #'
 #' base plot functions for ceanav project
 #'
@@ -11,18 +11,18 @@
 #'
 #' @examples
 #'  load_integrated("navigation")
-#'  plot_integrated(navigation[,10], "Navigation", "Recherche gouvernementale")
+#'  plot_ceanav(navigation[,10], "Navigation", "Recherche gouvernementale")
 #'
 #' @export
 
-plot_integrated <- function(dat, ...) {
-  UseMethod("plot_integrated", dat)
+plot_ceanav <- function(dat, ...) {
+  UseMethod("plot_ceanav", dat)
 }
 
-#' @method plot_integrated sf
-#' @name plot_integrated
+#' @method plot_ceanav sf
+#' @name plot_ceanav
 #' @export
-plot_integrated.sf <- function(dat, main = NULL, subtitle = NULL, unit_data = NULL, references = NULL, ...) {
+plot_ceanav.sf <- function(dat, main = NULL, subtitle = NULL, unit_data = NULL, references = NULL, ...) {
 
   # pdf(glue('./figures/figures-format/{data_id}.pdf'), width = 7, height = 5, pointsize = 12)
   # png(glue('./figures/delete.png'), res = 300, width = 100, height = 70, units = "mm", pointsize = 12)

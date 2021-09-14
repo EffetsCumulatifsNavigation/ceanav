@@ -4,22 +4,22 @@
 #'
 #' @keywords figure
 #'
-#' @rdname rep_annexe_data_figures
+#' @rdname fig_format
 #'
 #' @export
 #'
 #' @examples
 #' # Figure for specific dataset
-#' rep_annexe_data_figures(data_id = "data0001")
+#' fig_format(data_id = "data0001")
 #'
 #' # Render all figures for available data
-#' rep_annexe_data_figures_all()
+#' fig_format_all()
 #'
 #' # Update figures based on available data
-#' rep_annexe_data_figures_update()
+#' fig_format_update()
 
 
-rep_annexe_data_figures <- function(data_id) {
+fig_format <- function(data_id) {
   # Data and libraries
   load_format(data_id)
   dat <- get(data_id)
@@ -43,21 +43,21 @@ rep_annexe_data_figures <- function(data_id) {
 }
 
 
-#' @rdname rep_annexe_data_figures
-#' @aliases rep_annexe_data_figures_all
+#' @rdname fig_format
+#' @aliases fig_format_all
 #' @export
-rep_annexe_data_figures_all <- function() {
+fig_format_all <- function() {
   dataname <- dir("./data/data-format/") %>% substring(1,8)
-  for(i in dataname) rep_annexe_data_figures(data_id = i)
+  for(i in dataname) fig_format(data_id = i)
 }
 
 
-#' @rdname rep_annexe_data_figures
-#' @aliases rep_annexe_data_figures_update
+#' @rdname fig_format
+#' @aliases fig_format_update
 #' @export
-rep_annexe_data_figures_update <- function() {
+fig_format_update <- function() {
   fig_done <- dir("./figures/figures-format/") %>% substring(1,8)
   data_available <- dir("./data/data-format/") %>% substring(1,8)
   dataname <- data_available[!data_available %in% fig_done]
-  for(i in dataname) rep_annexe_data_figures(data_id = i)
+  for(i in dataname) fig_format(data_id = i)
 }

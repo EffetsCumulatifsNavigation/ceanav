@@ -23,7 +23,7 @@ Fonction utilisée pour générer une fiches descriptive pour chaque catégorie 
 Cette fonction permet de générer une fiche descriptive pour la base de données sélectionnée
 }
 \examples{
-rep_portrait_data_description("int_st_navigation","report/contenu/5-portrait/1-stresseurs/","navigation-")
+rep_portrait_data_description("int_st_peche_commerciale","report/contenu/5-portrait/1-stresseurs/","peche_commerciale")
 }
 \keyword{descriptive}
 \keyword{fiche}

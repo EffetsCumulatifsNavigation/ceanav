@@ -1,37 +1,37 @@
-#' Figures données intgrées
+#' Figures données intégrées
 #'
 #' Fonctions pour générer des figures pour les données intégrées
 #'
 #' @keywords figure
 #'
-#' @rdname rep_portrait_data_figures_int
+#' @rdname fig_integrated
 #'
 #' @export
 #'
 #' @examples
 #' # Figure for specific dataset
-#' rep_portrait_data_figures_int(data_id = "mammiferes_marins")
+#' fig_integrated(data_id = "mammiferes_marins")
 #'
 #' # Render all figures for available data
-#' rep_portrait_data_figures_int_all()
+#' fig_integrated_all()
 #'
 #' # Update figures based on available data
-#' rep_portrait_data_figures_int_update()
+#' fig_integrated_update()
 
 
-rep_portrait_data_figures_int <- function(data_id) {
+fig_integrated <- function(data_id) {
   # Integrated data
   load_integrated(data_id)
   dat <- get(data_id)
   nm <- colnames(dat)[-ncol(dat)] # remove geometry column name
 
   # Metadata
-  # TODO
+  # meta <- load_metadata(data_id)
 
   for(i in nm) {
     # pdf(glue('./figures/figures-format/{data_id}.pdf'), width = 7, height = 5, pointsize = 12)
     png(glue('./figures/figures-integrated/{data_id}-{i}.png'), res = 300, width = 100, height = 70, units = "mm", pointsize = 12)
-    plot_integrated(
+    plot_ceanav(
       dat[, i],
       main = data_id,
       subtitle = i,
@@ -42,13 +42,13 @@ rep_portrait_data_figures_int <- function(data_id) {
 }
 
 
-#' @rdname rep_portrait_data_figures_int
-#' @aliases rep_portrait_data_figures_int_all
+#' @rdname fig_integrated
+#' @aliases fig_integrated_all
 #' @export
-rep_portrait_data_figures_int_all <- function() {
+fig_integrated_all <- function() {
   dataname <- dir("./data/data-integrated/") %>%
               gsub("cv_","",.) %>%
               gsub("st_","",.) %>%
               gsub(".geojson","",.)
-  for(i in dataname) rep_portrait_data_figures_int(data_id = i)
+  for(i in dataname) fig_integrated(data_id = i)
 }
