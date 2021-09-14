@@ -35,13 +35,18 @@ plot_integrated.sf <- function(dat, main = NULL, subtitle = NULL, unit_data = NU
   # ------------------
   global_parameters()
 
+  # ------------------------------------------------------------------------
+  # Graph principal
+
   # ------------------
   par(family = 'serif', mar = c(.5, .5, .5, .5))
 
   # ------------------
   bbox <- global_param$bbox$base
+  fluvial <- global_param$bbox$fluvial
   plot0(x = c(bbox$xmin, bbox$xmax), y = c(bbox$ymin, bbox$ymax))
   box()
+  # rect(fluvial[1], fluvial[3], fluvial[2], fluvial[4], lty = 2, border = "#00000088")
 
   # ------------------
   if (!is.null(main)) {
@@ -113,6 +118,36 @@ plot_integrated.sf <- function(dat, main = NULL, subtitle = NULL, unit_data = NU
     border = global_parameters()$col$integrated$coastline,
     add = TRUE
   )
+
+  # # ------------------------------------------------------------------------
+  # # Second graphe
+  # par(new = TRUE)
+  # par(fig = c(.35,.95,.05,.7), mar = c(0,0,0,0))
+  #
+  # # ------------------
+  # plot0(x = c(fluvial$xmin, fluvial$xmax), y = c(fluvial$ymin, fluvial$ymax))
+  # # box()
+  #
+  # # -----
+  # plot(
+  #   st_geometry(dat),
+  #   lwd = .25,
+  #   add = TRUE,
+  #   pch = 20,
+  #   cex = .25,
+  #   col = cols,
+  #   border = cols
+  # )
+  #
+  # # ------------------
+  # data(aoi)
+  # aoi <- suppressWarnings(st_simplify(aoi, dTolerance = 100, preserveTopology = F))
+  # plot(
+  #   st_geometry(aoi),
+  #   lwd = .25,
+  #   border = global_parameters()$col$integrated$coastline,
+  #   add = TRUE
+  # )
 
   # dev.off()
 }
