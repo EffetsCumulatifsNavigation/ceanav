@@ -20,15 +20,23 @@
 
 
 rep_portrait_data_figures_int <- function(data_id) {
-  # Data and libraries
+  # Integrated data
   load_integrated(data_id)
   dat <- get(data_id)
   nm <- colnames(dat)[-ncol(dat)] # remove geometry column name
 
+  # Metadata
+  # TODO
+
   for(i in nm) {
     # pdf(glue('./figures/figures-format/{data_id}.pdf'), width = 7, height = 5, pointsize = 12)
     png(glue('./figures/figures-integrated/{data_id}-{i}.png'), res = 300, width = 100, height = 70, units = "mm", pointsize = 12)
-    plot_integrated(dat[, i], main = data_id, subtitle = i)
+    plot_integrated(
+      dat[, i],
+      main = data_id,
+      subtitle = i,
+      unit_data = "essai"
+    )
     dev.off()
   }
 }

@@ -143,10 +143,10 @@ pipeline <- function(
 
     # Données intégrées (portrait)
     rep_portrait_data_figures_int_all()
-    # TODO: Différencier binaire de continu
-    # TODO: Retirer trait de côte
     # TODO: insert sur la portion fluviale pour meilleure visibilité
-    # TODO: valeurs de 0 / absentes transparentes
+    # TODO: ajuster légende tick text
+    # TODO: titres appropriés
+    # TODO: références
 
   }
 

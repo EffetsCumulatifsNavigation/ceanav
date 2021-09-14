@@ -7,7 +7,14 @@
 \usage{
 plot_integrated(dat, ...)
 
-\method{plot_integrated}{sf}(dat, main = NULL, subtitle = NULL, ...)
+\method{plot_integrated}{sf}(
+  dat,
+  main = NULL,
+  subtitle = NULL,
+  unit_data = NULL,
+  references = NULL,
+  ...
+)
 }
 \arguments{
 \item{dat}{object of class sf}
@@ -17,6 +24,10 @@ plot_integrated(dat, ...)
 \item{main}{main title}
 
 \item{subtitle}{subtitle}
+
+\item{unit_data}{units of data}
+
+\item{references}{data citation used for integrated data}
 }
 \description{
 base plot functions for ceanav project

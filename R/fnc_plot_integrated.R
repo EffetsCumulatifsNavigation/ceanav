@@ -5,8 +5,9 @@
 #' @param dat object of class sf
 #' @param main main title
 #' @param subtitle subtitle
+#' @param unit_data units of data
+#' @param references data citation used for integrated data
 #' @param ... further specifications, see \link{plot} and details.
-#'
 #'
 #' @examples
 #'  load_integrated("navigation")
@@ -21,7 +22,7 @@ plot_integrated <- function(dat, ...) {
 #' @method plot_integrated sf
 #' @name plot_integrated
 #' @export
-plot_integrated.sf <- function(dat, main = NULL, subtitle = NULL, ...) {
+plot_integrated.sf <- function(dat, main = NULL, subtitle = NULL, unit_data = NULL, references = NULL, ...) {
 
   # pdf(glue('./figures/figures-format/{data_id}.pdf'), width = 7, height = 5, pointsize = 12)
   # png(glue('./figures/delete.png'), res = 300, width = 100, height = 70, units = "mm", pointsize = 12)
@@ -61,42 +62,9 @@ plot_integrated.sf <- function(dat, main = NULL, subtitle = NULL, ...) {
       labels = subtitle,
       adj = c(0,.5),
       font = 3,
-      cex = .75
+      cex = .65
     )
   }
-
-  # # ------------------
-  # data(aoi)
-  # aoi <- suppressWarnings(st_simplify(aoi, dTolerance = 100, preserveTopology = F))
-  # plot(
-  #   st_geometry(aoi),
-  #   lwd = .5,
-  #   border = global_parameters()$col$integrated$coastline,
-  #   add = TRUE
-  # )
-  #
-
-  # # ------------------
-  # basemap("quebec")
-  # plot(
-  #   st_geometry(quebec),
-  #   col = glue("{global_param$col$integrated$offset}44"),
-  #   border = global_param$col$integrated$offset,
-  #   lwd = .5,
-  #   add = TRUE
-  # )
-  #
-  # # ------------------
-  # basemap("usa")
-  # plot(
-  #   st_geometry(usa),
-  #   col = glue("{global_param$col$integrated$offset}44"),
-  #   border = global_param$col$integrated$offset,
-  #   lwd = .5,
-  #   add = TRUE
-  # )
-  #
-
 
   # ------------------
   pal <- colorRampPalette(viridis::viridis(100))
@@ -109,9 +77,20 @@ plot_integrated.sf <- function(dat, main = NULL, subtitle = NULL, ...) {
 
   if (length(bin) == 2 | length(bin) == 1) {
     cols <- global_param$col$integrated$palette[4]
+    plot_legend_bin(
+      col = cols,
+      subTitle = "Présence",
+      cexSub = .5
+    )
   } else {
     maxDat <- max(dat[,1,drop = TRUE], na.rm = TRUE)
     cols <- pal(101)[((dat[,1,drop = TRUE] / maxDat)*100)+1]
+    plot_legend_cont(
+      range = range(dat[,1,drop = TRUE], na.rm = TRUE),
+      pal = pal,
+      subTitle = unit_data,
+      cexSub = .5
+    )
   }
 
   # -----
