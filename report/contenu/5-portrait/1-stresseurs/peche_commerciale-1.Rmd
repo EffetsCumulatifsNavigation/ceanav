@@ -108,3 +108,5 @@ soit en kilogrammes. Puisque nous avons calculé l'intensité au sein de cellule
 les unités de cette formule sont en $kg * km^{-2}$. Cet indicateur d'intensité
 distribue la biomasse capturée au sein de chaque cellule de la grille d'étude
 et évalue l'intensité de la pêche en terme de biomasse extraite.
+
+<br>

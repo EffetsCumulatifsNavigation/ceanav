@@ -291,6 +291,23 @@ st_peche_commerciale <- function() {
   meta$dataDescription$temporal$end <- max(peche$years)
 
   # -----
+  meta$dataDescription$categories$accronyme <- c("DD", "DNL", "DNH", "PLB", "PHB")
+  meta$dataDescription$categories$english <- c(
+    "Demersal destructive",
+    "Demersal, non-destructive, low-bycatch",
+    "Demersal, non-destructive, high-bycatch",
+    "Pelagic, low-bycatch",
+    "Pelagic, high-bycatch")
+
+meta$dataDescription$categories$francais <- c(
+    "Démersale destructive",
+    "Démersale non-destructive, prises accessoires faibles",
+    "Démersale non-destructive, prises accessoires élevées",
+    "Pélagique prises accessoires faibles",
+    "Pélagique prises accessoires élevées")
+
+
+  # -----
   obs <- peche %>% group_by(years) %>% summarize(total = n())
   meta$dataDescription$observations$total <- sum(obs$total)
   meta$dataDescription$observations$moyenne <- round(mean(obs$total), 0)
@@ -299,6 +316,9 @@ st_peche_commerciale <- function() {
   # -----
   meta$dataDescription$especes$cible <- species_cible
   meta$dataDescription$especes$capture <- species
+
+
+
 
   # --------------------------------------------------------------------------------
 

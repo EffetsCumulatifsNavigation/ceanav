@@ -1,46 +1,16 @@
-### {{ metadata.data_description.id }} : {{ metadata.data_description.name }} {-}
-
-<!-- -------------------------------------------------- -->
-**Description** : {{ metadata.data_description.description }}
-
-<!-- -------------------------------------------------- -->
-{{ #metadata.data_description.url }}
-  **Hyperlien** : [{{ metadata.data_description.url }}]({{ metadata.data_description.url }})
-{{ /metadata.data_description.url }}
-
-<!-- -------------------------------------------------- -->
-{{ #metadata.data_description.temporal_start }}
-  **Couverture temporelle** : {{ metadata.data_description.temporal_start }} - {{ metadata.data_description.temporal_end }}
-{{ /metadata.data_description.temporal_start }}
+#### {{ metadata.dataDescription.categories.francais }} {-}
 
 
 <!-- -------------------------------------------------- -->
-**Contact** :
+<!-- **Figure** : -->
 
-{{ #contact }}
-  - {{ id }} : {{ #prenom }}**{{ prenom }}** **{{ nom }}**, {{/prenom}}*{{ organisation }}*
-{{ /contact }}
+<!-- <figure>
+  <img src="../figures/figures-integrated/{{ metadata.id }}-{{ metadata.dataDescription.categories.accronyme }}.png">
+  <figcaption>Fig.1 - Trulli, Puglia, Italy.</figcaption>
+</figure> -->
 
-<!-- -------------------------------------------------- -->
-**Figure** :
+```{r, fig.cap = "{{ metadata.description }} - {{ metadata.dataDescription.categories.francais }}", out.width = '100%'}
+knitr::include_graphics("../figures/figures-integrated/{{ metadata.id }}-{{ metadata.dataDescription.categories.accronyme }}.png")
+```
 
-![](../figures/figures-format/data{{ metadata.data_description.id }}.png)
-
-
-<!-- -------------------------------------------------- -->
-**Citation** :
-
-{{#metadata.data_description.citation}}
-  - {{ . }}
-{{/metadata.data_description.citation}}
-
-
-
-<!-- -------------------------------------------------- -->
-{{ #metadata.data_description.disclaimer }}
-  **Avis** : *{{ metadata.data_description.disclaimer }}*
-{{ /metadata.data_description.disclaimer }}
-
-
-<hr>
 <br>

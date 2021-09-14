@@ -15,35 +15,44 @@
 #' @details Cette fonction permet de générer une fiche descriptive pour la base de données sélectionnée
 #'
 #' @examples
-#' rep_portrait_data_description("navigation","report/contenu/5-portrait/1-stresseurs/","navigation-")
+#' rep_portrait_data_description("int_st_peche_commerciale","report/contenu/5-portrait/1-stresseurs/","peche_commerciale")
 
-rep_annexe_data_description <- function(data_id, output_folder) {
+rep_portrait_data_description <- function(data_id, output_folder, suffix) {
   # Data and libraries
-  load_metadata(data_id)
-  load_contact(data_id)
+  meta <- load_metadata(data_id)
+  # load_contact(data_id)
 
   # -------
-  out <- list()
-  # out$dat <- get(data_id)
-  out$metadata <- get(paste0("metadata_", data_id))
-  out$contact <- get(paste0("contact_", data_id))
+  nm <- meta$dataDescription$categories$accronyme
+  for(i in nm) {
+    # -------
+    uid <- meta$dataDescription$categories$accronyme == i
 
-  # -------
-  use_template(
-    template = "templates/fiche_integrated.Rmd",
-    data = out,
-    save_as = glue("{output_folder}{data_id}-.Rmd")
-  )
+    # -------
+    out <- list()
+    out$metadata <- meta
+    out$metadata$dataDescription$categories$accronyme <- out$metadata$dataDescription$categories$accronyme[uid]
+    out$metadata$dataDescription$categories$francais <- out$metadata$dataDescription$categories$francais[uid]
+    out$metadata$dataDescription$categories$english <- out$metadata$dataDescription$categories$english[uid]
+
+    # out$contact <- get(paste0("contact_", data_id))
+
+    use_template(
+      template = "templates/fiche_integrated.Rmd",
+      data = out,
+      save_as = glue("{output_folder}{suffix}-{i}.Rmd")
+    )
+  }
 }
 
-#' @rdname rep_annexe_data_description
-#' @aliases rep_annexe_data_description_all
+#' @rdname rep_portrait_data_description
+#' @aliases rep_portrait_data_description_all
 #' @export
-rep_annexe_data_description_all <- function(output_folder, suffix) {
+rep_portrait_data_description_all <- function(output_folder, suffix) {
   dataname <- dir("./data/data-metadata/", pattern = ".yml") %>%
               gsub(".yml","",.)
 
-  uid <- str_detect(dataname, "data")
+  uid <- str_detect(dataname, "int")
   dataname <- dataname[uid]
 
   for(i in dataname) {
