@@ -1,9 +1,9 @@
 title: Pêche commerciale
 description: Intensité des activités de pêche commerciale dans le Saint-Laurent
 rawData:
-- 0033
-- 0034
-- 0035
+- 27
+- 28
+- 29
 dataDescription:
   units: kg*km^-2
   spatial:
@@ -143,3 +143,22 @@ dataDescription:
       - 13
       - 13699
       - 6399
+  categories:
+    accronyme:
+    - DD
+    - DNL
+    - DNH
+    - PLB
+    - PHB
+    english:
+    - Demersal destructive
+    - Demersal, non-destructive, low-bycatch
+    - Demersal, non-destructive, high-bycatch
+    - Pelagic, low-bycatch
+    - Pelagic, high-bycatch
+    francais:
+    - Démersale destructive
+    - Démersale non-destructive, prises accessoires faibles
+    - Démersale non-destructive, prises accessoires élevées
+    - Pélagique prises accessoires faibles
+    - Pélagique prises accessoires élevées
