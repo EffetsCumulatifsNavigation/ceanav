@@ -143,9 +143,8 @@ pipeline <- function(
 
     # Données intégrées (portrait)
     rep_portrait_data_figures_int_all()
-    # TODO: insert sur la portion fluviale pour meilleure visibilité
     # TODO: ajuster légende tick text
-    # TODO: titres appropriés
+    # TODO: ajouter métadonnées pour ajuster titres et unités
     # TODO: références
 
   }
