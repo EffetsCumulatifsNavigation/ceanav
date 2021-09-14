@@ -33,7 +33,33 @@ plot_integrated.sf <- function(dat, main = NULL, subtitle = NULL, unit_data = NU
   dat <- dat[uid, ]
 
   # ------------------
+  data(aoi)
+  aoi <- suppressWarnings(st_simplify(aoi, dTolerance = 100, preserveTopology = F))
+
+  # ------------------
   global_parameters()
+
+  # ------------------
+  plotDat <- function(d = dat, a = aoi) {
+    # -----
+    plot(
+      st_geometry(d),
+      lwd = .25,
+      add = TRUE,
+      pch = 20,
+      cex = .25,
+      col = cols,
+      border = cols
+    )
+
+    # ------------------
+    plot(
+      st_geometry(a),
+      lwd = .5,
+      border = global_parameters()$col$integrated$coastline,
+      add = TRUE
+    )
+  }
 
   # ------------------------------------------------------------------------
   # Graph principal
@@ -44,38 +70,32 @@ plot_integrated.sf <- function(dat, main = NULL, subtitle = NULL, unit_data = NU
   # ------------------
   bbox <- global_param$bbox$base
   fluvial <- global_param$bbox$fluvial
-  plot0(x = c(bbox$xmin, bbox$xmax), y = c(bbox$ymin, bbox$ymax))
-  box()
-  # rect(fluvial[1], fluvial[3], fluvial[2], fluvial[4], lty = 2, border = "#00000088")
-
-  # ------------------
-  if (!is.null(main)) {
-    text(
-      x = bbox$xmin + 1000,
-      y = bbox$ymax - 10000,
-      labels = main,
-      font = 2,
-      adj = c(0,.5)
-    )
-  }
-
-  # ------------------
-  if (!is.null(subtitle)) {
-    text(
-      x = bbox$xmin + 1000,
-      y = bbox$ymax - 40000,
-      labels = subtitle,
-      adj = c(0,.5),
-      font = 3,
-      cex = .65
-    )
-  }
+  quebec <- global_param$bbox$quebec
+  montreal <- global_param$bbox$montreal
+  lacstpierre <- global_param$bbox$lacstpierre
 
   # ------------------
   pal <- colorRampPalette(viridis::viridis(100))
   # pal <- colorRampPalette(global_param$col$integrated$palette)
 
-  # -----
+  # ------------------
+  # Basemap
+  plot0(x = c(bbox$xmin, bbox$xmax), y = c(bbox$ymin, bbox$ymax))
+  box()
+
+
+  # ------------------
+  # Inserts location
+  # rect(fluvial[1], fluvial[3], fluvial[2], fluvial[4], lty = 2, border = "#00000088")
+  rect(montreal[1], montreal[3], montreal[2], montreal[4], lty = 2,
+       border = paste0(global_param$col$integrated$palette[1], "88"))
+  rect(lacstpierre[1], lacstpierre[3], lacstpierre[2], lacstpierre[4], lty = 2,
+       border = paste0(global_param$col$integrated$palette[3], "88"))
+  rect(quebec[1], quebec[3], quebec[2], quebec[4], lty = 2,
+       border = paste0(global_param$col$integrated$palette[5], "88"))
+
+  # ------------------
+  # Legend
   bin <- dat[,1,drop = TRUE] %>%
          table() %>%
          names()
@@ -98,56 +118,76 @@ plot_integrated.sf <- function(dat, main = NULL, subtitle = NULL, unit_data = NU
     )
   }
 
-  # -----
-  plot(
-    st_geometry(dat),
-    lwd = .25,
-    add = TRUE,
-    pch = 20,
-    cex = .25,
-    col = cols,
-    border = cols
-  )
+  # ------------------
+  # Text
+  if (!is.null(main)) {
+    text(x = bbox$xmin + 1000,
+         y = bbox$ymax - 10000,
+         labels = main,
+         font = 2,
+         adj = c(0,.5)
+       )
+  }
+
+  if (!is.null(subtitle)) {
+    text(
+      x = bbox$xmin + 1000,
+      y = bbox$ymax - 40000,
+      labels = subtitle,
+      adj = c(0,.5),
+      font = 3,
+      cex = .65
+    )
+  }
 
   # ------------------
-  data(aoi)
-  aoi <- suppressWarnings(st_simplify(aoi, dTolerance = 100, preserveTopology = F))
-  plot(
-    st_geometry(aoi),
-    lwd = .5,
-    border = global_parameters()$col$integrated$coastline,
-    add = TRUE
-  )
+  # Data
+  plotDat()
 
-  # # ------------------------------------------------------------------------
-  # # Second graphe
-  # par(new = TRUE)
-  # par(fig = c(.35,.95,.05,.7), mar = c(0,0,0,0))
-  #
-  # # ------------------
-  # plot0(x = c(fluvial$xmin, fluvial$xmax), y = c(fluvial$ymin, fluvial$ymax))
-  # # box()
-  #
-  # # -----
-  # plot(
-  #   st_geometry(dat),
-  #   lwd = .25,
-  #   add = TRUE,
-  #   pch = 20,
-  #   cex = .25,
-  #   col = cols,
-  #   border = cols
-  # )
-  #
-  # # ------------------
-  # data(aoi)
-  # aoi <- suppressWarnings(st_simplify(aoi, dTolerance = 100, preserveTopology = F))
-  # plot(
-  #   st_geometry(aoi),
-  #   lwd = .25,
-  #   border = global_parameters()$col$integrated$coastline,
-  #   add = TRUE
-  # )
+  # ------------------------------------------------------------------------
+  # Inserts
+  # Place name
+  name <- function(nm) {
+    xmin <- par("usr")[1]
+    xmax <- par("usr")[2]
+    ymin <- par("usr")[3]
+    ymax <- par("usr")[4]
+    x <- xmin + 2500
+    y <- ymax - 4000
+    text(x, y, nm, adj = c(0,.5), cex = .5, col = global_param$col$integrated$textOff)
+  }
+
+  # ---------------------------
+  # Montreal
+  par(new = TRUE)
+  par(fig = c(.525,.68,.05,.3), mar = c(0,0,0,0))
+  # par(fig = c(.545,.745,.05,.25), mar = c(0,0,0,0))
+  plot0(x = c(montreal$xmin, montreal$xmax), y = c(montreal$ymin+5000, montreal$ymax))
+  box(col = paste0(global_param$col$integrated$palette[1], "88"))
+  plotDat()
+  name("Montréal")
+
+  # ---------------------------
+  # Lac St-Pierre
+  par(new = TRUE)
+  par(fig = c(.7,.965,.05,.3), mar = c(0,0,0,0))
+  # par(fig = c(.765,.965,.05,.25), mar = c(0,0,0,0))
+  plot0(x = c(lacstpierre$xmin, lacstpierre$xmax), y = c(lacstpierre$ymin, lacstpierre$ymax))
+  box(col = paste0(global_param$col$integrated$palette[3], "88"))
+  plotDat()
+  name("Lac St-Pierre")
+
+
+  # ---------------------------
+  # Québec
+  par(new = TRUE)
+  par(fig = c(.7,.965,.325,.575), mar = c(0,0,0,0))
+  # par(fig = c(.765,.965,.275,.475), mar = c(0,0,0,0))
+  plot0(x = c(quebec$xmin, quebec$xmax), y = c(quebec$ymin, quebec$ymax))
+  box(col = paste0(global_param$col$integrated$palette[5], "88"))
+  plotDat()
+  name("Québec")
+
 
   # dev.off()
 }

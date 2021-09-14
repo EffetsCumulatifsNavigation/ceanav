@@ -7,6 +7,7 @@ col:
     coastline: "#00000066"
     offset: "#25364A"
     focus: "#2196a8"
+    textOff: "#7c7c7c"
     palette:
       - "#A8D5D7"
       - "#68C0BD"
@@ -24,6 +25,21 @@ bbox:
     ymax: 590000
   fluvial:
     xmin: -415000
-    xmax: -200000
+    xmax: -175000
     ymin: 164000
     ymax: 350000
+  quebec:
+    xmin: -220000
+    xmax: -170000
+    ymin: 300000
+    ymax: 350000
+  montreal:
+    xmin: -415000
+    xmax: -370000
+    ymin: 164000
+    ymax: 220000
+  lacstpierre:
+    xmin: -370000
+    xmax: -310000
+    ymin: 225000
+    ymax: 275000
