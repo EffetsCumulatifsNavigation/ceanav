@@ -1,23 +1,23 @@
-#' Fiches descriptives des données
+#' Fiches descriptives des données intégrés
 #'
-#' Fonction utilisée pour générer une fiches descriptive pour chaque données incluse au tableau récapitulatif des données à l'Annexe 1
+#' Fonction utilisée pour générer une fiches descriptive pour chaque catégorie des données intégrées pour les stresseurs environnementaux et les composantes valorisées
 #'
-#' @param data_id `character` id of data to import in R session with format `dataXXXX`
+#' @param data_id `character` id of data to import in R session
 #' @param output_folder `character` output folder for exported document
 #' @param suffix `character` if provided, add suffix before data name
 #'
 #' @keywords fiche descriptive
 #'
-#' @rdname rep_annexe_data_description
+#' @rdname rep_portrait_data_description
 #'
 #' @export
 #'
 #' @details Cette fonction permet de générer une fiche descriptive pour la base de données sélectionnée
 #'
 #' @examples
-#' rep_annexe_data_description("data0001","report/contenu/annexes/","annexe2-")
+#' rep_portrait_data_description("navigation","report/contenu/5-portrait/1-stresseurs/","navigation-")
 
-rep_annexe_data_description <- function(data_id, output_folder, suffix = NULL) {
+rep_annexe_data_description <- function(data_id, output_folder) {
   # Data and libraries
   load_metadata(data_id)
   load_contact(data_id)
@@ -30,9 +30,9 @@ rep_annexe_data_description <- function(data_id, output_folder, suffix = NULL) {
 
   # -------
   use_template(
-    template = "templates/fiche_raw.Rmd",
+    template = "templates/fiche_integrated.Rmd",
     data = out,
-    save_as = glue("{output_folder}{suffix}{data_id}.Rmd")
+    save_as = glue("{output_folder}{data_id}-.Rmd")
   )
 }
 
