@@ -125,7 +125,8 @@ plot_ceanav.sf <- function(dat, main = NULL, subtitle = NULL, unit_data = NULL, 
          y = bbox$ymax - 10000,
          labels = main,
          font = 2,
-         adj = c(0,.5)
+         adj = c(0,.5),
+         cex = .8
        )
   }
 
@@ -136,7 +137,7 @@ plot_ceanav.sf <- function(dat, main = NULL, subtitle = NULL, unit_data = NULL, 
       labels = subtitle,
       adj = c(0,.5),
       font = 3,
-      cex = .65
+      cex = .6
     )
   }
 

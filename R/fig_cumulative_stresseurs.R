@@ -33,12 +33,8 @@ fig_cumulative_stresseurs <- function() {
   plot_ceanav(
     dat[, data_id],
     main = "Stresseurs cumulés normalisés",
-    subtitle = "Somme des stresseurs individuels divisé par le nombre de catégories",
+    subtitle = "Somme des stresseurs individuels divisée\npar le nombre de catégories",
     unit_data = ""
   )
   dev.off()
-
-
-
-
 }

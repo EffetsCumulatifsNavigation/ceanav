@@ -148,7 +148,8 @@ pipeline <- function(
     # TODO: références
 
     # Analyses
-    fig_analyses()
+    fig_cumulative_stresseurs()
+    fig_cumulative_composantes_valorisees()
   }
 
 
