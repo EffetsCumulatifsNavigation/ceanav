@@ -1,1 +1,18 @@
 ## Exposition cumulée
+
+L'évaluation de l'exposition cumulée fournit une évaluation des milieux
+où il y a un chevauchement plus important entre les composantes valorisées
+et les stresseurs environnementaux. Bien que cette étape n'établisse pas une
+prédiction de l'effets des stresseurs sur les composantes valorisées, qui
+qui nécessiterait une évaluation de la sensibilité des composantes valorisées
+aux stresseurs, elle permet tout de même d'identifier les milieux où les
+composantes valorisées sont le plus susceptibles d'être soumises aux effets
+des stresseurs environnementaux considérés.
+
+```{r cumExp, fig.cap = "Distribution de l'exposition cumulée des composantes valorisées aux stresseurs environnementaux au sein de la zone d'étude", out.width = '100%'}
+knitr::include_graphics("../figures/figures-output/cumulative_exposure.png")
+```
+
+```{r cumExpNorm, fig.cap = "Distribution de l'exposition cumulée des composantes valorisées normalisées aux stresseurs environnementaux normalisés au sein de la zone d'étude", out.width = '100%'}
+knitr::include_graphics("../figures/figures-output/cumulative_exposure_norm.png")
+```

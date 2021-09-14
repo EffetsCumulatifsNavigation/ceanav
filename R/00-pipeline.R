@@ -150,6 +150,7 @@ pipeline <- function(
     # Analyses
     fig_cumulative_stresseurs()
     fig_cumulative_composantes_valorisees()
+    fig_cumulative_exposure()
   }
 
 

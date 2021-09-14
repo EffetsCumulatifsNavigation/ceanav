@@ -2,12 +2,6 @@
 
 
 <!-- -------------------------------------------------- -->
-<!-- **Figure** : -->
-
-<!-- <figure>
-  <img src="../figures/figures-integrated/{{ metadata.id }}-{{ metadata.dataDescription.categories.accronyme }}.png">
-  <figcaption>Fig.1 - Trulli, Puglia, Italy.</figcaption>
-</figure> -->
 
 ```{r {{ metadata.dataDescription.categories.accronyme }}, fig.cap = "{{ metadata.description }} - {{ metadata.dataDescription.categories.francais }}", out.width = '100%'}
 knitr::include_graphics("../figures/figures-integrated/{{ metadata.id }}-{{ metadata.dataDescription.categories.accronyme }}.png")

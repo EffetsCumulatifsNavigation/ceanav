@@ -1,1 +1,17 @@
 ## Stresseurs cumulés
+
+L'évaluation de l'empreinte cumulée permet d'identifier les sites qui sont
+le plus exposés aux effets potentiels des stresseurs environnementaux
+considérés pour l'évaluation des effets cumulatifs. Elle ne fournit pas
+d'évaluation des effets, puisqu'elle ne considère que les stresseurs,
+leur intensité et leur distribution. Elle permet toutefois d'obtenir une
+évaluation des milieux qui sont le plus propices d'être affectés par les
+stresseurs dans notre zone d'étude.
+
+```{r stCum, fig.cap = "Distribution des stresseurs cumulés au sein de la zone d'étude", out.width = '100%'}
+knitr::include_graphics("../figures/figures-output/cumulative_stresseurs.png")
+```
+
+```{r stCumNorm, fig.cap = "Distribution des stresseurs cumulés normalisés au sein de la zone d'étude", out.width = '100%'}
+knitr::include_graphics("../figures/figures-output/cumulative_stresseurs_norm.png")
+```
