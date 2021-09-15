@@ -8,7 +8,7 @@ L'intensité de la navigation au sein de la zone d'étude a été évaluée à l
 de données provenant de Système d'Identification Automatique (SIA) -- ou
 *Automatic Identification Système* (AIS) en anglais -- satellitaire entre
 `r meta$dataDescription$temporal$start` et `r meta$dataDescription$temporal$end`
-[@transportscanada2020].
+[@transportscanada2020a; @transportscanada2020b].
 
 Cette base de données contiennent `r meta$dataDescription$observations$total`
 observations.
@@ -17,7 +17,6 @@ Plusieurs types de navires naviguent sur les eaux du Saint-Laurent. Chaque type
 de navire peut engendrer des effets différents selon leur taille, leur vitesse,
 etc <!-- Compléter liste + référence --> [@addref].
 
-Nous avons ainsi considéré 11 types de navires différents.
 
 Des données caractérisant les activités d'observation en mer de mammifères marins ne
 sont pas aisément accessible à travers ces données. Nous avons ainsi utilisé
@@ -28,24 +27,22 @@ il s'agit de l'endroit où se déroule la majorité des excursions d'observation
 mammifères marins au sein de la zone d'étude.
 
 
+Nous avons ainsi considéré 11 types de navires différents (Tableau \@ref(tab:navCat)).
 
-#### Données AIS
 
-##### Types de navires disponibles
 
-| Types de navires              | Vessel types               |
-| :---------------------------- | :------------------------- |
-| Cargo                         | Cargo                      |
-| Porte-conteneurs              | Containers                 |
-| Cargaison sèche               | Dry bulk                   |
-| Traversier / roulier          | Ferry / ro-ro              |
-| Gouvernement / recherche      | Government / research      |
-| Observation mammifères marins | Marine mammals observation |
-| Passager                      | Passenger                  |
-| Navires de plaisance          | Pleasure vessels           |
-| Navires spéciaux              | Special ships              |
-| Pétrolier                     | Tanker                     |
-| Remorqueur / port             | Tugboat / port             |
+```{r navCat}
+tab <- as.data.frame(meta$dataDescription$categories)
+tab <- arrange(tab, desc(transit))
+tab$transit <- as.character(round(tab$transit, 0))
+tab <- select(tab, francais, english, transit)
+
+tab %>%
+  knitr::kable(
+    col.names = c("Types de navire", "Vessel types","Transits$^*$"),
+    caption = "Types de navires considérés pour l'analyse d'évaluation des effets cumulatifs et disponible par les données de Système d'Identification Automatique [@transportscanada2020a; @transportscanada2020b] et les activités d'obserbvation en mer des mammifères marins sur des embarcations avec permis de classe 1 [@turgeon2009]. $^*$Nombre de transits par $km^2$ par année."
+  )
+```
 
 
 Ressources pertinentes:

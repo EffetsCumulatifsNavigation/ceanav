@@ -15,6 +15,7 @@ st_peche_commerciale <- function() {
   load_format("data0033")
   load_format("data0034")
   load_format("data0035")
+  data_metadata <- c("0033","0034","0035")
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   # Classify gear types
@@ -280,7 +281,9 @@ st_peche_commerciale <- function() {
   #
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   meta <- load_metadata("int_st_peche_commerciale")
-  meta <- metadata_int_st_peche_commerciale
+
+  # -----
+  meta$rawData <- data_metadata
 
   # -----
   meta$dataDescription$spatial$extent <- st_bbox(data0033)
@@ -299,7 +302,7 @@ st_peche_commerciale <- function() {
     "Pelagic, low-bycatch",
     "Pelagic, high-bycatch")
 
-meta$dataDescription$categories$francais <- c(
+  meta$dataDescription$categories$francais <- c(
     "Démersale destructive",
     "Démersale non-destructive, prises accessoires faibles",
     "Démersale non-destructive, prises accessoires élevées",
@@ -316,10 +319,6 @@ meta$dataDescription$categories$francais <- c(
   # -----
   meta$dataDescription$especes$cible <- species_cible
   meta$dataDescription$especes$capture <- species
-
-
-
-
   # --------------------------------------------------------------------------------
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
@@ -334,7 +333,8 @@ meta$dataDescription$categories$francais <- c(
   # -----
   st_write(obj = peche_commerciale,
            dsn = "./data/data-integrated/st_peche_commerciale.geojson",
-           delete_dsn = TRUE)
+           delete_dsn = TRUE,
+           quiet = TRUE)
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #

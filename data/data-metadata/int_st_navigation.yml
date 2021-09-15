@@ -1,19 +1,85 @@
 title: Navigation
 description: Intensité de la navigation dans le Saint-Laurent et le Saguenay
+id: navigation
 rawData:
-- 0020
-- 0021
+- '0020'
+- '0021'
 - 0028
 dataDescription:
   units: n transit * km^-2
   spatial:
     resolution: 1km^2
     extent:
+    - -486816.0251099
+    - 112666.7281767
+    - 379302.4523127
+    - 707949.6287443
   temporal:
     resolution: Event based
-    start: '2017'
-    end: '2019'
+    start: 2017.0
+    end: 2019.0
   observations:
-    total:
-    moyenne:
-    sd:
+    total: ~
+    moyenne: ~
+    sd: ~
+  categories:
+    accronyme:
+    - CARGO
+    - CONTAINER
+    - DRY.BULK
+    - FERRY.RO.RO
+    - GOVERNMENT.RESEARCH
+    - Observation
+    - PASSENGER
+    - PLEASURE.VESSELS
+    - SPECIAL.SHIPS
+    - TANKER
+    - TUGS.PORT
+    english:
+    - Cargo
+    - Containers
+    - Dry bulk
+    - Ferry / ro-ro
+    - Government / research
+    - Marine mammals observation
+    - Passenger
+    - Pleasure vessels
+    - Special ships
+    - Tanker
+    - Tugboat / port
+    francais:
+    - Cargo
+    - Porte-conteneurs
+    - Cargaison sèche
+    - Traversier / roulier
+    - Gouvernement / recherche
+    - Observation mammifères marins
+    - Passager
+    - Navires de plaisance
+    - Navires spéciaux
+    - Pétrolier
+    - Remorqueur / port
+    source:
+    - '0020,0021'
+    - '0020,0021'
+    - '0020,0021'
+    - '0020,0021'
+    - '0020,0021'
+    - 0028
+    - '0020,0021'
+    - '0020,0021'
+    - '0020,0021'
+    - '0020,0021'
+    - '0020,0021'
+    transit:
+    - 10.5256519
+    - 10.863584
+    - 28.542428
+    - 8.5104925
+    - 4.6200251
+    - 55.5916206
+    - 3.3411925
+    - 0.636331
+    - 0.3210551
+    - 24.5898172
+    - 5.4442368
