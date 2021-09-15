@@ -1,0 +1,10 @@
+#### Navigation - Traversier / roulier {-}
+
+
+<!-- -------------------------------------------------- -->
+
+```{r FERRY.RO.RO, fig.cap = "Intensité de la navigation dans le Saint-Laurent et le Saguenay - Traversier / roulier", out.width = '100%'}
+knitr::include_graphics("../figures/figures-integrated/navigation-FERRY.RO.RO.png")
+```
+
+<br>

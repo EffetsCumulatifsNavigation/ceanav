@@ -1,0 +1,10 @@
+#### Navigation - Cargo {-}
+
+
+<!-- -------------------------------------------------- -->
+
+```{r CARGO, fig.cap = "Intensité de la navigation dans le Saint-Laurent et le Saguenay - Cargo", out.width = '100%'}
+knitr::include_graphics("../figures/figures-integrated/navigation-CARGO.png")
+```
+
+<br>

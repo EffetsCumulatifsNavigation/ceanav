@@ -1,0 +1,10 @@
+#### Navigation - Passager {-}
+
+
+<!-- -------------------------------------------------- -->
+
+```{r PASSENGER, fig.cap = "Intensité de la navigation dans le Saint-Laurent et le Saguenay - Passager", out.width = '100%'}
+knitr::include_graphics("../figures/figures-integrated/navigation-PASSENGER.png")
+```
+
+<br>

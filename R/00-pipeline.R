@@ -168,6 +168,12 @@ pipeline <- function(
       output_folder = "report/contenu/5-portrait/1-stresseurs/",
       suffix = "peche_commerciale"
     )
+    rep_portrait_data_description(
+      data_id = "int_st_navigation",
+      output_folder = "report/contenu/5-portrait/1-stresseurs/",
+      suffix = "navigation"
+    )
+
   }
 
 
