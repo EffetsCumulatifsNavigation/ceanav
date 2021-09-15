@@ -1,13 +1,7 @@
-#### Démersale destructive {-}
+#### Pêche commerciale - Démersale destructive {-}
 
 
 <!-- -------------------------------------------------- -->
-<!-- **Figure** : -->
-
-<!-- <figure>
-  <img src="../figures/figures-integrated/peche_commerciale-DD.png">
-  <figcaption>Fig.1 - Trulli, Puglia, Italy.</figcaption>
-</figure> -->
 
 ```{r DD, fig.cap = "Intensité des activités de pêche commerciale dans le Saint-Laurent - Démersale destructive", out.width = '100%'}
 knitr::include_graphics("../figures/figures-integrated/peche_commerciale-DD.png")

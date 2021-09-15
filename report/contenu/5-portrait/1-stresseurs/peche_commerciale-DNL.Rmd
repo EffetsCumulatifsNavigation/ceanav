@@ -1,13 +1,7 @@
-#### Démersale non-destructive, prises accessoires faibles {-}
+#### Pêche commerciale - Démersale non-destructive, prises accessoires faibles {-}
 
 
 <!-- -------------------------------------------------- -->
-<!-- **Figure** : -->
-
-<!-- <figure>
-  <img src="../figures/figures-integrated/peche_commerciale-DNL.png">
-  <figcaption>Fig.1 - Trulli, Puglia, Italy.</figcaption>
-</figure> -->
 
 ```{r DNL, fig.cap = "Intensité des activités de pêche commerciale dans le Saint-Laurent - Démersale non-destructive, prises accessoires faibles", out.width = '100%'}
 knitr::include_graphics("../figures/figures-integrated/peche_commerciale-DNL.png")
