@@ -107,7 +107,7 @@ st_navigation <- function() {
   meta$dataDescription$temporal$end <- max(years)
 
   # -----
-  obs <- data0021 %>% group_by(year) %>% summarize(total = n())
+  obs <- st_drop_geometry(data0021) %>% group_by(year) %>% summarize(total = n())
   meta$dataDescription$observations$total <- sum(obs$total)
   meta$dataDescription$observations$moyenne <- round(mean(obs$total), 0)
   meta$dataDescription$observations$sd <- round(sd(obs$total), 0)
@@ -128,6 +128,8 @@ st_navigation <- function() {
                                  "Navires de plaisance","Navires spéciaux",
                                  "Pétrolier","Remorqueur / port"))
 
+  # ---
+  # Info on transits per km2
   nav <- st_drop_geometry(navigation)
   dat2 <- data.frame(accronyme = colnames(nav), transit = 0, source = NA)
   for(i in 1:ncol(nav)) dat2$transit[i] <- sum(nav[,i], na.rm = TRUE) / (st_area(aoi) * 1e-6)
@@ -137,12 +139,18 @@ st_navigation <- function() {
   dat2$source[!uid] <- "0028"
   dat <- left_join(dat, dat2, by = "accronyme")
 
+  # ---
+  dat2 <- data.frame(accronyme = names(vessels), boats = NA)
+  for(i in 1:length(vessels)) dat2$boats[i] <- length(unique(vessels[[i]]$MMSI))
+  dat <- left_join(dat, dat2, by = "accronyme")
+
   # -----
   meta$dataDescription$categories$accronyme <- dat$accronyme
   meta$dataDescription$categories$english <- dat$english
   meta$dataDescription$categories$francais <- dat$francais
   meta$dataDescription$categories$source <- dat$source
   meta$dataDescription$categories$transit <- dat$transit
+  meta$dataDescription$categories$boats <- dat$boats
   # --------------------------------------------------------------------------------
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #

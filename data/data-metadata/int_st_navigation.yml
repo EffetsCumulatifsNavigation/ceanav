@@ -4,7 +4,6 @@ id: navigation
 rawData:
 - '0020'
 - '0021'
-- 0028
 dataDescription:
   units: n transit * km^-2
   spatial:
@@ -19,9 +18,9 @@ dataDescription:
     start: 2017.0
     end: 2019.0
   observations:
-    total: ~
-    moyenne: ~
-    sd: ~
+    total: 96074
+    moyenne: 32025.0
+    sd: 2607.0
   categories:
     accronyme:
     - CARGO
@@ -83,3 +82,15 @@ dataDescription:
     - 0.3210551
     - 24.5898172
     - 5.4442368
+    boats:
+    - 388
+    - 156
+    - 1424
+    - 45
+    - 91
+    - .na.integer
+    - 88
+    - 67
+    - 17
+    - 882
+    - 149

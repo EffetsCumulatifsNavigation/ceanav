@@ -6,25 +6,39 @@ meta <- read_yaml("../data/data-metadata/int_st_navigation.yml")
 
 L'intensité de la navigation au sein de la zone d'étude a été évaluée à l'aide
 de données provenant de Système d'Identification Automatique (SIA) -- ou
-*Automatic Identification Système* (AIS) en anglais -- satellitaire entre
-`r meta$dataDescription$temporal$start` et `r meta$dataDescription$temporal$end`
+*Automatic Identification Système* (AIS) en anglais -- satellitaire
 [@transportscanada2020a; @transportscanada2020b].
+Cette base de données contient `r meta$dataDescription$observations$total`
+localisations de navire (`r meta$dataDescription$observations$moyenne` $\pm$ `r meta$dataDescription$observations$sd` observations par année) entre
+`r meta$dataDescription$temporal$start` et `r meta$dataDescription$temporal$end`.
+Il est important de noter que ce nombre n'indique pas le nombre de transit, mais bien le nombre de coordonnées géographiques relevées
+par le SIA.
 
-Cette base de données contiennent `r meta$dataDescription$observations$total`
-observations.
+<!-- WARNING: Redo data formating and use point data as "formatted" data and create shipping segments in the integrated portion of the pipeline. -->
 
 Plusieurs types de navires naviguent sur les eaux du Saint-Laurent. Chaque type
 de navire peut engendrer des effets différents selon leur taille, leur vitesse,
 etc <!-- Compléter liste + référence --> [@addref].
 
 
-Des données caractérisant les activités d'observation en mer de mammifères marins ne
-sont pas aisément accessible à travers ces données. Nous avons ainsi utilisé
-les résultats d'une caractérisation des activités d'observation en mer des mammifères
-marins sur des embarcations avec permis de classe 1 en 2017 [@turgeon2019].
-Bien que cet exercice soit limité au parc marin du Saguenay–Saint-Laurent,
-il s'agit de l'endroit où se déroule la majorité des excursions d'observation de
-mammifères marins au sein de la zone d'étude.
+
+
+
+Nous avons complété le portrait de l'intensité de la navigation avec une
+caractérisation de l'intensité des activités d'observation en mer des
+mammifères marins sur des embarcations avec permis de classe 1 en 2017
+[@turgeon2019].
+Ces données fournissent une caractérisation du nombre de navire d'observation
+ayant traversé une grille régulière de 500m x 500m [@turgeon2009].
+Nous avons rééchantillonné cette base de données afin de distribuer le nombre de
+transit relevé au sein de notre grille d'étude de 1 $km^2$.
+Bien que cet exercice soit limité au parc marin du
+Saguenay–Saint-Laurent, il s'agit de l'endroit où se déroule la majorité des
+excursions d'observation de mammifères marins au sein de la zone d'étude.
+En tant que tel, son utilisation était justifiée pour cette étude.
+
+
+
 
 
 Nous avons ainsi considéré 11 types de navires différents (Tableau \@ref(tab:navCat)).
@@ -33,13 +47,13 @@ Nous avons ainsi considéré 11 types de navires différents (Tableau \@ref(tab:
 
 ```{r navCat}
 tab <- as.data.frame(meta$dataDescription$categories)
-tab <- arrange(tab, desc(transit))
-tab$transit <- as.character(round(tab$transit, 0))
-tab <- select(tab, francais, english, transit)
+tab <- arrange(tab, francais)
+tab$transit <- as.character(round(tab$transit, 2))
+tab <- select(tab, francais, english, boats, transit)
 
 tab %>%
   knitr::kable(
-    col.names = c("Types de navire", "Vessel types","Transits$^*$"),
+    col.names = c("Types de navire", "Vessel types","Navires","Transits$^*$"),
     caption = "Types de navires considérés pour l'analyse d'évaluation des effets cumulatifs et disponible par les données de Système d'Identification Automatique [@transportscanada2020a; @transportscanada2020b] et les activités d'obserbvation en mer des mammifères marins sur des embarcations avec permis de classe 1 [@turgeon2009]. $^*$Nombre de transits par $km^2$ par année."
   )
 ```
