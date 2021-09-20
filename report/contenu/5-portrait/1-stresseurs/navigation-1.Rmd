@@ -6,20 +6,72 @@ meta <- read_yaml("../data/data-metadata/int_st_navigation.yml")
 
 L'intensité de la navigation au sein de la zone d'étude a été évaluée à l'aide
 de données provenant de Système d'Identification Automatique (SIA) -- ou
-*Automatic Identification Système* (AIS) en anglais -- satellitaire
+*Automatic Identification Système* (AIS) en anglais -- satellitaire mises en forme
+par Maerospace Corporation et acquises pour l'Agence Spatiale Canadienne
 [@transportscanada2020a; @transportscanada2020b].
 Cette base de données contient `r meta$dataDescription$observations$total`
-localisations de navire (`r meta$dataDescription$observations$moyenne` $\pm$ `r meta$dataDescription$observations$sd` observations par année) entre
+localisations de navire (`r meta$dataDescription$observations$moyenne` $\pm$ `r meta$dataDescription$observations$sd` observations par année) pour
+`r sum(meta$dataDescription$categories$boats, na.rm = TRUE)` navires entre
 `r meta$dataDescription$temporal$start` et `r meta$dataDescription$temporal$end`.
-Il est important de noter que ce nombre n'indique pas le nombre de transit, mais bien le nombre de coordonnées géographiques relevées
-par le SIA.
+Il est important de noter que ce nombre n'indique pas le nombre de transit, mais
+bien le nombre de localisations géographiques relevées par le SIA.
 
-<!-- WARNING: Redo data formating and use point data as "formatted" data and create shipping segments in the integrated portion of the pipeline. -->
+Les données de localisations individuelles ont été transformées en segments linéaires
+de navigation représentant des transits de navires individuels et continus, en
+supposant un transit en ligne droite entre localisations succésives.
+Les navires ont été identifiés grâce à leur numéro d'identité dans le service mobile
+maritime (ISSM).
+Pour chaque navire, l'ensemble des localisations disponibles ont été utilisées
+afin de tracer leurs déplacements au sein de la zone d'étude.
+Puisque les bateaux peuvent entrer et sortir de la zone d'étude, ou encore
+demeurer à quai pour des périodes plus longues, les déplacements des navires ont
+été segmentés en plusieurs segments linéaires individuels.
+Une segmentation a été effectuée lorsque deux localisations consécutives était
+espacées de plus de 5 heures ou distantes de plus de 80,5 km.
+Les segments linéaires résultats chevauchant le milieu terrestre à une distance
+de plus de 2 km ont été retirés de la base de données. Cette distance arbitraire
+de 2 km a été utilisée afin de retirer les segments aberrents de la base de données,
+tout en conservant les segments décrivant de la navigation côtière ou des navires
+fréquentant des installations portuaires.
+Cette segmentation a résultée en `r meta$dataDescription$segments` segments
+linéaires de navigation
 
+
+<!-- TODO: Paragraphe sur différents types de navires et leurs effets environnementaux potentiels -->
 Plusieurs types de navires naviguent sur les eaux du Saint-Laurent. Chaque type
 de navire peut engendrer des effets différents selon leur taille, leur vitesse,
 etc <!-- Compléter liste + référence --> [@addref].
+Nous avons ainsi considéré 10 catégories de navires différents pour compléter le portrait
+de l'intensité de la navigation au sein de la zone d'étude (Tableau \@ref(tab:navCat)).
 
+
+```{r navCat}
+tab <- as.data.frame(meta$dataDescription$categories)
+tab <- arrange(tab, francais)
+tab$transit <- as.character(round(tab$transit, 2))
+tab <- tab[!tab$accronyme == "Observation", ] # Remove observation mm
+tab <- select(tab, francais, english, observations, boats, transit)
+
+
+tab %>%
+  knitr::kable(
+    col.names = c("Types de navire", "Vessel types", "Localisations", "Navires","Transits$^*$"),
+    row.names = FALSE,
+    caption = "Types de navires considérés pour l'analyse d'évaluation des effets cumulatifs et disponible par les données de Système d'Identification Automatique [@transportscanada2020a; @transportscanada2020b]. $^*$Nombre de transits par $km^2$ par année."
+  )
+```
+
+<br/>
+
+Pour caractériser la navigation, nous avons
+utilisé un indice d'intensité caractérisant la navigation en terme d'utilisation
+-- ou passages -- unique. Pour chaque catégorie de navire, nous avons évalualé
+l'intensité de la navigation au sein de la zone d'étude par le nombre
+de segments de navigation qui intersectents chaque cellule de 1 $km^2$ de la
+grille d'étude entre `r meta$dataDescription$temporal$start` et
+`r meta$dataDescription$temporal$end` [@ref].
+Cet indice résulte en une évaluation de l'intensité de la navigation en
+nombre de navires ($n$) par $km^2$ ($n navires * km^{-2}$)
 
 
 
@@ -29,7 +81,7 @@ caractérisation de l'intensité des activités d'observation en mer des
 mammifères marins sur des embarcations avec permis de classe 1 en 2017
 [@turgeon2019].
 Ces données fournissent une caractérisation du nombre de navire d'observation
-ayant traversé une grille régulière de 500m x 500m [@turgeon2009].
+ayant traversé une grille régulière de 500m x 500m [@turgeon2019].
 Nous avons rééchantillonné cette base de données afin de distribuer le nombre de
 transit relevé au sein de notre grille d'étude de 1 $km^2$.
 Bien que cet exercice soit limité au parc marin du
@@ -38,27 +90,7 @@ excursions d'observation de mammifères marins au sein de la zone d'étude.
 En tant que tel, son utilisation était justifiée pour cette étude.
 
 
-
-
-
-Nous avons ainsi considéré 11 types de navires différents (Tableau \@ref(tab:navCat)).
-
-
-
-```{r navCat}
-tab <- as.data.frame(meta$dataDescription$categories)
-tab <- arrange(tab, francais)
-tab$transit <- as.character(round(tab$transit, 2))
-tab <- select(tab, francais, english, boats, transit)
-
-tab %>%
-  knitr::kable(
-    col.names = c("Types de navire", "Vessel types","Navires","Transits$^*$"),
-    caption = "Types de navires considérés pour l'analyse d'évaluation des effets cumulatifs et disponible par les données de Système d'Identification Automatique [@transportscanada2020a; @transportscanada2020b] et les activités d'obserbvation en mer des mammifères marins sur des embarcations avec permis de classe 1 [@turgeon2009]. $^*$Nombre de transits par $km^2$ par année."
-  )
-```
-
-
+<!--
 Ressources pertinentes:
 
 - [AIS MESSAGES](https://www.navcen.uscg.gov/?pageName=AISMessages)
@@ -70,62 +102,6 @@ Ressources pertinentes:
 
 
 
-##### Data formatting
-
-Vessel tracks are built for each vessel with the following parameters:
-
-- Maximum distance between points: 50 miles
-- Maximum time between points: 300 minutes
-
-There are also messages (field = `Message_Type`) that are used to characterize vessel points in AIS data. See [here](https://www.navcen.uscg.gov/?pageName=AISMessages) for message description
-
-
-##### Observation mammifères marins
-
-Permis de classe 1, qui leur permet de faire des observations en mer
-Pondéré par le nombre d'excursions réelles
-Navigation de plaisance = pas assez de données
-Étudiante au doctorat de Clément focus là-dessus
-
-
-##### Notes Clément & JF
-
-Jean-François Senecal
-
-Plus grosse limitation, lorsque la zone est très grande
-
-##### Aire d'étude
-library(ceanav)
-mapview(studyarea)
-mapview(aoi)
-
-##### Données
-
-The data provided was produced by Maerospace Corporation, and was acquired via
-a contract with PWGSC on behalf of the Canadian Space Agency. No metadata came
-with the source and there are no specific requirement for citation/attribution.
-
-##### Traitement des données
-
-1. Segmenter données
-  - 5 heures
-  - 50 miles
-2. Retirer segments qui superposent le milieu terrestre (beaucoup)
-3. Diviser par type de navire
-  1. Autres
-  2. Vrac sec
-  3. Remorqueurs
-  4. Marchandise
-  5. Passager
-  6. Plaisance
-  7. Pêche
-  8. Pétrolier
-  9. Navires spéciaux
-  10. Recherche gouvernementale
-  11. Traversier
-  12. Porte-conteneur
-4. Évaluer intensité
-  - Nombre de segment qui intersectent des cellules de 1km^2
 
 
 ##### Visualisation
@@ -172,4 +148,4 @@ Hubard article sur les données AIS et les vitesses
 - https://github.com/GlobalFishingWatch/4wings/blob/develop/src/importer/README.md
 
 
-##### Infos
+##### Infos -->

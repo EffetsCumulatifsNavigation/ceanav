@@ -75,6 +75,9 @@ st_navigation <- function() {
   #
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   ais <- ais_segment(ais)
+
+  # -----
+  meta$dataDescription$segments <- nrow(ais)
   # _____________________________________________________________________________ #
 
 
@@ -213,13 +216,16 @@ st_navigation <- function() {
   for(i in 1:length(vessels)) dat2$boats[i] <- length(unique(vessels[[i]]$MMSI))
   dat <- left_join(dat, dat2, by = "accronyme")
 
+  # ---
+  # WARNING: Number of observations are calculated earlier in script
+  dat <- left_join(dat, observations, by = "accronyme")
+
   # -----
   meta$dataDescription$categories$accronyme <- dat$accronyme
   meta$dataDescription$categories$english <- dat$english
   meta$dataDescription$categories$francais <- dat$francais
   meta$dataDescription$categories$source <- dat$source
-  # WARNING: Number of observations are calculated earlier in script
-  meta$dataDescription$categories$observations <- observations$observations
+  meta$dataDescription$categories$observations <- dat$observations
   meta$dataDescription$categories$transit <- dat$transit
   meta$dataDescription$categories$boats <- dat$boats
   # --------------------------------------------------------------------------------
