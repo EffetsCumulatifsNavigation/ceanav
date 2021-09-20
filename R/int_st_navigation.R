@@ -19,7 +19,6 @@ st_navigation <- function() {
   # Load vessel type dataset and shipping tracks
   load_format("data0020") # Vessel index
   load_format("data0021") # AIS
-  data_metadata <- c("0020","0021")
 
   # ---------
   data0020$NTYPE <- gsub(" ", ".", data0020$NTYPE)
@@ -31,6 +30,95 @@ st_navigation <- function() {
   ais <- data0021 %>%
          left_join(data0020, 'MMSI')
 
+  # Save memory
+  rm(data0021)
+  # _____________________________________________________________________________ #
+
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  # Update metadata
+  # ----------------------------------
+  #
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  meta <- load_metadata("int_st_navigation")
+
+  # -----
+  meta$rawData <- c("0020","0021")
+
+  # -----
+  meta$dataDescription$spatial$extent <- st_bbox(ais) # extent of 0021 includes 0028
+
+  # -----
+  years <- unique(ais$year)
+  meta$dataDescription$temporal$start <- min(years)
+  meta$dataDescription$temporal$end <- max(years)
+
+  # -----
+  obs <- st_drop_geometry(ais) %>% group_by(year) %>% summarize(total = n())
+  meta$dataDescription$observations$total <- sum(obs$total)
+  meta$dataDescription$observations$moyenne <- round(mean(obs$total), 0)
+  meta$dataDescription$observations$sd <- round(sd(obs$total), 0)
+  rm(obs)
+
+  # -----
+  obs <- st_drop_geometry(ais)
+  observations <- data.frame(accronyme = vessel_type, observations = 0)
+  for(i in 1:length(vessel_type)) {
+    uid <- ais$NTYPE == vessel_type[i]
+    observations$observations[i] <- sum(uid, na.rm = TRUE)
+  }
+  rm(obs)
+  # _____________________________________________________________________________ #
+
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  # AIS segments
+  # -------------------------
+  #
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  ais <- ais_segment(ais)
+  # _____________________________________________________________________________ #
+
+
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  # Remove tracks significantly overlapping with land
+  # -------------------------------------------------
+  #
+  #
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  # Load data from `ceanav` package
+  data(aoi)
+  basemap("egsl")
+
+  # Union
+  sa <- bind_rows(aoi, egsl) %>%
+        st_union()
+
+  # Add buffer around study area to make sure I do not remove data in ports
+  tc <- st_buffer(aoi, 2000)
+  stl <- st_buffer(egsl, 2000)
+
+  # Combine and union
+  sabuf <- bind_rows(tc, stl) %>%
+           st_union()
+
+  # Bounding box of sa as polygon
+  bb <- st_bbox(sa) %>%
+        st_as_sfc()
+
+  # Difference with bounding box
+  sa <- st_difference(bb, sabuf)
+
+  # Intersect points with study area (This should be discussed and reevaluated)
+  uid <- st_intersects(sa, ais) %>%
+         unlist()
+  ais <- ais[-uid, ]
+  # _____________________________________________________________________________ #
+
+
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  # Shipping intensity
+  # -------------------------
+  #
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   # Divide vessel data by type
   vessels <- list()
   for(i in 1:length(vessel_type)) {
@@ -76,7 +164,7 @@ st_navigation <- function() {
   #
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   load_format("data0028") # Parc marin observation
-  data_metadata <- c(data_metadata, "0028")
+  meta$rawData <- c(meta$rawData, "0028")
 
   # -----
   library(raster)
@@ -93,25 +181,6 @@ st_navigation <- function() {
   # ----------------------------------
   #
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
-  meta <- load_metadata("int_st_navigation")
-
-  # -----
-  meta$rawData <- data_metadata
-
-  # -----
-  meta$dataDescription$spatial$extent <- st_bbox(data0021) # extent of 0021 includes 0028
-
-  # -----
-  years <- unique(data0021$year)
-  meta$dataDescription$temporal$start <- min(years)
-  meta$dataDescription$temporal$end <- max(years)
-
-  # -----
-  obs <- st_drop_geometry(data0021) %>% group_by(year) %>% summarize(total = n())
-  meta$dataDescription$observations$total <- sum(obs$total)
-  meta$dataDescription$observations$moyenne <- round(mean(obs$total), 0)
-  meta$dataDescription$observations$sd <- round(sd(obs$total), 0)
-
 
   # -----
   dat <- data.frame(accronyme = c("CARGO","CONTAINER","DRY.BULK","FERRY.RO.RO",
@@ -149,6 +218,8 @@ st_navigation <- function() {
   meta$dataDescription$categories$english <- dat$english
   meta$dataDescription$categories$francais <- dat$francais
   meta$dataDescription$categories$source <- dat$source
+  # WARNING: Number of observations are calculated earlier in script
+  meta$dataDescription$categories$observations <- observations$observations
   meta$dataDescription$categories$transit <- dat$transit
   meta$dataDescription$categories$boats <- dat$boats
   # --------------------------------------------------------------------------------

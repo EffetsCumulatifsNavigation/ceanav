@@ -85,24 +85,21 @@ get_data0021 <- function() {
   files <- dir(paste0(folder, '2017-AIS/'), full.names = TRUE)
   ais2017 <- list()
   for(i in 1:length(files)) {
-    ais2017[[i]] <- read.csv(files[i]) %>%
-                    ais_segment()
+    ais2017[[i]] <- read.csv(files[i])
   }
 
   # 2018
   files <- dir(paste0(folder, '2018-AIS/'), full.names = TRUE)
   ais2018 <- list()
   for(i in 1:length(files)) {
-    ais2018[[i]] <- read.csv(files[i]) %>%
-                    ais_segment()
+    ais2018[[i]] <- read.csv(files[i])
   }
 
   # 2019
   files <- dir(paste0(folder, '2019-AIS/'), full.names = TRUE)
   ais2019 <- list()
   for(i in 1:length(files)) {
-    ais2019[[i]] <- read.csv(files[i]) %>%
-                    ais_segment()
+    ais2019[[i]] <- read.csv(files[i])
   }
   # _________________________________________________________________________ #
 
@@ -116,8 +113,8 @@ get_data0021 <- function() {
   for(i in 1:length(ais2017)) {
     ais2017[[i]] $year <- 2017
     ais2017[[i]]$month <- i+2 #
+    # WARNING: Modifier données AIS navigation pour 2017 si les données sont éventuellement ajoutées à la base de données
   }
-  message("WARNING: Modifier données AIS navigation pour 2017 si les données sont éventuellement ajoutées à la base de données")
 
   # 2018
   for(i in 1:length(ais2018)) {
@@ -148,54 +145,22 @@ get_data0021 <- function() {
   ais2019 <- bind_rows(ais2019)
 
   # All years
-  ais <- bind_rows(ais2017, ais2018, ais2019)
+  data0021 <- bind_rows(ais2017, ais2018, ais2019)
 
   # Remove partial objects to save memory
   rm(ais2017,ais2018,ais2019)
   # _____________________________________________________________________________ #
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
-  # Remove tracks significantly overlapping with land
+  # Spatial object
   # -------------------------------------------------
   #
   #
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
-  # Load data from `ceanav` package
-  data(aoi)
-  data(egsl)
-  message("Change data names in package and adjust in function `data0021-navigation()`")
-
-  # Union
-  sa <- bind_rows(aoi, egsl) %>%
-        st_union()
-
-  # Add buffer around study area to make sure I do not remove data in ports
-  tc <- st_buffer(aoi, 2000)
-  stl <- st_buffer(egsl, 2000)
-
-  # Combine and union
-  sabuf <- bind_rows(tc, stl) %>%
-           st_union()
-
-  # Bounding box of sa as polygon
-  bb <- st_bbox(sa) %>%
-        st_as_sfc()
-
-  # Difference with bounding box
-  sa <- st_difference(bb, sabuf)
-
-  # Intersect points with study area (This should be discussed and reevaluated)
-  uid <- st_intersects(sa, ais) %>%
-         unlist()
-  ais <- ais[-uid, ]
-
-  # Object name
-  data0021 <- ais
-
-  # Transform projection
-  data0021 <- st_transform(data0021, crs = global_parameters()$crs)
+  data0021 <- data0021 %>%
+              st_as_sf(coords = c("Longitude", "Latitude"), crs = 4326) %>%
+              st_transform(crs = global_parameters()$crs)
   # _____________________________________________________________________________ #
-
 
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
@@ -204,6 +169,7 @@ get_data0021 <- function() {
   # Output
   st_write(obj = data0021,
            dsn = "./data/data-format/data0021-navigation.geojson",
-           delete_dsn = TRUE)
+           delete_dsn = TRUE,
+           quiet = TRUE)
   # _________________________________________________________________________ #
 }

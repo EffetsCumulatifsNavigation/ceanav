@@ -22,7 +22,6 @@ ais_segment <- function(df, time_interval = (300/60), distance = (50 * 1.61 * 10
   # CSV AS SF POINTS DATA
   # =~-~=~-~=~-~=~-~=~-~=~-~= #
   ais <- df %>%
-         st_as_sf(coords = c("Longitude", "Latitude"), crs = 4326) %>%
          st_transform(32198)
 
 

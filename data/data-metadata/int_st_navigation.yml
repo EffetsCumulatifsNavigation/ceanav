@@ -12,15 +12,15 @@ dataDescription:
     - -486816.0251099
     - 112666.7281767
     - 379302.4523127
-    - 707949.6287443
+    - 734815.8930619
   temporal:
     resolution: Event based
     start: 2017.0
     end: 2019.0
   observations:
-    total: 96074
-    moyenne: 32025.0
-    sd: 2607.0
+    total: 10729683
+    moyenne: 3576561.0
+    sd: 1379216.0
   categories:
     accronyme:
     - CARGO
@@ -94,3 +94,16 @@ dataDescription:
     - 17
     - 882
     - 149
+    observations:
+    - 277105.0
+    - 2169379.0
+    - 3331817.0
+    - 588245.0
+    - 467829.0
+    - 86338.0
+    - 87917.0
+    - 1188739.0
+    - 73796.0
+    - 770295.0
+    - 1104006.0
+    - 583621.0
