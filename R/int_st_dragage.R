@@ -71,10 +71,12 @@ st_dragage <- function() {
   # ------------------------------------
   #
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
-  dat0048 <- data0048 %>%
-             filter(annee > 2021) %>%
-             mutate(area_tot = as.numeric(st_area(.)) * 1e-6) %>%
-             select(municipalite, name, annee, volume, area_tot, geometry)
+  # WARNING: Retrait des dragages d'entretien prévus, puisque les informations
+  #          disponibles ne sont pas exhaustives
+  # dat0048 <- data0048 %>%
+  #            filter(annee > 2021) %>%
+  #            mutate(area_tot = as.numeric(st_area(.)) * 1e-6) %>%
+  #            select(municipalite, name, annee, volume, area_tot, geometry)
 
   # -----
   dat0049 <- data0049 %>%
@@ -87,12 +89,65 @@ st_dragage <- function() {
              select(municipalite, name, annee, volume, area_tot, geometry)
 
   # -----
-  dragage_prevu <- bind_rows(dat0048, dat0049, dat0050) %>%
+  dragage_prevu <- bind_rows(dat0049, dat0050) %>%
                    group_by(municipalite, name, area_tot) %>%
                    summarise(volume = sum(volume))
-
-
   # ------------------------------------------------------------------------- #
+
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  # Update metadata
+  # ----------------------------------
+  #
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  # -----
+  meta$dataDescription$spatial$extent <- st_bbox(dragage)
+
+  # -----
+  meta$dataDescription$categories$accronyme <- c("dragage","depot","dragage_prevu")
+
+  meta$dataDescription$categories$francais <- c(
+    "Sites de dragage",
+    "Sites de dépôts",
+    "Dragages de capitalisation prévus"
+  )
+
+  meta$dataDescription$categories$source <- c(
+    "0018,0019,0046,0048",
+    "0018,0019,0046,0048",
+    "0049,0050"
+  )
+
+  meta$dataDescription$categories$sites <- c(
+    nrow(dragage), nrow(depot), nrow(dragage_prevu)
+  )
+
+  meta$dataDescription$categories$volume <- c(
+    sum(dragage$volume), sum(depot$volume), sum(dragage_prevu$volume)
+  )
+
+  meta$dataDescription$categories$volume_moyen <- c(
+    mean(dragage$volume), mean(depot$volume), mean(dragage_prevu$volume)
+  )
+
+  meta$dataDescription$categories$volume_sd <- c(
+    sd(dragage$volume), sd(depot$volume), NA
+  )
+
+  # -----
+  meta$dataDescription$dragage$municipalite <- dragage$municipalite
+  meta$dataDescription$dragage$name <- dragage$name
+  meta$dataDescription$dragage$volume <- dragage$volume
+
+  # -----
+  meta$dataDescription$depot$municipalite <- depot$municipalite
+  meta$dataDescription$depot$name <- depot$name
+  meta$dataDescription$depot$volume <- depot$volume
+
+  # -----
+  meta$dataDescription$dragage_prevu$municipalite <- dragage_prevu$municipalite
+  meta$dataDescription$dragage_prevu$name <- dragage_prevu$name
+  meta$dataDescription$dragage_prevu$volume <- dragage_prevu$volume
+  # --------------------------------------------------------------------------------
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   # Integrate to study grid
@@ -146,7 +201,6 @@ st_dragage <- function() {
   # ------------------------------------
   #
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
-  message("Dragage: Warning: still missing Montreal and Quebec")
   # -----
   write_yaml(meta, "./data/data-metadata/int_st_dragage.yml")
 
