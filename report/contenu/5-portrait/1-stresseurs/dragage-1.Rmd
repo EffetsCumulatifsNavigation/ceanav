@@ -1,13 +1,24 @@
 ### Dragage
 
+<!--
+  TODO: Mieux expliquer la nature des travaux pour les ports, fin du premier paragraphe
+  TODO: Ajouter le nombre d'activités de dragage par sites
+  TODO: Ajouter références
+-->
+
+
 ```{r dragage_setup, echo = FALSE}
 meta <- read_yaml("../data/data-metadata/int_st_dragage.yml")
 ```
-La voie navigable du Saint-Laurent a historiquement été draguée partout où la profondeur naturelle ne permettrait pas le passage sécuritaire des bateaux. Entre Montréal et Cap Gribane, la voie navigable est d'une longueur totale d'environ 340 km et elle a été artificialisée sur une longueur d'environ 210 km afin d'y assurer une navigation sécuriaire [@ghb2019]. Sur cette longueur, une certaine proportion doit être draguée à intervalle régulier -- *i.e.* dragages d'entretien -- dû à la dynamique sédimentaire des milieux.
 
-Une caractérisation historique des activités de dragage de capitalisation -- *i.e.* dragage visant à approfondir et élargir la voie de navigation -- est décrite par @ref.
+La voie navigable du Saint-Laurent a historiquement été draguée partout où la profondeur naturelle ne permettrait pas le passage sécuritaire des bateaux. Entre Montréal et Cap Gribane, la voie navigable est d'une longueur totale d'environ 340 km et elle a été artificialisée sur une longueur d'environ 210 km afin d'y assurer une navigation sécuriaire [@ghb2019]. La voie navigable a été appronfondie et élargie à travers le temps, principalement en raison de l'accroissement de la taille des navires et de l'augmentation du trafic maritime. Une caractérisation historique des activités de dragage de capitalisation -- *i.e.* dragage visant à approfondir et élargir la voie de navigation -- de la voie navigable du Saint-Laurent est décrite par @ref.
+Certaines portions de la voie navigable doivent également être draguées à intervalles réguliers -- *i.e.* dragages d'entretien -- dû à la dynamique sédimentaire des milieux. Il en est de même pour certaines installations portuaires bordant le Saint-Laurent et le Saguenay.
 
-Dans le cadre de notre étude, l'emphase a été mise sur les activités de dragage contemporaines pour la période de `r meta$dataDescription$temporal$start` à `r meta$dataDescription$temporal$end`, pour laquelle les sites dragués et les sites de dépôts de sédiments dragués ont été caractérisés en fonction du volume total dragué en $m^3$ pendant la période visée (Tableau \@ref(tab:dragageGen)). Un total de X sites de dragages (Tableau \@ref(tab:dragageSite)) et sites de dépôt (Tableau \@ref(tab:dragageDepot)) ont été caractérisés au sein de la zone d'étude. Puisque certains projets d'expansion portuaires sont actuellement en cours, notemment pour le Port de Montréal et le Port de Trois-Rivière, ayant des plans de dragages de capitalisation prévus dans les prochaines années, ces dragages prévus ont également été répertoriés (Tableau \@ref(tab:dragageGen); Tableau \@ref(tab:dragagePrevu)).
+Dans le cadre de notre étude, l'emphase a été mise sur les activités de dragage contemporaines pour la période de `r meta$dataDescription$temporal$start` à `r meta$dataDescription$temporal$end`. Plusieurs bases de donnés ont été utilisées pour caractériser les activités de dragage. <!-- TODO: ici ajouter -->
+
+Les sites de dragage et les sites de dépôts de sédiments dragués ont été caractérisés en fonction du volume total dragué en $m^3$ pendant la période visée (Tableau \@ref(tab:dragageGen)). Un total de `r length(meta$dataDescription$dragage$volume)` sites de dragage (Tableau \@ref(tab:dragageSite)) et `r length(meta$dataDescription$depot$volume)` sites de dépôt (Tableau \@ref(tab:dragageDepot)) ont été caractérisés au sein de la zone d'étude. Il faut noter que les volumes totaux dragués ne correspondent pas aux volumes totaux déposés puisque certains sites de dépôt se retrouvent en milieu terrestres et ils n'ont pas été comptabilisés.
+
+Puisque certains projets d'expansion portuaires sont actuellement en cours, notemment pour le Port de Montréal et le Port de Trois-Rivière, ayant des plans de dragages de capitalisation prévus dans les prochaines années, ces dragages prévus ont également été répertoriés (Tableau \@ref(tab:dragageGen); Tableau \@ref(tab:dragagePrevu)).
 
 <br/>
 
@@ -67,8 +78,9 @@ tab %>%
 
 <br/>
 
-Important de noter que les volumes totaux dragués ne correspondent pas aux volumes totaux déposés puisque certaines activités de dragage ont des dépôts terrestres et n'ont ainsi pas été comptabilisés.
+L'intensité des activités de dragage (Figure \@ref(fig:dragage)), de dépôts de sédiments (Figure \@ref(fig:depot)) et de dragages prévus (Figure \@ref(fig:prevus)) a été caractérisé en distribuant les volumes totaux dragués au sein de notre grille de 1 $km^2$. Pour ce faire, nous avons multiplié les volumes totaux au sein de chaque cellule $j$ de la grille d'étude par la proportion de la zone
+visée par l'activité de dragage couvrant la cellule $j$:
 
-> En termes simples, le chenal de navigation a été dragué (ou artificialisé) partout (entre Montréal et Cap Gribane) où la profondeur naturelle ne permettait pas d’avoir la profondeur voulue, sur la largeur voulue pour un passage sécuritaire des bateaux dans les différentes phases successives de dragage de conception/amélioration de la voie navigable. Je ne sais pas combien de km ont été « artificialisés », mais j’imagine que la responsable de la GCC pourrait te donner cette info. La profondeur naturelle du fleuve à certains endroit est suffisante, ce qui explique que les zones ayant dû être draguées ne sont pas nécessairement continues. Il y a eu quelques phases d’amélioration (lire approfondissement/élargissement par rapport au design original) de la voie navigable, dont je ne connais pas les dates, principalement en raison de l’agrandissement de la taille des bateaux et de l’augmentation du trafic maritime dans le fleuve avec les années. Quand on parle d’approfondissement de la voie de navigation, on appelle ça du dragage de capitalisation.
+$$I_{dragage,j} = \sum_{k=1}^{n_j} V_{tot, k} * \frac{A_{j,k}}{A_{tot,k}}$$
 
-> L’aspect qui est traité dans les rapports de la GCC est relié plutôt au dragage d’entretien (respect du design actuel (profondeur et largeur minimum), sans approfondir) de la voie de navigation, car certains secteurs sont plus sujets à l’ensablement et doivent être entretenus selon une fréquence variable. Je n’ai pas les chiffres non plus (distances en kilomètres entretenus, fréquence…) mais les rapports ou u contact à GCC peux certainement te renseigner à ce sujet.
+où $j$ est une cellule de la grille d'étude, $k$ est une activité de dragage ou de dépôt, $V_{tot}$ est le volume total dragué ou déposé lors de l'activité de dragage ou de dépôt $k$, $A$ est la superficie du site visé $k$ qui intersecte une cellule $j$ et $A_{tot}$ est la superficie totale de l'activité de dragage ou de dépôt $k$. Cette formule calcule une évaluation de l'intensité du dragage en $m^3$. Puisque nous avons calculé l'intensité au sein de cellules de 1 $km^2$, les unités de cette formule sont en $m^3 * km^{-2}$.

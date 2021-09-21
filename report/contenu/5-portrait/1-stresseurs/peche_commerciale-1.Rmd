@@ -100,7 +100,7 @@ $$I_{peche,j} = \sum_{k=1}^{n_j} B_{tot, k} * \frac{A_{j,k}}{A_{tot,k}}$$
 où $j$ est une cellule de la grille d'étude, $k$ est une activité de pêche,
 $B_{tot}$ est la biomasse totale capturé lors de l'activité de pêche $k$,
 $A$ est la superficie de l'activité de pêche $k$ qui intersecte une cellule $j$
-et $A_{tot}$ est la superficie totale de l'activité de pêcje $k$.
+et $A_{tot}$ est la superficie totale de l'activité de pêche $k$.
 
 Cette formule calcule une évaluation de l'intensité de pêche en unité de biomasse,
 soit en kilogrammes. Puisque nous avons calculé l'intensité au sein de cellules de 1 $km^2$,
