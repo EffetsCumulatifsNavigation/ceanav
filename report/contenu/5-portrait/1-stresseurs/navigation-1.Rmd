@@ -50,14 +50,14 @@ tab <- as.data.frame(meta$dataDescription$categories)
 tab <- arrange(tab, francais)
 tab$transit <- as.character(round(tab$transit, 2))
 tab <- tab[!tab$accronyme == "Observation", ] # Remove observation mm
-tab <- select(tab, francais, english, observations, boats, transit)
+tab <- select(tab, francais, boats, observations, segments)
 
 
 tab %>%
   knitr::kable(
-    col.names = c("Types de navire", "Vessel types", "Localisations", "Navires","Transits$^*$"),
+    col.names = c("Types de navire", "Navires", "Localisations", "Segments"),
     row.names = FALSE,
-    caption = "Types de navires considérés pour l'analyse d'évaluation des effets cumulatifs et disponible par les données de Système d'Identification Automatique [@transportscanada2020a; @transportscanada2020b]. $^*$Nombre de transits par $km^2$ par année."
+    caption = "Description des types de navires considérés pour l'analyse d'évaluation des effets cumulatifs et leur représentation au sein des données du Système d'Identification Automatique utilisées [@transportscanada2020a; @transportscanada2020b]. "
   )
 ```
 
@@ -82,8 +82,8 @@ mammifères marins sur des embarcations avec permis de classe 1 en 2017
 [@turgeon2019].
 Ces données fournissent une caractérisation du nombre de navire d'observation
 ayant traversé une grille régulière de 500m x 500m [@turgeon2019].
-Nous avons rééchantillonné cette base de données afin de distribuer le nombre de
-transit relevé au sein de notre grille d'étude de 1 $km^2$.
+Nous avons rééchantillonné cette grille afin de distribuer le nombre de
+transit qui y sont relevés au sein de notre grille d'étude de 1 $km^2$.
 Bien que cet exercice soit limité au parc marin du
 Saguenay–Saint-Laurent, il s'agit de l'endroit où se déroule la majorité des
 excursions d'observation de mammifères marins au sein de la zone d'étude.
@@ -99,10 +99,6 @@ Ressources pertinentes:
 - [Marine regions](https://www.marineregions.org/gazetteer.php?p=details&id=62961)
 - [Diva-GIS](https://www.diva-gis.org/gdata)
 - [Marine Cadastre Track Builder](https://coast.noaa.gov/digitalcoast/tools/track-builder.html)
-
-
-
-
 
 ##### Visualisation
 
