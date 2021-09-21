@@ -7,8 +7,65 @@ La voie navigable du Saint-Laurent a historiquement été draguée partout où l
 
 Une caractérisation historique des activités de dragage de capitalisation -- *i.e.* dragage visant à approfondir et élargir la voie de navigation -- est décrite par @ref.
 
-Dans le cadre de notre étude, l'emphase a plutôt été mise sur les activités de dragage contemporaines pour la période entre `r meta$dataDescription$temporal$start` et `r meta$dataDescription$temporal$end`.
+Dans le cadre de notre étude, l'emphase a été mise sur les activités de dragage contemporaines pour la période de `r meta$dataDescription$temporal$start` à `r meta$dataDescription$temporal$end`, pour laquelle les sites dragués et les sites de dépôts de sédiments dragués ont été caractérisés en fonction du volume total dragué en $m^3$ pendant la période visée (Tableau \@ref(tab:dragageGen)). Un total de X sites de dragages (Tableau \@ref(tab:dragageSite)) et sites de dépôt (Tableau \@ref(tab:dragageDepot)) ont été caractérisés au sein de la zone d'étude. Puisque certains projets d'expansion portuaires sont actuellement en cours, notemment pour le Port de Montréal et le Port de Trois-Rivière, ayant des plans de dragages de capitalisation prévus dans les prochaines années, ces dragages prévus ont également été répertoriés (Tableau \@ref(tab:dragageGen); Tableau \@ref(tab:dragagePrevu)).
 
+<br/>
+
+```{r dragageGen}
+tab <- as.data.frame(meta$dataDescription$categories) %>%
+       select(francais, sites, volume, volume_moyen, volume_sd)
+
+tab %>%
+  knitr::kable(
+    col.names = c("Catégorie", "Nombre de sites", "Volumes totaux", "Volumes totaux moyens", "Écart-type"),
+    row.names = FALSE,
+    caption = "Catégories description des sites des activités de dragage répertoriées. Les volumes sont présentés en $m^3$."
+  )
+```
+
+<br/>
+
+```{r dragageSite}
+tab <- as.data.frame(meta$dataDescription$dragage) %>%
+       arrange(municipalite,name)
+
+tab %>%
+  knitr::kable(
+    col.names = c("Région", "Nom du site", "Volumes totaux"),
+    row.names = FALSE,
+    caption = "Sites de dragage et volumes totaux dragués en $m^3$ entre 2001 et 2020."
+  )
+```
+
+<br/>
+
+```{r dragageDepot}
+tab <- as.data.frame(meta$dataDescription$depot) %>%
+       arrange(municipalite,name)
+
+tab %>%
+  knitr::kable(
+    col.names = c("Région", "Nom du site", "Volumes totaux"),
+    row.names = FALSE,
+    caption = "Sites de dépôt et volumes totaux déposés en $m^3$ entre 2001 et 2020."
+  )
+```
+
+<br/>
+
+```{r dragagePrevu}
+tab <- as.data.frame(meta$dataDescription$dragage_prevu) %>%
+       arrange(municipalite,name)
+
+tab %>%
+  knitr::kable(
+    col.names = c("Région", "Nom du site", "Volumes totaux"),
+    row.names = FALSE,
+    caption = "Sites de dragage de capitalisation et volumes totaux prévus en $m^3$."
+  )
+```
+
+<br/>
 
 Important de noter que les volumes totaux dragués ne correspondent pas aux volumes totaux déposés puisque certaines activités de dragage ont des dépôts terrestres et n'ont ainsi pas été comptabilisés.
 
