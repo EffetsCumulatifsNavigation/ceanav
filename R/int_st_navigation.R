@@ -75,9 +75,6 @@ st_navigation <- function() {
   #
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   ais <- ais_segment(ais)
-
-  # -----
-  meta$dataDescription$segments <- nrow(ais)
   # _____________________________________________________________________________ #
 
 
@@ -114,14 +111,21 @@ st_navigation <- function() {
   uid <- st_intersects(sa, ais) %>%
          unlist()
   ais <- ais[-uid, ]
+
+  # -----
+  meta$dataDescription$segments <- nrow(ais)
   # _____________________________________________________________________________ #
 
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
-  # Shipping intensity
+  # Vessel types
   # -------------------------
   #
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  # Add vessel type to ais data (again)
+  ais <- ais %>%
+         left_join(data0020[,c("MMSI","NTYPE")], 'MMSI')
+
   # Divide vessel data by type
   vessels <- list()
   for(i in 1:length(vessel_type)) {
@@ -130,8 +134,14 @@ st_navigation <- function() {
   }
   names(vessels) <- vessel_type
 
+
+  # _____________________________________________________________________________ #
+
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  # Shipping intensity
   # -------------------------
-  # Evaluate intensity
+  #
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   data(grid1p)
 
   system.time({
@@ -201,12 +211,18 @@ st_navigation <- function() {
                                  "Pétrolier","Remorqueur / port"))
 
   # ---
+  # Shipping segments
+  seg <- data.frame(accronyme = names(vessels), segments = 0)
+  for(i in 1:length(vessels)) seg$segments[i] <- nrow(vessels[[i]])
+  dat <- left_join(dat, seg, by = "accronyme")
+
+  # ---
   # Info on transits per km2
   nav <- st_drop_geometry(navigation)
-  dat2 <- data.frame(accronyme = colnames(nav), transit = 0, source = NA)
-  for(i in 1:ncol(nav)) dat2$transit[i] <- sum(nav[,i], na.rm = TRUE) / (st_area(aoi) * 1e-6)
+  dat2 <- data.frame(accronyme = colnames(nav), transit_km2 = 0, source = NA)
+  for(i in 1:ncol(nav)) dat2$transit_km2[i] <- sum(nav[,i], na.rm = TRUE) / (st_area(aoi) * 1e-6)
   uid <- dat2$accronyme != "Observation"
-  dat2$transit[uid] <- dat2$transit[uid] / length(years) # only 1 year of observation
+  dat2$transit_km2[uid] <- dat2$transit_km2[uid] / length(years) # only 1 year of observation
   dat2$source[uid] <- "0020,0021"
   dat2$source[!uid] <- "0028"
   dat <- left_join(dat, dat2, by = "accronyme")
@@ -226,7 +242,8 @@ st_navigation <- function() {
   meta$dataDescription$categories$francais <- dat$francais
   meta$dataDescription$categories$source <- dat$source
   meta$dataDescription$categories$observations <- dat$observations
-  meta$dataDescription$categories$transit <- dat$transit
+  meta$dataDescription$categories$segments <- dat$segments
+  meta$dataDescription$categories$transit_km2 <- dat$transit_km2
   meta$dataDescription$categories$boats <- dat$boats
   # --------------------------------------------------------------------------------
 
