@@ -6,7 +6,7 @@ rawData:
 - 28
 - 29
 dataDescription:
-  units: kg*km^-2
+  units: kg*km^{-2}
   spatial:
     resolution: 1km^2
     extent:

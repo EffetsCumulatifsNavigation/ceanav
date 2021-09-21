@@ -68,18 +68,19 @@ plot_legend_cont <- function (range = c(0,1),
 
    text(x = x,
         y =  rep(z$y2[1] - .01*yR, n),
-        labels = round(seq(from = floor(min(range[1])), to = ceiling(max(range[2])), length.out = n)),
+        labels = round(seq(from = 0, to = max(range[2]), length.out = n)),
         cex = cexSub*.75,
-        adj = c(.5, 1))
+        adj = c(1, 1),
+        srt = 45)
 
   # Add titles
-  yText <- ybarUp + .0325*yR
+  yText <- ybarUp + .035*yR
 
   # Add sub text
   if(!is.null(subTitle)) {
     text(x = xinit,
          y = yText,
-         labels = subTitle,
+         labels = TeX(subTitle, italic = TRUE),
          cex = cexSub,
          adj = c(0,1))
      yText <- yText + .0224*yR
@@ -130,13 +131,13 @@ plot_legend_bin <- function (col,
           border = "#000000")
 
   # Add titles
-  yText <- ybarUp + .0325*yR
+  yText <- ybarUp + .035*yR
 
   # Add sub text
   if(!is.null(subTitle)) {
     text(x = xinit,
          y = yText,
-         labels = subTitle,
+         labels = TeX(subTitle, italic = TRUE),
          cex = cexSub,
          adj = c(0,1))
      yText <- yText + .0224*yR

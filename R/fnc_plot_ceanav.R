@@ -114,7 +114,7 @@ plot_ceanav.sf <- function(dat, main = NULL, subtitle = NULL, unit_data = NULL, 
       range = range(dat[,1,drop = TRUE], na.rm = TRUE),
       pal = pal,
       subTitle = unit_data,
-      cexSub = .5
+      cexSub = .4
     )
   }
 
@@ -140,6 +140,17 @@ plot_ceanav.sf <- function(dat, main = NULL, subtitle = NULL, unit_data = NULL, 
       cex = .6
     )
   }
+
+  # Add sources
+  if(!is.null(references)) {
+  mtext(text = glue("Données brutes : {references}"),
+        side = 1,
+        font = 3,
+        adj = .98,
+        cex = .4,
+        line = -.45)
+  }
+
 
   # ------------------
   # Data
