@@ -1,6 +1,6 @@
 title: Dragage
-description: Distribution des sites de dragage et de dépôt de dragage dans le Saint-Laurent
-  et le Saguenay
+description: Distribution des sites de dragage et de dépôt de dragage dans le Saint-Laurent et le Saguenay
+id: dragage
 dataDescription:
   units: m^3 * km^-2
   spatial:

@@ -5,7 +5,7 @@
 \alias{rep_portrait_data_description_all}
 \title{Fiches descriptives des données intégrés}
 \usage{
-rep_portrait_data_description(data_id, output_folder, suffix)
+rep_portrait_data_description(data_id, output_folder)
 
 rep_portrait_data_description_all(output_folder, suffix)
 }
@@ -23,7 +23,7 @@ Fonction utilisée pour générer une fiches descriptive pour chaque catégorie 
 Cette fonction permet de générer une fiche descriptive pour la base de données sélectionnée
 }
 \examples{
-rep_portrait_data_description("int_st_peche_commerciale","report/contenu/5-portrait/1-stresseurs/","peche_commerciale")
+rep_portrait_data_description("peche_commerciale","report/contenu/5-portrait/1-stresseurs")
 }
 \keyword{descriptive}
 \keyword{fiche}

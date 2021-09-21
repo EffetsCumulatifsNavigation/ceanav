@@ -1,0 +1,10 @@
+#### Dragage - Sites de dragage {-}
+
+
+<!-- -------------------------------------------------- -->
+
+```{r dragage, fig.cap = "Distribution des sites de dragage et de dépôt de dragage dans le Saint-Laurent et le Saguenay - Sites de dragage", out.width = '100%'}
+knitr::include_graphics("../figures/figures-integrated/dragage-dragage.png")
+```
+
+<br>

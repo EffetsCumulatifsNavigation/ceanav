@@ -156,24 +156,20 @@ pipeline <- function(
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~
   if (pipeline_fiches) {
+    # -----
     # Données formatées (annexe)
     rep_annexe_data_description_all(
       output_folder = "./report/contenu/annexes/",
       suffix =  "annexe4-"
     )
 
+    # -----
     # Données intégrées (portrait)
-    rep_portrait_data_description(
-      data_id = "int_st_peche_commerciale",
-      output_folder = "report/contenu/5-portrait/1-stresseurs/",
-      suffix = "peche_commerciale"
-    )
-    rep_portrait_data_description(
-      data_id = "int_st_navigation",
-      output_folder = "report/contenu/5-portrait/1-stresseurs/",
-      suffix = "navigation"
-    )
-
+    # Stresseurs
+    folder <- "report/contenu/5-portrait/1-stresseurs/"
+    rep_portrait_data_description(data_id = "dragage", output_folder = folder)
+    rep_portrait_data_description(data_id = "navigation", output_folder = folder)
+    rep_portrait_data_description(data_id = "peche_commerciale", output_folder = folder)
   }
 
 

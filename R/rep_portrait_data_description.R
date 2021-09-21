@@ -15,9 +15,17 @@
 #' @details Cette fonction permet de générer une fiche descriptive pour la base de données sélectionnée
 #'
 #' @examples
-#' rep_portrait_data_description("int_st_peche_commerciale","report/contenu/5-portrait/1-stresseurs/","peche_commerciale")
+#' rep_portrait_data_description("peche_commerciale","report/contenu/5-portrait/1-stresseurs")
 
-rep_portrait_data_description <- function(data_id, output_folder, suffix) {
+rep_portrait_data_description <- function(data_id, output_folder) {
+  # Proper names
+  # TODO: eventually simply this... it's not ideal...
+  suffix <- data_id
+  st <- c("ancrage","deversement","dragage","naufrage","navigation","peche_commerciale","rejet")
+  cv <- c("berge","habitat","mammiferes_marins","site")
+  if (data_id %in% st) data_id <- glue("int_st_{data_id}")
+  if (data_id %in% cv) data_id <- glue("int_cv_{data_id}")
+
   # Data and libraries
   meta <- load_metadata(data_id)
   # load_contact(data_id)
