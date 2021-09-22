@@ -1,0 +1,22 @@
+title: Ancrage
+description: Distribution des sites d'ancrage de navires dans le Saint-Laurent et
+  le Saguenay
+id: ancrage
+dataDescription:
+  units: n sites * km^{-2}
+  spatial:
+    resolution: 1km^2
+    extent:
+    - -1208870.3866312
+    - -153663.7106643
+    - 1149573.3870219
+    - 702041.2959883
+  temporal:
+    resolution: Event based
+  categories:
+    accronyme: ancrage
+    francais: Sites d'ancrage de navires
+    source: '0015'
+  observations:
+    total: 137
+rawData: '0015'

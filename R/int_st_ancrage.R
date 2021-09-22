@@ -19,12 +19,14 @@ st_ancrage <- function() {
   # https://github.com/EffetsCumulatifsNavigation/ceanav/issues/6
   #
   # For now, I will do something simple:
-  #   1. 2km buffer around anchorages (totally arbitrary)
+  #   1. 2km buffer around anchorages - arbitrary
   #   2. Intersect with grid
   #   3. Number of buffers intersecting grid cell
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
-  # Load data
+  # Load data & metadata
   load_format("data0015")
+  meta <- read_yaml("./data/data-metadata/int_st_ancrage.yml")
+  meta$rawData <-  c("0015")
 
   # Load grid
   data(grid1p)
@@ -46,11 +48,33 @@ st_ancrage <- function() {
   ancrage$ancrage[nid] <- 0
   # ------------------------------------------------------------------------- #
 
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  # Update metadata
+  # ----------------------------------
+  #
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  meta$dataDescription$spatial$extent <- st_bbox(data0015)
+
+  # -----
+  meta$dataDescription$categories$accronyme <-  "ancrage"
+  meta$dataDescription$categories$francais <-  "Sites d'ancrage de navires"
+  meta$dataDescription$categories$source <-  meta$rawData
+
+  # -----
+  meta$dataDescription$observations$total <-  st_intersects(data0015, aoi) %>%
+                                              unlist() %>%
+                                              length()
+  # ------------------------------------------------------------------------- #
+
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   # Export data
   # ------------------------------------
   #
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  # -----
+  write_yaml(meta, "./data/data-metadata/int_st_ancrage.yml")
+
+  # -----
   st_write(obj = ancrage,
            dsn = "./data/data-integrated/st_ancrage.geojson",
            delete_dsn = TRUE,

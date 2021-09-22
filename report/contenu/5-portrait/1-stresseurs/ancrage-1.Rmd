@@ -1,1 +1,9 @@
 ### Ancrages
+
+```{r ancrage_setup, echo = FALSE}
+meta <- read_yaml("../data/data-metadata/int_st_ancrage.yml")
+```
+
+Sites d'ancrage
+
+Nombre de sites: `r meta$dataDescription$observations$total`

@@ -3,7 +3,6 @@
 <!--
   TODO: Mieux expliquer la nature des travaux pour les ports, fin du premier paragraphe
   TODO: Ajouter le nombre d'activités de dragage par sites
-  TODO: Ajouter références
   TODO: Intégrer les références aux métadonnées?
 -->
 
