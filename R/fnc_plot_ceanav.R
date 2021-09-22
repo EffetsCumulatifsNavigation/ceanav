@@ -143,7 +143,7 @@ plot_ceanav.sf <- function(dat, main = NULL, subtitle = NULL, unit_data = NULL, 
 
   # Add sources
   if(!is.null(references)) {
-  mtext(text = glue("Données brutes : {references}"),
+  mtext(text = glue("Donnée(s) brute(s) : {references}"),
         side = 1,
         font = 3,
         adj = .98,
