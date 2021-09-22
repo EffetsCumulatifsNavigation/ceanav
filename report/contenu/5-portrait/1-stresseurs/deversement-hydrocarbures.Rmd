@@ -1,0 +1,10 @@
+#### Déversements accidentels - Hydrocarbures {-}
+
+
+<!-- -------------------------------------------------- -->
+
+```{r hydrocarbures, fig.cap = "Distribution et intensité des déversement accidentels dans le Saint-Laurent et le Saguenay - Hydrocarbures", out.width = '100%'}
+knitr::include_graphics("../figures/figures-integrated/deversement-hydrocarbures.png")
+```
+
+<br>
