@@ -1,5 +1,6 @@
 title: Déversements accidentels
-description: Distribution et intensité des déversement accidentels dans le Saint-Laurent et le Saguenay
+description: Distribution et intensité des déversement accidentels dans le Saint-Laurent
+  et le Saguenay
 id: deversement
 dataDescription:
   units: n * km^{-2}
@@ -31,13 +32,23 @@ dataDescription:
     - 74
     - 20
     - 34
+    souscategories:
+    - Bunker C, Carburant diésel, Essence,Gasoline, Hydrocarbure inconnu, Petcoke,
+      Pétrole brut, Propane, Tar, Huile de graissage, Huile Hydraulique, Huile moteur,
+      Bilge, BioSpec Hyd 32, Hydrox Bio 100, Lub oil, Huile hydraulique biodégradable,
+      Asphalte liquide
+    - Acide d'hypochlorite, Ballast, Débris, Déchet, Eau de cale, Eau huileuse, Eau
+      usée, Lait, Matière organique, Minerai de fer, Oxyde de calcium (chaux), Phosphate
+      d'ammonium, Pollution, Sludge, Suie, Soude caustique, Huile lapio, Huile hydraulique
+      végétale, Huile végétale, Mélange huileux, Charbon
+    - Contenu inconnu
   classes:
     lvls:
-    - 1 = 0 litre
-    - 2 = 0 - 100 litres
-    - 3 = 100 - 1000 litres
-    - 4 = 1000 - 7000 litres
-    - 5 = 100000 - 1000000 litres
+    - '1 : 0 litre'
+    - '2 : 0 - 100 litres'
+    - '3 : 100 - 1000 litres'
+    - '4 : 1000 - 7000 litres'
+    - '5 : 100000 - 1000000 litres'
     nombre:
     - 6.0
     - 225.0

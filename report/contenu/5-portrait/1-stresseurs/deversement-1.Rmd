@@ -3,3 +3,42 @@
 ```{r deversement_setup, echo = FALSE}
 meta <- read_yaml("../data/data-metadata/int_st_deversement.yml")
 ```
+
+Données de déversement (Tableau \@ref(tab:deversementGen))
+
+<br/>
+
+```{r deversementGen}
+tab <- as.data.frame(meta$dataDescription$categories) %>%
+       select(francais, souscategories, observations)
+
+tab %>%
+  knitr::kable(
+    col.names = c("Catégorie de contaminants", "Sous-catégorie","Nombre de déversements"),
+    row.names = FALSE,
+    caption = "Catégories et description des sites de déversements accidentels répertoriés dans le Saint-Laurent et le Saguenay entre 2016 et 2020 [@gcc2020]."
+  )
+```
+
+<br/>
+
+Les déversements sont catégorisés selon le volume de contaminant déversé (Tableau \@ref(tab:deversementlvl)).
+
+<br/>
+
+```{r deversementlvl}
+tab <- as.data.frame(meta$dataDescription$classes)
+
+tab %>%
+  knitr::kable(
+    col.names = c("Catégories de volumes déversés","Nombre de déversements"),
+    row.names = FALSE,
+    caption = "Catégories de volumes déversés et nombre de déversements accidentels répertoriés dans le Saint-Laurent et le Saguenay entre 2016 et 2020 [@gcc2020]."
+  ) %>%
+  kable_styling(full_width = F)
+
+
+
+```
+
+<br/>

@@ -114,7 +114,7 @@ st_deversement <- function() {
   # -----
   uid <- st_intersects(aoi, data0016) %>% unlist()
   obs <- data0016[uid, ]
-  
+
   # -----
   years <- sort(unique(data0016$ANNÉE))
   meta$dataDescription$temporal$start <- min(years)
@@ -133,21 +133,24 @@ st_deversement <- function() {
     nrow(obs[obs$TYPE_POLLUANT %in% inconnus, ])
   )
 
+  # ---
+  meta$dataDescription$categories$souscategories <- c(
+    "Bunker C, Carburant diésel, Essence,Gasoline, Hydrocarbure inconnu, Petcoke, Pétrole brut, Propane, Tar, Huile de graissage, Huile Hydraulique, Huile moteur, Bilge, BioSpec Hyd 32, Hydrox Bio 100, Lub oil, Huile hydraulique biodégradable, Asphalte liquide",
+    "Acide d'hypochlorite, Ballast, Débris, Déchet, Eau de cale, Eau huileuse, Eau usée, Lait, Matière organique, Minerai de fer, Oxyde de calcium (chaux), Phosphate d'ammonium, Pollution, Sludge, Suie, Soude caustique, Huile lapio, Huile hydraulique végétale, Huile végétale, Mélange huileux, Charbon",
+    "Contenu inconnu"
+  )
+
   # -----
   meta$dataDescription$classes$lvls <- c(
-         "1 = 0 litre",
-         "2 = 0 - 100 litres",
-         "3 = 100 - 1000 litres",
-         "4 = 1000 - 7000 litres",
-         "5 = 100000 - 1000000 litres"
+         "1 : 0 litre",
+         "2 : 0 - 100 litres",
+         "3 : 100 - 1000 litres",
+         "4 : 1000 - 7000 litres",
+         "5 : 100000 - 1000000 litres"
        )
 
   meta$dataDescription$classes$nombre <- as.numeric(table(dev$volume)[1:length(meta$dataDescription$classes$lvls)])
 
-  # ---
-  meta$dataDescription$hydrocarbures <- "Bunker C, Carburant diésel, Essence,Gasoline, Hydrocarbure inconnu, Petcoke, Pétrole brut, Propane, Tar, Huile de graissage, Huile Hydraulique, Huile moteur, Bilge, BioSpec Hyd 32, Hydrox Bio 100, Lub oil, Huile hydraulique biodégradable, Asphalte liquide"
-  meta$dataDescription$autres <- "Acide d'hypochlorite, Ballast, Débris, Déchet, Eau de cale, Eau huileuse, Eau usée, Lait, Matière organique, Minerai de fer, Oxyde de calcium (chaux), Phosphate d'ammonium, Pollution, Sludge, Suie, Soude caustique, Huile lapio, Huile hydraulique végétale, Huile végétale, Mélange huileux, Charbon"
-  meta$dataDescription$inconnus <- "Contenu inconnu"
   # ------------------------------------------------------------------------- #
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
