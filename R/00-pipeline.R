@@ -167,6 +167,7 @@ pipeline <- function(
     # Données intégrées (portrait)
     # Stresseurs
     folder <- "report/contenu/5-portrait/1-stresseurs/"
+    rep_portrait_data_description(data_id = "ancrage", output_folder = folder)
     rep_portrait_data_description(data_id = "dragage", output_folder = folder)
     rep_portrait_data_description(data_id = "navigation", output_folder = folder)
     rep_portrait_data_description(data_id = "peche_commerciale", output_folder = folder)
