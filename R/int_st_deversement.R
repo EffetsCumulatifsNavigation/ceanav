@@ -31,8 +31,11 @@ st_deversement <- function() {
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   # Load  data
   load_format("data0016")
+  meta <- read_yaml("./data/data-metadata/int_st_deversement.yml")
+  meta$rawData <-  c("0016")
+
+  # -----
   dev <- data0016
-  dev <- st_transform(dev, global_parameters()$crs)
 
   # Load grid
   data(grid1p)
@@ -58,7 +61,6 @@ st_deversement <- function() {
 
   inconnus <- c('Inconnu',"0","non identifi","P")
 
-
   # Identify grid cells ---------
   # Use grid as dataset
   deversement <- grid1p
@@ -68,28 +70,28 @@ st_deversement <- function() {
 
   # Intersect polluant types with grid
   # Hydrocarbures
-  hydrocarbures <- dev[dev$TYPE_POLLUANT %in% hydrocarbures, ] %>%
+  hyd <- dev[dev$TYPE_POLLUANT %in% hydrocarbures, ] %>%
                    st_intersects(grid1p,.) %>%
                    lapply(., function(x) sum(dev$volume[x])) %>%
                    unlist()
 
   # Autres polluants
-  autres <- dev[dev$TYPE_POLLUANT %in% autres, ] %>%
+  aut <- dev[dev$TYPE_POLLUANT %in% autres, ] %>%
             st_intersects(grid1p,.) %>%
             lapply(., function(x) sum(dev$volume[x])) %>%
             unlist()
 
   # Inconnus
-  inconnus <- dev[dev$TYPE_POLLUANT %in% inconnus, ] %>%
+  inc <- dev[dev$TYPE_POLLUANT %in% inconnus, ] %>%
               st_intersects(grid1p,.) %>%
               lapply(., function(x) sum(dev$volume[x])) %>%
               unlist()
 
   # Add info to grid
   deversement <- grid1p %>%
-                 mutate(hydrocarbures = hydrocarbures,
-                        autres = autres,
-                        inconnus = inconnus)
+                 mutate(hydrocarbures = hyd,
+                        autres = aut,
+                        inconnus = inc)
 
 
   # -------
@@ -100,10 +102,52 @@ st_deversement <- function() {
   deversement <- st_drop_geometry(deversement)
   for(i in 1:ncol(deversement)) deversement[nid, i] <- 0
   deversement <- cbind(grid1p, deversement)
+  # ------------------------------------------------------------------------- #
 
-  # exportMapview(deversement[, 'hydrocarbures'], './share/hydrocarbures.html')
-  # exportMapview(deversement[, 'autres'], './share/autres.html')
-  # exportMapview(deversement[, 'inconnus'], './share/inconnus.html')
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  # Update metadata
+  # ----------------------------------
+  #
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  meta$dataDescription$spatial$extent <- st_bbox(data0016)
+
+  # -----
+  uid <- st_intersects(aoi, data0016) %>% unlist()
+  obs <- data0016[uid, ]
+  
+  # -----
+  years <- sort(unique(data0016$ANNÉE))
+  meta$dataDescription$temporal$start <- min(years)
+  meta$dataDescription$temporal$end <- max(years)
+  meta$dataDescription$observations$total <- nrow(obs)
+
+  # -----
+  meta$dataDescription$categories$accronyme <-  c("hydrocarbures","autres","inconnus")
+  meta$dataDescription$categories$francais <-  c("Hydrocarbures","Autres","Contenu inconnu")
+  meta$dataDescription$categories$source <-  rep(meta$rawData, length(meta$dataDescription$categories$francais))
+
+  # ---
+  meta$dataDescription$categories$observations <- c(
+    nrow(obs[obs$TYPE_POLLUANT %in% hydrocarbures, ]),
+    nrow(obs[obs$TYPE_POLLUANT %in% autres, ]),
+    nrow(obs[obs$TYPE_POLLUANT %in% inconnus, ])
+  )
+
+  # -----
+  meta$dataDescription$classes$lvls <- c(
+         "1 = 0 litre",
+         "2 = 0 - 100 litres",
+         "3 = 100 - 1000 litres",
+         "4 = 1000 - 7000 litres",
+         "5 = 100000 - 1000000 litres"
+       )
+
+  meta$dataDescription$classes$nombre <- as.numeric(table(dev$volume)[1:length(meta$dataDescription$classes$lvls)])
+
+  # ---
+  meta$dataDescription$hydrocarbures <- "Bunker C, Carburant diésel, Essence,Gasoline, Hydrocarbure inconnu, Petcoke, Pétrole brut, Propane, Tar, Huile de graissage, Huile Hydraulique, Huile moteur, Bilge, BioSpec Hyd 32, Hydrox Bio 100, Lub oil, Huile hydraulique biodégradable, Asphalte liquide"
+  meta$dataDescription$autres <- "Acide d'hypochlorite, Ballast, Débris, Déchet, Eau de cale, Eau huileuse, Eau usée, Lait, Matière organique, Minerai de fer, Oxyde de calcium (chaux), Phosphate d'ammonium, Pollution, Sludge, Suie, Soude caustique, Huile lapio, Huile hydraulique végétale, Huile végétale, Mélange huileux, Charbon"
+  meta$dataDescription$inconnus <- "Contenu inconnu"
   # ------------------------------------------------------------------------- #
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
@@ -111,6 +155,10 @@ st_deversement <- function() {
   # ------------------------------------
   #
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  # -----
+  write_yaml(meta, "./data/data-metadata/int_st_deversement.yml")
+
+  # -----
   st_write(obj = deversement,
            dsn = "./data/data-integrated/st_deversement.geojson",
            delete_dsn = TRUE,

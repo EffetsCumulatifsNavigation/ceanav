@@ -1,1 +1,5 @@
 ### Déversements accidentels
+
+```{r dragage_setup, echo = FALSE}
+meta <- read_yaml("../data/data-metadata/int_st_deversement.yml")
+```
