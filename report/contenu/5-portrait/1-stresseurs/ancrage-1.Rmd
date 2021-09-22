@@ -4,6 +4,4 @@
 meta <- read_yaml("../data/data-metadata/int_st_ancrage.yml")
 ```
 
-Sites d'ancrage
-
-Nombre de sites: `r meta$dataDescription$observations$total`
+Les sites d'ancrage ont été caractérisés grâce à une base de donnée provenant de la Garde Côtière Canadienne [@gcc2019]. Cette dernière fournit la localisation de l'ensemble des sites d'ancrage pour l'est du Canada. Un total de `r meta$dataDescription$observations$total` sites y sont réportoriés au sein de la zone d'étude. Pour caractériser l'intensité de ce stresseur environnemental, une zone tampon de 2 $km$ a été tracée autour de chaque site d'ancrage. Le nombre de sites d'ancrage qui intersecte chaque cellule de la grille d'étude a ensuite été évalué afin d'obtenir une évaluation du nombre de sites ayant le potentiel d'influencer une cellule en $n$ sites * $km^{-2}$. Cette caractérisation permet d'obtenir une évaluation du risque environnemental associé aux sites d'ancrage au sein de chaque cellule de la grille d'étude en assumant que les risques sont supérieurs lorsque plusieurs sites d'ancrage sont situés à proximité.
