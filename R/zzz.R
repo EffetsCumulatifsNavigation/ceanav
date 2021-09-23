@@ -2,6 +2,7 @@
 #' @importFrom exactextractr exact_extract
 #' @importFrom fs path path_package
 #' @importFrom glue glue glue_sql
+#' @importFrom kableExtra kable_styling
 #' @importFrom latex2exp TeX
 #' @importFrom raster getData
 #' @importFrom whisker whisker.render
