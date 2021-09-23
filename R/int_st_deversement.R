@@ -15,19 +15,6 @@ st_deversement <- function() {
   # Format data
   # ------------------------------------
   #
-  # WARNING: Method has to be revisited and document
-  # https://github.com/EffetsCumulatifsNavigation/ceanav/issues/7
-  #
-  # For now, I will do something simple:
-  #   1. Modify volume in classes from 1 to 5
-  #       1 = 0 litre
-  #       2 = 0 - 100 litres
-  #       3 = 100 - 1000 litres
-  #       4 = 1000 - 7000 litres
-  #       5 = 100000 - 1000000 litres
-  #   2. 5km buffer around spills (totally arbitrary, no scientific basis, just for viz)
-  #   3. Intersect with grid
-  #   4. Sum of intersects in each grid cell
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   # Load  data
   load_format("data0016")
@@ -43,7 +30,15 @@ st_deversement <- function() {
   # Classify by volume
   lvls <- c('0 litre','0 - 100 litres','100 - 1000 litres','1000 - 7000 litres','100000 - 1000000 litres')
   dev$volume <- as.numeric(factor(dev$VOLUME_DEVERSE, levels = lvls))
-  dev$volume[is.na(dev$volume)] <- 6
+
+  # Remove NAs
+  uid <- is.na(dev$volume)
+  dev <- dev[!uid, ]
+
+  # Select points in study area
+  data(aoi)
+  uid <- st_intersects(aoi, dev) %>% unlist()
+  dev <- dev[uid, ]
 
   # Classify by spill type
   hydrocarbures <- c("bunker C","Carburant diésel","Diesel","Essence","Gaoline",
@@ -60,39 +55,104 @@ st_deversement <- function() {
               "Charbon")
 
   inconnus <- c('Inconnu',"0","non identifi","P")
+  # ------------------------------------------------------------------------- #
 
-  # Identify grid cells ---------
+
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  # Diffusive model
+  # ------------------------------------
+  #
+  # Diffusive model to simulate the area of influence of spills
+  #   1. Modify volume in classes from 1 to 5
+  #       1 = 0 litre
+  #       2 = 0 - 100 litres
+  #       3 = 100 - 1000 litres
+  #       4 = 1000 - 7000 litres
+  #       5 = 100000 - 1000000 litres
+  #   2. Diffusive model, distribute class values with a devay function from the source with the
+  #      following  parameters (see `R/fnc_diffusive_model.R`)
+            field <- "volume"
+            threshold <- .05
+            globalmaximum <- 5
+            decay <- 2
+            distance <- 10
+            increment <- 10
+  #   3. Intersect with grid
+  #   4. Sum of intersects in each grid cell
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  # -----
+  hyd <- diffusive(dat = dev[dev$TYPE_POLLUANT %in% hydrocarbures, ],
+                   field = field,
+                   threshold = threshold,
+                   globalmaximum = globalmaximum,
+                   decay = decay,
+                   distance = distance,
+                   increment = increment
+                 ) %>%
+                 bind_rows()
+
+
+
+
+  # -----
+  aut <- diffusive(dat = dev[dev$TYPE_POLLUANT %in% autres, ],
+                   field = field,
+                   threshold = threshold,
+                   globalmaximum = globalmaximum,
+                   decay = decay,
+                   distance = distance,
+                   increment = increment
+                 ) %>%
+                 bind_rows()
+
+
+
+  # -----
+  inc <- diffusive(dat = dev[dev$TYPE_POLLUANT %in% inconnus, ],
+                   field = field,
+                   threshold = threshold,
+                   globalmaximum = globalmaximum,
+                   decay = decay,
+                   distance = distance,
+                   increment = increment
+                 ) %>%
+                 bind_rows()
+  # ------------------------------------------------------------------------- #
+
+
+
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  # Add to grid
+  # ------------------------------------
+  #
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   # Use grid as dataset
   deversement <- grid1p
 
-  # Buffer around points
-  dev <- st_buffer(dev, 5000)
-
   # Intersect polluant types with grid
   # Hydrocarbures
-  hyd <- dev[dev$TYPE_POLLUANT %in% hydrocarbures, ] %>%
-                   st_intersects(grid1p,.) %>%
-                   lapply(., function(x) sum(dev$volume[x])) %>%
-                   unlist()
+  hyd2 <- hyd %>%
+         st_intersects(grid1p,.) %>%
+         lapply(., function(x) sum(hyd$intensity[x], na.rm = TRUE)) %>%
+         unlist()
 
   # Autres polluants
-  aut <- dev[dev$TYPE_POLLUANT %in% autres, ] %>%
-            st_intersects(grid1p,.) %>%
-            lapply(., function(x) sum(dev$volume[x])) %>%
-            unlist()
+  aut2 <- aut %>%
+         st_intersects(grid1p,.) %>%
+         lapply(., function(x) sum(aut$intensity[x], na.rm = TRUE)) %>%
+         unlist()
 
   # Inconnus
-  inc <- dev[dev$TYPE_POLLUANT %in% inconnus, ] %>%
-              st_intersects(grid1p,.) %>%
-              lapply(., function(x) sum(dev$volume[x])) %>%
-              unlist()
+  inc2 <- inc %>%
+         st_intersects(grid1p,.) %>%
+         lapply(., function(x) sum(inc$intensity[x], na.rm = TRUE)) %>%
+         unlist()
 
   # Add info to grid
   deversement <- grid1p %>%
-                 mutate(hydrocarbures = hyd,
-                        autres = aut,
-                        inconnus = inc)
-
+                 mutate(hydrocarbures = hyd2,
+                        autres = aut2,
+                        inconnus = inc2)
 
   # -------
   # Identify cells in the aoi that are only terrestrial and hence shouldn't be included.
