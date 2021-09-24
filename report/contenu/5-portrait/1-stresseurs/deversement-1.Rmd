@@ -4,7 +4,9 @@
 meta <- read_yaml("../data/data-metadata/int_st_deversement.yml")
 ```
 
-Les déversements accidentels ont été caractérisés à l'aide d'un inventaire des incidents de déversements maritimes provenant de la Garde Côtière Canadienne [@gcc2020]. Cet inventaire fournit la localisation de déversements accidentels en milieu maritime pour la période de `r meta$dataDescription$temporal$start` à `r meta$dataDescription$temporal$end`. Un total de `r meta$dataDescription$observations$total` déversements accidentels y sont répertoriés pour la zone d'étude. Chaque déversement est caractérisé selon le contenu, qui ont été regroupés en trois groupes distincts : hydrocarbures (*e.g.* essence, diésel, propane), autres (*e.g.* eau de ballast, eaux usées, matière organique) et les déversements dont le contenu est inconnu (Tableau \@ref(tab:deversementGen)). Les déversements sont également catégorisés selon le volume de contaminant déversé en litres (Tableau \@ref(tab:deversementlvl)).
+Les déversements accidentels ont été caractérisés à l'aide d'un inventaire des incidents de déversements maritimes provenant de la Garde Côtière Canadienne [@gcc2020]. Cet inventaire fournit la localisation de déversements accidentels en milieu maritime pour la période de `r meta$dataDescription$temporal$start` à `r meta$dataDescription$temporal$end`. Un total de `r meta$dataDescription$observations$total` déversements accidentels y sont répertoriés pour la zone d'étude.
+
+Chaque déversement est caractérisé selon son contenu et regroupé en trois groupes distincts : hydrocarbures (*e.g.* essence, diésel, propane), autres (*e.g.* eau de ballast, eaux usées, matière organique) et les déversements dont le contenu est inconnu (Tableau \@ref(tab:deversementGen)). Les déversements sont également catégorisés selon le volume de contaminant déversé en litres (Tableau \@ref(tab:deversementlvl)).
 
 
 <br/>
@@ -46,30 +48,16 @@ tab %>%
 
 
 <!--
-From Halpern et al. 2008 SOM
-> Finally, spread of the driver values into
-coastal waters at each pour point was modeled with a cost-path surface (S6) on the basis
-of a decay function that assigns a fixed amount of the driver (in our case, 0.5% of the
-value in the previous cell) in the initial cell and then evenly distributes the remaining
-amount of driver in all adjacent and ‘unvisited’ cells, repeated until a minimum threshold
-(0.05% of global maximum) is reached. This approach to modeling river plumes is
-diffusive and so allows drivers to wrap around headlands and islands, but does not
-account for nearshore advection that acts to push drivers in particular directions. Because
-nearshore circulation patterns are known for only a few small regions of the world, we
-conservatively used this diffusive model.
-
 S6: J. Xu, R. Lathrop, International Journal of Geographic Information Science 9,
 153 (1995).
 -->
 
-Puisque les déversements accidentels ont un effet qui va au-delà de la localisation immédiate des incidents dû à la diffusion du déversement dans l'environnement, la première étape de caractérisation de l'intensité des déversements accidentels était d'établir une zone d'influence potentielle pour chaque incident.
+Puisque les déversements accidentels ont un effet qui va au-delà de la localisation immédiate des incidents dû à la diffusion du déversement dans l'environnement, la première étape de caractérisation de l'intensité des déversements accidentels était d'établir une zone d'influence potentielle pour chaque incident. La diffusion d'un déversement varie selon les dynamiques physiques locales et régionales du milieu affecté [@ref]. Toutefois, des modèles permettant de faire ce type de modélisation sont typiquement complexe et non-disponible. Nous avons ainsi opté pour un modèle diffusif passif pour établir la zone d'influence et l'intensité relative des déversements accidentels dans la zone d'étude [voir @halpern2008].
 
-La diffusion d'un déversement varie selon les dynamiques physiques locales et régionales du milieu affecté [@ref]. Toutefois, des modèles permettant de faire ce type de modélisation sont typiquement complexe et non-disponible. Nous avons ainsi opté pour un modèle diffusif passif qui [...] [voir @halpern2008]
+Le modèle de diffusion établi la zone d'influence des déversements en construisant des anneaux concentriques d'un rayon de 10 $m$ centrés sur le site de l'incident. Une valeur initiale égale à la catégorie du volume rapporté de l'incident est assignée à l'anneau central et représente l'intensité relative de l'incident sur le milieu. Par exemple, une valeur initiale de 2 était assignée à un déversement de 0 à 100 litres (Tableau \@ref(tab:deversementlvl)). Par principe de précaution, une valeur initiale de 2 a également été attribuée aux `r meta$dataDescription$classes$nombre[length(meta$dataDescription$classes$nombre)]` incidents dont le volumes était inconnu. Une valeur est ensuite assignée successivement aux anneaux adjacents selon une fonction de décroissance de 2\% de la valeur de l'anneau précédent, jusqu'à ce qu'un seul minimal de 0.05\% du maximum global -- 3 dans notre cas -- soit atteint. Cette approche assume ainsi une diminution linéaire de l'influence des incidents sur le milieu jusqu'à un rayon maximal d'influence d'environ 3 $km$ selon la sévérité du déversement.
 
+L'intensité des déversements accidentels a été caractérisé en distribuant les valeurs d'intensités relative modélisées par le modèle diffusif au sein de la grille d'étude de 1 $km^2$. Pour chaque anneau concentrique modélisé, nous avons multiplié la valeur d'intensité au sein de chaque cellule $j$ de la grille d'étude par la proportion de la superficie de l'anneau qui intersectait une cellule $j$:
 
-<!--
-Mon courriel à Pierre
-> Pour l’échelle de couleur, j’ai généré la carte en faisant un buffer de 5km autour de chaque point. J’ai ensuite divisé les volumes déversés en 5 catégories (1: 0; 2: 0-100; 3: 100-1000; 4: 1000-7000; 5: 100000-1000000). J’ai ensuite additionné les catégorie de volumes déversés qui chevauchaient chaque cellule d’une grille de 1 km^2. Les cellules qui sont sous ou près de points répertoriés de déversements avec des volumes plus élevés ont ainsi une valeur supérieure. Les valeurs sur la carte correspondent ainsi à la somme des catégories de volumes. J’ai utilisé des catégories plutôt que les volumes directement pour diminuer l’effet visuel des plus gros déversements, mais comme il n’y a pas de déversement de catégorie 5 (100000-1000000) je crois que la carte serait assez similaire si je prennais plutôt les volumes.
+$$I_{déversement,j} = \sum_{k=1}^{n_j} I_{tot, k} * \frac{A_{j,k}}{A_{tot,k}}$$
 
-> L’échelle de couleur représente donc un espèce de proxy d’intensité de l’exposition des cellules aux déversements exposés. Comme je dis, c’est exploratoire et sommaire. Je doute qu’on puisse se rendre là mais j’imagine que ça serait plus logique de prendre un modèle diffusif et modéliser la propagation des déversements à partir des localisations répertoriées. Pour l’instant la carte donne sans doute simplement une représentation des milieux qui sont le plus à risque dans la zone d’étude selon les déversements observés de 2016 à 2020.
- -->
+où $j$ est une cellule de la grille d'étude, $k$ est un anneau concentrique modélisé, $I_{tot}$ est l'intensité relative prédite au sein de l'anneau $k$, $A$ est la superficie de l'anneau concentrique $k$ qui intersecte une cellule $j$ et $A_{tot}$ est la superficie totale de l'anneau concentrique $k$. Puisque les valeurs d'intensité correspondent à des catégories de volumes plutôt qu'à une quantité continue, les résultats de ce modèle diffusif sont relatifs et sans unités.
