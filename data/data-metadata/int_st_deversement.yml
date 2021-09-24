@@ -3,7 +3,7 @@ description: Distribution et intensité des déversement accidentels dans le Sai
   et le Saguenay
 id: deversement
 dataDescription:
-  units: n * km^{-2}
+  units: NA
   spatial:
     resolution: 1km^2
     extent:
@@ -37,26 +37,6 @@ dataDescription:
       Pétrole brut, Propane, Tar, Huile de graissage, Huile Hydraulique, Huile moteur,
       Bilge, BioSpec Hyd 32, Hydrox Bio 100, Lub oil, Huile hydraulique biodégradable,
       Asphalte liquide
-    - Bunker C, Carburant diésel, Essence,Gasoline, Hydrocarbure inconnu, Petcoke,
-      Pétrole brut, Propane, Tar, Huile de graissage, Huile Hydraulique, Huile moteur,
-      Bilge, BioSpec Hyd 32, Hydrox Bio 100, Lub oil, Huile hydraulique biodégradable,
-      Asphalte liquide
-    - Bunker C, Carburant diésel, Essence,Gasoline, Hydrocarbure inconnu, Petcoke,
-      Pétrole brut, Propane, Tar, Huile de graissage, Huile Hydraulique, Huile moteur,
-      Bilge, BioSpec Hyd 32, Hydrox Bio 100, Lub oil, Huile hydraulique biodégradable,
-      Asphalte liquide
-    - Acide d'hypochlorite, Ballast, Débris, Déchet, Eau de cale, Eau huileuse, Eau
-      usée, Lait, Matière organique, Minerai de fer, Oxyde de calcium (chaux), Phosphate
-      d'ammonium, Pollution, Sludge, Suie, Soude caustique, Huile lapio, Huile hydraulique
-      végétale, Huile végétale, Mélange huileux, Charbon
-    - Acide d'hypochlorite, Ballast, Débris, Déchet, Eau de cale, Eau huileuse, Eau
-      usée, Lait, Matière organique, Minerai de fer, Oxyde de calcium (chaux), Phosphate
-      d'ammonium, Pollution, Sludge, Suie, Soude caustique, Huile lapio, Huile hydraulique
-      végétale, Huile végétale, Mélange huileux, Charbon
-    - Acide d'hypochlorite, Ballast, Débris, Déchet, Eau de cale, Eau huileuse, Eau
-      usée, Lait, Matière organique, Minerai de fer, Oxyde de calcium (chaux), Phosphate
-      d'ammonium, Pollution, Sludge, Suie, Soude caustique, Huile lapio, Huile hydraulique
-      végétale, Huile végétale, Mélange huileux, Charbon
     - Acide d'hypochlorite, Ballast, Débris, Déchet, Eau de cale, Eau huileuse, Eau
       usée, Lait, Matière organique, Minerai de fer, Oxyde de calcium (chaux), Phosphate
       d'ammonium, Pollution, Sludge, Suie, Soude caustique, Huile lapio, Huile hydraulique
@@ -69,21 +49,14 @@ dataDescription:
     - '3 : 100 - 1000 litres'
     - '4 : 1000 - 7000 litres'
     - '5 : 100000 - 1000000 litres'
+    - 'NA : Volume inconnu'
     nombre:
-    - 2.0
-    - 106.0
-    - 14.0
-    - .na.real
-    - .na.real
+    - 2
+    - 106
+    - 14
+    - 0
+    - 0
+    - 63
   observations:
     total: 185
-  hydrocarbures: Bunker C, Carburant diésel, Essence,Gasoline, Hydrocarbure inconnu,
-    Petcoke, Pétrole brut, Propane, Tar, Huile de graissage, Huile Hydraulique, Huile
-    moteur, Bilge, BioSpec Hyd 32, Hydrox Bio 100, Lub oil, Huile hydraulique biodégradable,
-    Asphalte liquide
-  autres: Acide d'hypochlorite, Ballast, Débris, Déchet, Eau de cale, Eau huileuse,
-    Eau usée, Lait, Matière organique, Minerai de fer, Oxyde de calcium (chaux), Phosphate
-    d'ammonium, Pollution, Sludge, Suie, Soude caustique, Huile lapio, Huile hydraulique
-    végétale, Huile végétale, Mélange huileux, Charbon
-  inconnus: Contenu inconnu
 rawData: '0016'

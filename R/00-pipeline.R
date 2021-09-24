@@ -143,9 +143,6 @@ pipeline <- function(
 
     # Données intégrées (portrait)
     fig_integrated_all()
-    # TODO: ajuster légende tick text
-    # TODO: ajouter métadonnées pour ajuster titres et unités
-    # TODO: références
 
     # Analyses
     fig_cumulative_stresseurs()

@@ -24,16 +24,13 @@ st_deversement <- function() {
   # -----
   dev <- data0016
 
-  # Load grid
-  data(grid1p)
-
   # Classify by volume
   lvls <- c('0 litre','0 - 100 litres','100 - 1000 litres','1000 - 7000 litres','100000 - 1000000 litres')
   dev$volume <- as.numeric(factor(dev$VOLUME_DEVERSE, levels = lvls))
 
-  # Remove NAs
+  # NA volume to 0-100 litres category
   uid <- is.na(dev$volume)
-  dev <- dev[!uid, ]
+  dev$volume[uid] <- 2
 
   # Select points in study area
   data(aoi)
@@ -91,9 +88,6 @@ st_deversement <- function() {
                  ) %>%
                  bind_rows()
 
-
-
-
   # -----
   aut <- diffusive(dat = dev[dev$TYPE_POLLUANT %in% autres, ],
                    field = field,
@@ -104,8 +98,6 @@ st_deversement <- function() {
                    increment = increment
                  ) %>%
                  bind_rows()
-
-
 
   # -----
   inc <- diffusive(dat = dev[dev$TYPE_POLLUANT %in% inconnus, ],
@@ -119,40 +111,56 @@ st_deversement <- function() {
                  bind_rows()
   # ------------------------------------------------------------------------- #
 
-
-
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   # Add to grid
   # ------------------------------------
   #
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
-  # Use grid as dataset
-  deversement <- grid1p
+  # Load grid
+  data(grid1p)
+  grid1p$id <- 1:nrow(grid1p)
 
-  # Intersect polluant types with grid
-  # Hydrocarbures
+  # -----
   hyd2 <- hyd %>%
-         st_intersects(grid1p,.) %>%
-         lapply(., function(x) sum(hyd$intensity[x], na.rm = TRUE)) %>%
-         unlist()
+          mutate(area_tot = as.numeric(st_area(.)) * 1e-6) %>%
+          st_intersection(grid1p, .) %>%
+          mutate(area = as.numeric(st_area(.)) * 1e-6,
+                 area_prop = area / area_tot,
+                 intensite = intensity * area_prop) %>%
+          group_by(id) %>%
+          summarise(hydrocarbures = sum(intensite)) %>%
+          st_drop_geometry()
 
-  # Autres polluants
+
+  # -----
   aut2 <- aut %>%
-         st_intersects(grid1p,.) %>%
-         lapply(., function(x) sum(aut$intensity[x], na.rm = TRUE)) %>%
-         unlist()
+          mutate(area_tot = as.numeric(st_area(.)) * 1e-6) %>%
+          st_intersection(grid1p, .) %>%
+          mutate(area = as.numeric(st_area(.)) * 1e-6,
+                 area_prop = area / area_tot,
+                 intensite = intensity * area_prop) %>%
+          group_by(id) %>%
+          summarise(autres = sum(intensite)) %>%
+          st_drop_geometry()
 
-  # Inconnus
+  # -----
   inc2 <- inc %>%
-         st_intersects(grid1p,.) %>%
-         lapply(., function(x) sum(inc$intensity[x], na.rm = TRUE)) %>%
-         unlist()
+          mutate(area_tot = as.numeric(st_area(.)) * 1e-6) %>%
+          st_intersection(grid1p, .) %>%
+          mutate(area = as.numeric(st_area(.)) * 1e-6,
+                 area_prop = area / area_tot,
+                 intensite = intensity * area_prop) %>%
+          group_by(id) %>%
+          summarise(inconnus = sum(intensite)) %>%
+          st_drop_geometry()
 
-  # Add info to grid
+
+  # -----
   deversement <- grid1p %>%
-                 mutate(hydrocarbures = hyd2,
-                        autres = aut2,
-                        inconnus = inc2)
+                 left_join(hydrocarbures, by = "id") %>%
+                 left_join(autres, by = "id") %>%
+                 left_join(inconnus, by = "id") %>%
+                 select(-id)
 
   # -------
   # Identify cells in the aoi that are only terrestrial and hence shouldn't be included.
@@ -201,16 +209,25 @@ st_deversement <- function() {
   )
 
   # -----
+  tab <- table(dev$VOLUME_DEVERSE, useNA = "always")
   meta$dataDescription$classes$lvls <- c(
          "1 : 0 litre",
          "2 : 0 - 100 litres",
          "3 : 100 - 1000 litres",
          "4 : 1000 - 7000 litres",
-         "5 : 100000 - 1000000 litres"
+         "5 : 100000 - 1000000 litres",
+         "NA : Volume inconnu"
        )
 
-  meta$dataDescription$classes$nombre <- as.numeric(table(dev$volume)[1:length(meta$dataDescription$classes$lvls)])
-
+  lvls <- c('0 litre','0 - 100 litres','100 - 1000 litres','1000 - 7000 litres','100000 - 1000000 litres','<NA>')
+  meta$dataDescription$classes$nombre <- c(
+    sum(dev$VOLUME_DEVERSE == lvls[1], na.rm = TRUE),
+    sum(dev$VOLUME_DEVERSE == lvls[2], na.rm = TRUE),
+    sum(dev$VOLUME_DEVERSE == lvls[3], na.rm = TRUE),
+    sum(dev$VOLUME_DEVERSE == lvls[4], na.rm = TRUE),
+    sum(dev$VOLUME_DEVERSE == lvls[5], na.rm = TRUE),
+    sum(is.na(dev$VOLUME_DEVERSE))
+  )
   # ------------------------------------------------------------------------- #
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
