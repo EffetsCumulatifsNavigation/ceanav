@@ -25,7 +25,7 @@ diffusive <- function(dat, field, threshold, globalmaximum, decay, distance, inc
   val <- list()
   for(i in 1:nrow(dat)) {
     val[[i]] <- seq(from = dat[i, field, drop = TRUE],
-                    to = 6 * (threshold/100),
+                    to = globalmaximum * (threshold/100),
                     by = -(decay/100))
 
     # Succesive buffers
