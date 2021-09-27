@@ -4,6 +4,24 @@
 meta <- read_yaml("../data/data-metadata/int_cv_berge.yml")
 ```
 
+La composante valorisée d'intégritée des berge a été caractérisée à partir de données d'un exercice récent de caractérisation des berges de la partie fluviale du Saint-Laurent [@bernier2020]. La caractérisation de l'état des berges y est divisé en trois catégories [Tableau FF dans @bernier2020] :
+
+- Active ou vive : Érosion apparente ou couvert végétal < 25%
+- Semi-végétalisée : Érosion apparente ou couvert végétal de 25 à 75%
+- Stable ou végétalisé : Aucun signe d'érosion pparent, et couvert végétal > 75% ou présence d'une structure de protection
+
+L'état des milieux artificialisés est divisé en cinq catégories [Annexe C dans @bernier2020] :
+
+- Bon : Altération de 0 à 25%
+- Partiellement endommagé : Altération de 25 à 50%
+- Très endommagé : Altération de 50 à 75% et aucune protection côtière
+- Complètement endommagé : Alération > 75% et aucune protection côtière
+- N/A : absence d'artificialité
+
+Pour notre analyse, nous avons combiné l'état de la berge et l'état des milieux artificialisés en huit catégories distinctes afin d'obtenir des segments de berge sensibles à l'érosion dans la zone d'étude :
+
+<br/>
+
 ```{r bergeCat}
 tab <- as.data.frame(meta$dataDescription$categories)
 tab <- arrange(tab, francais)
@@ -18,39 +36,8 @@ tab %>%
   )
 ```
 
-<!--
-Les sites vulnérables à l'érosion proviennent de ...
+<br/>
 
-Dans ce rapport, les auteurs ont identifié des sites vulnérables à l'érosion en faisant XXX
+Ces huit catégories ont ensuite été intégrée à la grille afin d'obtenir une évaluation de la présence des différentes catégories de berges sensibles à l'érosion au sein de la zone d'étude. Il est important de noter que puisque cette composante valorisée n'a été identifiée que pour la portion fluviale du Saint-Laurent, aucune caractérisation n'a été faite pour l'estuaire et le Saguenay.
 
-Dans le cadre de notre projet, nous avons divisé les
-
-La base de données identifie des processus dominants menant à la vulnérabilité des sites identifiés. Il faudrait déterminer s'il serait pertinent de considérer ces processus dominants dans la création de catégories de sites.
-
-Pour l'instant, je vais séparer selon leur catégorisation d'état de la berge et d'état des artificialisations.
-
-Dans le rapport, l'état de la berge est caractérisé (Tableau FF; @lajeunesse):
-
-- Active ou vive (VIVE) : Érosion apparente ou couvert végétal < 25%
-- Semi-végétalisée (SV) : Érosion apparente ou couvert végétal de 25 à 75%
-- Stable ou végétalisé (VEGE) : Aucun signe d'érosion pparent, et couvert végétal > 75% ou présence d'une structure de protection
-
-L'état des milieux artificialisés est caractérisé ainsi (Annexe C; @lajeunesse):
-
-- Bon (B) : Altération de 0 à 25%
-- Partiellement endommagé (PE) : Altération de 25 à 50%
-- Très endommagé (TE) : Altération de 50 à 75% et aucune protection côtière
-- Complètement endommagé (CE) : Alération > 75% et aucune protection côtière
-- N/A (NA) : absence d'artificialité
-
-Pour notre analyse, nous avons combiner l'état de la berge et l'état des milieux artificialisés en 8 catégories distinctes:
-
-- Naturelle - Semi-végétalisée (N_SV)
-- Naturelle - Vive (N_V)
-- Artificielle - Semi-végétalisée - Partiellement endommagée (A_SV_PE)
-- Artificielle - Semi-végétalisée - Très endommagée (A_SV_TE)
-- Artificielle - Semi-végétalisée - Complètement endommagée (A_SV_CE)
-- Artificielle - Vive - Partiellement endommagée (A_V_PE)
-- Artificielle - Vive - Très endommagée (A_V_TE)
-- Artificielle - Vive - Complètement endommagée (A_V_CE)
--->
+<br/>
