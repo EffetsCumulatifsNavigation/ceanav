@@ -18,8 +18,8 @@ cv_mammiferes_marins <- function() {
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   load_format("data0027")
   data(grid1p)
-  data0027 <- raster("data/data-format/data0027-mammiferes_marins.tif")
   data0027 <- as(data0027, "Raster")
+
 
   # -------
   # Identify cells in the aoi that are only terrestrial and hence shouldn't be included.
@@ -57,14 +57,55 @@ cv_mammiferes_marins <- function() {
   mammiferes_marins <- mm
   # ------------------------------------------------------------------------- #
 
+
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  # Update metadata
+  # ----------------------------------
+  #
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  meta <- load_metadata("int_cv_mammiferes_marins")
+
+  # -----
+  meta$rawData <- c("0027")
+
+  # -----
+  meta$dataDescription$spatial$extent <- st_bbox(mammiferes_marins)
+
+  # -----
+  nm <- data.frame(accronyme = c("rorqual_a_bosse","rorqual_bleu","petit_rorqual",
+                                 "beluga","rorqual_commun"),
+                 francais = c("Rorqual à bosse","Rorqual bleu","Petit rorqual",
+                              "Béluga du Saint-Laurent","Rorqual commun"),
+                 english = c("Humpback whale","Blue whale","Minke whale",
+                             "St. Lawrence beluga whale","Fin whale"),
+                 scientific = c("Megaptera novaeangliae","Balaenoptera musculus",
+                                "Balaenoptera acutorostrata", "Delphinapterus leucas",
+                                "Balaenoptera physalus"),
+                 source = "0027")
+
+  meta$dataDescription$categories$accronyme <-  nm$accronyme
+  meta$dataDescription$categories$francais <-  nm$francais
+  meta$dataDescription$categories$english <-  nm$english
+  meta$dataDescription$categories$scientific <-  nm$scientific
+  meta$dataDescription$categories$source <-  nm$source
+
+  # _____________________________________________________________________________ #
+
+
+
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   # Export data
   # ------------------------------------
   #
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  # -----
+  write_yaml(meta, "./data/data-metadata/int_cv_mammiferes_marins.yml")
+
+  # -----
   st_write(obj = mammiferes_marins,
            dsn = "./data/data-integrated/cv_mammiferes_marins.geojson",
-           delete_dsn = TRUE)
+           delete_dsn = TRUE,
+           quiet = TRUE)
   # ------------------------------------------------------------------------- #}
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #

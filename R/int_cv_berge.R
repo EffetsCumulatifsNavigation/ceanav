@@ -128,7 +128,7 @@ cv_berge <- function() {
   meta$rawData <- c("0017")
 
   # -----
-  meta$dataDescription$spatial$extent <- st_bbox(data0017) # extent of 0021 includes 0028
+  meta$dataDescription$spatial$extent <- st_bbox(data0017)
 
   # -----
   meta$dataDescription$categories$accronyme <-  categories

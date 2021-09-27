@@ -2,17 +2,47 @@ title: Mammifères marins
 description: Distribution des mammifères marins dans le Saint-Laurent et le Saguenay
 id: mammiferes_marins
 dataDescription:
-  units: NA
+  units: Presence
   spatial:
     resolution: 1km^2
     extent:
-    - -112309.1104231
-    - 392532.8504619
-    - 127370.787435
-    - 591702.328144
+    - -413830.0813864
+    - 168655.5276494
+    - 130169.9186136
+    - 594655.527648
   temporal:
     resolution: Event based
-    start: '2010'
+    start: '2015'
     end: '2020'
-rawData:
-- '0001'
+  categories:
+    accronyme:
+    - rorqual_a_bosse
+    - rorqual_bleu
+    - petit_rorqual
+    - beluga
+    - rorqual_commun
+    francais:
+    - Rorqual à bosse
+    - Rorqual bleu
+    - Petit rorqual
+    - Béluga du Saint-Laurent
+    - Rorqual commun
+    english:
+    - Humpback whale
+    - Blue whale
+    - Minke whale
+    - St. Lawrence beluga whale
+    - Fin whale
+    scientific:
+    - Megaptera novaeangliae
+    - Balaenoptera musculus
+    - Balaenoptera acutorostrata
+    - Delphinapterus leucas
+    - Balaenoptera physalus
+    source:
+    - '0027'
+    - '0027'
+    - '0027'
+    - '0027'
+    - '0027'
+rawData: '0027'
