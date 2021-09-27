@@ -16,28 +16,65 @@ st_port <- function() {
   # ------------------------------------
   #
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  load_format("data0021")
   load_format("data0041")
   load_format("data0047")
 
   # -----
+  data(grid1p)
+  data(aoi)
+
+  # -----
   meta <- load_metadata("int_st_port")
-  meta$rawData <- c("0041", "0047")
+  meta$rawData <- c("0021", "0041", "0047")
   # ------------------------------------------------------------------------- #
 
 
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
-  # Format and combine data
+  # Combine port data and add buffer
   # ------------------------------------
   #
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
-  # WARNING: For visualization purposes, simply a 5 km buffer for now
-  data0041 <- st_buffer(data0041, 2000)
-  data0047 <- st_buffer(data0047, 4000)
+  # WARNING:
+  # Retrait de la zone marine pour les données de zones industrialo-portuaires
+  # Ceci est fait surtout pour Bécancour, puisque la zone s'étend jusqu'au milieu
+  # du chenal de navigation. On ajoute ensuite un buffer pour identifier la zone d'influence marine
+  data0047 <- st_difference(data0047, aoi)
 
   # -----
-  # port <- bind_rows(data0041, data0047)
+  port <- bind_rows(data0041, data0047) %>%
+          st_buffer(200) %>%
+          st_union() %>%
+          st_intersection(aoi) %>%
+          st_cast("POLYGON") %>%
+          st_sf()
 
+  # ------------------------------------------------------------------------- #
+
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  # AIS segments
+  # -------------------------
+  #
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  ais <- ais_segment(data0021)
+  # _____________________________________________________________________________ #
+
+
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  # Number of transits per port area
+  # ------------------------------------
+  #
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  # -----
+  uid <- st_intersects(port, ais)
+
+  # -----
+  ntransit <- list()
+  for(i in 1:length(uid)) ntransit[[i]] <- length(uid[[i]])
+
+  # -----
+  port$port <- unlist(ntransit)
   # ------------------------------------------------------------------------- #
 
 
@@ -46,30 +83,31 @@ st_port <- function() {
   # ------------------------------------
   #
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
-  data(grid1p)
-
-  # Ports
   # -----
-  uid <- st_intersects(data0041, grid1p) %>%
-         unlist() %>%
-         unique()
+  grid1p$id <- 1:nrow(grid1p)
 
   # -----
-  port <- grid1p %>%
-          mutate(port = 0)
-  port$port[uid] <- 1
-
-  # Zones industrialo-portuaires
-  # -----
-  uid <- st_intersects(data0047, grid1p) %>%
-         unlist() %>%
-         unique()
+  uid <- st_intersects(port, grid1p)
 
   # -----
-  port <- port %>%
-          mutate(zone_portuaire = 0)
-  port$zone_portuaire[uid] <- 1
+  dat <- list()
+  for(i in 1:length(uid)) {
+    dat[[i]] <- data.frame(id = uid[[i]], port = port$port[i])
+  }
+  dat <- bind_rows(dat)
 
+  # -----
+  dat <- dat %>%
+         group_by(id) %>%
+         summarise(port = sum(port))
+
+  # -----
+  port <- left_join(dat, by = 'id') %>%
+          select(-id)
+
+  # -----
+  port <- cbind(grid1p, port) %>%
+          select(-id)
   # ------------------------------------------------------------------------- #
 
 
@@ -78,11 +116,6 @@ st_port <- function() {
   # ------------------------------------
   #
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
-  # WARNING: Déterminer comment établir l'intensité de cette influence en
-  #          fonction du traffic qui transite par les ports (utiliser
-  #          données AIS)
-  message("WARNING: Déterminer comment établir l'intensité de cette influence en fonction du traffic qui transite par les ports (utiliser données AIS)")
-
   # -----
   write_yaml(meta, "./data/data-metadata/int_st_port.yml")
 
