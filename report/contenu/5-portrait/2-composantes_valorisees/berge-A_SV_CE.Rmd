@@ -1,0 +1,10 @@
+#### Intégrité des berges - Artificielle - Semi-végétalisée - Complètement endommagée {-}
+
+
+<!-- -------------------------------------------------- -->
+
+```{r A_SV_CE, fig.cap = "Distribution des segments de berge sensibles à l'érosion dans le Saint-Laurent et le Saguenay - Artificielle - Semi-végétalisée - Complètement endommagée", out.width = '100%'}
+knitr::include_graphics("../figures/figures-integrated/berge-A_SV_CE.png")
+```
+
+<br>

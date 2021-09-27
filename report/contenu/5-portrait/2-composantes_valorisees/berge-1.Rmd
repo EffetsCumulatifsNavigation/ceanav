@@ -1,5 +1,24 @@
 ### Intégrité des berges
 
+```{r berge_setup, echo = FALSE}
+meta <- read_yaml("../data/data-metadata/int_cv_berge.yml")
+```
+
+```{r bergeCat}
+tab <- as.data.frame(meta$dataDescription$categories)
+tab <- arrange(tab, francais)
+tab <- select(tab, francais, longueur)
+
+
+tab %>%
+  knitr::kable(
+    col.names = c("Catégories", "Longueur (km)"),
+    row.names = FALSE,
+    caption = "Catégories de segments de berge sensibles à l'érosion considérés pour l'analyse d'évaluation des effets cumulatifs et leur longueur totale en $km$ au sein des données de caractérisation des berges de la partie fluviale du Saint-Laurent [@bernier2020]"
+  )
+```
+
+<!--
 Les sites vulnérables à l'érosion proviennent de ...
 
 Dans ce rapport, les auteurs ont identifié des sites vulnérables à l'érosion en faisant XXX
@@ -34,3 +53,4 @@ Pour notre analyse, nous avons combiner l'état de la berge et l'état des milie
 - Artificielle - Vive - Partiellement endommagée (A_V_PE)
 - Artificielle - Vive - Très endommagée (A_V_TE)
 - Artificielle - Vive - Complètement endommagée (A_V_CE)
+-->

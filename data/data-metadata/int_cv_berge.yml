@@ -34,7 +34,15 @@ dataDescription:
     - Artificielle - Vive - Partiellement endommagée
     - Artificielle - Vive - Très endommagée
     - Artificielle - Vive - Complètement endommagée
-    source: '0017'
+    source:
+    - '0017'
+    - '0017'
+    - '0017'
+    - '0017'
+    - '0017'
+    - '0017'
+    - '0017'
+    - '0017'
     longueur:
     - 145.6210133
     - 365.5176116

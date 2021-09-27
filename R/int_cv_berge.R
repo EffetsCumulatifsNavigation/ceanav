@@ -142,7 +142,7 @@ cv_berge <- function() {
     "Artificielle - Vive - Très endommagée",
     "Artificielle - Vive - Complètement endommagée"
   )
-  meta$dataDescription$categories$source <-  meta$rawData
+  meta$dataDescription$categories$source <-  rep(meta$rawData, length(categories))
 
 
   # ---

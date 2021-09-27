@@ -169,6 +169,11 @@ pipeline <- function(
     rep_portrait_data_description(data_id = "dragage", output_folder = folder)
     rep_portrait_data_description(data_id = "navigation", output_folder = folder)
     rep_portrait_data_description(data_id = "peche_commerciale", output_folder = folder)
+
+    # Composantes valorisées
+    folder <- "report/contenu/5-portrait/2-composantes_valorisees/"
+    rep_portrait_data_description(data_id = "berge", output_folder = folder)
+
   }
 
 
