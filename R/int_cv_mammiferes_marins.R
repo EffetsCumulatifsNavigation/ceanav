@@ -18,6 +18,7 @@ cv_mammiferes_marins <- function() {
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   load_format("data0027")
   data(grid1p)
+  data0027 <- raster("data/data-format/data0027-mammiferes_marins.tif")
   data0027 <- as(data0027, "Raster")
 
   # -------
