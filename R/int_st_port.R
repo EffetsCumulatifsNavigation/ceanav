@@ -102,7 +102,7 @@ st_port <- function() {
          summarise(port = sum(port))
 
   # -----
-  port <- left_join(dat, by = 'id') %>%
+  port <- left_join(grid1p, dat, by = 'id') %>%
           select(-id)
 
   # -----
