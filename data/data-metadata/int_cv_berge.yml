@@ -1,0 +1,47 @@
+title: Intégrité des berges
+description: Distribution des segments de berge sensibles à l'érosion dans le Saint-Laurent
+  et le Saguenay
+id: berge
+dataDescription:
+  units: presence
+  spatial:
+    resolution: 1km^2
+    extent:
+    - -485317.8452
+    - 132387.8529
+    - -170297.1626
+    - 346013.3455
+  temporal:
+    resolution: Event based
+    start: '2013'
+    end: '2020'
+  categories:
+    accronyme:
+    - N_SV
+    - N_V
+    - A_SV_PE
+    - A_SV_TE
+    - A_SV_CE
+    - A_V_PE
+    - A_V_TE
+    - A_V_CE
+    francais:
+    - Naturelle - Semi-végétalisée
+    - Naturelle - Vive
+    - Artificielle - Semi-végétalisée - Partiellement endommagée
+    - Artificielle - Semi-végétalisée - Très endommagée
+    - Artificielle - Semi-végétalisée - Complètement endommagée
+    - Artificielle - Vive - Partiellement endommagée
+    - Artificielle - Vive - Très endommagée
+    - Artificielle - Vive - Complètement endommagée
+    source: '0017'
+    longueur:
+    - 145.6210133
+    - 365.5176116
+    - 72.1960809
+    - 14.7609257
+    - 2.0196988
+    - 20.1673397
+    - 50.3002778
+    - 4.7081112
+rawData: '0017'

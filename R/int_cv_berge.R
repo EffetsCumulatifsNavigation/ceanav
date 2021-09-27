@@ -117,14 +117,59 @@ cv_berge <- function() {
   }
   # ------------------------------------------------------------------------- #
 
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  # Update metadata
+  # ----------------------------------
+  #
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  meta <- load_metadata("int_cv_berge")
+
+  # -----
+  meta$rawData <- c("0017")
+
+  # -----
+  meta$dataDescription$spatial$extent <- st_bbox(data0017) # extent of 0021 includes 0028
+
+  # -----
+  meta$dataDescription$categories$accronyme <-  categories
+  meta$dataDescription$categories$francais <-  c(
+    "Naturelle - Semi-végétalisée",
+    "Naturelle - Vive",
+    "Artificielle - Semi-végétalisée - Partiellement endommagée",
+    "Artificielle - Semi-végétalisée - Très endommagée",
+    "Artificielle - Semi-végétalisée - Complètement endommagée",
+    "Artificielle - Vive - Partiellement endommagée",
+    "Artificielle - Vive - Très endommagée",
+    "Artificielle - Vive - Complètement endommagée"
+  )
+  meta$dataDescription$categories$source <-  meta$rawData
+
+
+  # ---
+  obs <- data0017 %>%
+         mutate(length = as.numeric(st_length(.)) / 1000) %>%
+         st_drop_geometry() %>%
+         group_by(categories) %>%
+         summarise(length = sum(length)) %>%
+         left_join(as.data.frame(categories), ., by = 'categories')
+
+  meta$dataDescription$categories$longueur <- obs$length
+  # _____________________________________________________________________________ #
+
+
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   # Export data
   # ------------------------------------
   #
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  # -----
+  write_yaml(meta, "./data/data-metadata/int_cv_berge.yml")
+
+  # -----
   st_write(obj = berge,
            dsn = "./data/data-integrated/cv_berge.geojson",
-           delete_dsn = TRUE)
+           delete_dsn = TRUE,
+           quiet = TRUE)
   # ------------------------------------------------------------------------- #}
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
