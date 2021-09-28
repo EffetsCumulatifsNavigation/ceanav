@@ -38,9 +38,26 @@ cv_habitat <- function() {
   #
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   # ------------------------------------------------------
-  uid <- function(...) {
+  load_temp <- function(dat) {
     # -----
-    uid <- bind_rows(...) %>%
+    dat <- paste0("data", dat)
+
+    # -----
+    res <- list()
+    for(i in 1:length(dat)) {
+      load_format(dat[i])
+      res[[i]] <- get(dat[i])
+    }
+    res
+  }
+
+  # ------------------------------------------------------
+  uid <- function(dat) {
+    # -----
+    res <- load_temp(dat)
+
+    # -----
+    uid <- bind_rows(res) %>%
            st_intersects(grid1p) %>%
            unlist() %>%
            unique()
@@ -53,12 +70,37 @@ cv_habitat <- function() {
     dat
   }
 
+  # ------------------------------------------------------
+  superficie <- function(dat) {
+    # -----
+    data(aoi)
 
+    # -----
+    res <- load_temp(dat)
+
+    # -----
+    sup <- bind_rows(res) %>%
+           st_intersection(st_simplify(aoi, dTolerance = 1000)) %>%
+           st_union() %>%
+           st_area() %>%
+           as.numeric(.) * 1e-6
+
+    # -----
+    sup
+  }
 
   # ------------------------------------------------------
-  meta <- load_metadata("int_cv_habitat")
-  meta <- metadata_int_cv_habitat
-  meta$rawData <- NULL
+  meta_update <- function(meta, dat, accr, fr) {
+    meta$rawData <- c(meta$rawData, dat)
+    meta$accronyme <- c(meta$accronyme, accr)
+    meta$francais <- c(meta$francais, fr)
+    meta$source <- c(meta$source, paste0(dat, collapse = ","))
+    meta$superficie <- c(meta$superficie, superficie(dat))
+    meta
+  }
+
+  # ------------------------------------------------------
+  meta_temp <- list()
 
   # ------------------------------------------------------
   data(grid1p)
@@ -66,127 +108,123 @@ cv_habitat <- function() {
 
   # ------------------------------------------------------
   # Zostères : 0001, 0002, 0003
-  meta$rawData <- c(meta$rawData, "0001", "0002", "0003")
+  dat <- c("0001", "0002", "0003")
+  meta_temp <- meta_update(meta_temp, dat, "zostere", "Zostères")
 
   # -----
-  load_format("data0001")
-  load_format("data0002")
-  load_format("data0003")
-
-  # -----
-  habitat$zostere <- uid(data0001, data0002, data0003)
+  habitat$zostere <- uid(dat)
 
   # ------------------------------------------------------
   # Zones inondables : 0013, 0014
-  meta$rawData <- c(meta$rawData, "0013", "0014")
+  dat <- c("0013", "0014")
+  meta_temp <- meta_update(meta_temp, dat, "zone_inondable", "Zones inondables")
 
   # -----
-  load_format("data0013")
-  load_format("data0014")
-
-  # -----
-  habitat$zone_inondable <- uid(data0013, data0014)
+  habitat$zone_inondable <- uid(dat)
 
 
   # ------------------------------------------------------
   # Milieux humides : 0004, 0005, 0006, 0042
-  meta$rawData <- c(meta$rawData, "0004", "0005", "0006", "0042")
+  # NOTE: Point database 0004 already covered by the other datasets
+  meta_temp$rawData <- c(meta_temp$rawData, "0004")
+  dat <- c("0005", "0006", "0042")
+  meta_temp <- meta_update(meta_temp, dat, "milieu_humide", "Milieux humides")
 
   # -----
-  # load_format("data0004") Point database already covered by the other two datasets
-  load_format("data0005")
-  load_format("data0006")
-  load_format("data0042")
-
-  # -----
-  habitat$milieu_humide <- uid(data0005, data0006, data0042)
+  habitat$milieu_humide <- uid(dat)
 
 
   # ------------------------------------------------------
   # Marais côtiers : 0007
-  meta$rawData <- c(meta$rawData, "0007")
+  dat <- "0007"
+  meta_temp <- meta_update(meta_temp, dat, "milieu_cotier", "Milieux côtiers")
 
   # -----
-  load_format("data0007")
-
-  # -----
-  habitat$milieu_cotier <- uid(data0007)
+  habitat$milieu_cotier <- uid(dat)
 
   # ------------------------------------------------------
   # Sites d'alevinage : 0009
-  meta$rawData <- c(meta$rawData, "0009")
+  dat <- "0009"
+  meta_temp <- meta_update(meta_temp, dat, "site_alevinage", "Sites d'alevinage")
 
   # -----
-  load_format("data0009")
-
-  # -----
-  habitat$site_alevinage <- uid(data0009)
+  habitat$site_alevinage <- uid(dat)
 
   # ------------------------------------------------------
   # Frayères : 0010
-  meta$rawData <- c(meta$rawData, "0010")
+  dat <- "0010"
+  meta_temp <- meta_update(meta_temp, dat, "frayere", "Frayères")
 
   # -----
-  load_format("data0010")
-
-  # -----
-  habitat$frayere <- uid(data0010)
+  habitat$frayere <- uid(dat)
 
 
   # ------------------------------------------------------
   # Zones herbacées : 0029
-  meta$rawData <- c(meta$rawData, "0029")
+  dat <- "0029"
+  meta_temp <- meta_update(meta_temp, dat, "zone_herbacee", "Zones herbacées")
 
   # -----
-  load_format("data0029")
-
-  # -----
-  habitat$zone_herbacee <- uid(data0029)
+  habitat$zone_herbacee <- uid(dat)
 
 
   # ------------------------------------------------------
   # Espèces à statut : 0011
-  meta$rawData <- c(meta$rawData, "0011")
+  dat <- "0011"
+  meta_temp <- meta_update(meta_temp, dat, "espece_statut", "Espèces à statut")
 
   # -----
-  load_format("data0011")
-
-  # -----
-  habitat$espece_statut <- uid(data0011)
+  habitat$espece_statut <- uid(dat)
 
 
   # ------------------------------------------------------
   # Habitats fauniques : 0036
-  meta$rawData <- c(meta$rawData, "0036")
+  dat <- "0036"
+  meta_temp <- meta_update(meta_temp, dat, "faunique", "Habitats fauniques")
 
   # -----
-  load_format("data0036")
-
-  # -----
-  habitat$faunique <- uid(data0036)
+  habitat$faunique <- uid(dat)
 
 
   # ------------------------------------------------------
   # Habitats floristiques : 0037
-  meta$rawData <- c(meta$rawData, "0037")
+  dat <- "0037"
+  meta_temp <- meta_update(meta_temp, dat, "floristique", "Habitats floristiques")
 
   # -----
-  load_format("data0037")
-
-  # -----
-  habitat$floristique <- uid(data0037)
+  habitat$floristique <- uid(dat)
 
 
   # ------------------------------------------------------
   # Colonies d'oiseaux : 0043
-  meta$rawData <- c(meta$rawData, "0043")
+  dat <- "0043"
+  meta_temp <- meta_update(meta_temp, dat, "colonie_oiseaux", "Colonies d'oiseaux")
 
   # -----
-  load_format("data0043")
-
-  # -----
-  habitat$colonie_oiseaux <- uid(data0043)
+  habitat$colonie_oiseaux <- uid(dat)
   # ------------------------------------------------------------------------- #
+
+
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  # Update metadata
+  # ----------------------------------
+  #
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  meta <- load_metadata("int_cv_mammiferes_marins")
+
+  # -----
+  meta$rawData <- meta_temp$rawData
+  meta$dataDescription$categories$accronyme <- meta_temp$accronyme
+  meta$dataDescription$categories$francais <- meta_temp$francais
+  meta$dataDescription$categories$source <- meta_temp$source
+  meta$dataDescription$categories$superficie <- meta_temp$superficie
+
+  # -----
+  temp <- st_drop_geometry(habitat) %>%
+          rowSums(na.rm = TRUE)
+  temp <- habitat[temp > 0, ]
+  meta$dataDescription$spatial$extent <- st_bbox(temp)
+  # _____________________________________________________________________________ #
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   # Export data
@@ -199,7 +237,8 @@ cv_habitat <- function() {
   # -----
   st_write(obj = habitat,
            dsn = "./data/data-integrated/cv_habitat.geojson",
-           delete_dsn = TRUE)
+           delete_dsn = TRUE,
+           quiet = TRUE)
   # ------------------------------------------------------------------------- #}
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #

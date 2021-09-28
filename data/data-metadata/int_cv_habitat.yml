@@ -1,18 +1,80 @@
-title: Habitats
-description: Distribution des habitats dans le Saint-Laurent et le Saguenay
+title: Mammifères marins
+description: Distribution des mammifères marins dans le Saint-Laurent et le Saguenay
+id: mammiferes_marins
 dataDescription:
-  units: kg*km^-2
+  units: Presence
   spatial:
     resolution: 1km^2
     extent:
-    - -112309.1104231
-    - 392532.8504619
-    - 127370.787435
-    - 591702.328144
+    - -413830.0813864
+    - 168655.5276494
+    - 130169.9186136
+    - 594655.5276494
   temporal:
     resolution: Event based
-    start: '2010'
+    start: '2015'
     end: '2020'
+  categories:
+    accronyme:
+    - zostere
+    - zone_inondable
+    - milieu_humide
+    - milieu_cotier
+    - site_alevinage
+    - frayere
+    - zone_herbacee
+    - espece_statut
+    - faunique
+    - floristique
+    - colonie_oiseaux
+    francais:
+    - Zostères
+    - Zones inondables
+    - Milieux humides
+    - Milieux côtiers
+    - Sites d'alevinage
+    - Frayères
+    - Zones herbacées
+    - Espèces à statut
+    - Habitats fauniques
+    - Habitats floristiques
+    - Colonies d'oiseaux
+    english:
+    - Humpback whale
+    - Blue whale
+    - Minke whale
+    - St. Lawrence beluga whale
+    - Fin whale
+    scientific:
+    - Megaptera novaeangliae
+    - Balaenoptera musculus
+    - Balaenoptera acutorostrata
+    - Delphinapterus leucas
+    - Balaenoptera physalus
+    source:
+    - '0001,0002,0003'
+    - '0013,0014'
+    - '0005,0006,0042'
+    - '0007'
+    - 0009
+    - '0010'
+    - 0029
+    - '0011'
+    - '0036'
+    - '0037'
+    - '0043'
+    superficie:
+    - 25.7612478
+    - 507.9952407
+    - 220.0321461
+    - 91.4922495
+    - 209.9056883
+    - 271.9773694
+    - 14.7299396
+    - 963.8141819
+    - 1796.0910878
+    - 0.9315339
+    - 186.3322024
 rawData:
 - '0001'
 - '0002'
