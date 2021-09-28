@@ -18,7 +18,7 @@ L'état des milieux artificialisés est divisé en cinq catégories [Annexe C da
 - Complètement endommagé : Alération > 75% et aucune protection côtière
 - N/A : absence d'artificialité
 
-Pour notre analyse, nous avons combiné l'état de la berge et l'état des milieux artificialisés en huit catégories distinctes afin d'obtenir des segments de berge sensibles à l'érosion dans la zone d'étude :
+Pour notre analyse, nous avons combiné l'état de la berge et l'état des milieux artificialisés en huit catégories distinctes afin d'obtenir des segments de berge sensibles à l'érosion dans la zone d'étude (Tableau \@ref(tab:bergeCat)).
 
 <br/>
 

@@ -1,0 +1,10 @@
+#### Mammifères marins - Rorqual à bosse {-}
+
+
+<!-- -------------------------------------------------- -->
+
+```{r rorqual_a_bosse, fig.cap = "Distribution des mammifères marins dans le Saint-Laurent et le Saguenay - Rorqual à bosse", out.width = '100%'}
+knitr::include_graphics("../figures/figures-integrated/mammiferes_marins-rorqual_a_bosse.png")
+```
+
+<br>

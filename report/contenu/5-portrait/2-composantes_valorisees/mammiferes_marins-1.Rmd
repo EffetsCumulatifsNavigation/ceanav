@@ -1,26 +1,33 @@
 ### Mammifères marins
 
+```{r mm_setup, echo = FALSE}
+meta <- read_yaml("../data/data-metadata/int_cv_mammiferes_marins.yml")
+```
 
-Liste des espèces pour lesquelles nous auront des informations:
+La caractérisation de la distribution des mammifères marins dans la zone d'étude provient d'un guide récemment publié  [...] [@wwfromm2021].
 
-1. Beluga
-2. North Atlantic right whale
-3. Northern Bottlenose whale
-4. Blue whale
-5. Fin whale
-6. Sei whale
-7. Minke whale
-8. Humpback whale
-9. Sperm whale
+Ce guide présente des carte de distribution pour 9 espèces de mammifères marins qui fréquentent l'est du Canada. De ce nombre, cinq fréquentent l'estuaire du Saint-Laurent et le Saguenay et ont ainsi été retenus pour notre étude (Tableau \@ref(tab:mmSp))
 
-Pour plus de
-WhaleSightings.XMAR@dfo-mpo.gc.ca
+<br/>
 
-Si on souhaite obtenir plus de données rapidement sur d’autres espèces, faire une nouvelle demande des données XMAR auprès de Pam Emery au MPO (WhaleSightings.XMAR@dfo-mpo.gc.ca).
+```{r mmSp}
+tab <- as.data.frame(meta$dataDescription$categories)
+tab <- arrange(tab, francais)
+tab <- select(tab, francais, scientific)
 
 
-Hi Aurelie,
+tab %>%
+  knitr::kable(
+    col.names = c("Espèces", "Noms scientifiques"),
+    row.names = FALSE,
+    caption = "Espèces de mammifères marins dont la distribution dans l'estuaire du Saint-Laurent et le Saguenay est disponible dans @wwfromm2021."
+  )
+```
 
+<br/>
+
+
+<!--
 Sorry this took a little bit, I had to go back to Meg’s original report to refresh myself on the methods. I’ve put my answers below which should cover David’s questions 😊
 
 #1.  When I look at the rasters, I am not able to get the same maps as in the guide and would like to make sure I understand the data correctly. Reading the report, I see that you have done Gaussian smoothing on the data. I imagine that these are the rasters with the following names p_BELUGA_gauss_w.tif? Then you did a logarithmic transformation and I imagine that these are the files with the name: Log_p_BELUGA_gauss_w.tif. CORRECT?
@@ -44,3 +51,4 @@ Correct we did use the log transformed data for the guide maps. The log transfor
         This is what is displayed in the rasters with the ex.“p_BELUGA_gauss_w.tif” naming convention
     These standardized rasters where then log10 transformed
         This is what is displayed in the rasters with the ex.“Log_p_BELUGA_gauss_w.tif” naming convention
+-->

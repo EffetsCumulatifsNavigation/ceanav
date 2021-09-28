@@ -173,6 +173,7 @@ pipeline <- function(
     # Composantes valorisées
     folder <- "report/contenu/5-portrait/2-composantes_valorisees/"
     rep_portrait_data_description(data_id = "berge", output_folder = folder)
+    rep_portrait_data_description(data_id = "mammiferes_marins", output_folder = folder)
 
   }
 

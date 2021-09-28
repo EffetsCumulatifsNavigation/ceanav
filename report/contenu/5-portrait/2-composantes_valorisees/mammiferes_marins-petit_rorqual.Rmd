@@ -1,0 +1,10 @@
+#### Mammifères marins - Petit rorqual {-}
+
+
+<!-- -------------------------------------------------- -->
+
+```{r petit_rorqual, fig.cap = "Distribution des mammifères marins dans le Saint-Laurent et le Saguenay - Petit rorqual", out.width = '100%'}
+knitr::include_graphics("../figures/figures-integrated/mammiferes_marins-petit_rorqual.png")
+```
+
+<br>
