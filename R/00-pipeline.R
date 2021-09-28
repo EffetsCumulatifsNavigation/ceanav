@@ -175,6 +175,7 @@ pipeline <- function(
     rep_portrait_data_description(data_id = "berge", output_folder = folder)
     rep_portrait_data_description(data_id = "habitat", output_folder = folder)
     rep_portrait_data_description(data_id = "mammiferes_marins", output_folder = folder)
+    rep_portrait_data_description(data_id = "site", output_folder = folder)
 
   }
 

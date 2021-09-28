@@ -1,21 +1,99 @@
 title: Sites d’intérêt culturels, patrimoniaux et archéologiques
 description: Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques
   dans le Saint-Laurent et le Saguenay
+id: site
 dataDescription:
-  units: présence-absence
+  units: presence
   spatial:
     resolution: 1km^2
     extent:
-    - -112309.1104231
-    - 392532.8504619
-    - 127370.787435
-    - 591702.328144
+    - -413830.0813864
+    - 168655.5276494
+    - 130169.9186136
+    - 594655.5276494
+  categories:
+    accronyme:
+    - aghamm_peche_commerciale
+    - aghamm_peche_traditionnelle
+    - essipit_culture_patrimoine
+    - essipit_peche_traditionnelle
+    - essipit_chasse_oiseaux
+    - essipit_chasse_phoque
+    - essipit_peche_commerciale
+    - essipit_tourisme
+    - essipit_acces_eau
+    - wolastoqiyik_wahsipekuk_peche_commerciale
+    - kahnawake_culture_patrimoine
+    - kahnawake_peche_commerciale
+    - kahnawake_chasse
+    - kahnawake_peche_rivage
+    - kahnawake_peche_offshore
+    - kahnawake_sssm
+    - kahnawake_traffic
+    - kahnawake_vegatation
+    - milieu_protege
+    - sites_patrimoniaux
+    francais:
+    - AGHAMM - Pêche commerciale
+    - AGHAMM - Pêche traditionnelle
+    - Essipit - Culture et patrimoine
+    - Essipit - Pêche traditionnelle
+    - Essipit - Chasse oiseaux migrateurs
+    - Essipit - Chasse phoques
+    - Essipit - Pêche commerciale
+    - Essipit - Tourisme
+    - Essipit - Accès au plan d'eau
+    - Wolastoqiyik Wahsipekuk - Pêche traditionnelle
+    - Kahnawake - Culture et patrimoine
+    - Kahnawake - Pêche commerciale
+    - Kahnawake - Chasse
+    - Kahnawake - Pêche rivage
+    - Kahnawake - Pêche eau libre
+    - Kahnawake - Seigneurie du Sault-Saint-Louis
+    - Kahnawake - Trafic maritime
+    - Kahnawake - Végétation
+    - Milieux protégés
+    - Sites patrimoniaux
+    source:
+    - '0022'
+    - '0023'
+    - '0024'
+    - '0024'
+    - '0024'
+    - '0024'
+    - '0024'
+    - '0024'
+    - '0024'
+    - '0025,0026'
+    - '0032'
+    - '0032'
+    - '0032'
+    - '0032'
+    - '0032'
+    - '0032'
+    - '0032'
+    - '0032'
+    - 0030,0038,0039,0040
+    - '0044,0045'
 rawData:
 - '0022'
 - '0023'
 - '0024'
+- '0024'
+- '0024'
+- '0024'
+- '0024'
+- '0024'
+- '0024'
 - '0025'
 - '0026'
+- '0032'
+- '0032'
+- '0032'
+- '0032'
+- '0032'
+- '0032'
+- '0032'
 - '0032'
 - '0030'
 - 0038

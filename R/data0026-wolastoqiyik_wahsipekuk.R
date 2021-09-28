@@ -38,12 +38,15 @@ get_data0026 <- function() {
   data0026[[3]] <- st_read(paste0(folder, "Oursins_zones_exploitation_potentielleC.shp"))
 
   # Add missing id in dataset
-  data0026[[1]]$id <- "A"
-  data0026[[2]]$id <- "B"
-  data0026[[3]]$id <- "C"
+  data0026[[1]]$iid <- "A"
+  data0026[[2]]$iid <- "B"
+  data0026[[3]]$iid <- "C"
 
   # Single dataset
   data0026 <- bind_rows(data0026)
+
+  # -----
+  data0026 <- select(data0026, -id)
 
   # Transform projection
   data0026 <- st_transform(data0026, crs = global_parameters()$crs)

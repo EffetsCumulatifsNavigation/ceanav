@@ -210,7 +210,7 @@ cv_habitat <- function() {
   # ----------------------------------
   #
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
-  meta <- load_metadata("int_cv_mammiferes_marins")
+  meta <- load_metadata("int_cv_habitat")
 
   # -----
   meta$rawData <- meta_temp$rawData
