@@ -1,0 +1,10 @@
+#### Habitats - Espèces à statut {-}
+
+
+<!-- -------------------------------------------------- -->
+
+```{r espece_statut, fig.cap = "Distribution des habitats dans le Saint-Laurent et le Saguenay - Espèces à statut", out.width = '100%'}
+knitr::include_graphics("../figures/figures-integrated/habitat-espece_statut.png")
+```
+
+<br>

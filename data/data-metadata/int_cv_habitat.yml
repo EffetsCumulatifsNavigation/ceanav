@@ -1,6 +1,6 @@
-title: Mammifères marins
-description: Distribution des mammifères marins dans le Saint-Laurent et le Saguenay
-id: mammiferes_marins
+title: Habitats
+description: Distribution des habitats dans le Saint-Laurent et le Saguenay
+id: habitat
 dataDescription:
   units: Presence
   spatial:
