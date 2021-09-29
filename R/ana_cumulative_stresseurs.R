@@ -47,22 +47,30 @@ ana_cumulative_stresseurs <- function() {
   port <- stressor_cumul(dr, "port", normaliser = TRUE)
 
   # -----
-  cumulative_stresseurs <- cumulativeFootprint(dr)
+  cumulative_st <- cumulativeFootprint(dr)
 
   # -----
-  cumulative_stresseurs_norm <- ancrage + deversement + dragage + navigation + peche_commerciale + port
+  cumulative_st_norm <- ancrage + deversement + dragage + navigation + peche_commerciale + port
+
+  # -----
+  cumulative_st_ancrage <- stressor_cumul(dr, "ancrage")
+  cumulative_st_deversement <- stressor_cumul(dr, "deversement")
+  cumulative_st_dragage <- stressor_cumul(dr, "dragage")
+  cumulative_st_navigation <- stressor_cumul(dr, "navigation")
+  cumulative_st_peche_commerciale <- stressor_cumul(dr, "peche_commerciale")
+  cumulative_st_port <- stressor_cumul(dr, "port")
 
   # -----
   cumulative_stresseurs <- cbind(
     grid1p,
-    cumulative_stresseurs,
-    cumulative_stresseurs_norm,
-    ancrage,
-    deversement,
-    dragage,
-    navigation,
-    peche_commerciale,
-    port
+    cumulative_st,
+    cumulative_st_norm,
+    cumulative_st_ancrage,
+    cumulative_st_deversement,
+    cumulative_st_dragage,
+    cumulative_st_navigation,
+    cumulative_st_peche_commerciale,
+    cumulative_st_port
    )
 
 
