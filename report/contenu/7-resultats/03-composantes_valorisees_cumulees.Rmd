@@ -7,10 +7,39 @@ composantes valorisées. Elle permet toutefois d'obtenir une évaluation des
 milieux qui sont les plus importants pour les composantes valorisées dans
 la zone d'étude.
 
+<br/>
+
 ```{r cvCum, fig.cap = "Distribution des composantes valorisées cumulées au sein de la zone d'étude", out.width = '100%'}
-knitr::include_graphics("../figures/figures-output/cumulative_composantes_valorisees.png")
+knitr::include_graphics("../figures/figures-output/cumulative_cv.png")
 ```
 
+<br/>
+
 ```{r cvCumNorm, fig.cap = "Distribution des composantes valorisées cumulées normalisés au sein de la zone d'étude", out.width = '100%'}
-knitr::include_graphics("../figures/figures-output/cumulative_composantes_valorisees_norm.png")
+knitr::include_graphics("../figures/figures-output/cumulative_cv_norm.png")
+```
+
+<br/>
+
+```{r cvberge, fig.cap = "Cumul des catégories de types de berge au sein de la zone d'étude", out.width = '100%'}
+knitr::include_graphics("../figures/figures-output/cumulative_cv_berge.png")
+```
+
+
+<br/>
+
+```{r cvhabitat, fig.cap = "Cumul des catégories d'habitats au sein de la zone d'étude", out.width = '100%'}
+knitr::include_graphics("../figures/figures-output/cumulative_cv_habitat.png")
+```
+
+<br/>
+
+```{r cvmammiferesmarins, fig.cap = "Cumul de la présence des mammifères marins considérés au sein de la zone d'étude", out.width = '100%'}
+knitr::include_graphics("../figures/figures-output/cumulative_cv_mammiferes_marins.png")
+```
+
+<br/>
+
+```{r cvsite, fig.cap = "Cumul des catégories de sites d'intérêt culturels, patrimoniaux et archéologiques au sein de la zone d'étude", out.width = '100%'}
+knitr::include_graphics("../figures/figures-output/cumulative_cv_site.png")
 ```
