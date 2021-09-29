@@ -44,20 +44,27 @@ ana_cumulative_composantes_valorisees <- function() {
   site <- cv_cumul(cv, "site", normaliser = TRUE)
 
   # -----
-  cumulative_composantes_valorisees <- cumulativeFootprint(cv)
+  cumulative_cv <- cumulativeFootprint(cv)
 
   # -----
-  cumulative_composantes_valorisees_norm <- berge + habitat + mammiferes_marins + site
+  cumulative_cv_norm <- berge + habitat + mammiferes_marins + site
+
+  # -----
+  cumulative_cv_berge <- cv_cumul(cv, "berge")
+  cumulative_cv_habitat <- cv_cumul(cv, "habitat")
+  cumulative_cv_mammiferes_marins <- cv_cumul(cv, "mammiferes_marins")
+  cumulative_cv_site <- cv_cumul(cv, "site")
+
 
   # -----
   cumulative_composantes_valorisees <- cbind(
     grid1p,
-    cumulative_composantes_valorisees,
-    cumulative_composantes_valorisees_norm,
-    berge,
-    habitat,
-    mammiferes_marins,
-    site
+    cumulative_cv,
+    cumulative_cv_norm,
+    cumulative_cv_berge,
+    cumulative_cv_habitat,
+    cumulative_cv_mammiferes_marins,
+    cumulative_cv_site
    )
 
 
