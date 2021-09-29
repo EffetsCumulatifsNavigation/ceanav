@@ -36,14 +36,22 @@ ana_cumulative_exposure <- function() {
   cv <- st_drop_geometry(cumulative_composantes_valorisees)
 
   # -----
-  cumulative_exposure <- st$cumulative_stresseurs * cv$cumulative_composantes_valorisees
-  cumulative_exposure_norm <- st$cumulative_stresseurs_norm * cv$cumulative_composantes_valorisees_norm
+  cumulative_exposure <- st$cumulative_st * cv$cumulative_cv
+  cumulative_exposure_norm <- st$cumulative_st_norm * cv$cumulative_cv_norm
+  cumulative_exposure_berge <- st$cumulative_st * cv$cumulative_cv_berge
+  cumulative_exposure_habitat <- st$cumulative_st * cv$cumulative_cv_habitat
+  cumulative_exposure_mammiferes_marins <- st$cumulative_st * cv$cumulative_cv_mammiferes_marins
+  cumulative_exposure_site <- st$cumulative_st * cv$cumulative_cv_site
 
   # -----
   cumulative_exposure <- cbind(
     grid1p,
     cumulative_exposure,
-    cumulative_exposure_norm
+    cumulative_exposure_norm,
+    cumulative_exposure_berge,
+    cumulative_exposure_habitat,
+    cumulative_exposure_mammiferes_marins,
+    cumulative_exposure_site
   )
 
 
