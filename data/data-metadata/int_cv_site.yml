@@ -31,8 +31,8 @@ dataDescription:
     - kahnawake_sssm
     - kahnawake_traffic
     - kahnawake_vegatation
-    - milieu_protege
-    - sites_patrimoniaux
+    - public_milieu_protege
+    - public_sites_patrimoniaux
     francais:
     - AGHAMM - Pêche commerciale
     - AGHAMM - Pêche traditionnelle
@@ -52,8 +52,8 @@ dataDescription:
     - Kahnawake - Seigneurie du Sault-Saint-Louis
     - Kahnawake - Trafic maritime
     - Kahnawake - Végétation
-    - Milieux protégés
-    - Sites patrimoniaux
+    - Public - Milieux protégés
+    - Public - Sites patrimoniaux
     source:
     - '0022'
     - '0023'
@@ -94,8 +94,8 @@ dataDescription:
     - kahnawakesssm
     - kahnawaketraffic
     - kahnawakevegatation
-    - milieuprotege
-    - sitespatrimoniaux
+    - publicmilieuprotege
+    - publicsitespatrimoniaux
 rawData:
 - '0022'
 - '0023'

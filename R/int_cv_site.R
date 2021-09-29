@@ -222,7 +222,7 @@ cv_site <- function() {
   # ----------------------------
   # Milieux protégés : 0030, 0038, 0039, 0040
   dat <- c("0030", "0038", "0039", "0040")
-  meta_temp <- meta_update(meta_temp, dat, "milieu_protege", "Milieux protégés")
+  meta_temp <- meta_update(meta_temp, dat, "public_milieu_protege", "Public - Milieux protégés")
 
 
   # ------------------------------------------------------
@@ -251,13 +251,13 @@ cv_site <- function() {
           "Réserve de territoire aux fins d'aire protégée")
   iid <- data0038$DESIG_GR %in% nm
   data0038 <- data0038[!iid, ]
-  site$milieu_protege <- uid2(data0030, data0038, data0039, data0040)
+  site$public_milieu_protege <- uid2(data0030, data0038, data0039, data0040)
 
 
   # ----------------------------
   # Sites patrimoniaux : 0044, 0045
   dat <- c("0044", "0045")
-  meta_temp <- meta_update(meta_temp, dat, "sites_patrimoniaux", "Sites patrimoniaux")
+  meta_temp <- meta_update(meta_temp, dat, "public_sites_patrimoniaux", "Public - Sites patrimoniaux")
 
   # -----
   load_format("data0044")
@@ -266,7 +266,7 @@ cv_site <- function() {
   data0045 <- select(data0045, geometry)
 
   # -----
-  site$sites_patrimoniaux <- uid2(data0044, data0045)
+  site$public_sites_patrimoniaux <- uid2(data0044, data0045)
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   # Update metadata
