@@ -3,7 +3,7 @@
 
 <!-- -------------------------------------------------- -->
 
-```{r {{ metadata.dataDescription.categories.accronyme }}, fig.cap = "{{ metadata.description }} - {{ metadata.dataDescription.categories.francais }}", out.width = '100%'}
+```{r {{ metadata.dataDescription.categories.mdref }}, fig.cap = "{{ metadata.description }} - {{ metadata.dataDescription.categories.francais }}", out.width = '100%'}
 knitr::include_graphics("../figures/figures-integrated/{{ metadata.id }}-{{ metadata.dataDescription.categories.accronyme }}.png")
 ```
 

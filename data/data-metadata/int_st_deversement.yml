@@ -42,6 +42,10 @@ dataDescription:
       d'ammonium, Pollution, Sludge, Suie, Soude caustique, Huile lapio, Huile hydraulique
       végétale, Huile végétale, Mélange huileux, Charbon
     - Contenu inconnu
+    mdref:
+    - hydrocarbures
+    - autres
+    - inconnus
   classes:
     lvls:
     - '1 : 0 litre'

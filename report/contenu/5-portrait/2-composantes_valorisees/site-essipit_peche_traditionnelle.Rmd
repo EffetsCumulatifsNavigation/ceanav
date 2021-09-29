@@ -1,9 +1,9 @@
-#### Sites d’intérêt culturels, patrimoniaux et archéologiques - Essipit - Pêche traditionnelle {-}
+#### Sites d’intérêt - Essipit - Pêche traditionnelle {-}
 
 
 <!-- -------------------------------------------------- -->
 
-```{r essipit_peche_traditionnelle, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Essipit - Pêche traditionnelle", out.width = '100%'}
+```{r essipitpechetraditionnelle, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Essipit - Pêche traditionnelle", out.width = '100%'}
 knitr::include_graphics("../figures/figures-integrated/site-essipit_peche_traditionnelle.png")
 ```
 

@@ -3,7 +3,7 @@
 
 <!-- -------------------------------------------------- -->
 
-```{r colonie_oiseaux, fig.cap = "Distribution des habitats dans le Saint-Laurent et le Saguenay - Colonies d'oiseaux", out.width = '100%'}
+```{r colonieoiseaux, fig.cap = "Distribution des habitats dans le Saint-Laurent et le Saguenay - Colonies d'oiseaux", out.width = '100%'}
 knitr::include_graphics("../figures/figures-integrated/habitat-colonie_oiseaux.png")
 ```
 

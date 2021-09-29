@@ -75,6 +75,27 @@ dataDescription:
     - '0032'
     - 0030,0038,0039,0040
     - '0044,0045'
+    mdref:
+    - aghammpechecommerciale
+    - aghammpechetraditionnelle
+    - essipitculturepatrimoine
+    - essipitpechetraditionnelle
+    - essipitchasseoiseaux
+    - essipitchassephoque
+    - essipitpechecommerciale
+    - essipittourisme
+    - essipitacceseau
+    - wolastoqiyikwahsipekukpechecommerciale
+    - kahnawakeculturepatrimoine
+    - kahnawakepechecommerciale
+    - kahnawakechasse
+    - kahnawakepecherivage
+    - kahnawakepecheoffshore
+    - kahnawakesssm
+    - kahnawaketraffic
+    - kahnawakevegatation
+    - milieuprotege
+    - sitespatrimoniaux
 rawData:
 - '0022'
 - '0023'

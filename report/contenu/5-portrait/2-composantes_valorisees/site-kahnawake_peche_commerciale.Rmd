@@ -1,9 +1,9 @@
-#### Sites d’intérêt culturels, patrimoniaux et archéologiques - Kahnawake - Pêche commerciale {-}
+#### Sites d’intérêt - Kahnawake - Pêche commerciale {-}
 
 
 <!-- -------------------------------------------------- -->
 
-```{r kahnawake_peche_commerciale, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Kahnawake - Pêche commerciale", out.width = '100%'}
+```{r kahnawakepechecommerciale, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Kahnawake - Pêche commerciale", out.width = '100%'}
 knitr::include_graphics("../figures/figures-integrated/site-kahnawake_peche_commerciale.png")
 ```
 

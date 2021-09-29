@@ -144,6 +144,8 @@ cv_berge <- function() {
   )
   meta$dataDescription$categories$source <-  rep(meta$rawData, length(categories))
 
+  # --- For proper referencing in markdown syntax
+  meta$dataDescription$categories$mdref <- modif_md(meta$dataDescription$categories$accronyme)
 
   # ---
   obs <- data0017 %>%

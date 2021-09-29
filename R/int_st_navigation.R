@@ -245,6 +245,10 @@ st_navigation <- function() {
   meta$dataDescription$categories$segments <- dat$segments
   meta$dataDescription$categories$transit_km2 <- dat$transit_km2
   meta$dataDescription$categories$boats <- dat$boats
+
+  # --- For proper referencing in markdown syntax
+  meta$dataDescription$categories$mdref <- modif_md(meta$dataDescription$categories$accronyme)
+
   # --------------------------------------------------------------------------------
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #

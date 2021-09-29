@@ -60,6 +60,9 @@ st_ancrage <- function() {
   meta$dataDescription$categories$francais <-  "Sites d'ancrage de navires"
   meta$dataDescription$categories$source <-  meta$rawData
 
+  # --- For proper referencing in markdown syntax
+  meta$dataDescription$categories$mdref <- modif_md(meta$dataDescription$categories$accronyme)
+
   # -----
   meta$dataDescription$observations$total <-  st_intersects(data0015, aoi) %>%
                                               unlist() %>%

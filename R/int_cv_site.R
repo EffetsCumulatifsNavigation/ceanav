@@ -282,6 +282,9 @@ cv_site <- function() {
   meta$dataDescription$categories$source <- meta_temp$source
   meta$dataDescription$categories$superficie <- meta_temp$superficie
 
+  # --- For proper referencing in markdown syntax
+  meta$dataDescription$categories$mdref <- modif_md(meta$dataDescription$categories$accronyme)
+
   # -----
   temp <- st_drop_geometry(site) %>%
           rowSums(na.rm = TRUE)

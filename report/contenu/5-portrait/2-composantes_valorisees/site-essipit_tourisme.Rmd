@@ -1,9 +1,9 @@
-#### Sites d’intérêt culturels, patrimoniaux et archéologiques - Essipit - Tourisme {-}
+#### Sites d’intérêt - Essipit - Tourisme {-}
 
 
 <!-- -------------------------------------------------- -->
 
-```{r essipit_tourisme, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Essipit - Tourisme", out.width = '100%'}
+```{r essipittourisme, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Essipit - Tourisme", out.width = '100%'}
 knitr::include_graphics("../figures/figures-integrated/site-essipit_tourisme.png")
 ```
 

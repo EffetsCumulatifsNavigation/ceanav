@@ -3,7 +3,7 @@
 
 <!-- -------------------------------------------------- -->
 
-```{r TUGS.PORT, fig.cap = "Intensité de la navigation dans le Saint-Laurent et le Saguenay - Remorqueur / port", out.width = '100%'}
+```{r TUGSPORT, fig.cap = "Intensité de la navigation dans le Saint-Laurent et le Saguenay - Remorqueur / port", out.width = '100%'}
 knitr::include_graphics("../figures/figures-integrated/navigation-TUGS.PORT.png")
 ```
 

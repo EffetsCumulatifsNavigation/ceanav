@@ -1,9 +1,9 @@
-#### Sites d’intérêt culturels, patrimoniaux et archéologiques - Kahnawake - Pêche rivage {-}
+#### Sites d’intérêt - Kahnawake - Pêche rivage {-}
 
 
 <!-- -------------------------------------------------- -->
 
-```{r kahnawake_peche_rivage, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Kahnawake - Pêche rivage", out.width = '100%'}
+```{r kahnawakepecherivage, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Kahnawake - Pêche rivage", out.width = '100%'}
 knitr::include_graphics("../figures/figures-integrated/site-kahnawake_peche_rivage.png")
 ```
 

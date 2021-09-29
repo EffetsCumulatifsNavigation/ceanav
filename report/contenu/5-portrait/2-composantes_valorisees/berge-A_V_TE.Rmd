@@ -3,7 +3,7 @@
 
 <!-- -------------------------------------------------- -->
 
-```{r A_V_TE, fig.cap = "Distribution des segments de berge sensibles à l'érosion dans le Saint-Laurent et le Saguenay - Artificielle - Vive - Très endommagée", out.width = '100%'}
+```{r AVTE, fig.cap = "Distribution des segments de berge sensibles à l'érosion dans le Saint-Laurent et le Saguenay - Artificielle - Vive - Très endommagée", out.width = '100%'}
 knitr::include_graphics("../figures/figures-integrated/berge-A_V_TE.png")
 ```
 

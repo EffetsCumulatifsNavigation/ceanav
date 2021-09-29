@@ -1,9 +1,9 @@
-#### Sites d’intérêt culturels, patrimoniaux et archéologiques - AGHAMM - Pêche traditionnelle {-}
+#### Sites d’intérêt - AGHAMM - Pêche traditionnelle {-}
 
 
 <!-- -------------------------------------------------- -->
 
-```{r aghamm_peche_traditionnelle, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - AGHAMM - Pêche traditionnelle", out.width = '100%'}
+```{r aghammpechetraditionnelle, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - AGHAMM - Pêche traditionnelle", out.width = '100%'}
 knitr::include_graphics("../figures/figures-integrated/site-aghamm_peche_traditionnelle.png")
 ```
 

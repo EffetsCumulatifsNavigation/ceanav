@@ -1,9 +1,9 @@
-#### Sites d’intérêt culturels, patrimoniaux et archéologiques - Kahnawake - Végétation {-}
+#### Sites d’intérêt - Kahnawake - Végétation {-}
 
 
 <!-- -------------------------------------------------- -->
 
-```{r kahnawake_vegatation, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Kahnawake - Végétation", out.width = '100%'}
+```{r kahnawakevegatation, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Kahnawake - Végétation", out.width = '100%'}
 knitr::include_graphics("../figures/figures-integrated/site-kahnawake_vegatation.png")
 ```
 

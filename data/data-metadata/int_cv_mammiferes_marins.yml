@@ -45,4 +45,10 @@ dataDescription:
     - '0027'
     - '0027'
     - '0027'
+    mdref:
+    - rorqualabosse
+    - rorqualbleu
+    - petitrorqual
+    - beluga
+    - rorqualcommun
 rawData: '0027'

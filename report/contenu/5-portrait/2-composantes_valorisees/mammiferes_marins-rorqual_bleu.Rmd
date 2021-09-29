@@ -3,7 +3,7 @@
 
 <!-- -------------------------------------------------- -->
 
-```{r rorqual_bleu, fig.cap = "Distribution des mammifères marins dans le Saint-Laurent et le Saguenay - Rorqual bleu", out.width = '100%'}
+```{r rorqualbleu, fig.cap = "Distribution des mammifères marins dans le Saint-Laurent et le Saguenay - Rorqual bleu", out.width = '100%'}
 knitr::include_graphics("../figures/figures-integrated/mammiferes_marins-rorqual_bleu.png")
 ```
 

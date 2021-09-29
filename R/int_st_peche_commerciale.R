@@ -319,6 +319,9 @@ st_peche_commerciale <- function() {
   # -----
   meta$dataDescription$especes$cible <- species_cible
   meta$dataDescription$especes$capture <- species
+
+  # --- For proper referencing in markdown syntax
+  meta$dataDescription$categories$mdref <- modif_md(meta$dataDescription$categories$accronyme)
   # --------------------------------------------------------------------------------
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #

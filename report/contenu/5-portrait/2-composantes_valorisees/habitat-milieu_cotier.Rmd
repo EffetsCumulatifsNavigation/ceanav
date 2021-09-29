@@ -3,7 +3,7 @@
 
 <!-- -------------------------------------------------- -->
 
-```{r milieu_cotier, fig.cap = "Distribution des habitats dans le Saint-Laurent et le Saguenay - Milieux côtiers", out.width = '100%'}
+```{r milieucotier, fig.cap = "Distribution des habitats dans le Saint-Laurent et le Saguenay - Milieux côtiers", out.width = '100%'}
 knitr::include_graphics("../figures/figures-integrated/habitat-milieu_cotier.png")
 ```
 

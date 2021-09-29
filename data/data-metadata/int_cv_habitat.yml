@@ -75,6 +75,18 @@ dataDescription:
     - 1796.0910878
     - 0.9315339
     - 186.3322024
+    mdref:
+    - zostere
+    - zoneinondable
+    - milieuhumide
+    - milieucotier
+    - sitealevinage
+    - frayere
+    - zoneherbacee
+    - especestatut
+    - faunique
+    - floristique
+    - colonieoiseaux
 rawData:
 - '0001'
 - '0002'

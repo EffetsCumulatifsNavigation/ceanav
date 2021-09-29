@@ -1,9 +1,9 @@
-#### Sites d’intérêt culturels, patrimoniaux et archéologiques - Essipit - Chasse oiseaux migrateurs {-}
+#### Sites d’intérêt - Essipit - Chasse oiseaux migrateurs {-}
 
 
 <!-- -------------------------------------------------- -->
 
-```{r essipit_chasse_oiseaux, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Essipit - Chasse oiseaux migrateurs", out.width = '100%'}
+```{r essipitchasseoiseaux, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Essipit - Chasse oiseaux migrateurs", out.width = '100%'}
 knitr::include_graphics("../figures/figures-integrated/site-essipit_chasse_oiseaux.png")
 ```
 

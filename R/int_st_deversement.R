@@ -228,6 +228,10 @@ st_deversement <- function() {
     sum(dev$VOLUME_DEVERSE == lvls[5], na.rm = TRUE),
     sum(is.na(dev$VOLUME_DEVERSE))
   )
+
+  # --- For proper referencing in markdown syntax
+  meta$dataDescription$categories$mdref <- modif_md(meta$dataDescription$categories$accronyme)
+
   # ------------------------------------------------------------------------- #
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #

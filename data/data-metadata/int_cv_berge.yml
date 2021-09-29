@@ -52,4 +52,13 @@ dataDescription:
     - 20.1673397
     - 50.3002778
     - 4.7081112
+    mdref:
+    - NSV
+    - NV
+    - ASVPE
+    - ASVTE
+    - ASVCE
+    - AVPE
+    - AVTE
+    - AVCE
 rawData: '0017'

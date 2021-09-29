@@ -3,7 +3,7 @@
 
 <!-- -------------------------------------------------- -->
 
-```{r N_V, fig.cap = "Distribution des segments de berge sensibles à l'érosion dans le Saint-Laurent et le Saguenay - Naturelle - Vive", out.width = '100%'}
+```{r NV, fig.cap = "Distribution des segments de berge sensibles à l'érosion dans le Saint-Laurent et le Saguenay - Naturelle - Vive", out.width = '100%'}
 knitr::include_graphics("../figures/figures-integrated/berge-N_V.png")
 ```
 

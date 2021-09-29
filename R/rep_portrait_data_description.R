@@ -42,6 +42,7 @@ rep_portrait_data_description <- function(data_id, output_folder) {
     out$metadata$dataDescription$categories$accronyme <- out$metadata$dataDescription$categories$accronyme[uid]
     out$metadata$dataDescription$categories$francais <- out$metadata$dataDescription$categories$francais[uid]
     out$metadata$dataDescription$categories$english <- out$metadata$dataDescription$categories$english[uid]
+    out$metadata$dataDescription$categories$mdref <- out$metadata$dataDescription$categories$mdref[uid]
 
     # out$contact <- get(paste0("contact_", data_id))
 

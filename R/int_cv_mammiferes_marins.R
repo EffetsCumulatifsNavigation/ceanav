@@ -89,6 +89,8 @@ cv_mammiferes_marins <- function() {
   meta$dataDescription$categories$scientific <-  nm$scientific
   meta$dataDescription$categories$source <-  nm$source
 
+  # --- For proper referencing in markdown syntax
+  meta$dataDescription$categories$mdref <- modif_md(meta$dataDescription$categories$accronyme)
   # _____________________________________________________________________________ #
 
 

@@ -147,6 +147,9 @@ st_dragage <- function() {
   meta$dataDescription$dragage_prevu$municipalite <- dragage_prevu$municipalite
   meta$dataDescription$dragage_prevu$name <- dragage_prevu$name
   meta$dataDescription$dragage_prevu$volume <- dragage_prevu$volume
+
+  # --- For proper referencing in markdown syntax
+  meta$dataDescription$categories$mdref <- modif_md(meta$dataDescription$categories$accronyme)
   # --------------------------------------------------------------------------------
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #

@@ -131,4 +131,16 @@ dataDescription:
     - 0.3084837
     - 24.0936139
     - 4.7700764
+    mdref:
+    - CARGO
+    - CONTAINER
+    - DRYBULK
+    - FERRYRORO
+    - GOVERNMENTRESEARCH
+    - Observation
+    - PASSENGER
+    - PLEASUREVESSELS
+    - SPECIALSHIPS
+    - TANKER
+    - TUGSPORT
   segments: 93056

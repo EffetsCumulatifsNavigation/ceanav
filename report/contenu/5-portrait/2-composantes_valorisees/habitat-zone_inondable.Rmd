@@ -3,7 +3,7 @@
 
 <!-- -------------------------------------------------- -->
 
-```{r zone_inondable, fig.cap = "Distribution des habitats dans le Saint-Laurent et le Saguenay - Zones inondables", out.width = '100%'}
+```{r zoneinondable, fig.cap = "Distribution des habitats dans le Saint-Laurent et le Saguenay - Zones inondables", out.width = '100%'}
 knitr::include_graphics("../figures/figures-integrated/habitat-zone_inondable.png")
 ```
 

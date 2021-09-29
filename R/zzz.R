@@ -80,3 +80,11 @@ removeCoast <- function(dat) {
   # -----
   dat
 }
+
+
+# ------------------------------------------------------------------------------
+# For proper referencing in markdown syntax
+modif_md <- function(dat) {
+  dat <- gsub("_", "", dat)
+  dat <- gsub("\\.", "", dat)
+}
