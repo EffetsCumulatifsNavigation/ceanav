@@ -1,11 +1,18 @@
 title: Navigation en zone portuaire
-description: Zone d'influence de la navigation en zone portuaire dans le Saint-Laurent et le Saguenay
+description: Zone d'influence de la navigation en zone portuaire dans le Saint-Laurent
+  et le Saguenay
 id: port
 dataDescription:
   units: presence
   spatial:
     resolution: 1km^2
     extent: NA
+  categories:
+    accronyme: port
+    francais: Navigation en zone portuaire
+    source: '0021,0041,0047'
+    mdref: port
 rawData:
+- '0021'
 - '0041'
 - '0047'

@@ -99,16 +99,30 @@ st_port <- function() {
   # -----
   dat <- dat %>%
          group_by(id) %>%
-         summarise(port = sum(port))
+         summarise(port = max(port))
 
   # -----
   port <- left_join(grid1p, dat, by = 'id') %>%
           select(-id)
+  # ------------------------------------------------------------------------- #
+
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  # Update metadata
+  # ----------------------------------
+  #
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  # -----
+  uid <- !is.na(port$port)
+  meta$dataDescription$spatial$extent <- st_bbox(port[uid,])
 
   # -----
-  port <- cbind(grid1p, port) %>%
-          select(-id)
-  # ------------------------------------------------------------------------- #
+  meta$dataDescription$categories$accronyme <- "port"
+  meta$dataDescription$categories$francais <- "Navigation en zone portuaire"
+  meta$dataDescription$categories$source <- paste0(meta$rawData, collapse = ",")
+
+  # --- For proper referencing in markdown syntax
+  meta$dataDescription$categories$mdref <- modif_md(meta$dataDescription$categories$accronyme)
+  # --------------------------------------------------------------------------------
 
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
