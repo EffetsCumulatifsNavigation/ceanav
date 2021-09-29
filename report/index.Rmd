@@ -12,9 +12,10 @@ colorlinks: yes
 lot: yes
 lof: yes
 fontsize: 12pt
-monofont: "Source Code Pro"
+monofont: "Courier"
 monofontoptions: "Scale=0.7"
 site: bookdown::bookdown_site
+always_allow_html: true
 ---
 
 <!-- description: "TO WRITE"

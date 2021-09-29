@@ -6,7 +6,11 @@ dataDescription:
   units: presence
   spatial:
     resolution: 1km^2
-    extent: NA
+    extent:
+    - -410830.0813864
+    - 173655.5276494
+    - 112169.9186136
+    - 592655.5276494
   categories:
     accronyme: port
     francais: Navigation en zone portuaire

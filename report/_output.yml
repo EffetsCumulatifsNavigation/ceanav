@@ -21,7 +21,7 @@ bookdown::html_chapters:
 bookdown::pdf_book:
   keep_tex: no
   dev: "pdf"
-  # latex_engine: xelatex
+  latex_engine: xelatex
   # citation_package: natbib
   template: default
   pandoc_args:
