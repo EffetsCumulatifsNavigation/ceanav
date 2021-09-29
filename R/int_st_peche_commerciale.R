@@ -309,6 +309,8 @@ st_peche_commerciale <- function() {
     "Pélagique prises accessoires faibles",
     "Pélagique prises accessoires élevées")
 
+  meta$dataDescription$categories$source <- rep(paste0(meta$rawData, collapse = ","),
+                                                length(meta$dataDescription$categories$accronyme))
 
   # -----
   obs <- peche %>% group_by(years) %>% summarize(total = n())

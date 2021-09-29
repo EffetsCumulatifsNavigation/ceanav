@@ -2,9 +2,9 @@ title: Pêche commerciale
 description: Intensité des activités de pêche commerciale dans le Saint-Laurent
 id: peche_commerciale
 rawData:
-- 27
-- 28
-- 29
+- '0027'
+- 0028
+- 0029
 dataDescription:
   units: kg*km^{-2}
   spatial:
@@ -169,3 +169,9 @@ dataDescription:
     - DNH
     - PLB
     - PHB
+    source:
+    - 0027,0028,0029
+    - 0027,0028,0029
+    - 0027,0028,0029
+    - 0027,0028,0029
+    - 0027,0028,0029
