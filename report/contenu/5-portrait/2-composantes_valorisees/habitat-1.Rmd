@@ -1,1 +1,26 @@
 ### Habitats floristiques et fauniques
+
+```{r habitat_setup, echo = FALSE}
+meta <- read_yaml("../data/data-metadata/int_cv_habitat.yml")
+```
+
+(Tableau \@ref(tab:habitatCat))
+
+<br/>
+
+```{r habitatCat}
+tab <- as.data.frame(meta$dataDescription$categories)
+tab <- arrange(tab, francais)
+tab <- select(tab, francais, superficie)
+tab$superficie <- round(tab$superficie, 2)
+
+
+tab %>%
+  knitr::kable(
+    col.names = c("Catégories d'habitats", "Superficie $km^2$"),
+    row.names = FALSE,
+    caption = "Catégories de types d'habitats considérés et superficie totale dans la zone d'étude."
+  )
+```
+
+<br/>
