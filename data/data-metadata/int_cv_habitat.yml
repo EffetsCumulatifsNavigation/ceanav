@@ -19,7 +19,7 @@ dataDescription:
     - zostere
     - zone_inondable
     - milieu_humide
-    - milieu_cotier
+    - marais_cotier
     - site_alevinage
     - frayere
     - zone_herbacee
@@ -31,7 +31,7 @@ dataDescription:
     - Zostères
     - Zones inondables
     - Milieux humides
-    - Milieux côtiers
+    - Marais côtiers
     - Sites d'alevinage
     - Frayères
     - Zones herbacées
@@ -67,7 +67,7 @@ dataDescription:
     - zostere
     - zoneinondable
     - milieuhumide
-    - milieucotier
+    - maraiscotier
     - sitealevinage
     - frayere
     - zoneherbacee

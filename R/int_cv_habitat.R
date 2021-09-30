@@ -137,10 +137,10 @@ cv_habitat <- function() {
   # ------------------------------------------------------
   # Marais côtiers : 0007
   dat <- "0007"
-  meta_temp <- meta_update(meta_temp, dat, "milieu_cotier", "Milieux côtiers")
+  meta_temp <- meta_update(meta_temp, dat, "marais_cotier", "Marais côtiers")
 
   # -----
-  habitat$milieu_cotier <- uid(dat)
+  habitat$marais_cotier <- uid(dat)
 
   # ------------------------------------------------------
   # Sites d'alevinage : 0009
