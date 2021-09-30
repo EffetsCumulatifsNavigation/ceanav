@@ -14,4 +14,6 @@ La classification des habitats faunique provient d'une base de donéées fournis
 - Falaise habitée par une colonie d’oiseaux
 - Aire de mise bas du caribou au nord du 52e parallèle
 
+La base de donnée a été considérée de façon intégrative en tant qu'habitat unique représentant des habitats fauniques d'importance identifiés par le gouvernement provincial.
+
 WARNING: Considérer retirer cette base de données et cet habitat de l'analyse. Difficile à justifier et à caractériser.
