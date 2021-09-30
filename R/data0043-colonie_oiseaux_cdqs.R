@@ -44,8 +44,18 @@ get_data0043 <- function() {
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   # Import data
   # ----------------------------------------
-  data0043 <- st_read(paste0(folder, 'BIOMQ18_polygones_shp/BIOMQ_Polygones_2018.shp'), quiet = TRUE) %>%
+  data0043 <- st_read(paste0(folder, 'BIOMQ18_polygones_shp/BIOMQ_Polygones_2018.shp'),
+                      quiet = TRUE) %>%
               st_transform(crs = global_parameters()$crs)
+
+  # -----
+  dat <- read.csv(paste0(folder, "biomq_2018.csv")) %>%
+         group_by(Id_Colonie) %>%
+         summarize(Annee = max(Annee))
+
+  # -----
+  data0043 <- left_join(data0043, dat, by = c("ID_COLONIE" = "Id_Colonie")) %>%
+              filter(Annee >= 2000)
   # _________________________________________________________________________ #
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
@@ -54,7 +64,8 @@ get_data0043 <- function() {
   # Output
   st_write(obj = data0043,
            dsn = "./data/data-format/data0043-colonie_oiseaux_cdqs.geojson",
-           delete_dsn = TRUE)
+           delete_dsn = TRUE,
+           quiet = TRUE)
   # _________________________________________________________________________ #
 
 }

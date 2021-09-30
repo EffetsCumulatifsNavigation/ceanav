@@ -4,22 +4,24 @@
 meta <- read_yaml("../data/data-metadata/int_cv_habitat.yml")
 ```
 
-(Tableau \@ref(tab:habitatCat))
+Une recherche exhaustive de données a été effectuée afin de caractériser différents types d'habitats caractéristiques du Saint-Laurent et du Saguenay et pouvant être affectés par les activités maritimes. Les habitats considérés sont ceux pour lesquels des données ont été accessibles ouvertement sur des plateforme comme la plateforme fédérale [Gouvernement ouvert](https://open.canada.ca/fr), la plateforme provinciale [Données Québec](https://www.donneesquebec.ca/) et l'[Observatoire Global du Saint-Laurent](https://ogsl.ca/), ou partagées par divers ministères et collaborateurs. Cette recherche de données nous a permi de caractériser `r length(meta$dataDescription$categories$accronyme)` types d'habitats au sein de la zone d'étude (Tableau \@ref(tab:habitatCat)).
+
+L'ensemble des types d'habitats ont été caractérisés en présence-absence au sein de la grille d'étude. Les habitats caractérisés grâce à une base de données unique ont été incorporé directement à la grille d'étude; lorsque plusieurs bases de données étaient utilisées pour caractériser un habitat, nous avons procédé à l'intégration des bases de données en amont, puis nous avons incorporé cette ase de données intégrée à la grille d'étude. Les sections suivantes fournissent davantage d'informations sur la caractérisation des différents types d'habitats.
 
 <br/>
 
 ```{r habitatCat}
 tab <- as.data.frame(meta$dataDescription$categories)
 tab <- arrange(tab, francais)
-tab <- select(tab, francais, superficie)
+tab <- select(tab, francais, superficie, source)
 tab$superficie <- round(tab$superficie, 2)
 
 
 tab %>%
   knitr::kable(
-    col.names = c("Catégories d'habitats", "Superficie $km^2$"),
+    col.names = c("Catégories d'habitats", "Superficie $km^2$", "Données utilisées$^*$"),
     row.names = FALSE,
-    caption = "Catégories de types d'habitats considérés et superficie totale dans la zone d'étude."
+    caption = "Catégories de types d'habitats considérés pour l'analyse des effets cumulatifs de la navigation dans le Saint-Laurent et le Saguenay et leur superficie totale dans la zone d'étude. $^*$Consultez les annexes 3 et 4 pour plus de détails sur les données utilisées."
   )
 ```
 
