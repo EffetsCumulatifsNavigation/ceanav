@@ -90,6 +90,11 @@ excursions d'observation de mammifères marins au sein de la zone d'étude.
 En tant que tel, son utilisation était justifiée pour cette étude.
 
 
+
+
+Selon cette approche, un total de `r meta$dataDescription$navigationPortuaire$transits` transits sont répertoriés en zones portuaires.
+
+
 <!--
 Ressources pertinentes:
 

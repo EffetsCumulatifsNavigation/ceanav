@@ -188,6 +188,79 @@ st_navigation <- function() {
 
   # -----
   navigation$Observation <- obs
+  # --------------------------------------------------------------------------------
+
+
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  # Navigation portuaire
+  # ----------
+  #
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  load_format("data0041")
+  load_format("data0047")
+  meta$rawData <- c(meta$rawData, "0041", "0047")
+
+  # WARNING:
+  # Retrait de la zone marine pour les données de zones industrialo-portuaires
+  # Ceci est fait surtout pour Bécancour, puisque la zone s'étend jusqu'au milieu
+  # du chenal de navigation. On ajoute ensuite un buffer pour identifier la zone d'influence marine
+  data0047 <- st_difference(data0047, aoi)
+
+  # -----
+  port <- bind_rows(data0041, data0047) %>%
+          st_buffer(200) %>%
+          st_union() %>%
+          st_intersection(aoi) %>%
+          st_cast("POLYGON") %>%
+          st_sf()
+
+  # ------------------------------------
+  # Number of transits per port area
+  # ------------------------------------
+  uid <- st_intersects(port, ais)
+
+  # -----
+  ntransit <- list()
+  for(i in 1:length(uid)) ntransit[[i]] <- length(uid[[i]])
+
+  # -----
+  port$port <- unlist(ntransit)
+
+  # -----
+  # Navigation portuaire - nombre de transit total
+  meta$dataDescription$navigationPortuaire$transits <- sum(port$port, na.rm = TRUE)
+
+
+  # ------------------------------------
+  # Integrate to study grid
+  # ------------------------------------
+  grid1p$id <- 1:nrow(grid1p)
+
+  # -----
+  uid <- st_intersects(port, grid1p)
+
+  # -----
+  dat <- list()
+  for(i in 1:length(uid)) {
+    dat[[i]] <- data.frame(id = uid[[i]], port = port$port[i])
+  }
+  dat <- bind_rows(dat)
+
+  # -----
+  dat <- dat %>%
+         group_by(id) %>%
+         summarise(port = max(port))
+
+  # -----
+  port <- left_join(grid1p, dat, by = 'id') %>%
+          dplyr::select(-id)
+
+  # -----
+  navigation$navigation_portuaire <- port$port
+
+  # ------------------------------------------------------------------------- #
+
+  # --------------------------------------------------------------------------------
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   # Update metadata
@@ -199,16 +272,17 @@ st_navigation <- function() {
   dat <- data.frame(accronyme = c("CARGO","CONTAINER","DRY.BULK","FERRY.RO.RO",
                                   "GOVERNMENT.RESEARCH","Observation","PASSENGER",
                                   "PLEASURE.VESSELS","SPECIAL.SHIPS","TANKER",
-                                  "TUGS.PORT"),
+                                  "TUGS.PORT","navigation_portuaire"),
                     english = c("Cargo","Containers","Dry bulk","Ferry / ro-ro",
                                 "Government / research","Marine mammals observation",
                                 "Passenger","Pleasure vessels","Special ships",
-                                "Tanker","Tugboat / port"),
+                                "Tanker","Tugboat / port", "Port shipping"),
                     francais = c("Cargo","Porte-conteneurs","Cargaison sèche",
                                  "Traversier / roulier","Gouvernement / recherche",
                                  "Observation mammifères marins","Passager",
                                  "Navires de plaisance","Navires spéciaux",
-                                 "Pétrolier","Remorqueur / port"))
+                                 "Pétrolier","Remorqueur / port",
+                                 "Navigation portuaire"))
 
   # ---
   # Shipping segments
@@ -221,10 +295,11 @@ st_navigation <- function() {
   nav <- st_drop_geometry(navigation)
   dat2 <- data.frame(accronyme = colnames(nav), transit_km2 = 0, source = NA)
   for(i in 1:ncol(nav)) dat2$transit_km2[i] <- sum(nav[,i], na.rm = TRUE) / (st_area(aoi) * 1e-6)
-  uid <- dat2$accronyme != "Observation"
+  uid <- !dat2$accronyme %in% c("Observation","navigation_portuaire")
   dat2$transit_km2[uid] <- dat2$transit_km2[uid] / length(years) # only 1 year of observation
   dat2$source[uid] <- "0020,0021"
-  dat2$source[!uid] <- "0028"
+  dat2$source[dat2$accronyme == "Observation"] <- "0028"
+  dat2$source[dat2$accronyme == "navigation_portuaire"] <- "0041,0047"
   dat <- left_join(dat, dat2, by = "accronyme")
 
   # ---
@@ -248,6 +323,7 @@ st_navigation <- function() {
 
   # --- For proper referencing in markdown syntax
   meta$dataDescription$categories$mdref <- modif_md(meta$dataDescription$categories$accronyme)
+
 
   # --------------------------------------------------------------------------------
 
