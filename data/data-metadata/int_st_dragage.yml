@@ -25,23 +25,23 @@ dataDescription:
     - Sites de dépôts
     - Dragages de capitalisation prévus
     source:
-    - 0018,0019,0046,0048
+    - 0018,0019,0046,0048,0052
     - 0018,0019,0046,0048
     - 0049,0050
     sites:
-    - 34
+    - 36
     - 27
     - 2
     volume:
-    - 3784882.0
+    - 3785882.0
     - 3421937.0
     - 1009000.0
     volume_moyen:
-    - 111320.0588235
+    - 105163.3888889
     - 126738.4074074
     - 504500.0
     volume_sd:
-    - 199408.164864
+    - 195330.9968016
     - 185557.9519589
     - .na.real
     mdref:
@@ -70,6 +70,8 @@ dataDescription:
     - Les Méchins
     - Matane
     - Matane
+    - Québec
+    - Québec
     - Rimouski
     - Rimouski
     - Rivière-du-Loup
@@ -105,6 +107,8 @@ dataDescription:
     - Quai de Les Méchins
     - Marina de Matane
     - Port de Matane
+    - Port de Québec - Secteur Anse au Foulon
+    - Port de Québec - Secteur Beauport
     - Marina de Rimouski
     - Port de Rimouski - Bassin est
     - Desserte
@@ -140,6 +144,8 @@ dataDescription:
     - 4000.0
     - 21000.0
     - 25393.0
+    - 500.0
+    - 500.0
     - 3500.0
     - 269483.0
     - 488843.0
@@ -256,3 +262,4 @@ rawData:
 - 0048
 - 0049
 - '0050'
+- '0052'

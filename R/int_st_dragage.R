@@ -22,10 +22,11 @@ st_dragage <- function() {
   load_format("data0048")
   load_format("data0049")
   load_format("data0050")
+  load_format("data0052")
 
   # ------------------------------------------------------
   meta <- load_metadata("int_st_dragage")
-  meta$rawData <- c("0018", "0019", "0046", "0048", "0049", "0050")
+  meta$rawData <- c("0018", "0019", "0046", "0048", "0049", "0050", "0052")
   # ------------------------------------------------------------------------- #
 
 
@@ -54,7 +55,14 @@ st_dragage <- function() {
               filter(annee <= 2021)
 
   # -----
-  dragage <- bind_rows(dat0019, dat0046, dat0048) %>%
+  data0052 <- data0052 %>%
+              mutate(type = "dragage",
+                     area_tot = as.numeric(st_area(.)) * 1e-6) %>%
+              select(municipalite, name, annee, volume, type, area_tot, geometry)
+
+
+  # -----
+  dragage <- bind_rows(dat0019, dat0046, dat0048, data0052) %>%
              filter(type == "dragage") %>%
              group_by(municipalite, name, type, area_tot) %>%
              summarise(volume = sum(volume))
@@ -112,7 +120,7 @@ st_dragage <- function() {
   )
 
   meta$dataDescription$categories$source <- c(
-    "0018,0019,0046,0048",
+    "0018,0019,0046,0048,0052",
     "0018,0019,0046,0048",
     "0049,0050"
   )
