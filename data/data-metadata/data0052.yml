@@ -1,0 +1,9 @@
+data_description:
+  id: "0052"
+  name: "Dragage d'entretien Port de Québec"
+  description: "Activités de dragage d'entretien au Port de Québec"
+  access_date: 2021-09-16
+  contact_id: "0046"
+  availability: "available"
+  citation:
+    - "Communication personnelle, Marie-Ève Lemieux"
