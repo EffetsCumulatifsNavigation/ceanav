@@ -11,16 +11,16 @@
 meta <- read_yaml("../data/data-metadata/int_st_dragage.yml")
 ```
 
-La voie navigable du Saint-Laurent a historiquement été draguée partout où la profondeur naturelle ne permettrait pas le passage sécuritaire des bateaux. Entre Montréal et Cap Gribane, la voie navigable est d'une longueur totale d'environ 340 km et elle a été artificialisée sur une longueur d'environ 210 km afin d'y assurer une navigation sécuriaire [@ghb2019]. La voie navigable a été appronfondie et élargie à travers le temps, principalement en raison de l'accroissement de la taille des navires et de l'augmentation du trafic maritime. Une caractérisation historique des activités de dragage de capitalisation -- *i.e.* dragage visant à approfondir et élargir la voie de navigation -- de la voie navigable du Saint-Laurent est décrite par @ref. Certaines portions de la voie navigable doivent également être draguées à intervalles réguliers -- *i.e.* dragages d'entretien -- dû à la dynamique sédimentaire des milieux. Il en est de même pour certaines installations portuaires bordant le Saint-Laurent et le Saguenay.
+La voie navigable du Saint-Laurent a historiquement été draguée partout où la profondeur naturelle ne permettrait pas le passage sécuritaire des bateaux. Entre Montréal et Cap Gribane, la voie navigable est d'une longueur totale d'environ 340 km et elle a été artificialisée sur une longueur d'environ 210 km afin d'y assurer une navigation sécuriaire [@ghb2019]. La voie navigable a été appronfondie et élargie à travers le temps, principalement en raison de l'accroissement de la taille des navires et de l'augmentation du trafic maritime. Une caractérisation historique des activités de dragage de capitalisation -- *i.e.* dragage visant à approfondir et élargir la voie de navigation -- de la voie navigable du Saint-Laurent est décrite par @cote2007. Certaines portions de la voie navigable doivent également être draguées à intervalles réguliers -- *i.e.* dragages d'entretien -- dû à la dynamique sédimentaire des milieux. Il en est de même pour certaines installations portuaires bordant le Saint-Laurent et le Saguenay, qui doivent s'assurer de la sécurité de leurs installations pour les navires.
 
-Dans le cadre de cette étude, les activités de dragage contemporaines pour la période de `r meta$dataDescription$temporal$start` à `r meta$dataDescription$temporal$end` ont été caractérisées. La majorité des données de volumes dragués et déposés provient d'un exercice de compilation des activités de dragages dans l'ensemble du Saint-Laurent [@mtq2016; @mtq2017; @eccc2020]. Ces données ont été complémentées par des données de dragage disponibles au sein d'un rapport d'évaluation des effets environnementaux du dragage pour La Voie Navigable Du Saint-Laurent [@ghd2019]. Finalement, divers rapports on été utilisés afin de caractériser les activités de dragages du Port Alfred [@englobe2016; @englobw2017; @melcc2019], et les activités de dragages de capitalisation prévues pour le Port de Montréal à Contrecoeur [@snclavalin2017a; @snclavalin2017b; @iaac2021] et pour le Port de Trois-Rivière [@stantec2015].
+Dans le cadre de cette étude, les activités de dragage contemporaines pour la période de `r meta$dataDescription$temporal$start` à `r meta$dataDescription$temporal$end` ont été caractérisées. La majorité des données de volumes dragués et déposés provient d'un exercice de compilation des activités de dragages dans l'ensemble du Saint-Laurent [@mtq2016; @mtq2017; @eccc2020]. Ces données ont été complémentées par des données de dragage disponibles au sein d'un rapport d'évaluation des effets environnementaux du dragage pour la voie navigable du Saint-Laurent [@ghd2019]. Finalement, divers rapports on été utilisés afin de caractériser les activités de dragages d'entretien du Port Alfred [@englobe2016; @englobw2017; @melcc2019], et les activités de dragages de capitalisation prévues pour le Port de Montréal à Contrecoeur [@snclavalin2017a; @snclavalin2017b; @iaac2021] et pour le Port de Trois-Rivière [@stantec2015].
 
-Les volumes relevés ont ensuite été rapportés sur les sites de dragage et de dépôt. Lorsque fournies au sein des rapports, les coordonnées délimitant les sites visés ont été utilisés. Lorsqu'une coordonnée unique représentant le centroïde des sites visés était disponible sans information supplémentaire sur la localisation exacte de l'activité, une zone circulaire de 100 $m$ a été tracée afin de représenter la zone de dragage ou de dépôt. Lorsque la localisation était décrite, ou qu'une figure était disponible au sein de rapports détaillés, les zones de dragage et de dépôt ont été géoréférencées manuellement. La localisation des sites de dragages et de dépôts utilisées pour le dragage de la Voie Navigable du Saint-Laurent proviennent d'une base de données spatialisée fournie par la Garde Côtière Canadienne [@gcc2021].
+Les volumes relevés ont ensuite été rapportés sur les sites de dragage et de dépôt. Lorsque fournies au sein des rapports, les coordonnées délimitant les sites visés ont été utilisés. Lorsqu'une coordonnée unique représentant le centroïde des sites visés était disponible sans information supplémentaire sur la localisation exacte de l'activité, une zone d'un rayon de 100 $m$ a été tracée afin de représenter la zone de dragage ou de dépôt. Lorsque la localisation était décrite, ou qu'une figure était disponible au sein de rapports détaillés, les zones de dragage et de dépôt ont été géoréférencées manuellement. La localisation des sites de dragages et de dépôts utilisées pour le dragage de la voie navigable du Saint-Laurent proviennent d'une base de données fournie par la Garde Côtière Canadienne [@gcc2021].
 
 
-Les sites de dragage et les sites de dépôts de sédiments dragués ont été caractérisés en fonction du volume total dragué en $m^3$ pendant la période visée (Tableau \@ref(tab:dragageGen)). Un total de `r length(meta$dataDescription$dragage$volume)` sites de dragage (Tableau \@ref(tab:dragageSite)) et `r length(meta$dataDescription$depot$volume)` sites de dépôt (Tableau \@ref(tab:dragageDepot)) ont été caractérisés au sein de la zone d'étude. Il faut noter que les volumes totaux dragués ne correspondent pas aux volumes totaux déposés puisque certains sites de dépôt se retrouvent en milieu terrestres et ils n'ont pas été comptabilisés.
+Les sites de dragage et les sites de dépôts de sédiments dragués ont été caractérisés en fonction du volume total dragué en $m^3$ pendant la période visée (Tableau \@ref(tab:dragageGen)). Un total de `r length(meta$dataDescription$dragage$volume)` sites de dragage (Tableau \@ref(tab:dragageSite)) et `r length(meta$dataDescription$depot$volume)` sites de dépôt (Tableau \@ref(tab:dragageDepot)) ont été caractérisés au sein de la zone d'étude. Il faut noter que les volumes totaux dragués ne correspondent pas aux volumes totaux déposés puisque certains sites de dépôt se retrouvent en milieu terrestres; ces derniers n'ont ainsi pas été comptabilisés pour la présente étude.
 
-Puisque certains projets d'expansion portuaires sont actuellement en cours, notemment pour le Port de Montréal et le Port de Trois-Rivière, ayant des plans de dragages de capitalisation prévus dans les prochaines années, ces dragages prévus ont également été répertoriés (Tableau \@ref(tab:dragageGen); Tableau \@ref(tab:dragagePrevu)).
+Des projets d'expansions portuaire pour le Port de Montréal à Contrecoeur [@snclavalin2017a; @snclavalin2017b; @iaac2021] et pour le Port de Trois-Rivière [@stantec2015] fournissent des plans de dragages de capitalisation prévus dans les prochaines années. Ces derniers ont donc été répertoriés (Tableau \@ref(tab:dragageGen); Tableau \@ref(tab:dragagePrevu)).
 
 <br/>
 
@@ -32,7 +32,7 @@ tab %>%
   knitr::kable(
     col.names = c("Catégorie", "Nombre de sites", "Volumes totaux", "Volumes totaux moyens", "Écart-type"),
     row.names = FALSE,
-    caption = "Catégories description des sites des activités de dragage répertoriées. Les volumes sont présentés en $m^3$."
+    caption = "Catégories et description activités de dragage répertoriées entre 2001 et 2020 dans le Saint-Laurent et le Saguenay. Les volumes sont présentés en $m^3$."
   )
 ```
 
@@ -46,7 +46,7 @@ tab %>%
   knitr::kable(
     col.names = c("Région", "Nom du site", "Volumes totaux"),
     row.names = FALSE,
-    caption = "Sites de dragage et volumes totaux dragués en $m^3$ entre 2001 et 2020."
+    caption = "Sites de dragage et volumes totaux dragués en $m^3$ entre 2001 et 2020 dans le Saint-Laurent et le Saguenay."
   )
 ```
 
@@ -60,7 +60,7 @@ tab %>%
   knitr::kable(
     col.names = c("Région", "Nom du site", "Volumes totaux"),
     row.names = FALSE,
-    caption = "Sites de dépôt et volumes totaux déposés en $m^3$ entre 2001 et 2020."
+    caption = "Sites de dépôt et volumes totaux déposés en $m^3$ entre 2001 et 2020 dans le Saint-Laurent et le Saguenay."
   )
 ```
 
@@ -74,7 +74,7 @@ tab %>%
   knitr::kable(
     col.names = c("Région", "Nom du site", "Volumes totaux"),
     row.names = FALSE,
-    caption = "Sites de dragage de capitalisation et volumes totaux prévus en $m^3$."
+    caption = "Sites de dragage de capitalisation et volumes totaux prévus en $m^3$ dans le Saint-Laurent et le Saguenay."
   )
 ```
 
