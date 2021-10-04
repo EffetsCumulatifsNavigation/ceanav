@@ -19,7 +19,7 @@ tab %>%
   knitr::kable(
     col.names = c("Catégorie de contaminants", "Sous-catégorie","Nombre de déversements"),
     row.names = FALSE,
-    caption = "Catégories et description des sites de déversements accidentels répertoriés dans le Saint-Laurent et le Saguenay entre 2016 et 2020 [@gcc2020]."
+    caption = "Catégories et nombre de déversements accidentels répertoriés dans le Saint-Laurent et le Saguenay entre 2016 et 2020 [@gcc2020]."
   )
 ```
 
@@ -39,9 +39,6 @@ tab %>%
     caption = "Catégories de volumes déversés et nombre de déversements accidentels répertoriés dans le Saint-Laurent et le Saguenay entre 2016 et 2020 [@gcc2020]."
   ) %>%
   kableExtra::kable_styling(full_width = F)
-
-
-
 ```
 
 <br/>
@@ -52,11 +49,11 @@ S6: J. Xu, R. Lathrop, International Journal of Geographic Information Science 9
 153 (1995).
 -->
 
-Puisque les déversements accidentels ont un effet qui va au-delà de la localisation immédiate des incidents dû à la diffusion du déversement dans l'environnement, la première étape de caractérisation de l'intensité des déversements accidentels était d'établir une zone d'influence potentielle pour chaque incident. La diffusion d'un déversement varie selon les dynamiques physiques locales et régionales du milieu affecté [@ref]. Toutefois, des modèles permettant de faire ce type de modélisation sont typiquement complexe et non-disponible. Nous avons ainsi opté pour un modèle diffusif passif pour établir la zone d'influence et l'intensité relative des déversements accidentels dans la zone d'étude [voir @halpern2008].
+Puisque les déversements accidentels ont un effet qui va au-delà de la localisation immédiate des incidents dû à la diffusion du déversement dans l'environnement, la première étape de caractérisation de l'intensité des déversements accidentels était d'établir une zone d'influence potentielle pour chaque incident. Nous avons opté pour un modèle diffusif passif pour établir la zone d'influence et l'intensité relative des déversements accidentels dans la zone d'étude [voir @halpern2008].
 
 Le modèle de diffusion établi la zone d'influence des déversements en construisant des anneaux concentriques d'un rayon de 10 $m$ centrés sur le site de l'incident. Une valeur initiale égale à la catégorie du volume rapporté de l'incident est assignée à l'anneau central et représente l'intensité relative de l'incident sur le milieu. Par exemple, une valeur initiale de 2 était assignée à un déversement de 0 à 100 litres (Tableau \@ref(tab:deversementlvl)). Par principe de précaution, une valeur initiale de 2 a également été attribuée aux `r meta$dataDescription$classes$nombre[length(meta$dataDescription$classes$nombre)]` incidents dont le volumes était inconnu. Une valeur est ensuite assignée successivement aux anneaux adjacents selon une fonction de décroissance de 2\% de la valeur de l'anneau précédent, jusqu'à ce qu'un seul minimal de 0.05\% du maximum global -- 3 dans notre cas -- soit atteint. Cette approche assume ainsi une diminution linéaire de l'influence des incidents sur le milieu jusqu'à un rayon maximal d'influence d'environ 3 $km$ selon la sévérité du déversement.
 
-L'intensité des déversements accidentels a été caractérisé en distribuant les valeurs d'intensités relative modélisées par le modèle diffusif au sein de la grille d'étude de 1 $km^2$. Pour chaque anneau concentrique modélisé, nous avons multiplié la valeur d'intensité au sein de chaque cellule $j$ de la grille d'étude par la proportion de la superficie de l'anneau qui intersectait une cellule $j$:
+L'intensité et la distribution spatiale des déversements accidentels dans la zone d'étude a été évaluée en distribuant les valeurs d'intensités relative modélisées par le modèle diffusif au sein de la grille d'étude de 1 $km^2$. Pour chaque anneau concentrique modélisé, nous avons multiplié la valeur d'intensité au sein de chaque cellule $j$ de la grille d'étude par la proportion de la superficie de l'anneau qui intersectait une cellule $j$:
 
 $$I_{déversement,j} = \sum_{k=1}^{n_j} I_{tot, k} * \frac{A_{j,k}}{A_{tot,k}}$$
 
