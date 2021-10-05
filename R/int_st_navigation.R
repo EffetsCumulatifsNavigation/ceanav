@@ -164,7 +164,7 @@ st_navigation <- function() {
   navigation <- cbind(grid1p, df)
 
   # Remove others
-  navigation <- select(navigation, -OTHERS, -FISHING)
+  navigation <- dplyr::select(navigation, -OTHERS, -FISHING)
 
   # Set cells that do not touch water to NA
   data(aoi)
