@@ -34,14 +34,7 @@ de 2 km a été utilisée afin de retirer les segments aberrents de la base de d
 tout en conservant les segments décrivant de la navigation côtière ou des navires
 fréquentant des installations portuaires.
 Cette segmentation a résultée en `r meta$dataDescription$segments` segments
-linéaires de navigation
-
-
-<!-- TODO: Paragraphe sur différents types de navires et leurs effets environnementaux potentiels -->
-Plusieurs types de navires naviguent sur les eaux du Saint-Laurent. Chaque type
-de navire peut engendrer des effets différents selon leur taille, leur vitesse,
-etc <!-- Compléter liste + référence --> [@addref].
-Nous avons ainsi considéré 10 catégories de navires différents pour compléter le portrait
+linéaires de navigation. Puisque plusieurs types de navires naviguent sur les eaux du Saint-Laurent et du Saguenay, nous avons considéré 10 catégories de navires différents pour compléter le portrait
 de l'intensité de la navigation au sein de la zone d'étude (Tableau \@ref(tab:navCat)).
 
 
@@ -49,7 +42,7 @@ de l'intensité de la navigation au sein de la zone d'étude (Tableau \@ref(tab:
 tab <- as.data.frame(meta$dataDescription$categories)
 tab <- arrange(tab, francais)
 tab$transit <- as.character(round(tab$transit, 2))
-tab <- tab[!tab$accronyme == "Observation", ] # Remove observation mm
+tab <- tab[!tab$accronyme %in% c("Observation","navigation_portuaire"), ] # Remove observation mm and ports
 tab <- select(tab, francais, boats, observations, segments)
 
 
@@ -71,28 +64,14 @@ de segments de navigation qui intersectents chaque cellule de 1 $km^2$ de la
 grille d'étude entre `r meta$dataDescription$temporal$start` et
 `r meta$dataDescription$temporal$end` [@ref].
 Cet indice résulte en une évaluation de l'intensité de la navigation en
-nombre de navires ($n$) par $km^2$ ($n navires * km^{-2}$)
+nombre de navires ($n$) par $km^2$ ($n$ $navires$ $*$ $km^{-2}$)
 
 
 
 
-Nous avons complété le portrait de l'intensité de la navigation avec une
-caractérisation de l'intensité des activités d'observation en mer des
-mammifères marins sur des embarcations avec permis de classe 1 en 2017
-[@turgeon2019].
-Ces données fournissent une caractérisation du nombre de navire d'observation
-ayant traversé une grille régulière de 500m x 500m [@turgeon2019].
-Nous avons rééchantillonné cette grille afin de distribuer le nombre de
-transit qui y sont relevés au sein de notre grille d'étude de 1 $km^2$.
-Bien que cet exercice soit limité au parc marin du
-Saguenay–Saint-Laurent, il s'agit de l'endroit où se déroule la majorité des
-excursions d'observation de mammifères marins au sein de la zone d'étude.
-En tant que tel, son utilisation était justifiée pour cette étude.
+Nous avons complété le portrait de l'intensité de la navigation avec deux catégories de navigation supplémentaires. La première touche l'intensité des activités d'observation en mer des mammifères marins sur des embarcations avec permis de classe 1 en 2017 [@turgeon2019]. Les données disponibles par @turgeon2019 fournissent une caractérisation du nombre de navire d'observation ayant traversé une grille régulière de 500m x 500m. Nous avons rééchantillonné cette grille afin de distribuer le nombre de transit qui y sont relevés au sein de notre grille d'étude de 1 $km^2$. Bien que cet exercice soit limité au parc marin du Saguenay–Saint-Laurent, il s'agit de l'endroit où se déroule la majorité des excursions d'observation de mammifères marins au sein de la zone d'étude.
 
-
-
-
-Selon cette approche, un total de `r meta$dataDescription$navigationPortuaire$transits` transits sont répertoriés en zones portuaires.
+La deuxième catégorie ajoutée touche la navigation en zone portuaire, *i.e.* les activités de navigation qui ont lieu près des installations portuaires telles les ports et les marinas. Sous l'hypothèse que les activités de navigation sont plus prépondérantes dans les zones portuaires, les données SIA ont été utilisées pour quantifier le nombre de transit à travers les zones portuaires de la zone d'étude. Les zones portuaires ont été caractérisées à partir de données sur la localisation des installations portuaires [@mtq2021] et des zones industrialo-portuaires [@mei2021] au Québec. Une zone d'influence des zones portuaires a été tracée en appliquant une zone tampon de 200 $m$. Cette zone est délibérément étroite afin de capturer principalement les navires qui fréquentent les zones portuaires plutôt que ceux qui transitent par la voie de navigation du Saint-Laurent, surtout pour les installations en milieu fluvial. Le nombre de transit à travers ces zones portuaires a ensuite été calculé à partir des données SIA. Selon cette approche, un total de `r meta$dataDescription$navigationPortuaire$transits` transits sont répertoriés en zones portuaires entre `r meta$dataDescription$temporal$start` et `r meta$dataDescription$temporal$end`. Ces transits ont ensuite été rapportés à la grille d'étude de 1 $km^2$ en attribuant pour chaque cellule le nombre de transits de la zone portuaire la chevauchant qui était la plus fréquentée. Par exemple, si une cellule de la grille était touchée par première zone portuaire ayant 100 transits et une deuxième zone ayant 200 transits, une valeur de 200 était attribuée à cette cellule.
 
 
 <!--

@@ -1,0 +1,10 @@
+#### Navigation - Navigation portuaire {-}
+
+
+<!-- -------------------------------------------------- -->
+
+```{r navigationportuaire, fig.cap = "Intensité de la navigation dans le Saint-Laurent et le Saguenay - Navigation portuaire", out.width = '100%'}
+knitr::include_graphics("../figures/figures-integrated/navigation-navigation_portuaire.png")
+```
+
+<br>
