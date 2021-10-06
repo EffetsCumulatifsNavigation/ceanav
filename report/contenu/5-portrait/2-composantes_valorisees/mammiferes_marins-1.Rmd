@@ -4,9 +4,84 @@
 meta <- read_yaml("../data/data-metadata/int_cv_mammiferes_marins.yml")
 ```
 
-La caractérisation de la distribution des mammifères marins dans la zone d'étude provient d'un guide récemment publié  [...] [@wwfromm2021].
+<!--
+Citation: Le WWF-Canada et le Réseau d’observation de mammifères marins. Données cartographiques : Navires et baleines de l’Atlantique Nord-Ouest : Guide à l’intention de l’industrie maritime, 2e édition. 2021. Données disponibles sur le site https://www.navigationbaleines.ca/fr/accueil/
+--->
 
-Ce guide présente des carte de distribution pour 9 espèces de mammifères marins qui fréquentent l'est du Canada. De ce nombre, cinq fréquentent l'estuaire du Saint-Laurent et le Saguenay et ont ainsi été retenus pour notre étude (Tableau \@ref(tab:mmSp))
+La caractérisation de la distribution des mammifères marins dans la zone d'étude provient de la deuxième édition d'un guide publié à l'intention des navigateurs qui fréquentent l'Atlantique Nord-Ouest [@wwfromm2021]. Ce guide vise à informer les navigateurs sur la problématique de collisions entre navires et baleines et des mesures permettant de minimiser les incidents, sur les différentes espèces de baleines et de la tortue luth sur le territoire et de leur présence potentielle, et sur des zones où une vigilance accrue est de mise. Ce guide présente des cartes de distribution pour neuf espèces de mammifères marins qui fréquentent l'Atlantique Nord-Ouest [@wwfromm2021; @wwfromm2021b]. Ces espèces ont été sélectionnées dû à leur statut de conservation et à leur risque connu de collision avec des navires.
+
+Les cartes de distributions ont été évaluées grâce à l'intégration de 14 ensembles de données distincts provenant d'observations scientifiques et opportunistes (Tableau \@ref(tab:datamm); @wwfromm2021c). Les données d'observations convrant la période de 2010 à 2015 et les limites géographiques de 40$^o$ à 55$^o$ N et de -72$^o$ à -48$^o$ O ont été sélectionnés pour créer les cartes partagées dans le guide. L'aire d'étude a été divisée en une grille régulière de 0.05$^o$ x 0.05$^o$. Pour chaque espèce, le nombre d'observations relevés au sein de 14 bases de données disponibles a été évalué pour chaque cellule de la grille d'étude. Un lissage gaussien de 0.2$^o$ a ensuite été appliqué sur la grille. Les valeurs obtenues dans chaque cellule ont été normalisées par le nombre total d'observations pour une espèce; la valeur d'une cellule représente ainsi la proportion du nombre total d'observations par espèce au sein de l'aire d'étude. Finalement, une transformation logarithmique a ensuite été appliquées afin de minimiser l'effet des valeurs extrêmes sur les cartes résultantes.
+
+Des mises en gardes accompagnent ces cartes et sont rapportées *verbatim* à ce rapport:
+
+> - L'effort d'observation n'a pas été quantifié et varie considérablement dans le temps et l'espace. Les données représentent l’occurrence relative des données d’observation signalées plutôt que la densité ou l'abondance réelle de l'espèce.
+
+> - La qualité de certaines des données d'observation est inconnue. Les observations proviennent de personnes ayant des niveaux variés d’expertise dans l'identification des mammifères marins.
+
+
+<br/>
+
+```{r datamm}
+tab <- data.frame(nom = c("Whitehead, Université Dalhousie",
+                          "WWAM",
+                          "WWAM_C",
+                          "Predator pelagic prey",
+                          "NAISS",
+                          "NARW",
+                          "NARW",
+                          "WSDB",
+                          "TC",
+                          "MICS",
+                          "NOAA",
+                          "NARWC",
+                          "AOM_MMON",
+                          "Shipping_MMON"),
+                 temp = c("1988-2019",
+                          "2015-2019",
+                          "2015-2019",
+                          "2015-2018",
+                          "2016",
+                          "2017",
+                          "2018",
+                          "1963-2019",
+                          "2018",
+                          "2014-2018",
+                          "2018-2020",
+                          "2015-2019",
+                          "2014-2019",
+                          "2015-2019"),
+                 prop = c("Université Dalhousie",
+                          "Parcs Canada",
+                          "Parcs Canada",
+                          "Parcs Canada",
+                          "Pêches et Océans Canada",
+                          "Pêches et Océans Canada",
+                          "Pêches et Océans Canada",
+                          "Base de données des observations de mammifères marins et d’animaux pélagiques, Pêches et Océans Canada, Dartmouth, N.-É. [2020/02/13]",
+                          "Transport Canada",
+                          "Station de recherche des îles Mingan",
+                          "National Oceanic and Atmospheric Administration",
+                          "North Atlantic Right Whale Consortium",
+                          "Réseau d’observation de mammifères marins",
+                          "Réseau d’observation de mammifères marins"),
+                  esp = c(27,7,7,7,39,31,39,67,19,11,5,16,8,35),
+                  obs = c(2464,1353,1774,816,2508,2910,7312,24538,3517,4808,2699,18190,4705,5891),
+                 type = c("S/O","S","S","S","S","S","S","O","S","S","S","S","S","O"))
+# -----
+tab %>%
+  knitr::kable(
+    col.names = c("Nom de l’ensemble de données","Série temporelle","Propriétaire","No d’espèces",
+                  "No d’observations","Scientifique (S) ou Opportuniste (O)"),
+    row.names = FALSE,
+    caption = "Liste des ensembles de données scientifiques et opportunistes utilisés pour créer les cartes, y compris des renseignements sur la période couverte par l’ensemble de données, le nombre d'espèces et le nombre d'observations d'un ou de plusieurs individus disponibles pour l'analyse, et le propriétaire de l’ensemble de données. Tableau tiré de : @wwfromm2021c."
+  )
+```
+
+<br/>
+
+
+Sur les neuf espèces dont une cartographie est disponible, cinq fréquentent l'estuaire du Saint-Laurent et le Saguenay (Tableau \@ref(tab:mmSp)). Pour notre étude, nous avons rééchantillonné les cartes de distribution produites [@wwfromm2021b] afin de les intégrer à notre grille d'étude de 1 $km^2$ en utilisant la valeur moyenne des celllules de la grille du guide qui intersecte chaque cellule de notre grille. Les valeurs ont ensuite été normalisées entre 0 et 1 en divisant chaque valeur par la valeur maximale observée au sein de la grille pour chaque espèce.
+
 
 <br/>
 
@@ -25,30 +100,3 @@ tab %>%
 ```
 
 <br/>
-
-
-<!--
-Sorry this took a little bit, I had to go back to Meg’s original report to refresh myself on the methods. I’ve put my answers below which should cover David’s questions 😊
-
-#1.  When I look at the rasters, I am not able to get the same maps as in the guide and would like to make sure I understand the data correctly. Reading the report, I see that you have done Gaussian smoothing on the data. I imagine that these are the rasters with the following names p_BELUGA_gauss_w.tif? Then you did a logarithmic transformation and I imagine that these are the files with the name: Log_p_BELUGA_gauss_w.tif. CORRECT?
-
-That is correct, you can see my reply to #3 for a breakdown of the processing steps.
-
-#2. For data without logarithmic transformation, the raster values ​​are in what unit?
-
-The units for the non-log transformed data can be thought of as the proportion (%) of the total number of observances of that species that fell within each cell (observances in cell/total observances is study area) . i.e. if there was 100 beluga sittings within the study area, and 10 of them were within a specific cell, that cell would have a value of 0.1. The only small caveat here is that the a data was smoothed with a 0.2o gaussian filter before being normalized in this way.
-
-#3. I imagine this you used the data from the rasters with a log transformation? If so, I am not sure I understand the operation of standardization so that the sum in the whole domain is equal to 1. What constitutes the domain? The study area? If so, when I sum the cells on my side it doesn't add up to 1, so I feel like something is missing.
-
-Correct we did use the log transformed data for the guide maps. The log transformation was done to make hotspots stand out more, and was done after the operation of standardizing the data. This means the log transformed rasters would not be expected to sum to 1. The order of operations was as follows:
-
-
-
-    Split study domain (40 o to 55 o N x -72 o to -48 o W) into 0.05 o gridcells
-    The number of individual whales sighted in each gridcell was summed
-    A 0.2 o  gaussian smoother was applied
-    Values in each cell were relativized by the total number of observances so that the sum of the entire domain equaled 1
-        This is what is displayed in the rasters with the ex.“p_BELUGA_gauss_w.tif” naming convention
-    These standardized rasters where then log10 transformed
-        This is what is displayed in the rasters with the ex.“Log_p_BELUGA_gauss_w.tif” naming convention
--->

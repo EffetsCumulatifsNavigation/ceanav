@@ -9,4 +9,7 @@ data_description:
     - "0028"
     - "0029"
   availability: "available"
-  citation: "Le WWF-Canada et le Réseau d’observation de mammifères marins. Données cartographiques : Navires et baleines de l’Atlantique Nord-Ouest : Guide à l’intention de l’industrie maritime, 2e édition. 2021. Données disponibles sur le site https://www.navigationbaleines.ca/fr/accueil/"
+  citation:
+    - "Le WWF-Canada et le Réseau d’observation de mammifères marins (2021). Données cartographiques : Navires et baleines de l’Atlantique Nord-Ouest : Guide à l’intention de l’industrie maritime, 2e édition. Guide disponibles sur le site https://www.navigationbaleines.ca/fr/accueil/"
+    - "Le WWF-Canada et le Réseau d’observation de mammifères marins (2021b). Données cartographiques : Navires et baleines de l’Atlantique Nord-Ouest : Guide à l’intention de l’industrie maritime, 2e édition. Données disponibles sur le site https://www.navigationbaleines.ca/fr/accueil/"
+    - "Le WWF-Canada et le Réseau d’observation de mammifères marins (2021c). Méthodologie et conditions d'utilisation des données Navires et baleines de l’Atlantique Nord-Ouest : Guide à l’intention de l’industrie maritime. 2e édition. Rapport disponible sur le site https://www.navigationbaleines.ca/fr/accueil/""

@@ -33,6 +33,13 @@ cv_mammiferes_marins <- function() {
   for(i in 1:ncol(mm)) mm[nid,i] <- NA
 
   # -------
+  for(i in 1:ncol(mm)) {
+    suppressWarnings({
+      mm[,i] <- mm[,i] / max(mm[,i], na.rm = TRUE)
+    })
+  }
+
+  # -------
   mm <- cbind(grid1p, mm) %>%
         st_transform(global_parameters()$crs)
 
