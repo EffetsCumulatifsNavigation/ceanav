@@ -1,0 +1,14 @@
+data_description:
+  id: "0053"
+  name: "Milieux humides potentiels"
+  description: "La cartographie des milieux humides potentiels du Québec (CMHPQ) 2019, diffusée par la Direction de la connaissance écologiques (DCE), fournit une information la plus à jour sur la présence potentielle de milieux humides pour toute la province du Québec. Une série de nouveautés sont maintenant intégrées dans la version 2019 de la CMHPQ. Entre autre, l’ajout de nouvelles sources de données, la classification des entités géographiques potentiellement humide selon une typologie retenue et l’attribution d’un niveau de confiance associé à chaque entité. Cette cartographie constitue une agrégation de différentes bases de données produites à d’autres fins et à des échelles différentes, le résultat de cet assemblage dépend de la précision et de l’exactitude de chacune des sources de données utilisées. Ces données doivent être utilisées en restant vigilant au regard de leurs potentiels et limites."
+  access_date: 2021-10-05
+  temporal_start: 2019
+  temporal_end: 2019
+  contact_id: "0048"
+  url: "https://www.donneesquebec.ca/recherche/dataset/milieux-humides-potentiels"
+  identifiant: "640ba2cf-e1e1-4618-84d6-874f0d657dd3"
+  availability: "open source"
+  citation:
+    - "Ministère de l’Environnement et de la Lutte contre les changements climatiques (2019). Cartographie des milieux humides potentiels du Québec – version 2019. [Accès aux données 2021-10-05]. url : https://www.donneesquebec.ca/recherche/dataset/milieux-humides-potentiels."
+    - Ministère de l’Environnement et de la Lutte contre les changements climatiques (2019b). Cartographie des milieux humides potentiels du Québec – Guide de l’utilisateur – version 2019. 26 p."
