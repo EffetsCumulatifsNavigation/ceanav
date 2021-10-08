@@ -18,11 +18,13 @@ dataDescription:
     accronyme:
     - zostere
     - zone_inondable
+    - eau_peu_profonde
+    - marais
+    - marecage
     - milieu_humide
-    - marais_cotier
+    - tourbiere
     - site_alevinage
     - frayere
-    - zone_herbacee
     - espece_statut
     - faunique
     - floristique
@@ -30,11 +32,13 @@ dataDescription:
     francais:
     - Zostères
     - Zones inondables
-    - Milieux humides
-    - Marais côtiers
+    - Eau peu profonde
+    - Marais
+    - Marécage
+    - Milieu humide
+    - Tourbière
     - Sites d'alevinage
     - Frayères
-    - Zones herbacées
     - Espèces à statut
     - Habitats fauniques
     - Habitats floristiques
@@ -42,11 +46,13 @@ dataDescription:
     source:
     - '0001,0002,0003'
     - '0013,0014'
-    - '0005,0006,0042'
-    - '0007'
+    - '0053'
+    - '0053'
+    - '0053'
+    - '0053'
+    - '0053'
     - 0009
     - '0010'
-    - 0029
     - '0011'
     - '0036'
     - '0037'
@@ -54,11 +60,13 @@ dataDescription:
     superficie:
     - 25.7612478
     - 507.9952407
-    - 220.0321461
-    - 91.4922495
+    - 518.6137184
+    - 518.6137184
+    - 518.6137184
+    - 518.6137184
+    - 518.6137184
     - 209.9056883
     - 271.9773694
-    - 14.7299396
     - 963.8141819
     - 1796.0910878
     - 0.9315339
@@ -66,11 +74,13 @@ dataDescription:
     mdref:
     - zostere
     - zoneinondable
+    - eaupeuprofonde
+    - marais
+    - marecage
     - milieuhumide
-    - maraiscotier
+    - tourbiere
     - sitealevinage
     - frayere
-    - zoneherbacee
     - especestatut
     - faunique
     - floristique
@@ -81,14 +91,13 @@ rawData:
 - '0003'
 - '0013'
 - '0014'
-- '0004'
-- '0005'
-- '0006'
-- '0042'
-- '0007'
+- '0053'
+- '0053'
+- '0053'
+- '0053'
+- '0053'
 - 0009
 - '0010'
-- 0029
 - '0011'
 - '0036'
 - '0037'

@@ -26,8 +26,8 @@ cv_habitat <- function() {
   #
   #   - Zostères : 0001, 0002, 0003
   #   - Zones inondables : 0013, 0014
-  #   - Milieux humides : 0004, 0005, 0006, 0042
-  #   - Marais côtiers : 0007
+  #   - Milieux humides : 0004, 0005, 0006, 0042 - Modifié pour 0053
+  #   - Marais côtiers : 0007 - Modifié pour 0053
   #   - Sites d'alevinage : 0009
   #   - Frayères : 0010
   #   - Zones herbacées : 0029
@@ -52,15 +52,24 @@ cv_habitat <- function() {
   }
 
   # ------------------------------------------------------
-  uid <- function(dat) {
+  uid <- function(dat, category = NULL, field = NULL) {
     # -----
     res <- load_temp(dat)
 
     # -----
-    uid <- bind_rows(res) %>%
-           st_intersects(grid1p) %>%
-           unlist() %>%
-           unique()
+    if (is.null(category)) {
+      uid <- bind_rows(res) %>%
+             st_intersects(grid1p) %>%
+             unlist() %>%
+             unique()
+    } else {
+      res <- bind_rows(res)
+      res <- res[res[,field,drop = TRUE] == category, ]
+      uid <- res %>%
+             st_intersects(grid1p) %>%
+             unlist() %>%
+             unique()
+    }
 
     # -----
     dat <- numeric(nrow(grid1p))
@@ -90,12 +99,13 @@ cv_habitat <- function() {
   }
 
   # ------------------------------------------------------
-  meta_update <- function(meta, dat, accr, fr) {
+  meta_update <- function(meta, dat, accr, fr, descr = "") {
     meta$rawData <- c(meta$rawData, dat)
     meta$accronyme <- c(meta$accronyme, accr)
     meta$francais <- c(meta$francais, fr)
     meta$source <- c(meta$source, paste0(dat, collapse = ","))
     meta$superficie <- c(meta$superficie, superficie(dat))
+    meta$description <- c(meta$description, descr)
     meta
   }
 
@@ -110,37 +120,56 @@ cv_habitat <- function() {
   # Zostères : 0001, 0002, 0003
   dat <- c("0001", "0002", "0003")
   meta_temp <- meta_update(meta_temp, dat, "zostere", "Zostères")
-
-  # -----
   habitat$zostere <- uid(dat)
 
   # ------------------------------------------------------
   # Zones inondables : 0013, 0014
   dat <- c("0013", "0014")
   meta_temp <- meta_update(meta_temp, dat, "zone_inondable", "Zones inondables")
-
-  # -----
   habitat$zone_inondable <- uid(dat)
-
 
   # ------------------------------------------------------
   # Milieux humides : 0004, 0005, 0006, 0042
-  # NOTE: Point database 0004 already covered by the other datasets
-  meta_temp$rawData <- c(meta_temp$rawData, "0004")
-  dat <- c("0005", "0006", "0042")
-  meta_temp <- meta_update(meta_temp, dat, "milieu_humide", "Milieux humides")
+  # NOTE (2021-10-08): switching to  0053, which incorporates all those datasets and divides
+  #                    milieux humides into several categories
+  # -----
+  # Eau peu profonde
+  dat <- c("0053")
+  meta_temp <- meta_update(meta_temp, dat, "eau_peu_profonde", "Eau peu profonde", "Milieu humide dont le niveau d’eau est inférieur à 2 m et présentant des plantes aquatiques flottantes ou submergées ainsi que des plantes émergentes dont le couvert fait moins de 25 % de la superficie du milieu.")
+  habitat$eau_peu_profonde <- uid(dat, "Eau", "TYPE")
 
   # -----
-  habitat$milieu_humide <- uid(dat)
+  # Marais
+  meta_temp <- meta_update(meta_temp, dat, "marais", "Marais", "Milieu humide sur dépôt minéral, dominé par une végétation herbacée couvrant plus de 25 % de la superficie. Les arbustes et les arbres, lorsque présents, couvrent moins de 25 % de la superficie du milieu.")
+  habitat$marais <- uid(dat, "Marais", "TYPE")
+
+
+  # -----
+  # Marécage
+  meta_temp <- meta_update(meta_temp, dat, "marecage", "Marécage", "Milieu humide sur dépôt minéral, dominé par une végétation ligneuse arbustive ou arborescente, avec plus de 25 % de couvert.")
+  habitat$marecage <- uid(dat, "Marécage", "TYPE")
+
+
+  # -----
+  # Milieu humide
+  meta_temp <- meta_update(meta_temp, dat, "milieu_humide", "Milieu humide", "Regroupe les milieux humides dont le type est inconnu.")
+  habitat$milieu_humide <- uid(dat, "Marais", "TYPE")
+
+
+  # -----
+  # Tourbière
+  meta_temp <- meta_update(meta_temp, dat, "tourbiere", "Tourbière", "Regroupe les milieux humides dans lesquels il y a une accumulation de tourbe d’au moins 30 cm d’épaisseur.")
+  habitat$tourbiere <- uid(dat, "Tourbière", "TYPE")
+
 
 
   # ------------------------------------------------------
   # Marais côtiers : 0007
-  dat <- "0007"
-  meta_temp <- meta_update(meta_temp, dat, "marais_cotier", "Marais côtiers")
-
-  # -----
-  habitat$marais_cotier <- uid(dat)
+  # NOTE (2021-10-08): switching to  0053, which incorporates this data and divides
+  #                    milieux humides into several categories
+  # dat <- "0007"
+  # meta_temp <- meta_update(meta_temp, dat, "marais_cotier", "Marais côtiers")
+  # habitat$marais_cotier <- uid(dat)
 
   # ------------------------------------------------------
   # Sites d'alevinage : 0009
@@ -161,11 +190,11 @@ cv_habitat <- function() {
 
   # ------------------------------------------------------
   # Zones herbacées : 0029
-  dat <- "0029"
-  meta_temp <- meta_update(meta_temp, dat, "zone_herbacee", "Zones herbacées")
-
-  # -----
-  habitat$zone_herbacee <- uid(dat)
+  # NOTE (2021-10-08): switching to  0053, which incorporates this data and divides
+  #                    milieux humides into several categories
+  # dat <- "0029"
+  # meta_temp <- meta_update(meta_temp, dat, "zone_herbacee", "Zones herbacées")
+  # habitat$zone_herbacee <- uid(dat)
 
 
   # ------------------------------------------------------
