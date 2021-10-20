@@ -1,0 +1,12 @@
+data_description:
+  id: "0027"
+  name: "Observation mammifères marins"
+  description: "Données d'observation de mammifères marins du Réseau d'observation de mammifères marins (ROMM)"
+  access_date: 2021-05-19
+  temporal_start: 1996
+  temporal_end: 2021
+  contact_id:
+    - "0029"
+  availability: "open source"
+  citation:
+    - ""
