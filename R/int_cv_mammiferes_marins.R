@@ -12,7 +12,7 @@
 
 cv_mammiferes_marins <- function() {
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
-  # Prepare data
+  # Prepare data from the mariner's guide
   # ------------------------------------
   #
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
@@ -63,6 +63,91 @@ cv_mammiferes_marins <- function() {
   # -------
   mammiferes_marins <- mm
   # ------------------------------------------------------------------------- #
+
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  # Complement with ROMM data
+  # ------------------------------------
+  #
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  load_format("data0054")
+
+  # Filter data
+  # Data within study area
+  uid <- st_intersects(aoi, data0054) %>% unlist()
+  data0054 <- data0054[uid, ]
+
+  # year >= 2000
+  data0054$year <- format(data0054$Date, format = "%Y")
+  uid <- data0054$year >= 2000
+  data0054 <- data0054[uid, ]
+
+  # Remove species for which we got data from Mariner's Guide
+  nm <- c("Beluga whale","Blue whale","Fin whale","Humpback whale","Minke whale")
+  uid <- !data0054$Taxon %in% nm
+  data0054 <- data0054[uid, ]
+
+  # species > 50 occurrences
+  tab <- table(data0054$Taxon) %>% as.data.frame()
+  nm <- tab$Var1[tab$Freq > 50] %>% as.character()
+  uid <- data0054$Taxon %in% nm
+  data0054 <- data0054[uid, ]
+
+  # Implement same method used in the Mariner's Guide
+  data0054 <- occurrence_distribution()
+
+
+
+  occurrence_distribution <- function(dat, studygrid) {
+
+    uid <- data0054$Taxon == "Grey seal"
+    dat <- data0054[uid, ]
+    studygrid <- grid1p
+
+    # 1. Nombre d'occurrence par cellule de la grille
+    dat <- st_intersects(studygrid, dat) %>%
+           sapply(length) %>%
+           mutate(studygrid, frequence = .)
+
+    # 2. Normalisation par le nombre total d'observation
+    dat$normalisation <- dat$frequence / max(dat$frequence)
+
+    # 3. Lissage Gaussien de 0.2o
+
+    dat$lissage <- lissage(dat, field = "normalisation")
+
+
+    lissage <- function(dat, field) {
+      dat <- dat
+      field <- "normalisation"
+
+      # -----
+      coords <- st_centroid(dat) %>%
+                st_coordinates() %>%
+                as.data.frame() %>%
+                rename(x = X, y = Y)
+
+      # -----
+      x <- st_drop_geometry(dat) %>%
+             cbind(coords) %>%
+             .[, c("x","y",field)] %>%
+             set_colnames(c("x","y","Z")) %>%
+             btb::kernelSmoothing(dfObservations = .,
+                                  sEPSG = st_crs(dat),
+                                  iCellSize = 1000,
+                                  iBandwidth = 22200,
+                                  vQuantiles = NULL,
+                                  dfCentroids = NULL)
+
+    }
+
+    # 4. Transformation logarithmique
+    dat$log <- log(dat$lissage + 1)
+
+  }
+
+
+  # ------------------------------------------------------------------------- #
+
 
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
