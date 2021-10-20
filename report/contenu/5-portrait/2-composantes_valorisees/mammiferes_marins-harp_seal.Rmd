@@ -1,0 +1,10 @@
+#### Mammifères marins - Phoque du Groenland {-}
+
+
+<!-- -------------------------------------------------- -->
+
+```{r harpseal, fig.cap = "Distribution des mammifères marins dans le Saint-Laurent et le Saguenay - Phoque du Groenland", out.width = '100%'}
+knitr::include_graphics("../figures/figures-integrated/mammiferes_marins-harp_seal.png")
+```
+
+<br>
