@@ -28,8 +28,8 @@ cv_mammiferes_marins <- function() {
   nid <- !1:nrow(grid1p) %in% uid
 
   # -------
-  grid1p <- st_transform(grid1p, st_crs(data0027))
-  mm <- exact_extract(data0027, grid1p, 'mean', progress = FALSE)
+  grid1p_2 <- st_transform(grid1p, st_crs(data0027))
+  mm <- exact_extract(data0027, grid1p_2, 'mean', progress = FALSE)
   for(i in 1:ncol(mm)) mm[nid,i] <- NA
 
   # -------
@@ -40,7 +40,7 @@ cv_mammiferes_marins <- function() {
   }
 
   # -------
-  mm <- cbind(grid1p, mm) %>%
+  mm <- cbind(grid1p_2, mm) %>%
         st_transform(global_parameters()$crs)
 
   # -------
@@ -93,7 +93,22 @@ cv_mammiferes_marins <- function() {
   dat <- dat[uid, ]
 
   # Implement same method used in the Mariner's Guide
-  mm <- occurrence_distribution(dat, grid1p)
+  mm <- observation_distribution(dat, grid1p)
+
+  # -----
+  mm <- st_drop_geometry(mm)
+
+  # Remove terrestrial cells
+  for(i in 1:ncol(mm)) mm[nid,i] <- NA
+
+  # Normalize 0-1
+  # -------
+  for(i in 1:ncol(mm)) {
+    suppressWarnings({
+      mm[,i] <- mm[,i] / max(mm[,i], na.rm = TRUE)
+    })
+  }
+
 
   # Add to marine mammals data
   mammiferes_marins <- cbind(mammiferes_marins, mm)
@@ -109,22 +124,29 @@ cv_mammiferes_marins <- function() {
   meta <- load_metadata("int_cv_mammiferes_marins")
 
   # -----
-  meta$rawData <- c("0027")
+  meta$rawData <- c("0027","0054")
 
   # -----
   meta$dataDescription$spatial$extent <- st_bbox(mammiferes_marins)
 
   # -----
   nm <- data.frame(accronyme = c("rorqual_a_bosse","rorqual_bleu","petit_rorqual",
-                                 "beluga","rorqual_commun"),
+                                 "beluga","rorqual_commun","harbour_porpoise",
+                                 "grey_seal","harbor_seal","harp_seal"),
                  francais = c("Rorqual à bosse","Rorqual bleu","Petit rorqual",
-                              "Béluga du Saint-Laurent","Rorqual commun"),
+                              "Béluga du Saint-Laurent","Rorqual commun",
+                              "Marsouin commun","Phoque gris","Phoque commun",
+                              "Phoque du Groenland"),
                  english = c("Humpback whale","Blue whale","Minke whale",
-                             "St. Lawrence beluga whale","Fin whale"),
+                             "St. Lawrence beluga whale","Fin whale",
+                             "Harbour porpoise","Grey seal","Harbor seal",
+                             "Harp seal"),
                  scientific = c("Megaptera novaeangliae","Balaenoptera musculus",
                                 "Balaenoptera acutorostrata", "Delphinapterus leucas",
-                                "Balaenoptera physalus"),
-                 source = "0027")
+                                "Balaenoptera physalus", "Phocoena phocoena",
+                                "Halichoerus grypus","Phoca vitulina",
+                                "Phoca groenlandica"),
+                 source = c("0027","0027","0027","0027","0027","0054","0054","0054","0054"))
 
   meta$dataDescription$categories$accronyme <-  nm$accronyme
   meta$dataDescription$categories$francais <-  nm$francais

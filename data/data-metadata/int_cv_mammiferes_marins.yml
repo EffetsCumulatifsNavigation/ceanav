@@ -21,34 +21,60 @@ dataDescription:
     - petit_rorqual
     - beluga
     - rorqual_commun
+    - harbour_porpoise
+    - grey_seal
+    - harbor_seal
+    - harp_seal
     francais:
     - Rorqual à bosse
     - Rorqual bleu
     - Petit rorqual
     - Béluga du Saint-Laurent
     - Rorqual commun
+    - Marsouin commun
+    - Phoque gris
+    - Phoque commun
+    - Phoque du Groenland
     english:
     - Humpback whale
     - Blue whale
     - Minke whale
     - St. Lawrence beluga whale
     - Fin whale
+    - Harbour porpoise
+    - Grey seal
+    - Harbor seal
+    - Harp seal
     scientific:
     - Megaptera novaeangliae
     - Balaenoptera musculus
     - Balaenoptera acutorostrata
     - Delphinapterus leucas
     - Balaenoptera physalus
+    - Phocoena phocoena
+    - Halichoerus grypus
+    - Phoca vitulina
+    - Phoca groenlandica
     source:
     - '0027'
     - '0027'
     - '0027'
     - '0027'
     - '0027'
+    - '0054'
+    - '0054'
+    - '0054'
+    - '0054'
     mdref:
     - rorqualabosse
     - rorqualbleu
     - petitrorqual
     - beluga
     - rorqualcommun
-rawData: '0027'
+    - harbourporpoise
+    - greyseal
+    - harborseal
+    - harpseal
+rawData:
+- '0027'
+- '0054'
