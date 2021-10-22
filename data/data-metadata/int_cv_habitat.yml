@@ -85,6 +85,20 @@ dataDescription:
     - faunique
     - floristique
     - colonieoiseaux
+    type:
+    - Zostères
+    - Zones inondables
+    - Milieu humide
+    - Milieu humide
+    - Milieu humide
+    - Milieu humide
+    - Milieu humide
+    - Sites d'alevinage
+    - Frayères
+    - Espèces à statut
+    - Habitats fauniques
+    - Habitats floristiques
+    - Colonies d'oiseaux
 rawData:
 - '0001'
 - '0002'
