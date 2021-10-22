@@ -39,6 +39,7 @@ fig_integrated <- function(data_id) {
   ref <- meta$dataDescription$categories$source
   un <- meta$dataDescription$units
 
+
   for(i in 1:length(nm)) {
     # pdf(glue('./figures/figures-format/{data_id}.pdf'), width = 7, height = 5, pointsize = 12)
     png(glue('./figures/figures-integrated/{data_id}-{nm[i]}.png'), res = 300, width = 100, height = 70, units = "mm", pointsize = 12)

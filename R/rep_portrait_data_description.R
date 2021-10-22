@@ -37,6 +37,19 @@ rep_portrait_data_description <- function(data_id, output_folder) {
     uid <- meta$dataDescription$categories$accronyme == i
 
     # -------
+    filename <- i
+
+    # -------
+    if (!is.null(meta$dataDescription$categories$type[uid])) {
+      if (meta$dataDescription$categories$type[uid] !=
+          meta$dataDescription$categories$francais[uid]) {
+            type <- tolower(meta$dataDescription$categories$type[uid]) %>%
+                    gsub(" ", "_",.)
+            filename <- glue("{type}-{i}")
+      }
+    }
+
+    # -------
     out <- list()
     out$metadata <- meta
     out$metadata$dataDescription$categories$accronyme <- out$metadata$dataDescription$categories$accronyme[uid]
@@ -49,7 +62,7 @@ rep_portrait_data_description <- function(data_id, output_folder) {
     use_template(
       template = "templates/fiche_integrated.Rmd",
       data = out,
-      save_as = glue("{output_folder}{suffix}-{i}.Rmd")
+      save_as = glue("{output_folder}{suffix}-{filename}.Rmd")
     )
   }
 }
