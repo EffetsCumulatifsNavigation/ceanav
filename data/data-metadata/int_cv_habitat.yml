@@ -60,11 +60,11 @@ dataDescription:
     superficie:
     - 25.7612478
     - 507.9952407
-    - 518.6137184
-    - 518.6137184
-    - 518.6137184
-    - 518.6137184
-    - 518.6137184
+    - 279.9119587
+    - 169.4216081
+    - 38.4642661
+    - 28.5464095
+    - 4.3902677
     - 209.9056883
     - 271.9773694
     - 963.8141819
@@ -86,19 +86,19 @@ dataDescription:
     - floristique
     - colonieoiseaux
     type:
-    - Zostères
-    - Zones inondables
+    - ''
+    - ''
     - Milieu humide
     - Milieu humide
     - Milieu humide
     - Milieu humide
     - Milieu humide
-    - Sites d'alevinage
-    - Frayères
-    - Espèces à statut
-    - Habitats fauniques
-    - Habitats floristiques
-    - Colonies d'oiseaux
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
 rawData:
 - '0001'
 - '0002'
