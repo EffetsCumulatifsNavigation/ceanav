@@ -1,5 +1,9 @@
 #### Milieux humides
 
-Les milieux humides abritent une forte richesse faunique et floristique, fournissent un habitat crucial au cours du cycle de vie de multiples espèces, et sont des habitats essentiels pour plusieurs espèces en péril. Les milieux humides regroupent une diversité importante de différents types d'habitats, dont les étangs, les marais, les marécages et les tourbières.
+Les milieux humides constituent un lien entre les milieux aquatiques et terrestres; ils abritent une forte richesse faunique et floristique, fournissent un habitat crucial au cours du cycle de vie de multiples espèces, et sont des habitats essentiels pour plusieurs espèces en péril. Les milieux humides fournissent des services écosystémiques essentiels tels la protection du rivage contre l'érosion, l'amélioration de la qualité de l'eau, et le stockage de carbone; ils sont également largement utilisés pour des activités culturelles et récréatives tel la chasse et le tourisme [@clarkson2013]. Les milieux humides regroupent une diversité importante de types d'habitats qui se succèdent, allant des eaux peu profondes aux marécages, affichant une proportion croissante de plantes arbustives [@cegrim2020].
 
-La cartographie des milieux humides potentiels du Québec [@melcc2019] a été utilisée afin de caractériser les grandes classes de milieux humides trouvés dans la zone d'étude: eau peu profonde, marais, marécage et tourbière (Tableau \@ref(tab:habitatCat)). Une catégorie générale pour les milieux humides non catégorisés est également disponible.
+```{r milieuhumide, echo = FALSE}
+tab <- as.data.frame(meta$dataDescription$categories)
+```
+
+Les milieux humides ont été caractérisés grâce à une cartographie des milieux humides potentiels du Québec [@melcc2019]. Cette base de données fournit une cartographie des milieux humides pour l'ensemble du Québec, classés en grands types : eau peu profonde, marais, marécage et tourbière (Tableau \@ref(tab:habitatCat)). Une catégorie générale pour les milieux humides non catégorisés est également disponible. Les milieux humides occupent une superficie totale de
