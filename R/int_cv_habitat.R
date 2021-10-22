@@ -269,10 +269,10 @@ cv_habitat <- function() {
   sup <- c(sup, superficie(dat))
 
   # ------------------------------------------------------
-  # Milieux sableaux : 0008
+  # Milieux sableux : 0008
   dat <- "0008"
   meta_temp <- meta_update(meta_temp, dat, "milieux_sableux", "Milieux sableux", type = "Milieux sableux")
-  habitat$milieux_sableaux <- uid(dat)
+  habitat$milieux_sableux <- uid(dat)
   sup <- c(sup, line_length(dat))
 
   # ------------------------------------------------------------------------- #
