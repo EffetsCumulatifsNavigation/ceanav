@@ -91,6 +91,9 @@ pipeline <- function(
     get_data0049()
     get_data0050()
     get_data0051()
+    get_data0052()
+    get_data0053()
+    get_data0054()
   }
 
 
@@ -110,7 +113,6 @@ pipeline <- function(
     # st_naufrages()
     st_navigation()
     st_peche_commerciale()
-    st_port()
     # st_rejets()
   }
 

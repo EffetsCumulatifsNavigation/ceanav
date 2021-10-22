@@ -1,9 +1,32 @@
 #### Milieux humides
 
-Les milieux humides constituent un lien entre les milieux aquatiques et terrestres; ils abritent une forte richesse faunique et floristique, fournissent un habitat crucial au cours du cycle de vie de multiples espèces, et sont des habitats essentiels pour plusieurs espèces en péril. Les milieux humides fournissent des services écosystémiques essentiels tels la protection du rivage contre l'érosion, l'amélioration de la qualité de l'eau, et le stockage de carbone; ils sont également largement utilisés pour des activités culturelles et récréatives tel la chasse et le tourisme [@clarkson2013]. Les milieux humides regroupent une diversité importante de types d'habitats qui se succèdent, allant des eaux peu profondes aux marécages, affichant une proportion croissante de plantes arbustives [@cegrim2020].
-
 ```{r milhumsum, echo = FALSE}
 tab <- as.data.frame(meta$dataDescription$categories)
+uid <- tab$type == "Milieu humide"
+sup <- sum(tab$superficie[uid])
 ```
 
-Les milieux humides ont été caractérisés grâce à une cartographie des milieux humides potentiels du Québec [@melcc2019]. Cette base de données fournit une cartographie des milieux humides pour l'ensemble du Québec, classés en grands types : eau peu profonde, marais, marécage et tourbière (Tableau \@ref(tab:habitatCat)). Une catégorie générale pour les milieux humides non catégorisés est également disponible. Les milieux humides occupent une superficie totale de
+Les milieux humides constituent un lien entre les milieux aquatiques et terrestres; ils abritent une forte richesse faunique et floristique, fournissent un habitat crucial au cours du cycle de vie de multiples espèces, et sont des habitats essentiels pour plusieurs espèces en péril. Les milieux humides fournissent des services écosystémiques essentiels tels la protection du rivage contre l'érosion, l'amélioration de la qualité de l'eau, et le stockage de carbone; ils sont également largement utilisés pour des activités culturelles et récréatives tel la chasse et le tourisme [@clarkson2013]. Les milieux humides regroupent une diversité importante de types d'habitats qui se succèdent, allant des eaux peu profondes aux marécages, affichant une proportion croissante de plantes arbustives [@cegrim2020].
+
+Les milieux humides ont été caractérisés grâce à une cartographie des milieux humides potentiels du Québec [@melcc2019]. Cette base de données fournit une cartographie des milieux humides pour l'ensemble du Québec, classés en grands types : eau peu profonde, marais, marécage et tourbière (Tableau \@ref(tab:milhumcat)). Une catégorie générale pour les milieux humides non catégorisés est également disponible. Les milieux humides occupent une superficie totale de `r sup` $km^2$ au sein de la zone d'étude (Tableau \@ref(tab:milhumcat)).
+
+
+<br/>
+
+```{r milhumcat}
+tab <- as.data.frame(meta$dataDescription$categories)
+uid <- tab$type == "Milieu humide"
+tab <- tab[uid, ]
+tab <- arrange(tab, francais)
+tab <- select(tab, francais, superficie, description)
+tab$superficie <- round(tab$superficie, 2)
+
+tab %>%
+  knitr::kable(
+    col.names = c("Milieux humides", "Superficie $km^2$", "Description"),
+    row.names = FALSE,
+    caption = "Description des types de milieux humides potentiels [@melcc2019] au sein de la zone d'étude."
+  )
+```
+
+<br/>

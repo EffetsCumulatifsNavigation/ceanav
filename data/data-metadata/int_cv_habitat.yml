@@ -86,13 +86,33 @@ dataDescription:
     - floristique
     - colonieoiseaux
     type:
+    - Zostères
+    - Zones inondables
+    - Milieu humide
+    - Milieu humide
+    - Milieu humide
+    - Milieu humide
+    - Milieu humide
+    - Sites d'alevinage
+    - Frayères
+    - Espèces à statut
+    - Habitats fauniques
+    - Habitats floristiques
+    - Colonies d'oiseaux
+    description:
     - ''
     - ''
-    - Milieu humide
-    - Milieu humide
-    - Milieu humide
-    - Milieu humide
-    - Milieu humide
+    - Milieu humide dont le niveau d’eau est inférieur à 2 m et présentant des plantes
+      aquatiques flottantes ou submergées ainsi que des plantes émergentes dont le
+      couvert fait moins de 25 % de la superficie du milieu.
+    - Milieu humide sur dépôt minéral, dominé par une végétation herbacée couvrant
+      plus de 25 % de la superficie. Les arbustes et les arbres, lorsque présents,
+      couvrent moins de 25 % de la superficie du milieu.
+    - Milieu humide sur dépôt minéral, dominé par une végétation ligneuse arbustive
+      ou arborescente, avec plus de 25 % de couvert.
+    - Regroupe les milieux humides dont le type est inconnu.
+    - Regroupe les milieux humides dans lesquels il y a une accumulation de tourbe
+      d’au moins 30 cm d’épaisseur.
     - ''
     - ''
     - ''
