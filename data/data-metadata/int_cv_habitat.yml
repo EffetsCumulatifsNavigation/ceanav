@@ -29,6 +29,7 @@ dataDescription:
     - faunique
     - floristique
     - colonie_oiseaux
+    - milieux_sableux
     francais:
     - Zostères
     - Zones inondables
@@ -43,6 +44,7 @@ dataDescription:
     - Habitats fauniques
     - Habitats floristiques
     - Colonies d'oiseaux
+    - Milieux sableux
     source:
     - '0001,0002,0003'
     - '0013,0014'
@@ -57,6 +59,7 @@ dataDescription:
     - '0036'
     - '0037'
     - '0043'
+    - 0008
     superficie:
     - 25.7612478
     - 507.9952407
@@ -71,6 +74,7 @@ dataDescription:
     - 1796.0910878
     - 0.9315339
     - 132.2541906
+    - 117.3768791
     mdref:
     - zostere
     - zoneinondable
@@ -85,6 +89,7 @@ dataDescription:
     - faunique
     - floristique
     - colonieoiseaux
+    - milieuxsableux
     type:
     - Zostères
     - Zones inondables
@@ -99,6 +104,7 @@ dataDescription:
     - Habitats fauniques
     - Habitats floristiques
     - Colonies d'oiseaux
+    - Milieux sableux
     description:
     - ''
     - ''
@@ -113,6 +119,7 @@ dataDescription:
     - Regroupe les milieux humides dont le type est inconnu.
     - Regroupe les milieux humides dans lesquels il y a une accumulation de tourbe
       d’au moins 30 cm d’épaisseur.
+    - ''
     - ''
     - ''
     - ''
@@ -136,3 +143,4 @@ rawData:
 - '0036'
 - '0037'
 - '0043'
+- 0008

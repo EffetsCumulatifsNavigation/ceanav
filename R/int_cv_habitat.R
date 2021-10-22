@@ -105,6 +105,31 @@ cv_habitat <- function() {
     sup
   }
 
+  line_length <- function(dat, category = NULL, field = NULL) {
+    # -----
+    data(aoi)
+
+    # -----
+    res <- load_temp(dat)
+
+    # -----
+    if (!is.null(category)) {
+      res <- bind_rows(res)
+      res <- res[res[,field,drop = TRUE] == category, ]
+    }
+
+    # -----
+    len <- bind_rows(res) %>%
+           st_intersection(st_simplify(aoi, dTolerance = 1000)) %>%
+           st_union() %>%
+           st_length() %>%
+           as.numeric(.) * 1e-3
+
+    # -----
+    len
+  }
+
+
   # ------------------------------------------------------
   meta_update <- function(meta, dat, accr, fr, descr = "", type = "") {
     meta$rawData <- c(meta$rawData, dat)
@@ -242,6 +267,14 @@ cv_habitat <- function() {
   meta_temp <- meta_update(meta_temp, dat, "colonie_oiseaux", "Colonies d'oiseaux", type = "Colonies d'oiseaux")
   habitat$colonie_oiseaux <- uid(dat)
   sup <- c(sup, superficie(dat))
+
+  # ------------------------------------------------------
+  # Milieux sableaux : 0008
+  dat <- "0008"
+  meta_temp <- meta_update(meta_temp, dat, "milieux_sableux", "Milieux sableux", type = "Milieux sableux")
+  habitat$milieux_sableaux <- uid(dat)
+  sup <- c(sup, line_length(dat))
+
   # ------------------------------------------------------------------------- #
 
 
