@@ -1,0 +1,10 @@
+<!-- #### Habitats - Milieux sableux {-} -->
+
+
+<!-- -------------------------------------------------- -->
+
+```{r milieuxsableux, fig.cap = "Distribution des habitats dans le Saint-Laurent et le Saguenay - Milieux sableux", out.width = '100%'}
+knitr::include_graphics("../figures/figures-integrated/habitat-milieux_sableux.png")
+```
+
+<br>
