@@ -2,7 +2,7 @@
 
 Les milieux humides constituent un lien entre les milieux aquatiques et terrestres; ils abritent une forte richesse faunique et floristique, fournissent un habitat crucial au cours du cycle de vie de multiples espèces, et sont des habitats essentiels pour plusieurs espèces en péril. Les milieux humides fournissent des services écosystémiques essentiels tels la protection du rivage contre l'érosion, l'amélioration de la qualité de l'eau, et le stockage de carbone; ils sont également largement utilisés pour des activités culturelles et récréatives tel la chasse et le tourisme [@clarkson2013]. Les milieux humides regroupent une diversité importante de types d'habitats qui se succèdent, allant des eaux peu profondes aux marécages, affichant une proportion croissante de plantes arbustives [@cegrim2020].
 
-```{r milieuhumide, echo = FALSE}
+```{r milhumsum, echo = FALSE}
 tab <- as.data.frame(meta$dataDescription$categories)
 ```
 
