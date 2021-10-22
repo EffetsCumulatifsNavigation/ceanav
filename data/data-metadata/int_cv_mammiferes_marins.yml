@@ -2,7 +2,7 @@ title: Mammifères marins
 description: Distribution des mammifères marins dans le Saint-Laurent et le Saguenay
 id: mammiferes_marins
 dataDescription:
-  units: presence
+  units: Densité relative des observations
   spatial:
     resolution: 1km^2
     extent:
