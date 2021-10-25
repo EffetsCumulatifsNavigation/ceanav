@@ -32,8 +32,20 @@ get_data0009 <- function() {
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   # Import data
   # ----------------------------------------
-  data0009 <- st_read(paste0(folder, 'DonneesMFFP_PourPASL.gdb'),
-                      layer = 'Alevinage_DEFA_s_CEGRIM')
+  # -----
+  s <- st_read(paste0(folder, 'DonneesMFFP_PourPASL.gdb'),
+                      layer = 'Alevinage_DEFA_s_CEGRIM',
+                      quiet = TRUE) %>%
+       st_cast("MULTIPOLYGON")
+
+  # -----
+  p <- st_read(paste0(folder, 'DonneesMFFP_PourPASL.gdb'),
+                      layer = 'Alevinage_DEFA_p_CEGRIM',
+                      quiet = TRUE) %>%
+       st_buffer(100)
+
+  # -----
+  data0009 <- bind_rows(s, p)
 
   # Transform projection
   data0009 <- st_transform(data0009, crs = global_parameters()$crs)
@@ -46,6 +58,7 @@ get_data0009 <- function() {
   # Output
   st_write(obj = data0009,
            dsn = "./data/data-format/data0009-site_alevinage.geojson",
-           delete_dsn = TRUE)
+           delete_dsn = TRUE,
+           quiet = TRUE)
   # _________________________________________________________________________ #
 }
