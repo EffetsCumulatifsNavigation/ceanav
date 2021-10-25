@@ -216,14 +216,14 @@ cv_habitat <- function() {
   # ------------------------------------------------------
   # Sites d'alevinage : 0009
   dat <- "0009"
-  meta_temp <- meta_update(meta_temp, dat, "site_alevinage", "Sites d'alevinage", type = "Sites d'alevinage")
+  meta_temp <- meta_update(meta_temp, dat, "site_alevinage", "Habitats d'alevinage", type = "Habitats importance ecologique")
   habitat$site_alevinage <- uid(dat)
   sup <- c(sup, superficie(dat))
 
   # ------------------------------------------------------
   # Frayères : 0010
   dat <- "0010"
-  meta_temp <- meta_update(meta_temp, dat, "frayere", "Frayères", type = "Frayères")
+  meta_temp <- meta_update(meta_temp, dat, "frayere", "Frayères", type = "Habitats importance ecologique")
   habitat$frayere <- uid(dat)
   sup <- c(sup, superficie(dat))
 
@@ -240,7 +240,7 @@ cv_habitat <- function() {
   # ------------------------------------------------------
   # Espèces à statut : 0011
   dat <- "0011"
-  meta_temp <- meta_update(meta_temp, dat, "espece_statut", "Espèces à statut", type = "Espèces à statut")
+  meta_temp <- meta_update(meta_temp, dat, "espece_statut", "Espèces à statut", type = "Habitats importance ecologique")
   habitat$espece_statut <- uid(dat)
   sup <- c(sup, superficie(dat))
 
@@ -248,7 +248,7 @@ cv_habitat <- function() {
   # ------------------------------------------------------
   # Habitats fauniques : 0036
   dat <- "0036"
-  meta_temp <- meta_update(meta_temp, dat, "faunique", "Habitats fauniques", type = "Habitats fauniques")
+  meta_temp <- meta_update(meta_temp, dat, "faunique", "Habitats fauniques", type = "Habitats importance ecologique")
   habitat$faunique <- uid(dat)
   sup <- c(sup, superficie(dat))
 
@@ -256,7 +256,7 @@ cv_habitat <- function() {
   # ------------------------------------------------------
   # Habitats floristiques : 0037
   dat <- "0037"
-  meta_temp <- meta_update(meta_temp, dat, "floristique", "Habitats floristiques", type = "Habitats floristiques")
+  meta_temp <- meta_update(meta_temp, dat, "floristique", "Habitats floristiques", type = "Habitats importance ecologique")
   habitat$floristique <- uid(dat)
   sup <- c(sup, superficie(dat))
 
@@ -264,7 +264,7 @@ cv_habitat <- function() {
   # ------------------------------------------------------
   # Colonies d'oiseaux : 0043
   dat <- "0043"
-  meta_temp <- meta_update(meta_temp, dat, "colonie_oiseaux", "Colonies d'oiseaux", type = "Colonies d'oiseaux")
+  meta_temp <- meta_update(meta_temp, dat, "colonie_oiseaux", "Colonies d'oiseaux", type = "Habitats importance ecologique")
   habitat$colonie_oiseaux <- uid(dat)
   sup <- c(sup, superficie(dat))
 
