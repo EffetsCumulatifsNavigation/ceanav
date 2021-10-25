@@ -1,1 +1,5 @@
 ##### Frayères
+
+Les frayères sont des milieux essentiels au maintien de populations de poissons; en effet, des perturbations à ces sites, ou au comportement des espèces pendant la période de fraie, peuvent avoir des impacts majeurs sur la dynamique des populations de poissons.
+
+Les données sont composées de points et de polygones. Nous avons ajouter une zone tampon de 100 $m$ autour des points, puis avons intégré la présence de frayères au sein de notre grille d'étude de 1 $km^2$.
