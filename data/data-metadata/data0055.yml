@@ -1,0 +1,10 @@
+data_description:
+  id: "0055"
+  name: "Nation Huronne-Wendat"
+  description: "Localisation des sites Sites d’intérêt culturels, patrimoniaux et archéologiques pour la Nation Huronne-Wendat"
+  access_date: 2021-10-21
+  contact_id:
+    - "0049"
+    - "0050"
+  availability: "data sharing agreement"
+  citation: "Nation Huronne-Wendat (2021) Localisation des sites Sites d’intérêt culturels, patrimoniaux et archéologiques pour la Nation Huronne-Wendat"
