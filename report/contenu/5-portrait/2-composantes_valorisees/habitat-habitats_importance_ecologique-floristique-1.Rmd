@@ -1,0 +1,6 @@
+##### Habitats floristiques
+
+Les habitats floristiques représentent des habitats d'une espèce floristique menacée ou vulnérable. La base de données utilisée pour caractériser cet habitat provient du Ministère de l’Environnement et de la Lutte contre les changements climatiques [@mdelcc2021]. Un habitat floristique est une aire protégée abritant au moins une espèce floristique menacée ou vulnérables et identifié à l'article 7 du Règlement sur les espèces flotistiques menacées ou vulnérables et leurs habitats. Un total de 31 habitats floristiques désignés, et 21 habitats supplémentaires non inscrits au Registre des aires protégées, sont décrits par cette base de données.
+
+
+WARNING: Vérifier avec Marc si les plantes sont incluses dans les données du CDPNQ qu'il m'a transféré
