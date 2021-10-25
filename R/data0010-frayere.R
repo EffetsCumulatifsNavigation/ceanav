@@ -32,8 +32,20 @@ get_data0010 <- function() {
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   # Import data
   # ----------------------------------------
-  data0010 <- st_read(paste0(folder, 'DonneesMFFP_PourPASL.gdb'),
-                      layer = 'Frayere_s_CEGRIM_25_02_2020')
+  # -----
+  s <- st_read(paste0(folder, 'DonneesMFFP_PourPASL.gdb'),
+                      layer = 'Frayere_s_CEGRIM_25_02_2020',
+                      quiet = TRUE) %>%
+       st_cast("MULTIPOLYGON")
+
+  # -----
+  p <- st_read(paste0(folder, 'DonneesMFFP_PourPASL.gdb'),
+                      layer = 'Frayere_p_CEGRIM__2_3_2020',
+                      quiet = TRUE) %>%
+       st_buffer(100)
+
+  # -----
+  data0010 <- bind_rows(s, p)
 
   # Transform projection
   data0010 <- st_transform(data0010, crs = global_parameters()$crs)
@@ -46,6 +58,7 @@ get_data0010 <- function() {
   # Output
   st_write(obj = data0010,
            dsn = "./data/data-format/data0010-frayere.geojson",
-           delete_dsn = TRUE)
+           delete_dsn = TRUE,
+           quiet = TRUE)
   # _________________________________________________________________________ #
 }
