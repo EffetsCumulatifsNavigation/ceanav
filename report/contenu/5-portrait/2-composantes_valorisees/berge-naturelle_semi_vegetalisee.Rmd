@@ -1,0 +1,10 @@
+<!-- #### Intégrité des berges - Naturelle - Semi-végétalisée {-} -->
+
+
+<!-- -------------------------------------------------- -->
+
+```{r naturellesemivegetalisee, fig.cap = "Distribution des segments de berge sensibles à l'érosion dans le Saint-Laurent et le Saguenay - Naturelle - Semi-végétalisée", out.width = '100%'}
+knitr::include_graphics("../figures/figures-integrated/berge-naturelle_semi_vegetalisee.png")
+```
+
+<br>

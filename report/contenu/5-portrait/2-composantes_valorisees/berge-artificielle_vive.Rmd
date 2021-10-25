@@ -1,0 +1,10 @@
+<!-- #### Intégrité des berges - Artificielle - Vive {-} -->
+
+
+<!-- -------------------------------------------------- -->
+
+```{r artificiellevive, fig.cap = "Distribution des segments de berge sensibles à l'érosion dans le Saint-Laurent et le Saguenay - Artificielle - Vive", out.width = '100%'}
+knitr::include_graphics("../figures/figures-integrated/berge-artificielle_vive.png")
+```
+
+<br>
