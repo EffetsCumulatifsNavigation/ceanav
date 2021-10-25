@@ -4,21 +4,13 @@
 meta <- read_yaml("../data/data-metadata/int_cv_berge.yml")
 ```
 
-La composante valorisée d'intégritée des berge a été caractérisée à partir de données d'un exercice récent de caractérisation des berges de la partie fluviale du Saint-Laurent [@bernier2020]. La caractérisation de l'état des berges y est divisé en trois catégories [Tableau FF dans @bernier2020] :
+La composante valorisée d'intégritée des berge a été caractérisée à partir de données d'un exercice récent de caractérisation des berges dans la partie fluviale du Saint-Laurent de l'équipe de Patrick Lajeunesse de l'Université Laval [@bernier2020; @berner2021]. Cette caractérision a été faite à l'aide d'une approche d'imagerie à haute résolution visant à positionner spatialement, caractériser et évaluation la susceptibilité à l'érosion de berges naturelles et artificialisées en combinant des données de relevés terrain, de télédection et de données dérivées de connaissances des communautés locales [@bernier2020; @bernier2021]. Les données issues de ce projet offrent une caractérisation de la susceptibilité des berge à l'érosion en divisant leur état en trois catégories [Tableau FF dans @bernier2020] :
 
 - Active ou vive : Érosion apparente ou couvert végétal < 25%
 - Semi-végétalisée : Érosion apparente ou couvert végétal de 25 à 75%
 - Stable ou végétalisé : Aucun signe d'érosion pparent, et couvert végétal > 75% ou présence d'une structure de protection
 
-L'état des milieux artificialisés est divisé en cinq catégories [Annexe C dans @bernier2020] :
-
-- Bon : Altération de 0 à 25%
-- Partiellement endommagé : Altération de 25 à 50%
-- Très endommagé : Altération de 50 à 75% et aucune protection côtière
-- Complètement endommagé : Alération > 75% et aucune protection côtière
-- N/A : absence d'artificialité
-
-Pour notre analyse, nous avons combiné l'état de la berge et l'état des milieux artificialisés en huit catégories distinctes afin d'obtenir des segments de berge sensibles à l'érosion dans la zone d'étude (Tableau \@ref(tab:bergeCat)).
+Pour notre étude, nous considérons uniquement les berges qui ont des signes d'érosion apparente, soit les berges vive et les berges semi-végétalisées. Nous distinguons également les berges naturelles des berges artificielles; cette séparation est faite afin de distinguer les effets de la navigation sur des berges naturelles ayant une valeur écologique supérieure aux berges artificialisées. La combinaison de l'état des berges telle que décrite dans @bernier2020 et @bernier2021 et de leur artificialité résulte ainsi en quatre catégories de berges susceptibles aux effets de l'érosion (Tableau \@ref(tab:bergeCat)). 
 
 <br/>
 
@@ -32,12 +24,12 @@ tab %>%
   knitr::kable(
     col.names = c("Catégories", "Longueur (km)"),
     row.names = FALSE,
-    caption = "Catégories de segments de berge sensibles à l'érosion considérés pour l'analyse d'évaluation des effets cumulatifs et leur longueur totale en $km$ au sein des données de caractérisation des berges de la partie fluviale du Saint-Laurent [@bernier2020]"
+    caption = "Catégories de segments de berge sensibles à l'érosion considérés pour l'analyse d'évaluation des effets cumulatifs et leur longueur totale en $km$ au sein des données de caractérisation des berges de la partie fluviale du Saint-Laurent [@bernier2020; @bernier2021]"
   )
 ```
 
 <br/>
 
-Ces huit catégories ont ensuite été intégrée à la grille afin d'obtenir une évaluation de la présence des différentes catégories de berges sensibles à l'érosion au sein de la zone d'étude. Il est important de noter que puisque cette composante valorisée n'a été identifiée que pour la portion fluviale du Saint-Laurent, aucune caractérisation n'a été faite pour l'estuaire et le Saguenay.
+Ces quatre catégories ont ensuite été intégrée à la grille afin d'obtenir une évaluation de la présence des différentes catégories de berges sensibles à l'érosion au sein de la zone d'étude. Il est important de noter que puisque cette composante valorisée n'a été identifiée que pour la portion fluviale du Saint-Laurent, aucune caractérisation n'a été faite pour l'estuaire et le Saguenay. Une caractérisation similaire a toutefois été recemment été publiée à travers le [Projet Résilience côtière] de l'équipe de Pascal Bernatchez à l'Université du Québec à Rimouski.
 
 <br/>
