@@ -126,6 +126,163 @@ dataDescription:
     - ''
     - ''
     - ''
+  frayere_alevinage:
+    Source:
+    - 'Alliance Environnement GDG Conseil-Daniel Arbour & Associés (n.d.) Frayère
+      PLIO adapté de Lavoie et Talbot  1984 [document cartographique]. 1 : 340 000,
+      Alliance Environnement GDG Conseil-Daniel Arbour & Associés, Trois-Rivières,
+      Québec. '
+    - Benoit, J., J.-C. Bourgeois, S. Desjardins et J. Picard. 1988. Plan de conservation
+      et de mise en valeur des habitats et de la faune de la région du lac Saint-Pierre.
+      Ministère des Loisirs, de la Chasse et de la Pêche du Québec, Directions régionale*
+    - Bernatchez, S., Valiquette, E., Vachon, N., Brodeur, P., Côté, C., Hatin, D.,
+      L’Italien, L. et Y. Paradis. 2019. Lake Sturgeon (Acipenserfulvescens) spawning
+      sites in the St. Lawrence river system, Québec, Canada. Ministère des Forêts,
+      de la Faune e*
+    - Bouchard, D. 1976. Localisation des frayères des principales espèces de poissons
+      d'intérêt sportif et commercial, dans le fleuve Saint-Laurent. (Phase 1). Québec,
+      Ministère du Loisir, de la Chasse et de la Pêche, Service de la recherche biologique,
+      *
+    - 'DGFa 05-06-13-16 (2020) Base de données frayères [FGDB]. V.2020, 1 : 20 000,
+      DGFa 05-06-13-16, Longueuil.'
+    - 'L’italien, L. (2017) Frayère d’esturgeon noir [shp]. V.2017, 1 : 50 000, DGFa
+      03-12, Québec.'
+    - 'Mailhot, Y. et R. Morrissette (20 juin 2012) Atlas des frayères potentielles
+      ou confirmées et de certains autres sites d’intérêt dans les rivières de la
+      plaine du Saint-Laurent. V.2012, 1 : 400 000, MFFP – DGFa 04-17, Trois-Rivières.'
+    - Mailhot, Y. et R. Morrissette (20 juin 2012) Atlas des habitats fauniques critiques
+      et des exploitations halieutiques d’importance dans le fleuve Saint-Laurent
+      et l’aval des tributaires à privilégier pour les interventions en cas d’urgence
+      maritime *
+    - Massé, G. 1974. Frayères à poissons d’eau chaude du couloir fluvial, entre Montréal
+      et el lac Saint-Pierre. Service de l’Aménagement de la Faune, Ministère du Tourisme,
+      de la Chasse et de la Pêche. 20 p.
+    - Mingelbier, M. et J., Leclerc. 2001. Preliminary atlas of fish habitat in the
+      fluvial St. Lawrence River. 8th Annual International Conference on the St Lawrence
+      River Ecosystem, Cornwall, Ontario.
+    - Ministère de l’Environnement et de la Faune. 1994. Cartographie des sites d’intérêt
+      et des sites protégés et fiches synthèses descriptives des sites d’intérêt faunique.
+      Direction régionale de la Montérégie, Service de l’aménagement et de l’exploitat*
+    - 'Ministère des Forêts, de la Faune et des Parcs (2019b) Géobase-Faune -  Hab_aqua_part_s
+      [FGDB]. V2019-11-19, MFFP, Québec, Qc. '
+    - Ministère des Forêts, de la Faune et des Parcs (2019b) Géobase-Faune - Hab_aqua_part_p  [FGDB].
+      V2019-11-19, MFFP, Québec, Qc
+    - Ministère des Forêts, de la Faune et des Parcs (2019b) Géobase-Faune - SFI_s  [FGDB].
+      V2019-11-19, MFFP, Québec, Qc
+    - 'Ministère des Forêts, de la Faune et des Parcs (25 mars 2013) Frayère de Shooner
+      [shp]. V.2013, 1 : 400 000, DGFa 04-17, Trois-Rivières.'
+    - 'Ministère des Ressources naturelles (2013) Habitats essentiels [shp]. 2e trimestre,
+      1 : 170 000, Direction de l’expertise Énergie -Faune -Forêt-Mines-Territoire
+      de la Mauricie et du Centre -du-Québec, Québec. '
+    - Société de la faune et des parcs du Québec. 2000. Atlas des habitats critiques
+      connus ou d’intérêt particulier pour les poissons du fleuve Saint-Laurent entre
+      le port de Montréal et l’Île aux Coudres. Direction du développement de la faune.
+    - 'VALIQUETTE, E., M. LEGAULT et V. HARVEY. 2016. État référence de la faune aquatique
+      et de ses habitats dans le secteur du pont de l’île d’Orléans : Rapport final.
+      Première partie — Description physique et inventaires biologiques, Ministère
+      des Forêt*'
+    - 'ARGUS. 2001. Mise en valeur du littoral de l’agglomération de la Capitale nationale
+      du Québec: élaboration d’un cadre d’analyse régional. Commission de la Capitale
+      nationale. 54 p. + annexes.'
+    - 'DGFa 04-17 (2019a) Base de données Poisson Fleuve [shp]. V.26 mars 2019, 1
+      : 20 000, DGFa 04-17, Trois-Rivières.'
+    - 'DGFa 04-17 (2019b) Base de données Historique partielle [shp]. V.11 décembre
+      2019, 1 : 20 000, DGFa 04-17, Trois-Rivières.'
+    - 'Ministère des Ressources naturelles (2013) Habitats essentiels [shp]. 2e trimestre,
+      1 : 170 000, Direction de l’expertise Énergie -Faune -Forêt-Mines-Territoire
+      de la Mauricie et du Centre -du-Québec, Québec.'
+    Nombre_frayere:
+    - 49
+    - 5
+    - 41
+    - 35
+    - 25
+    - 1
+    - 9
+    - 7
+    - 105
+    - 2388
+    - 111
+    - 19
+    - 63
+    - 10
+    - 419
+    - 131
+    - 56
+    - 14
+    - .na.integer
+    - .na.integer
+    - .na.integer
+    - .na.integer
+    Superficie_frayere:
+    - 28.9148116
+    - 0.5623565
+    - 0.3454173
+    - 3.5589308
+    - 2.0979734
+    - 5.425339
+    - 102.5265787
+    - 0.2877534
+    - 36.9372541
+    - 99.5836881
+    - 174.2352564
+    - 7.6994431
+    - 1.1831584
+    - 0.0605606
+    - 80.0744534
+    - 55.9462256
+    - 85.4509619
+    - 0.6324926
+    - .na.real
+    - .na.real
+    - .na.real
+    - .na.real
+    Nombre_alevinage:
+    - .na.integer
+    - .na.integer
+    - .na.integer
+    - .na.integer
+    - 10
+    - .na.integer
+    - .na.integer
+    - 1
+    - .na.integer
+    - 84
+    - 91
+    - .na.integer
+    - .na.integer
+    - .na.integer
+    - .na.integer
+    - .na.integer
+    - .na.integer
+    - .na.integer
+    - 15
+    - 2917
+    - 35
+    - 20
+    Superficie_alevinage:
+    - .na.real
+    - .na.real
+    - .na.real
+    - .na.real
+    - 0.8542994
+    - .na.real
+    - .na.real
+    - 0.236292
+    - .na.real
+    - 15.8790647
+    - 169.5108383
+    - .na.real
+    - .na.real
+    - .na.real
+    - .na.real
+    - .na.real
+    - .na.real
+    - .na.real
+    - 67.2101373
+    - 29.7396009
+    - 0.2751184
+    - 105.5879387
 rawData:
 - '0001'
 - '0002'

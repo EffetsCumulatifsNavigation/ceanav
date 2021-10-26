@@ -302,6 +302,51 @@ cv_habitat <- function() {
           rowSums(na.rm = TRUE)
   temp <- habitat[temp > 0, ]
   meta$dataDescription$spatial$extent <- st_bbox(temp)
+
+  # ----- Info for frayères et aires d'alevinage
+  # --- Alevinage
+  # Nombre
+  alevinage <- as.data.frame(table(data0009$Source), stringsAsFactors = FALSE)
+  colnames(alevinage) <- c("Source","Nombre_alevinage")
+
+  # Superficie
+  alevinage$Superficie_alevinage <- 0
+  for(i in 1:nrow(alevinage)) {
+    dat <- data0009[data0009$Source == alevinage[i,"Source"], ] %>%
+           st_union() %>%
+           st_area() %>%
+           as.numeric(.) * 1e-6 %>%
+           sum()
+    alevinage$Superficie_alevinage[i] <- dat
+  }
+
+  # --- Frayères
+  # Nombre
+  frayere <- as.data.frame(table(data0010$Source), stringsAsFactors = FALSE)
+  colnames(frayere) <- c("Source","Nombre_frayere")
+
+  # Superficie
+  frayere$Superficie_frayere <- 0
+  for(i in 1:nrow(frayere)) {
+    dat <- data0010[data0010$Source == frayere[i,"Source"], ] %>%
+           st_union() %>%
+           st_area() %>%
+           as.numeric(.) * 1e-6 %>%
+           sum()
+    frayere$Superficie_frayere[i] <- dat
+  }
+
+  # -----
+  dat <- left_join(frayere, alevinage, by = "Source")
+  iid <- !alevinage$Source %in% dat$Source
+  dat <- bind_rows(dat, alevinage[iid,])
+
+  # -----
+  meta$dataDescription$frayere_alevinage$Source <- dat$Source
+  meta$dataDescription$frayere_alevinage$Nombre_frayere <- dat$Nombre_frayere
+  meta$dataDescription$frayere_alevinage$Superficie_frayere <- dat$Superficie_frayere
+  meta$dataDescription$frayere_alevinage$Nombre_alevinage <- dat$Nombre_alevinage
+  meta$dataDescription$frayere_alevinage$Superficie_alevinage <- dat$Superficie_alevinage
   # _____________________________________________________________________________ #
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
