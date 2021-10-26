@@ -36,7 +36,9 @@ get_data0009 <- function() {
   s <- st_read(paste0(folder, 'DonneesMFFP_PourPASL.gdb'),
                       layer = 'Alevinage_DEFA_s_CEGRIM',
                       quiet = TRUE) %>%
-       st_cast("MULTIPOLYGON")
+       st_cast("MULTIPOLYGON") %>%
+       rename(Source = Alevinage_Union_Source)
+
 
   # -----
   p <- st_read(paste0(folder, 'DonneesMFFP_PourPASL.gdb'),
