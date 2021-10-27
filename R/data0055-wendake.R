@@ -36,7 +36,8 @@ get_data0055 <- function() {
   # Import and format data
   # ----------------------------------------
   # Import data
-  data0055 <- st_read(paste0(folder, "20211020KVD.PPO.SAISIE.shp"), quiet = TRUE)
+  data0055 <- st_read(paste0(folder, "20211020KVD.PPO.SAISIE.shp"), quiet = TRUE) %>%
+              suppressWarnings(st_set_crs(4326))
 
   # Transform projection
   data0055 <- st_transform(data0055, crs = global_parameters()$crs)
