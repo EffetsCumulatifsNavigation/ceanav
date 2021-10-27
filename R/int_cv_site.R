@@ -292,9 +292,9 @@ cv_site <- function() {
   site$huronne_wendat_vegetaux <- uid(dat, "Récolte de végétaux", "Thème")
 
   # ----------------------------
-  # Huronne-Wendat - Occupation - 0055
+  # Huronne-Wendat - Occupation - 0055 : Ne se retrouve pas dans notre zone d'étude
   meta_temp <- meta_update(meta_temp, dat, "huronne_wendat_occupation", "Nation Huronne-Wendat - Occupation")
-  site$huronne_wendat_occupation <- uid(dat, "Occupation", "Thème")
+  site$huronne_wendat_occupation <- uid(dat, "Occupation H-W", "Thème")
 
   # ----------------------------
   # Huronne-Wendat - Archéologie - 0055
