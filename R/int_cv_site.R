@@ -268,6 +268,55 @@ cv_site <- function() {
   # -----
   site$public_sites_patrimoniaux <- uid2(data0044, data0045)
 
+
+  # ----------------------------
+  # Nation Huronne-Wendat
+  # Huronne-Wendat - Activités récréatives - 0055
+  dat <- "0055"
+  meta_temp <- meta_update(meta_temp, dat, "huronne_wendat_activite_recreative", "Nation Huronne-Wendat - Activité récréative")
+  site$huronne_wendat_activite_recreative <- uid(dat, "Activité récréative", "Thème")
+
+  # ----------------------------
+  # Huronne-Wendat Pêche - 0055
+  meta_temp <- meta_update(meta_temp, dat, "huronne_wendat_peche", "Nation Huronne-Wendat - Pêche")
+  site$huronne_wendat_peche <- uid(dat, "Pêche", "Thème")
+
+  # ----------------------------
+  # Huronne-Wendat Chasse - 0055
+  meta_temp <- meta_update(meta_temp, dat, "huronne_wendat_chasse", "Nation Huronne-Wendat - Chasse")
+  site$huronne_wendat_chasse <- uid(dat, "Chasse", "Thème")
+
+  # ----------------------------
+  # Huronne-Wendat Récolte de végétaux - 0055
+  meta_temp <- meta_update(meta_temp, dat, "huronne_wendat_vegetaux", "Nation Huronne-Wendat - Récolte de végétaux")
+  site$huronne_wendat_vegetaux <- uid(dat, "Récolte de végétaux", "Thème")
+
+  # ----------------------------
+  # Huronne-Wendat - Occupation - 0055
+  meta_temp <- meta_update(meta_temp, dat, "huronne_wendat_occupation", "Nation Huronne-Wendat - Occupation")
+  site$huronne_wendat_occupation <- uid(dat, "Occupation", "Thème")
+
+  # ----------------------------
+  # Huronne-Wendat - Archéologie - 0055
+  meta_temp <- meta_update(meta_temp, dat, "huronne_wendat_archeologie", "Nation Huronne-Wendat - Archéologie")
+  site$huronne_wendat_archeologie <- uid(dat, "Archéologie", "Thème")
+
+  # ----------------------------
+  # Huronne-Wendat - Toponymie - 0055
+  meta_temp <- meta_update(meta_temp, dat, "huronne_wendat_toponymie", "Nation Huronne-Wendat - Toponymie")
+  site$huronne_wendat_toponymie <- uid(dat, "Toponymie", "Thème")
+
+  # ----------------------------
+  # Huronne-Wendat - Histoire - 0055
+  meta_temp <- meta_update(meta_temp, dat, "huronne_wendat_histoire", "Nation Huronne-Wendat - Histoire")
+  site$huronne_wendat_histoire <- uid(dat, "Histoire", "Thème")
+
+  # ----------------------------
+  # Huronne-Wendat - Espèce en péril - 0055
+  meta_temp <- meta_update(meta_temp, dat, "huronne_wendat_espece_peril", "Nation Huronne-Wendat - Espèce en péril")
+  site$huronne_wendat_espece_peril <- uid(dat, "Espèce en péril", "Thème")
+
+
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   # Update metadata
   # ----------------------------------

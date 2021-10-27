@@ -33,6 +33,15 @@ dataDescription:
     - kahnawake_vegatation
     - public_milieu_protege
     - public_sites_patrimoniaux
+    - huronne_wendat_activite_recreative
+    - huronne_wendat_peche
+    - huronne_wendat_chasse
+    - huronne_wendat_vegetaux
+    - huronne_wendat_occupation
+    - huronne_wendat_archeologie
+    - huronne_wendat_toponymie
+    - huronne_wendat_histoire
+    - huronne_wendat_espece_peril
     francais:
     - AGHAMM - Pêche commerciale
     - AGHAMM - Pêche traditionnelle
@@ -54,6 +63,15 @@ dataDescription:
     - Kahnawake - Végétation
     - Public - Milieux protégés
     - Public - Sites patrimoniaux
+    - Nation Huronne-Wendat - Activité récréative
+    - Nation Huronne-Wendat - Pêche
+    - Nation Huronne-Wendat - Chasse
+    - Nation Huronne-Wendat - Récolte de végétaux
+    - Nation Huronne-Wendat - Occupation
+    - Nation Huronne-Wendat - Archéologie
+    - Nation Huronne-Wendat - Toponymie
+    - Nation Huronne-Wendat - Histoire
+    - Nation Huronne-Wendat - Espèce en péril
     source:
     - '0022'
     - '0023'
@@ -75,6 +93,15 @@ dataDescription:
     - '0032'
     - 0030,0038,0039,0040
     - '0044,0045'
+    - '0055'
+    - '0055'
+    - '0055'
+    - '0055'
+    - '0055'
+    - '0055'
+    - '0055'
+    - '0055'
+    - '0055'
     mdref:
     - aghammpechecommerciale
     - aghammpechetraditionnelle
@@ -96,6 +123,15 @@ dataDescription:
     - kahnawakevegatation
     - publicmilieuprotege
     - publicsitespatrimoniaux
+    - huronnewendatactiviterecreative
+    - huronnewendatpeche
+    - huronnewendatchasse
+    - huronnewendatvegetaux
+    - huronnewendatoccupation
+    - huronnewendatarcheologie
+    - huronnewendattoponymie
+    - huronnewendathistoire
+    - huronnewendatespeceperil
 rawData:
 - '0022'
 - '0023'
@@ -122,3 +158,12 @@ rawData:
 - '0040'
 - '0044'
 - '0045'
+- '0055'
+- '0055'
+- '0055'
+- '0055'
+- '0055'
+- '0055'
+- '0055'
+- '0055'
+- '0055'
