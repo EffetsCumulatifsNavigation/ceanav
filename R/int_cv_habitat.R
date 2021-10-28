@@ -273,12 +273,13 @@ cv_habitat <- function() {
   habitat$colonie_oiseaux <- uid(dat)
   sup <- c(sup, superficie(dat))
 
-  # ------------------------------------------------------
-  # Milieux sableux : 0008
-  dat <- "0008"
-  meta_temp <- meta_update(meta_temp, dat, "milieux_sableux", "Milieux sableux", type = "Milieux sableux")
-  habitat$milieux_sableux <- uid(dat)
-  sup <- c(sup, line_length(dat))
+  # # ------------------------------------------------------
+  # # Milieux sableux : 0008
+  # # NOTE: Retirer, couvert par l'intégrité des berges
+  # dat <- "0008"
+  # meta_temp <- meta_update(meta_temp, dat, "milieux_sableux", "Milieux sableux", type = "Milieux sableux")
+  # habitat$milieux_sableux <- uid(dat)
+  # sup <- c(sup, line_length(dat))
 
   # ------------------------------------------------------------------------- #
 
