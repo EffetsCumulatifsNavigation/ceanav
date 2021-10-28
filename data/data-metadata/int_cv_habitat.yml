@@ -25,7 +25,6 @@ dataDescription:
     - site_alevinage
     - frayere
     - espece_statut
-    - faunique
     - floristique
     - colonie_oiseaux
     francais:
@@ -38,7 +37,6 @@ dataDescription:
     - Habitats d'alevinage
     - Frayères
     - Espèces à statut
-    - Habitats fauniques
     - Habitats floristiques
     - Colonies d'oiseaux
     source:
@@ -51,7 +49,6 @@ dataDescription:
     - 0009
     - '0010'
     - '0011'
-    - '0036'
     - '0037'
     - '0043'
     superficie:
@@ -64,7 +61,6 @@ dataDescription:
     - 230.0579924
     - 272.1963119
     - 963.8141819
-    - 1796.0910878
     - 0.9315339
     - 132.2541906
     mdref:
@@ -77,7 +73,6 @@ dataDescription:
     - sitealevinage
     - frayere
     - especestatut
-    - faunique
     - floristique
     - colonieoiseaux
     type:
@@ -87,7 +82,6 @@ dataDescription:
     - Milieu humide
     - Milieu humide
     - Milieu humide
-    - Habitats importance ecologique
     - Habitats importance ecologique
     - Habitats importance ecologique
     - Habitats importance ecologique
@@ -105,7 +99,6 @@ dataDescription:
     - Milieu humide sur dépôt minéral, dominé par une végétation ligneuse arbustive
       ou arborescente, avec plus de 25 % de couvert.
     - Regroupe les milieux humides dont le type est inconnu.
-    - ''
     - ''
     - ''
     - ''
@@ -281,6 +274,5 @@ rawData:
 - 0009
 - '0010'
 - '0011'
-- '0036'
 - '0037'
 - '0043'

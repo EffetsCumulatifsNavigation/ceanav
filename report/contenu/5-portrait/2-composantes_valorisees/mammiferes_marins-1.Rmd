@@ -98,6 +98,7 @@ Il est important de noter que les cartes de distribution issues pour ces espèce
 tab <- as.data.frame(meta$dataDescription$categories)
 tab <- arrange(tab, francais)
 tab <- select(tab, francais, scientific)
+tab$scientific <- glue("*{tab$scientific}*")
 
 
 tab %>%

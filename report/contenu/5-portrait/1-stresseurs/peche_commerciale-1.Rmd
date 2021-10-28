@@ -28,7 +28,7 @@ tab <- arrange(tab, desc(Freq))
 tab$Freq <- as.character(tab$Freq)
 uid <- tab$ID %in% meta$dataDescription$especes$cible
 tab[uid,] <- apply(tab[uid, ], 2, function(x) glue("**{x}**"))
-
+tab$Scientific <- glue("*{tab$Scientific}*")
 
 tab[,-1] %>%
   knitr::kable(
