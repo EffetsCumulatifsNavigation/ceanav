@@ -134,7 +134,7 @@ cv_mammiferes_marins <- function() {
                                  "beluga","rorqual_commun","harbour_porpoise",
                                  "grey_seal","harbor_seal","harp_seal"),
                  francais = c("Rorqual à bosse","Rorqual bleu","Petit rorqual",
-                              "Béluga du Saint-Laurent","Rorqual commun",
+                              "Béluga","Rorqual commun",
                               "Marsouin commun","Phoque gris","Phoque commun",
                               "Phoque du Groenland"),
                  english = c("Humpback whale","Blue whale","Minke whale",
