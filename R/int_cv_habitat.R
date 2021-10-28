@@ -250,12 +250,13 @@ cv_habitat <- function() {
   sup <- c(sup, superficie(dat))
 
 
-  # ------------------------------------------------------
-  # Habitats fauniques : 0036
-  dat <- "0036"
-  meta_temp <- meta_update(meta_temp, dat, "faunique", "Habitats fauniques", type = "Habitats importance ecologique")
-  habitat$faunique <- uid(dat)
-  sup <- c(sup, superficie(dat))
+  # # ------------------------------------------------------
+  # # Habitats fauniques : 0036
+  # # NOTE: Retirer, trop étendu
+  # dat <- "0036"
+  # meta_temp <- meta_update(meta_temp, dat, "faunique", "Habitats fauniques", type = "Habitats importance ecologique")
+  # habitat$faunique <- uid(dat)
+  # sup <- c(sup, superficie(dat))
 
 
   # ------------------------------------------------------
