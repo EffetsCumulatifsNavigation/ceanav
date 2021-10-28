@@ -22,7 +22,6 @@ dataDescription:
     - marais
     - marecage
     - milieu_humide
-    - tourbiere
     - site_alevinage
     - frayere
     - espece_statut
@@ -37,7 +36,6 @@ dataDescription:
     - Marais
     - Marécage
     - Milieu humide
-    - Tourbière
     - Habitats d'alevinage
     - Frayères
     - Espèces à statut
@@ -48,7 +46,6 @@ dataDescription:
     source:
     - '0001,0002,0003'
     - '0013,0014'
-    - '0053'
     - '0053'
     - '0053'
     - '0053'
@@ -67,7 +64,6 @@ dataDescription:
     - 169.4216081
     - 38.4642661
     - 28.5464095
-    - 4.3902677
     - 230.0579924
     - 272.1963119
     - 963.8141819
@@ -82,7 +78,6 @@ dataDescription:
     - marais
     - marecage
     - milieuhumide
-    - tourbiere
     - sitealevinage
     - frayere
     - especestatut
@@ -93,7 +88,6 @@ dataDescription:
     type:
     - Zostères
     - Zones inondables
-    - Milieu humide
     - Milieu humide
     - Milieu humide
     - Milieu humide
@@ -117,8 +111,6 @@ dataDescription:
     - Milieu humide sur dépôt minéral, dominé par une végétation ligneuse arbustive
       ou arborescente, avec plus de 25 % de couvert.
     - Regroupe les milieux humides dont le type est inconnu.
-    - Regroupe les milieux humides dans lesquels il y a une accumulation de tourbe
-      d’au moins 30 cm d’épaisseur.
     - ''
     - ''
     - ''
@@ -289,7 +281,6 @@ rawData:
 - '0003'
 - '0013'
 - '0014'
-- '0053'
 - '0053'
 - '0053'
 - '0053'

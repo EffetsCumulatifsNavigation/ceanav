@@ -53,18 +53,21 @@ cv_habitat <- function() {
   }
 
   # ------------------------------------------------------
-  uid <- function(dat, category = NULL, field = NULL) {
+  uid <- function(dat, category = NULL, field = NULL, clip = FALSE) {
     # -----
-    res <- load_temp(dat)
+    res <- load_temp(dat) %>%
+           bind_rows()
+
+    # -----
+    if (clip) res <- st_intersection(res, st_simplify(aoi, dTolerance = 1000))
 
     # -----
     if (is.null(category)) {
-      uid <- bind_rows(res) %>%
+      uid <- res %>%
              st_intersects(grid1p) %>%
              unlist() %>%
              unique()
     } else {
-      res <- bind_rows(res)
       res <- res[res[,field,drop = TRUE] == category, ]
       uid <- res %>%
              st_intersects(grid1p) %>%
@@ -148,6 +151,7 @@ cv_habitat <- function() {
 
   # ------------------------------------------------------
   data(grid1p)
+  data(aoi)
   habitat <- grid1p
 
   # ------------------------------------------------------
@@ -172,13 +176,13 @@ cv_habitat <- function() {
   # Eau peu profonde
   dat <- c("0053")
   meta_temp <- meta_update(meta_temp, dat, "eau_peu_profonde", "Eau peu profonde", "Milieu humide dont le niveau d’eau est inférieur à 2 m et présentant des plantes aquatiques flottantes ou submergées ainsi que des plantes émergentes dont le couvert fait moins de 25 % de la superficie du milieu.", type = "Milieu humide")
-  habitat$eau_peu_profonde <- uid(dat, "Eau", "TYPE")
+  habitat$eau_peu_profonde <- uid(dat, "Eau", "TYPE", clip = TRUE)
   sup <- c(sup, superficie(dat, "Eau", "TYPE"))
 
   # -----
   # Marais
   meta_temp <- meta_update(meta_temp, dat, "marais", "Marais", "Milieu humide sur dépôt minéral, dominé par une végétation herbacée couvrant plus de 25 % de la superficie. Les arbustes et les arbres, lorsque présents, couvrent moins de 25 % de la superficie du milieu.", type = "Milieu humide")
-  habitat$marais <- uid(dat, "Marais", "TYPE")
+  habitat$marais <- uid(dat, "Marais", "TYPE", clip = TRUE)
   sup <- c(sup, superficie(dat, "Marais", "TYPE"))
 
 
@@ -186,22 +190,23 @@ cv_habitat <- function() {
   # -----
   # Marécage
   meta_temp <- meta_update(meta_temp, dat, "marecage", "Marécage", "Milieu humide sur dépôt minéral, dominé par une végétation ligneuse arbustive ou arborescente, avec plus de 25 % de couvert.", type = "Milieu humide")
-  habitat$marecage <- uid(dat, "Marécage", "TYPE")
+  habitat$marecage <- uid(dat, "Marécage", "TYPE", clip = TRUE)
   sup <- c(sup, superficie(dat, "Marécage", "TYPE"))
 
 
   # -----
   # Milieu humide
   meta_temp <- meta_update(meta_temp, dat, "milieu_humide", "Milieu humide", "Regroupe les milieux humides dont le type est inconnu.", type = "Milieu humide")
-  habitat$milieu_humide <- uid(dat, "Milieu humide", "TYPE")
+  habitat$milieu_humide <- uid(dat, "Milieu humide", "TYPE", clip = TRUE)
   sup <- c(sup, superficie(dat, "Milieu humide", "TYPE"))
 
 
-  # -----
-  # Tourbière
-  meta_temp <- meta_update(meta_temp, dat, "tourbiere", "Tourbière", "Regroupe les milieux humides dans lesquels il y a une accumulation de tourbe d’au moins 30 cm d’épaisseur.", type = "Milieu humide")
-  habitat$tourbiere <- uid(dat, "Tourbière", "TYPE")
-  sup <- c(sup, superficie(dat, "Tourbière", "TYPE"))
+  # # -----
+  # # Tourbière
+  # # NOTE: Retiré de l'analyse, milieu terrestre
+  # meta_temp <- meta_update(meta_temp, dat, "tourbiere", "Tourbière", "Regroupe les milieux humides dans lesquels il y a une accumulation de tourbe d’au moins 30 cm d’épaisseur.", type = "Milieu humide")
+  # habitat$tourbiere <- uid(dat, "Tourbière", "TYPE")
+  # sup <- c(sup, superficie(dat, "Tourbière", "TYPE"))
 
 
 
