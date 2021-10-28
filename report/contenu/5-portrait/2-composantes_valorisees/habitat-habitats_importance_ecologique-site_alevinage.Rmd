@@ -1,9 +1,9 @@
-<!-- #### Habitats - Sites d'alevinage {-} -->
+<!-- #### Habitats - Habitats d'alevinage {-} -->
 
 
 <!-- -------------------------------------------------- -->
 
-```{r sitealevinage, fig.cap = "Distribution des habitats dans le Saint-Laurent et le Saguenay - Sites d'alevinage", out.width = '100%'}
+```{r sitealevinage, fig.cap = "Distribution des habitats dans le Saint-Laurent et le Saguenay - Habitats d'alevinage", out.width = '100%'}
 knitr::include_graphics("../figures/figures-integrated/habitat-site_alevinage.png")
 ```
 
