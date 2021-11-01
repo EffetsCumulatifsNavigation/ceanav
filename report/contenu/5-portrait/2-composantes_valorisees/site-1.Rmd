@@ -4,7 +4,36 @@
 meta <- read_yaml("../data/data-metadata/int_cv_site.yml")
 ```
 
-(Tableau \@ref(tab:siteCat))
+Le Saint-Laurent et le Saguenay constituent un système d'une importance culturelle, patrimoniale et économique historique et contemporaine majeure pour les Premières Nations et pour les communautés côtières. Les sites d'intérêt culturels, patrimoniaux et archéologiques ont ainsi été identifiés en tant que composante valorisée à considérer au sein pour le projet pilote d'évaluation des effets cumulatifs des activités maritimes. Dans le cadre de ce projet pilote, une importance particulière a été attribuée aux sites d'intérêt pour les Premières Nations. Un processus collaboratif a ainsi été enclenché avec des communautés autochtones ayant des activités historiques et contemporaines au sein de la zone d'étude. Les communautés participantes sont les suivantes :
+
+- Nation Huronne-Wendat
+- Nation des Innus d’Essipit
+- Nation Mi'kmaq de Gespeg,
+- Nation Mi'kmaq de Gesgapegiag
+- Nation Mohawk de Kahnawà:ke
+- Nation Wolastoqiyik Wahsipekuk
+- Nation W8banaki
+
+Pour les données sans accès libre, un protocole de partage d'informations a été élaboré en collaboration avec les communautés participantes. Ce protocole offre un cadre pour l’utilisation des données qui soutient les principes des Premières Nations de PCAP$^{MD}$ (propriété, contrôle, accès, possession) dans le domaine de la recherche. L’application de ces principes sert de mécanisme de protection du patrimoine informationnel et des connaissances des Premières Nations. Ces principes évoquent la propriété collective de l’information par une communauté, une nation, un groupe. Ces principes s’appliquent à tous types de recherche et à tous les domaines de recherche qui se déroulent sur les territoires des Premières Nations et/ou qui concernent les Premières Nations.
+
+Des rencontres individuelles ont été organisées avec des représentants des communautés participantes afin de présenter le projet et de discuter des besoins en informations en vue d'intégrer les sites d'intérêt au sein de l'évaluation des effets cumulatifs. Les communautés participantes ont subséquemment procédé au rassemblement d'informations cartographiques représentant des sites d'intérêt pour leur communauté respective. Les données brutes partagées par les communautés participantes ont ensuite été intégrées directement à la grille d'étude en présence-absence. Un travail de préparation des données minimal a été effectué afin de conserver l'intégralité des sites identifiés. Les sites d'intérêt identifiés par les communautés participantes peuvent être classés en 9 grandes catégories :
+
+- Activités récréatives
+- Chasse
+- Culture et patrimoine
+- Occupation du territoire
+- Pêche commerciale
+- Pêche traditionnelle
+- Récolte de végétaux
+- Sites archéologiques
+- Tourisme
+
+La catégorisation offerte par les communautés a toutefois été conservée intacte et intégrée en tant que catégories distinctes de sites d'intérêt pour l'évaluation des effets cumulatifs. Les sites d'intérêt identifiés par différentes communautés ont également été conservés distincts même si des catégories similaires ont été identifiées par les différentes communautés participantes (Tableau \@ref(tab:siteCat)). Par exemple, bien que la majorité des communautés aient identifié des sites d'intérêt pour la chasse, les sites identifiés demeurent distincts au sein de l'analyse. Cette approche a pour but de respecter l'indépendance de chaque communauté. De plus, cette approche permet également d'attribuer une importance supérieure à un milieu si plusieurs communautés s'identifient en tant que site d'intérêt. C'est le cas, entre autres, du Lac Saint-Pierre, qui est identifié en tant que site d'intérêt par plus d'une communauté participante.
+
+Il demeure important de noter que, pour l'ensemble des communautés participantes, les informations rapportées ne peuvent être considérées comme un portrait exhaustif des sites d'intérêt pour l'ensemble des membres des communautés; en effet, les informations résultent d'un processus de consultation limité des membres de la communauté, pour le projet spécifique d'évaluation des effets cumulatifs des activités maritimes. Pour plusieurs communautés, les sites identifiés proviennent d'autres exercices dont une intégration a été faite afin de répondre aux objectifs de la présente étude. De plus, la participation des Premières Nations à cette étude est faite sans préjudice à l'exercice de leurs droits juridiques sur leur territoire traditionnel respectif pour lesquels s'appliquent leurs droits et responsabilités d'intendance et qui se basent sur l'application d'une approche écosystémique plus large. Les sites d'intérêt identifiés doivent ainsi être interprétés dans le contexte élargi de ces droits et responsabilités.
+
+Des sites patrimoniaux inscrits au registre du Ministère de la Culture et des Communications et disponibles ouvertement ont également été inclus au portrait des sites d'intérêt dans la zone d'étude. Il en résulte ainsi un total de `r length(meta$dataDescription$categories$francais)` catégories de sites d'intérêt culturels, patrimoniaux et archéologiques au sein de la zone d'étude.
+
 
 <br/>
 
