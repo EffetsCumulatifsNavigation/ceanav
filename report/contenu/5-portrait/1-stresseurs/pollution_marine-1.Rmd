@@ -1,0 +1,10 @@
+### Pollution marine
+
+Le stresseur de pollution marine remplace la composante valorisée de la qualité de l’eau au sein de l’évaluation des effets cumulatifs afin de pallier à la difficulté d’attribuer des variation en qualité de l’eau spécifiquement aux activités maritimes (voir section X pour plus de détails).
+
+A l’instar de @halpern2008, la pollution marine a été caractérisée en combinant l’ensemble des stresseurs environnementaux reliés aux activités maritimes. Dans le cadre cette étude, il s’agit ainsi de la sommation de l’ensemble des stresseurs considérés. La pollution marine devient ainsi l’empreinte cumulée (voir section Y) des autres stresseurs environnementaux considérés, qui est obtenue en additionnant l’intensité relative (i.e. normaliser entre 0 et 1) de l’ensemble des stresseurs individuels. Il en résulte une cartographie intégrative des activités maritimes qui peut nous informer sur les milieux qui sont les plus à risque des
+
+
+Dans le cadre de cette étude, l’ensemble des stresseurs caractérisés touchentdifférentes facettes des activités maritimes et pourraient avoir des effets néfastes sur la qualité de l’eau.
+
+Nous avons ainsi caractérisé la 
