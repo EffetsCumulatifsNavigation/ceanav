@@ -18,6 +18,7 @@ Pour notre étude, nous considérons uniquement les berges qui ont des signes ap
 tab <- as.data.frame(meta$dataDescription$categories)
 tab <- arrange(tab, francais)
 tab <- select(tab, francais, longueur)
+tab$longueur <- round(tab$longueur, 2)
 
 
 tab %>%
