@@ -1,3 +1,18 @@
 ### Qualité de l'eau
 
+La qualité de l’eau a été identifiée en tant que composante valorisée lors des différents ateliers de mobilisation visant leur identification.
+
+La qualité de l’eau est toutefois affectée par une suite de facteurs multiples incluant l’agriculture, la pollution atmosphérique, les rejets d’égouts, en plus des activités maritimes [@ref]. De plus, il est généralement beaucoup plus probable que la qualité de l’eau soit affectée par la pollution d’origine terrestre [@ref].
+
+Par exemple, Fanny [@ref]
+
+De plus, les activités maritimes sont maintenant régulées par des pratiques très strictes pour tout ce qui touche à la pollution. Les problèmes de pollutions reliés aux activités maritimes contemporaines sont ainsi beaucoup moins importantes que ceux reliés aux activities historiques [@ref].
+
+
+
+Ca ne veut pas dire que les risques à la qualité de l’eau associés aux activités maritimes sont nuls; les preoccupations des communautés locales quant à la qualité de l’eau sont valides. Il est toutefois difficile de relier des mesures de qualité de l’eau spécifiquement aux activités maritimes, et il serait malhonnête de le faire considérant la quantité d’autres facteurs pouvant affecter la qualité de l’eau, et plus que les activités maritimes.
+
+
+Afin d’adresser cette problématique, nous avons plutôt décidé d’adopter une approche alternative afin de discuter des risques pour la qualité de l’eau associés aux activités maritimes. Dans leurs travaux, @halpern2019 ont plutôt considéré la qualité de l’eau en tant que stresseurs de pollution marine. Ce stresseurs était décrit en combinant les différents stresseurs individuels reliés aux activités maritimes, soit la navigation et les activités portuaires dans leur cas. Nous avons ainsi opté pour une approche similaire et considérons la pollution marine en tant que stresseurs environnemental en remplacement de la composante valorisée de qualité de l’eau. Veuillez vous réfère à la section sur les stresseurs environnementaux pour la description du stresseur pollution marine.
+
 <br/>
