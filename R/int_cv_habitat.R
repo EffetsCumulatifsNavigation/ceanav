@@ -35,7 +35,7 @@ cv_habitat <- function() {
   #   - Habitats fauniques : 0036
   #   - Habitats floristiques : 0037
   #   - Colonies d'oiseaux : 0043
-  #   - TODO: Milieux sableux : 0008
+  #   - Gisements mollusques : 0056, 0057
   #
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   # ------------------------------------------------------
@@ -282,8 +282,14 @@ cv_habitat <- function() {
   # habitat$milieux_sableux <- uid(dat)
   # sup <- c(sup, line_length(dat))
 
+  # ------------------------------------------------------
+  # Gisements coquilliers : 0056, 0057
+  # Pétoncle uniquement dans l'estuaire, donc considation de la mactre uniquement (0057)
+  dat <- "0057"
+  meta_temp <- meta_update(meta_temp, dat, "gisement_coquilliers", "Gisements coquilliers", type = "Habitats importance ecologique")
+  habitat$colonie_oiseaux <- uid(dat)
+  sup <- c(sup, superficie(dat))
   # ------------------------------------------------------------------------- #
-
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   # Update metadata
