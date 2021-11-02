@@ -21,9 +21,9 @@ rmd_subdir:
 clean: [packages.bib, bookdown.bbl]
 delete_merged_file: true
 language:
-label:
-  fig: "Figure "
-  tab: "Tableau "
-ui:
-  edit: "Edit"
-  chapter_name: "Chapter "
+  label:
+    fig: "Figure "
+    tab: "Tableau "
+  ui:
+    edit: "Edit"
+    chapter_name: ""
