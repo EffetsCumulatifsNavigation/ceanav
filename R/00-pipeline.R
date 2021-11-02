@@ -95,6 +95,7 @@ pipeline <- function(
     get_data0053()
     get_data0054()
     get_data0055()
+    get_data0056()
   }
 
 
