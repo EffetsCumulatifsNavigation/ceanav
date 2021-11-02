@@ -4,13 +4,13 @@
 meta <- read_yaml("../data/data-metadata/int_cv_berge.yml")
 ```
 
-La composante valorisée d'intégritée des berge a été caractérisée à partir de données d'un exercice récent de caractérisation des berges dans la partie fluviale du Saint-Laurent de l'équipe de Patrick Lajeunesse de l'Université Laval [@bernier2020; @bernier2021]. Cette caractérision a été faite à l'aide d'une approche d'imagerie à haute résolution visant à positionner spatialement, caractériser et évaluation la susceptibilité à l'érosion de berges naturelles et artificialisées en combinant des données de relevés terrain, de télédection et de données dérivées de connaissances des communautés locales [@bernier2020; @bernier2021]. Les données issues de ce projet offrent une caractérisation de la susceptibilité des berge à l'érosion en divisant leur état en trois catégories [Tableau FF dans @bernier2020] :
+La composante valorisée d’intégrité des berges a été caractérisée à partir de données géospatiales d’un exercice récent de caractérisation des berges dans la partie fluviale du Saint-Laurent de l’équipe de Patrick Lajeunesse de l’Université Laval [@bernier2020; @bernier2021]. Cette caractérisation a été faite à l’aide d’une approche cartographique à haute résolution visant entre autres à positionner spatialement, caractériser et évaluer la susceptibilité à l’érosion de berges naturelles et artificialisées, et ce, en combinant des données de relevés terrain, de télédétection et dérivées de connaissances des communautés locales [@bernier2020; @bernier2021]. Les données géospatiales issues de ce projet offrent une caractérisation de la susceptibilité des berges à l’érosion en divisant leur état en trois niveaux d’indice d’érosion [IE; Figure 2 dans @bernier2021] :
 
-- Active ou vive : Érosion apparente ou couvert végétal < 25%
-- Semi-végétalisée : Érosion apparente ou couvert végétal de 25 à 75%
-- Stable ou végétalisé : Aucun signe d'érosion pparent, et couvert végétal > 75% ou présence d'une structure de protection
+- Active ou vive (IE = 2) : Érosion apparente ou couvert végétal < 25%
+- Semi-végétalisée (IE = 1) : Érosion apparente ou couvert végétal de 25 à 75%
+- Stable ou végétalisé (IE = 0) : Aucun signe d'érosion pparent, et couvert végétal > 75% ou présence d'une structure de protection
 
-Pour notre étude, nous considérons uniquement les berges qui ont des signes d'érosion apparente, soit les berges vive et les berges semi-végétalisées. Nous distinguons également les berges naturelles des berges artificielles; cette séparation est faite afin de distinguer les effets de la navigation sur des berges naturelles ayant une valeur écologique supérieure aux berges artificialisées. La combinaison de l'état des berges telle que décrite dans @bernier2020 et @bernier2021 et de leur artificialité résulte ainsi en quatre catégories de berges susceptibles aux effets de l'érosion (Tableau \@ref(tab:bergeCat)).
+Pour notre étude, nous considérons uniquement les berges qui ont des signes apparents d’érosion, soit les berges avec un IE > 0. Nous distinguons également les berges naturelles des berges artificielles; cette séparation est faite afin de distinguer les effets de la navigation sur des berges naturelles ayant une valeur écologique supérieure aux berges artificialisées. La combinaison de l’état des berges telle que décrite dans @bernier2020 et @bernier2021 et de l’état de dégradation des artificialités résulte ainsi en quatre catégories de berges susceptibles aux effets de l’érosion (Tableau \@ref(tab:bergeCat)).
 
 <br/>
 
@@ -24,12 +24,12 @@ tab %>%
   knitr::kable(
     col.names = c("Catégories", "Longueur (km)"),
     row.names = FALSE,
-    caption = "Catégories de segments de berge sensibles à l'érosion considérés pour l'analyse d'évaluation des effets cumulatifs et leur longueur totale en $km$ au sein des données de caractérisation des berges de la partie fluviale du Saint-Laurent [@bernier2020; @bernier2021]"
+    caption = "Catégories de segments de berge sensibles à l'érosion selon leur artificialité et leur indice d'érosion (IE) considérés pour l'analyse d'évaluation des effets cumulatifs et leur longueur totale en $km$ au sein des données de caractérisation des berges de la partie fluviale du Saint-Laurent [@bernier2020; @bernier2021]"
   )
 ```
 
 <br/>
 
-Ces quatre catégories ont ensuite été intégrée à la grille afin d'obtenir une évaluation de la présence des différentes catégories de berges sensibles à l'érosion au sein de la zone d'étude. Il est important de noter que puisque cette composante valorisée n'a été identifiée que pour la portion fluviale du Saint-Laurent, aucune caractérisation n'a été faite pour l'estuaire et le Saguenay. Une caractérisation similaire a toutefois été recemment été publiée à travers le [Projet Résilience côtière] de l'équipe de Pascal Bernatchez à l'Université du Québec à Rimouski.
+Ces quatre catégories ont ensuite été intégrées à la grille afin d’obtenir une évaluation de la présence des différentes catégories de berges sensibles à l’érosion au sein de la zone d’étude. Il est important de noter que puisque cette composante valorisée n’a été identifiée que pour la portion fluviale du Saint-Laurent, aucune caractérisation n’a été faite pour l’estuaire et le Saguenay. Une caractérisation similaire a toutefois été récemment publiée à travers le [Projet Résilience côtière](https://ldgizc.uqar.ca/Web/projets/projet-resilience-cotiere) de l’équipe de Pascal Bernatchez à l’Université du Québec à Rimouski.
 
 <br/>

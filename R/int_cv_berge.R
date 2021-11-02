@@ -104,10 +104,10 @@ cv_berge <- function() {
   # -----
   meta$dataDescription$categories$accronyme <-  categories
   meta$dataDescription$categories$francais <-  c(
-    "Naturelle - Semi-végétalisée",
-    "Naturelle - Vive",
-    "Artificielle - Semi-végétalisée",
-    "Artificielle - Vive"
+    "Naturelle - Semi-végétalisée (IE = 1)",
+    "Naturelle - Vive (IE = 2)",
+    "Artificielle - Semi-végétalisée (IE = 1)",
+    "Artificielle - Vive (IE = 2)"
   )
   meta$dataDescription$categories$source <-  rep(meta$rawData, length(categories))
 
