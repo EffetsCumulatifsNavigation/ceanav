@@ -287,7 +287,7 @@ cv_habitat <- function() {
   # Pétoncle uniquement dans l'estuaire, donc considation de la mactre uniquement (0057)
   dat <- "0057"
   meta_temp <- meta_update(meta_temp, dat, "gisement_coquilliers", "Gisements coquilliers", type = "Habitats importance ecologique")
-  habitat$colonie_oiseaux <- uid(dat)
+  habitat$gisement_coquilliers <- uid(dat)
   sup <- c(sup, superficie(dat))
   # ------------------------------------------------------------------------- #
 
