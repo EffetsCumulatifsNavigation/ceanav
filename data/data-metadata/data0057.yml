@@ -1,0 +1,14 @@
+data_description:
+  id: "0057"
+  name: "Gisements connus et exploités de mactre de Stimpson des eaux côtières du Québec"
+  description: "La mactre de Stimpson est visée par des mesures de protection et de conservation ayant pour objectif de protéger son potentiel reproducteur et l'intégrité des population (gisements) dans la région du Québec. Les gisements de cette couche sont décrits comme étant connus et commercialement exploités historiquement et/ou actuellement et ont subi un traitement de validation et de délimitation avec un bon degré de précision. Ils sont situés dans l'estuaire et le Golfe du Saint-Laurent, sur la Côte-Nord et les Îles-de-la-Madeleine. Les gisements de cette couche sont considérés parmi les gisements les plus abondants en mactre de Stimpson et sont utilisés pour la pêche commerciale (à noter: les fortes densités ne s'en tiennent pas qu'à ces gisements). Ils sont principalement reconnus vulnérables pendant la saison de reproduction de juin à juillet. Il pourrait y avoir une ponte secondaire à l'automne également. La couche de données contient les informations sur l'aire totale des gisements, les zones et noms des gisements, les secteurs concernés et les périodes de reproduction et de pêcheries."
+  access_date: 2021-11-02
+  temporal_start: 1993
+  temporal_end: 2014
+  contact_id: "0033"
+  url: "https://ouvert.canada.ca/data/fr/dataset/8bb29ee0-6cd8-4dd4-abe0-afe8682a69d9"
+  identifiant: "8bb29ee0-6cd8-4dd4-abe0-afe8682a69d9"
+  availability: "open source"
+  citation:
+    - "Pêches et Océans Canada (2019) Gisements connus et exploités de mactre de Stimpson des eaux côtières du Québec. url: https://ouvert.canada.ca/data/fr/dataset/8bb29ee0-6cd8-4dd4-abe0-afe8682a69d9"
+    - "Trottier, S. et Goudreau, P. 2015. Évaluation des stocks de mactre de Stimpson (Mactromeris polynyma) des eaux côtières du Québec en 2014. Secr. Can. de. Cons. Sci. du MPO. Doc. de Rech: 72 + ix p."
