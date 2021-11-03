@@ -34,7 +34,7 @@ cv_habitat <- function() {
   #   - Espèces à statut : 0011
   #   - Habitats fauniques : 0036
   #   - Habitats floristiques : 0037
-  #   - Colonies d'oiseaux : 0043
+  #   - Colonies d'oiseaux : 0043, 0058
   #   - Gisements mollusques : 0056, 0057
   #
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
@@ -268,10 +268,10 @@ cv_habitat <- function() {
 
 
   # ------------------------------------------------------
-  # Colonies d'oiseaux : 0043
-  dat <- "0043"
-  meta_temp <- meta_update(meta_temp, dat, "colonie_oiseaux", "Colonies d'oiseaux", type = "Habitats importance ecologique")
-  habitat$colonie_oiseaux <- uid(dat)
+  # Colonies d'oiseaux : 0043, 0058
+  dat <- c("0043", "0058")
+  meta_temp <- meta_update(meta_temp, dat, "oiseaux", "Habitats importants pour les oiseaux", type = "Habitats importance ecologique")
+  habitat$oiseaux <- uid(dat)
   sup <- c(sup, superficie(dat))
 
   # # ------------------------------------------------------
