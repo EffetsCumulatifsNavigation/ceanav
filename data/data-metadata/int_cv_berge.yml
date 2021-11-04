@@ -7,8 +7,8 @@ dataDescription:
   spatial:
     resolution: 1km^2
     extent:
-    - -485317.8452
-    - 132387.8529
+    - -486289.4864
+    - 132356.9025
     - -170297.1626
     - 346013.3455
   temporal:
@@ -32,10 +32,10 @@ dataDescription:
     - '0017'
     - '0017'
     longueur:
-    - 145.6210133
-    - 365.5176116
-    - 89.5153413
-    - 75.1757286
+    - 390.9092348
+    - 257.6416716
+    - 239.7724962
+    - 55.5717555
     mdref:
     - naturellesemivegetalisee
     - naturellevive

@@ -50,21 +50,24 @@ get_data0017 <- function() {
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   # Import and format data
   # ----------------------------------------
-  nm <- c("Type_Berge","Etat_Berge","Artificiel","Type_Artif","Etat_Artif",
-          "Process_dom_1", "Process_dom_2","Classe_site", "Shape")
+  # nm <- c("Type_Berge","Etat_Berge","Artificiel","Type_Artif","Etat_Artif",
+  #         "Process_dom_1", "Process_dom_2","Classe_site", "Shape")
+  nm <- c("Type_Berge","Etat_Berge","Artificiel","Type_Artif","Etat_Artif")
 
   ## Lac St-Pierre
+  # st_layers(paste0(folder, 'CaractBerges_TCRLSP_UL_Mars2020.gdb'))
   berge_lsp <- st_read(paste0(folder, 'CaractBerges_TCRLSP_UL_Mars2020.gdb'),
-                       layer = 'Sites_sensibles_TCRLSP_UL_Mars2020') %>%
+                       layer = 'Seg_berge_TCRLSP_UL_Mars2020') %>%
                rename("Type_Berge" = "Type_berge",
-                      "Etat_Berge" = "Etat_berge",
-                      "Process_dom_1" = "process_dom_1",
-                      "Process_dom_2" = "process_dom_2") %>%
+                      "Etat_Berge" = "Etat_berge") %>%
+                      # "Process_dom_1" = "process_dom_1",
+                      # "Process_dom_2" = "process_dom_2") %>%
                .[, nm]
 
   ## Québec
+  # st_layers(paste0(folder, 'CaractBerges_TCRQC_UL_Mars2020.gdb'))
   berge_qc <- st_read(paste0(folder, 'CaractBerges_TCRQC_UL_Mars2020.gdb'),
-                      layer = 'Sites_sensibles_TCRQC_UL_Mars2020') %>%
+                      layer = 'Seg_cote_TCRQC_UL_Mars2020') %>%
               rename("Type_Berge" = "Type_Cote",
                      "Etat_Berge" = "Etat_Cote",
                      "Type_Artif" = "Type_artif",
@@ -72,16 +75,18 @@ get_data0017 <- function() {
               .[, nm]
 
   ## Haut-Saint-Laurent - Grand-Montréal
+  # st_layers(paste0(folder, 'CaractBerges_TCRHSLGM_UL_Mars2020.gdb'))
   berge_hslgm <- st_read(paste0(folder, 'CaractBerges_TCRHSLGM_UL_Mars2020.gdb'),
-                         layer = 'Sites_sensibles_TCRHSLGM_UL_Mars2020') %>%
+                         layer = 'Seg_berge_TCRHSLGM_UL_Mars2020') %>%
                  rename("Type_Berge" = "Type_berge",
                         "Etat_Berge" = "Etat_berge") %>%
                  .[, nm] %>%
                  st_cast("MULTILINESTRING")
 
   ## Estuaire fluvial
+  # st_layers(paste0(folder, 'CaractBerges_TCREF_UL_Mars2020.gdb'))
   berge_ef <- st_read(paste0(folder, 'CaractBerges_TCREF_UL_Mars2020.gdb'),
-                      layer = 'Sites_sensibles_TCREF_UL_Mars2020') %>%
+                      layer = 'Seg_cote_TCREF_UL_Mars2020') %>%
               rename("Type_Berge" = "Type_Cote",
                      "Etat_Berge" = "Etat_Cote",
                      "Shape" = "SHAPE") %>%
