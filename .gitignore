@@ -71,7 +71,5 @@ figures/figures-integrated/*.png
 figures/figures-output/*.png
 
 clean/
-En57-48-141-fra.pdf
 report/contenu/notes/
-rapport_patrimoine_st_laurent.pdf
-cartographieusages_final.pdf
+literature/
