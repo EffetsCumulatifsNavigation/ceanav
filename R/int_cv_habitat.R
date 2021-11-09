@@ -320,19 +320,67 @@ cv_habitat <- function() {
   sup <- c(sup, line_length(dat, "TP", "Type_Berge"))
 
 
-  # # ------------------------------------------------------
-  # # Espèces fauniques à statut : 0059
-  # # Espèces floristiques à statut : 0060
-  # nm <- c("0059")
-  # meta_temp <- meta_update(meta_temp, nm, "faune_statut", "Espèces fauniques à statut", "", type = "Habitats fauniques")
-  # habitat$faune_statut <- uid(dat, "MSF", "Type_Berge", clip = FALSE)
-  # sup <- c(sup, superficie(dat, "MSF", "Type_Berge"))
+  # ------------------------------------------------------
+  # Espèces fauniques à statut : 0059
+  # Qualité des données - à retirer
+  qu <- c("D (Faible, non viable)", "F (Non retrouvée)", "H (Historique)",
+          "NR (Non attribuée)", "U (Non cartographiable)", "X (Extirpée)")
+  nm <- c("0059")
+  dat <- load_temp(nm) %>%
+         filter(!EORANKDESC %in% qu) %>%
+         filter(LASTOBSyear >= 2000)
 
+  # Diviser par statut
+  # Susceptible
+  dat2 <- filter(dat, LOIEMV == "Susceptible")
+  meta_temp <- meta_update(meta_temp, nm, "faune_susceptible", "Espèces fauniques susceptibles", "Espèces fauniques susceptibles d'être désignées menacées ou vulnérables", type = "Habitats fauniques")
+  habitat$faune_susceptible <- uid(dat2)
+  sup <- c(sup, superficie(dat2))
 
+  # Diviser par statut
+  # Vulnérable
+  dat2 <- filter(dat, LOIEMV == "Vulnérable")
+  meta_temp <- meta_update(meta_temp, nm, "faune_vulnerable", "Espèces fauniques vulnérables", "Espèces fauniques désignées vulnérables", type = "Habitats fauniques")
+  habitat$faune_vulnerable <- uid(dat2)
+  sup <- c(sup, superficie(dat2))
 
+  # Diviser par statut
+  # Menacée
+  dat2 <- filter(dat, LOIEMV == "Menacée")
+  meta_temp <- meta_update(meta_temp, nm, "faune_menacee", "Espèces fauniques menacées", "Espèces fauniques désignées menacées", type = "Habitats fauniques")
+  habitat$faune_menacee <- uid(dat2)
+  sup <- c(sup, superficie(dat2))
 
+  # ------------------------------------------------------
+  # Espèces floristiques à statut : 0060
+  # Qualité des données - à retirer
+  qu <- c("D (Faible, non viable)", "F (Non retrouvée)", "H (Historique)",
+          "NR (Non attribuée)", "U (Non cartographiable)", "X (Extirpée)")
+  nm <- c("0060")
+  dat <- load_temp(nm) %>%
+         filter(!EORANKDESC %in% qu) %>%
+         filter(LASTOBSyear >= 2000)
 
+  # Diviser par statut
+  # Susceptible
+  dat2 <- filter(dat, LOIEMV == "Susceptible")
+  meta_temp <- meta_update(meta_temp, nm, "flore_susceptible", "Espèces floristiques susceptibles", "Espèces floristiques susceptibles d'être désignées menacées ou vulnérables", type = "Habitats floristiques")
+  habitat$flore_susceptible <- uid(dat2)
+  sup <- c(sup, superficie(dat2))
 
+  # Diviser par statut
+  # Vulnérable
+  dat2 <- filter(dat, LOIEMV == "Vulnérable")
+  meta_temp <- meta_update(meta_temp, nm, "flore_vulnerable", "Espèces floristiques vulnérables", "Espèces floristiques désignées vulnérables", type = "Habitats floristiques")
+  habitat$flore_vulnerable <- uid(dat2)
+  sup <- c(sup, superficie(dat2))
+
+  # Diviser par statut
+  # Menacée
+  dat2 <- filter(dat, LOIEMV == "Menacée")
+  meta_temp <- meta_update(meta_temp, nm, "flore_menacee", "Espèces floristiques menacées", "Espèces floristiques désignées menacées", type = "Habitats floristiques")
+  habitat$flore_menacee <- uid(dat2)
+  sup <- c(sup, superficie(dat2))
   # ------------------------------------------------------------------------- #
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
