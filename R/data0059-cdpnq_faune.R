@@ -34,6 +34,7 @@ get_data0059 <- function() {
   # Import data
   # ----------------------------------------
   data0059 <- st_read(paste0(folder, 'CDPNQ_Faune_fleuve400m.shp'), quiet = TRUE) %>%
+              mutate(LASTOBSyear = as.numeric(substr(LASTOBS, 1, 4))) %>%
               st_transform(crs = global_parameters()$crs)
   # _________________________________________________________________________ #
 
