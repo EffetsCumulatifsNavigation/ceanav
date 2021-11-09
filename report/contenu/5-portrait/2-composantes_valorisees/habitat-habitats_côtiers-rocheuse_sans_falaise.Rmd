@@ -1,0 +1,10 @@
+<!-- #### Habitats - Rocheuse sans falaise {-} -->
+
+
+<!-- -------------------------------------------------- -->
+
+```{r rocheusesansfalaise, fig.cap = "Distribution des habitats dans le Saint-Laurent et le Saguenay - Rocheuse sans falaise", out.width = '100%'}
+knitr::include_graphics("../figures/figures-integrated/habitat-rocheuse_sans_falaise.png")
+```
+
+<br>

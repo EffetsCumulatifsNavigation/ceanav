@@ -28,6 +28,11 @@ dataDescription:
     - floristique
     - oiseaux
     - gisement_coquilliers
+    - meuble_sans_falaise
+    - rocheuse_sans_falaise
+    - rocheuse_sans_escarpement
+    - terrasse_fluviale
+    - terrasse_plage
     francais:
     - Zostères
     - Zones inondables
@@ -41,6 +46,11 @@ dataDescription:
     - Habitats floristiques
     - Habitats importants pour les oiseaux
     - Gisements coquilliers
+    - Meuble sans falaise
+    - Rocheuse sans falaise
+    - Rocheuse sans escarpement
+    - Terrasse fluviale
+    - Terrasse de plage
     source:
     - '0001,0002,0003'
     - '0013,0014'
@@ -54,6 +64,11 @@ dataDescription:
     - '0037'
     - 0043,0058
     - '0057'
+    - '0017'
+    - '0017'
+    - '0017'
+    - '0017'
+    - '0017'
     superficie:
     - 25.7612478
     - 507.9952407
@@ -67,6 +82,11 @@ dataDescription:
     - 0.9315339
     - 1228.0828922
     - 31.8019734
+    - 6.0772385
+    - 6.1786239
+    - 1.7100627
+    - 0.9446599
+    - 26.4817554
     mdref:
     - zostere
     - zoneinondable
@@ -80,6 +100,11 @@ dataDescription:
     - floristique
     - oiseaux
     - gisementcoquilliers
+    - meublesansfalaise
+    - rocheusesansfalaise
+    - rocheusesansescarpement
+    - terrassefluviale
+    - terrasseplage
     type:
     - Zostères
     - Zones inondables
@@ -93,6 +118,11 @@ dataDescription:
     - Habitats importance ecologique
     - Habitats importance ecologique
     - Habitats importance ecologique
+    - Habitats côtiers
+    - Habitats côtiers
+    - Habitats côtiers
+    - Habitats côtiers
+    - Habitats côtiers
     description:
     - ''
     - ''
@@ -111,6 +141,17 @@ dataDescription:
     - ''
     - ''
     - ''
+    - Dépôt non consolidé sans falaise
+    - Roche consolidée sans falaise
+    - Berge de roc sans escarpement
+    - Banc d'accumulation situé à l'embouchure d'une rivière composé de dépôts non
+      consolidés colonisé par de la végétation
+    - Zone d'accumulation de dépôts non consolidés (sable et/ou de gravier littoral)
+      formée d’un replat colonisé par de la végétation herbacée parfois inondée que
+      lors de surcote pendant la pleine mer supérieure de grande marée. Le replat
+      est parfois bordé sur sa partie inférieure par un talus d’érosion (microfalaise)
+      de moins de 2 m de hauteur et sur sa partie supérieure par une falaise morte
+      ou d’un terrain plat
   frayere_alevinage:
     Source:
     - 'Alliance Environnement GDG Conseil-Daniel Arbour & Associés (n.d.) Frayère
@@ -285,3 +326,8 @@ rawData:
 - '0043'
 - 0058
 - '0057'
+- '0017'
+- '0017'
+- '0017'
+- '0017'
+- '0017'
