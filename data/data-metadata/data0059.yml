@@ -1,0 +1,9 @@
+data_description:
+  id: "0059"
+  name: "Présence d'espèces fauniques menacées ou vulnérables ou susceptibles d'être ainsi désignées ou rares"
+  description: "Le CDPNQ collige, analyse et diffuse l'information disponible sur les éléments prioritaires de la biodiversité. Pour les espèces fauniques, le traitement est assuré par le ministère des Forêts, de la Faune et des Parcs (MFFP), alors que pour les espèces floristiques, la responsabilité incombe au ministère de l’Environnement et de la Lutte contre les changements climatiques (MELCC)."
+  access_date: 2021-11-08
+  contact_id: "0053"
+  availability: "data sharing agreement"
+  citation:
+    - "Centre de données sur le patrimoine naturel du Québec. (2021). Extractions du système de données d'espèces fauniques à statut pour le territoire du fleuve Saint-Laurent ou ses abords, de Beauharnois à Pointe-des-Monts, et de la rivère Saguenay. Ministère des Forêts, de la Faune et des Parcs (MFFP) et Ministère de l’Environnement et de la Lutte contre les Changements Climatiques (MELCC), Québec."
