@@ -148,7 +148,7 @@ cv_habitat <- function() {
   # Zostères : 0001, 0002, 0003
   nm <- c("0001", "0002", "0003")
   dat <- load_temp(nm)
-  meta_temp <- meta_update(meta_temp, nm, "zostere", "Zostères", type = "Habitats floristiques")
+  meta_temp <- meta_update(meta_temp, nm, "zostere", "Zostères", type = "Milieux aquatiques")
   habitat$zostere <- uid(dat)
   sup <- c(sup, superficie(dat))
 
@@ -284,7 +284,7 @@ cv_habitat <- function() {
   # Pétoncle uniquement dans l'estuaire, donc considation de la mactre uniquement (0057)
   nm <- "0057"
   dat <- load_temp(nm)
-  meta_temp <- meta_update(meta_temp, nm, "gisement_coquilliers", "Gisements coquilliers", type = "Habitats fauniques")
+  meta_temp <- meta_update(meta_temp, nm, "gisement_coquilliers", "Gisements coquilliers", type = "Milieux aquatiques")
   habitat$gisement_coquilliers <- uid(dat)
   sup <- c(sup, superficie(dat))
 
@@ -333,21 +333,21 @@ cv_habitat <- function() {
   # Diviser par statut
   # Susceptible
   dat2 <- filter(dat, LOIEMV == "Susceptible")
-  meta_temp <- meta_update(meta_temp, nm, "faune_susceptible", "Espèces fauniques susceptibles", "Espèces fauniques susceptibles d'être désignées menacées ou vulnérables", type = "Habitats fauniques")
+  meta_temp <- meta_update(meta_temp, nm, "faune_susceptible", "Espèces fauniques susceptibles", "Espèces fauniques susceptibles d'être désignées menacées ou vulnérables", type = "Espèces à statut")
   habitat$faune_susceptible <- uid(dat2)
   sup <- c(sup, superficie(dat2))
 
   # Diviser par statut
   # Vulnérable
   dat2 <- filter(dat, LOIEMV == "Vulnérable")
-  meta_temp <- meta_update(meta_temp, nm, "faune_vulnerable", "Espèces fauniques vulnérables", "Espèces fauniques désignées vulnérables", type = "Habitats fauniques")
+  meta_temp <- meta_update(meta_temp, nm, "faune_vulnerable", "Espèces fauniques vulnérables", "Espèces fauniques désignées vulnérables", type = "Espèces à statut")
   habitat$faune_vulnerable <- uid(dat2)
   sup <- c(sup, superficie(dat2))
 
   # Diviser par statut
   # Menacée
   dat2 <- filter(dat, LOIEMV == "Menacée")
-  meta_temp <- meta_update(meta_temp, nm, "faune_menacee", "Espèces fauniques menacées", "Espèces fauniques désignées menacées", type = "Habitats fauniques")
+  meta_temp <- meta_update(meta_temp, nm, "faune_menacee", "Espèces fauniques menacées", "Espèces fauniques désignées menacées", type = "Espèces à statut")
   habitat$faune_menacee <- uid(dat2)
   sup <- c(sup, superficie(dat2))
 
@@ -364,21 +364,21 @@ cv_habitat <- function() {
   # Diviser par statut
   # Susceptible
   dat2 <- filter(dat, LOIEMV == "Susceptible")
-  meta_temp <- meta_update(meta_temp, nm, "flore_susceptible", "Espèces floristiques susceptibles", "Espèces floristiques susceptibles d'être désignées menacées ou vulnérables", type = "Habitats floristiques")
+  meta_temp <- meta_update(meta_temp, nm, "flore_susceptible", "Espèces floristiques susceptibles", "Espèces floristiques susceptibles d'être désignées menacées ou vulnérables", type = "Espèces à statut")
   habitat$flore_susceptible <- uid(dat2)
   sup <- c(sup, superficie(dat2))
 
   # Diviser par statut
   # Vulnérable
   dat2 <- filter(dat, LOIEMV == "Vulnérable")
-  meta_temp <- meta_update(meta_temp, nm, "flore_vulnerable", "Espèces floristiques vulnérables", "Espèces floristiques désignées vulnérables", type = "Habitats floristiques")
+  meta_temp <- meta_update(meta_temp, nm, "flore_vulnerable", "Espèces floristiques vulnérables", "Espèces floristiques désignées vulnérables", type = "Espèces à statut")
   habitat$flore_vulnerable <- uid(dat2)
   sup <- c(sup, superficie(dat2))
 
   # Diviser par statut
   # Menacée
   dat2 <- filter(dat, LOIEMV == "Menacée")
-  meta_temp <- meta_update(meta_temp, nm, "flore_menacee", "Espèces floristiques menacées", "Espèces floristiques désignées menacées", type = "Habitats floristiques")
+  meta_temp <- meta_update(meta_temp, nm, "flore_menacee", "Espèces floristiques menacées", "Espèces floristiques désignées menacées", type = "Espèces à statut")
   habitat$flore_menacee <- uid(dat2)
   sup <- c(sup, superficie(dat2))
   # ------------------------------------------------------------------------- #
