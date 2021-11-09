@@ -1,0 +1,10 @@
+<!-- #### Habitats - Espèces fauniques susceptibles {-} -->
+
+
+<!-- -------------------------------------------------- -->
+
+```{r faunesusceptible, fig.cap = "Distribution des habitats dans le Saint-Laurent et le Saguenay - Espèces fauniques susceptibles", out.width = '100%'}
+knitr::include_graphics("../figures/figures-integrated/habitat-faune_susceptible.png")
+```
+
+<br>
