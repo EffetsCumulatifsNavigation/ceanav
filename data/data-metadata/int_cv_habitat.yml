@@ -9,7 +9,7 @@ dataDescription:
     - -413830.0813864
     - 168655.5276494
     - 130169.9186136
-    - 594655.5276494
+    - 592655.5276494
   temporal:
     resolution: Event based
     start: '2015'
@@ -24,7 +24,6 @@ dataDescription:
     - milieu_humide
     - site_alevinage
     - frayere
-    - espece_statut
     - floristique
     - oiseaux
     - gisement_coquilliers
@@ -42,7 +41,6 @@ dataDescription:
     - Milieu humide
     - Habitats d'alevinage
     - Frayères
-    - Espèces à statut
     - Habitats floristiques
     - Habitats importants pour les oiseaux
     - Gisements coquilliers
@@ -60,7 +58,6 @@ dataDescription:
     - '0053'
     - 0009
     - '0010'
-    - '0011'
     - '0037'
     - 0043,0058
     - '0057'
@@ -78,7 +75,6 @@ dataDescription:
     - 28.5464095
     - 230.0579924
     - 272.1963119
-    - 963.8141819
     - 0.9315339
     - 1228.0828922
     - 31.8019734
@@ -96,7 +92,6 @@ dataDescription:
     - milieuhumide
     - sitealevinage
     - frayere
-    - especestatut
     - floristique
     - oiseaux
     - gisementcoquilliers
@@ -106,18 +101,17 @@ dataDescription:
     - terrassefluviale
     - terrasseplage
     type:
-    - Zostères
+    - Habitats floristiques
     - Zones inondables
     - Milieu humide
     - Milieu humide
     - Milieu humide
     - Milieu humide
-    - Habitats importance ecologique
-    - Habitats importance ecologique
-    - Habitats importance ecologique
-    - Habitats importance ecologique
-    - Habitats importance ecologique
-    - Habitats importance ecologique
+    - Habitats fauniques
+    - Habitats fauniques
+    - Habitats floristiques
+    - Habitats fauniques
+    - Habitats fauniques
     - Habitats côtiers
     - Habitats côtiers
     - Habitats côtiers
@@ -135,7 +129,6 @@ dataDescription:
     - Milieu humide sur dépôt minéral, dominé par une végétation ligneuse arbustive
       ou arborescente, avec plus de 25 % de couvert.
     - Regroupe les milieux humides dont le type est inconnu.
-    - ''
     - ''
     - ''
     - ''
@@ -321,7 +314,6 @@ rawData:
 - '0053'
 - 0009
 - '0010'
-- '0011'
 - '0037'
 - '0043'
 - 0058
