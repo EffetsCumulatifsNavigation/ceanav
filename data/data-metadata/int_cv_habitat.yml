@@ -24,7 +24,6 @@ dataDescription:
     - milieu_humide
     - site_alevinage
     - frayere
-    - floristique
     - oiseaux
     - gisement_coquilliers
     - meuble_sans_falaise
@@ -47,7 +46,6 @@ dataDescription:
     - Milieu humide
     - Habitats d'alevinage
     - Frayères
-    - Habitats floristiques
     - Habitats importants pour les oiseaux
     - Gisements coquilliers
     - Meuble sans falaise
@@ -70,7 +68,6 @@ dataDescription:
     - '0053'
     - 0009
     - '0010'
-    - '0037'
     - 0043,0058
     - '0057'
     - '0017'
@@ -93,7 +90,6 @@ dataDescription:
     - 28.5464095
     - 230.0579924
     - 272.1963119
-    - 0.9315339
     - 1228.0828922
     - 31.8019734
     - 6.0772385
@@ -116,7 +112,6 @@ dataDescription:
     - milieuhumide
     - sitealevinage
     - frayere
-    - floristique
     - oiseaux
     - gisementcoquilliers
     - meublesansfalaise
@@ -139,7 +134,6 @@ dataDescription:
     - Milieu humide
     - Habitats fauniques
     - Habitats fauniques
-    - Habitats floristiques
     - Habitats fauniques
     - Habitats fauniques
     - Habitats côtiers
@@ -165,7 +159,6 @@ dataDescription:
     - Milieu humide sur dépôt minéral, dominé par une végétation ligneuse arbustive
       ou arborescente, avec plus de 25 % de couvert.
     - Regroupe les milieux humides dont le type est inconnu.
-    - ''
     - ''
     - ''
     - ''
@@ -356,7 +349,6 @@ rawData:
 - '0053'
 - 0009
 - '0010'
-- '0037'
 - '0043'
 - 0058
 - '0057'

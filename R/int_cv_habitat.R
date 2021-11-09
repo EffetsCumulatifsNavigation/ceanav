@@ -254,13 +254,13 @@ cv_habitat <- function() {
   # sup <- c(sup, superficie(dat))
 
 
-  # ------------------------------------------------------
-  # Habitats floristiques : 0037
-  nm <- "0037"
-  dat <- load_temp(nm)
-  meta_temp <- meta_update(meta_temp, nm, "floristique", "Habitats floristiques", type = "Habitats floristiques")
-  habitat$floristique <- uid(dat)
-  sup <- c(sup, superficie(dat))
+  # # ------------------------------------------------------
+  # # Habitats floristiques : 0037
+  # nm <- "0037"
+  # dat <- load_temp(nm)
+  # meta_temp <- meta_update(meta_temp, nm, "floristique", "Habitats floristiques", type = "Habitats floristiques")
+  # habitat$floristique <- uid(dat)
+  # sup <- c(sup, superficie(dat))
 
 
   # ------------------------------------------------------
