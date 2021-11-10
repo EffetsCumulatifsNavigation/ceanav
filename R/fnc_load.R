@@ -161,4 +161,19 @@ load_output <- function(data_name) {
            value = st_read(files[uid], quiet = TRUE),
            envir = globalenv())
   }
+
+  ## ---------------------------------------------
+  ## GEOJSON
+  if (ext == "csv") {
+    dat <- read.csv(files[uid])
+    if (colnames(dat)[1] == "X") {
+      assign(x = data_name,
+             value = read.csv(files[uid], row.names = 1),
+             envir = globalenv())
+    } else {
+      assign(x = data_name,
+             value = read.csv(files[uid]),
+             envir = globalenv())
+    }
+  }
 }
