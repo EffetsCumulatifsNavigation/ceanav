@@ -1,3 +1,8 @@
 ## Intégrité des berges
 
-La vulnérabilité des berges à l'érosion dû aux activités maritimes ...
+Les données utilisées afin de caractériser l’intégrité des berges dans la zone d’étude offrent une caractérisation de la susceptibilité des berges à l’érosion en divisant leur état en trois niveaux d’indice d’érosion [@bernier2020; @bernier2021; @refsBernatchez]. Nous avons également distingué les berges naturelles des berges artificielles afin d’être en mesure d’attribuer une valeur supérieure aux berges naturelles (voir Portrait de la zone d’étude). Nous pouvons ainsi classer les catégories de berges selon l’importance de leur vulnérabilité, en ordre décroissant: 
+
+Naturelle - Vive (IE = 2)
+Artificielle - Vive (IE = 2)
+Naturelle - Semi-Végétalisée (IE = 1)
+Artificielle - Semi-Végétalisée (IE = 1)
