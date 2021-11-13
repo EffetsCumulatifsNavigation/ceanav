@@ -13,7 +13,7 @@ Une recherche de données a été effectuée afin de caractériser différents t
 ```{r habitatCat}
 tab <- as.data.frame(meta$dataDescription$categories)
 tab <- arrange(tab, type, francais)
-tab <- select(tab, type, francais, superficie, source)
+tab <- select(tab, type, francais, description, superficie, source)
 tab$superficie <- round(tab$superficie, 2)
 
 # Remove duplicated names, except for milieu humide subcategory
@@ -23,7 +23,7 @@ tab$francais[uid] <- "Milieu humide"
 
 tab %>%
   knitr::kable(
-    col.names = c("Catégories d'habitats", "Sous-catégories", "Superficie $km^2$", "Données utilisées$^*$"),
+    col.names = c("Catégories d'habitats", "Sous-catégories", "Description", "Superficie $km^2$", "Données utilisées$^*$"),
     row.names = FALSE,
     caption = "Catégories d'habitats considérés pour l'analyse des effets cumulatifs de la navigation dans le Saint-Laurent et le Saguenay et leur superficie totale dans la zone d'étude. $^*$Consultez les annexes 3 et 4 pour plus de détails sur les données utilisées."
   )
