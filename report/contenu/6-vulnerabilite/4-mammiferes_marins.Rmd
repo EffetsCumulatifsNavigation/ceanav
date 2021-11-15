@@ -1,3 +1,38 @@
 ## Mammifères marins
 
-La vulnérabilité des mammifères marins aux stresseurs environnementaux a été ...
+Les exercices d’évaluation de la vulnérabilité d’espèces aux effets de stresseurs se font plus rares dans le cadre d’évaluation d’effets cumulatifs, bien que certains processus d’évaluation existent tout de même [e.g. @maxwell2013; @trew2019; @ohara2021]. Ces évaluation touchaient principalement des espèces de mégafaune marine (e.g. baleines et requins) et des espèces en péril. Ces publications ne couvrent toutefois pas l’entièreté des espèces et des stresseurs visés par la présente évaluation. Elles fournissent tout de même une série de critères visant à évaluer la vulnérabilité des espèces aux stresseurs. Nous avons ainsi utilisé un processus similaire au leur afin de déterminer la vulnérabilité des mammifères marins dans le Saint-Laurent et le Saguenay aux activités maritimes.
+
+Les critères utilisés afin d’évaluer la vulnérabilité des mammifères marins aux effets des activités maritimes proviennent de @maxwell2013: 1) la fréquence des sources de stress, 2) si l’effet de la source de stress est directe ou indirecte, 3) la résistance de l’espèce aux effets de la source de stress, 4) le temps de rétablissement de l’espèce, 5) l’effet relatif sur la reproduction, et 6) l’effet relatif sur la population (Tableau \@ref(tab:vulnerabilityMM)). Nous avons ajouté deux critères à cette liste afin de considérer des particularités régionales propres au Saint-Laurent et au Saguenay, soit 7) le statut de l’espèce et 8) si l’espèce est résidente (Tableau \@ref(tab:vulnerabilityMM)).
+
+<br/>
+
+```{r vulnerabilityMM, echo = FALSE}
+meta <- read_yaml("../data/data-metadata/vulnerability_mammiferes_marins.yml")
+criteres <- meta$criteres
+tab <- list()
+lin <- numeric()
+for(i in 1:length(criteres)) {
+  dat <- meta$details[[criteres[i]]]
+  nm <- character(length(dat$description$rank))
+  nm[1] <- glue("**{dat$name}**")
+  nm[2] <- glue("*{dat$question}*")
+  crit <- as.data.frame(dat$description)
+  tab[[i]] <- cbind(nm,crit)
+  lin[i] <- length(nm)
+}
+lin <- cumsum(lin)
+tab <- dplyr::bind_rows(tab)
+
+# -----
+tab %>%
+  knitr::kable(
+    col.names = c("Critères de vulnérabilité", "Rang", "Catégories", "Description", "Exemples"),
+    row.names = FALSE,
+    caption = "Critères utilisés pour évaluer la vulnérabilité des mammifères marins aux sources de stress considérées pour l'évaluation des effets cumulatifs des activités maritimes dans le Saint-Laurent et le Saguenay. Les critères ont été adaptés de @maxwell2013, auxquels ont été ajouté les critères de statut et de résidence des espèces afin de des particularités régionales propres au Saint-Laurent et au Saguenay. "
+  ) %>%
+  kableExtra::row_spec(lin, extra_css = "border-bottom: 2px solid")
+
+
+```
+
+<br/>
