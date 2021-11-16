@@ -1,3 +1,57 @@
-## Habitats
+## Habitats floristiques et fauniques
 
-La vulnérabilité des habitats aux stresseurs environnementaux ...
+Plusieurs exercices d’évaluation de la vulnérabilité de différents types d’habitats à diverses sources de stress environnementales ont déjà été publiés au Canada [e.g. @ban2010; @clarke-murray2015a; @clarke-murray2015b] et ailleurs dans le monde [@teck2010; @kappel2012]. Un processus similaire mené par Pêches et Océans Canada est actuellement en cours afin de caractériser la vulnérabilité des habitats de l’Atlantique Ouest à une cinquantaine de sources de stress. Originellement développée par @halpern2007 afin de caractériser la vulnérabilité des habitats à l'échelle globale, cette appoche utilise des métriques d’exposition et de sensibilité afin de d'évaluer cinq critères de vulnérabilité des écosystèmes : l’échelle spatiale, la fréquence, l’impact fonctionnel, la résistance et la résilience (Tableau \@ref(tab:critereTeck)).
+
+<br/>
+
+```{r critereTeck}
+tab <- data.frame(critere = c("Échelle spatiale", "Fréquence",
+                              "Impact trophique","Résistance",
+                              "Résilience"),
+                  descr = c(
+                            "L'échelle spatiale ($km^2$) à laquelle un stresseur affecte un habitat directement et indirectement",
+                            "La fréquence annuelle (nombre / année) moyenne d'un stresseur à une localisation particulière au sein d'une région",
+                            "L'étendue de la vie marine affectée par un stresseur au sein d'un écosystème et d'une région donnée (c.-à-d. une ou plusieurs espèces, un ou plusieurs niveaux trophiques, ou un écosystème entier)",
+                            "Le degré (en %) auquel les espèces, les niveaux trophiques, ou l'état naturel d'un écosystème entier est affecté par le stresseur",
+                            "Le temps moyen (années) requis pour que l'espèce, le niveau trophique, ou la communauté entière affecté retourne à son état naturel suite à la perturbation causée par le stresseur"))
+
+tab %>%
+  knitr::kable(
+    col.names = c("Critère de vulnérabilité", "Description"),
+    row.names = FALSE,
+    caption = "Description des cinq critères de vulnérabilité utilisés pour évaluer la vulnérabilité relative des habitats à chaque stresseur [adapté de @teck2010]"
+  )
+```
+
+<br/>
+
+Ces derniers permettent l’utilisation de facteurs quantitatifs conférant une transparence supérieure à l’approche qualitative (Teck et al., 2010; Kappel et al., 2012). Les scores de vulnérabilité μ correspondent à la somme pondérée des cinq critères de vulnérabilité :
+
+μ(Di,Ej)= ΣWk∗Dji,kk=1,…,5
+<!-- TODO: formatage mathématique -->
+<!-- TODO: mieux expliquer -->
+
+où Dji,k est la valeur du stresseur i pour le critère k au sein de l’écosystème j et Wk est le poids associé au critère k de telle sorte que Wk ≥0 et ΣWk=1k=1,…,5. Ce modèle additif et linéaire assume que la vulnérabilité est monotone pour l’ensemble des critères de vulnérabilité, c.-à-d. que la vulnérabilité augmente avec une augmentation de la valeur de chaque critère. Une transformation des valeurs de Wk est nécessaire afin d’assurer que l’étendue des valeurs est comparable pour les différents critères. Cette équation nous permet ultimement de générer une matrice de scores de vulnérabilité pour l’ensemble des combinaisons stresseur-écosystème.
+
+
+<!-- TODO: Expliquer comment les matrices de vulnérabilité ont été construites. -->
+
+La vulnérabilité des habitats aux stresseurs environnementaux a été effectuée grâce à des sondage d'experts
+
+Il demeure
+
+Ces matrices de vulnérabilité offrent un point de départ à notre évaluation; en effet, l'entièreté des sources de stress, et une portion importante des habitasts considérés pour notre évaluation se retrouvent dans la liste présentée par @teck2010 et @clarke-murray2015a (voir Annexes @ref et @ref pour les correspondances).
+<!-- Sélectionner la bonne référence pour ce travail -->
+<!-- TODO: Faire vérifier la correspondance des habitats -->
+
+Nous avons utilisé les matrices de vulnérabilité issues de ces processus afin d’informer l’évaluation de la vulnérabilité des habitats pour lesquels une correspondance claire pouvait être établie (Annexe Y). Il demeure toutefois important de mentionner que les valeurs de vulnérabilité constituant ces matrices diffèrent généralement d'une région à l'autre. À cet égard, nous avons fait réviser les valeurs de vulnérabilités utilisées par des experts.
+
+<!-- TODO: Validation par des experts -->
+<!-- NOTE: explication voir working paper -->
+
+
+Les habitats sélectionnés pour la présente analyse diffèrent toutefois des classifications d'habitats habituellement utilisés pour ce type d'analyse. Les processus de consultations ont menés à l'inclusion de plusieurs types d'habitats définis par leur importance pour des espèces plutôt que par leurs caractéristiques physico-chimiques; pensons entre autres aux frayères et aux milieux où des espèces en péril ont été observées. La vulnérabilité de ces habitats ne pouvant être déterminée par le même processus, une approche alternative a été utilisée afin d'obtenir une évaluation de leur vulnérabilité relative aux effets des sources de stress considérées.
+
+La vulnérabilité de ces habitats a ainsi été évaluée à partir de critères ciblant davantage les espèces (voir section suivante sur les mammifères marins).
+
+<!-- TODO: Voir avec les mammifères marins -->
