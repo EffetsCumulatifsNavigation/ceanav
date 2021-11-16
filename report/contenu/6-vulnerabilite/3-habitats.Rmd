@@ -44,13 +44,15 @@ Ces matrices de vulnérabilité offrent un point de départ à notre évaluation
 <!-- Sélectionner la bonne référence pour ce travail -->
 <!-- TODO: Faire vérifier la correspondance des habitats -->
 
-Nous avons utilisé les matrices de vulnérabilité issues de ces processus afin d’informer l’évaluation de la vulnérabilité des habitats pour lesquels une correspondance claire pouvait être établie (Annexe Y). Il demeure toutefois important de mentionner que les valeurs de vulnérabilité constituant ces matrices diffèrent généralement d'une région à l'autre. À cet égard, nous avons fait réviser les valeurs de vulnérabilités utilisées par des experts.
+Nous avons utilisé les matrices de vulnérabilité issues de ces processus afin d’informer l’évaluation de la vulnérabilité des habitats pour lesquels une correspondance claire pouvait être établie, c.-à-d. les milieux côtiers, les milieux humides et les milieux aquatiques (Annexe Y).
+
+Il demeure toutefois important de mentionner que les valeurs de vulnérabilité constituant ces matrices diffèrent généralement d'une région à l'autre. À cet égard, nous avons fait réviser les valeurs de vulnérabilités utilisées par des experts.
 
 <!-- TODO: Validation par des experts -->
 <!-- NOTE: explication voir working paper -->
 
 
-Les habitats sélectionnés pour la présente analyse diffèrent toutefois des classifications d'habitats habituellement utilisés pour ce type d'analyse. Les processus de consultations ont menés à l'inclusion de plusieurs types d'habitats définis par leur importance pour des espèces plutôt que par leurs caractéristiques physico-chimiques; pensons entre autres aux frayères et aux milieux où des espèces en péril ont été observées. La vulnérabilité de ces habitats ne pouvant être déterminée par le même processus, une approche alternative a été utilisée afin d'obtenir une évaluation de leur vulnérabilité relative aux effets des sources de stress considérées.
+Les habitats sélectionnés pour la présente analyse diffèrent toutefois des classifications d'habitats habituellement utilisés pour ce type d'analyse. Les processus de consultations ont menés à l'inclusion de plusieurs types d'habitats définis par leur importance pour des espèces ou des commnunautés, comme les frayères et les milieux où des espèces en péril ont été observées. La vulnérabilité de ces habitats ne pouvant être déterminée par le même processus, une approche alternative a été utilisée afin d'obtenir une évaluation de leur vulnérabilité relative aux effets des sources de stress considérées.
 
 La vulnérabilité de ces habitats a ainsi été évaluée à partir de critères ciblant davantage les espèces (voir section suivante sur les mammifères marins).
 
