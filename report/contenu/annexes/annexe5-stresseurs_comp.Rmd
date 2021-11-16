@@ -62,7 +62,7 @@ tab <- data.frame(
 
 tab %>%
   knitr::kable(
-    col.names = c("Sources de stress", "Équivalences @clarke-murray2015a"),
+    col.names = c("Sources de stress", "Équivalences"),
     row.names = FALSE,
     caption = "Équivalence entre les sources de stress considérées pour l'évaluation des effets cumulatifs des activités maritimes dans le Saint-Laurent et le Saguenay et celles retrouvées dans la matrice de vulnérabilité des habitats proposée par @clark-murray2015a."
   )
