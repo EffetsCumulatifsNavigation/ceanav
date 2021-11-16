@@ -1,4 +1,4 @@
-# Annexe 3 {-}
+## Annexe 3 {-}
 
 ```{r}
 rep_annexe_data_summary()

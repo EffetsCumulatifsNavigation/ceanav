@@ -1,4 +1,4 @@
-# Annexe 2 {-}
+## Annexe 2 {-}
 
 ```{r}
 rep_annexe_contact()
