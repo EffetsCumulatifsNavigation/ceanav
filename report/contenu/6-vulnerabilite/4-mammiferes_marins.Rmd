@@ -36,3 +36,5 @@ tab %>%
 ```
 
 <br/>
+
+La  caractérisation de la vulnérabilité des baleines, aidée par [Baleine en direct](https://baleinesendirect.org/).
