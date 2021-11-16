@@ -79,7 +79,7 @@ tab %>%
 
 <br/>
 
-L'intensité des activités de dragage (Figure \@ref(fig:dragage)), de dépôts de sédiments (Figure \@ref(fig:depot)) et de dragages prévus (Figure \@ref(fig:prevus)) a été caractérisé en distribuant les volumes totaux dragués au sein de notre grille de 1 $km^2$. Pour ce faire, nous avons multiplié les volumes totaux au sein de chaque cellule $j$ de la grille d'étude par la proportion de la zone
+L'intensité des activités de dragage (Figure \@ref(fig:dragage)), de dépôts de sédiments (Figure \@ref(fig:depot)) et de dragages prévus (Figure \@ref(fig:dragageprevu)) a été caractérisé en distribuant les volumes totaux dragués au sein de notre grille de 1 $km^2$. Pour ce faire, nous avons multiplié les volumes totaux au sein de chaque cellule $j$ de la grille d'étude par la proportion de la zone
 visée par l'activité de dragage couvrant la cellule $j$:
 
 $$I_{dragage,j} = \sum_{k=1}^{n_j} V_{tot, k} * \frac{A_{j,k}}{A_{tot,k}}$$
