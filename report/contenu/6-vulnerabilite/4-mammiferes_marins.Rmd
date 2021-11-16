@@ -14,7 +14,7 @@ lin <- numeric()
 for(i in 1:length(criteres)) {
   dat <- meta$details[[criteres[i]]]
   nm <- character(length(dat$description$rank))
-  nm[1] <- glue("**{dat$name}**")
+  nm[1] <- glue("***{dat$name}***")
   nm[2] <- glue("*{dat$question}*")
   crit <- as.data.frame(dat$description)
   tab[[i]] <- cbind(nm,crit)
