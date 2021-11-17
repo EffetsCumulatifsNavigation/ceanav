@@ -44,13 +44,13 @@ ana_cumulative_stresseurs <- function() {
   dragage <- stressor_cumul(dr, "dragage", normaliser = TRUE)
   navigation <- stressor_cumul(dr, "navigation", normaliser = TRUE)
   peche_commerciale <- stressor_cumul(dr, "peche_commerciale", normaliser = TRUE)
-  port <- stressor_cumul(dr, "port", normaliser = TRUE)
+  pollution_maritime <- stressor_cumul(dr, "pollution_maritime", normaliser = TRUE)
 
   # -----
   cumulative_st <- cumulativeFootprint(dr)
 
   # -----
-  cumulative_st_norm <- ancrage + deversement + dragage + navigation + peche_commerciale + port
+  cumulative_st_norm <- ancrage + deversement + dragage + navigation + peche_commerciale + pollution_maritime
 
   # -----
   cumulative_st_ancrage <- stressor_cumul(dr, "ancrage")
@@ -58,7 +58,7 @@ ana_cumulative_stresseurs <- function() {
   cumulative_st_dragage <- stressor_cumul(dr, "dragage")
   cumulative_st_navigation <- stressor_cumul(dr, "navigation")
   cumulative_st_peche_commerciale <- stressor_cumul(dr, "peche_commerciale")
-  cumulative_st_port <- stressor_cumul(dr, "port")
+  cumulative_st_pollution_maritime <- stressor_cumul(dr, "pollution_maritime")
 
   # -----
   cumulative_stresseurs <- cbind(
@@ -70,7 +70,7 @@ ana_cumulative_stresseurs <- function() {
     cumulative_st_dragage,
     cumulative_st_navigation,
     cumulative_st_peche_commerciale,
-    cumulative_st_port
+    cumulative_st_pollution_maritime
    )
 
 

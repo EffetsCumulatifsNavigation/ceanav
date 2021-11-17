@@ -21,7 +21,7 @@ rep_portrait_data_description <- function(data_id, output_folder) {
   # Proper names
   # TODO: eventually simply this... it's not ideal...
   suffix <- data_id
-  st <- c("ancrage","deversement","dragage","naufrage","navigation","peche_commerciale","rejet")
+  st <- c("ancrage","deversement","dragage","naufrage","navigation","peche_commerciale","rejet","pollution_maritime")
   cv <- c("berge","habitat","mammiferes_marins","site")
   if (data_id %in% st) data_id <- glue("int_st_{data_id}")
   if (data_id %in% cv) data_id <- glue("int_cv_{data_id}")

@@ -38,7 +38,7 @@ fig_cumulative_stresseurs <- function() {
     "cumulative_st_dragage",
     "cumulative_st_navigation",
     "cumulative_st_peche_commerciale",
-    "cumulative_st_port"
+    "cumulative_st_pollution_maritime"
   )
 
   # -----
@@ -50,7 +50,7 @@ fig_cumulative_stresseurs <- function() {
     "Dragage cumulés",
     "Navigation cumulée",
     "Pêche commerciale cumulée",
-    "Navigation portuaire cumulés"
+    "Pollution maritime cumulée"
   )
 
   # -----

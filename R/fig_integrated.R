@@ -26,7 +26,7 @@ fig_integrated <- function(data_id) {
 
   # Metadata
   meta_id <- data_id
-  st <- c("ancrage","deversement","dragage","naufrage","navigation","peche_commerciale","rejet")
+  st <- c("ancrage","deversement","dragage","naufrage","navigation","peche_commerciale","rejet","pollution_maritime")
   cv <- c("berge","habitat","mammiferes_marins","site")
   if (meta_id %in% st) meta_id <- glue("int_st_{meta_id}")
   if (meta_id %in% cv) meta_id <- glue("int_cv_{meta_id}")

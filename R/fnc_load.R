@@ -95,7 +95,7 @@ load_contact <- function(data_id) {
 #' @export
 load_integrated <- function(data_name) {
   # Possible values
-  st <- c("navigation", "peche_commerciale", "deversement", "dragage", "ancrage", "rejet", "epaves", "port")
+  st <- c("navigation", "peche_commerciale", "deversement", "dragage", "ancrage", "rejet", "epaves", "pollution_maritime")
   cv <- c("habitat", "site", "berge", "mammiferes_marins", "quality")
   nm <- paste(c(st, cv), collapse = ", ")
   if (!data_name %in% c(st,cv)) stop(glue("Les données identifiées ne sont pas disponibles. Utilisez plutôt un des identifiants suivants: {nm}"))
