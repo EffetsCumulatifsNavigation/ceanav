@@ -7,4 +7,17 @@ A l’instar de @halpern2008, la pollution marine a été caractérisée en comb
 
 Dans le cadre de cette étude, l’ensemble des stresseurs caractérisés touchentdifférentes facettes des activités maritimes et pourraient avoir des effets néfastes sur la qualité de l’eau.
 
-Nous avons ainsi caractérisé la 
+Nous avons ainsi caractérisé la
+
+
+La caractérisation de la pollution maritime correspond au risque de pollution associé aux activités de navigation et de la pollution qui en résulte dans la zone d'étude via des rejets opérationnels, des fuites de gaz, la décharge de déchets, etc. En l'absence de données exhaustive sur les rejets opérationnels et de la difficulté d'établir un lien direct entre la qualité de l'eau et les activités maritimes cumulées, l'indice de pollution maritime nous sert de proxy visant à identifier les milieux les plus à risque de pollution issues des activités maritimes.
+
+L'indice de pollution maritime est obtenu en combinant l'intensité relative de tous les stresseurs associés directement à une activités de navigation, *i.e.* les sites d'ancrage, les activités de dragage, la navigation et la pêche commerciale.
+
+Cette évaluation correspond à l'exposition cumulée normalisée pour les sources de stress sélectionnées (voir section X)
+
+$$\sum_{S} \sum_{s \in S} \frac{1}{|S|} I_{s,x}$$
+
+<!--TODO: ajouter nom de section -->
+
+Les déversements accidentels n'y sont pas inclus puisqu'ils décrivent déjà explicitement des problématiques de déversements toxiques dans l'environnement plutôt qu'un stresseur relié à une activités de navigation.
