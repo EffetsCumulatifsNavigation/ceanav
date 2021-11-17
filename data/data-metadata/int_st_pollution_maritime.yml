@@ -1,0 +1,18 @@
+title: Pollution maritime
+description: Intensité de la pollution maritime dans le Saint-Laurent et le Saguenay
+id: peche_commerciale
+rawData: 0015,0018,0019,0020,0021,0027,0028,0029,0041,0046,0047,0048,0049,0050,0052
+dataDescription:
+  units: NA
+  spatial:
+    resolution: 1km^2
+    extent:
+    - -413830.0813864
+    - 168655.5276494
+    - 130169.9186136
+    - 594655.5276494
+  categories:
+    accronyme: pollution_maritime
+    francais: Pollution maritime
+    source: 0015,0018,0019,0020,0021,0027,0028,0029,0041,0046,0047,0048,0049,0050,0052
+    mdref: pollutionmaritime
