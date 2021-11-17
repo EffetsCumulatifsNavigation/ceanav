@@ -21,6 +21,7 @@ ana_stresseurs_raw <- function() {
   load_integrated("dragage")
   load_integrated("navigation")
   load_integrated("peche_commerciale")
+  load_integrated("pollution_maritime")
 
   # -----
   change_colnames <- function(x, suffix) {
@@ -35,6 +36,7 @@ ana_stresseurs_raw <- function() {
   dragage <- change_colnames(dragage, "dragage")
   peche_commerciale <- change_colnames(peche_commerciale, "peche_commerciale")
   navigation <- change_colnames(navigation, "navigation")
+  pollution_maritime <- change_colnames(pollution_maritime, "pollution_maritime")
 
   # -----
   stresseurs_raw <- cbind(
@@ -43,7 +45,8 @@ ana_stresseurs_raw <- function() {
     deversement,
     dragage,
     peche_commerciale,
-    navigation
+    navigation,
+    pollution_maritime
   )
 
 

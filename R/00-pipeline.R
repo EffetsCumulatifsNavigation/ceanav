@@ -120,6 +120,9 @@ pipeline <- function(
     st_navigation()
     st_peche_commerciale()
     # st_rejets()
+
+    # This one MUST be run last, as it is an integrated of integrated stressors
+    st_pollution_maritime()
   }
 
 
