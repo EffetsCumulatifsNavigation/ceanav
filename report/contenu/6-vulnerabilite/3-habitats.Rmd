@@ -1,5 +1,7 @@
 ## Habitats floristiques et fauniques
 
+### Habitats
+
 Plusieurs exercices d’évaluation de la vulnérabilité de différents types d’habitats à diverses sources de stress environnementales ont déjà été publiés au Canada [e.g. @ban2010; @clarkemurray2015a; @clarkemurray2015b] et ailleurs dans le monde [@teck2010; @kappel2012]. Un processus similaire mené par Pêches et Océans Canada est actuellement en cours afin de caractériser la vulnérabilité des habitats de l’Atlantique Ouest à une cinquantaine de sources de stress. Originellement développée par @halpern2007 afin de caractériser la vulnérabilité des habitats à l'échelle globale, cette appoche utilise des métriques d’exposition et de sensibilité afin de d'évaluer cinq critères de vulnérabilité des écosystèmes : l’échelle spatiale, la fréquence, l’impact fonctionnel, la résistance et la résilience (Tableau \@ref(tab:critereTeck)).
 
 <br/>
@@ -25,32 +27,24 @@ tab %>%
 
 <br/>
 
-Ces derniers permettent l’utilisation de facteurs quantitatifs conférant une transparence supérieure à l’approche qualitative (Teck et al., 2010; Kappel et al., 2012). Les scores de vulnérabilité μ correspondent à la somme pondérée des cinq critères de vulnérabilité :
+Ces derniers permettent l’utilisation de facteurs quantitatifs conférant une transparence supérieure à l’approche qualitative (Teck et al., 2010; Kappel et al., 2012). Les scores de vulnérabilité $\mu$ correspondent à la somme pondérée des cinq critères de vulnérabilité :
 
-μ(Di,Ej)= ΣWk∗Dji,kk=1,…,5
-<!-- TODO: formatage mathématique -->
-<!-- TODO: mieux expliquer -->
+$$\mu_{D_i,E_j} = \sum_{k = 1,...,5} W_k * D^j_{i,k}$$
 
-où Dji,k est la valeur du stresseur i pour le critère k au sein de l’écosystème j et Wk est le poids associé au critère k de telle sorte que Wk ≥0 et ΣWk=1k=1,…,5. Ce modèle additif et linéaire assume que la vulnérabilité est monotone pour l’ensemble des critères de vulnérabilité, c.-à-d. que la vulnérabilité augmente avec une augmentation de la valeur de chaque critère. Une transformation des valeurs de Wk est nécessaire afin d’assurer que l’étendue des valeurs est comparable pour les différents critères. Cette équation nous permet ultimement de générer une matrice de scores de vulnérabilité pour l’ensemble des combinaisons stresseur-écosystème.
+où $D^j_{i,k}$ est la valeur du stresseur $i$ pour le critère $k$ au sein de l’écosystème $j$ et $W_k$ est le poids associé au critère $k$, avec la somme de tous les poids égal à 1. Le poids $W_k$ permet ainsi de pondérer la valeur attribuée aux critères individuels selon leur importance individuelle. Ce modèle additif et linéaire assume que la vulnérabilité est monotone pour l’ensemble des critères de vulnérabilité, c.-à-d. que la vulnérabilité augmente avec une augmentation de la valeur de chaque critère. Une transformation des valeurs de $W_k$ est nécessaire afin d’assurer que l’étendue des valeurs est comparable pour les différents critères. Cette équation permet ultimement de générer une matrice de scores de vulnérabilité pour l’ensemble des combinaisons stresseur-écosystème.
 
-
-<!-- TODO: Expliquer comment les matrices de vulnérabilité ont été construites. -->
-
-La vulnérabilité des habitats aux stresseurs environnementaux a été effectuée grâce à des sondage d'experts
-
-Il demeure
-
-Ces matrices de vulnérabilité offrent un point de départ à notre évaluation; en effet, l'entièreté des sources de stress, et une portion importante des habitasts considérés pour notre évaluation se retrouvent dans la liste présentée par @teck2010 et @clarkemurray2015a (voir Annexes @ref et @ref pour les correspondances).
+@teck2010 a fait appel à des sondages d'experts afin d'évaluer, pour chaque combinaison stresseurs-habitats, les valeurs et le poids associé à chaque critère de vulnérabilité. Au total, 107 experts on permis d'évaluer la vulnérabilité relative de 19 types d'habitats à 53 stresseurs environnementaux. La matrice de vulnérabilité résultante a été réutilisée et adaptée à de mainte reprises depuis [e.g. @ban2010; @clarkemurray2015a]. Ces matrices de vulnérabilité offrent également un point de départ à notre évaluation; en effet, l'entièreté des sources de stress, et une portion importante des habitats considérés pour notre évaluation se retrouvent dans la liste présentée par @teck2010 et @clarkemurray2015a (voir Annexes @ref et @ref pour les correspondances).
 <!-- Sélectionner la bonne référence pour ce travail -->
 <!-- TODO: Faire vérifier la correspondance des habitats -->
 
 Nous avons utilisé les matrices de vulnérabilité issues de ces processus afin d’informer l’évaluation de la vulnérabilité des habitats pour lesquels une correspondance claire pouvait être établie, c.-à-d. les milieux côtiers, les milieux humides et les milieux aquatiques (Annexe Y).
 
-Il demeure toutefois important de mentionner que les valeurs de vulnérabilité constituant ces matrices diffèrent généralement d'une région à l'autre. À cet égard, nous avons fait réviser les valeurs de vulnérabilités utilisées par des experts.
+<!-- Il demeure toutefois important de mentionner que les valeurs de vulnérabilité constituant ces matrices diffèrent généralement d'une région à l'autre. À cet égard, nous avons fait réviser les valeurs de vulnérabilités utilisées par des experts. -->
 
 <!-- TODO: Validation par des experts -->
 <!-- NOTE: explication voir working paper -->
 
+### Sites d'importance pour les espèces
 
 Les habitats sélectionnés pour la présente analyse diffèrent toutefois des classifications d'habitats habituellement utilisés pour ce type d'analyse. Les processus de consultations ont menés à l'inclusion de plusieurs types d'habitats définis par leur importance pour des espèces ou des commnunautés, comme les frayères et les milieux où des espèces en péril ont été observées. La vulnérabilité de ces habitats ne pouvant être déterminée par le même processus, une approche alternative a été utilisée afin d'obtenir une évaluation de leur vulnérabilité relative aux effets des sources de stress considérées.
 
