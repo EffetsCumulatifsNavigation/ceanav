@@ -1,6 +1,6 @@
 ## Habitats floristiques et fauniques
 
-Plusieurs exercices d’évaluation de la vulnérabilité de différents types d’habitats à diverses sources de stress environnementales ont déjà été publiés au Canada [e.g. @ban2010; @clarke-murray2015a; @clarke-murray2015b] et ailleurs dans le monde [@teck2010; @kappel2012]. Un processus similaire mené par Pêches et Océans Canada est actuellement en cours afin de caractériser la vulnérabilité des habitats de l’Atlantique Ouest à une cinquantaine de sources de stress. Originellement développée par @halpern2007 afin de caractériser la vulnérabilité des habitats à l'échelle globale, cette appoche utilise des métriques d’exposition et de sensibilité afin de d'évaluer cinq critères de vulnérabilité des écosystèmes : l’échelle spatiale, la fréquence, l’impact fonctionnel, la résistance et la résilience (Tableau \@ref(tab:critereTeck)).
+Plusieurs exercices d’évaluation de la vulnérabilité de différents types d’habitats à diverses sources de stress environnementales ont déjà été publiés au Canada [e.g. @ban2010; @clarkemurray2015a; @clarkemurray2015b] et ailleurs dans le monde [@teck2010; @kappel2012]. Un processus similaire mené par Pêches et Océans Canada est actuellement en cours afin de caractériser la vulnérabilité des habitats de l’Atlantique Ouest à une cinquantaine de sources de stress. Originellement développée par @halpern2007 afin de caractériser la vulnérabilité des habitats à l'échelle globale, cette appoche utilise des métriques d’exposition et de sensibilité afin de d'évaluer cinq critères de vulnérabilité des écosystèmes : l’échelle spatiale, la fréquence, l’impact fonctionnel, la résistance et la résilience (Tableau \@ref(tab:critereTeck)).
 
 <br/>
 
@@ -40,7 +40,7 @@ La vulnérabilité des habitats aux stresseurs environnementaux a été effectu�
 
 Il demeure
 
-Ces matrices de vulnérabilité offrent un point de départ à notre évaluation; en effet, l'entièreté des sources de stress, et une portion importante des habitasts considérés pour notre évaluation se retrouvent dans la liste présentée par @teck2010 et @clarke-murray2015a (voir Annexes @ref et @ref pour les correspondances).
+Ces matrices de vulnérabilité offrent un point de départ à notre évaluation; en effet, l'entièreté des sources de stress, et une portion importante des habitasts considérés pour notre évaluation se retrouvent dans la liste présentée par @teck2010 et @clarkemurray2015a (voir Annexes @ref et @ref pour les correspondances).
 <!-- Sélectionner la bonne référence pour ce travail -->
 <!-- TODO: Faire vérifier la correspondance des habitats -->
 
