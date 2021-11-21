@@ -148,7 +148,7 @@ cv_habitat <- function() {
   # Zostères : 0001, 0002, 0003
   nm <- c("0001", "0002", "0003")
   dat <- load_temp(nm)
-  meta_temp <- meta_update(meta_temp, nm, "zostere", "Zostères", type = "Milieux aquatiques")
+  meta_temp <- meta_update(meta_temp, nm, "zostere", "Zostères", descr = "Distribution de la zostère marine (*Zostera marina*)", type = "Milieux aquatiques")
   habitat$zostere <- uid(dat)
   sup <- c(sup, superficie(dat))
 
@@ -156,7 +156,7 @@ cv_habitat <- function() {
   # Zones inondables : 0013, 0014
   nm <- c("0013", "0014")
   dat <- load_temp(nm)
-  meta_temp <- meta_update(meta_temp, nm, "zone_inondable", "Zones inondables", type = "Zones inondables")
+  meta_temp <- meta_update(meta_temp, nm, "zone_inondable", "Zones inondables", descr = "Territoires ayant une probabilité élevée d'être inondés selon une récurrence des crues sur 2 ans, 20 ans ou sur 100 ans", type = "Zones inondables")
   habitat$zone_inondable <- uid(dat)
   sup <- c(sup, superficie(dat))
 
@@ -215,7 +215,7 @@ cv_habitat <- function() {
   # Sites d'alevinage : 0009
   nm <- "0009"
   dat <- load_temp(nm)
-  meta_temp <- meta_update(meta_temp, nm, "site_alevinage", "Habitats d'alevinage", type = "Habitats fauniques")
+  meta_temp <- meta_update(meta_temp, nm, "site_alevinage", "Habitats d'alevinage", descr = "Sites d'alimentation et de protection pour les stades de vie initiaux des poissons (*e.g.* larves, alevins, juvéniles)", type = "Habitats fauniques")
   habitat$site_alevinage <- uid(dat)
   sup <- c(sup, superficie(dat))
 
@@ -223,7 +223,7 @@ cv_habitat <- function() {
   # Frayères : 0010
   nm <- "0010"
   dat <- load_temp(nm)
-  meta_temp <- meta_update(meta_temp, nm, "frayere", "Frayères", type = "Habitats fauniques")
+  meta_temp <- meta_update(meta_temp, nm, "frayere", "Frayères", descr = "Sites de reproduction où des poissons femelles pondent des oeufs pour fécondation par les mâles", type = "Habitats fauniques")
   habitat$frayere <- uid(dat)
   sup <- c(sup, superficie(dat))
 
@@ -267,7 +267,7 @@ cv_habitat <- function() {
   # Colonies d'oiseaux : 0043, 0058
   nm <- c("0043", "0058")
   dat <- load_temp(nm)
-  meta_temp <- meta_update(meta_temp, nm, "oiseaux", "Habitats importants pour les oiseaux", type = "Habitats fauniques")
+  meta_temp <- meta_update(meta_temp, nm, "oiseaux", "Habitats importants pour les oiseaux", descr = "Sites connus d'importance pour les oiseaux marins", type = "Habitats fauniques")
   habitat$oiseaux <- uid(dat)
   sup <- c(sup, superficie(dat))
 
@@ -284,7 +284,7 @@ cv_habitat <- function() {
   # Pétoncle uniquement dans l'estuaire, donc considation de la mactre uniquement (0057)
   nm <- "0057"
   dat <- load_temp(nm)
-  meta_temp <- meta_update(meta_temp, nm, "gisement_coquilliers", "Gisements coquilliers", type = "Milieux aquatiques")
+  meta_temp <- meta_update(meta_temp, nm, "gisement_coquilliers", "Gisements coquilliers", descr = "Gisements connus et exploités de mactre de Stimpson des eaux côtières du Québec", type = "Milieux aquatiques")
   habitat$gisement_coquilliers <- uid(dat)
   sup <- c(sup, superficie(dat))
 

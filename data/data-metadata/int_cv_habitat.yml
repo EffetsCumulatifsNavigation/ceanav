@@ -148,8 +148,9 @@ dataDescription:
     - Espèces à statut
     - Espèces à statut
     description:
-    - ''
-    - ''
+    - Distribution de la zostère marine (*Zostera marina*)
+    - Territoires ayant une probabilité élevée d'être inondés selon une récurrence
+      des crues sur 2 ans, 20 ans ou sur 100 ans
     - Milieu humide dont le niveau d’eau est inférieur à 2 m et présentant des plantes
       aquatiques flottantes ou submergées ainsi que des plantes émergentes dont le
       couvert fait moins de 25 % de la superficie du milieu.
@@ -159,10 +160,12 @@ dataDescription:
     - Milieu humide sur dépôt minéral, dominé par une végétation ligneuse arbustive
       ou arborescente, avec plus de 25 % de couvert.
     - Regroupe les milieux humides dont le type est inconnu.
-    - ''
-    - ''
-    - ''
-    - ''
+    - Sites d'alimentation et de protection pour les stades de vie initiaux des poissons
+      (*e.g.* larves, alevins, juvéniles)
+    - Sites de reproduction où des poissons femelles pondent des oeufs pour fécondation
+      par les mâles
+    - Sites connus d'importance pour les oiseaux marins
+    - Gisements connus et exploités de mactre de Stimpson des eaux côtières du Québec
     - Dépôt non consolidé sans falaise
     - Roche consolidée sans falaise
     - Berge de roc sans escarpement
