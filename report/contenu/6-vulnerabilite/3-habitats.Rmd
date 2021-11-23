@@ -39,9 +39,9 @@ où $D^j_{i,k}$ est la valeur du stresseur $i$ pour le critère $k$ au sein de l
 
 Des modifications mineures ont cependant été apportées aux valeurs de vulnérabilité relevées par @kappel2012. Premièrement, les valeurs de vulnérabilité attribuées aux milieux humides ont été modifiées afin de capturer convenablement la finesse du jeu de données disponible pour notre étude. En effet, les milieux humides caractérisés témoignent de la nature étagée des milieux humides, avec les milieux humides en eau peu profonde, suivie des marais, puis des marécages, diminuant ainsi progressivement l'exposition potentielle de ces milieux aux sources de stress d'origine marine. Nous avons ainsi diminué la vulnérabilité des milieux humides proportionnellement par un facteur de 5% pour les marais et de 10% pour les marécages face à l'ensemble des sources de stress. Nous avons conservé l'évaluation de @kappel2012 pour la catégorie d'habitat *milieu humide* contenant des milieux humides dont le type est inconnu par principe de précaution.
 
-Deuxièmement, les déversements accidentels ont été catégorisés afin de différencier les déversements d'hydrocarbures des autres types de déversements. Nous diminuons ainsi les valeurs de vulnérabilité aux déversements par un facteur de 10% pour les déversements de type *autres*. Tout comme pour les milieux humides, nous avons conservé la valeur de vulnérabilité intacte pour les déversements dont le contenu est inconnu par principe de précaution. 
+Deuxièmement, les déversements accidentels ont été catégorisés afin de différencier les déversements d'hydrocarbures des autres types de déversements. Nous diminuons ainsi les valeurs de vulnérabilité aux déversements par un facteur de 10% pour les déversements de type *autres*. Tout comme pour les milieux humides, nous avons conservé la valeur de vulnérabilité intacte pour les déversements dont le contenu est inconnu par principe de précaution.
 
-Troisièmement, les activités de dragage
+
 
 
 <!-- Il demeure toutefois important de mentionner que les valeurs de vulnérabilité constituant ces matrices diffèrent généralement d'une région à l'autre. À cet égard, nous avons fait réviser les valeurs de vulnérabilités utilisées par des experts. -->
