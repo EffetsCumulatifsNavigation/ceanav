@@ -38,3 +38,5 @@ tab %>%
 <br/>
 
 La  caractérisation de la vulnérabilité des baleines, aidée par [Baleine en direct](https://baleinesendirect.org/).
+
+<!-- Une justification référencée est fournie avec les scores de vulnérabilité pour les scores de vulnérabilité qui ne pas intuitifs à partir de connaissances écologiques générales (*e.g.* un bateau immobile n'entraînera pas la mort d'un mammifère marin, outside of a freak accident) -->

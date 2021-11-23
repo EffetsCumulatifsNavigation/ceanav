@@ -37,9 +37,11 @@ où $D^j_{i,k}$ est la valeur du stresseur $i$ pour le critère $k$ au sein de l
 <!-- Sélectionner la bonne référence pour ce travail -->
 <!-- TODO: Faire vérifier la correspondance des habitats -->
 
-Des modifications mineures ont cependant été apportées aux valeurs de vulnérabilité relevées par @kappel2012. Premièrement, les valeurs de vulnérabilité attribuées aux milieux humides ont été modifiées afin de capturer convenablement la finesse du jeu de données disponible pour notre étude. En effet, les milieux humides caractérisés témoignent de la nature étagée des milieux humides, avec les milieux humides en eau peu profonde, suivie des marais, puis des marécages, diminuant ainsi progressivement l'exposition potentielle de ces milieux aux sources de stress d'origine marine. Nous avons ainsi diminué la vulnérabilité des milieux humides proportionnellement par un facteur de 5% pour les marais et de 10% pour les marécages face à l'ensemble des sources de stress. Nous avons conservé l'évaluation de @kappel2012 pour la catégorie d'habitat *milieu humide* contenant des milieux humides dont le type est inconnu par principe de précaution.
+Des modifications mineures ont cependant été apportées aux valeurs de vulnérabilité relevées par @kappel2012. Premièrement, les valeurs de vulnérabilité attribuées aux milieux humides ont été modifiées afin de capturer convenablement la finesse du jeu de données disponible pour notre étude. En effet, les milieux humides caractérisés témoignent de la nature étagée des milieux humides, avec les milieux humides en eau peu profonde, suivie des marais, puis des marécages, diminuant ainsi progressivement l'exposition potentielle de ces milieux aux sources de stress d'origine marine. Nous avons ainsi diminué la vulnérabilité des milieux humides proportionnellement par un facteur de 5% pour les marais et de 10% pour les marécages face à l'ensemble des sources de stress. Nous avons conservé l'évaluation de @kappel2012 pour la catégorie d'habitat *milieu humide* contenant des milieux humides dont le type est inconnu par principe de précaution. Deuxièmement, les déversements accidentels ont été catégorisés afin de différencier les déversements d'hydrocarbures des autres types de déversements. Nous diminuons ainsi les valeurs de vulnérabilité aux déversements par un facteur de 10% pour les déversements de type *autres*. Tout comme pour les milieux humides, nous avons conservé la valeur de vulnérabilité intacte pour les déversements dont le contenu est inconnu par principe de précaution. La matrice de vulnérabilité résultante peut être consultée au Tableau \@ref(tab:vulnerabiliteHabitat).
 
-Deuxièmement, les déversements accidentels ont été catégorisés afin de différencier les déversements d'hydrocarbures des autres types de déversements. Nous diminuons ainsi les valeurs de vulnérabilité aux déversements par un facteur de 10% pour les déversements de type *autres*. Tout comme pour les milieux humides, nous avons conservé la valeur de vulnérabilité intacte pour les déversements dont le contenu est inconnu par principe de précaution.
+```{r vulnerabiliteHabitat}
+print("Préparer tableau")
+```
 
 
 
@@ -49,7 +51,7 @@ Deuxièmement, les déversements accidentels ont été catégorisés afin de dif
 <!-- TODO: Validation par des experts -->
 <!-- NOTE: explication voir working paper -->
 
-### Sites d'importance pour les espèces
+### Sites d'importance pour les espèces fauniques et floristiques
 
 Les habitats sélectionnés pour la présente analyse diffèrent toutefois des classifications d'habitats habituellement utilisés pour ce type d'analyse. Les processus de consultations ont menés à l'inclusion de plusieurs types d'habitats définis par leur importance pour des espèces ou des commnunautés, comme les frayères et les milieux où des espèces en péril ont été observées. La vulnérabilité de ces habitats ne pouvant être déterminée par le même processus, une approche alternative a été utilisée afin d'obtenir une évaluation de leur vulnérabilité relative aux effets des sources de stress considérées.
 
