@@ -43,3 +43,15 @@ bbox:
     xmax: -310000
     ymin: 225000
     ymax: 275000
+stresseurs:
+  - "ancrage"
+  - "deversement"
+  - "dragage"
+  - "navigation"
+  - "peche_commerciale"
+  - "pollution_maritime"
+composantes_valorisees:
+  - "berge"
+  - "habitat"
+  - "mammiferes_marins"
+  - "site"

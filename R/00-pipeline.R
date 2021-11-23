@@ -123,6 +123,9 @@ pipeline <- function(
 
     # This one MUST be run last, as it is an integrated of integrated stressors
     st_pollution_maritime()
+
+    # Metadata for stressors and valued components
+    metadata_st_cv()
   }
 
 
