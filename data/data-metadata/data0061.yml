@@ -1,0 +1,9 @@
+data_description:
+  id: "0061"
+  name: "Vulnerability scores for 58 stressors in 15 ecosystems"
+  description: "Matrix of vulnerability scores for 58 different types of stressors in 15 types of intertidal, subtidal and offshore ecosystems by Kappel et al. (2012)."
+  access_date: 2021-11-24
+  contact_id: "0054"
+  availability: "open source"
+  citation:
+    - "Kappel, Halpern, and Napoli. (2012, January) Mapping Cumulative Impacts of Human Activities on Marine Ecosystems (03.NCEAS.12) Boston: SeaPlan."
