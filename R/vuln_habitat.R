@@ -11,7 +11,7 @@
 #' @details Cette fonction génère la matrice de vulnérabilité pour les habitats
 #'
 
-vulnerability_habitat <- function() {
+vuln_habitat <- function() {
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   # Data import
   # ------------------------------------

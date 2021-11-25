@@ -8,6 +8,7 @@ pipeline(
   pipeline_metadata = FALSE,
   pipeline_data = FALSE,
   pipeline_integration = FALSE,
+  pipeline_vulnerability = FALSE,
   pipeline_analysis = FALSE,
   pipeline_figures = FALSE,
   pipeline_fiches = FALSE,

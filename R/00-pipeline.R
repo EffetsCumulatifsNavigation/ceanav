@@ -13,6 +13,7 @@ pipeline <- function(
   pipeline_metadata = FALSE,
   pipeline_data = FALSE,
   pipeline_integration = FALSE,
+  pipeline_vulnerability = FALSE,
   pipeline_analysis = FALSE,
   pipeline_figures = FALSE,
   pipeline_fiches = FALSE,
@@ -129,6 +130,18 @@ pipeline <- function(
     metadata_st_cv()
   }
 
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~
+  if (pipeline_vulnerability) {
+    # Each valued component
+    # vuln_berge()
+    vuln_habitat()
+    # vuln_mammiferes_marins()
+    # vuln_sites_faune_flore()
+    # vuln_sites_interet()
+
+    # Integrate all
+    # vulnerability()
+  }
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~
   if (pipeline_analysis) {
