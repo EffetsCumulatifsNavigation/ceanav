@@ -133,7 +133,7 @@ pipeline <- function(
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~
   if (pipeline_vulnerability) {
     # Each valued component
-    # vuln_berge()
+    vuln_berge()
     vuln_habitat()
     # vuln_mammiferes_marins()
     # vuln_faune_flore()
