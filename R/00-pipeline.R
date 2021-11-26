@@ -140,7 +140,7 @@ pipeline <- function(
     # vuln_sites_interet()
 
     # Integrate all
-    # vulnerability()
+    # vulnerability_matrix()
   }
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~
