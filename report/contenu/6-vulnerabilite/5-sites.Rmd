@@ -1,10 +1,5 @@
 ## Sites d’intérêt culturels, patrimoniaux et archéologiques
 
-L'évaluation de la vulnérabilité des sites d'intérêt culturels, patrimoniaux et archéologiques a été
+L'identification des sites d'intérêt culturels, patrimoniaux et archéologiques a déjà fait appel à une priorisation des sites jugés importants pour les communautés locales et pour les Premières Nations. À cet égard et après discussion avec plusieurs représentants des communautés, nous avons jugé qu'il serait inadéquat d'attribuer un score de vulnérabilité aux sites identifiés. En effet, attribuer une valeur de vulnérabilité serait l'équivalent d'un exercice de priorisation des sites entre eux. Ce processus s'avèrerait nécessairement subjectif, surtout considérant que plusieurs communautés différentes ont fourni des données pour cet exercice.
 
-
-Nous avons ainsi opté pour une valeur de vulnérabilité unique pour l'ensemble des sites d'intérêt identifiés.
-
-Cette décision a été prises suites à de multiples conversations avec des représentants locaux
-
-L'évaluation des effets cumulatifs sur les sites d'intérêt est ainsi équivalente à l'évaluation de l'exposition cumulée de cette composante valorisée.
+Nous attribuons ainsi une valeur de vulnérabilité unique égale à 1 pour l'ensemble des sites identifiés. Cette décision implique que les résultats ciblant uniquement la composante valorisée des sites d'intérêt correspondent aux résultats de l'exposition cumulée (voir section @ref). Ce n'est toutefois pas le cas pour l'évaluation globale, puisque l'ensemble des sites reçoivent un score de vulnérabilité maximal, ce qui n'est pas le cas pour les autres composantes valorisées considérées au sein de cette évaluation. En termes relatifs, la vulnérabilité des sites d'intérêt sont ainsi globalement considérés supérieurs à la majorité des autres composantes valorisées incluses à l'évaluation.
