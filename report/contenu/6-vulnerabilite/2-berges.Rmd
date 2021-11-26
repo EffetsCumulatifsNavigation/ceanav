@@ -1,8 +1,18 @@
 ## Intégrité des berges
 
-Les données utilisées afin de caractériser l’intégrité des berges dans la zone d’étude offrent une caractérisation de la susceptibilité des berges à l’érosion en divisant leur état en trois niveaux d’indice d’érosion [@bernier2020; @bernier2021; @refsBernatchez]. Nous avons également distingué les berges naturelles des berges artificielles afin d’être en mesure d’attribuer une valeur supérieure aux berges naturelles (voir Portrait de la zone d’étude). Nous pouvons ainsi classer les catégories de berges selon l’importance de leur vulnérabilité, en ordre décroissant: 
+Plusieurs facteurs de stress d'origines anthropiques et naturelles s'ajoutent aux mécanismes naturels géomorphologiques qui régissent la dynamique d'érosion des berges.
+<!-- (Gregory 2006; Best 2019; Goudie 2020; Pi egay et al. 2020; Wohl 2020). -->
+Du côté des pressions anthropiques, les facteurs exerçant une influence particulières sur l'érosion des berges sont le batillage causé par le traffic maritime, la gestion des débits, le dragage, l'artificialisation des berges et les infrastructures et activités côtières [@bernier2020; @bernier2021]. Les changements climatiques peuvent également influencer l'érosion des berges en modifiant la dynamique d'inondation et les débits d'eau [@bernier2020; @bernier2021]. Dans le cadre de notre évaluation, la navigation et le dragage sont ainsi les sources de stress reliées aux activités maritimes ayant un lien établi à l'érosion des berges. Nous avons ainsi considéré que la vulnérabilité des berges à l'érosion faces aux autres activités maritimes était égale à 0.
 
-Naturelle - Vive (IE = 2)
-Artificielle - Vive (IE = 2)
-Naturelle - Semi-Végétalisée (IE = 1)
-Artificielle - Semi-Végétalisée (IE = 1)
+Les scores de vulnérabilité attribué à la navigation et au dragage ont été informés directement par les données utilisées afin de caractériser l’intégrité des berges dans la zone d’étude. Ces dernières offrent une caractérisation de la susceptibilité des berges à l’érosion en divisant leur état en trois niveaux d’indice d’érosion [@bernier2020; @bernier2021; @refsBernatchez]. Nous avons également distingué les berges naturelles des berges artificielles afin d’être en mesure d’attribuer une valeur supérieure aux berges naturelles (voir Portrait de la zone d’étude).
+
+Nous pouvons ainsi classer les catégories de berges selon l’importance de leur vulnérabilité, pour lesquelles nous avons assigné une vulnérabilité relative décroissant par saut de 10%:
+
+1. Naturelle - Vive (IE = 2): 1
+2. Artificielle - Vive (IE = 2): 0.9
+3. Naturelle - Semi-Végétalisée (IE = 1): 0.8
+4. Artificielle - Semi-Végétalisée (IE = 1): 0.7
+
+Aucune comparaison n'a été effectuée afin de distinguer la vulnérabilité relative des berges à la navigation et au dragage, optant plutôt de leur attribuer des valeurs similaires de vulnérabilité (Tableau \@ref(tab:vulnerabiliteberge)). 
+
+<!-- TODO: tableau -->
