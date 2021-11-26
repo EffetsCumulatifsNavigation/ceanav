@@ -137,10 +137,10 @@ pipeline <- function(
     vuln_habitat()
     # vuln_mammiferes_marins()
     # vuln_faune_flore()
-    # vuln_site()
+    vuln_site()
 
     # Integrate all
-    # vulnerability_matrix()
+    vulnerability_matrix()
   }
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~
