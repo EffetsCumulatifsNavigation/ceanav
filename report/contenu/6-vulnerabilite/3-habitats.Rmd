@@ -53,6 +53,22 @@ print("Préparer tableau")
 
 ### Sites d'importance pour les espèces fauniques et floristiques
 
+Une série de sites d'importance pour des espèces fauniques et floristiques ont été identifiés pour inclusion au sein de l'évaluation des effets cumulatifs. Ces sites diffèrent des habitats présentés précédemment puisqu'ils représentent des milieux dont les caractéristiques peuvent varier, mais qui remplissent des fonctions essentielles pour le maintien de certaines espèces, ou qui sont jugés importants pour la conservation de certaines espèces à statut. En tant que tel, la vulnérabilité de ces sites ne peut être évaluée de façon analogue à l'évaluation présentée à la section précédente. Une approche
+
+De par leur nature et leur importance pour les espèces, ces sites sont considéré comme vulnérables aux effets de sources de stress.
+
+Il est toutefois difficile de déterminer leur vulnérabilité spécifique à chaque source de stress.
+
+Nous avons ainsi utilisé les règles suivantes :
+
+Distinguer les sites d'espèces à statut et sites d'importance pour les cycles de vie des espèces.
+
+Considérer la fréquence uniquement pour les espèces en péril, plus leur statut
+
+Considérer la fréquence et les effets sur la reproduction et sur la population pour les sites d'importance pour les cycles de vie.
+
+
+
 Les habitats sélectionnés pour la présente analyse diffèrent toutefois des classifications d'habitats habituellement utilisés pour ce type d'analyse. Les processus de consultations ont menés à l'inclusion de plusieurs types d'habitats définis par leur importance pour des espèces ou des commnunautés, comme les frayères et les milieux où des espèces en péril ont été observées. La vulnérabilité de ces habitats ne pouvant être déterminée par le même processus, une approche alternative a été utilisée afin d'obtenir une évaluation de leur vulnérabilité relative aux effets des sources de stress considérées.
 
 La vulnérabilité de ces habitats a ainsi été évaluée à partir de critères ciblant davantage les espèces (voir section suivante sur les mammifères marins).
