@@ -4,7 +4,7 @@
 \alias{get_data0062}
 \title{Data 0062 : Inventory of vessel of concern}
 \source{
-Canadian Coast Guard
+Canadian Coast Guard (2021) Inventory of Vessels of Concern (VOC). \link{Date accessed: 2021-11-18}
 }
 \usage{
 get_data0062()

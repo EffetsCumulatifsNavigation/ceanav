@@ -5,9 +5,9 @@
 #' @keywords stresseurs
 #' @keywords naufrages
 #'
-#' @source Canadian Coast Guard
+#' @source Canadian Coast Guard (2021) Inventory of Vessels of Concern (VOC). [Date accessed: 2021-11-18]
 #'
-#' @export Canadian Coast Guard (2021) Inventory of Vessels of Concern (VOC). [Date accessed: 2021-11-18]
+#' @export
 #'
 #' @details Cette fonction formatte les données
 #'
