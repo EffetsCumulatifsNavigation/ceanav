@@ -81,3 +81,6 @@ Tairova, Z., Frantzen, M., Mosbech, A., Arukwe, A., and Gustavson, K. 2019. Effe
 Fish were considered aggregated if they were a schooling species (e.g. Silversides [Atherinopsidae]); a shoaling species (e.g. Cod [Gadidae]); formed feeding aggregations (e.g. Hagfish [Myxinidae]); exhibited mass spawning (e.g. Capelin [Osmeridae]; or congregate for seasonal spawning migrations (e.g. American eel [Anguillidae]).
 
 Ça veut dire que la vulnérabilité augmente dans les endroits où il y a une aggrégation des individus d'une population pour des activités comme la reproduction et l'alimentation.
+
+
+Les espèces à statut sont présent parce qu'elles sont vulnérables dûs aux problématiques populationnelles. On assume donc qu'elle seront très vulnérables et on les départage selon le niveau de désignation
