@@ -1,0 +1,11 @@
+data_description:
+  id: "0063"
+  name: "Scores de vulnérabilité pour les sites d'importance fauniques et floristiques"
+  description: "Matrice de scores de vulnérabilité relative pour les sites d'importance fauniques et floristiques considérés pour l'évaluation des effets cumulatifs des activités maritimes dans le Saint-Laurent et le Saguenay."
+  contact_id:
+    - "0001"
+    - "0003"
+    - "0003"
+  availability: "open source"
+  citation:
+    - "Beauchesne D, Grant C, Archambault P (2022) Scores de vulnérabilité pour les sites d'importance fauniques et floristiques. Pour l'évaluation des effets cumulatifs des activités maritimes sur le Saint-Laurent et la rivière Saguenay – Projet pilote. Réalisé pour Transports Canada."
