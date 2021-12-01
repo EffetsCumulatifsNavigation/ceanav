@@ -74,3 +74,10 @@ Les habitats sélectionnés pour la présente analyse diffèrent toutefois des c
 La vulnérabilité de ces habitats a ainsi été évaluée à partir de critères ciblant davantage les espèces (voir section suivante sur les mammifères marins).
 
 <!-- TODO: Voir avec les mammifères marins -->
+
+
+Tairova, Z., Frantzen, M., Mosbech, A., Arukwe, A., and Gustavson, K. 2019. Effects of water accommodated fraction of physically and chemically dispersed heavy fuel oil on beach spawning capelin (Mallotus villosus). Mar. Environ. Res. 147: 62-71.
+
+Fish were considered aggregated if they were a schooling species (e.g. Silversides [Atherinopsidae]); a shoaling species (e.g. Cod [Gadidae]); formed feeding aggregations (e.g. Hagfish [Myxinidae]); exhibited mass spawning (e.g. Capelin [Osmeridae]; or congregate for seasonal spawning migrations (e.g. American eel [Anguillidae]).
+
+Ça veut dire que la vulnérabilité augmente dans les endroits où il y a une aggrégation des individus d'une population pour des activités comme la reproduction et l'alimentation.
