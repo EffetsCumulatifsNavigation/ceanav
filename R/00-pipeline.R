@@ -138,8 +138,8 @@ pipeline <- function(
     # Each valued component
     vuln_berge()
     vuln_habitat()
-    # vuln_mammiferes_marins()
-    # vuln_faune_flore()
+    vuln_mammiferes_marins()
+    vuln_faune_flore()
     vuln_site()
 
     # Integrate all
