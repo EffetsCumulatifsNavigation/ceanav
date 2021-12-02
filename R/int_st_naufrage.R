@@ -54,6 +54,12 @@ st_naufrage <- function() {
                               # iBandwidth = 5000,
                               vQuantiles = NULL,
                               dfCentroids = round(coords,0))
+
+  # -----
+  grid1p$naufrage <- naufrage$naufrage
+
+  # -----
+  naufrage <- removeCoast(grid1p)
   # ------------------------------------------------------------------------- #
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
