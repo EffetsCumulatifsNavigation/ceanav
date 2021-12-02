@@ -163,9 +163,6 @@ pipeline <- function(
     # Cumulative exposure
     ana_cumulative_exposure()
 
-    # Vulnerability
-    # ana_vulnerability()
-
     # Cumulative effects
   }
 
