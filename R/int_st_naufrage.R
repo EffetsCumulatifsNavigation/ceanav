@@ -36,7 +36,11 @@ st_naufrage <- function() {
             rename(x = X, y = Y)
 
   # -----
-  dat <- st_coordinates(data0062) %>%
+  dat <- st_intersects(grid1p, data0062) %>%
+         unlist() %>%
+         unique() %>%
+         data0062[., ] %>%
+         st_coordinates() %>%
          as.data.frame() %>%
          select(x = X, y = Y) %>%
          # mutate(naufrage = 1)
@@ -46,11 +50,10 @@ st_naufrage <- function() {
   naufrage <- btb::kernelSmoothing(dfObservations = dat,
                               sEPSG = "32198",
                               iCellSize = 1000,
-                              iBandwidth = 5000,
+                              iBandwidth = 3000,
                               # iBandwidth = 5000,
                               vQuantiles = NULL,
                               dfCentroids = round(coords,0))
-  mapview(naufrage[,'naufrage'])
   # ------------------------------------------------------------------------- #
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #

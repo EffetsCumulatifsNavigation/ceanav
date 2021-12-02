@@ -1,0 +1,23 @@
+title: Naufrage
+description: Distribution des sites de naufrages de navires dans le Saint-Laurent
+  et le Saguenay
+id: naufrage
+dataDescription:
+  units: NA
+  spatial:
+    resolution: 1km^2
+    extent:
+    - -926905.9282754
+    - -802704.8374737
+    - 9327566.6360557
+    - 807111.1134022
+  temporal:
+    resolution: Event based
+  categories:
+    accronyme: naufrage
+    francais: Sites de naufrages répertoriés
+    source: '0062'
+    mdref: naufrage
+  observations:
+    total: 104
+rawData: '0062'
