@@ -36,6 +36,7 @@ fig_cumulative_stresseurs <- function() {
     "cumulative_st_ancrage",
     "cumulative_st_deversement",
     "cumulative_st_dragage",
+    "cumulative_st_naufrage",
     "cumulative_st_navigation",
     "cumulative_st_peche_commerciale",
     "cumulative_st_pollution_maritime"
@@ -48,6 +49,7 @@ fig_cumulative_stresseurs <- function() {
     "Ancrages cumulés",
     "Déversements accidentels cumulés",
     "Dragage cumulés",
+    "Naufrage cumulés"
     "Navigation cumulée",
     "Pêche commerciale cumulée",
     "Pollution maritime cumulée"
@@ -57,6 +59,7 @@ fig_cumulative_stresseurs <- function() {
   subtitle <- c(
     "Somme des stresseurs individuels",
     "Somme des stresseurs individuels divisée\npar le nombre de catégories",
+    "Somme des catégories",
     "Somme des catégories",
     "Somme des catégories",
     "Somme des catégories",
