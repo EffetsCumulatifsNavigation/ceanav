@@ -121,7 +121,7 @@ pipeline <- function(
     st_ancrage()
     st_deversement()
     st_dragage()
-    # st_naufrages()
+    st_naufrage()
     st_navigation()
     st_peche_commerciale()
     # st_rejets()
