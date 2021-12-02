@@ -49,7 +49,7 @@ fig_cumulative_stresseurs <- function() {
     "Ancrages cumulés",
     "Déversements accidentels cumulés",
     "Dragage cumulés",
-    "Naufrage cumulés"
+    "Naufrage cumulés",
     "Navigation cumulée",
     "Pêche commerciale cumulée",
     "Pollution maritime cumulée"
