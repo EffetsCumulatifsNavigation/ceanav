@@ -154,6 +154,10 @@ vuln_habitat <- function() {
   # Diminution de 10% pour les déversements de types autres
   vulnerability_habitat["autres", ] <- vulnerability_habitat["autres", ]*.9
 
+  # Normalize between 0 and 1
+  norm <- function(x, dat) round(x / max(dat, na.rm = TRUE), 4)
+  vulnerability_habitat <- apply(vulnerability_habitat, 2, norm, vulnerability_habitat)
+
   # Round everything
   vulnerability_habitat <- round(vulnerability_habitat, 2)
   # _____________________________________________________________________________ #
