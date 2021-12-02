@@ -1,0 +1,10 @@
+<!-- #### Naufrage - Sites de naufrages répertoriés {-} -->
+
+
+<!-- -------------------------------------------------- -->
+
+```{r naufrage, fig.cap = "Distribution des sites de naufrages de navires dans le Saint-Laurent et le Saguenay - Sites de naufrages répertoriés", out.width = '100%'}
+knitr::include_graphics("../figures/figures-integrated/naufrage-naufrage.png")
+```
+
+<br>
