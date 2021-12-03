@@ -33,7 +33,7 @@ cumulativeEffects <- function(stress, valued, vulnerability) {
   # Load data
   load_output("stresseurs_format")
   load_output("composantes_valorisees_format")
-  load_output("vulnerability")
+  load_integrated("vulnerability")
 
   # Transform sf to data.frame
   stresseurs_format <- st_drop_geometry(stresseurs_format)
