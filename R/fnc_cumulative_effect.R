@@ -15,21 +15,6 @@
 
 cumulativeEffects <- function(stress, valued, vulnerability) {
 
-  nS <- 10
-  nV <- 12
-  nR <- 50
-  stress <- matrix(nrow = nR, ncol = nS, dimnames = list(c(), paste0("stress", 1:nS)), data = runif(nR*nS, 0, 1))
-  valued <- matrix(nrow = nR, ncol = nV, dimnames = list(c(), paste0("valued", 1:nV)), data = runif(nR*nV, 0, 1))
-  vulnerability <- matrix(nrow = nV, ncol = nS, data = runif(nV*nS, 0, 1), dimnames = list(colnames(valued), colnames(stress)))
-
-  # -----
-  st <- colnames(stress)
-  cv <- colnames(valued)
-
-  # -----
-  nst <- ncol(stress)
-  ncv <- ncol(valued)
-
   # Load data
   load_output("stresseurs_format")
   load_output("composantes_valorisees_format")
@@ -38,6 +23,11 @@ cumulativeEffects <- function(stress, valued, vulnerability) {
   # Transform sf to data.frame
   stresseurs_format <- st_drop_geometry(stresseurs_format)
   composantes_valorisees_format <- st_drop_geometry(composantes_valorisees_format)
+
+  # NA to 0
+  repNA <- function(x) ifelse(is.na(x), 0, x)
+  stresseurs_format <- apply(stresseurs_format, 2 , repNA)
+  composantes_valorisees_format <- apply(composantes_valorisees_format, 2 , repNA)
 
   # names
   st <- colnames(stresseurs_format)
@@ -56,59 +46,90 @@ cumulativeEffects <- function(stress, valued, vulnerability) {
     stop("Les noms de lignes et de colonnes dans le fichier de vulnerabilité doivent être dans les données de stresseurs et de composantes valorisées, et les stresseurs et composantes valorisées doivent toutes être dans la matrice de vulnérabilité")
   }
 
-  # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ #
-  # Risque associé aux effets des stresseurs en considérant uniquement la
-  # vulnérabilité et l'intensité des stresseurs.
-  # Donc : quel est le risque pour une composante valorisée si elle se retrouve
-  #        au sein d'un milieu X
-  # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ #
-  # Evaluate risk
-  risk <- list()
-  system.time({
-    for(i in 1:nrow(stress)) {
-      intensity <- sweep(vulnerability,
-                         MARGIN = 2,
-                         stress[i,],
-                         `*`)
+  # Make sure that stressors and VCs are in the same order in spatial data and vulnerability data
+  vulnerability <- vulnerability[, colnames(stresseurs_format)]
+  vulnerability <- vulnerability[colnames(composantes_valorisees_format), ]
 
-      # Cumulative risk
-      risk[[i]] <- rowSums(intensity)
+
+  # TODO: TO PUT IN FUNCTION params
+  stress <- stresseurs_format
+  valued <- composantes_valorisees_format
+  vulnerability <- vulnerability
+
+
+  # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ #
+  # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ #
+  # Evaluate individual effects
+  cumulative_effects <- list()
+  for(i in 1:nrow(stress)) {
+    # Individual risk
+    ## This provides an evaluation of "risk", i.e. the effect IF the VC is present (=1)
+    ## Essentially evaluates the Si * ui,j portion of the Halpern equation
+    risk <- sweep(vulnerability, MARGIN=2, stress[i, ], `*`)
+
+    # Individual effects
+    cumulative_effects[[i]] <- sapply(risk, '*', valued[i, ])
+
+    # Cumulative risk (IF YOU WANT CUMULATIVE EFFECTS TO SINGLE VS RIGHT NOW RUN THIS)
+    ## Evaluation of the cumulative "risk", i.e. the sum of all risks for each VC
+    # cumulative_effect <- rowSums(effect)
+  }
+
+  # Names of stressors and vcs
+  # Duplicate, but we want to be certain that they remain the same between objects
+  st <- colnames(cumulative_effects[[1]])
+  vc <- rownames(cumulative_effects[[1]])
+
+  # Export information on effects predicted by individual stressors
+  folder <- "data/data-output/cea_stresseur/"
+  if (!file.exists(folder)) dir.create(folder)
+
+  # Iterate over stressors
+  for(i in 1:length(st)) {
+    temp <- cumulative_effects
+
+    # Iterate over grid cells
+    for(j in 1:length(temp)) {
+      temp[[j]] <- temp[[j]][, st[i]] %>%
+                   t() %>%
+                   data.frame()
     }
-  })
 
+    # Single data.frame
+    temp <- bind_rows(temp)
 
-  #=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~#
-  # Risk as matrix
-  #=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~#
-  risk <- bind_rows(risk) %>%
-          as.matrix()
+    # Export
+    write.csv(temp, glue("{folder}cea_{st[i]}.csv"), row.names = FALSE)
+  }
 
+  # Export information on effects predicted on individual valued components
+  folder <- "data/data-output/cea_composante_valorisee/"
+  if (!file.exists(folder)) dir.create(folder)
 
+  # Iterate over stressors
+  for(i in 1:length(cv)) {
+    temp <- cumulative_effects
 
-  # #=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~#
-  # # Risk rasters
-  # #=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~#
-  # risk <- list()
-  # for(i in 1:ncol(dRisk)) {
-  #   dat <- r
-  #   values(dat)[idBiotic] <- dRisk[,i]
-  #   risk[[i]] <- dat
-  # }
-  # names(risk) <- colnames(dRisk)
-  #
-  #
-  #
-  #
-  #     IndividualRisk(drivers = dr[i, ],
-  #                                           vulnerability = vulnerability,
-  #                                    sensitivity = sensitivity_dix)
-  #   }
-  # })
-  #
-  #
-  # # -----
-  # intensity <-
-  #
-  #
-  #
+    # Iterate over grid cells
+    for(j in 1:length(temp)) {
+      temp[[j]] <- temp[[j]][cv[i], ] %>%
+                   t() %>%
+                   data.frame()
+    }
+
+    # Single data.frame
+    temp <- bind_rows(temp)
+
+    # Export
+    write.csv(temp, glue("{folder}cea_{cv[i]}.csv"), row.names = FALSE)
+  }
+
+  # Single cumulative effects assessment
+  # TODO: evaluate whether I should normalize results
+  # TODO: remove na.rm from equation, there should not be any and if there are is a sign that there is a problem to resolve, so I want to keep it
+  data(grid1p)
+  ce <- lapply(cumulative_effects, sum, na.rm = TRUE) %>%
+               unlist()
+  grid1p$cumulative_effects <- ce
+  st_write(grid1p, file = "data/data-output/cumulative_effects.geojson", quiet = TRUE)
 }
