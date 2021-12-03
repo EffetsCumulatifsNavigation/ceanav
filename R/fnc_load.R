@@ -108,14 +108,31 @@ load_integrated <- function(data_name) {
   uid <- str_detect(files, data_name)
 
   # Identify extensions
-  # ext <- last(str_split(files[uid], "\\.")[[1]])
+  ext <- last(str_split(files[uid], "\\.")[[1]])
 
   # Load according to extension type
   ## ---------------------------------------------
   ## GEOJSON
-  assign(x = data_name,
-         value = st_read(files[uid], quiet = TRUE),
-         envir = globalenv())
+  if (ext == "geojson") {
+    assign(x = data_name,
+           value = st_read(files[uid], quiet = TRUE),
+           envir = globalenv())
+  }
+
+  ## ---------------------------------------------
+  ## CSV
+  if (ext == "csv") {
+    dat <- read.csv(files[uid])
+    if (colnames(dat)[1] == "X") {
+      assign(x = data_name,
+             value = read.csv(files[uid], row.names = 1),
+             envir = globalenv())
+    } else {
+      assign(x = data_name,
+             value = read.csv(files[uid]),
+             envir = globalenv())
+    }
+  }
 }
 
 # =================================================================
@@ -174,20 +191,5 @@ load_output <- function(data_name) {
     assign(x = data_name,
            value = st_read(files[uid], quiet = TRUE),
            envir = globalenv())
-  }
-
-  ## ---------------------------------------------
-  ## GEOJSON
-  if (ext == "csv") {
-    dat <- read.csv(files[uid])
-    if (colnames(dat)[1] == "X") {
-      assign(x = data_name,
-             value = read.csv(files[uid], row.names = 1),
-             envir = globalenv())
-    } else {
-      assign(x = data_name,
-             value = read.csv(files[uid]),
-             envir = globalenv())
-    }
   }
 }
