@@ -164,6 +164,7 @@ pipeline <- function(
     ana_cumulative_exposure()
 
     # Cumulative effects
+    ana_cumulative_effects()
   }
 
 

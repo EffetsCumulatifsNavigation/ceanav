@@ -15,48 +15,6 @@
 
 cumulativeEffects <- function(stress, valued, vulnerability) {
 
-  # Load data
-  load_output("stresseurs_format")
-  load_output("composantes_valorisees_format")
-  load_integrated("vulnerability")
-
-  # Transform sf to data.frame
-  stresseurs_format <- st_drop_geometry(stresseurs_format)
-  composantes_valorisees_format <- st_drop_geometry(composantes_valorisees_format)
-
-  # NA to 0
-  repNA <- function(x) ifelse(is.na(x), 0, x)
-  stresseurs_format <- apply(stresseurs_format, 2 , repNA)
-  composantes_valorisees_format <- apply(composantes_valorisees_format, 2 , repNA)
-
-  # names
-  st <- colnames(stresseurs_format)
-  stV <- colnames(vulnerability)
-  cv <- colnames(composantes_valorisees_format)
-  cvV <- rownames(vulnerability)
-
-  # Check that all stressors and valued components are in the tables used
-  cond <- all(stV %in% st) &
-          all(cvV %in% cv) &
-          all(st %in% stV) &
-          all(cv %in% cvV)
-
-  # Stop if all variables names are not in all datasets
-  if (!cond) {
-    stop("Les noms de lignes et de colonnes dans le fichier de vulnerabilité doivent être dans les données de stresseurs et de composantes valorisées, et les stresseurs et composantes valorisées doivent toutes être dans la matrice de vulnérabilité")
-  }
-
-  # Make sure that stressors and VCs are in the same order in spatial data and vulnerability data
-  vulnerability <- vulnerability[, colnames(stresseurs_format)]
-  vulnerability <- vulnerability[colnames(composantes_valorisees_format), ]
-
-
-  # TODO: TO PUT IN FUNCTION params
-  stress <- stresseurs_format
-  valued <- composantes_valorisees_format
-  vulnerability <- vulnerability
-
-
   # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ #
   # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ #
   # Evaluate individual effects
@@ -106,13 +64,13 @@ cumulativeEffects <- function(stress, valued, vulnerability) {
   folder <- "data/data-output/cea_composante_valorisee/"
   if (!file.exists(folder)) dir.create(folder)
 
-  # Iterate over stressors
-  for(i in 1:length(cv)) {
+  # Iterate over valued components
+  for(i in 1:length(vc)) {
     temp <- cumulative_effects
 
     # Iterate over grid cells
     for(j in 1:length(temp)) {
-      temp[[j]] <- temp[[j]][cv[i], ] %>%
+      temp[[j]] <- temp[[j]][vc[i], ] %>%
                    t() %>%
                    data.frame()
     }
@@ -121,7 +79,7 @@ cumulativeEffects <- function(stress, valued, vulnerability) {
     temp <- bind_rows(temp)
 
     # Export
-    write.csv(temp, glue("{folder}cea_{cv[i]}.csv"), row.names = FALSE)
+    write.csv(temp, glue("{folder}cea_{vc[i]}.csv"), row.names = FALSE)
   }
 
   # Single cumulative effects assessment
@@ -131,5 +89,5 @@ cumulativeEffects <- function(stress, valued, vulnerability) {
   ce <- lapply(cumulative_effects, sum, na.rm = TRUE) %>%
                unlist()
   grid1p$cumulative_effects <- ce
-  st_write(grid1p, file = "data/data-output/cumulative_effects.geojson", quiet = TRUE)
+  st_write(grid1p, dsn = "data/data-output/cumulative_effects.geojson", quiet = TRUE)
 }

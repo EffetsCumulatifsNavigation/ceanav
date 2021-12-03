@@ -64,6 +64,8 @@ data/data-integrated/*.tif
 data/data-basemap/*.geojson
 data/data-output/*.geojson
 data/data-output/*.csv
+data/data-output/cea_stresseur
+data/data-output/cea_composante_valorisee
 
 # Figures ----
 figures/figures-format/data*
