@@ -47,6 +47,7 @@ stresseurs:
   - "ancrage"
   - "deversement"
   - "dragage"
+  - "naufrage"
   - "navigation"
   - "peche_commerciale"
   - "pollution_maritime"

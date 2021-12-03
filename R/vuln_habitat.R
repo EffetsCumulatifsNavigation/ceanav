@@ -55,6 +55,7 @@ vuln_habitat <- function() {
     st_eq$st_kp[st_eq$st_tc == tc] <- kp
     st_eq
   }
+  # TODO: Verify ancrage vulnerability, not sure this makes sense
   st_eq <- equiv("ancrage","Direct human impact: trampling")
   st_eq <- equiv("hydrocarbures", "Ocean dumping: toxic materials")
   st_eq <- equiv("autres", "Ocean dumping: toxic materials")
@@ -80,7 +81,7 @@ vuln_habitat <- function() {
   st_eq <- equiv("PLB", "Fishing: pelagic low bycatch")
   st_eq <- equiv("PHB", "Fishing: pelagic high bycatch")
   st_eq <- equiv("pollution_maritime", "Ocean pollution (from ships, ports, etc.)")
-  # TODO: st_eq <- equiv("epaves", "Ocean dumping: shipwrecks")
+  st_eq <- equiv("naufrage", "Ocean dumping: shipwrecks")
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   # Stressor equivalencies
