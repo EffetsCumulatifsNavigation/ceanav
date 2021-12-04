@@ -1,1 +1,5 @@
 ## Effets cumulatifs
+
+```{r cumEffects, fig.cap = "Distribution des effets cumulatifs des sources de stress reliés aux activités maritimes sur les composantes valorisée", out.width = '100%'}
+knitr::include_graphics("../figures/figures-output/cumulative_effects.png")
+```
