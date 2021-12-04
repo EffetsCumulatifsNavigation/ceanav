@@ -184,6 +184,7 @@ pipeline <- function(
     fig_cumulative_composantes_valorisees()
     fig_cumulative_exposure()
     fig_cumulative_effects()
+    fig_regional_contribution()
   }
 
 
