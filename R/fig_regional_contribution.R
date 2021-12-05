@@ -181,7 +181,7 @@ for(i in 1:nrow(gr2)) {
 # Names
 for(i in 1:nrow(cekm)) {
 
-  text(x = i-xG/4, y = yMax-.75, labels = cekm$francais[i], cex = .75, srt = 90, adj = c(1,.5))
+  text(x = i-xG/4, y = yMax-.75, labels = cekm$simple[i], cex = .75, srt = 90, adj = c(1,.5))
 }
 
 #<=~-.-~=><=~-.-~=><=~-.-~=><=~-.-~=><=~-.-~=>
