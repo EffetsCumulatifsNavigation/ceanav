@@ -38,18 +38,37 @@ gg_color_hue <- function(n) {
   hcl(h = hues, l = 65, c = 100, alpha = .5)[1:n]
 }
 
+cols <- c("#426E88",
+          "#9EA8B5",
+          "#413249",
+          "#876F74",
+          "#BD2A4D",
+          "#E89B40",
+          "#5BB2AD")
+
+cols <- c("#2a2a2a",
+          "#622b2b",
+          "#856226",
+          "#286039",
+          "#2d81a4",
+          "#68457c",
+          "#8c3449")
+gg_color_hue <- colorRampPalette(cols)
+
 #=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=#
 # Stresseurs
 #=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=#
-trans <- c('FF','DD','BB','99','77','55','33','11')
-trans <- c('FF','DD','AA','88','66','44')
-trans <- c('FF','DD','BB','99','77','55','33','11','22','44','66','88','AA','CC','EE')
+# trans1 <- c('FF','DD','BB','99','77','55','33','11')
+trans2 <- c('FF','DD','AA','88','66','44')
+trans3 <- c('FF','DD','BB','99','77','55','33','11','22','44','66','88','AA','CC','EE')
 st$col <- gg_color_hue(nGroup)[as.numeric(as.factor(st$title))]
-for(i in 1:nrow(st)) st$col[i] <- darken(st$col[i], 20)
+# for(i in 1:nrow(st)) st$col[i] <- darken(st$col[i], 20)
 
 for(i in levels(as.factor(st$title))) {
   id <- which(st$title == i)
   nId <- length(id)
+  if (nId > 5) trans <- trans3
+  if (nId <= 5) trans <- trans2
   for(j in 1:nId) {
     st$col[id[j]] <- paste0(substr(st$col[id[j]],1,7), trans[j])
   }
