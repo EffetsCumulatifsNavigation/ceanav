@@ -46,14 +46,14 @@ metadata_st_cv <- function() {
   # WARNING: This is manual, is thus not reproducible per say
   cv <- composantes_valorisees
   cv$simple <- cv$francais
-  cv$simple <- gsub("Naturelle - Semi-végétalisée (IE = 1)", "Semi-végétalisée", cv$simple)
-  cv$simple <- gsub("Naturelle - Vive (IE = 2)", "Vive", cv$simple)
-  cv$simple <- gsub("Artificielle - Semi-végétalisée (IE = 1)", "Semi-végétalisée", cv$simple)
-  cv$simple <- gsub("Artificielle - Vive (IE = 2)","Vive", cv$simple)
+  cv$simple <- gsub("Naturelle - Semi-végétalisée \\(IE = 1\\)", "Semi-végétalisée", cv$simple)
+  cv$simple <- gsub("Naturelle - Vive \\(IE = 2\\)", "Vive", cv$simple)
+  cv$simple <- gsub("Artificielle - Semi-végétalisée \\(IE = 1\\)", "Semi-végétalisée", cv$simple)
+  cv$simple <- gsub("Artificielle - Vive \\(IE = 2\\)","Vive", cv$simple)
   cv$simple <- gsub("AGHAMM - ", "", cv$simple)
   cv$simple <- gsub("Essipit - ", "", cv$simple)
   cv$simple <- gsub("Wolastoqiyik Wahsipekuk - ", "", cv$simple)
-  cv$simple <- gsub("Kahwanake - ", "", cv$simple)
+  cv$simple <- gsub("Kahnawake - ", "", cv$simple)
   cv$simple <- gsub("Public - ", "", cv$simple)
   cv$simple <- gsub("Nation Huronne-Wendat - ", "", cv$simple)
   composantes_valorisees <- cv
