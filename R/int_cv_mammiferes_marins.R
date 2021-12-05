@@ -146,12 +146,15 @@ cv_mammiferes_marins <- function() {
                                 "Balaenoptera physalus", "Phocoena phocoena",
                                 "Halichoerus grypus","Phoca vitulina",
                                 "Phoca groenlandica"),
+                 type = c("Baleine","Baleine","Baleine","Baleine","Baleine","Baleine",
+                          "Phoque","Phoque","Phoque"),
                  source = c("0027","0027","0027","0027","0027","0054","0054","0054","0054"))
 
   meta$dataDescription$categories$accronyme <-  nm$accronyme
   meta$dataDescription$categories$francais <-  nm$francais
   meta$dataDescription$categories$english <-  nm$english
   meta$dataDescription$categories$scientific <-  nm$scientific
+  meta$dataDescription$categories$type <-  nm$type
   meta$dataDescription$categories$source <-  nm$source
 
   # --- For proper referencing in markdown syntax

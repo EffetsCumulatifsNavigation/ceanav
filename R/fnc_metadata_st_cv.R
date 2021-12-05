@@ -38,7 +38,7 @@ metadata_st_cv <- function() {
                        as.data.frame() %>%
                        mutate(title = meta$title,
                               comp_val = i) %>%
-                       select(comp_val, accronyme, title, francais)#, description)
+                       select(comp_val, accronyme, title, type, francais)#, description)
   }
   composantes_valorisees <- bind_rows(composantes_valorisees)
 

@@ -55,6 +55,16 @@ dataDescription:
     - Halichoerus grypus
     - Phoca vitulina
     - Phoca groenlandica
+    type:
+    - Baleine
+    - Baleine
+    - Baleine
+    - Baleine
+    - Baleine
+    - Baleine
+    - Phoque
+    - Phoque
+    - Phoque
     source:
     - '0027'
     - '0027'

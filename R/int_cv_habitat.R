@@ -148,7 +148,7 @@ cv_habitat <- function() {
   # Zostères : 0001, 0002, 0003
   nm <- c("0001", "0002", "0003")
   dat <- load_temp(nm)
-  meta_temp <- meta_update(meta_temp, nm, "zostere", "Zostères", descr = "Distribution de la zostère marine (*Zostera marina*)", type = "Milieux aquatiques")
+  meta_temp <- meta_update(meta_temp, nm, "zostere", "Zostères", descr = "Distribution de la zostère marine (*Zostera marina*)", type = "Milieux naturels")
   habitat$zostere <- uid(dat)
   sup <- c(sup, superficie(dat))
 
@@ -156,7 +156,7 @@ cv_habitat <- function() {
   # Zones inondables : 0013, 0014
   nm <- c("0013", "0014")
   dat <- load_temp(nm)
-  meta_temp <- meta_update(meta_temp, nm, "zone_inondable", "Zones inondables", descr = "Territoires ayant une probabilité élevée d'être inondés selon une récurrence des crues sur 2 ans, 20 ans ou sur 100 ans", type = "Zones inondables")
+  meta_temp <- meta_update(meta_temp, nm, "zone_inondable", "Zones inondables", descr = "Territoires ayant une probabilité élevée d'être inondés selon une récurrence des crues sur 2 ans, 20 ans ou sur 100 ans", type = "Milieux naturels")
   habitat$zone_inondable <- uid(dat)
   sup <- c(sup, superficie(dat))
 
@@ -168,13 +168,13 @@ cv_habitat <- function() {
   # Eau peu profonde
   nm <- c("0053")
   dat <- load_temp(nm)
-  meta_temp <- meta_update(meta_temp, nm, "eau_peu_profonde", "Eau peu profonde", "Milieu humide dont le niveau d’eau est inférieur à 2 m et présentant des plantes aquatiques flottantes ou submergées ainsi que des plantes émergentes dont le couvert fait moins de 25 % de la superficie du milieu.", type = "Milieu humide")
+  meta_temp <- meta_update(meta_temp, nm, "eau_peu_profonde", "Eau peu profonde", "Milieu humide dont le niveau d’eau est inférieur à 2 m et présentant des plantes aquatiques flottantes ou submergées ainsi que des plantes émergentes dont le couvert fait moins de 25 % de la superficie du milieu.", type = "Milieux naturels")
   habitat$eau_peu_profonde <- uid(dat, "Eau", "TYPE", clip = TRUE)
   sup <- c(sup, superficie(dat, "Eau", "TYPE"))
 
   # -----
   # Marais
-  meta_temp <- meta_update(meta_temp, nm, "marais", "Marais", "Milieu humide sur dépôt minéral, dominé par une végétation herbacée couvrant plus de 25 % de la superficie. Les arbustes et les arbres, lorsque présents, couvrent moins de 25 % de la superficie du milieu.", type = "Milieu humide")
+  meta_temp <- meta_update(meta_temp, nm, "marais", "Marais", "Milieu humide sur dépôt minéral, dominé par une végétation herbacée couvrant plus de 25 % de la superficie. Les arbustes et les arbres, lorsque présents, couvrent moins de 25 % de la superficie du milieu.", type = "Milieux naturels")
   habitat$marais <- uid(dat, "Marais", "TYPE", clip = TRUE)
   sup <- c(sup, superficie(dat, "Marais", "TYPE"))
 
@@ -182,14 +182,14 @@ cv_habitat <- function() {
 
   # -----
   # Marécage
-  meta_temp <- meta_update(meta_temp, nm, "marecage", "Marécage", "Milieu humide sur dépôt minéral, dominé par une végétation ligneuse arbustive ou arborescente, avec plus de 25 % de couvert.", type = "Milieu humide")
+  meta_temp <- meta_update(meta_temp, nm, "marecage", "Marécage", "Milieu humide sur dépôt minéral, dominé par une végétation ligneuse arbustive ou arborescente, avec plus de 25 % de couvert.", type = "Milieux naturels")
   habitat$marecage <- uid(dat, "Marécage", "TYPE", clip = TRUE)
   sup <- c(sup, superficie(dat, "Marécage", "TYPE"))
 
 
   # -----
   # Milieu humide
-  meta_temp <- meta_update(meta_temp, nm, "milieu_humide", "Milieu humide", "Regroupe les milieux humides dont le type est inconnu.", type = "Milieu humide")
+  meta_temp <- meta_update(meta_temp, nm, "milieu_humide", "Milieu humide", "Regroupe les milieux humides dont le type est inconnu.", type = "Milieux naturels")
   habitat$milieu_humide <- uid(dat, "Milieu humide", "TYPE", clip = TRUE)
   sup <- c(sup, superficie(dat, "Milieu humide", "TYPE"))
 
@@ -197,7 +197,7 @@ cv_habitat <- function() {
   # # -----
   # # Tourbière
   # # NOTE: Retiré de l'analyse, milieu terrestre
-  # meta_temp <- meta_update(meta_temp, nm, "tourbiere", "Tourbière", "Regroupe les milieux humides dans lesquels il y a une accumulation de tourbe d’au moins 30 cm d’épaisseur.", type = "Milieu humide")
+  # meta_temp <- meta_update(meta_temp, nm, "tourbiere", "Tourbière", "Regroupe les milieux humides dans lesquels il y a une accumulation de tourbe d’au moins 30 cm d’épaisseur.", type = "Milieux naturels")
   # habitat$tourbiere <- uid(dat, "Tourbière", "TYPE")
   # sup <- c(sup, superficie(dat, "Tourbière", "TYPE"))
 
@@ -215,7 +215,7 @@ cv_habitat <- function() {
   # Sites d'alevinage : 0009
   nm <- "0009"
   dat <- load_temp(nm)
-  meta_temp <- meta_update(meta_temp, nm, "site_alevinage", "Habitats d'alevinage", descr = "Sites d'alimentation et de protection pour les stades de vie initiaux des poissons (*e.g.* larves, alevins, juvéniles)", type = "Habitats fauniques")
+  meta_temp <- meta_update(meta_temp, nm, "site_alevinage", "Habitats d'alevinage", descr = "Sites d'alimentation et de protection pour les stades de vie initiaux des poissons (*e.g.* larves, alevins, juvéniles)", type = "Cycles de vie")
   habitat$site_alevinage <- uid(dat)
   sup <- c(sup, superficie(dat))
 
@@ -223,7 +223,7 @@ cv_habitat <- function() {
   # Frayères : 0010
   nm <- "0010"
   dat <- load_temp(nm)
-  meta_temp <- meta_update(meta_temp, nm, "frayere", "Frayères", descr = "Sites de reproduction où des poissons femelles pondent des oeufs pour fécondation par les mâles", type = "Habitats fauniques")
+  meta_temp <- meta_update(meta_temp, nm, "frayere", "Frayères", descr = "Sites de reproduction où des poissons femelles pondent des oeufs pour fécondation par les mâles", type = "Cycles de vie")
   habitat$frayere <- uid(dat)
   sup <- c(sup, superficie(dat))
 
@@ -267,7 +267,7 @@ cv_habitat <- function() {
   # Colonies d'oiseaux : 0043, 0058
   nm <- c("0043", "0058")
   dat <- load_temp(nm)
-  meta_temp <- meta_update(meta_temp, nm, "oiseaux", "Habitats importants pour les oiseaux", descr = "Sites connus d'importance pour les oiseaux marins", type = "Habitats fauniques")
+  meta_temp <- meta_update(meta_temp, nm, "oiseaux", "Habitats importants pour les oiseaux", descr = "Sites connus d'importance pour les oiseaux marins", type = "Cycles de vie")
   habitat$oiseaux <- uid(dat)
   sup <- c(sup, superficie(dat))
 
@@ -284,7 +284,7 @@ cv_habitat <- function() {
   # Pétoncle uniquement dans l'estuaire, donc considation de la mactre uniquement (0057)
   nm <- "0057"
   dat <- load_temp(nm)
-  meta_temp <- meta_update(meta_temp, nm, "gisement_coquilliers", "Gisements coquilliers", descr = "Gisements connus et exploités de mactre de Stimpson des eaux côtières du Québec", type = "Milieux aquatiques")
+  meta_temp <- meta_update(meta_temp, nm, "gisement_coquilliers", "Gisements coquilliers", descr = "Gisements connus et exploités de mactre de Stimpson des eaux côtières du Québec", type = "Milieux naturels")
   habitat$gisement_coquilliers <- uid(dat)
   sup <- c(sup, superficie(dat))
 
@@ -295,27 +295,27 @@ cv_habitat <- function() {
   # -----
   nm <- c("0017")
   dat <- load_temp(nm)
-  meta_temp <- meta_update(meta_temp, nm, "meuble_sans_falaise", "Meuble sans falaise", "Dépôt non consolidé sans falaise", type = "Habitats côtiers")
+  meta_temp <- meta_update(meta_temp, nm, "meuble_sans_falaise", "Meuble sans falaise", "Dépôt non consolidé sans falaise", type = "Milieux naturels")
   habitat$meuble_sans_falaise <- uid(dat, "MSF", "Type_Berge", clip = FALSE)
   sup <- c(sup, line_length(dat, "MSF", "Type_Berge"))
 
   # -----
-  meta_temp <- meta_update(meta_temp, nm, "rocheuse_sans_falaise", "Rocheuse sans falaise", "Roche consolidée sans falaise", type = "Habitats côtiers")
+  meta_temp <- meta_update(meta_temp, nm, "rocheuse_sans_falaise", "Rocheuse sans falaise", "Roche consolidée sans falaise", type = "Milieux naturels")
   habitat$rocheuse_sans_falaise <- uid(dat, "RSF", "Type_Berge", clip = FALSE)
   sup <- c(sup, line_length(dat, "RSF", "Type_Berge"))
 
   # -----
-  meta_temp <- meta_update(meta_temp, nm, "rocheuse_sans_escarpement", "Rocheuse sans escarpement", "Berge de roc sans escarpement", type = "Habitats côtiers")
+  meta_temp <- meta_update(meta_temp, nm, "rocheuse_sans_escarpement", "Rocheuse sans escarpement", "Berge de roc sans escarpement", type = "Milieux naturels")
   habitat$rocheuse_sans_escarpement <- uid(dat, "RSE", "Type_Berge", clip = FALSE)
   sup <- c(sup, line_length(dat, "RSE", "Type_Berge"))
 
   # -----
-  meta_temp <- meta_update(meta_temp, nm, "terrasse_fluviale", "Terrasse fluviale", "Banc d'accumulation situé à l'embouchure d'une rivière composé de dépôts non consolidés colonisé par de la végétation", type = "Habitats côtiers")
+  meta_temp <- meta_update(meta_temp, nm, "terrasse_fluviale", "Terrasse fluviale", "Banc d'accumulation situé à l'embouchure d'une rivière composé de dépôts non consolidés colonisé par de la végétation", type = "Milieux naturels")
   habitat$terrasse_fluviale <- uid(dat, "TF", "Type_Berge", clip = FALSE)
   sup <- c(sup, line_length(dat, "TF", "Type_Berge"))
 
   # -----
-  meta_temp <- meta_update(meta_temp, nm, "terrasse_plage", "Terrasse de plage", "Zone d'accumulation de dépôts non consolidés (sable et/ou de gravier littoral) formée d’un replat colonisé par de la végétation herbacée parfois inondée que lors de surcote pendant la pleine mer supérieure de grande marée. Le replat est parfois bordé sur sa partie inférieure par un talus d’érosion (microfalaise) de moins de 2 m de hauteur et sur sa partie supérieure par une falaise morte ou d’un terrain plat", type = "Habitats côtiers")
+  meta_temp <- meta_update(meta_temp, nm, "terrasse_plage", "Terrasse de plage", "Zone d'accumulation de dépôts non consolidés (sable et/ou de gravier littoral) formée d’un replat colonisé par de la végétation herbacée parfois inondée que lors de surcote pendant la pleine mer supérieure de grande marée. Le replat est parfois bordé sur sa partie inférieure par un talus d’érosion (microfalaise) de moins de 2 m de hauteur et sur sa partie supérieure par une falaise morte ou d’un terrain plat", type = "Milieux naturels")
   habitat$terrasse_plage <- uid(dat, "TP", "Type_Berge", clip = FALSE)
   sup <- c(sup, line_length(dat, "TP", "Type_Berge"))
 

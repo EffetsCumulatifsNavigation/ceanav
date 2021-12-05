@@ -109,6 +109,12 @@ cv_berge <- function() {
     "Artificielle - Semi-végétalisée (IE = 1)",
     "Artificielle - Vive (IE = 2)"
   )
+  meta$dataDescription$categories$type <-  c(
+    "Naturelle",
+    "Naturelle",
+    "Artificielle",
+    "Artificielle"
+  )
   meta$dataDescription$categories$source <-  rep(meta$rawData, length(categories))
 
   # --- For proper referencing in markdown syntax
