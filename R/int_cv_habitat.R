@@ -215,7 +215,7 @@ cv_habitat <- function() {
   # Sites d'alevinage : 0009
   nm <- "0009"
   dat <- load_temp(nm)
-  meta_temp <- meta_update(meta_temp, nm, "site_alevinage", "Habitats d'alevinage", descr = "Sites d'alimentation et de protection pour les stades de vie initiaux des poissons (*e.g.* larves, alevins, juvéniles)", type = "Cycles de vie")
+  meta_temp <- meta_update(meta_temp, nm, "site_alevinage", "Sites d'alevinage", descr = "Sites d'alimentation et de protection pour les stades de vie initiaux des poissons (*e.g.* larves, alevins, juvéniles)", type = "Cycles de vie")
   habitat$site_alevinage <- uid(dat)
   sup <- c(sup, superficie(dat))
 
@@ -267,7 +267,7 @@ cv_habitat <- function() {
   # Colonies d'oiseaux : 0043, 0058
   nm <- c("0043", "0058")
   dat <- load_temp(nm)
-  meta_temp <- meta_update(meta_temp, nm, "oiseaux", "Habitats importants pour les oiseaux", descr = "Sites connus d'importance pour les oiseaux marins", type = "Cycles de vie")
+  meta_temp <- meta_update(meta_temp, nm, "oiseaux", "Oiseaux", descr = "Sites connus d'importance pour les oiseaux marins", type = "Cycles de vie")
   habitat$oiseaux <- uid(dat)
   sup <- c(sup, superficie(dat))
 
@@ -300,12 +300,12 @@ cv_habitat <- function() {
   sup <- c(sup, line_length(dat, "MSF", "Type_Berge"))
 
   # -----
-  meta_temp <- meta_update(meta_temp, nm, "rocheuse_sans_falaise", "Rocheuse sans falaise", "Roche consolidée sans falaise", type = "Milieux naturels")
+  meta_temp <- meta_update(meta_temp, nm, "rocheuse_sans_falaise", "Rocheux sans falaise", "Roche consolidée sans falaise", type = "Milieux naturels")
   habitat$rocheuse_sans_falaise <- uid(dat, "RSF", "Type_Berge", clip = FALSE)
   sup <- c(sup, line_length(dat, "RSF", "Type_Berge"))
 
   # -----
-  meta_temp <- meta_update(meta_temp, nm, "rocheuse_sans_escarpement", "Rocheuse sans escarpement", "Berge de roc sans escarpement", type = "Milieux naturels")
+  meta_temp <- meta_update(meta_temp, nm, "rocheuse_sans_escarpement", "Rocheux sans escarpement", "Berge de roc sans escarpement", type = "Milieux naturels")
   habitat$rocheuse_sans_escarpement <- uid(dat, "RSE", "Type_Berge", clip = FALSE)
   sup <- c(sup, line_length(dat, "RSE", "Type_Berge"))
 
