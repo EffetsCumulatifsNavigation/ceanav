@@ -129,7 +129,7 @@ par(family = 'serif')
 par(mar = c(0,1,1,0))
 
 yMax <- maxVals[1]+2
-yMin <- -.75
+yMin <- -.1
 
 plot0(x = c(-2,nrow(cea)), y = c(yMin,yMax))
 
@@ -181,7 +181,7 @@ for(i in 1:nrow(gr2)) {
 # Names
 for(i in 1:nrow(cekm)) {
 
-  text(x = i-xG/4, y = yMin+.6, labels = cekm$francais[i], cex = .75, srt = 90, adj = c(1,.5))
+  text(x = i-xG/4, y = yMax-.75, labels = cekm$francais[i], cex = .75, srt = 90, adj = c(1,.5))
 }
 
 #<=~-.-~=><=~-.-~=><=~-.-~=><=~-.-~=><=~-.-~=>
