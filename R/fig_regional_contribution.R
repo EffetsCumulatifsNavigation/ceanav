@@ -51,8 +51,39 @@ for(i in levels(as.factor(st$title))) {
 }
 
 
+#=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=#
+# Valued components groups
+#=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=#
+cv <- cv %>%
+      mutate(gr1 = title,
+             gr2 = group,
+             fullname = glue("{comp_val}_{accronyme}"))
 
+# Join cea data and reorder
+cekm <- left_join(cekm, cv, by = c('cv' = 'fullname')) %>%
+        # arrange(gr1, gr2, gr3, desc(impactNormalized))
+        arrange(gr1, gr2, desc(cea))
 
+# Group location on graph
+gr1 <- cekm[, 'gr1', drop = FALSE] %>%
+          mutate(id = 1:n()) %>%
+          group_by(gr1) %>%
+          summarize(min = min(id), max = max(id)) %>%
+          as.data.frame(stringsAsFactors = FALSE)
+
+gr2 <- cekm[, 'gr2', drop = FALSE] %>%
+          mutate(id = 1:n()) %>%
+          group_by(gr2) %>%
+          summarize(min = min(id), max = max(id)) %>%
+          as.data.frame(stringsAsFactors = FALSE)
+gr2$gr2 <- gsub('Others2','Others',gr2$gr2)
+
+# gr3 <- cekm[, 'gr3', drop = FALSE] %>%
+#           mutate(id = 1:n()) %>%
+#           group_by(gr3) %>%
+#           summarize(min = min(id), max = max(id)) %>%
+#           filter(gr3 != 'X') %>%
+#           as.data.frame(stringsAsFactors = FALSE)
 
 
 
