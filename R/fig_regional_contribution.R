@@ -89,6 +89,12 @@ gr2 <- cekm[, 'gr2', drop = FALSE] %>%
 #           filter(gr3 != 'X') %>%
 #           as.data.frame(stringsAsFactors = FALSE)
 
+# Manually adjust some names
+gr1$gr1 <- gsub("Intégrité des berges", "Berges", gr1$gr1)
+gr2$gr2 <- gsub("Wolastoqiyik Wahsipekuk","",gr2$gr2)
+cekm$simple[cekm$francais == "Wolastoqiyik Wahsipekuk - Pêche traditionnelle"] <- "Wolastoqiyik Wahsipekuk - Pêche traditionnelle"
+gr2$gr2 <- gsub("Naturelle","", gr2$gr2)
+gr2$gr2 <- gsub("Artificielle","", gr2$gr2)
 #=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=#
 # Prepare data for graphs
 #=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=#
@@ -174,7 +180,7 @@ for(i in 1:nrow(gr1)) {
 for(i in 1:nrow(gr2)) {
   x = as.numeric(gr2[i, c('min','max')])
   lines(y = rep(yMax-.55, 2), x = x)
-  text(y = yMax-.35, x = mean(x), adj = .5, font = 1, labels = gr2$gr2[i], cex = .8)
+  text(y = yMax-.35, x = mean(x), adj = .5, font = 1, labels = gr2$gr2[i], cex = .75)
 }
 
 #<=~-.-~=><=~-.-~=><=~-.-~=><=~-.-~=><=~-.-~=>
