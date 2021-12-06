@@ -4,7 +4,7 @@
 <!-- -------------------------------------------------- -->
 
 ```{r Observation, fig.cap = "Intensité de la navigation dans le Saint-Laurent et le Saguenay - Observation mammifères marins", out.width = '100%'}
-knitr::include_graphics("../figures/figures-integrated/navigation-Observation.png")
+knitr::include_graphics("./figures/figures-integrated/navigation-Observation.png")
 ```
 
 <br>

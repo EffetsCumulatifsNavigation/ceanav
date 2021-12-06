@@ -4,7 +4,7 @@
 <!-- -------------------------------------------------- -->
 
 ```{r CONTAINER, fig.cap = "Intensité de la navigation dans le Saint-Laurent et le Saguenay - Porte-conteneurs", out.width = '100%'}
-knitr::include_graphics("../figures/figures-integrated/navigation-CONTAINER.png")
+knitr::include_graphics("./figures/figures-integrated/navigation-CONTAINER.png")
 ```
 
 <br>

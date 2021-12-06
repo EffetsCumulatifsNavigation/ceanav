@@ -4,7 +4,7 @@
 <!-- -------------------------------------------------- -->
 
 ```{r florevulnerable, fig.cap = "Distribution des habitats dans le Saint-Laurent et le Saguenay - Espèces floristiques vulnérables", out.width = '100%'}
-knitr::include_graphics("../figures/figures-integrated/habitat-flore_vulnerable.png")
+knitr::include_graphics("./figures/figures-integrated/habitat-flore_vulnerable.png")
 ```
 
 <br>

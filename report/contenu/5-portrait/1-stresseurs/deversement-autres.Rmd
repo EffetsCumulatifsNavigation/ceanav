@@ -4,7 +4,7 @@
 <!-- -------------------------------------------------- -->
 
 ```{r autres, fig.cap = "Distribution et intensité des déversement accidentels dans le Saint-Laurent et le Saguenay - Autres", out.width = '100%'}
-knitr::include_graphics("../figures/figures-integrated/deversement-autres.png")
+knitr::include_graphics("./figures/figures-integrated/deversement-autres.png")
 ```
 
 <br>

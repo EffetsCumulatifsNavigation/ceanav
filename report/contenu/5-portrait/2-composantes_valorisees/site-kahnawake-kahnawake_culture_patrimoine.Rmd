@@ -1,0 +1,10 @@
+<!-- #### Sites d’intérêt - Kahnawake - Culture et patrimoine {-} -->
+
+
+<!-- -------------------------------------------------- -->
+
+```{r kahnawakeculturepatrimoine, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Kahnawake - Culture et patrimoine", out.width = '100%'}
+knitr::include_graphics("./figures/figures-integrated/site-kahnawake_culture_patrimoine.png")
+```
+
+<br>

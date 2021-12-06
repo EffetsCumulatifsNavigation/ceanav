@@ -4,7 +4,7 @@
 <!-- -------------------------------------------------- -->
 
 ```{r TANKER, fig.cap = "Intensité de la navigation dans le Saint-Laurent et le Saguenay - Pétrolier", out.width = '100%'}
-knitr::include_graphics("../figures/figures-integrated/navigation-TANKER.png")
+knitr::include_graphics("./figures/figures-integrated/navigation-TANKER.png")
 ```
 
 <br>

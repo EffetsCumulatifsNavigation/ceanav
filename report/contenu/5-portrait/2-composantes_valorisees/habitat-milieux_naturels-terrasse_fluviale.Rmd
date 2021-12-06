@@ -1,0 +1,10 @@
+<!-- #### Habitats - Terrasse fluviale {-} -->
+
+
+<!-- -------------------------------------------------- -->
+
+```{r terrassefluviale, fig.cap = "Distribution des habitats dans le Saint-Laurent et le Saguenay - Terrasse fluviale", out.width = '100%'}
+knitr::include_graphics("./figures/figures-integrated/habitat-terrasse_fluviale.png")
+```
+
+<br>

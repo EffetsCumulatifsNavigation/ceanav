@@ -1,0 +1,10 @@
+<!-- #### Sites d’intérêt - Essipit - Accès au plan d'eau {-} -->
+
+
+<!-- -------------------------------------------------- -->
+
+```{r essipitacceseau, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Essipit - Accès au plan d'eau", out.width = '100%'}
+knitr::include_graphics("./figures/figures-integrated/site-essipit_acces_eau.png")
+```
+
+<br>

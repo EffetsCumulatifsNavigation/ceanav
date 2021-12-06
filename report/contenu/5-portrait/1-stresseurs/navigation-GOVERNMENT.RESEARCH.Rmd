@@ -4,7 +4,7 @@
 <!-- -------------------------------------------------- -->
 
 ```{r GOVERNMENTRESEARCH, fig.cap = "Intensité de la navigation dans le Saint-Laurent et le Saguenay - Gouvernement / recherche", out.width = '100%'}
-knitr::include_graphics("../figures/figures-integrated/navigation-GOVERNMENT.RESEARCH.png")
+knitr::include_graphics("./figures/figures-integrated/navigation-GOVERNMENT.RESEARCH.png")
 ```
 
 <br>

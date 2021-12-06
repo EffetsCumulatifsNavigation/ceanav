@@ -1,0 +1,10 @@
+<!-- #### Sites d’intérêt - Kahnawake - Pêche eau libre {-} -->
+
+
+<!-- -------------------------------------------------- -->
+
+```{r kahnawakepecheoffshore, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Kahnawake - Pêche eau libre", out.width = '100%'}
+knitr::include_graphics("./figures/figures-integrated/site-kahnawake_peche_offshore.png")
+```
+
+<br>

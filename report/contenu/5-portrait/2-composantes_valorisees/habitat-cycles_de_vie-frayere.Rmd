@@ -1,0 +1,10 @@
+<!-- #### Habitats - Frayères {-} -->
+
+
+<!-- -------------------------------------------------- -->
+
+```{r frayere, fig.cap = "Distribution des habitats dans le Saint-Laurent et le Saguenay - Frayères", out.width = '100%'}
+knitr::include_graphics("./figures/figures-integrated/habitat-frayere.png")
+```
+
+<br>

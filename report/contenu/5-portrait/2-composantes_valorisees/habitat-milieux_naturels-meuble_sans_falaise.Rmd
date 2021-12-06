@@ -1,0 +1,10 @@
+<!-- #### Habitats - Meuble sans falaise {-} -->
+
+
+<!-- -------------------------------------------------- -->
+
+```{r meublesansfalaise, fig.cap = "Distribution des habitats dans le Saint-Laurent et le Saguenay - Meuble sans falaise", out.width = '100%'}
+knitr::include_graphics("./figures/figures-integrated/habitat-meuble_sans_falaise.png")
+```
+
+<br>

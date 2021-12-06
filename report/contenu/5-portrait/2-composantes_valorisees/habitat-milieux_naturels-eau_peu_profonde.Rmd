@@ -1,0 +1,10 @@
+<!-- #### Habitats - Eau peu profonde {-} -->
+
+
+<!-- -------------------------------------------------- -->
+
+```{r eaupeuprofonde, fig.cap = "Distribution des habitats dans le Saint-Laurent et le Saguenay - Eau peu profonde", out.width = '100%'}
+knitr::include_graphics("./figures/figures-integrated/habitat-eau_peu_profonde.png")
+```
+
+<br>

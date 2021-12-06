@@ -1,0 +1,10 @@
+<!-- #### Mammifères marins - Marsouin commun {-} -->
+
+
+<!-- -------------------------------------------------- -->
+
+```{r harbourporpoise, fig.cap = "Distribution des mammifères marins dans le Saint-Laurent et le Saguenay - Marsouin commun", out.width = '100%'}
+knitr::include_graphics("./figures/figures-integrated/mammiferes_marins-harbour_porpoise.png")
+```
+
+<br>

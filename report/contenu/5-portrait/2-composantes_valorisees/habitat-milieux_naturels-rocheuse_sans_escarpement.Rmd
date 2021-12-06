@@ -1,0 +1,10 @@
+<!-- #### Habitats - Rocheux sans escarpement {-} -->
+
+
+<!-- -------------------------------------------------- -->
+
+```{r rocheusesansescarpement, fig.cap = "Distribution des habitats dans le Saint-Laurent et le Saguenay - Rocheux sans escarpement", out.width = '100%'}
+knitr::include_graphics("./figures/figures-integrated/habitat-rocheuse_sans_escarpement.png")
+```
+
+<br>

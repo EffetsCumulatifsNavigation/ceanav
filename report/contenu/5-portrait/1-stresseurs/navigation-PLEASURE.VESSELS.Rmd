@@ -4,7 +4,7 @@
 <!-- -------------------------------------------------- -->
 
 ```{r PLEASUREVESSELS, fig.cap = "Intensité de la navigation dans le Saint-Laurent et le Saguenay - Navires de plaisance", out.width = '100%'}
-knitr::include_graphics("../figures/figures-integrated/navigation-PLEASURE.VESSELS.png")
+knitr::include_graphics("./figures/figures-integrated/navigation-PLEASURE.VESSELS.png")
 ```
 
 <br>

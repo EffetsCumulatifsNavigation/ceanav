@@ -4,7 +4,7 @@
 <!-- -------------------------------------------------- -->
 
 ```{r PLB, fig.cap = "Intensité des activités de pêche commerciale dans le Saint-Laurent - Pélagique prises accessoires faibles", out.width = '100%'}
-knitr::include_graphics("../figures/figures-integrated/peche_commerciale-PLB.png")
+knitr::include_graphics("./figures/figures-integrated/peche_commerciale-PLB.png")
 ```
 
 <br>

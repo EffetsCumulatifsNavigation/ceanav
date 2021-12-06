@@ -1,0 +1,10 @@
+<!-- #### Habitats - Terrasse de plage {-} -->
+
+
+<!-- -------------------------------------------------- -->
+
+```{r terrasseplage, fig.cap = "Distribution des habitats dans le Saint-Laurent et le Saguenay - Terrasse de plage", out.width = '100%'}
+knitr::include_graphics("./figures/figures-integrated/habitat-terrasse_plage.png")
+```
+
+<br>

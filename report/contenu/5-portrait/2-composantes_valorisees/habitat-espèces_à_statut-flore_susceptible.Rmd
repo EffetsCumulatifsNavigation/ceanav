@@ -4,7 +4,7 @@
 <!-- -------------------------------------------------- -->
 
 ```{r floresusceptible, fig.cap = "Distribution des habitats dans le Saint-Laurent et le Saguenay - Espèces floristiques susceptibles", out.width = '100%'}
-knitr::include_graphics("../figures/figures-integrated/habitat-flore_susceptible.png")
+knitr::include_graphics("./figures/figures-integrated/habitat-flore_susceptible.png")
 ```
 
 <br>
