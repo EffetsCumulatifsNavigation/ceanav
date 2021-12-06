@@ -1,0 +1,6 @@
+## Chemins d'effet
+
+
+```{r metanetwork, fig.cap = "Réseau multiplex présentant la présence d'un effet des stresseurs individuels sur chaque composante valorisée considérées à l'évaluation des effets cumulatifs (*i.e.* liens colorés), les effets cumulatifs totaux sur chaque composante valorisée (*i.e.* taille des points des composantes valorisées) et l'effet moyen des stresseurs (*i.e.* taille des points des stresseurs).", out.width = '100%'}
+knitr::include_graphics("./figures/figures-output/cumulative_effects_metanetwork.png")
+```
