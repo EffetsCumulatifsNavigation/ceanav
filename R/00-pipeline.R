@@ -185,6 +185,7 @@ pipeline <- function(
     fig_cumulative_exposure()
     fig_cumulative_effects()
     fig_regional_contribution()
+    fig_metanetwork()
   }
 
 
