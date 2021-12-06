@@ -221,7 +221,7 @@ pipeline <- function(
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~
   if (pipeline_report) {
-
+    file.copy("./figures/", "./report/", recursive = TRUE)
     suppressWarnings({
       setwd('./report/')
 
@@ -237,5 +237,12 @@ pipeline <- function(
 
       setwd('../')
     })
+
+    # WARNING: Temporary pipeline to export report only to another repo.
+    # TODO: This is not reproducible and should be removed from the pipeline as soon as this
+    #       repository can be made available publicly
+    unlink("../Rapport/docs/", recursive = TRUE)
+    file.copy("./report/docs", "../Rapport/", recursive = TRUE)
+    file.copy("./report/figures", "../Rapport/", recursive = TRUE)
   }
 }

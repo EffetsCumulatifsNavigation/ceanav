@@ -11,41 +11,41 @@ stresseurs dans notre zone d'étude.
 <br/>
 
 ```{r stCum, fig.cap = "Distribution des stresseurs cumulés au sein de la zone d'étude", out.width = '100%'}
-knitr::include_graphics("../figures/figures-output/cumulative_st.png")
+knitr::include_graphics("./figures/figures-output/cumulative_st.png")
 ```
 
 <br/>
 
 ```{r stCumNorm, fig.cap = "Distribution des stresseurs cumulés normalisés au sein de la zone d'étude", out.width = '100%'}
-knitr::include_graphics("../figures/figures-output/cumulative_st_norm.png")
+knitr::include_graphics("./figures/figures-output/cumulative_st_norm.png")
 ```
 
 <br/>
 
 ```{r stAncrage, fig.cap = "Cumul des catégories d'ancrages au sein de la zone d'étude", out.width = '100%'}
-knitr::include_graphics("../figures/figures-output/cumulative_st_ancrage.png")
+knitr::include_graphics("./figures/figures-output/cumulative_st_ancrage.png")
 ```
 
 <br/>
 
 ```{r stDeversement, fig.cap = "Cumul des catégories de déversements accidentels au sein de la zone d'étude", out.width = '100%'}
-knitr::include_graphics("../figures/figures-output/cumulative_st_deversement.png")
+knitr::include_graphics("./figures/figures-output/cumulative_st_deversement.png")
 ```
 
 <br/>
 
 ```{r stdragage, fig.cap = "Cumul des catégories de dragages au sein de la zone d'étude", out.width = '100%'}
-knitr::include_graphics("../figures/figures-output/cumulative_st_dragage.png")
+knitr::include_graphics("./figures/figures-output/cumulative_st_dragage.png")
 ```
 
 <br/>
 
 ```{r stnavigation, fig.cap = "Cumul des catégories de types de navires au sein de la zone d'étude", out.width = '100%'}
-knitr::include_graphics("../figures/figures-output/cumulative_st_navigation.png")
+knitr::include_graphics("./figures/figures-output/cumulative_st_navigation.png")
 ```
 
 <br/>
 
 ```{r stpechecommerciale, fig.cap = "Cumul des catégories de pêches commerciales au sein de la zone d'étude", out.width = '100%'}
-knitr::include_graphics("../figures/figures-output/cumulative_st_peche_commerciale.png")
+knitr::include_graphics("./figures/figures-output/cumulative_st_peche_commerciale.png")
 ```
