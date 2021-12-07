@@ -11,7 +11,7 @@
 #' @details Cette fonction effectue une partie des analyses du projet d'évaluation des effets cumulatifs
 #'
 
-ana_cumulative_effects_km2 <- function() {
+ana_cumulative_effects_cv_km2 <- function() {
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   # Notes
   # ------------------------------------

@@ -167,7 +167,7 @@ pipeline <- function(
     ana_cumulative_effects()
 
     # Cumulative effects per km2 for valued components
-    ana_cumulative_effects_km2()
+    ana_cumulative_effects_cv_km2()
   }
 
 
