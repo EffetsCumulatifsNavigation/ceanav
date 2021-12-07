@@ -168,6 +168,9 @@ pipeline <- function(
 
     # Cumulative effects per km2 for valued components
     ana_cumulative_effects_cv_km2()
+
+    # Cumulative effects per km2 for administrative regions
+    ana_cumulative_effects_region_km2()
   }
 
 
