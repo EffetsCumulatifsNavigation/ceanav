@@ -1,0 +1,10 @@
+data_description:
+  id: "0065"
+  name: "Découpages administratifs"
+  description: "Les couches de découpages administratifs offertes aux échelles de 1/20 000 et 1/100 000 permettent la localisation des limites pour les composantes suivantes : 1) Les arrondissements et agglomérations; 2) Les municipalités, territoires non organisés et territoires autochtones; 3)Les régions administratives, communautés métropolitaines, et MRC; 4)La frontière internationale, les frontières interprovinciales ainsi que la frontière Québec–Terre-Neuve-et-Labrador."
+  access_date: 2021-12-07
+  contact_id: "0056"
+  url: "https://www.donneesquebec.ca/recherche/dataset/decoupages-administratifs"
+  identifiant: "eec20550-7916-4ff9-b9bf-9e07288b4a17"
+  availability: "open source"
+  citation: "Ministère de l'Énergie et des Ressources naturelles (2021) Découpages administratifs. url: https://www.donneesquebec.ca/recherche/dataset/decoupages-administratifs"

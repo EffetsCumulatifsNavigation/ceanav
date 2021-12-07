@@ -30,7 +30,7 @@ get_data0038 <- function() {
     # Download
     download.file(dat[1], destfile = paste0(folder, 'registre_aires_prot.zip'))
     download.file(dat[2], destfile = paste0(folder, 'AP_structures_donnees.pdf'))
-    download.file(dat[2], destfile = paste0(folder, 'LISEZ_MOI.pdf'))
+    download.file(dat[3], destfile = paste0(folder, 'LISEZ_MOI.pdf'))
 
     # Unzip
     unzip(zipfile = paste0(folder, 'registre_aires_prot.zip'), exdir = folder)
