@@ -70,4 +70,24 @@ fig_cumulative_stresseurs <- function() {
 
   # -----
   for(i in 1:length(data_id)) temp(dat, data_id[i], main[i], subtitle[i])
+
+  # -----
+  # Stack individual figures using magick package
+  i1 <- magick::image_read("figures/figures-output/cumulative_st_ancrage.png")
+  i2 <- magick::image_read("figures/figures-output/cumulative_st_deversement.png")
+  i3 <- magick::image_read("figures/figures-output/cumulative_st_dragage.png")
+  i4 <- magick::image_read("figures/figures-output/cumulative_st_naufrage.png")
+  i5 <- magick::image_read("figures/figures-output/cumulative_st_navigation.png")
+  i6 <- magick::image_read("figures/figures-output/cumulative_st_peche_commerciale.png")
+  i7 <- magick::image_read("figures/figures-output/cumulative_st_pollution_maritime.png")
+
+  l1 <- image_append(c(i1,i2))
+  l2 <- image_append(c(i3,i4))
+  l3 <- image_append(c(i5,i6))
+  l4 <- i7
+
+  img <- image_append(c(l1,l2,l3,l4), stack = TRUE)
+  par(mar = c(0,0,0,0))
+  magick::image_write(img, path = "./figures/figures-output/cumulative_st_panel.png", format = "png")
+
 }
