@@ -2,13 +2,13 @@
 
 ### Distribution spatiale
 
-```{r cumEffects, fig.cap = "Distribution des effets cumulatifs des sources de stress reliés aux activités maritimes sur les composantes valorisée", out.width = '100%'}
+```{r cumEffects, fig.cap = "Distribution des effets cumulatifs des sources de stress reliés aux activités maritimes sur les composantes valorisée", out.width = '100%', fig.link = "./figures/figures-output/cumulative_effects.png"}
 knitr::include_graphics("./figures/figures-output/cumulative_effects.png")
 ```
 
 
 ### Contribution régionale
 
-```{r ceakm, fig.cap = "Contribution moyenne par $km^2$ des stresseurs aux effets cumulatifs des activités maritimes sur les composantes valorisées dans la zone d'étude", out.width = '100%'}
+```{r ceakm, fig.cap = "Contribution moyenne par $km^2$ des stresseurs aux effets cumulatifs des activités maritimes sur les composantes valorisées dans la zone d'étude", out.width = '100%', fig.link = "./figures/figures-output/cumulative_effects_regional_contribution.png"}
 knitr::include_graphics("./figures/figures-output/cumulative_effects_regional_contribution.png")
 ```

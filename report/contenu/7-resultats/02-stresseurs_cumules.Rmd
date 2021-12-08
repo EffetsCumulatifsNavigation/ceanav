@@ -10,18 +10,18 @@ stresseurs dans notre zone d'étude.
 
 <br/>
 
-```{r stCum, fig.cap = "Distribution des stresseurs cumulés au sein de la zone d'étude", out.width = '100%'}
+```{r stCum, fig.cap = "Distribution des stresseurs cumulés au sein de la zone d'étude", out.width = '100%', fig.link = "./figures/figures-output/cumulative_st.png"}
 knitr::include_graphics("./figures/figures-output/cumulative_st.png")
 ```
 
 <br/>
 
-```{r stCumNorm, fig.cap = "Distribution des stresseurs cumulés normalisés au sein de la zone d'étude", out.width = '100%'}
+```{r stCumNorm, fig.cap = "Distribution des stresseurs cumulés normalisés au sein de la zone d'étude", out.width = '100%', fig.link = "./figures/figures-output/cumulative_st_norm.png"}
 knitr::include_graphics("./figures/figures-output/cumulative_st_norm.png")
 ```
 
 <br/>
 
-```{r stPanel, fig.cap = "Cumul des catégories des différents types de stresseurs au sein de la zone d'étude", out.width = '100%'}
+```{r stPanel, fig.cap = "Cumul des catégories des différents types de stresseurs au sein de la zone d'étude", out.width = '100%', fig.link = "./figures/figures-output/cumulative_st_panel.png"}
 knitr::include_graphics("./figures/figures-output/cumulative_st_panel.png")
 ```
