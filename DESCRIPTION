@@ -25,6 +25,7 @@ Imports:
     exactextractr,
     fs,
     glue,
+    magick,
     raster,
     sp,
     stringr(>= 1.4.0),
