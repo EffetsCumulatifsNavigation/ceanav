@@ -23,26 +23,6 @@ knitr::include_graphics("./figures/figures-output/cumulative_exposure_norm.png")
 
 <br/>
 
-```{r cumExpberge, fig.cap = "Distribution de l'exposition cumulée des types de berges aux stresseurs environnementaux normalisés au sein de la zone d'étude", out.width = '100%'}
-knitr::include_graphics("./figures/figures-output/cumulative_exposure_berge.png")
+```{r cumExpberge, fig.cap = "Distribution de l'exposition cumulée des différentes catégories de composantes valorisées aux stresseurs environnementaux au sein de la zone d'étude", out.width = '100%'}
+knitr::include_graphics("./figures/figures-output/cumulative_exposure_panel.png")
 ```
-
-<br/>
-
-```{r cumExphabitat, fig.cap = "Distribution de l'exposition cumulée des habitats aux stresseurs environnementaux normalisés au sein de la zone d'étude", out.width = '100%'}
-knitr::include_graphics("./figures/figures-output/cumulative_exposure_habitat.png")
-```
-
-<br/>
-
-```{r cumExpmammiferesmarins, fig.cap = "Distribution de l'exposition cumulée des mammifères marins aux stresseurs environnementaux normalisés au sein de la zone d'étude", out.width = '100%'}
-knitr::include_graphics("./figures/figures-output/cumulative_exposure_mammiferes_marins.png")
-```
-
-<br/>
-
-```{r cumExpsite, fig.cap = "Distribution de l'exposition cumulée des sites d'intérêt culturels, patrimoniaux et archéologiques aux stresseurs environnementaux normalisés au sein de la zone d'étude", out.width = '100%'}
-knitr::include_graphics("./figures/figures-output/cumulative_exposure_site.png")
-```
-
-<br/>
