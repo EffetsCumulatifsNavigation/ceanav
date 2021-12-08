@@ -54,4 +54,18 @@ fig_cumulative_composantes_valorisees <- function() {
 
   # -----
   for(i in 1:length(data_id)) temp(dat, data_id[i], main[i], subtitle[i])
+
+  # -----
+  # Stack individual figures using magick package
+  i1 <- magick::image_read("figures/figures-output/cumulative_exposure_berge.png")
+  i2 <- magick::image_read("figures/figures-output/cumulative_exposure_habitat.png")
+  i3 <- magick::image_read("figures/figures-output/cumulative_exposure_mammiferes_marins.png")
+  i4 <- magick::image_read("figures/figures-output/cumulative_exposure_site.png")
+
+  l1 <- image_append(c(i1,i2))
+  l2 <- image_append(c(i3,i4))
+
+  img <- image_append(c(l1,l2), stack = TRUE)
+  magick::image_write(img, path = "./figures/figures-output/cumulative_cv_panel.png", format = "png")
+
 }

@@ -87,7 +87,6 @@ fig_cumulative_stresseurs <- function() {
   l4 <- i7
 
   img <- image_append(c(l1,l2,l3,l4), stack = TRUE)
-  par(mar = c(0,0,0,0))
   magick::image_write(img, path = "./figures/figures-output/cumulative_st_panel.png", format = "png")
 
 }
