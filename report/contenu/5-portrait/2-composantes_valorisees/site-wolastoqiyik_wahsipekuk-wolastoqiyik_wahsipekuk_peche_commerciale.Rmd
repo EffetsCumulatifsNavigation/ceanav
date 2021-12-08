@@ -3,7 +3,7 @@
 
 <!-- -------------------------------------------------- -->
 
-```{r wolastoqiyikwahsipekukpechecommerciale, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Wolastoqiyik Wahsipekuk - Pêche traditionnelle", out.width = '100%'}
+```{r wolastoqiyikwahsipekukpechecommerciale, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Wolastoqiyik Wahsipekuk - Pêche traditionnelle", out.width = '100%', fig.link = "./figures/figures-integrated/site-wolastoqiyik_wahsipekuk_peche_commerciale.png"}
 knitr::include_graphics("./figures/figures-integrated/site-wolastoqiyik_wahsipekuk_peche_commerciale.png")
 ```
 

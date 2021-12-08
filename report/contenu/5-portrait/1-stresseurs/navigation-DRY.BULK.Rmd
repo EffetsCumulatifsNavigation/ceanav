@@ -3,7 +3,7 @@
 
 <!-- -------------------------------------------------- -->
 
-```{r DRYBULK, fig.cap = "Intensité de la navigation dans le Saint-Laurent et le Saguenay - Cargaison sèche", out.width = '100%'}
+```{r DRYBULK, fig.cap = "Intensité de la navigation dans le Saint-Laurent et le Saguenay - Cargaison sèche", out.width = '100%', fig.link = "./figures/figures-integrated/navigation-DRY.BULK.png"}
 knitr::include_graphics("./figures/figures-integrated/navigation-DRY.BULK.png")
 ```
 

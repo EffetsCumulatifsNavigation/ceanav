@@ -3,7 +3,7 @@
 
 <!-- -------------------------------------------------- -->
 
-```{r depot, fig.cap = "Distribution des sites de dragage et de dépôt de dragage dans le Saint-Laurent et le Saguenay - Sites de dépôts", out.width = '100%'}
+```{r depot, fig.cap = "Distribution des sites de dragage et de dépôt de dragage dans le Saint-Laurent et le Saguenay - Sites de dépôts", out.width = '100%', fig.link = "./figures/figures-integrated/dragage-depot.png"}
 knitr::include_graphics("./figures/figures-integrated/dragage-depot.png")
 ```
 

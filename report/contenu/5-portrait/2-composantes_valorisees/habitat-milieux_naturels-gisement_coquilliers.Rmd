@@ -3,7 +3,7 @@
 
 <!-- -------------------------------------------------- -->
 
-```{r gisementcoquilliers, fig.cap = "Distribution des habitats dans le Saint-Laurent et le Saguenay - Gisements coquilliers", out.width = '100%'}
+```{r gisementcoquilliers, fig.cap = "Distribution des habitats dans le Saint-Laurent et le Saguenay - Gisements coquilliers", out.width = '100%', fig.link = "./figures/figures-integrated/habitat-gisement_coquilliers.png"}
 knitr::include_graphics("./figures/figures-integrated/habitat-gisement_coquilliers.png")
 ```
 

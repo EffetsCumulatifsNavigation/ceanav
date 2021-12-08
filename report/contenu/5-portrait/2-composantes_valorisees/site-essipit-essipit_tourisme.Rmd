@@ -3,7 +3,7 @@
 
 <!-- -------------------------------------------------- -->
 
-```{r essipittourisme, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Essipit - Tourisme", out.width = '100%'}
+```{r essipittourisme, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Essipit - Tourisme", out.width = '100%', fig.link = "./figures/figures-integrated/site-essipit_tourisme.png"}
 knitr::include_graphics("./figures/figures-integrated/site-essipit_tourisme.png")
 ```
 

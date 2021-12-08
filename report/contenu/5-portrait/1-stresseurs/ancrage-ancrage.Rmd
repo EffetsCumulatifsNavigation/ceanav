@@ -3,7 +3,7 @@
 
 <!-- -------------------------------------------------- -->
 
-```{r ancrage, fig.cap = "Distribution des sites d'ancrage de navires dans le Saint-Laurent et le Saguenay - Sites d'ancrage de navires", out.width = '100%'}
+```{r ancrage, fig.cap = "Distribution des sites d'ancrage de navires dans le Saint-Laurent et le Saguenay - Sites d'ancrage de navires", out.width = '100%', fig.link = "./figures/figures-integrated/ancrage-ancrage.png"}
 knitr::include_graphics("./figures/figures-integrated/ancrage-ancrage.png")
 ```
 

@@ -3,7 +3,7 @@
 
 <!-- -------------------------------------------------- -->
 
-```{r inconnus, fig.cap = "Distribution et intensité des déversement accidentels dans le Saint-Laurent et le Saguenay - Contenu inconnu", out.width = '100%'}
+```{r inconnus, fig.cap = "Distribution et intensité des déversement accidentels dans le Saint-Laurent et le Saguenay - Contenu inconnu", out.width = '100%', fig.link = "./figures/figures-integrated/deversement-inconnus.png"}
 knitr::include_graphics("./figures/figures-integrated/deversement-inconnus.png")
 ```
 

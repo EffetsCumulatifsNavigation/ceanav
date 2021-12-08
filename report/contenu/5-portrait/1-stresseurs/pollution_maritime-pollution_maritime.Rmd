@@ -3,7 +3,7 @@
 
 <!-- -------------------------------------------------- -->
 
-```{r pollutionmaritime, fig.cap = "Intensité de la pollution maritime dans le Saint-Laurent et le Saguenay - Pollution maritime", out.width = '100%'}
+```{r pollutionmaritime, fig.cap = "Intensité de la pollution maritime dans le Saint-Laurent et le Saguenay - Pollution maritime", out.width = '100%', fig.link = "./figures/figures-integrated/pollution_maritime-pollution_maritime.png"}
 knitr::include_graphics("./figures/figures-integrated/pollution_maritime-pollution_maritime.png")
 ```
 

@@ -3,7 +3,7 @@
 
 <!-- -------------------------------------------------- -->
 
-```{r kahnawakevegatation, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Kahnawake - Végétation", out.width = '100%'}
+```{r kahnawakevegatation, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Kahnawake - Végétation", out.width = '100%', fig.link = "./figures/figures-integrated/site-kahnawake_vegatation.png"}
 knitr::include_graphics("./figures/figures-integrated/site-kahnawake_vegatation.png")
 ```
 

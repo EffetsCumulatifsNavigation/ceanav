@@ -3,7 +3,7 @@
 
 <!-- -------------------------------------------------- -->
 
-```{r harborseal, fig.cap = "Distribution des mammifères marins dans le Saint-Laurent et le Saguenay - Phoque commun", out.width = '100%'}
+```{r harborseal, fig.cap = "Distribution des mammifères marins dans le Saint-Laurent et le Saguenay - Phoque commun", out.width = '100%', fig.link = "./figures/figures-integrated/mammiferes_marins-harbor_seal.png"}
 knitr::include_graphics("./figures/figures-integrated/mammiferes_marins-harbor_seal.png")
 ```
 

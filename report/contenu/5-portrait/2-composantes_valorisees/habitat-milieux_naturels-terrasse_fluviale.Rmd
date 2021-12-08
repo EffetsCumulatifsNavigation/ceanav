@@ -3,7 +3,7 @@
 
 <!-- -------------------------------------------------- -->
 
-```{r terrassefluviale, fig.cap = "Distribution des habitats dans le Saint-Laurent et le Saguenay - Terrasse fluviale", out.width = '100%'}
+```{r terrassefluviale, fig.cap = "Distribution des habitats dans le Saint-Laurent et le Saguenay - Terrasse fluviale", out.width = '100%', fig.link = "./figures/figures-integrated/habitat-terrasse_fluviale.png"}
 knitr::include_graphics("./figures/figures-integrated/habitat-terrasse_fluviale.png")
 ```
 

@@ -3,7 +3,7 @@
 
 <!-- -------------------------------------------------- -->
 
-```{r huronnewendatpeche, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation Huronne-Wendat - Pêche", out.width = '100%'}
+```{r huronnewendatpeche, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation Huronne-Wendat - Pêche", out.width = '100%', fig.link = "./figures/figures-integrated/site-huronne_wendat_peche.png"}
 knitr::include_graphics("./figures/figures-integrated/site-huronne_wendat_peche.png")
 ```
 

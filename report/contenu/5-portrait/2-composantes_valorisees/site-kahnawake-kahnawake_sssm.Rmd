@@ -3,7 +3,7 @@
 
 <!-- -------------------------------------------------- -->
 
-```{r kahnawakesssm, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Kahnawake - Seigneurie du Sault-Saint-Louis", out.width = '100%'}
+```{r kahnawakesssm, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Kahnawake - Seigneurie du Sault-Saint-Louis", out.width = '100%', fig.link = "./figures/figures-integrated/site-kahnawake_sssm.png"}
 knitr::include_graphics("./figures/figures-integrated/site-kahnawake_sssm.png")
 ```
 

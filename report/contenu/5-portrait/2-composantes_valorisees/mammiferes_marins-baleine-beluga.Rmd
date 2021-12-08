@@ -3,7 +3,7 @@
 
 <!-- -------------------------------------------------- -->
 
-```{r beluga, fig.cap = "Distribution des mammifères marins dans le Saint-Laurent et le Saguenay - Béluga", out.width = '100%'}
+```{r beluga, fig.cap = "Distribution des mammifères marins dans le Saint-Laurent et le Saguenay - Béluga", out.width = '100%', fig.link = "./figures/figures-integrated/mammiferes_marins-beluga.png"}
 knitr::include_graphics("./figures/figures-integrated/mammiferes_marins-beluga.png")
 ```
 

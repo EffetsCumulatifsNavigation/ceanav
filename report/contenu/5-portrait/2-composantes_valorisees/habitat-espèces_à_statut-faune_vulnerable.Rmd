@@ -3,7 +3,7 @@
 
 <!-- -------------------------------------------------- -->
 
-```{r faunevulnerable, fig.cap = "Distribution des habitats dans le Saint-Laurent et le Saguenay - Espèces fauniques vulnérables", out.width = '100%'}
+```{r faunevulnerable, fig.cap = "Distribution des habitats dans le Saint-Laurent et le Saguenay - Espèces fauniques vulnérables", out.width = '100%', fig.link = "./figures/figures-integrated/habitat-faune_vulnerable.png"}
 knitr::include_graphics("./figures/figures-integrated/habitat-faune_vulnerable.png")
 ```
 
