@@ -57,10 +57,10 @@ fig_cumulative_composantes_valorisees <- function() {
 
   # -----
   # Stack individual figures using magick package
-  i1 <- magick::image_read("figures/figures-output/cumulative_exposure_berge.png")
-  i2 <- magick::image_read("figures/figures-output/cumulative_exposure_habitat.png")
-  i3 <- magick::image_read("figures/figures-output/cumulative_exposure_mammiferes_marins.png")
-  i4 <- magick::image_read("figures/figures-output/cumulative_exposure_site.png")
+  i1 <- magick::image_read("figures/figures-output/cumulative_cv_berge.png")
+  i2 <- magick::image_read("figures/figures-output/cumulative_cv_habitat.png")
+  i3 <- magick::image_read("figures/figures-output/cumulative_cv_mammiferes_marins.png")
+  i4 <- magick::image_read("figures/figures-output/cumulative_cv_site.png")
 
   l1 <- image_append(c(i1,i2))
   l2 <- image_append(c(i3,i4))
