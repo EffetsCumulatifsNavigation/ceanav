@@ -12,3 +12,9 @@ knitr::include_graphics("./figures/figures-output/cumulative_effects.png")
 ```{r ceakm, fig.cap = "Contribution moyenne par $km^2$ des stresseurs aux effets cumulatifs des activités maritimes sur les composantes valorisées dans la zone d'étude", out.width = '100%', fig.link = "./figures/figures-output/cumulative_effects_regional_contribution.png"}
 knitr::include_graphics("./figures/figures-output/cumulative_effects_regional_contribution.png")
 ```
+
+### Régions administratives
+
+```{r regionadmin, fig.cap = "Contribution moyenne par $km^2$ des stresseurs aux effets cumulatifs des activités maritimes sur les composantes valorisées dans les régions administratives du Québec convrant la zone d'étude", out.width = '100%', fig.link = "./figures/figures-output/cumulative_effects_region_cea.png"}
+knitr::include_graphics("./figures/figures-output/cumulative_effects_region_cea.png")
+```
