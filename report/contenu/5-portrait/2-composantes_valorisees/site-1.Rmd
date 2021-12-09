@@ -32,6 +32,15 @@ La catégorisation offerte par les communautés a toutefois été conservée int
 
 Il demeure important de noter que, pour l'ensemble des communautés participantes, les informations rapportées ne peuvent être considérées comme un portrait exhaustif des sites d'intérêt pour l'ensemble des membres des communautés; en effet, les informations résultent d'un processus de consultation limité des membres de la communauté, pour le projet spécifique d'évaluation des effets cumulatifs des activités maritimes. Pour plusieurs communautés, les sites identifiés proviennent d'autres exercices dont une intégration a été faite afin de répondre aux objectifs de la présente étude. De plus, la participation des Premières Nations à cette étude est faite sans préjudice à l'exercice de leurs droits juridiques sur leur territoire traditionnel respectif pour lesquels s'appliquent leurs droits et responsabilités d'intendance et qui se basent sur l'application d'une approche écosystémique plus large. Les sites d'intérêt identifiés doivent ainsi être interprétés dans le contexte élargi de ces droits et responsabilités.
 
+<!-- TODO: Discuter des limites temporelles ici, et du fait que les communautés ont clairement indiqué qu'il s'agit d'une limite de l'étude, et c'est aussi rapporté dans le document du GCNWA
+
+Voir limites relevées par le GCNWA
+
+Données caractérisent une activité, mais peuvent difficillement permettre de convenablement les contextualiser culturellement et écologiquement.
+
+> Les données rapportées ici servent donc à documenter les modalités de l’UOT des W8banakiak ainsi que les conditions qui sous-tendent leur exercice. Elles ne peuvent pas prédire les lieux qui seront fréquentés dans le futur ou le type d’activité qui y sera pratiqué. GCNWA
+-->
+
 Des sites patrimoniaux inscrits au registre du Ministère de la Culture et des Communications et disponibles ouvertement ont également été inclus au portrait des sites d'intérêt dans la zone d'étude. Il en résulte ainsi un total de `r length(meta$dataDescription$categories$francais)` catégories de sites d'intérêt culturels, patrimoniaux et archéologiques au sein de la zone d'étude.
 
 
