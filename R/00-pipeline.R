@@ -189,6 +189,7 @@ pipeline <- function(
     fig_cumulative_effects()
     fig_regional_contribution()
     fig_metanetwork()
+    fig_region_cea_km2()
   }
 
 

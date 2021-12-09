@@ -215,15 +215,15 @@ text(x = bbox$xmin + 2500,
      cex = .7
    )
 #=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=#
-# Poiint graph
+# Point graph
 #=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=#
 par(family = 'serif')
 par(mar = c(0,2,0,2))
 xR <- c(-3, nrow(cekm))
 yR <- c(-5, nrow(st))
 plot0(x = xR, y = yR)
-for(i in 1:nrow(cekm)) lines(x = c(i,i), y = c(1,yR[2]), lty = 2, lwd = 1.5, col = "#909090")
-# for(i in 1:nrow(st)) lines(x = c(1,xR[2]), y = c(i,i), lty = 2, lwd = 1.5, col = "#909090")
+for(i in 1:nrow(cekm)) lines(x = c(i,i), y = c(0.5,yR[2]+3), lty = 2, lwd = 1.5, col = "#909090")
+for(i in 1:nrow(st)) lines(x = c(0.75,xR[2]+.25), y = c(i,i), lty = 2, lwd = 1.5, col = "#90909066")
 points(x = dat$rg_id, y = dat$st_id, cex = dat$cea*1.5, col = "#000000", bg = dat$col, pch = 21)
 text(x = 1:xR[2], y = 0, labels = cekm$region, srt = 45, cex = .85, adj = c(1,.5))
 text(x = .5, y = 1:yR[2], labels = st$francais, cex = .85, adj = c(1,.5))
