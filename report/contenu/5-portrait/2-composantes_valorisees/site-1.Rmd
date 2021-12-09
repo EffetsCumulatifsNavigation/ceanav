@@ -39,6 +39,8 @@ Voir limites relevées par le GCNWA
 Données caractérisent une activité, mais peuvent difficillement permettre de convenablement les contextualiser culturellement et écologiquement.
 
 > Les données rapportées ici servent donc à documenter les modalités de l’UOT des W8banakiak ainsi que les conditions qui sous-tendent leur exercice. Elles ne peuvent pas prédire les lieux qui seront fréquentés dans le futur ou le type d’activité qui y sera pratiqué. GCNWA
+
+Pour la vulnérabilité : De plus, il est impossible de cartographier adéquatement les valeurs accordées à certains sites ou activités. L’importance d’un site dépend d’une multitude de facteurs. Par exemple, sans être fréquentés sur une base régulière, des lieux sont associés à des récits ou légendes, à l’histoire ou l’imaginaire collectif de la Nation, à des sites archéologiques ou sacrés, etc (GCNWA)
 -->
 
 Des sites patrimoniaux inscrits au registre du Ministère de la Culture et des Communications et disponibles ouvertement ont également été inclus au portrait des sites d'intérêt dans la zone d'étude. Il en résulte ainsi un total de `r length(meta$dataDescription$categories$francais)` catégories de sites d'intérêt culturels, patrimoniaux et archéologiques au sein de la zone d'étude.
