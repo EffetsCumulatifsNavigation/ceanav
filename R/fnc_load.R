@@ -179,7 +179,7 @@ load_output <- function(data_name) {
   files <- dir('./data/data-output', full.names = TRUE)
 
   # Identify dataset to load
-  uid <- str_detect(files, data_name)
+  uid <- str_detect(files, paste0(data_name,"\\."))
 
   # Identify extensions
   ext <- last(str_split(files[uid], "\\.")[[1]])
