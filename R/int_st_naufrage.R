@@ -43,8 +43,7 @@ st_naufrage <- function() {
          st_coordinates() %>%
          as.data.frame() %>%
          select(x = X, y = Y) %>%
-         # mutate(naufrage = 1)
-         mutate(naufrage = runif(nrow(.), 1,100))
+         mutate(naufrage = 1)
 
   # -----
   naufrage <- btb::kernelSmoothing(dfObservations = dat,
@@ -56,10 +55,24 @@ st_naufrage <- function() {
                               dfCentroids = round(coords,0))
 
   # -----
-  grid1p$naufrage <- naufrage$naufrage
+  dat <- grid1p
+  dat$naufrage <- naufrage$naufrage
 
   # -----
-  naufrage <- removeCoast(grid1p)
+  # WARNING: Supposed to have a function to do this, not working, likely because a single column
+  data(aoi)
+  data(grid1p)
+
+  # -----
+  uid <- st_intersects(aoi, dat) %>% unlist()
+  nid <- !1:nrow(dat) %in% uid
+
+  # -----
+  dat <- st_drop_geometry(dat)
+  for(i in 1:ncol(dat)) dat[nid, i] <- NA
+
+  # -----
+  naufrage <- cbind(grid1p, dat)
   # ------------------------------------------------------------------------- #
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
