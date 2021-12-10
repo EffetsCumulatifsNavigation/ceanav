@@ -89,5 +89,8 @@ cumulativeEffects <- function(stress, valued, vulnerability) {
   ce <- lapply(cumulative_effects, sum, na.rm = TRUE) %>%
                unlist()
   grid1p$cumulative_effects <- ce
-  st_write(grid1p, dsn = "data/data-output/cumulative_effects.geojson", quiet = TRUE)
+  st_write(grid1p,
+           dsn = "data/data-output/cumulative_effects.geojson",
+           quiet = TRUE,
+           delete_dsn = TRUE)
 }
