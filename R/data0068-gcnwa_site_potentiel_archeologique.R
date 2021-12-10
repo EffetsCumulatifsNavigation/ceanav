@@ -33,7 +33,8 @@ get_data0068 <- function() {
   # ----------------------------------------
   data0068 <- read.csv(paste0(folder, "site_potentiel_archeologique.csv")) %>%
               st_as_sf(coords = c("Longitude","Latitude"), crs = 4326) %>%
-              st_transform(crs = global_parameters()$crs)
+              st_transform(crs = global_parameters()$crs) %>%
+              st_buffer(1000)
   # _________________________________________________________________________ #
 
 
