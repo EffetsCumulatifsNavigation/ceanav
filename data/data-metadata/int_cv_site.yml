@@ -42,6 +42,17 @@ dataDescription:
     - huronne_wendat_toponymie
     - huronne_wendat_histoire
     - huronne_wendat_espece_peril
+    - gcnwa_gibier
+    - gcnwa_oiseaux_migrateurs
+    - gcnwa_animaux_fourrure
+    - gcnwa_cueillette_collecte
+    - gcnwa_sites_coucher
+    - gcnwa_sites_culturels
+    - gcnwa_sites_essentiels
+    - gcnwa_problemes_territoire
+    - gcnwa_zones_activites
+    - gcnwa_sites_archeologiques
+    - gcnwa_sites_potentiel_archeologique
     francais:
     - AGHAMM - Pêche commerciale
     - AGHAMM - Pêche traditionnelle
@@ -72,6 +83,17 @@ dataDescription:
     - Nation Huronne-Wendat - Toponymie
     - Nation Huronne-Wendat - Histoire
     - Nation Huronne-Wendat - Espèce en péril
+    - GCNWA - Gibier
+    - GCNWA - Oiseaux migrateurs
+    - GCNWA - Animaux à fourrure
+    - GCNWA - Cueillette et collecte
+    - GCNWA - Sites de coucher
+    - GCNWA - Sites culturels
+    - GCNWA - Sites essentiels
+    - GCNWA - Problèmes liés au territoire
+    - GCNWA - Zones d'activités
+    - GCNWA - Sites archéologiques
+    - GCNWA - Sites à potentiel archéologique
     type:
     - AGHAMM
     - AGHAMM
@@ -93,15 +115,26 @@ dataDescription:
     - Kahnawake
     - Public
     - Public
-    - Huronne Wendat
-    - Huronne Wendat
-    - Huronne Wendat
-    - Huronne Wendat
-    - Huronne Wendat
-    - Huronne Wendat
-    - Huronne Wendat
-    - Huronne Wendat
-    - Huronne Wendat
+    - Huronne_wendat
+    - Huronne_wendat
+    - Huronne_wendat
+    - Huronne_wendat
+    - Huronne_wendat
+    - Huronne_wendat
+    - Huronne_wendat
+    - Huronne_wendat
+    - Huronne_wendat
+    - GCNWA
+    - GCNWA
+    - GCNWA
+    - GCNWA
+    - GCNWA
+    - GCNWA
+    - GCNWA
+    - GCNWA
+    - GCNWA
+    - GCNWA
+    - GCNWA
     source:
     - '0022'
     - '0023'
@@ -132,6 +165,17 @@ dataDescription:
     - '0055'
     - '0055'
     - '0055'
+    - '0066'
+    - '0066'
+    - '0066'
+    - '0066'
+    - '0066'
+    - '0066'
+    - '0066'
+    - '0066'
+    - '0066'
+    - '0067'
+    - 0068
     mdref:
     - aghammpechecommerciale
     - aghammpechetraditionnelle
@@ -162,6 +206,17 @@ dataDescription:
     - huronnewendattoponymie
     - huronnewendathistoire
     - huronnewendatespeceperil
+    - gcnwagibier
+    - gcnwaoiseauxmigrateurs
+    - gcnwaanimauxfourrure
+    - gcnwacueillettecollecte
+    - gcnwasitescoucher
+    - gcnwasitesculturels
+    - gcnwasitesessentiels
+    - gcnwaproblemesterritoire
+    - gcnwazonesactivites
+    - gcnwasitesarcheologiques
+    - gcnwasitespotentielarcheologique
 rawData:
 - '0022'
 - '0023'
@@ -197,3 +252,14 @@ rawData:
 - '0055'
 - '0055'
 - '0055'
+- '0066'
+- '0066'
+- '0066'
+- '0066'
+- '0066'
+- '0066'
+- '0066'
+- '0066'
+- '0066'
+- '0067'
+- 0068

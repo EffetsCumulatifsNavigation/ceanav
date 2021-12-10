@@ -50,6 +50,17 @@ cv_site <- function() {
   #   - Kahnawake - Vegetation : 0032
   #   - Milieux protégés : 0030, 0038, 0039, 0040
   #   - Sites patrimoniaux : 0044, 0045
+  #   - GCNWA - Gibier : 0066
+  #   - GCNWA - Oiseaux migrateurs : 0066
+  #   - GCNWA - Animaux à fourrure : 0066
+  #   - GCNWA - Cueillette et collecte : 0066
+  #   - GCNWA - Sites de coucher : 0066
+  #   - GCNWA - Sites culturels : 0066
+  #   - GCNWA - Sites essentiels : 0066
+  #   - GCNWA - Problèmes liés au territoire : 0066
+  #   - GCNWA - Zones d'activités : 0066
+  #   - GCNWA - Sites archéologiques : 0067
+  #   - GCNWA - Sites à potentiel archéologique : 0068
   #
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   # ------------------------------------------------------
@@ -113,6 +124,7 @@ cv_site <- function() {
   site <- grid1p
 
 
+  # ================================================================================================
   # ------------------------------------------------------
   # AGHAMM - pêche commerciale : 0022
   dat <- "0022"
@@ -129,6 +141,7 @@ cv_site <- function() {
   # -----
   site$aghamm_peche_traditionnelle <- uid(dat)
 
+  # ================================================================================================
   # ----------------------------
   # Essipit - Culture et patrimoine : 0024
   dat <- "0024"
@@ -167,6 +180,7 @@ cv_site <- function() {
   meta_temp <- meta_update(meta_temp, dat, "essipit_acces_eau", "Essipit - Accès au plan d'eau", type = "Essipit")
   site$essipit_acces_eau <- uid(dat, "Accès au plan d'eau", "Categorie")
 
+  # ================================================================================================
   # ----------------------------
   # Wolastoqiyik Wahsipekuk - Pêche commerciale : 0025, 0026
   dat <- c("0025", "0026")
@@ -175,6 +189,7 @@ cv_site <- function() {
   # -----
   site$wolastoqiyik_wahsipekuk_peche_commerciale <- uid(dat)
 
+  # ================================================================================================
   # ----------------------------
   # Kahnawake - Cultural Sites : 0032
   dat <- "0032"
@@ -220,12 +235,14 @@ cv_site <- function() {
   site$kahnawake_vegatation <- uid(dat, "Vegetation", "category")
 
 
+  # ================================================================================================
   # ----------------------------
   # Milieux protégés : 0030, 0038, 0039, 0040
   dat <- c("0030", "0038", "0039", "0040")
   meta_temp <- meta_update(meta_temp, dat, "public_milieu_protege", "Public - Milieux protégés", type = "Public")
 
 
+  # ================================================================================================
   # ------------------------------------------------------
   # -----
   # NOTE: Function not working for this one
@@ -255,6 +272,7 @@ cv_site <- function() {
   site$public_milieu_protege <- uid2(data0030, data0038, data0039, data0040)
 
 
+  # ================================================================================================
   # ----------------------------
   # Sites patrimoniaux : 0044, 0045
   dat <- c("0044", "0045")
@@ -270,6 +288,7 @@ cv_site <- function() {
   site$public_sites_patrimoniaux <- uid2(data0044, data0045)
 
 
+  # ================================================================================================
   # ----------------------------
   # Nation Huronne-Wendat
   # Huronne-Wendat - Activités récréatives - 0055
@@ -316,6 +335,65 @@ cv_site <- function() {
   # Huronne-Wendat - Espèce en péril - 0055
   meta_temp <- meta_update(meta_temp, dat, "huronne_wendat_espece_peril", "Nation Huronne-Wendat - Espèce en péril", type = "Huronne_wendat")
   site$huronne_wendat_espece_peril <- uid(dat, "Espèce en péril", "Thème")
+
+  # ================================================================================================
+  # ----------------------------
+  # GCNWA - Gibier : 0066
+  dat <- "0066"
+  meta_temp <- meta_update(meta_temp, dat, "gcnwa_gibier", "GCNWA - Gibier", type = "GCNWA")
+  site$gcnwa_gibier <- uid(dat, "Gibier", "category_ressource")
+
+  # ----------------------------
+  # GCNWA - Oiseaux migrateurs : 0066
+  meta_temp <- meta_update(meta_temp, dat, "gcnwa_oiseaux_migrateurs", "GCNWA - Oiseaux migrateurs", type = "GCNWA")
+  site$gcnwa_oiseaux_migrateurs <- uid(dat, "Oiseaux migrateurs", "category_ressource")
+
+  # ----------------------------
+  # GCNWA - Animaux à fourrure : 0066
+  meta_temp <- meta_update(meta_temp, dat, "gcnwa_animaux_fourrure", "GCNWA - Animaux à fourrure", type = "GCNWA")
+  site$gcnwa_animaux_fourrure <- uid(dat, "Animaux à fourrure", "category_ressource")
+
+  # ----------------------------
+  # GCNWA - Cueillette et collecte : 0066
+  meta_temp <- meta_update(meta_temp, dat, "gcnwa_cueillette_collecte", "GCNWA - Cueillette et collecte", type = "GCNWA")
+  site$gcnwa_cueillette_collecte <- uid(dat, "Cueillette et collecte", "category_ressource")
+
+  # ----------------------------
+  # GCNWA - Sites de coucher : 0066
+  meta_temp <- meta_update(meta_temp, dat, "gcnwa_sites_coucher", "GCNWA - Sites de coucher", type = "GCNWA")
+  site$gcnwa_sites_coucher <- uid(dat, "Sites de coucher", "category_ressource")
+
+  # ----------------------------
+  # GCNWA - Sites culturels : 0066
+  meta_temp <- meta_update(meta_temp, dat, "gcnwa_sites_culturels", "GCNWA - Sites culturels", type = "GCNWA")
+  site$gcnwa_sites_culturels <- uid(dat, "Sites culturels", "category_ressource")
+
+  # ----------------------------
+  # GCNWA - Sites essentiels : 0066
+  meta_temp <- meta_update(meta_temp, dat, "gcnwa_sites_essentiels", "GCNWA - Sites essentiels", type = "GCNWA")
+  site$gcnwa_sites_essentiels <- uid(dat, "Sites essentiels", "category_ressource")
+
+  # ----------------------------
+  # GCNWA - Problèmes liés au territoire : 0066
+  meta_temp <- meta_update(meta_temp, dat, "gcnwa_problemes_territoire", "GCNWA - Problèmes liés au territoire", type = "GCNWA")
+  site$gcnwa_problemes_territoire <- uid(dat, "Problèmes liés au territoire", "category_ressource")
+
+  # ----------------------------
+  # GCNWA - Zones d'activités : 0066
+  meta_temp <- meta_update(meta_temp, dat, "gcnwa_zones_activites", "GCNWA - Zones d'activités", type = "GCNWA")
+  site$gcnwa_zones_activites <- uid(dat, "Zones d'activités", "category_ressource")
+
+  # ----------------------------
+  # GCNWA - Sites archéologiques : 0067
+  dat <- "0067"
+  meta_temp <- meta_update(meta_temp, dat, "gcnwa_sites_archeologiques", "GCNWA - Sites archéologiques", type = "GCNWA")
+  site$gcnwa_sites_archeologiques <- uid(dat)
+
+  # ----------------------------
+  # GCNWA - Sites à potentiel archéologique : 0068
+  dat <- "0068"
+  meta_temp <- meta_update(meta_temp, dat, "gcnwa_sites_potentiel_archeologique", "GCNWA - Sites à potentiel archéologique", type = "GCNWA")
+  site$gcnwa_sites_potentiel_archeologique <- uid(dat)
 
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
