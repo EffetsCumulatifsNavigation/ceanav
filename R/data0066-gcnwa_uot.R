@@ -21,7 +21,7 @@ get_data0066 <- function() {
   message("Les données brutes sont soumis à une entente de partage de données et doivent être supprimées au terme du projet")
 
   # Output folder
-  output <- "data0066-gcnwa/"
+  output <- "data0066-gcnwa_uot/"
   folder <- paste0("./data/data-raw/", output)
   if (!file.exists(folder)) dir.create(folder)
 
@@ -52,7 +52,7 @@ get_data0066 <- function() {
   # ----------------------------------------
   # Output
   st_write(obj = data0066,
-           dsn = "./data/data-format/data0066-gcnwa.geojson",
+           dsn = "./data/data-format/data0066-gcnwa_uot.geojson",
            delete_dsn = TRUE,
            quiet = TRUE)
   # _________________________________________________________________________ #
