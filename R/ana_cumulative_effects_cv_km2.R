@@ -63,7 +63,7 @@ ana_cumulative_effects_cv_km2 <- function() {
   #
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   write.csv(cekm,
-            file = "./data/data-output/cumulative_effects_km2.csv",
+            file = "./data/data-output/cumulative_effects_cv_km2.csv",
             row.names = FALSE)
   # ------------------------------------------------------------------------- #}
 

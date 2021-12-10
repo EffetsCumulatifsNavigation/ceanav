@@ -17,7 +17,7 @@ fig_regional_contribution <- function() {
 # Data
 #=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=#
 load_output("cumulative_effects_cv_km2")
-cekm <- cumulative_effects_km2
+cekm <- cumulative_effects_cv_km2
 st <- read.csv("data/data-metadata/metadata_stresseurs.csv")
 cv <- read.csv("data/data-metadata/metadata_composantes_valorisees.csv")
 

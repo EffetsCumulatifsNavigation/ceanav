@@ -15,7 +15,7 @@ fig_metanetwork <- function() {
 # Data
 #=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=#
 load_output("cumulative_effects_cv_km2")
-cekm <- cumulative_effects_km2
+cekm <- cumulative_effects_cv_km2
 st <- read.csv("data/data-metadata/metadata_stresseurs.csv")
 cv <- read.csv("data/data-metadata/metadata_composantes_valorisees.csv")
 
@@ -126,7 +126,7 @@ gr2$gr2 <- gsub("Artificielle","", gr2$gr2)
 # <=~-.-~=><=~-.-~=><=~-.-~=><=~-.-~=>
 # Nodes list with proper groups included
 nodesTx <- data.frame(group = cekm$gr1, network = cekm$gr2, name = cekm$cv, stringsAsFactors = FALSE)
-nodesTx$cex <- cekm$cea*1.25
+nodesTx$cex <- cekm$cea*.4
 
 # <=~-.-~=><=~-.-~=><=~-.-~=><=~-.-~=>
 # Add colors to node now
@@ -253,14 +253,14 @@ if (shadowEdge) {
   points(metanetwork$nodes$x,
          metanetwork$nodes$y,
          pch = 20,
-         cex = (metanetwork$nodes$cex * 5),
+         cex = (metanetwork$nodes$cex * 4),
          col = '#d7d7d7')
 }
 
 points(metanetwork$nodes$x,
        metanetwork$nodes$y,
        pch = 20,
-       cex = (metanetwork$nodes$cex * 3),
+       cex = (metanetwork$nodes$cex * 2.5),
        col = metanetwork$nodes$cols)
 
 
