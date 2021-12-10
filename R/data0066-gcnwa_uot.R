@@ -32,7 +32,63 @@ get_data0066 <- function() {
   # Import and format data
   # ----------------------------------------
   data0066 <- read.csv(paste0(folder, "UOT_grille_anonyme.csv")) %>%
-              select(-val_ras)
+              select(-val_ras) %>%
+              mutate(category_ressource = "")
+
+  # Classify resources
+    ## Gibier
+    nm <- c("CV","DS","OR","ON","GH","LA")
+    data0066$category_ressource[data0066$ressource %in% nm] <- "Gibier"
+
+    ## Oiseaux migrateurs
+    nm <- c("BC","OB","CD","XG")
+    data0066$category_ressource[data0066$ressource %in% nm] <- "Oiseaux migrateurs"
+
+    ## Animaux à fourrure
+    nm <- c("CA","CO","LR","LP","LX","MU","RE","RM","XF","XT")
+    data0066$category_ressource[data0066$ressource %in% nm] <- "Animaux à fourrure"
+
+    ## Cueillette et collecte
+    nm <- c("AB","AF","AM","AR","BP","CE","CG","CH","EB","FN","FR",
+            "FV","GC","HO","IF","LG","MC","MF","PM","QU","RC","SB",
+            "SV","TH","XV","XE")
+    data0066$category_ressource[data0066$ressource %in% nm] <- "Cueillette et collecte"
+
+    ## Sites de coucher
+    nm <- c("CP","SC","XN")
+    data0066$category_ressource[data0066$ressource %in% nm] <- "Sites de coucher"
+
+    ## Sites culturels
+    nm <- c("LS","SF","SL","SR","OA","ST","XC")
+    data0066$category_ressource[data0066$ressource %in% nm] <- "Sites culturels"
+
+    ## Sites essentiels
+    nm <- c("MI","AP","PL","XS")
+    data0066$category_ressource[data0066$ressource %in% nm] <- "Sites essentiels"
+
+    ## Problèmes liés au territoire
+    nm <- c("PA","PZ")
+    data0066$category_ressource[data0066$ressource %in% nm] <- "Problèmes liés au territoire"
+
+    ## Zones d'activités
+    nm <- c("ZC","ZT","ZP","ZE","ZX")
+    data0066$category_ressource[data0066$ressource %in% nm] <- "Zones d'activités"
+
+    # ## Moyens de transport
+    # nm <- c("MA","RA","CT","QR","VO","BT","MN","XD","XA")
+    # data0066$category_ressource[data0066$ressource %in% nm] <- "Moyens de transport"
+
+    # ## Zones particulières
+    # nm <- c("ZF","ZS")
+    # data0066$category_ressource[data0066$ressource %in% nm] <- "Zones particulières"
+
+    ## Pêche
+    # TODO: Need to check, those accronyms are not defined
+    #       "DC""DR""ES""BA""AC""BR""PE""DB""DQ""OE""XP""VT"
+    uid <- data0066$category_ressource == ""
+    data0066$category_ressource[uid] <- "Pêche"
+
+  # -----
   grid2p <- st_read(paste0(folder, "Grid_Poly2000.geojson"), quiet = TRUE) %>%
             mutate(gridnum = 1:nrow(.)) %>%
             select(-val_ras)
