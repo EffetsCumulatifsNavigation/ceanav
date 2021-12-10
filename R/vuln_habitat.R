@@ -155,6 +155,9 @@ vuln_habitat <- function() {
   # Diminution de 10% pour les déversements de types autres
   vulnerability_habitat["autres", ] <- vulnerability_habitat["autres", ]*.9
 
+  # Observation terrasse_plage = NA for now. Change to 0
+  vulnerability_habitat["Observation","terrasse_plage"] <- 0
+
   # Normalize between 0 and 1
   norm <- function(x, dat) round(x / max(dat, na.rm = TRUE), 4)
   vulnerability_habitat <- apply(vulnerability_habitat, 2, norm, vulnerability_habitat)
