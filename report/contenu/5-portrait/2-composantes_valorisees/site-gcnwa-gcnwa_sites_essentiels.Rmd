@@ -1,0 +1,10 @@
+<!-- #### Sites d’intérêt - GCNWA - Sites essentiels {-} -->
+
+
+<!-- -------------------------------------------------- -->
+
+```{r gcnwasitesessentiels, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - GCNWA - Sites essentiels", out.width = '100%', fig.link = "./figures/figures-integrated/site-gcnwa_sites_essentiels.png"}
+knitr::include_graphics("./figures/figures-integrated/site-gcnwa_sites_essentiels.png")
+```
+
+<br>

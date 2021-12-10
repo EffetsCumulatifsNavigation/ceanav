@@ -1,0 +1,10 @@
+<!-- #### Sites d’intérêt - GCNWA - Problèmes liés au territoire {-} -->
+
+
+<!-- -------------------------------------------------- -->
+
+```{r gcnwaproblemesterritoire, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - GCNWA - Problèmes liés au territoire", out.width = '100%', fig.link = "./figures/figures-integrated/site-gcnwa_problemes_territoire.png"}
+knitr::include_graphics("./figures/figures-integrated/site-gcnwa_problemes_territoire.png")
+```
+
+<br>
