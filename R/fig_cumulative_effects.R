@@ -29,21 +29,45 @@ fig_cumulative_effects <- function() {
   load_output("cumulative_effects")
   dat <- cumulative_effects
 
-  # -----
   data_id <- c(
-    "cumulative_effects"
+    "cumulative_effects",
+    "cumulative_effects_berge",
+    "cumulative_effects_habitat",
+    "cumulative_effects_mammiferes_marins",
+    "cumulative_effects_site"
   )
 
   # -----
   main <- c(
-    "Effets cumulatifs"
+    "Effets cumulatifs",
+    "Effets cumulatifs des berges",
+    "Effets cumulatifs des habitats",
+    "Effets cumulatifs des mammifères marins",
+    "Effets cumulatifs des sites d'intérêt"
   )
 
   # -----
   subtitle <- c(
-    "Stresseurs * composantes valorisées cumulés * vulnérabilité"
+    "Stresseurs * composantes valorisées * vulnérabilité",
+    "Stresseurs * berges * vulnérabilité",
+    "Stresseurs * habitats * vulnérabilité",
+    "Stresseurs * mammifères marins * vulnérabilité",
+    "Stresseurs * sites d'intérêt * vulnérabilité"
   )
 
   # -----
   for(i in 1:length(data_id)) temp(dat, data_id[i], main[i], subtitle[i])
+
+  # -----
+  # Stack individual figures using magick package
+  i1 <- magick::image_read("figures/figures-output/cumulative_effects_berge.png")
+  i2 <- magick::image_read("figures/figures-output/cumulative_effects_habitat.png")
+  i3 <- magick::image_read("figures/figures-output/cumulative_effects_mammiferes_marins.png")
+  i4 <- magick::image_read("figures/figures-output/cumulative_effects_site.png")
+
+  l1 <- image_append(c(i1,i2))
+  l2 <- image_append(c(i3,i4))
+
+  img <- image_append(c(l1,l2), stack = TRUE)
+  magick::image_write(img, path = "./figures/figures-output/cumulative_effects_panel.png", format = "png")
 }
