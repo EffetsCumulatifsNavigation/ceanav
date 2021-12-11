@@ -55,6 +55,14 @@ ana_cumulative_effects_region_km2 <- function() {
   # -----
   for(i in 1:length(uid)) cekm$area[i] <- length(uid[[i]])
 
+  # Add dfs for individuals cvs
+  cekm_berge <- cekm_habitat <- cekm_mammiferes_marins <- cekm_site <- cekm
+  cv_meta <- read.csv("./data/data-metadata/metadata_composantes_valorisees.csv")
+  berge <- paste0("berge_",cv_meta$accronyme[cv_meta$comp_val == "berge"])
+  habitat <- paste0("habitat_",cv_meta$accronyme[cv_meta$comp_val == "habitat"])
+  mammiferes_marins <- paste0("mammiferes_marins_",cv_meta$accronyme[cv_meta$comp_val == "mammiferes_marins"])
+  site <- paste0("site_",cv_meta$accronyme[cv_meta$comp_val == "site"])
+
   # -----
   # Now get metrics for each stressor
   folder <- "data/data-output/cea_stresseur/"
@@ -67,31 +75,25 @@ ana_cumulative_effects_region_km2 <- function() {
     # ---
     # Iterate over regions
     # TODO: Remove na.rm = TRUE
-    for(j in 1:nrow(cekm)) cekm[j, stNames[i]] <- sum(dat[uid[[j]], ], na.rm = TRUE) / cekm$area[j]
+    for(j in 1:nrow(cekm)) {
+      cekm[j, stNames[i]] <- sum(dat[uid[[j]], ], na.rm = TRUE) / cekm$area[j]
+      cekm_berge[j, stNames[i]] <- sum(dat[uid[[j]], berge], na.rm = TRUE) / cekm$area[j]
+      cekm_habitat[j, stNames[i]] <- sum(dat[uid[[j]], habitat], na.rm = TRUE) / cekm$area[j]
+      cekm_mammiferes_marins[j, stNames[i]] <- sum(dat[uid[[j]], mammiferes_marins], na.rm = TRUE) / cekm$area[j]
+      cekm_site[j, stNames[i]] <- sum(dat[uid[[j]], site], na.rm = TRUE) / cekm$area[j]
+    }
   }
 
   # ---
-  for(i in 1:nrow(cekm)) cekm$cea[i] <- round(sum(cekm[i, stNames]), 6)
+  for(i in 1:nrow(cekm)) {
+    cekm$cea[i] <- round(sum(cekm[i, stNames]), 6)
+    cekm_berge$cea[i] <- round(sum(cekm_berge[i, stNames]), 6)
+    cekm_habitat$cea[i] <- round(sum(cekm_habitat[i, stNames]), 6)
+    cekm_mammiferes_marins$cea[i] <- round(sum(cekm_mammiferes_marins[i, stNames]), 6)
+    cekm_site$cea[i] <- round(sum(cekm_site[i, stNames]), 6)
+  }
 
-  # # -----
-  # # Now get metrics for each valued component
-  # folder <- "data/data-output/cea_composante_valorisee/"
-  # files <- dir(folder)
-  # cvNames <- gsub("cea_", "", files) %>% gsub(".csv","",.)
-  # for(i in 1:length(files)) {
-  #   # ---
-  #   uid <- cekm$cv == cvNames[i]
-  #
-  #   # ---
-  #   dat <- read.csv(glue("{folder}{files[i]}")) %>%
-  #          colSums(na.rm = TRUE) / cekm$area[uid]
-  #
-  #   # ---
-  #   cekm[uid, names(dat)] <- round(dat, 6)
-  #
-  #   # ---
-  #   cekm$cea[uid] <- round(sum(dat), 6)
-  # }
+
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   # Export
@@ -99,6 +101,22 @@ ana_cumulative_effects_region_km2 <- function() {
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   write.csv(cekm,
             file = "./data/data-output/cumulative_effects_region_km2.csv",
+            row.names = FALSE)
+
+  write.csv(cekm_berge,
+            file = "./data/data-output/cumulative_effects_region_km2_berge.csv",
+            row.names = FALSE)
+
+  write.csv(cekm_habitat,
+            file = "./data/data-output/cumulative_effects_region_km_habitat.csv",
+            row.names = FALSE)
+
+  write.csv(cekm_mammiferes_marins,
+            file = "./data/data-output/cumulative_effects_region_km2_mammiferes_marins.csv",
+            row.names = FALSE)
+
+  write.csv(cekm_site,
+            file = "./data/data-output/cumulative_effects_region_km2_site.csv",
             row.names = FALSE)
   # ------------------------------------------------------------------------- #}
 
