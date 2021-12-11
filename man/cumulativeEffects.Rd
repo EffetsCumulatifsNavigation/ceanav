@@ -4,7 +4,13 @@
 \alias{cumulativeEffects}
 \title{Cumulative effects}
 \usage{
-cumulativeEffects(stress, valued, vulnerability)
+cumulativeEffects(
+  stress,
+  valued,
+  vulnerability,
+  output_name = "cumulative_effects",
+  individual_cea = TRUE
+)
 }
 \arguments{
 \item{stress}{matrix with stressors intensity}
@@ -12,6 +18,10 @@ cumulativeEffects(stress, valued, vulnerability)
 \item{valued}{matrix with presence or amount of valued components}
 
 \item{vulnerability}{matrix with vulnerability of valued components to stressors. Names used in stress and valued matrices must be the same as that found in vulnerability matrix}
+
+\item{output_name}{character, name of the output file}
+
+\item{individual_cea}{logical, if TRUE function exports all individual effects}
 }
 \description{
 Function to evaluate cumulative effects of stressors on valued components

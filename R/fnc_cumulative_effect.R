@@ -13,7 +13,7 @@
 #' @details
 #'
 
-cumulativeEffects <- function(stress, valued, vulnerability) {
+cumulativeEffects <- function(stress, valued, vulnerability, individual_cea = TRUE) {
 
   # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ #
   # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ #
@@ -38,59 +38,59 @@ cumulativeEffects <- function(stress, valued, vulnerability) {
   st <- colnames(cumulative_effects[[1]])
   vc <- rownames(cumulative_effects[[1]])
 
-  # Export information on effects predicted by individual stressors
-  folder <- "data/data-output/cea_stresseur/"
-  if (!file.exists(folder)) dir.create(folder)
+  if (individual_cea) {
+    # Export information on effects predicted by individual stressors
+    folder <- "data/data-output/cea_stresseur/"
+    if (!file.exists(folder)) dir.create(folder)
 
-  # Iterate over stressors
-  for(i in 1:length(st)) {
-    temp <- cumulative_effects
+    # Iterate over stressors
+    for(i in 1:length(st)) {
+      temp <- cumulative_effects
 
-    # Iterate over grid cells
-    for(j in 1:length(temp)) {
-      temp[[j]] <- temp[[j]][, st[i]] %>%
-                   t() %>%
-                   data.frame()
+      # Iterate over grid cells
+      for(j in 1:length(temp)) {
+        temp[[j]] <- temp[[j]][, st[i]] %>%
+                     t() %>%
+                     data.frame()
+      }
+
+      # Single data.frame
+      temp <- bind_rows(temp)
+
+      # Export
+      write.csv(temp, glue("{folder}cea_{st[i]}.csv"), row.names = FALSE)
     }
 
-    # Single data.frame
-    temp <- bind_rows(temp)
+    # Export information on effects predicted on individual valued components
+    folder <- "data/data-output/cea_composante_valorisee/"
+    if (!file.exists(folder)) dir.create(folder)
 
-    # Export
-    write.csv(temp, glue("{folder}cea_{st[i]}.csv"), row.names = FALSE)
-  }
+    # Iterate over valued components
+    for(i in 1:length(vc)) {
+      temp <- cumulative_effects
 
-  # Export information on effects predicted on individual valued components
-  folder <- "data/data-output/cea_composante_valorisee/"
-  if (!file.exists(folder)) dir.create(folder)
+      # Iterate over grid cells
+      for(j in 1:length(temp)) {
+        temp[[j]] <- temp[[j]][vc[i], ] %>%
+                     t() %>%
+                     data.frame()
+      }
 
-  # Iterate over valued components
-  for(i in 1:length(vc)) {
-    temp <- cumulative_effects
+      # Single data.frame
+      temp <- bind_rows(temp)
 
-    # Iterate over grid cells
-    for(j in 1:length(temp)) {
-      temp[[j]] <- temp[[j]][vc[i], ] %>%
-                   t() %>%
-                   data.frame()
+      # Export
+      write.csv(temp, glue("{folder}cea_{vc[i]}.csv"), row.names = FALSE)
     }
-
-    # Single data.frame
-    temp <- bind_rows(temp)
-
-    # Export
-    write.csv(temp, glue("{folder}cea_{vc[i]}.csv"), row.names = FALSE)
   }
 
   # Single cumulative effects assessment
   # TODO: evaluate whether I should normalize results
   # TODO: remove na.rm from equation, there should not be any and if there are is a sign that there is a problem to resolve, so I want to keep it
   data(grid1p)
-  ce <- lapply(cumulative_effects, sum, na.rm = TRUE) %>%
+  ce <- lapply(cumulative_effects, sum) %>%
                unlist()
   grid1p$cumulative_effects <- ce
-  st_write(grid1p,
-           dsn = "data/data-output/cumulative_effects.geojson",
-           quiet = TRUE,
-           delete_dsn = TRUE)
+
+  return(grid1p)
 }
