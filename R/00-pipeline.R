@@ -181,10 +181,10 @@ pipeline <- function(
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~
   if (pipeline_figures) {
     # Données formatées (annexe)
-    fig_format_all()
+    # fig_format_all()
 
     # Données intégrées (portrait)
-    fig_integrated_all()
+    # fig_integrated_all()
 
     # Analyses
     fig_cumulative_stresseurs()

@@ -44,7 +44,6 @@ ana_stresseurs_format <- function() {
   #   }
   # }
   # hist_all(stresseurs_raw)
-
   # -----
   dr <- st_drop_geometry(stresseurs_raw) %>%
         apply(2, function(x) log(x + 1))
@@ -52,15 +51,20 @@ ana_stresseurs_format <- function() {
 
   # ------------------------------------------------
   # Normalisation
+  # NOTE:
+  # Before 2012-11-10 : All stressors categories are normalised by the range
+  #                     of their own values only
+  # As of  2012-11-11 : Shipping are normalised together to avoid ranking types of ships
+  #                     differently even though the amount of ships can differ significantly.
+  uid <- str_detect(colnames(dr), "navigation")
+  dr[, uid] <- quantNorm(dr[, uid])
 
   # -----
-  dr <- apply(dr, 2, quantNorm)
+  dr[, !uid] <- apply(dr[, !uid], 2, quantNorm)
 
   # -----
   stresseurs_format <- cbind(grid1p, dr)
   # hist_all(stresseurs_format)
-
-
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   # Export data
