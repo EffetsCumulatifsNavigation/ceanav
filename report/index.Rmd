@@ -44,8 +44,11 @@ knitr::opts_chunk$set(
   fig.width = 8,
   fig.height = 6,
   fig.align = 'center',
-  width = 120
+  width = 120#,
+  # table.attr = 'class="flat-table"'
 )
+
+
 
 # Load project package
 library(ceanav)
