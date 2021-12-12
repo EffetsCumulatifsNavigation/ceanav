@@ -108,7 +108,7 @@ ana_cumulative_effects_region_km2 <- function() {
             row.names = FALSE)
 
   write.csv(cekm_habitat,
-            file = "./data/data-output/cumulative_effects_region_km_habitat.csv",
+            file = "./data/data-output/cumulative_effects_region_km2_habitat.csv",
             row.names = FALSE)
 
   write.csv(cekm_mammiferes_marins,
