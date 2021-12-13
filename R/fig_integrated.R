@@ -63,5 +63,6 @@ fig_integrated_all <- function() {
               gsub("cv_","",.) %>%
               gsub("st_","",.) %>%
               gsub(".geojson","",.)
+  dataname <- dataname[dataname != "vulnerability.csv"]
   for(i in dataname) fig_integrated(data_id = i)
 }

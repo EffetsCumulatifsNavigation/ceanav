@@ -184,7 +184,7 @@ pipeline <- function(
     # fig_format_all()
 
     # Données intégrées (portrait)
-    # fig_integrated_all()
+    fig_integrated_all()
 
     # Analyses
     fig_cumulative_stresseurs()
