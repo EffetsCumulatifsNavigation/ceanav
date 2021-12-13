@@ -17,6 +17,10 @@ col:
   palette:
     - "#b96136"
     - "#246e4f"
+  insert:
+    - "#B8714A"
+    - "#485B67"
+    - "#8f65a2"
 bbox:
   base:
     xmin: -400000
