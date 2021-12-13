@@ -7,6 +7,7 @@
 #' @param subtitle subtitle
 #' @param unit_data units of data
 #' @param references data citation used for integrated data
+#' @param city logical, if TRUE name of cities are added to graph
 #' @param ... further specifications, see \link{plot} and details.
 #'
 #' @examples
@@ -22,7 +23,7 @@ plot_ceanav <- function(dat, ...) {
 #' @method plot_ceanav sf
 #' @name plot_ceanav
 #' @export
-plot_ceanav.sf <- function(dat, main = NULL, subtitle = NULL, unit_data = NULL, references = NULL, ...) {
+plot_ceanav.sf <- function(dat, main = NULL, subtitle = NULL, unit_data = NULL, references = NULL, city = TRUE, ...) {
 
   # pdf(glue('./figures/figures-format/{data_id}.pdf'), width = 7, height = 5, pointsize = 12)
   # png(glue('./figures/delete.png'), res = 300, width = 100, height = 70, units = "mm", pointsize = 12)
@@ -35,6 +36,9 @@ plot_ceanav.sf <- function(dat, main = NULL, subtitle = NULL, unit_data = NULL, 
   # ------------------
   data(aoi)
   aoi <- suppressWarnings(st_simplify(aoi, dTolerance = 100, preserveTopology = F))
+
+  # ------------------
+  basemap("cities")
 
   # ------------------
   global_parameters()
@@ -155,6 +159,20 @@ plot_ceanav.sf <- function(dat, main = NULL, subtitle = NULL, unit_data = NULL, 
   # ------------------
   # Data
   plotDat()
+
+  # ------------------
+  # Cities
+  if (city) {
+    plot(st_geometry(cities), add = TRUE, pch = 21, col = "#3e3e3e", bg = "#9f9f9f", cex = .4)
+    for(i in 1:nrow(cities)) {
+      text(x = cities$X[i]+cities$offX[i],
+           y = cities$Y[i]+cities$offY[i],
+           labels = cities$city[i],
+           cex = .35,
+           col = global_param$col$integrated$textOff,
+           adj = c(cities$adjX[i], .5))
+    }    
+  }
 
   # ------------------------------------------------------------------------
   # Inserts
