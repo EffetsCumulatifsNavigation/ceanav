@@ -85,6 +85,37 @@ get_basemap <- function() {
            dsn = "./data/data-basemap/egsl.geojson",
            delete_dsn = TRUE)
 
+
+
+  # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  #                                   CITIES
+  # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  cities <- rbind(c("Montréal", 45.50254228022055, -73.60212361152767),
+                  c("Sorel-Tracy", 46.04602094647503, -73.11066440843165),
+                  c("Trois-Rivière", 46.369134392835505, -72.57437227244509),
+                  c("Portneuf", 46.69773995828071, -71.89258221436206),
+                  c("Québec", 46.81389793427603, -71.21222137489029),
+                  c("La Pocatière", 47.36885583905954, -70.02321997363107),
+                  c("Baie-Saint-Paul", 47.440943292425075, -70.51229725440152),
+                  c("Tadoussac", 48.1549463212358, -69.7254261992016),
+                  c("Rivière-du-Loup", 47.84514499357216, -69.5537057317311),
+                  c("Rimouski", 48.44414698303665, -68.54511969494227),
+                  c("Forestville", 48.7417453695865, -69.08201781318876),
+                  c("Baie-Comeau", 49.222495074896855, -68.1603788485369),
+                  c("Matane", 48.847708031386716, -67.52783889874046),
+                  c("Saint-Fulgence", 48.452471677247125, -70.90072260561196),
+                  c("La Baie", 48.34102261306717, -70.88195643377449)) %>%
+            data.frame() %>%
+            setNames(c("city","latitude","longitude")) %>%
+            mutate(latitude = as.numeric(latitude),
+                   longitude = as.numeric(longitude)) %>%
+            st_as_sf(coords = c("longitude","latitude"), crs = 4326) %>%
+            st_transform(crs = global_parameters()$crs) %>%
+            st_write(dsn = "./data/data-basemap/cities.geojson", delete_dsn = TRUE)
+
+
+
+
   # -----
   file.remove("data/data-basemap/egsl.zip")
   file.remove("data/data-basemap/egsl/egsl.dbf")
