@@ -18,7 +18,15 @@ fig_aoi <- function() {
   global_parameters()
 
   # ------------------
-  plotDat <- function() {
+  plotDat <- function(trans = "77") {
+    # ------------------
+    plot(
+      st_geometry(grid1p),
+      lwd = .1,
+      border = paste0("#000000", trans),
+      add = TRUE
+    )
+
     # ------------------
     plot(
       st_geometry(aoi),
@@ -27,13 +35,7 @@ fig_aoi <- function() {
       add = TRUE
     )
 
-    # ------------------
-    plot(
-      st_geometry(grid1p),
-      lwd = .1,
-      border = "#00000077",
-      add = TRUE
-    )
+
 
   }
 
@@ -47,6 +49,7 @@ fig_aoi <- function() {
   # ------------------
   bbox <- global_param$bbox$base
   qc <- st_bbox(quebec)
+  lacstpierre <- global_param$bbox$lacstpierre
 
   # ------------------
   pal <- colorRampPalette(viridis::viridis(100))
@@ -90,6 +93,20 @@ fig_aoi <- function() {
   lines(x = rep(-200000, 2), y = c(270000, 370000), lwd = 1.5, lty = 2)
   text(x = -335000, 350000, labels = c("Secteur fluvial"), cex = .7, font = 3, adj = c(.5,.5), srt = 30)
   text(x = 60000, 460000, labels = c("Secteur maritime"), cex = .7, font = 3, adj = c(.5,.5), srt = 30)
+
+  # ------------------
+  rect(lacstpierre[1], lacstpierre[3], lacstpierre[2], lacstpierre[4], lty = 2,
+       border = "#00000088")
+
+  # ---------------------------
+  # Grille
+  par(new = TRUE)
+  par(fig = c(.035,.25,.6,.825), mar = c(0,0,0,0))
+  # par(fig = c(.765,.965,.05,.25), mar = c(0,0,0,0))
+  plot0(x = c(lacstpierre$xmin, lacstpierre$xmax), y = c(lacstpierre$ymin, lacstpierre$ymax))
+  box(col = "#00000088")
+  plotDat(trans = "FF")
+  text(x = lacstpierre$xmin + 750, y = lacstpierre$ymax - 3000, labels = "Grille d'étude", cex = .5, font = 3, adj = c(0,.5))
 
   # ---------------------------
   # Québec
