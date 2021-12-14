@@ -1,7 +1,40 @@
 # Portée {#portee}
 
-L’évaluation des impacts cumulatifs des activités maritimes sera effectuée pour les écosystèmes du Saint-Laurent (tronçon fluvial et estuaire, i.e. de Montréal à Pointe-des-Monts) et du Saguenay (partie en eau profonde jusqu’à Saint-Fulgence). Le processus d’évaluation permettra d’établir un portrait de la répartition spatiale des [composantes valorisées](#cv) et des [facteurs de stress](#stress) issus des activités maritimes de la zone d’étude ciblés pour l’analyse. Les activités maritimes incluent non seulement les navires commerciaux, mais aussi les bateaux de croisières, traversiers, bateaux de pêche, plaisanciers. Les infrastructures portuaires ne sont pas incluses dans ce projet. La vulnérabilité de composantes valorisées aux divers facteurs de stress sera ensuite évaluée. Enfin, le portrait de la zone d’étude sera utilisé afin d’effectuer l’évaluation des effets cumulés des activités maritimes sur les composantes valorisées ciblées. Cette étude vise une gestion plus proactive et holistique des écosystèmes marins et dulcicoles.
+## Objectifs
 
-La [méthode d’analyse des effets cumulés](#ic) et les [étapes de la démarche](#etapes) permettront d’obtenir un portrait géographique contemporain de la zone d’étude, des sources de pression liées au trafic maritime et des composantes valorisées jugées prioritaires. Ce portrait structurera les connaissances disponibles au sein de la zone d’étude. Ces connaissances pourraient permettre de bonifier le projet pilote de Transport Canada et d’effectuer des analyses d’effets cumulés récurrentes, d’explorer de nouvelles questions de gestion, et d’élargir la portée de l’étude afin d’inclure des secteurs d’activités additionnels et d’accroître la superficie de la zone d’étude.
+<!-- TODO : Ajouter objectifs de l'évaluation des effets cumulatifs -->
 
-La collaboration avec les Premières Nations et l’intégration du savoir autochtone seront priorisés lors de la démarche. Les discussions et conclusions issus des ateliers de travail avec les représentants des Premières Nations et autres parties prenantes pour l’élaboration du projet seront des atouts majeurs pour le processus d’évaluation des effets cumulés. Les savoirs autochtones, lorsque disponibles, seront utilisés afin de détecter les changements dans le milieu et pour améliorer notre compréhension des effets cumulatifs.
+## Limites spatiales et temporelles
+
+La région visée par l'évaluation des effets cumulatifs des activités maritimes couvre le Saint-Laurent fluvial et l'estuaire du Saint-Laurent entre l'ouest de Montréal et Pointe-des-Monts sur la côte nord et Cap-Chat sur la rive sud, et la partie en eau profonde du Saguenay de son embouchure sur le Saint-Laurent jusqu'à Saint-Fulgence (Figure \@ref(aoi)). La zone d'étude a été délimitée en combinant la classification des rivages du Québec et du Fleuve Saint-Laurent [@sergy2008] et les bases de données topographiques du Québec (BDTQ) à l'échelle 1/20 000 [@mern2021]. Une grille d'étude constituée de cellules de 1 $km^2$ a été construite à partir de la délimitation de la zone d'étude en y ajoutant une zone de tampon de 2.6 $km$ (Figure \@ref(aoi)). Cette zone tampon a été ajoutée afin de s'assurer que tous les milieux aquatiques et marins étaient couverts par la grille résultante. Le code et les données décrivant la zone d'étude sont disponibles par le dépôt GitHub dédié à la délimitation de la zone d'étude ([https://github.com/EffetsCumulatifsNavigation/ZoneEtude](https://github.com/EffetsCumulatifsNavigation/ZoneEtude)).
+
+<!--
+TODO: add BDTQ to dataset list, with proper reference
+      https://www.donneesquebec.ca/recherche/dataset/cartes-topographiques-a-l-echelle-de-1-20-000
+-->
+
+Les limites temporelles de l'étude sont définies par la disponibilité des données permettant d'effectuer l'évaluation des effets cumulatifs. Dans certains cas, des données historiques sont disponibles (*e.g.* dragage), alors que de telles données sont indisponibles pour certains aspects de l'évaluation (*e.g.* distribution des mammifères marins). Pour cette étude pilote, la recherche de données a ainsi été orientée afin de permettre une évaluation contemporaine des effets cumulatifs, c.-à-d. au cours des 5 à 10 dernières années selon les données disponibles; les données historiques permettant l’identification d’états de référence n'ont ainsi pas été utilisées. Il est toutefois important de noter que, lorsque disponibles, des données couvrant une période plus longue ont été considérées (*e.g.* les activités de dragage).
+
+
+## Activités et facteurs de stress
+
+
+
+
+Les activités maritimes incluent non seulement les navires commerciaux, mais aussi les bateaux de croisières, traversiers, bateaux de pêche, plaisanciers. Les infrastructures portuaires ne sont pas incluses dans ce projet.
+
+Une caractérisation de la répartition spatiale et de l’intensité des facteurs de stress reliées aux activités maritimes au sein de la zone d’étude est l’un des éléments les plus importants afin de dresser le portrait de la zone d’étude pour une évaluation d’effets cumulatifs.
+
+
+Les activités maritimes et les facteurs de stress qui seront utilisés pour l’étude pilote sont décrits au tableau 1.
+
+
+## Composantes valorisées
+
+Les composantes valorisées -- *c.-à-d.* les éléments sur lesquels l’analyse d’effets cumulatifs est effectuée -- ont été identifiées au préalable lors d’activités de concertation et d’ateliers de travail avec des experts du milieu, des représentants autochtones et de multiples parties prenantes. Les composantes valorisées ont été sélectionnées séparément pour les secteurs fluvial (Montréal à la rivière Saguenay) et maritime (rivière Saguenay et l’estuaire) du Saint-Laurent. La liste des composantes valorisées identifiées sera utilisée pour ce rapport et nous recenserons les données disponibles nous permettant d’effectuer une caractérisation spatiale de ces dernières  (Tableau 2).
+
+
+
+
+
+Tout comme pour les facteurs de stress, les composantes valorisées seront caractérisées individuellement. Par exemple, les habitats fauniques et floristiques pourraient être délimités en fonction de connaissances sur les habitats essentiels pour les poissons dans la zone d’étude et par la répartition connue d’espèces en péril; les mammifères marins pourraient être caractérisés selon la répartition des populations ou selon les milieux d’importance pour leur alimentation. Les données et les approches spécifiques utilisées dépendront de la qualité et de la disponibilité des données existantes. Au terme de la caractérisation individuelle, les composantes valorisées seront colligées au sein d’une base de données intégrative pouvant être croisée à la [caractérisation des facteurs de stress](#stress), qui permettra l’étude des effets cumulatifs dans la zone d’étude.
