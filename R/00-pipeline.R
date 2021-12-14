@@ -202,17 +202,17 @@ pipeline <- function(
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~
   if (pipeline_fiches) {
-    # -----
-    # Données formatées (annexe)
-    rep_annexe_data_description_all(
-      output_folder = "./report/contenu/annexes/",
-      suffix =  "annexe4-"
-    )
-
+    # # -----
+    # # Données formatées (annexe)
+    # rep_annexe_data_description_all(
+    #   output_folder = "./report/contenu/annexes/",
+    #   suffix =  "annexe4-"
+    # )
+    #
     # -----
     # Données intégrées (portrait)
     # Stresseurs
-    folder <- "report/contenu/5-portrait/1-stresseurs/"
+    folder <- "report/contenu/3-portrait/1-stresseurs/"
     rep_portrait_data_description(data_id = "ancrage", output_folder = folder)
     rep_portrait_data_description(data_id = "deversement", output_folder = folder)
     rep_portrait_data_description(data_id = "dragage", output_folder = folder)
@@ -222,7 +222,7 @@ pipeline <- function(
     rep_portrait_data_description(data_id = "pollution_maritime", output_folder = folder)
 
     # Composantes valorisées
-    folder <- "report/contenu/5-portrait/2-composantes_valorisees/"
+    folder <- "report/contenu/3-portrait/2-composantes_valorisees/"
     rep_portrait_data_description(data_id = "berge", output_folder = folder)
     rep_portrait_data_description(data_id = "habitat", output_folder = folder)
     rep_portrait_data_description(data_id = "mammiferes_marins", output_folder = folder)

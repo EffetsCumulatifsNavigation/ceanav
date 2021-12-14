@@ -1,4 +1,4 @@
-## Stresseurs cumulés
+### Stresseurs cumulés
 
 L'évaluation de l'empreinte cumulée permet d'identifier les sites qui sont
 le plus exposés aux effets potentiels des stresseurs environnementaux

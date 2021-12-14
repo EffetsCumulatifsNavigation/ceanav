@@ -1,6 +1,6 @@
-## Habitats floristiques et fauniques
+### Habitats floristiques et fauniques
 
-### Habitats
+#### Habitats
 
 Plusieurs exercices d’évaluation de la vulnérabilité de différents types d’habitats à diverses sources de stress environnementales ont déjà été publiés au Canada [e.g. @ban2010; @clarkemurray2015a; @clarkemurray2015b] et ailleurs dans le monde [@teck2010; @kappel2012]. Un processus similaire mené par Pêches et Océans Canada est actuellement en cours afin de caractériser la vulnérabilité des habitats de l’Atlantique Ouest à une cinquantaine de sources de stress. Originellement développée par @halpern2007 afin de caractériser la vulnérabilité des habitats à l'échelle globale, cette appoche utilise des métriques d’exposition et de sensibilité afin de d'évaluer cinq critères de vulnérabilité des écosystèmes : l’échelle spatiale, la fréquence, l’impact fonctionnel, la résistance et la résilience (Tableau \@ref(tab:critereTeck)).
 
@@ -51,7 +51,7 @@ print("Préparer tableau")
 <!-- TODO: Validation par des experts -->
 <!-- NOTE: explication voir working paper -->
 
-### Sites d'importance pour les espèces fauniques et floristiques
+#### Sites d'importance pour les espèces fauniques et floristiques
 
 Une série de sites d'importance pour des espèces fauniques et floristiques ont été identifiés pour inclusion au sein de l'évaluation des effets cumulatifs. Ces sites diffèrent des habitats présentés précédemment puisqu'ils représentent des milieux dont les caractéristiques peuvent varier, mais qui remplissent des fonctions essentielles pour le maintien de certaines espèces, ou qui sont jugés importants pour la conservation de certaines espèces à statut. En tant que tel, la vulnérabilité de ces sites ne peut être évaluée de façon analogue à l'évaluation présentée à la section précédente. Une approche
 

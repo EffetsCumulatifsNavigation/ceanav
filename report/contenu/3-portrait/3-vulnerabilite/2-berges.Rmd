@@ -1,4 +1,4 @@
-## Intégrité des berges
+### Intégrité des berges
 
 Plusieurs facteurs de stress d'origines anthropiques et naturelles s'ajoutent aux mécanismes naturels géomorphologiques qui régissent la dynamique d'érosion des berges.
 <!-- (Gregory 2006; Best 2019; Goudie 2020; Pi egay et al. 2020; Wohl 2020). -->
@@ -13,6 +13,6 @@ Nous pouvons ainsi classer les catégories de berges selon l’importance de leu
 3. Naturelle - Semi-Végétalisée (IE = 1): 0.8
 4. Artificielle - Semi-Végétalisée (IE = 1): 0.7
 
-Aucune comparaison n'a été effectuée afin de distinguer la vulnérabilité relative des berges à la navigation et au dragage, optant plutôt de leur attribuer des valeurs similaires de vulnérabilité (Tableau \@ref(tab:vulnerabiliteberge)). 
+Aucune comparaison n'a été effectuée afin de distinguer la vulnérabilité relative des berges à la navigation et au dragage, optant plutôt de leur attribuer des valeurs similaires de vulnérabilité (Tableau \@ref(tab:vulnerabiliteberge)).
 
 <!-- TODO: tableau -->

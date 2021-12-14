@@ -1,4 +1,4 @@
-## Exposition cumulée
+### Exposition cumulée
 
 L'évaluation de l'exposition cumulée fournit une évaluation des milieux
 où il y a un chevauchement plus important entre les composantes valorisées

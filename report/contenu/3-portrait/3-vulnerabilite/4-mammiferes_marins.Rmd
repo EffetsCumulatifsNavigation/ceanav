@@ -1,4 +1,4 @@
-## Mammifères marins
+### Mammifères marins
 
 Les exercices d’évaluation de la vulnérabilité d’espèces aux effets de stresseurs se font plus rares dans le cadre d’évaluation d’effets cumulatifs, bien que certains processus d’évaluation existent tout de même [e.g. @maxwell2013; @trew2019; @ohara2021]. Ces évaluation touchaient principalement des espèces de mégafaune marine (e.g. baleines et requins) et des espèces en péril. Ces publications ne couvrent toutefois pas l’entièreté des espèces et des stresseurs visés par la présente évaluation. Elles fournissent tout de même une série de critères visant à évaluer la vulnérabilité des espèces aux stresseurs. Nous avons ainsi utilisé un processus similaire au leur afin de déterminer la vulnérabilité des mammifères marins dans le Saint-Laurent et le Saguenay aux activités maritimes.
 

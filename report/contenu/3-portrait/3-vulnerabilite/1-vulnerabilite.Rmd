@@ -1,4 +1,4 @@
-# Vulnérabilité {#vulnerabilite}
+## Vulnérabilité {#vulnerabilite}
 
 
 L’évaluation des effets cumulatifs proposée nécessite une évaluation de la vulnérabilité des écosystèmes aux stresseurs environnementaux considérés [@teck2010; @kappel2012]. D’ordre général, la vulnérabilité d’une composante valorisée est définie en fonction de son exposition (c.-à-d. la probabilité qu’un habitat sera soumis à un stresseur), de sa sensibilité  (c.-à-d. le degré auquel un habitat sera affecté par un stresseur) et de sa capacité d’adaptation ou de sa résilience (c.-à-d. la capacité d’un habitat ou des éléments le composant à se rétablir suite à une perturbation) aux sources de stress [e.g. @metzger2005; @teck2010; @halpern2013; @refs].

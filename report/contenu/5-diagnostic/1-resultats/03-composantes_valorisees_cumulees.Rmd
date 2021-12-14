@@ -1,4 +1,4 @@
-## Composantes valorisées cumulées
+### Composantes valorisées cumulées
 
 L'évaluation de l'empreinte cumulée permet d'identifier les sites qui sont
 le plus importants en terme de présentes de composantes valorisées. Elle ne
