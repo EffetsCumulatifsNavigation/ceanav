@@ -180,6 +180,9 @@ pipeline <- function(
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~
   if (pipeline_figures) {
+    # Zone d'étude
+    fig_aoi()
+
     # Données formatées (annexe)
     # fig_format_all()
 

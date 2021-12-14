@@ -13,6 +13,7 @@ plot_ceanav(dat, ...)
   subtitle = NULL,
   unit_data = NULL,
   references = NULL,
+  city = TRUE,
   ...
 )
 }
@@ -28,6 +29,8 @@ plot_ceanav(dat, ...)
 \item{unit_data}{units of data}
 
 \item{references}{data citation used for integrated data}
+
+\item{city}{logical, if TRUE name of cities are added to graph}
 }
 \description{
 base plot functions for ceanav project
