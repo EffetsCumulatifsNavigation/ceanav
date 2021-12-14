@@ -1,3 +1,8 @@
 ## Stresseurs environnementaux
 
 La répartition spatiale et l’intensité de chaque facteur de stress seront caractérisées individuellement. Par exemple, les déplacements des embarcations pourraient être caractérisés en utilisant les tracés de navigation et les types de navires; les activités de dragage pourraient être caractérisées selon la quantité totale de sédiments dragués (c.-à-d. enlevés d’un site ou déposés dans un autre). En fait, les données et approches spécifiques utilisées dépendront de la qualité et de la disponibilité des données existantes. Au terme de la caractérisation individuelle des facteurs de stress, ils seront colligés au sein d’une base de données pouvant être croisée à la [caractérisation des composantes valorisées](#cv). Ces deux bases de données permettront l’analyse des effets cumulatifs des facteurs de stress sur les composantes valorisées dans la zone d’étude.
+
+
+
+
+Les stresseurs environnementaux issus d'activités humaines sont typiquement caractérisés en utilisant l'empreinte des activités elles-mêmes comme indice d'intensité des stresseurs [*e.g.* @halpern2019; @beauchesne2020]. En tant que tel, le travail de caractérisation des stresseurs environnementaux dans la zone d'étude visaient une caractérisation directe des activités maritimes. 

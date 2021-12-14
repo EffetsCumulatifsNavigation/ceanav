@@ -2,7 +2,13 @@
 
 ## Objectifs
 
-<!-- TODO : Ajouter objectifs de l'évaluation des effets cumulatifs -->
+L'objectif général du projet pilote était de développer une méthodologie d'analyse et d'effectuer une évaluation des effets cumulatifs des activités maritimes dans le Saint-Laurent (tronçon fluvial et estuaire) et la rivière Saguenay (partie en eau profonde) au Québec. Plus spécifiquement, les objectifs du projet pilote étaient de :
+
+- Caractériser l'intensité et la distribution spatiale d'activités maritimes et des stresseurs environnementaux résultants ciblés du Saint-Lauren et du Saguenay;
+- Caractériser la structure spatiale de certaines composantes valorisées ciblées du Saint-Laurent et du Saguenay;
+- Évaluer la vulnérabilité des composantes valorisées aux stresseurs environnementaux;
+- Évaluer les effets cumulatifs des stresseurs environnmentaux sur les composantes valorisées dans le Saint-Laurent et le Saguenay
+
 
 ## Limites spatiales et temporelles
 
@@ -13,28 +19,53 @@ TODO: add BDTQ to dataset list, with proper reference
       https://www.donneesquebec.ca/recherche/dataset/cartes-topographiques-a-l-echelle-de-1-20-000
 -->
 
-Les limites temporelles de l'étude sont définies par la disponibilité des données permettant d'effectuer l'évaluation des effets cumulatifs. Dans certains cas, des données historiques sont disponibles (*e.g.* dragage), alors que de telles données sont indisponibles pour certains aspects de l'évaluation (*e.g.* distribution des mammifères marins). Pour cette étude pilote, la recherche de données a ainsi été orientée afin de permettre une évaluation contemporaine des effets cumulatifs, c.-à-d. au cours des 5 à 10 dernières années selon les données disponibles; les données historiques permettant l’identification d’états de référence n'ont ainsi pas été utilisées. Il est toutefois important de noter que, lorsque disponibles, des données couvrant une période plus longue ont été considérées (*e.g.* les activités de dragage).
+Les limites temporelles de l'étude sont définies par la disponibilité des données permettant d'effectuer l'évaluation des effets cumulatifs. Dans certains cas, des données historiques sont disponibles (*e.g.* dragage), alors que de telles données sont indisponibles pour certains aspects de l'évaluation (*e.g.* distribution des mammifères marins). Pour cette étude pilote, la recherche de données a ainsi été orientée vers une évaluation contemporaine des effets cumulatifs, c.-à-d. au cours des 5 à 10 dernières années selon les données disponibles; les données historiques permettant l’identification d’états de référence n'ont ainsi pas été utilisées. Il est toutefois important de noter que, lorsque disponibles, des données couvrant une période plus longue ont été utilisées (*e.g.* les activités de dragage).
 
 
-## Activités et facteurs de stress
+## Activités maritimes et facteurs de stress
 
+Les activités maritimes peuvent résulter en une variété de facteurs de stress, ou de stresseurs environnementaux, ayant le potentiel d'affecter l'intégrité des écosystèmes sociaux-écologiques exposés. Un stresseur environnemental est un processus d’origine naturelle ou anthropique pouvant perturber un milieu au-delà de ses limites de tolérance [@kappel2012]. Dans le cadre de ce projet pilote, les stresseurs environnementaux correspondent plus particulièrement à tout processus issus des activités maritimes pouvant perturber divers composantes valorisées (voir section suivante) au sein de la zone d'étude. Les activités maritimes incluent toute activité relié au transport maritime et effectué en milieu aquatique ou marin. Les activités maritimes incluent non seulement les navires commerciaux, mais aussi les bateaux de croisières, traversiers, bateaux de pêche, plaisanciers. Il est important de noter que les stresseurs environnementaux affectant la zone d'étude et issus d'autres vecteurs comme les changements climatiques et la pollution d'origine terrestre ne sont pas considérés par la présente évaluation. Les infrastructures portuaires ne sont ainsi pas incluses au projet pilote.
 
+Des ateliers de travail pré-datant le projet pilote ont permis d'identifier une série d'activités maritimes et divers stresseurs qui leur sont associés (Tableau \@ref(tab:activitestress)). Cette liste a guidée le travail effectué afin de caractériser les stresseurs environnementaux dans la zone d'étude pour l'évaluation des effets cumulatifs.
 
+<br/>
 
-Les activités maritimes incluent non seulement les navires commerciaux, mais aussi les bateaux de croisières, traversiers, bateaux de pêche, plaisanciers. Les infrastructures portuaires ne sont pas incluses dans ce projet.
+```{r activitestress}
+dat <- data.frame(
+  activite = c("Dragage","Ancrages","Échouements / Naufrages", "Rejets opérationnels",
+               "Déversements accidentels","Déplacements (eau libre de glace)","Engins de pêche"),
+  stress = c(
+    "Hydrologie, érosion, accumulation sédimentaire, contamination",
+    "Perturbation du substrat, lumière, bruit, espèces aquatiques envahissantes, emmêlement, agents pathogènes, vibrations",
+    "Perturbation du substrat, débris, lumière, bruit, espèces aquatiques envahissantes, largage de cargaison",
+    "Espèces aquatiques envahissantes, hydrocarbures, produits chimiques, contaminants, émissions atmosphériques, eaux usées, agents pathogènes, salinité",
+    "Déversement d'hydrocarbures/contaminants, largage de cargaison, émissions atmosphériques, bioaccumulation, perturbation du substrat",
+    "Lumière, bruit, sillages/remous, espèces aquatiques envahissantes, agents pathogènes, vibrations, perturbation du substrat, érosion, collisions, déglaçage, emmêlement",
+    "Sillages/remous, perte de matériel")
+  )
 
-Une caractérisation de la répartition spatiale et de l’intensité des facteurs de stress reliées aux activités maritimes au sein de la zone d’étude est l’un des éléments les plus importants afin de dresser le portrait de la zone d’étude pour une évaluation d’effets cumulatifs.
-
-
-Les activités maritimes et les facteurs de stress qui seront utilisés pour l’étude pilote sont décrits au tableau 1.
+kable(dat, col.names = c("Activités maritimes","Stresseurs environnementaux"),
+      row.names = FALSE,
+      caption = "Activités maritimes et stresseurs environnementaux issus des activités maritimes identifiés lors d'ateliers de travail organisés par Transport Canada en amont du projet pilote et considérés pour l'évaluation des effets cumulatifs des activités maritimes dans la zone d'étude.")
+```
 
 
 ## Composantes valorisées
 
-Les composantes valorisées -- *c.-à-d.* les éléments sur lesquels l’analyse d’effets cumulatifs est effectuée -- ont été identifiées au préalable lors d’activités de concertation et d’ateliers de travail avec des experts du milieu, des représentants autochtones et de multiples parties prenantes. Les composantes valorisées ont été sélectionnées séparément pour les secteurs fluvial (Montréal à la rivière Saguenay) et maritime (rivière Saguenay et l’estuaire) du Saint-Laurent. La liste des composantes valorisées identifiées sera utilisée pour ce rapport et nous recenserons les données disponibles nous permettant d’effectuer une caractérisation spatiale de ces dernières  (Tableau 2).
+Une évaluation des effets cumulatifs vise à établir les effets de multiples stresseurs environnementaux sur la viabilité de récepteurs environnementaux d'intérêt, communément appelés composantes valorisées [@beanlands1983; @sinclair2017]. Les composantes valorisées correspondent essentiellement aux éléments soxciaux ou écologiques sur lesquels l’analyse des effets cumulatifs est effectuée. Dans le cadre du projet pilote, les composantes valorisées ont été identifiées au préalable lors d’activités de concertation et d’ateliers de travail avec des experts du milieu, des représentants autochtones et de multiples parties prenantes. Les composantes valorisées ont été sélectionnées séparément pour les secteurs fluvial (Montréal à la rivière Saguenay) et maritime (rivière Saguenay et l’estuaire) du Saint-Laurent (Tableau \@ref(tab:composantevalorisees)). Cette liste a guidée le travail effectué afin de caractériser les composantes valorisées identifiées dans la zone d'étude pour l'évaluation des effets cumulatifs.
 
+<br/>
 
+```{r composantevalorisees}
+dat <- data.frame(
+  cv = c("Intégrité des berges","Habitats","Mammifères marins","Qualité de l'eau","Sites d’intérêt culturels, patrimoniaux et archéologiques"),
+  fluvial = c("X","X","","X","X"),
+  maritime = c("","X","X","X","X")
+)
 
+kable(dat, col.names = c("Composantes valorisées", "Secteur fluvial","Secteur maritime"),
+      row.names = FALSE,
+      align = c("l","c","c"),
+      caption = "Composantes valorisées identifiées lors d'ateliers de travail organisés par Transport Canada en amont du projet pilote et considérées pour l'évaluation des effets cumulatifs des activités maritimes dans la zone d'étude.")
 
-
-Tout comme pour les facteurs de stress, les composantes valorisées seront caractérisées individuellement. Par exemple, les habitats fauniques et floristiques pourraient être délimités en fonction de connaissances sur les habitats essentiels pour les poissons dans la zone d’étude et par la répartition connue d’espèces en péril; les mammifères marins pourraient être caractérisés selon la répartition des populations ou selon les milieux d’importance pour leur alimentation. Les données et les approches spécifiques utilisées dépendront de la qualité et de la disponibilité des données existantes. Au terme de la caractérisation individuelle, les composantes valorisées seront colligées au sein d’une base de données intégrative pouvant être croisée à la [caractérisation des facteurs de stress](#stress), qui permettra l’étude des effets cumulatifs dans la zone d’étude.
+```
