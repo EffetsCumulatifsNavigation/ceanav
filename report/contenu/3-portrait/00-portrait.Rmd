@@ -1,8 +1,3 @@
 # Portrait de la zone d'étude
 
-
-
-Le processus d’évaluation permettra d’établir un portrait de la répartition spatiale des [composantes valorisées](#cv) et des [facteurs de stress](#stress) issus des activités maritimes de la zone d’étude ciblés pour l’analyse. Les activités maritimes incluent non seulement les navires commerciaux, mais aussi les bateaux de croisières, traversiers, bateaux de pêche, plaisanciers. Les infrastructures portuaires ne sont pas incluses dans ce projet. La vulnérabilité de composantes valorisées aux divers facteurs de stress sera ensuite évaluée. Enfin, le portrait de la zone d’étude sera utilisé afin d’effectuer l’évaluation des effets cumulés des activités maritimes sur les composantes valorisées ciblées. Cette étude vise une gestion plus proactive et holistique des écosystèmes marins et dulcicoles.
-
-
-La disponibilité des données guidera le travail que nous pouvons accomplir pour ce projet pilote. Le contexte de l’étude ne permet pas à l’équipe de l’Université Laval d’effectuer une collecte de données nouvelles. Le portrait établi représentera ainsi une veille des connaissances actuelles permettant de caractériser les facteurs de stress des activités maritimes ainsi que les composantes valorisées identifiées.
+Les sections suivantes présentent le coeur du travail effectué en vue d'évaluer les effets cumulatifs des activités maritimes sur les composantes valorisées du Saint-Laurent et du Saguenay sélectionnées pour ce projet pilote, *c.-à-d.* établir le portrait de la zone d'étude. Plus particulièrement, les prochaines sections détaillent l'approche préconisée pour la collecte et la gestion des données, présente la caractérisation des stresseurs environnementaux et des composantes valorisées au sein de la zone d'étude, et détaille l'évaluation de la vulnérabilité des composantes valorisées aux stresseurs environnementaux.
