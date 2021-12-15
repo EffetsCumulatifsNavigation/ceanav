@@ -14,6 +14,7 @@ Il en résulte un total de `r nrow(cv)` sous-catégories parmi les `r length(uni
 tab <- select(cv, title, type, simple) %>%
        arrange(title, type, simple)
 tab$title[duplicated(tab$title)] <- ""
+tab$type[duplicated(tab$type)] <- ""
 uid <- which(tab$title != "")[-1]-1
 
 tab %>%
