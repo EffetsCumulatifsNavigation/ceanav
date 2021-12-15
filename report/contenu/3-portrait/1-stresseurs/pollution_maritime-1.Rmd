@@ -2,42 +2,22 @@
 
 Nous introduisons un stresseur environnemental afin de remplacer les rejets opérationels du côté des stresseurs environnementaux, et la qualité de l'eau du côté des composantes valorisées. Ce nouveau stresseur est utilisé afin de palier aux difficultés de caractériser ces deux éléments initialement identifiés comme préoccupants par les parties prenantes du projet.
 
-Du côté des rejets opérationnels, cette décision a été prise dû à l'absence de données couvrant l'entièreté de la zone d'étude. D'un point de vue législatif, les navires qui transitent en eaux canadiennes sont tenus d'effectuer tout échange d'eaux de ballast au sein de régions pré-établies appelées *Zones désignées de renouvellement d’eau de ballast du Canada* [@tc2021; @tc2021b]. Or, la zone la plus près de la zone d'étude est située à l'entrée du Golfe du Saint-Laurent et ne touche ainsi pas la zone d'étude couverte par notre évaluation (Figure \@ref(fig:ballast)).
+Du côté des rejets opérationnels, cette décision a été prise dû à l'absence de données couvrant l'entièreté de la zone d'étude. D'un point de vue législatif, les navires qui transitent en eaux canadiennes sont tenus d'effectuer tout échange d'eaux de ballast au sein de régions pré-établies appelées *Zones désignées de renouvellement d’eau de ballast du Canada* [@tc2021; @tc2021b]. Or, la zone la plus près de la zone d'étude est située à l'entrée du Golfe du Saint-Laurent et ne touche ainsi pas la zone d'étude couverte par notre évaluation (Figure \@ref(fig:ballast)). Les données touchant spécifiquement les rejets opérationnels des navires auraient, quant à elles, été disponibles uniquement pour une faible proportion de la flotte totale naviguant les eaux de la zone d'étude et auraient nécessité un effort de saisie de données considérable. En tant que tel, ces données n'ont pas été considérées pour l'évaluation.
 
-<!-- data0051 -->
+<br/>
 
+```{r ballast, fig.cap = "Emplacement des zones désignées de renouvellement d'eau de ballast relativement à la position de la zone d'étude pour l'évaluation des effets cumulatifs des activités maritimes dans le Saint-Laurent et le Saguenay.", out.width = '80%', fig.link = "./figures/data0051-ballast.png"}
+knitr::include_graphics("./figures/data0051-ballast.png")
+```
 
+<br/> 
 
+Du côté de la qualité de l'eau, cette décision a été prise dû à la difficulté d'attribuer des variations en qualité de l'eau spécifiquement aux actibités maritimes. En effet, de nombreux autres facteurs influencent la qualité de l'eau en milieux côtier, aquatique et marin, et départager ces effets était hors de portée dans le cadre de ce projet pilote. Plus de détails à ce sujet sont disponibles à la section sur la qualité de l'eau.
 
-Des difficultés ont été rencontrées en vue de caractériser les rejets opérationnels dans la zone d'étude.
+À l’instar de @halpern2019, la pollution maritime a été caractérisée en combinant les stresseurs environnementaux reliés aux activités maritimes. Ce choix suppose que la qualité de l'eau est plus à risque face aux activités de navigation et de la pollution qui en résulte via des rejets opérationnels, des fuites de gaz, des décharge de déchets, etc. En l'absence de données exhaustive sur les rejets opérationnels et de la difficulté d'établir un lien direct entre la qualité de l'eau et les activités maritimes cumulées, l'indice de pollution maritime nous sert de proxy visant à identifier les milieux les plus à risque de pollution issues des activités maritimes.
 
+L'indice de pollution maritime est obtenu en combinant l'intensité relative de tous les stresseurs associés directement aux activités de navigation, *i.e.* les sites d'ancrage, les activités de dragage, la navigation et la pêche commerciale. Les déversements accidentels n'y sont pas inclus puisqu'ils décrivent déjà explicitement des problématiques de déversements toxiques dans l'environnement plutôt qu'un stresseur relié à une activités de navigation. L'intensité de la pollution maritime ($I_P$) au sein d'une cellule $x$ correspond à la somme de l'intensité des stresseurs environnementaux sélectionnés normalisés entre 0 et 1 :
 
+$$I_{P,x} = \frac{1}{|S|} \sum_{s \in S} I_{s,x}$$
 
-
-du côté des stresseurs environnementaux, et la
-
-
-
-En effet, les données de rejets opérationnels disponibles indiquent que les zones d'échange des eaux de ballast
-
-Le stresseur de pollution marine remplace la composante valorisée de la qualité de l’eau au sein de l’évaluation des effets cumulatifs afin de pallier à la difficulté d’attribuer des variation en qualité de l’eau spécifiquement aux activités maritimes (voir section X pour plus de détails).
-
-A l’instar de @halpern2008, la pollution marine a été caractérisée en combinant l’ensemble des stresseurs environnementaux reliés aux activités maritimes. Dans le cadre cette étude, il s’agit ainsi de la sommation de l’ensemble des stresseurs considérés. La pollution marine devient ainsi l’empreinte cumulée (voir section Y) des autres stresseurs environnementaux considérés, qui est obtenue en additionnant l’intensité relative (i.e. normaliser entre 0 et 1) de l’ensemble des stresseurs individuels. Il en résulte une cartographie intégrative des activités maritimes qui peut nous informer sur les milieux qui sont les plus à risque des
-
-
-Dans le cadre de cette étude, l’ensemble des stresseurs caractérisés touchentdifférentes facettes des activités maritimes et pourraient avoir des effets néfastes sur la qualité de l’eau.
-
-Nous avons ainsi caractérisé la
-
-
-La caractérisation de la pollution maritime correspond au risque de pollution associé aux activités de navigation et de la pollution qui en résulte dans la zone d'étude via des rejets opérationnels, des fuites de gaz, la décharge de déchets, etc. En l'absence de données exhaustive sur les rejets opérationnels et de la difficulté d'établir un lien direct entre la qualité de l'eau et les activités maritimes cumulées, l'indice de pollution maritime nous sert de proxy visant à identifier les milieux les plus à risque de pollution issues des activités maritimes.
-
-L'indice de pollution maritime est obtenu en combinant l'intensité relative de tous les stresseurs associés directement à une activités de navigation, *i.e.* les sites d'ancrage, les activités de dragage, la navigation et la pêche commerciale.
-
-Cette évaluation correspond à l'exposition cumulée normalisée pour les sources de stress sélectionnées (voir section X)
-
-$$\sum_{S} \sum_{s \in S} \frac{1}{|S|} I_{s,x}$$
-
-<!--TODO: ajouter nom de section -->
-
-Les déversements accidentels n'y sont pas inclus puisqu'ils décrivent déjà explicitement des problématiques de déversements toxiques dans l'environnement plutôt qu'un stresseur relié à une activités de navigation.
+où $|S|$ est le nombre de stresseurs environnementaux considérés, $s$ sont les stresseurs environnementaux individuels et $I_{s,x}$ est l'intensité relative du stresseurs $s$ au sein de la cellule $x$.
