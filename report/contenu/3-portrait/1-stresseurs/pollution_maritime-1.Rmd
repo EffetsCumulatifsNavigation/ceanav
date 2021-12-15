@@ -1,4 +1,24 @@
-### Pollution marine
+### Pollution maritime
+
+Nous introduisons un stresseur environnemental afin de remplacer les rejets opérationels du côté des stresseurs environnementaux, et la qualité de l'eau du côté des composantes valorisées. Ce nouveau stresseur est utilisé afin de palier aux difficultés de caractériser ces deux éléments initialement identifiés comme préoccupants par les parties prenantes du projet.
+
+Du côté des rejets opérationnels, cette décision a été prise dû à l'absence de données couvrant l'entièreté de la zone d'étude. D'un point de vue législatif, les navires qui transitent en eaux canadiennes sont tenus d'effectuer tout échange d'eaux de ballast au sein de régions pré-établies appelées *Zones désignées de renouvellement d’eau de ballast du Canada* [@tc2021; @tc2021b]. Or, la zone la plus près de la zone d'étude est située à l'entrée du Golfe du Saint-Laurent et ne touche ainsi pas la zone d'étude couverte par notre évaluation (Figure \@ref(fig:ballast)).
+
+<!-- data0051 -->
+
+
+
+
+Des difficultés ont été rencontrées en vue de caractériser les rejets opérationnels dans la zone d'étude.
+
+
+
+
+du côté des stresseurs environnementaux, et la
+
+
+
+En effet, les données de rejets opérationnels disponibles indiquent que les zones d'échange des eaux de ballast
 
 Le stresseur de pollution marine remplace la composante valorisée de la qualité de l’eau au sein de l’évaluation des effets cumulatifs afin de pallier à la difficulté d’attribuer des variation en qualité de l’eau spécifiquement aux activités maritimes (voir section X pour plus de détails).
 
