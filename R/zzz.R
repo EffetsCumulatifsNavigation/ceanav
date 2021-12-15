@@ -2,7 +2,7 @@
 #' @importFrom exactextractr exact_extract
 #' @importFrom fs path path_package
 #' @importFrom glue glue glue_sql
-#' @importFrom kableExtra kable_styling
+#' @importFrom kableExtra kable_styling row_spec
 #' @importFrom latex2exp TeX
 #' @importFrom magick image_read image_append image_write
 #' @importFrom raster getData
