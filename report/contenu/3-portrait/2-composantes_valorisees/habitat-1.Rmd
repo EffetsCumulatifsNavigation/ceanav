@@ -12,7 +12,7 @@ Une recherche de données a été effectuée afin de caractériser différents t
 
 ```{r habitatCat}
 tab <- as.data.frame(meta$dataDescription$categories)
-tab <- arrange(tab, type, francais)
+tab <- arrange(tab, type, source, francais)
 tab <- select(tab, type, francais, description, superficie, source)
 tab$superficie <- round(tab$superficie, 2)
 
