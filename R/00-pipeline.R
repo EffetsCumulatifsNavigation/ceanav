@@ -224,7 +224,15 @@ pipeline <- function(
     # Composantes valorisées
     folder <- "report/contenu/3-portrait/2-composantes_valorisees/"
     rep_portrait_data_description(data_id = "berge", output_folder = folder)
-    rep_portrait_data_description(data_id = "habitat", output_folder = folder)
+
+    # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    # NOTE: 2021-12-15
+    #       Removed, manual restructuring of this report section
+    #       Eventually fix the code to generate individual RMDs
+    #
+    # rep_portrait_data_description(data_id = "habitat", output_folder = folder)
+    # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
     rep_portrait_data_description(data_id = "mammiferes_marins", output_folder = folder)
     rep_portrait_data_description(data_id = "site", output_folder = folder)
   }

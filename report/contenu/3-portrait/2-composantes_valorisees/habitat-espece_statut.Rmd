@@ -1,9 +1,6 @@
-##### Espèces à statut
+#### Habitats d'importance pour les espèces à statut
 
 Plusieurs espèces ayant un [statut précaire](https://www.environnement.gouv.qc.ca/biodiversite/especes/index.htm) fréquentent et bordent les eaux du Saint-Laurent et du Saguenay. Afin de capturer la nature sensible de ces espèces et de les intégrer à notre analyse, nous avons considéré les lieux où ces espèces ont été observées historiquement dans la zone d'étude. Les données utilisées pour caractériser les habitats pour les espèces à statut ont été préparées par le Centre de données sur le patrimoine naturel du Québec [CDPNQ; @cdpnq2020] pour le Ministère des Forêts, de la Faune et des Parcs du Québec (MFFP). Les données utilisées correspondent à l'intégration de zones délimitées à partir d'occurrences d'espèces à statut. La base de données utilisées ne discrimine pas les différentes espèces considérées, mais fourni plutôt une délimitation spatiale des zones fréquentées par des espèces à statut. Pour notre analyses, ces zones sont utilisées en tant qu'habitats uniques représentant les espèces à statut dans la zone d'étude.
-
-
-
 
 
 
@@ -27,3 +24,41 @@ pour le Ministère des Forêts, de la Faune et des Parcs du Québec (MFFP).
 
 
 Les données utilisées correspondent à l'intégration de zones délimitées à partir d'occurrences d'espèces à statut. La base de données utilisées ne discrimine pas les différentes espèces considérées, mais fourni plutôt une délimitation spatiale des zones fréquentées par des espèces à statut. Pour notre analyses, ces zones sont utilisées en tant qu'habitats uniques représentant les espèces à statut dans la zone d'étude.
+
+<br>
+
+```{r faunesusceptible, fig.cap = "Distribution des habitats dans le Saint-Laurent et le Saguenay - Espèces fauniques susceptibles", out.width = '100%', fig.link = "./figures/figures-integrated/habitat-faune_susceptible.png"}
+knitr::include_graphics("./figures/figures-integrated/habitat-faune_susceptible.png")
+```
+
+<br>
+
+```{r faunevulnerable, fig.cap = "Distribution des habitats dans le Saint-Laurent et le Saguenay - Espèces fauniques vulnérables", out.width = '100%', fig.link = "./figures/figures-integrated/habitat-faune_vulnerable.png"}
+knitr::include_graphics("./figures/figures-integrated/habitat-faune_vulnerable.png")
+```
+
+<br>
+
+```{r faunemenacee, fig.cap = "Distribution des habitats dans le Saint-Laurent et le Saguenay - Espèces fauniques menacées", out.width = '100%', fig.link = "./figures/figures-integrated/habitat-faune_menacee.png"}
+knitr::include_graphics("./figures/figures-integrated/habitat-faune_menacee.png")
+```
+
+<br>
+
+```{r floresusceptible, fig.cap = "Distribution des habitats dans le Saint-Laurent et le Saguenay - Espèces floristiques susceptibles", out.width = '100%', fig.link = "./figures/figures-integrated/habitat-flore_susceptible.png"}
+knitr::include_graphics("./figures/figures-integrated/habitat-flore_susceptible.png")
+```
+
+<br>
+
+```{r florevulnerable, fig.cap = "Distribution des habitats dans le Saint-Laurent et le Saguenay - Espèces floristiques vulnérables", out.width = '100%', fig.link = "./figures/figures-integrated/habitat-flore_vulnerable.png"}
+knitr::include_graphics("./figures/figures-integrated/habitat-flore_vulnerable.png")
+```
+
+<br>
+
+```{r floremenacee, fig.cap = "Distribution des habitats dans le Saint-Laurent et le Saguenay - Espèces floristiques menacées", out.width = '100%', fig.link = "./figures/figures-integrated/habitat-flore_menacee.png"}
+knitr::include_graphics("./figures/figures-integrated/habitat-flore_menacee.png")
+```
+
+<br>
