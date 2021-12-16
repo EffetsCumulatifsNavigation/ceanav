@@ -1,25 +1,24 @@
 #### Espèces fauniques et floristiques à statut
 
-Plusieurs espèces ayant un [statut précaire](https://www.environnement.gouv.qc.ca/biodiversite/especes/index.htm) fréquentent et bordent les eaux du Saint-Laurent et du Saguenay. Afin de capturer la nature sensible de ces espèces et de les intégrer à notre analyse, nous avons considéré les lieux où ces espèces ont été observées historiquement dans la zone d'étude. Les données utilisées pour caractériser les habitats pour les espèces à statut ont été préparées par le Centre de données sur le patrimoine naturel du Québec [CDPNQ; @cdpnq2021a; @cdpnq2021b]. Ces données contiennent des occurrences qui désigne un territoire abritant ou ayant déjà abrité des espèces à statut. Nous avons retiré de la base de données les observations historiques ainsi que les espèces extirpées ou celles n'ayant aucune observation récente, c'est-à-dire depuis l'année 2000. Finalement, nous avons considéré les espèces susceptibles, vulnérables et menacées.
+Plusieurs espèces ayant un [statut précaire](https://www.environnement.gouv.qc.ca/biodiversite/especes/index.htm) fréquentent et bordent les eaux du Saint-Laurent et du Saguenay. Afin de capturer la nature sensible de ces espèces et de les intégrer à notre analyse, nous avons considéré les lieux où ces espèces ont été observées historiquement dans la zone d'étude. Les données utilisées pour caractériser les habitats pour les espèces à statut ont été préparées par le Centre de données sur le patrimoine naturel du Québec [CDPNQ; @cdpnq2021a; @cdpnq2021b]. Ces données contiennent des occurrences qui désigne un territoire abritant ou ayant déjà abrité des espèces à statut. Nous avons retiré de la base de données les observations historiques ainsi que les espèces extirpées ou celles n'ayant aucune observation récente, c'est-à-dire depuis l'année 2000. Finalement, nous avons considéré les espèces susceptibles, vulnérables et menacées. Il en résulte un total de `r meta$dataDescription$CDPNQ$EspecesFaune` espèces et `r meta$dataDescription$CDPNQ$NombreFaune` site pour les espèces fauniques, et `r meta$dataDescription$CDPNQ$EspecesFaune` espèces et `r meta$dataDescription$CDPNQ$NombreFaune` site pour les espèces floristiques (Tableau \@ref(tab:statut)).
+
+<br/>
+
+```{r statut}
+tab <- as.data.frame(meta$dataDescription$CDPNQ$details)
+
+tab %>%
+  knitr::kable(
+    col.names = c("Type", "Statut", "Nombre d'espèces", "Superficie $km^2$"),
+    row.names = FALSE,
+    caption = "Nombre d'espèces et superficie totale des sites d'importance pour les espèces fauniques et floristiques à statut dans la zone d'étude [@cdpnq2021a; @cdpnq2021b]."
+  )
+```
+
+<br/>
 
 
-
-Nombre d'espèces / statut
-
-
-
-Statut : LOIEMV
-Scientific name : SNAME
-Common name : SCOMNAME
-Description observation : EORANKDESC
-Statut COSEWIC : COSEWIC
-Statut SARA : SARASTATUS
-Date of last observation : LASTOBS
-
-pour le Ministère des Forêts, de la Faune et des Parcs du Québec (MFFP).
-
-
-Les données utilisées correspondent à l'intégration de zones délimitées à partir d'occurrences d'espèces à statut. La base de données utilisées ne discrimine pas les différentes espèces considérées, mais fourni plutôt une délimitation spatiale des zones fréquentées par des espèces à statut. Pour notre analyses, ces zones sont utilisées en tant qu'habitats uniques représentant les espèces à statut dans la zone d'étude.
+Ces sites d'importances pour les espèces à statut ont été intégrés à la grille d'étude en présence-absence par statut afin d'identifier les sites qui abritent des espèces faunique ou floristiques susceptibles, vulnérables ou menacées. Les données intégrées ne discriminent ainsi par les différentes espèces considérées; elles fournissent plutôt une délimitation spatiale des zones fréquentées par des espèces à statut. Il en résulte 6 catégories distinctes de sites.
 
 <br>
 
