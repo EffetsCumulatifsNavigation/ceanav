@@ -26,14 +26,14 @@ get_data0060 <- function() {
   # WARNING: Data transfered physically, no cloud access currently
 
   # Unzip
-  unzip(zipfile = paste0(folder, 'CDPNQ_Flore_fleuve400m.zip'), exdir = folder)
+  unzip(zipfile = paste0(folder, 'CDPNQ_Flore_FleuveFjord_dec21.zip'), exdir = folder)
 
   # _________________________________________________________________________ #
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   # Import data
   # ----------------------------------------
-  data0060 <- st_read(paste0(folder, 'CDPNQ_Flore_fleuve400m.shp'), quiet = TRUE) %>%
+  data0060 <- st_read(paste0(folder, 'CDPNQ_Flore_FleuveFjord_dec21.shp'), quiet = TRUE) %>%
               filter(LASTOBS != "----") %>%
               mutate(LASTOBSyear = as.numeric(substr(LASTOBS, 1, 4))) %>%
               st_transform(crs = global_parameters()$crs)
