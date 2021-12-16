@@ -29,6 +29,7 @@ Imports:
     raster,
     sp,
     stringr(>= 1.4.0),
+    units,
     whisker,
     yaml(>= 2.2.1)
 Suggests:
