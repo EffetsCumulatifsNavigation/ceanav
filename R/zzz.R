@@ -6,6 +6,7 @@
 #' @importFrom latex2exp TeX
 #' @importFrom magick image_read image_append image_write
 #' @importFrom raster getData
+#' @importFrom units set_units
 #' @importFrom whisker whisker.render
 #' @importFrom yaml yaml.load_file write_yaml read_yaml
 NULL
