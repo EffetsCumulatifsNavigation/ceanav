@@ -1,7 +1,13 @@
 #### Milieux naturels
 
-
 ##### Zostères
+
+La distribution spatiale de la zostère marine (*Zostera marina*) a été décrite en intégrant trois bases de données différentes. La première base de données est la plus complète et provient d'une revue de littérature documentaires du MPO dans la Baie James, la Baie des Chaleurs, l'estuaire et le golfe du Saint-Laurent couvrant la période allant de 1987 à 2009 [@mpo2009]. Cette revue de littérature regroupe des données sur la distribution de la zostères marine provenant de 24 ressources différentes.
+
+<!-- TODO: ajouter reference mpo ici et dans les metadonnees -->
+
+
+
 
 
 <br>
