@@ -326,27 +326,28 @@ cv_habitat <- function() {
   qu <- c("D (Faible, non viable)", "F (Non retrouvée)", "H (Historique)",
           "NR (Non attribuée)", "U (Non cartographiable)", "X (Extirpée)")
   nm <- c("0059")
-  dat <- load_temp(nm) %>%
+  data0059 <- load_temp(nm) %>%
          filter(!EORANKDESC %in% qu) %>%
-         filter(LASTOBSyear >= 2000)
+         filter(LASTOBSyear >= 2000) %>%
+         filter(LOIEMV %in% c("Susceptible","Vulnérable","Menacée"))
 
   # Diviser par statut
   # Susceptible
-  dat2 <- filter(dat, LOIEMV == "Susceptible")
+  dat2 <- filter(data0059, LOIEMV == "Susceptible")
   meta_temp <- meta_update(meta_temp, nm, "faune_susceptible", "Espèces fauniques susceptibles", "Espèces fauniques susceptibles d'être désignées menacées ou vulnérables", type = "Espèces à statut")
   habitat$faune_susceptible <- uid(dat2)
   sup <- c(sup, superficie(dat2))
 
   # Diviser par statut
   # Vulnérable
-  dat2 <- filter(dat, LOIEMV == "Vulnérable")
+  dat2 <- filter(data0059, LOIEMV == "Vulnérable")
   meta_temp <- meta_update(meta_temp, nm, "faune_vulnerable", "Espèces fauniques vulnérables", "Espèces fauniques désignées vulnérables", type = "Espèces à statut")
   habitat$faune_vulnerable <- uid(dat2)
   sup <- c(sup, superficie(dat2))
 
   # Diviser par statut
   # Menacée
-  dat2 <- filter(dat, LOIEMV == "Menacée")
+  dat2 <- filter(data0059, LOIEMV == "Menacée")
   meta_temp <- meta_update(meta_temp, nm, "faune_menacee", "Espèces fauniques menacées", "Espèces fauniques désignées menacées", type = "Espèces à statut")
   habitat$faune_menacee <- uid(dat2)
   sup <- c(sup, superficie(dat2))
@@ -357,27 +358,28 @@ cv_habitat <- function() {
   qu <- c("D (Faible, non viable)", "F (Non retrouvée)", "H (Historique)",
           "NR (Non attribuée)", "U (Non cartographiable)", "X (Extirpée)")
   nm <- c("0060")
-  dat <- load_temp(nm) %>%
+  data0060 <- load_temp(nm) %>%
          filter(!EORANKDESC %in% qu) %>%
-         filter(LASTOBSyear >= 2000)
+         filter(LASTOBSyear >= 2000) %>%
+         filter(LOIEMV %in% c("Susceptible","Vulnérable","Menacée"))
 
   # Diviser par statut
   # Susceptible
-  dat2 <- filter(dat, LOIEMV == "Susceptible")
+  dat2 <- filter(data0060, LOIEMV == "Susceptible")
   meta_temp <- meta_update(meta_temp, nm, "flore_susceptible", "Espèces floristiques susceptibles", "Espèces floristiques susceptibles d'être désignées menacées ou vulnérables", type = "Espèces à statut")
   habitat$flore_susceptible <- uid(dat2)
   sup <- c(sup, superficie(dat2))
 
   # Diviser par statut
   # Vulnérable
-  dat2 <- filter(dat, LOIEMV == "Vulnérable")
+  dat2 <- filter(data0060, LOIEMV == "Vulnérable")
   meta_temp <- meta_update(meta_temp, nm, "flore_vulnerable", "Espèces floristiques vulnérables", "Espèces floristiques désignées vulnérables", type = "Espèces à statut")
   habitat$flore_vulnerable <- uid(dat2)
   sup <- c(sup, superficie(dat2))
 
   # Diviser par statut
   # Menacée
-  dat2 <- filter(dat, LOIEMV == "Menacée")
+  dat2 <- filter(data0060, LOIEMV == "Menacée")
   meta_temp <- meta_update(meta_temp, nm, "flore_menacee", "Espèces floristiques menacées", "Espèces floristiques désignées menacées", type = "Espèces à statut")
   habitat$flore_menacee <- uid(dat2)
   sup <- c(sup, superficie(dat2))
@@ -467,7 +469,7 @@ cv_habitat <- function() {
   meta$dataDescription$ZICO$Nombre <- nid
   meta$dataDescription$ZICO$Superficie <- sup
 
-  # --- ZICOs
+  # --- BIOMQ
   load_format("data0043")
   uid <- st_intersects(grid1p, data0043) %>% unlist() %>% unique()
   nid <- length(uid)
@@ -480,6 +482,51 @@ cv_habitat <- function() {
   # -----
   meta$dataDescription$BIOMQ$Nombre <- nid
   meta$dataDescription$BIOMQ$Superficie <- sup
+
+  # --- Faune à statut
+  uid <- st_intersects(grid1p, data0059) %>% unlist() %>% unique() %>% sort()
+  dat <- data0059[uid, ] %>%
+         mutate(area = units::set_units(st_area(.), km^2)) %>%
+         st_drop_geometry()
+
+  nFauneSp <- length(unique(dat$SNAME))
+  nFauneSite <- nrow(dat)
+
+  datFaune <- dat %>%
+         group_by(LOIEMV) %>%
+         summarize(species = length(unique(SNAME)),
+                   area = round(as.numeric(sum(area)),2)) %>%
+         mutate(Type = "Faune")
+
+  # --- Flore à statut
+  uid <- st_intersects(grid1p, data0060) %>% unlist() %>% unique() %>% sort()
+  dat <- data0060[uid, ] %>%
+         mutate(area = units::set_units(st_area(.), km^2)) %>%
+         st_drop_geometry()
+
+  nFloreSp <- length(unique(dat$SNAME))
+  nFloreSite <- nrow(dat)
+
+  datFlore <- dat %>%
+         group_by(LOIEMV) %>%
+         summarize(species = length(unique(SNAME)),
+                   area = round(as.numeric(sum(area)),2)) %>%
+         mutate(Type = "Flore")
+
+
+  # ----
+  dat <- rbind(datFaune, datFlore)
+
+  # -----
+  meta$dataDescription$CDPNQ$NombreFaune <- nFauneSite
+  meta$dataDescription$CDPNQ$EspecesFaune <- nFauneSp
+  meta$dataDescription$CDPNQ$NombreFlore <- nFloreSite
+  meta$dataDescription$CDPNQ$EspecesFlore <- nFloreSp
+  meta$dataDescription$CDPNQ$details$type <- dat$Type
+  meta$dataDescription$CDPNQ$details$loiemv <- dat$LOIEMV
+  meta$dataDescription$CDPNQ$details$species <- dat$species
+  meta$dataDescription$CDPNQ$details$area <- dat$area
+
 
   # _____________________________________________________________________________ #
 

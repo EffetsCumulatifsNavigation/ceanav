@@ -346,6 +346,40 @@ dataDescription:
   BIOMQ:
     Nombre: 113
     Superficie: 198.65
+  CDPNQ:
+    NombreFaune: 423
+    EspecesFaune: 37
+    NombreFlore: 224
+    EspecesFlore: 64
+    details:
+      type:
+      - Faune
+      - Faune
+      - Faune
+      - Flore
+      - Flore
+      - Flore
+      loiemv:
+      - Menacée
+      - Susceptible
+      - Vulnérable
+      - Menacée
+      - Susceptible
+      - Vulnérable
+      species:
+      - 6
+      - 20
+      - 11
+      - 10
+      - 49
+      - 5
+      area:
+      - 921.07
+      - 325.99
+      - 1459.75
+      - 4.45
+      - 8.73
+      - 1.59
 rawData:
 - '0001'
 - '0002'
