@@ -452,6 +452,21 @@ cv_habitat <- function() {
   meta$dataDescription$frayere_alevinage$Superficie_frayere <- dat$Superficie_frayere
   meta$dataDescription$frayere_alevinage$Nombre_alevinage <- dat$Nombre_alevinage
   meta$dataDescription$frayere_alevinage$Superficie_alevinage <- dat$Superficie_alevinage
+
+  # --- ZICOs
+  load_format("data0058")
+  uid <- st_intersects(grid1p, data0058) %>% unlist() %>% unique()
+  nid <- length(uid)
+  sup <- st_area(data0058[uid, ]) %>%
+         sum() %>%
+         units::set_units(km^2) %>%
+         round(2) %>%
+         as.numeric()
+
+  # -----
+  meta$dataDescription$ZICO$Nombre <- nid
+  meta$dataDescription$ZICO$Superficie <- sup
+
   # _____________________________________________________________________________ #
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
