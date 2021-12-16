@@ -343,6 +343,9 @@ dataDescription:
   ZICO:
     Nombre: 41
     Superficie: 1701.26
+  BIOMQ:
+    Nombre: 113
+    Superficie: 198.65
 rawData:
 - '0001'
 - '0002'

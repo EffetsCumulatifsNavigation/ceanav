@@ -467,6 +467,20 @@ cv_habitat <- function() {
   meta$dataDescription$ZICO$Nombre <- nid
   meta$dataDescription$ZICO$Superficie <- sup
 
+  # --- ZICOs
+  load_format("data0043")
+  uid <- st_intersects(grid1p, data0043) %>% unlist() %>% unique()
+  nid <- length(uid)
+  sup <- st_area(data0043[uid, ]) %>%
+         sum() %>%
+         units::set_units(km^2) %>%
+         round(2) %>%
+         as.numeric()
+
+  # -----
+  meta$dataDescription$BIOMQ$Nombre <- nid
+  meta$dataDescription$BIOMQ$Superficie <- sup
+
   # _____________________________________________________________________________ #
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
