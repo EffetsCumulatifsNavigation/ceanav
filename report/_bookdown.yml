@@ -2,15 +2,14 @@ book_filename: bookdown
 repo: https://github.com/david-beauchesne/rapport
 output_dir: docs
 rmd_subdir:
-  - "contenu/accronymes"
-  - "contenu/glossaire"
+  # - "contenu/accronymes"
+  # - "contenu/glossaire"
   - "contenu/0-resume"
   - "contenu/1-introduction"
-  - "contenu/2-portee"
-  - "contenu/3-portrait"
-  - "contenu/4-effets_cumulatifs"
-  - "contenu/5-diagnostic"
-  - "contenu/6-perspectives"
+  - "contenu/2-portrait"
+  - "contenu/3-effets_cumulatifs"
+  - "contenu/4-diagnostic"
+  - "contenu/5-perspectives"
   - "contenu/remerciements"
   - "contenu/references"
   - "contenu/annexes"
