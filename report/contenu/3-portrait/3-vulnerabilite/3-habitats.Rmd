@@ -2,7 +2,7 @@
 
 #### Habitats
 
-Plusieurs exercices d’évaluation de la vulnérabilité de différents types d’habitats à diverses sources de stress environnementales ont déjà été publiés au Canada [e.g. @ban2010; @clarkemurray2015a; @clarkemurray2015b] et ailleurs dans le monde [@teck2010; @kappel2012]. Un processus similaire mené par Pêches et Océans Canada est actuellement en cours afin de caractériser la vulnérabilité des habitats de l’Atlantique Ouest à une cinquantaine de sources de stress. Originellement développée par @halpern2007 afin de caractériser la vulnérabilité des habitats à l'échelle globale, cette appoche utilise des métriques d’exposition et de sensibilité afin de d'évaluer cinq critères de vulnérabilité des écosystèmes : l’échelle spatiale, la fréquence, l’impact fonctionnel, la résistance et la résilience (Tableau \@ref(tab:critereTeck)).
+Plusieurs exercices d’évaluation de la vulnérabilité de différents types d’habitats à diverses sources de stress environnementales ont été publiés au Canada [e.g. @ban2010; @clarkemurray2015a; @clarkemurray2015b] et ailleurs dans le monde [@teck2010; @kappel2012]. Un processus similaire mené par Pêches et Océans Canada est actuellement en cours afin de caractériser la vulnérabilité des habitats de l’Atlantique Ouest à une cinquantaine de sources de stress. Originellement développée par @halpern2007 afin de caractériser la vulnérabilité des habitats à l'échelle globale, cette appoche utilise des métriques d’exposition et de sensibilité afin d'évaluer cinq critères de vulnérabilité des écosystèmes : l’échelle spatiale, la fréquence, l’impact fonctionnel, la résistance et la résilience (Tableau \@ref(tab:critereTeck)).
 
 <br/>
 
@@ -27,17 +27,20 @@ tab %>%
 
 <br/>
 
-Ces derniers permettent l’utilisation de facteurs quantitatifs conférant une transparence supérieure à l’approche qualitative (Teck et al., 2010; Kappel et al., 2012). Les scores de vulnérabilité $\mu$ correspondent à la somme pondérée des cinq critères de vulnérabilité :
+Ces derniers permettent l’utilisation de facteurs quantitatifs conférant une transparence supérieure à l’approche qualitative [@teck2010; @kappel2012]. Les scores de vulnérabilité $\mu$ correspondent à la somme pondérée des cinq critères de vulnérabilité :
 
 $$\mu_{D_i,E_j} = \sum_{k = 1,...,5} W_k * D^j_{i,k}$$
 
 où $D^j_{i,k}$ est la valeur du stresseur $i$ pour le critère $k$ au sein de l’écosystème $j$ et $W_k$ est le poids associé au critère $k$, avec la somme de tous les poids égal à 1. Le poids $W_k$ permet ainsi de pondérer la valeur attribuée aux critères individuels selon leur importance individuelle. Ce modèle additif et linéaire assume que la vulnérabilité est monotone pour l’ensemble des critères de vulnérabilité, c.-à-d. que la vulnérabilité augmente avec une augmentation de la valeur de chaque critère. Une transformation des valeurs de $W_k$ est nécessaire afin d’assurer que l’étendue des valeurs est comparable pour les différents critères. Cette équation permet ultimement de générer une matrice de scores de vulnérabilité pour l’ensemble des combinaisons stresseur-écosystème.
 
-@teck2010 et @kappel2012 ont fait appel à des sondages d'experts afin d'évaluer, pour chaque combinaison stresseurs-habitats, les valeurs et le poids associé à chaque critère de vulnérabilité. Au total, 107 experts on permis d'évaluer la vulnérabilité relative de 19 types d'habitats à 53 stresseurs environnementaux. Les matrices de vulnérabilité résultantes ont été réutilisée et adaptée à de mainte reprises depuis [e.g. @ban2010; @clarkemurray2015a]. Ces matrices de vulnérabilité offrent également un point de départ à notre évaluation; en effet, l'entièreté des sources de stress, et une portion importante des habitats considérés pour notre évaluation se retrouvent dans la liste présentée par @teck2010, @kappel2012 et @clarkemurray2015a (voir Annexes @ref et @ref pour les correspondances utilisées). Plus particulièrement, nous avons utilisé la matrice de vulnérabilité issue de @kappel2012 afin d’informer l’évaluation de la vulnérabilité des habitats pour lesquels une correspondance claire pouvait être établie, c.-à-d. les milieux côtiers, les milieux humides et les milieux aquatiques (Annexe @ref).
-<!-- Sélectionner la bonne référence pour ce travail -->
-<!-- TODO: Faire vérifier la correspondance des habitats -->
+@teck2010 et @kappel2012 ont fait appel à des sondages d'experts afin d'évaluer, pour chaque combinaison stresseurs-habitats, les valeurs et le poids associé à chaque critère de vulnérabilité. Au total, 107 experts ont évalué la vulnérabilité relative de 19 types d'habitats à 53 stresseurs environnementaux. Les matrices de vulnérabilité résultantes ont été réutilisée et adaptée à de maintes reprises depuis [e.g. @ban2010; @clarkemurray2015a]. Ces matrices de vulnérabilité offrent également un point de départ à notre évaluation; en effet, l'entièreté des stresseurs environnementaux, et une portion importante des habitats considérés pour notre évaluation se retrouvent dans la liste présentée par @teck2010, @kappel2012 et @clarkemurray2015a (voir Annexes 5 et 6 pour les correspondances utilisées). Plus particulièrement, nous avons utilisé la matrice de vulnérabilité issue de @kappel2012 afin d’informer l’évaluation de la vulnérabilité des habitats pour lesquels une correspondance claire pouvait être établie, c.-à-d. les milieux naturels (Annexe 6).
 
-Des modifications mineures ont cependant été apportées aux valeurs de vulnérabilité relevées par @kappel2012. Premièrement, les valeurs de vulnérabilité attribuées aux milieux humides ont été modifiées afin de capturer convenablement la finesse du jeu de données disponible pour notre étude. En effet, les milieux humides caractérisés témoignent de la nature étagée des milieux humides, avec les milieux humides en eau peu profonde, suivie des marais, puis des marécages, diminuant ainsi progressivement l'exposition potentielle de ces milieux aux sources de stress d'origine marine. Nous avons ainsi diminué la vulnérabilité des milieux humides proportionnellement par un facteur de 5% pour les marais et de 10% pour les marécages face à l'ensemble des sources de stress. Nous avons conservé l'évaluation de @kappel2012 pour la catégorie d'habitat *milieu humide* contenant des milieux humides dont le type est inconnu par principe de précaution. Deuxièmement, les déversements accidentels ont été catégorisés afin de différencier les déversements d'hydrocarbures des autres types de déversements. Nous diminuons ainsi les valeurs de vulnérabilité aux déversements par un facteur de 10% pour les déversements de type *autres*. Tout comme pour les milieux humides, nous avons conservé la valeur de vulnérabilité intacte pour les déversements dont le contenu est inconnu par principe de précaution. La matrice de vulnérabilité résultante peut être consultée au Tableau \@ref(tab:habitatvuln).
+<!-- TODO: Faire vérifier la correspondance des habitats -->
+<!-- TODO: Vérifier numéros des annexes -->
+<!-- TODO: Validation par des experts -->
+<!-- Il demeure toutefois important de mentionner que les valeurs de vulnérabilité constituant ces matrices diffèrent généralement d'une région à l'autre. À cet égard, nous avons fait réviser les valeurs de vulnérabilités utilisées par des experts. -->
+
+Certaines modifications ont été apportées aux scores de vulnérabilité rapportées par @kappel2012. Premièrement, les valeurs de vulnérabilité attribuées aux milieux humides ont été modifiées afin de capturer convenablement la finesse du jeu de données disponible pour notre étude. En effet, les milieux humides caractérisés témoignent de la nature étagée des milieux humides, avec les milieux humides en eau peu profonde, suivie des marais, puis des marécages, diminuant ainsi progressivement l'exposition potentielle de ces milieux aux sources de stress d'origine marine. Nous avons ainsi diminué la vulnérabilité des milieux humides proportionnellement par un facteur de 5% pour les marais et de 10% pour les marécages face à l'ensemble des sources de stress. Nous avons conservé l'évaluation de @kappel2012 pour la catégorie d'habitat *milieu humide* contenant des milieux humides dont le type est inconnu par principe de précaution. Deuxièmement, les déversements accidentels ont été catégorisés afin de différencier les déversements d'hydrocarbures des autres types de déversements. Nous diminuons ainsi les valeurs de vulnérabilité aux déversements par un facteur de 10% pour les déversements de type *autres*. Tout comme pour les milieux humides, nous avons conservé la valeur de vulnérabilité intacte pour les déversements dont le contenu est inconnu par principe de précaution. La matrice de vulnérabilité résultante peut être consultée au Tableau \@ref(tab:habitatvuln).
 
 <br/>
 
@@ -68,42 +71,80 @@ tbl
 <br/>
 
 
+#### Habitats d'importance pour les espèces fauniques et floristiques
 
-<!-- Il demeure toutefois important de mentionner que les valeurs de vulnérabilité constituant ces matrices diffèrent généralement d'une région à l'autre. À cet égard, nous avons fait réviser les valeurs de vulnérabilités utilisées par des experts. -->
+La vulnérabilité des habitats identifiés pour leur importances pour les cycles vitaux et les espèces à statut ne peuvent être évalués à partir de la même approche que celle utilisée pour les milieux naturels. Ces sites diffèrent des habitats présentés précédemment puisqu'ils représentent des milieux dont les caractéristiques peuvent varier, mais qui remplissent des fonctions essentielles pour le maintien de certaines espèces, ou qui sont jugés importants pour la conservation de certaines espèces à statut. En tant que tel, la vulnérabilité de ces sites ne peut être évaluée de façon analogue à l'évaluation présentée à la section précédente. Une approche alternative a été utilisée afin d'obtenir une évaluation de leur vulnérabilité relative aux effets des sources de stress considérées en s'appuyant sur des critères relatifs aux espèce plutôt qu'aux habitats.
 
-<!-- TODO: Validation par des experts -->
-<!-- NOTE: explication voir working paper -->
+Les exercices d’évaluation de la vulnérabilité d’espèces aux effets de stresseurs se font plus rares dans le cadre d’évaluation d’effets cumulatifs, bien que certains processus d’évaluation existent tout de même [e.g. @maxwell2013; @trew2019; @ohara2021]. Ces évaluation touchaient principalement des espèces de mégafaune marine (e.g. baleines et requins) et des espèces en péril. Ces publications ne couvrent toutefois pas l’entièreté des espèces et des stresseurs visés par la présente évaluation. Elles fournissent tout de même une série de critères visant à évaluer la vulnérabilité des espèces aux stresseurs. Nous avons ainsi utilisé un processus similaire afin de déterminer la vulnérabilité des milieux d'importane pour les espèces dans le Saint-Laurent et le Saguenay aux activités maritimes.
 
-#### Sites d'importance pour les espèces fauniques et floristiques
+Les critères utilisés afin d’évaluer la vulnérabilité des espèces aux effets des activités maritimes proviennent de @maxwell2013: 1) la fréquence des sources de stress, 2) si l’effet de la source de stress est directe ou indirecte, 3) la résistance de l’espèce aux effets de la source de stress, 4) le temps de rétablissement de l’espèce, 5) l’effet relatif sur la reproduction, et 6) l’effet relatif sur la population (Tableau \@ref(tab:vulnerabilitySpecies)). Nous avons ajouté deux critères à cette liste afin de considérer des particularités régionales propres au Saint-Laurent et au Saguenay, soit 7) le statut de l’espèce et 8) si l’espèce est résidente de la zone d'étude (Tableau \@ref(tab:vulnerabilitySpecies)).
 
-Une série de sites d'importance pour des espèces fauniques et floristiques ont été identifiés pour inclusion au sein de l'évaluation des effets cumulatifs. Ces sites diffèrent des habitats présentés précédemment puisqu'ils représentent des milieux dont les caractéristiques peuvent varier, mais qui remplissent des fonctions essentielles pour le maintien de certaines espèces, ou qui sont jugés importants pour la conservation de certaines espèces à statut. En tant que tel, la vulnérabilité de ces sites ne peut être évaluée de façon analogue à l'évaluation présentée à la section précédente. Une approche
+<br/>
 
-De par leur nature et leur importance pour les espèces, ces sites sont considéré comme vulnérables aux effets de sources de stress.
+```{r vulnerabilitySpecies, echo = FALSE}
+meta <- read_yaml("../data/data-metadata/vulnerability_mammiferes_marins.yml")
+criteres <- meta$criteres
+tab <- list()
+lin <- numeric()
+for(i in 1:length(criteres)) {
+  dat <- meta$details[[criteres[i]]]
+  nm <- character(length(dat$description$rank))
+  nm[1] <- glue("***{dat$name}***")
+  nm[2] <- glue("*{dat$question}*")
+  crit <- as.data.frame(dat$description)
+  tab[[i]] <- cbind(nm,crit)
+  lin[i] <- length(nm)
+}
+lin <- cumsum(lin)
+tab <- dplyr::bind_rows(tab)
 
-Il est toutefois difficile de déterminer leur vulnérabilité spécifique à chaque source de stress.
+# -----
+tab %>%
+  knitr::kable(
+    col.names = c("Critères de vulnérabilité", "Rang", "Catégories", "Description", "Exemples"),
+    row.names = FALSE,
+    caption = "Critères considérés pour évaluer la vulnérabilité des composantes valorisées relatives au espèces -- *i.e.* milieux d'importance pour les cycles de vie, les espèces à statut et les mammifères marins -- aux sources de stress considérées pour l'évaluation des effets cumulatifs des activités maritimes dans le Saint-Laurent et le Saguenay. Les critères ont été adaptés de @maxwell2013, auxquels ont été ajouté les critères de statut et de résidence des espèces afin de des particularités régionales propres au Saint-Laurent et au Saguenay. "
+  ) %>%
+  kableExtra::row_spec(lin, extra_css = "border-bottom: 2px solid")
+```
 
-Nous avons ainsi utilisé les règles suivantes :
+<br/>
 
-Distinguer les sites d'espèces à statut et sites d'importance pour les cycles de vie des espèces.
+Les critères utilisés variaient selon les types d'habitats évalués. La fréquence des stresseurs environnementaux a été utilisée pour l'ensemble des habitats d'importance pour les espèces. La vulnérabilité des frayères et des sites d'alevinage a considéré les critères de fréquence des stresseurs environnementaux et d'effets sur la reproduction et sur la population. La vulnérabilité des habitats d'importance pour les oiseaux marins a quant à elle été évaluée en  considérant les critères de fréquence des stresseurs et des effets sur les popupulations. Finalement, l'évaluation de la vulnérabilité des habitats d'importance pour les espèces à statut a été effectuée à partir des critères de fréquence des stresseurs environnementaux, des effets sur les populations et du statut des espèces. Le score de vulnérabilité final a été obtenu à partir de la somme des scores de chaque critère. Finalement, un score relatif a été évalué en normalisant les scores totaux par la valeur maximale de vulnérabilité observée par groupe d'habitat évaluée à partir de critères similaires. Les frayères et les sites d'alevinage constituaient le premier groupe, les oiseaux marins le second, et les espèces à statut le troisième. Les scores de vulnérabilité finaux sont disponibles au tableau \@ref(tab:speciesvuln) et les tableaux d'évaluation des critères individuels par catégorie d'habitat sont disponibles à l'Annexe 7.
 
-Considérer la fréquence uniquement pour les espèces en péril, plus leur statut
+<br/>
 
-Considérer la fréquence et les effets sur la reproduction et sur la population pour les sites d'importance pour les cycles de vie.
-
-
-
-Les habitats sélectionnés pour la présente analyse diffèrent toutefois des classifications d'habitats habituellement utilisés pour ce type d'analyse. Les processus de consultations ont menés à l'inclusion de plusieurs types d'habitats définis par leur importance pour des espèces ou des commnunautés, comme les frayères et les milieux où des espèces en péril ont été observées. La vulnérabilité de ces habitats ne pouvant être déterminée par le même processus, une approche alternative a été utilisée afin d'obtenir une évaluation de leur vulnérabilité relative aux effets des sources de stress considérées.
-
-La vulnérabilité de ces habitats a ainsi été évaluée à partir de critères ciblant davantage les espèces (voir section suivante sur les mammifères marins).
-
-<!-- TODO: Voir avec les mammifères marins -->
+```{r speciesvuln}
+tab <- read.csv("../data/data-vulnerability/vulnerability_faune_flore.csv")
+dat <- as.matrix(tab[,2:ncol(tab)])
+pal <- colorRampPalette(viridis::viridis(100))
+cols <- pal(101)[((dat / 1)*100)+1]
+dat[1:length(dat)] <- cols
 
 
+tbl <- tab %>%
+  knitr::kable(
+    col.names = c("Stresseurs environnementaux","1","2","3","4","5","6","7","8","9"),
+    row.names = FALSE,
+    caption = "Scores de vulnérablité relative des habitats d'importance pour les espèces face aux stresseurs environnementaux."
+  )  %>%
+  kableExtra::kable_styling(font_size = 11) # %>%
+  # kableExtra::row_spec(0, angle = -45)
+
+for(i in 1:ncol(dat)) {
+  tbl <- kableExtra::column_spec(tbl, i+1, color = "white", background = dat[, i])
+}
+
+tbl
+```
+
+<br/>
+
+<!--
 Tairova, Z., Frantzen, M., Mosbech, A., Arukwe, A., and Gustavson, K. 2019. Effects of water accommodated fraction of physically and chemically dispersed heavy fuel oil on beach spawning capelin (Mallotus villosus). Mar. Environ. Res. 147: 62-71.
 
 Fish were considered aggregated if they were a schooling species (e.g. Silversides [Atherinopsidae]); a shoaling species (e.g. Cod [Gadidae]); formed feeding aggregations (e.g. Hagfish [Myxinidae]); exhibited mass spawning (e.g. Capelin [Osmeridae]; or congregate for seasonal spawning migrations (e.g. American eel [Anguillidae]).
 
 Ça veut dire que la vulnérabilité augmente dans les endroits où il y a une aggrégation des individus d'une population pour des activités comme la reproduction et l'alimentation.
 
-
-Les espèces à statut sont présent parce qu'elles sont vulnérables dûs aux problématiques populationnelles. On assume donc qu'elle seront très vulnérables et on les départage selon le niveau de désignation
+-->
