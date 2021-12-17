@@ -386,10 +386,10 @@ dataDescription:
       superficie: 28.58
     pop:
       sites: 7
-      superficie: "< 1"
+      superficie: < 1
     metis:
       sites: 3
-      superficie: "< 1"
+      superficie: < 1
 rawData:
 - '0001'
 - '0002'
