@@ -392,7 +392,7 @@ cv_habitat <- function() {
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   meta <- load_metadata("int_cv_habitat")
 
-  # -----
+  # <=~ - ~=> <=~ - ~=> <=~ - ~=> <=~ - ~=> #
   meta$rawData <- meta_temp$rawData
   meta$dataDescription$categories$accronyme <- meta_temp$accronyme
   meta$dataDescription$categories$francais <- meta_temp$francais
@@ -410,7 +410,9 @@ cv_habitat <- function() {
   temp <- habitat[temp > 0, ]
   meta$dataDescription$spatial$extent <- st_bbox(temp)
 
+  # <=~ - ~=> <=~ - ~=> <=~ - ~=> <=~ - ~=> #
   # ----- Info for frayères et aires d'alevinage
+  # <=~ - ~=> <=~ - ~=> <=~ - ~=> <=~ - ~=> #
   # --- Alevinage
   # Nombre
   alevinage <- as.data.frame(table(data0009$Source), stringsAsFactors = FALSE)
@@ -455,7 +457,9 @@ cv_habitat <- function() {
   meta$dataDescription$frayere_alevinage$Nombre_alevinage <- dat$Nombre_alevinage
   meta$dataDescription$frayere_alevinage$Superficie_alevinage <- dat$Superficie_alevinage
 
+  # <=~ - ~=> <=~ - ~=> <=~ - ~=> <=~ - ~=> #
   # --- ZICOs
+  # <=~ - ~=> <=~ - ~=> <=~ - ~=> <=~ - ~=> #
   load_format("data0058")
   uid <- st_intersects(grid1p, data0058) %>% unlist() %>% unique()
   nid <- length(uid)
@@ -469,7 +473,9 @@ cv_habitat <- function() {
   meta$dataDescription$ZICO$Nombre <- nid
   meta$dataDescription$ZICO$Superficie <- sup
 
+  # <=~ - ~=> <=~ - ~=> <=~ - ~=> <=~ - ~=> #
   # --- BIOMQ
+  # <=~ - ~=> <=~ - ~=> <=~ - ~=> <=~ - ~=> #
   load_format("data0043")
   uid <- st_intersects(grid1p, data0043) %>% unlist() %>% unique()
   nid <- length(uid)
@@ -483,7 +489,9 @@ cv_habitat <- function() {
   meta$dataDescription$BIOMQ$Nombre <- nid
   meta$dataDescription$BIOMQ$Superficie <- sup
 
+  # <=~ - ~=> <=~ - ~=> <=~ - ~=> <=~ - ~=> #
   # --- Faune à statut
+  # <=~ - ~=> <=~ - ~=> <=~ - ~=> <=~ - ~=> #
   uid <- st_intersects(grid1p, data0059) %>% unlist() %>% unique() %>% sort()
   dat <- data0059[uid, ] %>%
          mutate(area = units::set_units(st_area(.), km^2)) %>%
@@ -498,7 +506,9 @@ cv_habitat <- function() {
                    area = round(as.numeric(sum(area)),2)) %>%
          mutate(Type = "Faune")
 
+  # <=~ - ~=> <=~ - ~=> <=~ - ~=> <=~ - ~=> #
   # --- Flore à statut
+  # <=~ - ~=> <=~ - ~=> <=~ - ~=> <=~ - ~=> #
   uid <- st_intersects(grid1p, data0060) %>% unlist() %>% unique() %>% sort()
   dat <- data0060[uid, ] %>%
          mutate(area = units::set_units(st_area(.), km^2)) %>%
@@ -527,7 +537,35 @@ cv_habitat <- function() {
   meta$dataDescription$CDPNQ$details$species <- dat$species
   meta$dataDescription$CDPNQ$details$area <- dat$area
 
+  # <=~ - ~=> <=~ - ~=> <=~ - ~=> <=~ - ~=> #
+  # --- Zosteres
+  # <=~ - ~=> <=~ - ~=> <=~ - ~=> <=~ - ~=> #
+  # -----
+  load_format("data0001")
+  uid <- st_intersects(grid1p, data0001) %>% unlist() %>% unique() %>% sort()
+  dat <- data0001[uid, ] %>%
+         mutate(area = as.numeric(units::set_units(st_area(.), km^2))) %>%
+         st_drop_geometry()
+  meta$dataDescription$zostere$mpo$sites <- nrow(dat)
+  meta$dataDescription$zostere$mpo$superficie <- round(sum(dat$area),2)
 
+  # -----
+  load_format("data0002")
+  dat <- data0002 %>%
+         mutate(area = units::set_units(st_area(.), km^2)) %>%
+         st_drop_geometry()
+  meta$dataDescription$zostere$pop$sites <- nrow(dat)
+  sup <- as.numeric(sum(dat$area))
+  meta$dataDescription$zostere$pop$superficie <- ifelse(sup < 1, "< 1", round(sup,2))
+
+  # -----
+  load_format("data0003")
+  dat <- data0003 %>%
+         mutate(area = units::set_units(st_area(.), km^2)) %>%
+         st_drop_geometry()
+  meta$dataDescription$zostere$metis$sites <- nrow(dat)
+  sup <- as.numeric(sum(dat$area))
+  meta$dataDescription$zostere$metis$superficie <- ifelse(sup < 1, "< 1", round(sup,2))
   # _____________________________________________________________________________ #
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
