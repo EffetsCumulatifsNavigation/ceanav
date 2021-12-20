@@ -22,9 +22,26 @@ knitr::include_graphics("./figures/figures-output/cumulative_effects_panel.png")
 
 ### Régions administratives
 
-Une évaluation des effets cumulatifs par $km^2$ 
+Une évaluation des effets cumulatifs par $km^2$ au sein des 11 régions administratives se séparant la zone d'étude a été effectuée afin d'explorer les différences régionales au niveau de l'intensité des effets cumulatifs (Figures \@ref(fig:regionadmin) et \@ref(fig:regionadminpanel)). L'évaluation globale combinant l'ensemble des composantes valorisées révèle que les régions administrative du secteur fluvial sont beaucoup plus à risque des effets cumulatifs des activités maritimes, alors que le secteur maritime semble moins à risque. La Montérégie en particulier semble être la région la plus affectée par les effets des activités maritimes. Ces observations sont dû à la concentration des activités maritimes au sein d'un corridor beaucoup plus étroit au sein du secteur fluvial comparativement au secteur maritime. Bien que cette observation ne soit pas étonnante, elle suggère qu'une augmentation du traffic maritime au sein du secteur maritime risque d'avoir des conséquences disproportionnelles au sein du secteur fluvial si ce traffic se dirige vers les Grands Lacs. Le passage d'un navire supplémentaire à Québec ne peut ainsi être interprété de la même façon qu'un navire supplémentaire à Montréal. Par extension à la navigation, le second stresseur d'importance au sein des régions administratives du secteur fluvial est le risque de pollution maritime. Les types de navires ayant les effets les plus importants sont d'ailleurs ceux reliés au transport de marchandise (*e.g.* pétrolier, cargaison sèche, cargo et porte-conteneurs). Les navires gouvernementaux semblent également pouvoir affecté négativement les composantes valorisées de la zone d'étude, sans doute dû à des routes de navigations moins contrainte par la voie navigable.
 
-Afin d'explorer les effets cumulatifs régionalement,
+
+- Les évaluations par composantes valorisées présente un portrait globalement similaire, sauf au niveau des mammifères marins puisque ces derniers sont distribués au sein du secteur maritime.
+
+- Stresseurs ayant le plus d'effets : navigation et pollution maritime, mais ce sont aussi les stresseurs avec la répartition spatiale la plus importante dans la zone d'étude. Les autres stresseurs sont plus ponctuels.
+
+- L'intégrité des berges est plus à risque en amont du lac Saint-Pierre en raison de la proximité de la voie navigable et des berges. Il est important de noter que l'absence d'effets sur l'intégrité des berges dans le secteur maritime est dû à la portée de l'étude et non à l'absence de risque d'érosion.
+
+
+
+
+
+
+
+Les stresseurs les plus importants pour les
+
+
+
+
 
 
 <br/>
