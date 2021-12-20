@@ -60,6 +60,12 @@ knitr::include_graphics("./figures/figures-output/cumulative_effects_region_cea_
 
 ### Chemins d'effet
 
+```{r pathwayssetup, echo = FALSE}
+st <- read.csv("../data/data-metadata/metadata_stresseurs.csv")
+cv <- read.csv("../data/data-metadata/metadata_composantes_valorisees.csv")
+```
+
+L'évaluation des effets cumulatifs proposée permet d'explorer l'ensemble des combinaisons de stresseurs et de composantes valorisées incluses à l'analyse. Considérant les `r nrow(st)` catégories de stresseurs et les `r nrow(cv)` catégories de composantes valorisées, il s'agit de près de 2 000 paires possibles. Bien que nous ne pouvons explorer l'ensemble de ces combinaisons, la figure \@ref(fig:metanetwork) fournit une représentation visuelle de l'ensemble de ces combinaisons. 
 
 <br/>
 
