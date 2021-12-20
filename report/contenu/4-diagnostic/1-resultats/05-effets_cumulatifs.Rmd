@@ -1,4 +1,11 @@
-### Distribution des effets cumulatifs
+### Effets cumulatifs
+
+Le résultat principal de l'évaluation applique l'entièreté de la méthode d'évaluation des effets cumulatifs en incluant la distribution et l'intensité des stresseurs environnementaux, la distribution des composantes valorisées, et la vulnérabilité des composantes valorisées aux stresseurs environnementaux (Figures \@ref(fig:cumEffects) et \@ref(fig:cumEffectsPanel)). Puisque l'évaluation des effets cumulatifs est contrainte par la distribution spatiale des stresseurs et des composantes valorisées, l'exploration des résultats de l'évaluation des effets a déjà été amorcée à partir de l'évaluation des stresseurs cumulés, des composantes valorisées cumulées et de l'exposition cumulée (voir sections précédentes). L'évaluation des effets cumulatifs permet ainsi de moduler l'intensité relative des effets en fonction de la vulnérabilité des composantes valorisées aux stresseurs, sans nécessairement altérer la distribution des effets.
+
+Les milieux les plus affectés par les stresseurs environnementaux sont essentiellement les mêmes entre l'évaluation de l'exposition cumulée (Figure \@ref(fig:cumExp)) et l'évaluation des effets cumualtifs (Figure \@ref(fig:cumEffects)); une interprétation similaire peut ainsi être faite. Les composantes valorisées sont affectées par les stresseurs dans l'ensemble de la zone d'étude. La région de Québec et le sud de l'Île d'Orléans, ainsi que le chenal de navigation entre Trois-Rivières et Montréal sont particulièrement affectés; l'embouchure de la rivière Saguenay est la région du secteur maritime la plus affectée par les stresseurs reliés aux activités maritimes. L'inclusion de la vulnérabilité semble suggérer une intensité supérieure des effets comparativement à l'exposition pour l'embouchure de la rivière Saguenay et sein du lac Saint-Pierre (Figure \@ref(fig:cumEffectsPanel)). Nous explorons ces résultats plus en détails dans les prochaines sections.
+
+
+<br/>
 
 ```{r cumEffects, fig.cap = "Distribution des effets cumulatifs des sources de stress reliés aux activités maritimes sur les composantes valorisée", out.width = '100%', fig.link = "./figures/figures-output/cumulative_effects.png"}
 knitr::include_graphics("./figures/figures-output/cumulative_effects.png")
@@ -10,26 +17,48 @@ knitr::include_graphics("./figures/figures-output/cumulative_effects.png")
 knitr::include_graphics("./figures/figures-output/cumulative_effects_panel.png")
 ```
 
+<br/>
+
+
 ### Régions administratives
+
+Une évaluation des effets cumulatifs par $km^2$ 
+
+Afin d'explorer les effets cumulatifs régionalement,
+
+
+<br/>
 
 ```{r regionadmin, fig.cap = "Contribution moyenne par $km^2$ des stresseurs aux effets cumulatifs des activités maritimes sur les composantes valorisées dans les régions administratives du Québec convrant la zone d'étude", out.width = '100%', fig.link = "./figures/figures-output/cumulative_effects_region_cea.png"}
 knitr::include_graphics("./figures/figures-output/cumulative_effects_region_cea.png")
 ```
 
+<br/>
+
 ```{r regionadminpanel, fig.cap = "Contribution moyenne par $km^2$ des stresseurs aux effets cumulatifs des activités maritimes sur l'intégrité des berges, les habitats, les mammifères marins et les sites d’intérêt culturels, patrimoniaux et archéologiques dans les régions administratives du Québec convrant la zone d'étude", out.width = '100%', fig.link = "./figures/figures-output/cumulative_effects_region_cea_panel.png"}
 knitr::include_graphics("./figures/figures-output/cumulative_effects_region_cea_panel.png")
 ```
 
+<br/>
+
 ### Chemins d'effet
 
+
+<br/>
 
 ```{r metanetwork, fig.cap = "Réseau multiplex présentant la présence d'un effet des stresseurs individuels sur chaque composante valorisée considérées à l'évaluation des effets cumulatifs (*i.e.* liens colorés), les effets cumulatifs totaux sur chaque composante valorisée (*i.e.* taille des points des composantes valorisées) et l'effet moyen des stresseurs (*i.e.* taille des points des stresseurs).", out.width = '100%', fig.link = "./figures/figures-output/cumulative_effects_metanetwork.png"}
 knitr::include_graphics("./figures/figures-output/cumulative_effects_metanetwork.png")
 ```
 
+<br/>
+
 
 ### Contribution régionale
+
+<br/>
 
 ```{r ceakm, fig.cap = "Contribution moyenne par $km^2$ des stresseurs aux effets cumulatifs des activités maritimes sur les composantes valorisées dans la zone d'étude", out.width = '100%', fig.link = "./figures/figures-output/cumulative_effects_regional_contribution.png"}
 knitr::include_graphics("./figures/figures-output/cumulative_effects_regional_contribution.png")
 ```
+
+<br/>

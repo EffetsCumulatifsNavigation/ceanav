@@ -1,1 +1,3 @@
 ## Résultats
+
+Les sections suivantes présentent les principaux résultats de l'évaluation des effets cumulatifs. Nous commençons par présenter et discuter de métriques plus simples, *i.e.* les stresseurs cumulés, les composantes valorisées cumulées et l'exposition cumulée. Ces métriques correspondent en réalité en une décomposition de la méthode d'évaluation des effets cumulatifs présentée à la section précédente. Elles permettent ainsi d'amorcer l'interprétation des résultats de l'évaluation des effets cumulatifs en explorant des portions plus restreintes de l'évaluation complète. Nous présentons ensuite les résultats de l'évaluation des effets cumulatifs complète. 
