@@ -4,7 +4,7 @@ Tous les stresseurs ont été normalisés entre 0 et 1 pour obtenir une valeur r
 
 Ce travail nous permet d'obtenir le premier résultat de l'évaluation des effets cumulatifs, *i.e.* l'empreinte cumulée des stresseurs environnementaux dans la zone d'étude (Figures \@ref(fig:stCum), \@ref(fig:stCumNorm) et \@ref(fig:stPanel)). L'empreinte cumulée, ou stresseurs cumulés $E_{S,x}$, correspond au cumul de l'ensemble des stresseurs environnementaux $S$ au sein de chaque cellule $x$ considérés pour l'évaluation :
 
-$$E_{C_x} = \sum_{j=1}^m S_{j,x} \label{eq2}$$
+$$E_{S_x} = \sum_{j=1}^m S_{j,x} \label{eq2}$$
 
 L'évaluation de l'empreinte cumulée des stresseurs environnementaux permet d'identifier les sites qui sont le plus exposés aux effets potentiels des stresseurs environnementaux considérés pour l'évaluation des effets cumulatifs. Elle ne fournit pas d'évaluation des effets, puisqu'elle ne considère que les stresseurs, leur intensité et leur distribution. Elle permet toutefois d'obtenir une évaluation des milieux qui sont le plus propices d'être affectés par les stresseurs dans notre zone d'étude. Nous avons également évalué l'empreinte cumulée des stresseurs en normalisant les valeurs d'intensité par le nombre de catégories de stresseurs afin d'éviter une sur-représentation de stresseurs composés de plusieurs catégories (Figure \@ref(fig:stCumNorm)). Par exemple, la navigation est composée de 12 catégories, alors que les ancrages n'en renferment qu'une seule. Finalement, nous présentons également les résultats par type de stresseurs (Figure \@ref(fig:stPanel)).
 

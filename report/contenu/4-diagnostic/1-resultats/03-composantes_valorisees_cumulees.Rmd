@@ -1,12 +1,14 @@
 ### Composantes valorisées cumulées
 
-L'évaluation de l'empreinte cumulée permet d'identifier les sites qui sont
-le plus importants en terme de présentes de composantes valorisées. Elle ne
-fournit pas d'évaluation des effets, puisqu'elle ne considère que les
-composantes valorisées. Elle permet toutefois d'obtenir une évaluation des
-milieux qui sont les plus importants pour les composantes valorisées dans
-la zone d'étude.
+Le portrait des composantes valorisées au sein de la zone d'étude nous permet d'obtenir le second résultat de l'évaluation des effets cumulative, *i.e.* l'évaluation des composantes valorisées cumulées au sein de la zone d'étude (Figures \@ref(fig:cvCum), \@ref(fig:cvCumNorm) et \@ref(fig:cvPanel)). L'évaluation des composantes valorisées cumulées $E_{CV,x}$ correspond au cumul de l'ensemble des composantes valorisées $CV$ au sein de chaque cellule $x$ :
 
+$$E_{CV_x} = \sum_{i=1}^n CV_{i,x} \label{eq3}$$
+
+L'évaluation de l'empreinte cumulée permet d'identifier les sites qui sont les plus riches en composantes valorisées. Tout comme l'évaluation des stresseurs cumulés, elle ne fournit pas d'évaluation des effets, puisqu'elle ne considère que les composantes valorisées. Elle permet toutefois d'obtenir une évaluation des milieux qui sont les plus importants pour les composantes valorisées dans la zone d'étude. Nous avons également évalué les composantes valorisées en normalisant par le nombre de catégories de composantes valorisées afin d'éviter une sur-représentation de composantes valorisées composées de plusieurs catégories (Figure \@ref(fig:cvCumNorm)). Par exemple, les sites d'intérêt culturels, patrimoniaux et archéologiques comprennent 40 catégories, alors que l'intégrité des berges est composée de quatre catégories.  Finalement, les résultats par type de composantes valorisées sont également disponibles à la figure \@ref(fig:cvPanel).
+
+L'évaluation des composantes valorisées cumulées mettent en évidence que l'entièreté de la zone d'étude est couverte par au moins une composante valorisée. Les milieux côtiers sont toutefois généralement couverts par un plus grand nombre de composantes valorisées. Ce constat est principalement influcé par les composantes valorisées d'intégrité des berges et d'habitats, dont la description est davantage côtière dans le cadre de cette évaluation. Les sites d'intérêt sont églament largement distribués en milieux côtiers. L'ensemble des milieux côtiers du secteur fluvial est caractérisé par plusieurs composantes valorisées, mais la région du lac Saint-Pierre, incluant les secteurs en amont et en aval, semble particulièrement importante. Un examen plus détaillé permet d'observer que cette région est caractérisée par une diversité importante d'habitats et de sites d'intérêt, en plus de présenté plusieurs catégories de berges sensibles à l'érosion.
+
+D'ordre général, le secteur fluvial est caractérisé par davantage de composantes valorisées que le secteur maritime. La région du secteur maritime présentant le plus grand nombre de composantes valorisées est l'embouchure de la rivière Saguenay, qui couvre essentiellement le Parc marin du Saguenay-Saint-Laurent. Cette observation est reliée à la diversité importante de mammifères marins qui fréquentent cette région et à une quantité importante de sites d'intérêt. La rivière Saguenay présente quant à elle la quantité la moins important de composantes valorisées; il est toutefois important de mentionner que ce constat reflète davantage le manque de données caractérisant ce milieu plutôt qu'une évaluation réelle de son importance.
 <br/>
 
 ```{r cvCum, fig.cap = "Distribution des composantes valorisées cumulées au sein de la zone d'étude", out.width = '100%', fig.link="./figures/figures-output/cumulative_cv.png"}
@@ -21,6 +23,8 @@ knitr::include_graphics("./figures/figures-output/cumulative_cv_norm.png")
 
 <br/>
 
-```{r cvberge, fig.cap = "Cumul des catégories de composantes valorisées au sein de la zone d'étude", out.width = '100%', fig.link = "./figures/figures-output/cumulative_cv_panel.png"}
+```{r cvPanel, fig.cap = "Cumul des catégories de composantes valorisées au sein de la zone d'étude", out.width = '100%', fig.link = "./figures/figures-output/cumulative_cv_panel.png"}
 knitr::include_graphics("./figures/figures-output/cumulative_cv_panel.png")
 ```
+
+<br/>
