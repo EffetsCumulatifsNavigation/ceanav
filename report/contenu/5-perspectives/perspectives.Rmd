@@ -33,3 +33,15 @@ https://soundscape-atlas.uqar.ca/
 #### Pêche commerciale secteur fluvial
 
 Données à intégrer éventuellement, travail en cours
+
+#### Processus repropductible {-}
+
+Prendre conclusion de thèse avec le processus adaptatif et le fait que c'est une approche modulaire.
+
+#### Outil interactif {-}
+
+Développement d'un outil permettant d'explorer les éléments du portrait et les détails de l'évaluation des effets cumulatifs.
+
+#### Prédiction des effets cumulatifs {-}
+
+Discuter du potentiel de tester des scénarios d'effets cumulatifs des activités maritimes selon des scénarios de développement et d'utilisation des ressources dans la zone d'étude. Ou même des scénarios de protection.
