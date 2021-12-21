@@ -42,7 +42,7 @@ La figure \@ref(fig:metanetwork) permet de visualiser l'ensemble des chemin d'ef
 - Les sites d'intérêt culturels, patrimoniaux et archéologiques sont les plus exposés aux effets des stresseurs issus des activités maritime. Bien que ce ne soit pas surprenant considérant la vulnérabilité maximale qui leur est attribuée, il s'agit tout de même d'un constat important.
 - Les sites d'intérêt de la Nation Mohawk de Kahnawà:ke semble particulièrement exposée aux effets des stresseurs.
 - La composante valorisée la moins affectée est celle des mammifères marins. Par contre, il est important de rappeler que ces espèces couvrent un territoire très important et que par conséquent l'évaluation par $km^2$ sous-évalue les scores d'effets cumulatifs prédits. Il faudrait peut-être considérer refaire cette évaluation en ne considérant que les habitats les plus importants pour ces espèces.
-- Outre les sites d'intérêt, l'intégrité des berges est la composante valorisée la plus affectée par les effets cumulatifs.
+- Outre les sites d'intérêt, l'intégrité des berges est la composante valorisée la plus affectée par les effets cumulatifs de la navigation et des activités de dragage.
 
 
 <br/>
