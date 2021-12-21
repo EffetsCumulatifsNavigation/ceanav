@@ -19,6 +19,43 @@ knitr::include_graphics("./figures/figures-output/cumulative_effects_panel.png")
 
 <br/>
 
+### Chemins d'effet
+
+```{r pathwayssetup, echo = FALSE}
+st <- read.csv("../data/data-metadata/metadata_stresseurs.csv")
+cv <- read.csv("../data/data-metadata/metadata_composantes_valorisees.csv")
+```
+
+L'évaluation des effets cumulatifs proposée permet d'explorer l'ensemble des combinaisons de stresseurs et de composantes valorisées incluses à l'analyse. Considérant les `r nrow(st)` catégories de stresseurs et les `r nrow(cv)` catégories de composantes valorisées, il s'agit de près de 2 000 paires possibles, qui forment l'ensemble des chemins d'effets, ou séquences des effets, possibles d'un stresseur vers une composante valorisée. Un chemin d'effets établit les liens entre les activités et leurs incidences potentielles sur divers aspects de l’écosystème [@dfo2020]. Bien que nous ne pouvons explorer l'ensemble de ces combinaisons au sein de ce rapport, les figures \@ref(fig:metanetwork) et \@ref(fig:ceakm) fournissent une représentation visuelle de l'ensemble de ces combinaisons et de la contribution des stresseurs aux effets cumulatifs totaux prédits pour chaque composante valorisée considérée.
+
+Les effets totaux prédits sur les composantes valorisées et par les stresseurs environnementaux ont été évalués par la somme des effets totaux divisés par la superficie totale de la composante valorisée sur laquelle un effet est prédit. Par exemple, si un habitat d'une superficie de 2 $km^2$ est affectée par deux stresseurs ayant un score de 0.25 et 0.75, respectivement, l'effet total sur la composante valorisée est de 0.5 $km^{-2}$.
+
+La figure \@ref(fig:metanetwork) permet de visualiser l'ensemble des chemin d'effets binaires. Les liens représente la présence d'un effet d'un stresseur vers une composante valorisée, alors que la taille des points représentent les effets relatifs totaux sur les composantes valorisées et en provenance des stresseurs environnementaux. Cette figure permet également de visualiser rapidement la quantité d'information disponible au sein de la base de données générée par l'évaluation des effets cumulatifs proposée. La figure \@ref(fig:ceakm) permet quant à elle d'explorer ces chemins d'effets plus en détails en présentant la contribution relative individuelle de chaque stresseur aux effets prédits pour chaque composante valorisée.
+
+**Principaux résultats**
+
+- La navigation et pollution maritime ont les effets les plus importants. Ces résultats sont attendus puisque ces stresseurs sont les plus répandus parmis ceux considérés pour l'évaluation.
+- Les autres stresseurs ont des effets totaux relativement faibles, sauf les pêches commerciales qui affectent certaines catégories de composantes valorisées plus intensément, comme les gisements coquilliers et certains sites d'intérêt culturels, patrimoniaux et archéologiques.
+- Les sites d'intérêt culturels, patrimoniaux et archéologiques sont les plus exposés aux effets des stresseurs issus des activités maritime. Bien que ce ne soit pas surprenant considérant la vulnérabilité maximale qui leur est attribuée, il s'agit tout de même d'un constat important.
+- Les sites d'intérêt de la Nation Mohawk de Kahnawà:ke semble particulièrement exposée aux effets des stresseurs.
+- La composante valorisée la moins affectée est celle des mammifères marins. Par contre, il est important de rappeler que ces espèces couvrent un territoire très important et que par conséquent l'évaluation par $km^2$ sous-évalue les scores d'effets cumulatifs prédits. Il faudrait peut-être considérer refaire cette évaluation en ne considérant que les habitats les plus importants pour ces espèces.
+- Outre les sites d'intérêt, l'intégrité des berges est la composante valorisée la plus affectée par les effets cumulatifs.
+-
+
+<br/>
+
+```{r metanetwork, fig.cap = "Réseau multiplex présentant la présence d'un effet des stresseurs individuels sur chaque composante valorisée considérées à l'évaluation des effets cumulatifs (*i.e.* liens colorés), les effets cumulatifs totaux sur chaque composante valorisée (*i.e.* taille des points des composantes valorisées) et l'effet moyen des stresseurs (*i.e.* taille des points des stresseurs).", out.width = '100%', fig.link = "./figures/figures-output/cumulative_effects_metanetwork.png"}
+knitr::include_graphics("./figures/figures-output/cumulative_effects_metanetwork.png")
+```
+
+<br/>
+
+```{r ceakm, fig.cap = "Contribution moyenne par $km^2$ des stresseurs aux effets cumulatifs des activités maritimes sur les composantes valorisées dans la zone d'étude", out.width = '100%', fig.link = "./figures/figures-output/cumulative_effects_regional_contribution.png"}
+knitr::include_graphics("./figures/figures-output/cumulative_effects_regional_contribution.png")
+```
+
+<br/>
+
 
 ### Régions administratives
 
@@ -54,34 +91,6 @@ knitr::include_graphics("./figures/figures-output/cumulative_effects_region_cea.
 
 ```{r regionadminpanel, fig.cap = "Contribution moyenne par $km^2$ des stresseurs aux effets cumulatifs des activités maritimes sur l'intégrité des berges, les habitats, les mammifères marins et les sites d’intérêt culturels, patrimoniaux et archéologiques dans les régions administratives du Québec convrant la zone d'étude", out.width = '100%', fig.link = "./figures/figures-output/cumulative_effects_region_cea_panel.png"}
 knitr::include_graphics("./figures/figures-output/cumulative_effects_region_cea_panel.png")
-```
-
-<br/>
-
-### Chemins d'effet
-
-```{r pathwayssetup, echo = FALSE}
-st <- read.csv("../data/data-metadata/metadata_stresseurs.csv")
-cv <- read.csv("../data/data-metadata/metadata_composantes_valorisees.csv")
-```
-
-L'évaluation des effets cumulatifs proposée permet d'explorer l'ensemble des combinaisons de stresseurs et de composantes valorisées incluses à l'analyse. Considérant les `r nrow(st)` catégories de stresseurs et les `r nrow(cv)` catégories de composantes valorisées, il s'agit de près de 2 000 paires possibles. Bien que nous ne pouvons explorer l'ensemble de ces combinaisons, la figure \@ref(fig:metanetwork) fournit une représentation visuelle de l'ensemble de ces combinaisons. 
-
-<br/>
-
-```{r metanetwork, fig.cap = "Réseau multiplex présentant la présence d'un effet des stresseurs individuels sur chaque composante valorisée considérées à l'évaluation des effets cumulatifs (*i.e.* liens colorés), les effets cumulatifs totaux sur chaque composante valorisée (*i.e.* taille des points des composantes valorisées) et l'effet moyen des stresseurs (*i.e.* taille des points des stresseurs).", out.width = '100%', fig.link = "./figures/figures-output/cumulative_effects_metanetwork.png"}
-knitr::include_graphics("./figures/figures-output/cumulative_effects_metanetwork.png")
-```
-
-<br/>
-
-
-### Contribution régionale
-
-<br/>
-
-```{r ceakm, fig.cap = "Contribution moyenne par $km^2$ des stresseurs aux effets cumulatifs des activités maritimes sur les composantes valorisées dans la zone d'étude", out.width = '100%', fig.link = "./figures/figures-output/cumulative_effects_regional_contribution.png"}
-knitr::include_graphics("./figures/figures-output/cumulative_effects_regional_contribution.png")
 ```
 
 <br/>
