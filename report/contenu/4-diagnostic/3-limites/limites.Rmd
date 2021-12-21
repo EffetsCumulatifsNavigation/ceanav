@@ -1,1 +1,43 @@
-## Limites et lacunes
+## Limites de l'évaluation
+
+Les résultats et les conclusions de l’évaluation des effets cumulatifs des activités maritimes sont caractérisés par certaines limites. Nous listons certaines des limites les plus importantes. Notez également que, lorsque pertinent, nous avons déjà indiqué certaines lacunes et perspectives liées à la description des stresseurs environnementaux et des composantes valorisées directement dans le portrait de la zone à l'étude. Veuillez vous référé à cette section pour plus de détails.
+
+- La limite la plus importante de l'étude est l'utilisation d'un indice relatif des effets des stresseurs environnementaux sur les composantes valorisées. Bien qu'une telle approche offre des avantages clairs comme la possibilité d'inclure divers sources de données et d'adopter une approche holistique pour l'évaluation des effets cumulatifs, elle ne permet de mettre en évidence un effet absolu des stresseurs environnementaux sur les composantes valorisées, *i.e.* une variation de l'état d'une composante valorisées face aux effets cumulatifs des activités maritimes. Les résultats doivent ainsi être interprété comme une probabilité de risque des activités maritimes sur les composantes valorisées considérées.
+
+- La portée de l'étude constitue la deuxième limite la plus importante de l'évaluation : *l'évaluation est entièrement contrainte 1) par les stresseurs environnementaux et 2) par les composantes valorisées considérées*. Premièrement, il s'agit d'une évaluation sectorielle des effets cumulatifs concentrée sur les activités maritimes liées à la navigation. Or, une évaluation régionale des effets cumulatifs aurait cherché à considérer l'ensemble des stresseurs environnementaux affectant la zone d'étude. En plus des activités maritimes, la zone d'étude est soumise à une variété de stresseurs environnementaux tels les changements climatiques et les stresseurs d'origine terrestre [*e.g.* @beauchesne2020]. C'est la raison pour laquelle nous n'avons pu inclure la composante valorisée visant la qualité de l'eau, qui demeure une préoccupation justifiée des communautés locales; c'est également pourquoi l'Agence d'évaluation d'impacts du Canada a récemment autorisé une [évaluation régionale de la région du fleuve Saint-Laurent](https://iaac-aeic.gc.ca/050/evaluations/document/140637?culture=fr-CA) à la [demande de la Nation Mohawk de Kahnawà:ke](https://iaac-aeic.gc.ca/050/documents/p80913/135682E.pdf). Nous croyons que l'évaluation proposée par ce projet pilote pourra supporter et informer cette évaluation régionale. Nous croyons toutefois qu'elle ne peut être considérée comme une évaluation exhaustive des effets cumulatifs exhaustive permettant d'adresser l'ensemble des préoccupations énoncées par les communautés locales et telle que demandée par la Nation Mohawk de Kahnawà:ke.
+
+- Deuxièmement, les composantes valorisées sélectionnées représentent une série de préoccupations identifiées par des experts et des communautés locales lors des activités de concertation à l'origine de ce projet pilote. Ces préoccupations sont valides et importantes, mais elles ne peuvent être considérées représentatives de l'entièreté des composantes environnementales, sociales, culturelles, patrimoniales et archéologiques d'importance au sein de la zone d'étude. Il est donc important d'interprété les résultats de l'évaluation uniquement dans le contexte des composantes valorisées identifiées. Par exemple, une intensité inférieure des activités maritimes au sein du secteur maritime ne signifie pas l'absence d'effets des activités maritimes dans ce secteur. Ces résultats seraient différents si des composantes valorisées différentes étaient considérées. Par exemple, si l'évaluation s'était concentrée uniquement sur les mammifères marins, les effets cumulatifs n'auraient été prédits que dans le secteur maritime. Cette observation n'aurait en rien signifié que les activités maritimes n'exercent aucune pression environnementale ou sociales au sein du secteur fluvial.
+
+- En plus de la portée, l'évaluation est limitée par la disponibilité et accessibilité des données. 
+
+
+
+
+
+- L'évaluation proposée est régionale et explicitement spatiale; elle nécessitait ainsi des données spatialisées à l'échelle régionale ou qui pouvaient être rattachée à des éléments de la zone d'étude afin d'être incluses à l'évaluation. L'utilisation de données ponctuelles ne convrant qu'une portion du territoire était ainsi difficile. Ajouter des considération d'attachement territorial ne pouvant être explicitement spatialisé est également impossible.
+
+
+
+- Portée de l'étude
+  - Étude sectorielle
+  - Composantes valorisées sélectionnées
+
+- Recadrer sur les données
+  - Disponibilité et accessibilité aux données
+
+- Questions appropriées à l'échelle de l'étude
+
+- Échelle temporelle
+
+- Effets relatifs
+
+- Résolution (ok maritime, moins fluvial)
+
+- Évaluation de la vulnérabilité
+
+
+Dans le cadre de cette étude pilote, nous nous concentrerons sur une évaluation contemporaine des effets cumulatifs, c.-à-d. au cours des 5 à 10 dernières années selon les données disponibles; les données historiques permettant l’identification d’états de référence ne seront ainsi pas utilisées, à moins qu’un besoin particulier soit identifié. Bien que pertinent, le contexte de l’étude et la disponibilité des données ne nous permettra pas d’évaluer un état de référence pour l’ensemble des facteurs de stress et des composantes valorisées caractérisés, limitant ainsi les conclusions temporelles que nous pourrions en tirer.
+
+La disponibilité des données guidera le travail que nous pouvons accomplir pour ce projet pilote. Le contexte de l’étude ne permet pas à l’équipe de l’Université Laval d’effectuer une collecte de données nouvelles. Le portrait établi représentera ainsi une veille des connaissances actuelles permettant de caractériser les facteurs de stress des activités maritimes ainsi que les composantes valorisées identifiées. Advenant la disponibilité de nouvelles données en cours de projet, l’équipe de l’Université Laval pourra les considérer, à condition que leur inclusion ne les force pas à repousser le dépôt des livrables du contrat.
+
+Finalement, plusieurs autres activités humaines peuvent être à la source de pressions environnementales au sein de la zone d’étude. Par exemple, la qualité de l’eau est assurément influencée par les activités en milieu terrestre et le lessivage des terres agricoles par les embouchures de rivières. Par contre, la présente étude ne se concentrera que sur les facteurs de stress issus des activités maritimes.
