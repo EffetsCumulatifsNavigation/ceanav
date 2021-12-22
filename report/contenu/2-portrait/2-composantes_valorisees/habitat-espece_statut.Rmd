@@ -18,7 +18,7 @@ tab %>%
 <br/>
 
 
-Ces sites d'importances pour les espèces à statut ont été intégrés à la grille d'étude en présence-absence par statut afin d'identifier les sites qui abritent des espèces faunique ou floristiques susceptibles, vulnérables ou menacées. Les données intégrées ne discriminent ainsi par les différentes espèces considérées; elles fournissent plutôt une délimitation spatiale des zones fréquentées par des espèces à statut. Il en résulte 6 catégories distinctes de sites.
+Ces sites d'importances pour les espèces à statut ont été intégrés à la grille d'étude en présence-absence par statut afin d'identifier les sites qui abritent des espèces fauniques ou floristiques susceptibles, vulnérables ou menacées. Les données intégrées ne discriminent ainsi par les différentes espèces considérées; elles fournissent plutôt une délimitation spatiale des zones fréquentées par des espèces à statut. Il en résulte 6 catégories distinctes de sites.
 
 <br>
 

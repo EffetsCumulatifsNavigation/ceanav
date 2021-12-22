@@ -1,6 +1,6 @@
 ## Constats généraux
 
-Nous présentons au sein de cette section les constats généraux issus de l'évaluation des effets cumulatifs en points de forme. Des constats additionnels pourraient être faits en explorant davangate des résultats obtenus; ces derniers ne devraient ainsi pas être interprétés comme une interprétation exhaustive de l'ensemble des résultats obtenus. Ils représentent plutôt notre premier regard sur les résultats et ce que nous considérons être des faits saillants à l'échelle de la zone d'étude entière.
+Nous présentons au sein de cette section les constats généraux issus de l'évaluation des effets cumulatifs en points de forme. Des constats additionnels pourraient être faits en explorant davantage des résultats obtenus; ces derniers ne devraient ainsi pas être interprétés comme une interprétation exhaustive de l'ensemble des résultats obtenus. Ils représentent plutôt notre premier regard sur les résultats et ce que nous considérons être des faits saillants à l'échelle de la zone d'étude entière.
 
 - **Distribution des stresseurs environnementaux issus des activités maritime**
   - L'ensemble de la zone d'étude est exposées aux stresseurs environnementaux;
@@ -20,7 +20,7 @@ Nous présentons au sein de cette section les constats généraux issus de l'év
 - **Distribution des effets cumulatifs**
   - L'entièreté de la zone d'étude est affectée par les effets cumulatifs des activités maritimes;
   - Les effets cumulatifs sont particulièrement intenses et concentrés au sein du secteur fluvial; les effets y sont plus intenses dans la région de Québec et du sud de l'Île d'Orléans, du lac Saint-Pierre et du chenal de navigation entre Trois-Rivières et Montréal;
-  - Les effets cumulatifs sont plus diffus au sein du secteur maritime; les effets les plus intenses sont situés à l'embouchure de la rivières Saguenay.
+  - Les effets cumulatifs sont plus diffus au sein du secteur maritime; les effets les plus intenses sont situés à l'embouchure de la rivière Saguenay.
 
   <br/>
 
@@ -35,10 +35,10 @@ Nous présentons au sein de cette section les constats généraux issus de l'év
   - Les sites d'intérêt culturels, patrimoniaux et archéologiques sont les plus exposés aux effets des activités maritimes. Bien que ce résultat soit attendu considérant leur vulnérabilité élevée, ce constat demeure important et témoigne du chevauchement important entre les sites d'intérêt pour les Premières Nations et les activités maritimes dans la zone d'étude;
   - Les sites d'intérêt des Premières Nations situés au sein du secteur fluvial sont davantage exposés aux effets cumulatifs de la navigation dû à la concentration des effets au sein de ce milieu;
   - L'intégrité des berges au sein du secteur fluvial est particulièrement affectée par la navigation, et ce particulièrement au sein du lac Saint-Pierre;
-  - Bien que les mammifères marins semblent moins affectée que les autres composantes valorisées par les effets cumulatifs des activités maritimes, il est important de mentionner que les espèces considérées ont une répartition diffuse au sein de l'estuaire, ce qui a pour effet de diminuer les effets cumulatifs totaux. Les effets cumulatifs sont tout de même importants pour les mammifères marins à l'embouchure de la rivière Saguenay.
+  - Bien que les mammifères marins semblent moins affectés que les autres composantes valorisées par les effets cumulatifs des activités maritimes, il est important de mentionner que les espèces considérées ont une répartition diffuse au sein de l'estuaire, ce qui a pour effet de diminuer les effets cumulatifs totaux. Les effets cumulatifs sont tout de même importants pour les mammifères marins à l'embouchure de la rivière Saguenay.
 
   <br/>
 
 - **Régions les plus affectées**
-  - Les régions administratives du secteur fluvial sont les plus affectées par les effects cumulatifs des activités maritimes, un constat particulièrement important pour la Montérégie;
-  - La Côte Nord et la région administrative la plus affectée au sein du secteur maritime.
+  - Les régions administratives du secteur fluvial sont les plus affectées par les effets cumulatifs des activités maritimes, un constat particulièrement important pour la Montérégie;
+  - La Côte Nord est la région administrative la plus affectée au sein du secteur maritime.

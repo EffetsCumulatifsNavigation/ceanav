@@ -54,9 +54,9 @@ démersales, non-destructives, prises accessoires faibles (DNL),
 pélagiques, prises accessoires élevées (PHB),
 pélagiques, prises accessoires faibles (PLB).
 
-Les engins peuvent également être catégorisées selon leur mobilité.
+Les engins peuvent également être catégorisés selon leur mobilité.
 Des engins fixes tels les casiers sont laissés sur place et
-ont un effets plus localisé. Les engins mobiles comme les chaluts peuvent quant
+ont un effet plus localisé. Les engins mobiles comme les chaluts peuvent quant
 à eux être tractés sur plusieurs kilomètres lors des activités de pêche.
 Nous avons utilisé le type de mobilité pour générer une zone d'effets des activités
 de pêche. Cette approche permet de considérer l'incertitude potentielle associée
@@ -89,7 +89,7 @@ tab %>%
 <br/>
 
 Pour caractériser l'intensité des activités de pêche ($I_{peche}$), nous avons
-utisés un indice de biomasse totale capturée [@beauchesne2020].
+utilisé un indice de biomasse totale capturée [@beauchesne2020].
 Nous avons multiplié la biomasse totale
 capturée pendant la période totale visée (`r meta$dataDescription$temporal$start` - `r meta$dataDescription$temporal$end`)
 au sein de chaque cellule $j$ de la grille d'étude par la proportion de la zone
@@ -106,6 +106,6 @@ Cette formule calcule une évaluation de l'intensité de pêche en unité de bio
 soit en kilogrammes. Puisque nous avons calculé l'intensité au sein de cellules de 1 $km^2$,
 les unités de cette formule sont en $kg * km^{-2}$. Cet indicateur d'intensité
 distribue la biomasse capturée au sein de chaque cellule de la grille d'étude
-et évalue l'intensité de la pêche en terme de biomasse extraite.
+et évalue l'intensité de la pêche en termes de biomasse extraite.
 
 <br>

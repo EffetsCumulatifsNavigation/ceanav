@@ -16,7 +16,7 @@ tbl <- tab %>%
   knitr::kable(
     col.names = c("Stresseurs environnementaux","1","2","3","4","5","6","7","8","9"),
     row.names = FALSE,
-    caption = "Scores de vulnérablité relative des habitats d'importance pour les espèces face aux stresseurs environnementaux."
+    caption = "Scores de vulnérabilité relative des habitats d'importance pour les espèces face aux stresseurs environnementaux."
   )  %>%
   kableExtra::kable_styling(font_size = 11) # %>%
   # kableExtra::row_spec(0, angle = -45)

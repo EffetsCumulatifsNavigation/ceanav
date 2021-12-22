@@ -8,7 +8,7 @@ La composante valorisée d’intégrité des berges a été caractérisée à pa
 
 - Active ou vive (IE = 2) : Érosion apparente ou couvert végétal < 25%
 - Semi-végétalisée (IE = 1) : Érosion apparente ou couvert végétal de 25 à 75%
-- Stable ou végétalisé (IE = 0) : Aucun signe d'érosion pparent, et couvert végétal > 75% ou présence d'une structure de protection
+- Stable ou végétalisé (IE = 0) : Aucun signe d'érosion apparent, et couvert végétal > 75% ou présence d'une structure de protection
 
 Pour notre étude, nous considérons uniquement les berges qui ont des signes apparents d’érosion, soit les berges avec un IE > 0. Nous distinguons également les berges naturelles des berges artificielles; cette séparation est faite afin de distinguer les effets de la navigation sur des berges naturelles ayant une valeur écologique supérieure aux berges artificialisées. La combinaison de l’état des berges telle que décrite dans @bernier2020 et @bernier2021 et de l’état de dégradation des artificialités résulte ainsi en quatre catégories de berges susceptibles aux effets de l’érosion (Tableau \@ref(tab:bergeCat)).
 
