@@ -1,47 +1,57 @@
 # Perspectives
 
-#### Description des habitats fauniques et floristiques {-}
+L'évaluation proposée au sein de ce rapport est un projet pilote qui visait à fournir une première évaluation des effets cumulatifs des activités maritimes. En tant que tel, il est attendu que cette évaluation constitue une première étape de l'établissement d'un processus d'évaluation durable et cyclique. Nous suggérons ainsi au sein de cette section quelques perspectives issues de ce projet pilote et de notre perspective sur l'évaluation des effets cumulatifs qui pourraient être intéressantes afin d'améliorer et bonifier l'évaluation proposée au sein de ce rapport.
+
+## Sites d'intérêt culturels, patrimoniaux et archéologiques
+
+Nous débutons la section perspective en discutant brièvement des sites d'intérêt culturels, patrimoniaux et archéologiques. L'évaluation des effets cumulatifs proposée permet de déterminer quel sites sont les plus exposés aux effets des actibités maritimes. En parallèle de nos travaux, l'équipe de Roxanne Lavoie de l'Université Laval travaille à effectuer une analyse qualitative des effets cumulatifs sur des composantes valorisées socio-culturelles pour les Premières Nations. L'évaluation des effets cumulatifs sur des dimensions d'ordre sociales et culturelles demeure toutefois très peu explorée au sein de la littérature, et ces deux projets représentent une opportunité unique de combiner des travaux provenant de sciences naturelles et sociales en vue d'améliorer nos approces d'évaluation des effets cumulatifs. Il serait ainsi pertinent de combiner -- plutôt que de simplement comparer et agencer -- les résultats des deux projets. Un tel projet serait à la frontière de la recherche présentement effectuée en évaluation des effets cumulatifs et pourrait influencer comment les évaluations sont effectuées dans le futur.
+
+## Caractérisation des habitats
 
 La caractérisation des habitats utilisés pour l'évaluation des effets cumulatifs présentée dans ce projet pilote présente en réalité deux types d'habitats, soit des habitats pouvant être perçus comme des écosystèmes uniques, et des habitats représentant des milieux d'importance pour des espèces. Les milieux d'importance pour les espèces ne représentent pas un écosystème, mais plutôt des lieux connus pour leur importance pour certaines espèces ou groupes d'espèces. Ces sites se retrouvent évidemment au sein d'habitats tels des milieux humides et des herbiers aquatiques. En tant que tel, l'identification de ces sites uniques, précaires ou vulnérables pourraient être utilisés afin de moduler l'évaluation de la vulnérabilité des différents habitats selon leur importance pour des espèces. Ainsi, un milieu humide abritant des espèces en péril pourrait voir sa vulnérabilité aux effets des sources de stress augmenter comparativement à un milieu humide qui n'abrite aucune espèce en péril connue. Une description exhaustive des habitats n'a toutefois pu être obtenue pour l'entièreté la zone d'étude. Par conséquent, les habitats d'importance pour les espèces ont été retenus en tant qu'habitats distincts plutôt que comme critère permettant de moduler la vulnérabilité des habitats. Une mise à jour de l'évaluation des effets cumulatifs pourrait avoir pour objectif une caractérisation exhaustive des habitats et l'ajout de critères visant à évaluer leur vulnérabilité permettant de considérer les sites connus pour leur importance écologique.
 
-#### Pêches commerciales dans le Saint-Laurent fluvial {-}
+
+<!--
+## Vulnérabilité des habitats en milieux dulcicoles {-}
+
+L'évaluation de la vulnérabilité des habitats aux stresseurs environnementaux se base sur des exercices de caractérisation de la vulnérabilité d'habitats aux stresseurs en milieux marins. Un exercice similaire serait pertinent afin de valider la correspondance entre la vulnérabilité des habitats marins et des habitats dulcicoles.
+-->
 
 
-#### Effets indirects {-}
+## Données
+
+L'accès et la disponibilité des données constitue une limite de l'étude déjà citée; les données sont également une perspective majeure puisque de nouvelles données peuvent aisément être intégrées à la méthode d'évaluation des effets cumulatifs proposée. En cours de projet, certaines données pertinentes n'ont pu être intégrées pour une variété de raison. Nous présentons ici quelques exemples de données qui devraient, à notre avis, être incluses à une seconde phase de ce projet pilote. Cette liste ne devrait toutefois pas être considérée comme exhaustive.
 
 
-#### Vulnérabilité des habitats {-}
+#### Projet résilience côtière {-}
 
-
-#### Équivalences vulnérabilité des composantes valorisées {-}
-
+Un exercice de caractérisation des berges du secteur maritime similaire à celui utilisé pour le secteur fluvial [@bernier2020; @bernier2021] a récemment été complété par l'équipe de Pascal Bernatchez à l’Université du Québec à Rimouski. Ce projet de grande envergure, intitulé [Projet Résilience Côtière](https://ldgizc.uqar.ca/Web/projets/projet-resilience-cotiere), présente une caractérisation de l'intégrité des berges, une caractérisation des habitats côtiers et de différents types d'écosystèmes côtiers, et des sites d'importance pour les usages côtiers tels les activités récréatives, des sites à haute valeur socioculturelle, des sites d'intérêt écologique et des sites patrimoniaux reconnus. Lorsque rendues disponibles, ces données pourraient être utilisées afin de bonifier la caractérisation de l'intégrité des berges, des habitats et des sites d'intérêts culturels, patrimoniaux et archéologiques.
 
 #### Bruit maritime {-}
 
-https://soundscape-atlas.uqar.ca/
+Les bruit maritime reconnu comme un stresseur issu de la navigation à considérer pour convenablement évaluer les effets des activités maritimes sur les mammifères marins. Une caractérisation du bruit maritime est disponible à travers l'[Atlas du paysage sonore marin](https://soundscape-atlas.uqar.ca/). Ces données sont toutefois inacessibles à travers l'outil interactif et nous n'avons pu obtenir ces données pour l'évaluation. Si ces données sont rendues accessibles, elles devraient être incluent à une mise à jour de l'évaluation des effets cumulatifs des activités maritimes.
 
 
 #### Herbiers aquatiques {-}
 
-> Pour les données récoltées cet été, elles sont encore en analyse et le seront probablement encore pour quelques mois. C'est une bonne idée d'indiquer que le MFFP et le MELCC dans le cadre des projets d'acquisition des connaissances pour le CEGRIM sont à faire une mise à jour des herbiers aquatiques dans divers secteurs du système Saint-Laurent. L'été dernier, les lacs Saint-François, Saint-Louis et Saint-Pierre ont été visités en plus de certains sites dans le tronçon Mtl-Sorel et 3-Rivières-Île d'Orléans.
-
-#### Projet résilience côtière
-
-À intégrer et mettre en perspectives
+Les herbiers aquatiques sont des milieux importants pour plusieurs espèces et le Ministère des Forêts, de la Faune et des Parcs (MFFP) et le Ministère de l'nvironnement et de la Lutte contre les changements climatiques (MELCC), dans le cadre des projets d'acquisition des connaissances pour le Centre d'expertise en gestion des risques d'incidents maritimes (CEGRIM), travaillent sur une mise à jour de la caractérisation des herbiers aquatiques dans divers secteurs de la zone d'étude. Lorsque complétée, cette mise à jour pourrait être intégrée à la caractérisation des habitats.
 
 
-#### Pêche commerciale secteur fluvial
+#### Pêche commerciale secteur fluvial {-}
 
-Données à intégrer éventuellement, travail en cours
+Une pêche commerciale est effectuée au sein du secteur fluvial de la zone d'étude. Les données disponibles n'ont toutefois pu être obtenue puisque le Ministère de l'Agriculture, des Pêcheries et de l'Alimentation du Québec et le (MAPAQ) et le Ministère des Forêts, de la Faune et des Parcs (MFFP) travaillent actuellement à la production d'un atlas cartographique des zones de pêches qui devrait être publié en 2022. Lorsque disponible, les données de cet atlas devraient être intérgrées à l'évaluation des effets cumulatifs afin de bonifier la caractérisation des activités de pêches commerciales dans la zone d'étude.
 
-#### Processus repropductible {-}
 
-Prendre conclusion de thèse avec le processus adaptatif et le fait que c'est une approche modulaire.
+## Scénarios de gestion
 
-#### Outil interactif {-}
+Dans un futur rapproché, il est attendu que le pressions environnementales d'origines anthropique et naturelle continueront de s'intensifier. Considérés collectivement, les pressions croissantes suggèrent que nous serons bientôt confrontés à de nouveaux enjeux environnementaux complexes. Des approches prédictives permettant de tester des scénarios de gestion deviennent alors un atout majeur [@dube2003; @jones2016; @hodgson2019]. La méthode d'évaluation des effets cumulatifs utilisée pour ce projet pilote fournit une telle approche prédictive qui permet d’évaluer les risques associés aux effets de plusieurs stresseurs environnementaux. Des prédictions de changements environnementaux pourraient ainsi être incorporés à l'évaluation des effets cumulatifs. Dans le cadre d’évaluations d'effets cumulatifs, il serait ainsi possible d’explorer une gamme de scénarios visant le développement de nouveaux projets économiques au sein de la zone d'étude, dont l'accroissement du traffic maritime, et déterminer les changements pressentis au niveau des effets cumulatifs sur les composantes valorisées d'intérêt et d’offrir des recommandations pour les gestionnaires. Tester de tels scénarios permettrait d'adopter une approche analytique afin d'identifier des mesures de gestion et d'atténuation proactives; ces dernières constituent les étapes suivantes au sein de la démarche d'évaluation des effets cumulatifs présentée en introduction du présent rapport.
 
-Développement d'un outil permettant d'explorer les éléments du portrait et les détails de l'évaluation des effets cumulatifs.
 
-#### Prédiction des effets cumulatifs {-}
+## Opérationer les évaluations des effets cumulatifs
 
-Discuter du potentiel de tester des scénarios d'effets cumulatifs des activités maritimes selon des scénarios de développement et d'utilisation des ressources dans la zone d'étude. Ou même des scénarios de protection.
+L'évaluation des effets cumualatifs repose sur une quantité importante de données; cette réalité est fréquemment citée en tant que limitation majeure pour l'évaluation des effets cumulatifs [*e.g.* @jones2016; @hodgson2019]. Les données ou connaissances nécessaires sont parfois indisponibles, inaccessibles, ou inexistantes. Même lorsque les données sont disponibles, il peut être particulièrement difficile d’assembler une base de données permettant d'effectuer une évaluation à large échelle. Ces besoins croissants en données mettent en évidence le besoin de valoriser les connaissances acquises, de les structurer de façon interopérable -- *i.e.* faciliter l’union de bases de données distinctes -- de les rendre disponibles pour tous et de se doter d’infrastructures maximisant nos capacités de gestion adaptative [@reichman2011; @poisot2013; @wilkinson2016; @williams2020]. C'est avec ces réalités en tête que nous avons construit ce projet pilote à partir d'une approche transparente et reproductible permettant l'intégration aisée de nouvelles données, d'ajuster certaines portions des analyses et de regénérer l'ensemble des analyses, des figures et des tableaux du rapport. Une seconde évaluation suite à ce projet pilote pourra ainsi construire directement à partir du travail déjà effectué. Ultimement, il pourrait être envisageable de facilement mettre à jour une évaluation dès que de nouvelles connaissances sont disponibles grâce à des outils et infrastructures permettant de reproduire le travail de façon efficace. Ce travail, qui relève davantage des sciences des données -- *data science* -- devrait être valorisé et poursuivi si une seconde phase est financée pour ce projet pilote. Adopter une telle approche contribuerait directement à la dernières étape de la démarche d'évaluation des effets cumulatifs présentée en introduction du présent rapport, *i.e.* assurer un suivi et une gestion adaptative.
+
+
+## Exploration interactive des évaluations d'effets cumulatifs
+
+Tel que mentionné lors de la présentation des résultats de l'évaluation, l'interprétation a été limitée à de grands constats afin de simplifier les messages clés issus de ce projet pilote. Il est ainsi clair que plusieurs préoccupations des communautés locales, experts et Premières Nations n'ont pu être explorées en détails. La méthode permet toutefois d'explorer l'ensemble des combinaisons possibles de stresseurs environnementaux et de composantes valorisées. Afin de permettre ce type d'exploration, il serait pertinent de développer un outil interactif web permettant à un utilisateur de sélectionner certaines composantes valorisées et certains stresseurs afin d'explorer les détails des résultats de l'évaluation des effets cumulatifs. À la jonction entre les sciences de données et la programmation web, ce type d'outil permettrait une plus grande flexibilité pour l'exploration des résultats, mais également une meilleure expérience utilisateur. Nous avons déjà construit ce type d'outil pour les stresseurs au sein de l'estuaire et du golfe du Saint-Laurent [@beauchesne2020] : [https://david-beauchesne.shinyapps.io/edriversapp/](https://david-beauchesne.shinyapps.io/edriversapp/). Cet outil pourrait être bonifié afin d'y incorporer les composantes valorisées et l'évaluation des effets cumulatifs.
