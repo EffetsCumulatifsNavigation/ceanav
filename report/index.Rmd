@@ -6,7 +6,8 @@ date: "`r Sys.Date()`"
 knit: "bookdown::render_book"
 documentclass: scrbook
 bibliography: [TC.bib]
-biblio-style: apalike
+# biblio-style: apalike
+csl: frontiers.csl
 link-citations: yes
 colorlinks: yes
 lot: yes

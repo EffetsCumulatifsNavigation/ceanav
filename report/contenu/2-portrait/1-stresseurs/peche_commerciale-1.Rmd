@@ -46,7 +46,7 @@ et des palangres. Chaque engin de pêche peut engendrer des effets différents s
 écosystèmes où les activités de pêche se déroulent. Par exemple, la pêche à l'aide
 de casiers a des effets très différents que la pêche au chalut. Nous avons ainsi
 divisé les activités de pêche en fonction de leurs effets environnementaux selon
-les catégories proposées par @halpern2008a et reprises par @beauchesne2020 pour
+les catégories proposées par @halpern2008aa et reprises par @beauchesne2020 pour
 l'estuaire et le golfe du Saint-Laurent (Tableau \@ref(tab:pecheEngin)):
 démersales, destructives, prises accessoires élevées (DD),
 démersales, non-destructives, prises accessoires élevées (DNH),
