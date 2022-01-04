@@ -17,7 +17,8 @@ pipeline <- function(
   pipeline_analysis = FALSE,
   pipeline_figures = FALSE,
   pipeline_fiches = FALSE,
-  pipeline_report = TRUE
+  pipeline_report = TRUE,
+  pipeline_pkgsite = FALSE
 ) {
 
 
@@ -263,5 +264,10 @@ pipeline <- function(
     unlink("../Rapport/docs/", recursive = TRUE)
     file.copy("./report/docs", "../Rapport/", recursive = TRUE)
     file.copy("./report/figures", "../Rapport/", recursive = TRUE)
+  }
+
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~
+  if (pipeline_pkgsite) {
+    pkgdown::build_site()
   }
 }

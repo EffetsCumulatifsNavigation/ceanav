@@ -76,3 +76,4 @@ figures/figures-output/*.png
 clean/
 report/contenu/notes/
 literature/
+docs

@@ -1,0 +1,9 @@
+# pkgdown::build_site()
+destination: docs
+
+development:
+  mode: auto
+
+template:
+  params:
+    bootswatch: flatly
