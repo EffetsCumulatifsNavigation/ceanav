@@ -25,6 +25,7 @@ Imports:
     exactextractr,
     fs,
     glue,
+    hexSticker,
     magick,
     raster,
     sp,

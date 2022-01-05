@@ -25,4 +25,7 @@ fig_logo <- function() {
                       h_color = "#0f3c4f",
                       p_color = "#0f3c4f",
                       filename="figures/logo.png")
+
+  if (!file.exists("man/figures/")) dir.create("man/figures/")
+  file.copy("figures/logo.png", "man/figures/logo.png", overwrite = TRUE)
 }
