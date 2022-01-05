@@ -18,7 +18,8 @@ pipeline <- function(
   pipeline_figures = FALSE,
   pipeline_fiches = FALSE,
   pipeline_report = TRUE,
-  pipeline_pkgsite = FALSE
+  pipeline_pkgsite = FALSE,
+  pipeline_logo = FALSE,
 ) {
 
 
@@ -269,5 +270,10 @@ pipeline <- function(
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~
   if (pipeline_pkgsite) {
     pkgdown::build_site()
+  }
+
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~
+  if (pipeline_logo) {
+    fig_logo()
   }
 }
