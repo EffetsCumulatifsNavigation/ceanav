@@ -3,6 +3,8 @@
 
 # ceanav
 
+[![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#preliminary)
+
 Ce dépôt contient le compendium de recherche pour le projet pilote
 d’évaluation des effets cumulatifs des activités maritimes sur le
 Saint-Laurent et la rivière Saguenay. Il contient l’ensemble du code
