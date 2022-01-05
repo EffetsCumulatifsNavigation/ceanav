@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# ceanav
+# ceanav <a href='https://github.com/EffetsCumulatifsNavigation/ceanav'><img src='figures/logo.png' align="right" height="139" /></a>
 
 [![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#preliminary)
 ![](https://img.shields.io/badge/status-preliminary-blue.svg)
@@ -124,5 +124,5 @@ pipeline()
 ```
 
 :warning: ce compendium de recherche n’est pas entièrement reproductible
-dû à des restrictions au partage de certaines des données
+dû à des restriction imposées au partage de certaines des données
 utilisées pour l’évaluation.
