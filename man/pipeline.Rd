@@ -12,7 +12,8 @@ pipeline(
   pipeline_analysis = FALSE,
   pipeline_figures = FALSE,
   pipeline_fiches = FALSE,
-  pipeline_report = TRUE
+  pipeline_report = TRUE,
+  pipeline_pkgsite = FALSE
 )
 }
 \description{

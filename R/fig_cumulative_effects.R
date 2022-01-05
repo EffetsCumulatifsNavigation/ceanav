@@ -70,4 +70,12 @@ fig_cumulative_effects <- function() {
 
   img <- image_append(c(l1,l2), stack = TRUE)
   magick::image_write(img, path = "./figures/figures-output/cumulative_effects_panel.png", format = "png")
+
+  # -----
+  # Simple plot
+  png(glue('./figures/figures-output/cumulative_effects_simple.png'), res = 300, width = 100, height = 70, units = "mm", pointsize = 12)
+  plot_simple(dat[, "cumulative_effects"])
+  dev.off()
+
+
 }
