@@ -124,5 +124,5 @@ pipeline()
 ```
 
 :warning: ce compendium de recherche n’est pas entièrement reproductible
-dû à des restriction imposées au partage de certaines des données
+dû à des restrictions au partage de certaines des données
 utilisées pour l’évaluation.
