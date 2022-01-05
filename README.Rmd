@@ -39,6 +39,7 @@ knitr::opts_chunk$set(collapse  = TRUE,
 # ceanav
 
 [![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#preliminary)
+![](https://img.shields.io/badge/status-preliminary-blue.svg)
 
 Ce dépôt contient le compendium de recherche pour le projet pilote d'évaluation des effets cumulatifs des activités maritimes sur le Saint-Laurent et la rivière Saguenay. Il contient l'ensemble du code nécessaire pour importer, formater et intégrer les données, et pour faire les analyses, les figures et le rapport d'étude.
 

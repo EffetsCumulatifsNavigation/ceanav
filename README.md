@@ -4,6 +4,7 @@
 # ceanav
 
 [![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#preliminary)
+![](https://img.shields.io/badge/status-preliminary-blue.svg)
 
 Ce dépôt contient le compendium de recherche pour le projet pilote
 d’évaluation des effets cumulatifs des activités maritimes sur le
