@@ -40,33 +40,14 @@ où $D^j_{i,k}$ est la valeur du stresseur $i$ pour le critère $k$ au sein de l
 <!-- TODO: Validation par des experts -->
 <!-- Il demeure toutefois important de mentionner que les valeurs de vulnérabilité constituant ces matrices diffèrent généralement d'une région à l'autre. À cet égard, nous avons fait réviser les valeurs de vulnérabilités utilisées par des experts. -->
 
-Certaines modifications ont été apportées aux scores de vulnérabilité rapportées par @kappel2012. Premièrement, les valeurs de vulnérabilité attribuées aux milieux humides ont été modifiées afin de capturer convenablement la finesse du jeu de données disponible pour notre étude. En effet, les milieux humides caractérisés témoignent de la nature étagée des milieux humides, avec les milieux humides en eau peu profonde, suivie des marais, puis des marécages, diminuant ainsi progressivement l'exposition potentielle de ces milieux aux sources de stress d'origine marine. Nous avons ainsi diminué la vulnérabilité des milieux humides proportionnellement par un facteur de 5% pour les marais et de 10% pour les marécages face à l'ensemble des sources de stress. Nous avons conservé l'évaluation de @kappel2012 pour la catégorie d'habitat *milieu humide* contenant des milieux humides dont le type est inconnu par principe de précaution. Deuxièmement, les déversements accidentels ont été catégorisés afin de différencier les déversements d'hydrocarbures des autres types de déversements. Nous diminuons ainsi les valeurs de vulnérabilité aux déversements par un facteur de 10% pour les déversements de type *autres*. Tout comme pour les milieux humides, nous avons conservé la valeur de vulnérabilité intacte pour les déversements dont le contenu est inconnu par principe de précaution. La matrice de vulnérabilité résultante peut être consultée au Tableau \@ref(tab:habitatvuln).
+Certaines modifications ont été apportées aux scores de vulnérabilité rapportées par @kappel2012. Premièrement, les valeurs de vulnérabilité attribuées aux milieux humides ont été modifiées afin de capturer convenablement la finesse du jeu de données disponible pour notre étude. En effet, les milieux humides caractérisés témoignent de la nature étagée des milieux humides, avec les milieux humides en eau peu profonde, suivie des marais, puis des marécages, diminuant ainsi progressivement l'exposition potentielle de ces milieux aux sources de stress d'origine marine. Nous avons ainsi diminué la vulnérabilité des milieux humides proportionnellement par un facteur de 5% pour les marais et de 10% pour les marécages face à l'ensemble des sources de stress. Nous avons conservé l'évaluation de @kappel2012 pour la catégorie d'habitat *milieu humide* contenant des milieux humides dont le type est inconnu par principe de précaution. Deuxièmement, les déversements accidentels ont été catégorisés afin de différencier les déversements d'hydrocarbures des autres types de déversements. Nous diminuons ainsi les valeurs de vulnérabilité aux déversements par un facteur de 10% pour les déversements de type *autres*. Tout comme pour les milieux humides, nous avons conservé la valeur de vulnérabilité intacte pour les déversements dont le contenu est inconnu par principe de précaution. La matrice de vulnérabilité résultante peut être consultée au Tableau \@ref(fig:habitatvuln).
 
 <br/>
 
-```{r habitatvuln}
-tab <- read.csv("../data/data-vulnerability/vulnerability_habitat.csv")
-dat <- as.matrix(tab[,2:ncol(tab)])
-pal <- colorRampPalette(viridis::viridis(100))
-cols <- pal(101)[((dat / 1)*100)+1]
-dat[1:length(dat)] <- cols
-
-
-tbl <- tab %>%
-  knitr::kable(
-    col.names = c("Stresseurs environnementaux","1","2","3","4","5","6","7","8","9","10","11","12"),
-    row.names = FALSE,
-    caption = "Scores de vulnérabilité relative des habitats face aux stresseurs environnementaux."
-  )  %>%
-  kableExtra::kable_styling(font_size = 11) # %>%
-  # kableExtra::row_spec(0, angle = -45)
-
-for(i in 1:ncol(dat)) {
-  tbl <- kableExtra::column_spec(tbl, i+1, color = "white", background = dat[, i])
-}
-
-tbl
+```{r habitatvuln, fig.cap = "Scores de vulnérabilité relative des habitats face aux stresseurs environnementaux.", fig.height = 6, fig.link = "./figures/figures-vulnerability/habitat.png"}
+knitr::include_graphics("./figures/figures-vulnerability/habitat.png")
 ```
+
 
 <br/>
 
@@ -110,33 +91,14 @@ tab %>%
 
 <br/>
 
-Les critères utilisés varient selon les types d'habitats évalués. La fréquence des stresseurs environnementaux a été utilisée pour l'ensemble des habitats d'importance pour les espèces. La vulnérabilité des frayères et des sites d'alevinage a considéré les critères de fréquence des stresseurs environnementaux et d'effets sur la reproduction et sur la population. La vulnérabilité des habitats d'importance pour les oiseaux marins a quant à elle été évaluée en  considérant les critères de fréquence des stresseurs et des effets sur les populations. Finalement, l'évaluation de la vulnérabilité des habitats d'importance pour les espèces à statut a été effectuée à partir des critères de fréquence des stresseurs environnementaux, des effets sur les populations et du statut des espèces. Le score de vulnérabilité final a été obtenu à partir de la somme des scores de chaque critère. Finalement, un score relatif a été évalué en normalisant les scores totaux par la valeur maximale de vulnérabilité observée par groupe d'habitat évaluée à partir de critères similaires. Les frayères et les sites d'alevinage constituaient le premier groupe, les oiseaux marins le second, et les espèces à statut le troisième. Les scores de vulnérabilité finaux sont disponibles au tableau \@ref(tab:speciesvuln) et les tableaux d'évaluation des critères individuels par catégorie d'habitat sont disponibles à l'Annexe 7.
+Les critères utilisés varient selon les types d'habitats évalués. La fréquence des stresseurs environnementaux a été utilisée pour l'ensemble des habitats d'importance pour les espèces. La vulnérabilité des frayères et des sites d'alevinage a considéré les critères de fréquence des stresseurs environnementaux et d'effets sur la reproduction et sur la population. La vulnérabilité des habitats d'importance pour les oiseaux marins a quant à elle été évaluée en  considérant les critères de fréquence des stresseurs et des effets sur les populations. Finalement, l'évaluation de la vulnérabilité des habitats d'importance pour les espèces à statut a été effectuée à partir des critères de fréquence des stresseurs environnementaux, des effets sur les populations et du statut des espèces. Le score de vulnérabilité final a été obtenu à partir de la somme des scores de chaque critère. Finalement, un score relatif a été évalué en normalisant les scores totaux par la valeur maximale de vulnérabilité observée par groupe d'habitat évaluée à partir de critères similaires. Les frayères et les sites d'alevinage constituaient le premier groupe, les oiseaux marins le second, et les espèces à statut le troisième. Les scores de vulnérabilité finaux sont disponibles au tableau \@ref(fig:speciesvuln) et les tableaux d'évaluation des critères individuels par catégorie d'habitat sont disponibles à l'Annexe 7.
 
 <br/>
 
-```{r speciesvuln}
-tab <- read.csv("../data/data-vulnerability/vulnerability_faune_flore.csv")
-dat <- as.matrix(tab[,2:ncol(tab)])
-pal <- colorRampPalette(viridis::viridis(100))
-cols <- pal(101)[((dat / 1)*100)+1]
-dat[1:length(dat)] <- cols
-
-
-tbl <- tab %>%
-  knitr::kable(
-    col.names = c("Stresseurs environnementaux","1","2","3","4","5","6","7","8","9"),
-    row.names = FALSE,
-    caption = "Scores de vulnérabilité relative des habitats d'importance pour les espèces face aux stresseurs environnementaux."
-  )  %>%
-  kableExtra::kable_styling(font_size = 11) # %>%
-  # kableExtra::row_spec(0, angle = -45)
-
-for(i in 1:ncol(dat)) {
-  tbl <- kableExtra::column_spec(tbl, i+1, color = "white", background = dat[, i])
-}
-
-tbl
+```{r speciesvuln, fig.cap = "Scores de vulnérabilité relative des habitats d'importance pour les espèces face aux stresseurs environnementaux.", fig.height = 6, fig.link = "./figures/figures-vulnerability/faune_flore.png"}
+knitr::include_graphics("./figures/figures-vulnerability/faune_flore.png")
 ```
+
 
 <br/>
 

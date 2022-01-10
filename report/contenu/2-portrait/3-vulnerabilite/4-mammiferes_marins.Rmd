@@ -1,32 +1,13 @@
 ### Mammifères marins
 
-La section précédente présente les différents critères utilisés afin de caractériser la vulnérabilité des espèces aux stresseurs environnementaux. La vulnérabilité des mammifères marins a été évaluée en utilisant l'ensemble des critères présentés au tableau \@ref(tab:vulnerabilitySpecies). Les scores de vulnérabilité finaux sont disponibles au tableau \@ref(tab:mmvuln) et les tableaux d'évaluation des critères individuels par espèce de mammifère marin sont disponibles à l'Annexe 8.
+La section précédente présente les différents critères utilisés afin de caractériser la vulnérabilité des espèces aux stresseurs environnementaux. La vulnérabilité des mammifères marins a été évaluée en utilisant l'ensemble des critères présentés au tableau \@ref(tab:vulnerabilitySpecies). Les scores de vulnérabilité finaux sont disponibles au tableau \@ref(fig:mmvuln) et les tableaux d'évaluation des critères individuels par espèce de mammifère marin sont disponibles à l'Annexe 8.
 
 <br/>
 
-```{r mmvuln}
-tab <- read.csv("../data/data-vulnerability/vulnerability_mammiferes_marins.csv")
-dat <- as.matrix(tab[,2:ncol(tab)])
-pal <- colorRampPalette(viridis::viridis(100))
-cols <- pal(101)[((dat / 1)*100)+1]
-dat[1:length(dat)] <- cols
-
-
-tbl <- tab %>%
-  knitr::kable(
-    col.names = c("Stresseurs environnementaux","1","2","3","4","5","6","7","8","9"),
-    row.names = FALSE,
-    caption = "Scores de vulnérabilité relative des habitats d'importance pour les espèces face aux stresseurs environnementaux."
-  )  %>%
-  kableExtra::kable_styling(font_size = 11) # %>%
-  # kableExtra::row_spec(0, angle = -45)
-
-for(i in 1:ncol(dat)) {
-  tbl <- kableExtra::column_spec(tbl, i+1, color = "white", background = dat[, i])
-}
-
-tbl
+```{r mmvuln, fig.cap = "Scores de vulnérabilité relative des habitats d'importance pour les espèces face aux stresseurs environnementaux.", fig.height = 6, fig.link = "./figures/figures-vulnerability/mammiferes_marins.png"}
+knitr::include_graphics("./figures/figures-vulnerability/mammiferes_marins.png")
 ```
+
 
 <br/>
 
