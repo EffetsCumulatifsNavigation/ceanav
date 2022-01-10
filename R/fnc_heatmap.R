@@ -6,7 +6,7 @@
 #'
 
 
-fnc_heatmap <- function(dat, colums, rows, output) {
+fnc_heatmap <- function(dat, columns, rows, output) {
 
   # # Simulate data
   # nC <- 20
@@ -26,11 +26,11 @@ fnc_heatmap <- function(dat, colums, rows, output) {
   colsDat[1:length(colsDat)] <- cols
 
   # Graph
-  width <- 50 + nC*5 # largeur texte + nombre colonnes
-  height <- 50 + nR*5 # hauteur texte + nombre lignes
-  png(output, res = 300, width = width, height = height, units = "mm", pointsize = 10)
+  width <- 80 + nC*5 # largeur texte + nombre colonnes
+  height <- 80 + nR*5 # hauteur texte + nombre lignes
+  png(output, res = 300, width = width, height = height, units = "mm", pointsize = 8)
   par(mar = c(1,1,1,1))
-  plot0(x = c(-5,nC+1), y = c(1,(nR+3)))
+  plot0(x = c(-10,nC+2.5), y = c(1,(nR+6)))
 
   # Heatmap
   for(y in 1:nR) {
@@ -40,11 +40,10 @@ fnc_heatmap <- function(dat, colums, rows, output) {
   }
 
   # Text
-  text(x = 1:nC, y = nR+.75, labels = columns, srt = 65, adj = c(0,.5))
-  text(x = 1-.75, y = 1:nR, labels = rows, adj = c(1,.5))
-  for(i in 1:nR) text(x = 1:nC, y = i, labels = dat[i, ], adj = c(.5,.5), cex = .55)
+  text(x = 1:nC, y = nR+.75, labels = columns, srt = 65, adj = c(0,.5), cex = .9)
+  text(x = 1-.75, y = 1:nR, labels = rows, adj = c(1,.5), cex = .9)
+  for(i in 1:nR) text(x = 1:nC, y = i, labels = dat[i, ], adj = c(.5,.5), cex = .7)
 
   # -----
   dev.off()
-
 }

@@ -72,6 +72,7 @@ figures/figures-format/data*
 report/figures/figures-format/
 figures/figures-integrated/*.png
 figures/figures-output/*.png
+figures/figures-vulnerability/*.png
 
 clean/
 report/contenu/notes/
