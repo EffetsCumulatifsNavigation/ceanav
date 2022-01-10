@@ -191,6 +191,9 @@ pipeline <- function(
     # Données intégrées (portrait)
     fig_integrated_all()
 
+    # Matrices vulnérabilité
+    fig_vulnerability()
+
     # Analyses
     fig_cumulative_stresseurs()
     fig_cumulative_composantes_valorisees()
