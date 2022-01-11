@@ -20,6 +20,7 @@ bookdown::gitbook:
 bookdown::html_chapters:
   css: [css/style.css, css/toc.css]
 bookdown::pdf_book:
+  # base_format: rticles::jss_article
   keep_tex: no
   dev: "pdf"
   latex_engine: xelatex
