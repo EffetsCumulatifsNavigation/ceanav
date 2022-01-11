@@ -85,8 +85,8 @@ tab %>%
     col.names = c("Critères de vulnérabilité", "Rang", "Catégories", "Description", "Exemples"),
     row.names = FALSE,
     caption = "Critères considérés pour évaluer la vulnérabilité des composantes valorisées relatives au espèces -- *i.e.* milieux d'importance pour les cycles de vie, les espèces à statut et les mammifères marins -- aux sources de stress considérées pour l'évaluation des effets cumulatifs des activités maritimes dans le Saint-Laurent et le Saguenay. Les critères ont été adaptés de @maxwell2013, auxquels ont été ajoutés les critères de statut et de résidence des espèces afin de des particularités régionales propres au Saint-Laurent et au Saguenay. "
-  ) %>%
-  kableExtra::row_spec(lin, extra_css = "border-bottom: 2px solid")
+  ) #%>%
+  #kableExtra::row_spec(lin, extra_css = "border-bottom: 2px solid")
 ```
 
 <br/>

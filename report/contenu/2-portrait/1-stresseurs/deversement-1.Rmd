@@ -37,8 +37,8 @@ tab %>%
     col.names = c("Catégories de volumes déversés","Nombre de déversements"),
     row.names = FALSE,
     caption = "Catégories de volumes déversés et nombre de déversements accidentels répertoriés dans le Saint-Laurent et le Saguenay entre 2016 et 2020 [@gcc2020]."
-  ) %>%
-  kableExtra::kable_styling(full_width = F)
+  ) #%>%
+  #kableExtra::kable_styling(full_width = F)
 ```
 
 <br/>

@@ -22,8 +22,8 @@ tab %>%
     col.names = c("Composantes valorisées", "Type", "Sous-catégories"),
     row.names = FALSE,
     caption = "Liste des sous-catégories de composantes valorisées considérées pour l'évaluation des effets cumulatifs des activités maritimes dans le Saint-Laurent et le Saguenay."
-  ) %>%
-  kableExtra::row_spec(uid, extra_css = "border-bottom: 2px solid")
+  ) #%>%
+  #kableExtra::row_spec(uid, extra_css = "border-bottom: 2px solid")
 ```
 
 <br/>
