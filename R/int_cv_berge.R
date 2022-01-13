@@ -120,6 +120,16 @@ cv_berge <- function() {
   # --- For proper referencing in markdown syntax
   meta$dataDescription$categories$mdref <- modif_md(meta$dataDescription$categories$accronyme)
 
+  meta$dataDescription$categories$description <-  c(
+    "Berge naturelle présentant des signes d'érosion apparente ou un couvert végétal de 25 à 75%",
+    "Berge naturelle présentant des signes d'érosion apparente ou un couvert végétal < 25%",
+    "Berge artificielle présentant des signes d'érosion apparente ou un couvert végétal de 25 à 75%",
+    "Berge artificielle présentant des signes d'érosion apparente ou un couvert végétal < 25%"
+  )
+
+
+
+
   # ---
   obs <- data0017 %>%
          mutate(length = as.numeric(st_length(.)) / 1000) %>%

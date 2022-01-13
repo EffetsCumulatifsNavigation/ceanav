@@ -46,4 +46,13 @@ dataDescription:
     - naturellevive
     - artificiellesemivegetalisee
     - artificiellevive
+    description:
+    - Berge naturelle présentant des signes d'érosion apparente ou un couvert végétal
+      de 25 à 75%
+    - Berge naturelle présentant des signes d'érosion apparente ou un couvert végétal
+      < 25%
+    - Berge artificielle présentant des signes d'érosion apparente ou un couvert végétal
+      de 25 à 75%
+    - Berge artificielle présentant des signes d'érosion apparente ou un couvert végétal
+      < 25%
 rawData: '0017'

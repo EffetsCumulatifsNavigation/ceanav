@@ -157,6 +157,8 @@ cv_mammiferes_marins <- function() {
   meta$dataDescription$categories$type <-  nm$type
   meta$dataDescription$categories$source <-  nm$source
 
+  meta$dataDescription$categories$description <- glue("Distribution du {tolower(nm$francais)}")
+
   # --- For proper referencing in markdown syntax
   meta$dataDescription$categories$mdref <- modif_md(meta$dataDescription$categories$accronyme)
   # _____________________________________________________________________________ #

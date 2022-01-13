@@ -85,6 +85,16 @@ dataDescription:
     - greyseal
     - harborseal
     - harpseal
+    description:
+    - Distribution du rorqual à bosse
+    - Distribution du rorqual bleu
+    - Distribution du petit rorqual
+    - Distribution du béluga
+    - Distribution du rorqual commun
+    - Distribution du marsouin commun
+    - Distribution du phoque gris
+    - Distribution du phoque commun
+    - Distribution du phoque du groenland
 rawData:
 - '0027'
 - '0054'
