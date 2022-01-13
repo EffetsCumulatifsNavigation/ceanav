@@ -11,13 +11,13 @@ De plus, certains stresseurs environnementaux peuvent être divisés en sous-cat
 <br/>
 
 ```{r stress}
-tab <- select(st, title, francais)
+tab <- select(st, title, francais, description)
 tab$title[duplicated(tab$title)] <- ""
 uid <- which(tab$title != "")[-1]-1
 
 tab %>%
   knitr::kable(
-    col.names = c("Stresseurs environnementaux", "Sous-catégories"),
+    col.names = c("Stresseurs environnementaux", "Sous-catégories", "Description"),
     row.names = FALSE,
     caption = "Liste des sous-catégories de stresseurs environnementaux considérés pour l'évaluation des effets cumulatifs des activités maritimes dans le Saint-Laurent et le Saguenay."
   ) #%>%
