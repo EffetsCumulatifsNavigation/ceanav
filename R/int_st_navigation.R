@@ -321,6 +321,22 @@ st_navigation <- function() {
   meta$dataDescription$categories$transit_km2 <- dat$transit_km2
   meta$dataDescription$categories$boats <- dat$boats
 
+  # -----
+  meta$dataDescription$categories$description <- c(
+    "Traffic maritime de navires de commerce transportant des marchandises sous diverses formes.",
+    "Traffic maritime de navires de commerce transportant des marchandises exclusivement dans des conteneurs de transport.",
+    "Traffic maritime de navires de commerce transportant des marchandises en vrac, e.g. des grain et du charbon.",
+    "Traffic maritime de traversiers transportant des passagers et/ou des véhicules.",
+    "Traffic maritime de navires gouvernementaux et de navires de recherche.",
+    "Activités d’observation en mer des mammifères marins sur des embarcations avec permis de classe 1.",
+    "Traffic maritime de navires dédiés au transport de passagers.",
+    "Traffic maritime de navires récréatifs.",
+    "Traffic maritime de navires divers tels des drageurs, des poseurs de cables, des plateformes, des navires de forage, etc. ",
+    "Traffic maritime de navires transportant des produits pétroliers en vrac.",
+    "Traffic maritime de navires remorqueurs.",
+    "Activités de navigation qui ont lieu près des installations portuaires telles les ports et les marinas."
+  )
+
   # --- For proper referencing in markdown syntax
   meta$dataDescription$categories$mdref <- modif_md(meta$dataDescription$categories$accronyme)
 

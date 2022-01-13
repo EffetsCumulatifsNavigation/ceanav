@@ -193,6 +193,10 @@ st_deversement <- function() {
   meta$dataDescription$categories$accronyme <-  c("hydrocarbures","autres","inconnus")
   meta$dataDescription$categories$francais <-  c("Hydrocarbures","Autres","Contenu inconnu")
   meta$dataDescription$categories$source <-  rep(meta$rawData, length(meta$dataDescription$categories$francais))
+  meta$dataDescription$categories$description <-  c(
+    "Déversement d'hydrocarbures, e.g. carburant, diésel, pétrole, propane, huile hydrolique, etc.",
+    "Déversements autres que des hydrocabures, e.g. des eaux de ballast, des déchets, de l'eau de cale, du charbon, de la matière organique, etc.",
+    "Déversements dont le contenu est inconnu")
 
   # ---
   meta$dataDescription$categories$observations <- c(

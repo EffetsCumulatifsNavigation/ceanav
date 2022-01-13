@@ -18,6 +18,7 @@ dataDescription:
     francais: Sites d'ancrage de navires
     source: '0015'
     mdref: ancrage
+    description: Distribution des sites d'ancrage de navires
   observations:
     total: 137
 rawData: '0015'

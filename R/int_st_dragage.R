@@ -141,6 +141,13 @@ st_dragage <- function() {
     sd(dragage$volume), sd(depot$volume), NA
   )
 
+  meta$dataDescription$categories$description <- c(
+    "Sites de dragage d'entretien, i.e. dragage plus ou moins réguler de la voie navigable afin de maintenir des conditions sécuritaire pour la navigation.",
+    "Sites de dépôt en milieu aquatique ou marin des sédiments dragués lors d'opération de dragage d'entretien ou de capitalisation.",
+    "Sites de dragage de capitalisation prévus, i.e. dragage visant à approfondir et élargir la voie de navigation."
+  )
+
+
   # -----
   meta$dataDescription$dragage$municipalite <- dragage$municipalite
   meta$dataDescription$dragage$name <- dragage$name

@@ -312,6 +312,13 @@ st_peche_commerciale <- function() {
   meta$dataDescription$categories$source <- rep(paste0(meta$rawData, collapse = ","),
                                                 length(meta$dataDescription$categories$accronyme))
 
+  meta$dataDescription$categories$description <- c(
+    "Retrait de biomasse à l'aide d'engins de pêche démersaux pouvant causer des dommages aux habitats ou au substrat, e.g. chalut et drague.",
+    "Retrait de biomasse à l'aide d'engins de pêche démersaux avec peu ou en l'absence de prises accessoires et ne causant aucune modification des habitats, e.g. la pêche en plongée sous-marine.",
+    "Retrait de biomasse à l'aide d'engins de pêche démersaux avec d'importantes prises accessoires et ne causant aucune modification des habitats, e.g. casiers et senne.",
+    "Retrait de biomasse à l'aide d'engins de pêche pélagiques avec peu ou en l'absence de prises accessoires et ne causant aucune modification des habitats, e.g. pêche à la ligne, senne bourse.",
+    "Retrait de biomasse à l'aide d'engins de pêche pélagiques avec d'importantes prises accessoires et ne causant aucune modification des habitats, e.g. filet maillant et palangre.")
+
   # -----
   obs <- peche %>% group_by(years) %>% summarize(total = n())
   meta$dataDescription$observations$total <- sum(obs$total)

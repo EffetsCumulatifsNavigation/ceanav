@@ -16,3 +16,6 @@ dataDescription:
     francais: Pollution maritime
     source: 0015,0018,0019,0020,0021,0027,0028,0029,0041,0046,0047,0048,0049,0050,0052
     mdref: pollutionmaritime
+    description: Pollution reliée aux activités de navigation tels la navigation commerciale
+      et la pêche. Les stresseurs associés peuvent être des rejets opérationnels,
+      des déchets, des débris, de l'eau de ballast, etc.

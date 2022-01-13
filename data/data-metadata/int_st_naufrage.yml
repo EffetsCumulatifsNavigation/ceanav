@@ -18,6 +18,7 @@ dataDescription:
     francais: Sites de naufrages répertoriés
     source: '0062'
     mdref: naufrage
+    description: Épaves échouées ou submergées de navires commerciaux et récréatifs.
   observations:
     total: 104
 rawData: '0062'

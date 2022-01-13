@@ -26,7 +26,7 @@ metadata_st_cv <- function() {
                        as.data.frame() %>%
                        mutate(title = meta$title,
                               stresseur = i) %>%
-                       select(stresseur, accronyme, title, francais)#, description)
+                       select(stresseur, accronyme, title, francais, description)
   }
   stresseurs <- bind_rows(stresseurs)
 
