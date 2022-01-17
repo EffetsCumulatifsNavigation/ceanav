@@ -220,6 +220,10 @@ knitr::include_graphics("./figures/figures-integrated/site-kahnawake_vegatation.
 <!-- =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= -->
 ##### Nation Wolastoqiyik Wahsipekuk
 
+> *Nous remercions David Poissant pour les échanges et le support.*
+
+Nous utilisont des données qui nous ont été transmises par des représentants de la Nation Wolastoqiyik Wahsipekuk pour caractériser des sites d'importances pour la pêche traditionnelle au homard [*Homarus americanus*; @PNWW2021] et l'oursin [*Strongylocentrotus* sp.; @PNWW2021b]. Ces données identifient des milieux jugés important pour la pêche sur la rive sud du Saint-Laurent.
+
 <br>
 
 ```{r wolastoqiyikwahsipekukpechecommerciale, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Wolastoqiyik Wahsipekuk - Pêche traditionnelle", out.width = '100%', fig.link = "./figures/figures-integrated/site-wolastoqiyik_wahsipekuk_peche_commerciale.png"}
@@ -234,6 +238,46 @@ knitr::include_graphics("./figures/figures-integrated/site-wolastoqiyik_wahsipek
 <!-- =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= -->
 ##### Nation W8banaki
 
+> *Nous remercions Edgar Blanchet et Hadrien Bois pour les échanges et le support.*
+
+Dans le cadre de ce projet pilote, le Grand Conseil de la Nation Waban-Aki (GCNWA) a procédé à l'intégration d'informations spatialisée et non-spatialisées provenant détudes anthropologiques et archéologiques précédemment produites auprès de leur communauté. Ce travail d'intégration a mené à la production d'un rapport présentant les préoccupations connues de certains membres de leur communauté quant aux pressions environnementales exercées au sein de leur territoire et touchant les composantes valorisées couvertes par notre évaluation des effets cumulatifs des activités maritimes [@GCNWA2021]. Ce rapport est accompagné d'une description cartographique de divers éléments d'intérêt identifiés par certaines membres de leur communauté.
+
+<!--
+L'utilisation et l'occupation contemporaine du territoire par la Nation W8banaki y est décrite à partir de quatre types d'informations, soit
+
+1) espèces valorisées par la Nation
+2) activités connues à caractère alimentaire, rituel ou social
+3) changements perçus ou obstacles
+4)
+
+Cette description se traduit en x catégories de sites d'intérêts cartographié :
+
+- Cueillette et collecte (*e.g.* ail des bois, bleuets sauvages)
+- Gibier (*e.g.* cerf de virginie, gélinotte huppée)
+- Oiseaux migrateurs (*e.g.* bernache, oie des neiges)
+-
+
+2 cueillette_collecte = végétaux
+2 gibier = chasse
+2 oiseaux_migrateurs = chasse
+3 problemes_territoire = accès au territoire
+2 sites_coucher = sites de campements
+2 sites_culturels = sites d'importance culturelle (e.g. lieu sacré, site de rassemblement)
+2 sites_essentiels = sites importants pour la chasse
+2 zones_activites = zones d'importance pour divers activités sur le territoire
+
+
+sites_archeologiques =
+sites_potentiel_archeologique =
+
+
+Bien que ces éléments sont ceux qui sont utilisés au sein de l'évaluation des effets cumulatifs, il demeure important de mentionner que le rapport qui accompage les données spatiales permet de contextualiser l'importance de ces sites en termes qui vont au-delà d'une simple délimitation géographique. De plus, les données identifiées sont contemporaires et ne devraient ainsi pas être considérées représentatives du passé ou du futur.
+
+
+Qualité de l'eau
+Érosion des berges
+Espèces envahissantes
+-->
 
 <br>
 
@@ -310,6 +354,13 @@ knitr::include_graphics("./figures/figures-integrated/site-gcnwa_zones_activites
 <!-- =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= -->
 <!-- =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= -->
 ##### Association de gestion halieutique Mi'kmaq et Malécite
+
+> *Nous remercions Lisa M. Arsenault pour les échanges et le support.*
+
+L'Association de gestion halieutique Mi'kmaq et Malécite (AGHAMM) a developpé un atlas cartographique décrivant divers sites et usages reliés aux activités de pêche commerciale et traditionnelle d'importance pour les communautés de Gesgapegiag, Gespeg et Viger [@arsenault2017]. Plus spécifiquement, nous avons utilisé les couches de données décrivant les activités de pêches commerciales ciblant neuf espèces différentes : le buccin (*Buccinum* sp.), le concombre de mer (*Holothurie* sp.), le crabe commun (*Cancer irroratus*), le crage des neiges (*Chionoecetes opilio*), la crevette nordique (*Pandalus* sp.), le flétan Atlantique (*Hippoglossus hippoglossus*), le flétan du Groenland (*Reinhardtius hippoglossoides*), le homard (*Homarus americanus*) et l'oursin (*Strongylocentrotus* sp.) dans l'estuaire du Saint-Laurent [@arsenault2017; @racine2017].
+
+L'atlas identifie également les rivières Rimouski, Métis et Matane en tant que sites d'importance pour la pêche au Saumon Atlantique [*Salmo salar*; @arsenault2017]. Nous avons ainsi ajouter une zone tampon de 3 $km$ à l'embouchure de ces trois rivière afin de capturer leur présence en tant que site d'intérêt pour l'évaluation.
+
 
 <br>
 
