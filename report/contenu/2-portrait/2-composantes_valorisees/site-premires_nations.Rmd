@@ -1,0 +1,326 @@
+#### Sites d'intérêt pour les Premières Nations
+
+<!-- TODO: Discuter des limites temporelles ici, et du fait que les communautés ont clairement indiqué qu'il s'agit d'une limite de l'étude, et c'est aussi rapporté dans le document du GCNWA
+
+Données caractérisent une activité, mais peuvent difficilement permettre de convenablement les contextualiser culturellement et écologiquement.
+
+> Les données rapportées ici servent donc à documenter les modalités de l’UOT des W8banakiak ainsi que les conditions qui sous-tendent leur exercice. Elles ne peuvent pas prédire les lieux qui seront fréquentés dans le futur ou le type d’activité qui y sera pratiqué. GCNWA
+
+Pour la vulnérabilité : De plus, il est impossible de cartographier adéquatement les valeurs accordées à certains sites ou activités. L’importance d’un site dépend d’une multitude de facteurs. Par exemple, sans être fréquentés sur une base régulière, des lieux sont associés à des récits ou légendes, à l’histoire ou l’imaginaire collectif de la Nation, à des sites archéologiques ou sacrés, etc (GCNWA)
+
+#### Kahnawake
+
+TODO: Vérifier la catégorie traffic identifiée par la communauté. Est-ce qu'on devrait l'ajouter aux stresseurs de navigation?
+TODO: Même chose avec la seigneurie
+-->
+
+Dans le cadre de ce projet pilote, une importance particulière a été attribuée aux sites d'intérêt pour les Premières Nations. Un processus collaboratif a ainsi été enclenché avec des communautés autochtones ayant des activités historiques et contemporaines au sein de la zone d'étude. Les communautés participantes ayant fournit des données sont les suivantes :
+
+- Nation Huronne-Wendat
+- Nation des Innus d’Essipit
+- Nation Mohawk de Kahnawà:ke
+- Nation Wolastoqiyik Wahsipekuk
+- Nation W8banaki
+
+Un protocole de partage d'informations a été élaboré en collaboration avec les communautés participantes. Ce protocole offre un cadre pour l’utilisation des données qui soutient les principes des Premières Nations de PCAP$^{MD}$ (propriété, contrôle, accès, possession) dans le domaine de la recherche. L’application de ces principes sert de mécanisme de protection du patrimoine informationnel et des connaissances des Premières Nations. Ces principes évoquent la propriété collective de l’information par une communauté, une nation, un groupe. Ces principes s’appliquent à tous types de recherche et à tous les domaines de recherche qui se déroulent sur les territoires des Premières Nations et/ou qui concernent les Premières Nations.
+
+Des rencontres individuelles ont été organisées avec des représentants des communautés participantes afin de présenter le projet et de discuter des besoins en informations en vue d'intégrer les sites d'intérêt au sein de l'évaluation des effets cumulatifs. Les communautés participantes ont subséquemment procédé au rassemblement d'informations cartographiques représentant des sites d'intérêt pour leur communauté respective.
+
+Un atlas cartographique en accès libre développé par l'Association de gestion halieutique Mi'kmaq et Malécite (AGHAMM) a également permi d'obtenir des données d'utilisation du territoire pour les Nations Mi'kmaq de Gespeg et Mi'kmaq de Gesgapegiag.
+
+Les sites d'intérêt identifiés par les communautés participantes peuvent être classés en 9 grandes catégories :
+
+- Activités récréatives
+- Chasse
+- Culture et patrimoine
+- Occupation du territoire
+- Pêche commerciale
+- Pêche traditionnelle
+- Récolte de végétaux
+- Sites archéologiques
+- Tourisme
+
+Les données partagées par les communautés participantes ont ensuite été intégrées directement à la grille d'étude en présence-absence. Les données fournies par les différentes communautés participantes ont été conservées distinctes même si des catégories similaires ont été identifiées entre les communautés participantes (Tableau \@ref(tab:siteCat)). Par exemple, bien que la majorité des communautés aient identifié des sites d'intérêt pour la chasse, les sites identifiés demeurent distincts entre communautés au sein de l'analyse. Cette approche a pour but de respecter l'indépendance de chaque communauté et d'attribuer une importance supérieure à un milieu si ce dernier est identifié par plus d'une communauté. C'est le cas, entre autres, du Lac Saint-Pierre, qui est identifié en tant que site d'intérêt par plus d'une communauté participante.
+
+Les libellés attribués aux catégories de sites d'intérêt identifiées par les communautés ont également été conservées intactes pour l'évaluation des effets cumulatifs; aucune tentative d'harmonisation des catégories entre communautés n'a été effectuée. Cette absence d'harmonisation a été adoptée afin de ne pas dénaturer les informations transmises par les communautés. De plus, puisque les sites provenant de différentes communautés demeurent distincts pour l'évaluation, l'harmonisation des catégories de sites d'intérêt n'aurait rien changé à l'évaluation. Nous avons ainsi décidé de conserver les libellés utilisées dans les données partagées.
+
+Il demeure important de noter que, pour l'ensemble des communautés participantes, les informations rapportées ne peuvent être considérées comme un portrait exhaustif des sites d'intérêt pour l'ensemble des membres des communautés; en effet, les informations résultent d'un processus de consultation limité des membres de la communauté et intégrés uniquement dans le contexte du projet d'évaluation des effets cumulatifs des activités maritimes. Pour plusieurs communautés, les sites identifiés proviennent d'autres exercices dont une intégration a été faite afin de répondre aux objectifs de la présente étude. De plus, la participation des Premières Nations à cette étude est faite sans préjudice à l'exercice de leurs droits juridiques sur leur territoire traditionnel respectif pour lesquels s'appliquent leurs droits et responsabilités d'intendance et qui se basent sur l'application d'une approche écosystémique plus large. Les sites d'intérêt identifiés doivent ainsi être interprétés dans le contexte élargi de ces droits et responsabilités.
+
+Les sections suivantes décrivent brièvement les données partagées par les communautés participantes et les données qui ont été accessibles à travers des plateformes ouvertes.
+
+
+<!-- =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= -->
+<!-- =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= -->
+<!-- =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= -->
+##### Nation Huronne-Wendat
+
+
+<br>
+
+```{r huronnewendatactiviterecreative, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation Huronne-Wendat - Activité récréative", out.width = '100%', fig.link = "./figures/figures-integrated/site-huronne_wendat_activite_recreative.png"}
+knitr::include_graphics("./figures/figures-integrated/site-huronne_wendat_activite_recreative.png")
+```
+
+<br>
+
+```{r huronnewendatarcheologie, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation Huronne-Wendat - Archéologie", out.width = '100%', fig.link = "./figures/figures-integrated/site-huronne_wendat_archeologie.png"}
+knitr::include_graphics("./figures/figures-integrated/site-huronne_wendat_archeologie.png")
+```
+
+<br>
+```{r huronnewendatchasse, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation Huronne-Wendat - Chasse", out.width = '100%', fig.link = "./figures/figures-integrated/site-huronne_wendat_chasse.png"}
+knitr::include_graphics("./figures/figures-integrated/site-huronne_wendat_chasse.png")
+```
+
+<br>
+
+```{r huronnewendatespeceperil, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation Huronne-Wendat - Espèce en péril", out.width = '100%', fig.link = "./figures/figures-integrated/site-huronne_wendat_espece_peril.png"}
+knitr::include_graphics("./figures/figures-integrated/site-huronne_wendat_espece_peril.png")
+```
+
+<br>
+
+```{r huronnewendathistoire, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation Huronne-Wendat - Histoire", out.width = '100%', fig.link = "./figures/figures-integrated/site-huronne_wendat_histoire.png"}
+knitr::include_graphics("./figures/figures-integrated/site-huronne_wendat_histoire.png")
+```
+
+<br>
+
+```{r huronnewendatoccupation, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation Huronne-Wendat - Occupation", out.width = '100%', fig.link = "./figures/figures-integrated/site-huronne_wendat_occupation.png"}
+knitr::include_graphics("./figures/figures-integrated/site-huronne_wendat_occupation.png")
+```
+
+<br>
+
+```{r huronnewendatpeche, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation Huronne-Wendat - Pêche", out.width = '100%', fig.link = "./figures/figures-integrated/site-huronne_wendat_peche.png"}
+knitr::include_graphics("./figures/figures-integrated/site-huronne_wendat_peche.png")
+```
+
+<br>
+
+```{r huronnewendattoponymie, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation Huronne-Wendat - Toponymie", out.width = '100%', fig.link = "./figures/figures-integrated/site-huronne_wendat_toponymie.png"}
+knitr::include_graphics("./figures/figures-integrated/site-huronne_wendat_toponymie.png")
+```
+
+<br>
+
+```{r huronnewendatvegetaux, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation Huronne-Wendat - Récolte de végétaux", out.width = '100%', fig.link = "./figures/figures-integrated/site-huronne_wendat_vegetaux.png"}
+knitr::include_graphics("./figures/figures-integrated/site-huronne_wendat_vegetaux.png")
+```
+
+<br>
+
+
+<!-- =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= -->
+<!-- =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= -->
+<!-- =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= -->
+##### Nation des Innus d’Essipit
+
+<br>
+
+```{r essipitacceseau, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Essipit - Accès au plan d'eau", out.width = '100%', fig.link = "./figures/figures-integrated/site-essipit_acces_eau.png"}
+knitr::include_graphics("./figures/figures-integrated/site-essipit_acces_eau.png")
+```
+
+<br>
+
+```{r essipitchasseoiseaux, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Essipit - Chasse oiseaux migrateurs", out.width = '100%', fig.link = "./figures/figures-integrated/site-essipit_chasse_oiseaux.png"}
+knitr::include_graphics("./figures/figures-integrated/site-essipit_chasse_oiseaux.png")
+```
+
+<br>
+
+```{r essipitchassephoque, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Essipit - Chasse phoques", out.width = '100%', fig.link = "./figures/figures-integrated/site-essipit_chasse_phoque.png"}
+knitr::include_graphics("./figures/figures-integrated/site-essipit_chasse_phoque.png")
+```
+
+<br>
+
+```{r essipitculturepatrimoine, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Essipit - Culture et patrimoine", out.width = '100%', fig.link = "./figures/figures-integrated/site-essipit_culture_patrimoine.png"}
+knitr::include_graphics("./figures/figures-integrated/site-essipit_culture_patrimoine.png")
+```
+
+<br>
+
+```{r essipitpechecommerciale, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Essipit - Pêche commerciale", out.width = '100%', fig.link = "./figures/figures-integrated/site-essipit_peche_commerciale.png"}
+knitr::include_graphics("./figures/figures-integrated/site-essipit_peche_commerciale.png")
+```
+
+<br>
+
+```{r essipitpechetraditionnelle, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Essipit - Pêche traditionnelle", out.width = '100%', fig.link = "./figures/figures-integrated/site-essipit_peche_traditionnelle.png"}
+knitr::include_graphics("./figures/figures-integrated/site-essipit_peche_traditionnelle.png")
+```
+
+<br>
+
+```{r essipittourisme, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Essipit - Tourisme", out.width = '100%', fig.link = "./figures/figures-integrated/site-essipit_tourisme.png"}
+knitr::include_graphics("./figures/figures-integrated/site-essipit_tourisme.png")
+```
+
+<br>
+
+<!-- =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= -->
+<!-- =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= -->
+<!-- =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= -->
+##### Nation Mohawk de Kahnawà:ke
+
+
+<br>
+
+```{r kahnawakechasse, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Kahnawake - Chasse", out.width = '100%', fig.link = "./figures/figures-integrated/site-kahnawake_chasse.png"}
+knitr::include_graphics("./figures/figures-integrated/site-kahnawake_chasse.png")
+```
+
+<br>
+
+```{r kahnawakeculturepatrimoine, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Kahnawake - Culture et patrimoine", out.width = '100%', fig.link = "./figures/figures-integrated/site-kahnawake_culture_patrimoine.png"}
+knitr::include_graphics("./figures/figures-integrated/site-kahnawake_culture_patrimoine.png")
+```
+
+<br>
+
+```{r kahnawakepechecommerciale, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Kahnawake - Pêche commerciale", out.width = '100%', fig.link = "./figures/figures-integrated/site-kahnawake_peche_commerciale.png"}
+knitr::include_graphics("./figures/figures-integrated/site-kahnawake_peche_commerciale.png")
+```
+
+<br>
+```{r kahnawakepecheoffshore, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Kahnawake - Pêche eau libre", out.width = '100%', fig.link = "./figures/figures-integrated/site-kahnawake_peche_offshore.png"}
+knitr::include_graphics("./figures/figures-integrated/site-kahnawake_peche_offshore.png")
+```
+
+<br>
+
+```{r kahnawakepecherivage, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Kahnawake - Pêche rivage", out.width = '100%', fig.link = "./figures/figures-integrated/site-kahnawake_peche_rivage.png"}
+knitr::include_graphics("./figures/figures-integrated/site-kahnawake_peche_rivage.png")
+```
+
+<br>
+
+```{r kahnawakesssm, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Kahnawake - Seigneurie du Sault-Saint-Louis", out.width = '100%', fig.link = "./figures/figures-integrated/site-kahnawake_sssm.png"}
+knitr::include_graphics("./figures/figures-integrated/site-kahnawake_sssm.png")
+```
+
+<br>
+
+```{r kahnawaketraffic, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Kahnawake - Trafic maritime", out.width = '100%', fig.link = "./figures/figures-integrated/site-kahnawake_traffic.png"}
+knitr::include_graphics("./figures/figures-integrated/site-kahnawake_traffic.png")
+```
+
+<br>
+
+```{r kahnawakevegatation, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Kahnawake - Végétation", out.width = '100%', fig.link = "./figures/figures-integrated/site-kahnawake_vegatation.png"}
+knitr::include_graphics("./figures/figures-integrated/site-kahnawake_vegatation.png")
+```
+
+<br>
+
+<!-- =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= -->
+<!-- =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= -->
+<!-- =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= -->
+##### Nation Wolastoqiyik Wahsipekuk
+
+<br>
+
+```{r wolastoqiyikwahsipekukpechecommerciale, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Wolastoqiyik Wahsipekuk - Pêche traditionnelle", out.width = '100%', fig.link = "./figures/figures-integrated/site-wolastoqiyik_wahsipekuk_peche_commerciale.png"}
+knitr::include_graphics("./figures/figures-integrated/site-wolastoqiyik_wahsipekuk_peche_commerciale.png")
+```
+
+<br>
+
+
+<!-- =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= -->
+<!-- =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= -->
+<!-- =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= -->
+##### Nation W8banaki
+
+
+<br>
+
+```{r gcnwaanimauxfourrure, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - GCNWA - Animaux à fourrure", out.width = '100%', fig.link = "./figures/figures-integrated/site-gcnwa_animaux_fourrure.png"}
+knitr::include_graphics("./figures/figures-integrated/site-gcnwa_animaux_fourrure.png")
+```
+
+<br>
+
+```{r gcnwacueillettecollecte, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - GCNWA - Cueillette et collecte", out.width = '100%', fig.link = "./figures/figures-integrated/site-gcnwa_cueillette_collecte.png"}
+knitr::include_graphics("./figures/figures-integrated/site-gcnwa_cueillette_collecte.png")
+```
+
+<br>
+
+```{r gcnwagibier, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - GCNWA - Gibier", out.width = '100%', fig.link = "./figures/figures-integrated/site-gcnwa_gibier.png"}
+knitr::include_graphics("./figures/figures-integrated/site-gcnwa_gibier.png")
+```
+
+<br>
+
+```{r gcnwaoiseauxmigrateurs, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - GCNWA - Oiseaux migrateurs", out.width = '100%', fig.link = "./figures/figures-integrated/site-gcnwa_oiseaux_migrateurs.png"}
+knitr::include_graphics("./figures/figures-integrated/site-gcnwa_oiseaux_migrateurs.png")
+```
+
+<br>
+
+```{r gcnwaproblemesterritoire, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - GCNWA - Problèmes liés au territoire", out.width = '100%', fig.link = "./figures/figures-integrated/site-gcnwa_problemes_territoire.png"}
+knitr::include_graphics("./figures/figures-integrated/site-gcnwa_problemes_territoire.png")
+```
+
+<br>
+
+```{r gcnwasitesarcheologiques, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - GCNWA - Sites archéologiques", out.width = '100%', fig.link = "./figures/figures-integrated/site-gcnwa_sites_archeologiques.png"}
+knitr::include_graphics("./figures/figures-integrated/site-gcnwa_sites_archeologiques.png")
+```
+
+<br>
+
+```{r gcnwasitescoucher, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - GCNWA - Sites de coucher", out.width = '100%', fig.link = "./figures/figures-integrated/site-gcnwa_sites_coucher.png"}
+knitr::include_graphics("./figures/figures-integrated/site-gcnwa_sites_coucher.png")
+```
+
+<br>
+
+```{r gcnwasitesculturels, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - GCNWA - Sites culturels", out.width = '100%', fig.link = "./figures/figures-integrated/site-gcnwa_sites_culturels.png"}
+knitr::include_graphics("./figures/figures-integrated/site-gcnwa_sites_culturels.png")
+```
+
+<br>
+
+
+```{r gcnwasitesessentiels, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - GCNWA - Sites essentiels", out.width = '100%', fig.link = "./figures/figures-integrated/site-gcnwa_sites_essentiels.png"}
+knitr::include_graphics("./figures/figures-integrated/site-gcnwa_sites_essentiels.png")
+```
+
+<br>
+
+```{r gcnwasitespotentielarcheologique, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - GCNWA - Sites à potentiel archéologique", out.width = '100%', fig.link = "./figures/figures-integrated/site-gcnwa_sites_potentiel_archeologique.png"}
+knitr::include_graphics("./figures/figures-integrated/site-gcnwa_sites_potentiel_archeologique.png")
+```
+
+<br>
+
+```{r gcnwazonesactivites, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - GCNWA - Zones d'activités", out.width = '100%', fig.link = "./figures/figures-integrated/site-gcnwa_zones_activites.png"}
+knitr::include_graphics("./figures/figures-integrated/site-gcnwa_zones_activites.png")
+```
+
+<br>
+
+
+
+<!-- =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= -->
+<!-- =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= -->
+<!-- =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= -->
+##### Association de gestion halieutique Mi'kmaq et Malécite
+
+<br>
+
+```{r aghammpechetraditionnelle, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - AGHAMM - Pêche traditionnelle", out.width = '100%', fig.link = "./figures/figures-integrated/site-aghamm_peche_traditionnelle.png"}
+knitr::include_graphics("./figures/figures-integrated/site-aghamm_peche_traditionnelle.png")
+```
+
+<br>
+
+```{r aghammpechecommerciale, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - AGHAMM - Pêche commerciale", out.width = '100%', fig.link = "./figures/figures-integrated/site-aghamm_peche_commerciale.png"}
+knitr::include_graphics("./figures/figures-integrated/site-aghamm_peche_commerciale.png")
+```
+
+<br>
