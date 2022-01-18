@@ -56,7 +56,7 @@ Les sections suivantes décrivent brièvement les données partagées par les co
 
 > *Nous remercions Maria Rodriguez, Stéphanie B. Nadeau et Mario Gros-Louis pour les échanges et le support.*
 
-Les données transmises par la Nation Huronne-Wendat [@nhw2021] sont composées de neuf thèmes divisées en trois catégories uniques : 
+Les données transmises par la Nation Huronne-Wendat fournissent la localisation de sites d'intérêt principalement dans la portion fluviale du Saint-Laurent et dans l'estuaire et dans une moindre mesure dans l'estuaire du Saint-Laurent [@nhw2021]. Les sites sont composées de neuf thèmes divisées en trois catégories uniques : 
 
 - Sites contemporains 
   - Activités récréatives
@@ -141,14 +141,29 @@ knitr::include_graphics("./figures/figures-integrated/site-huronne_wendat_topony
 <!-- =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= -->
 ##### Nation des Innus d’Essipit
 
-> *Nous remercions  pour les échanges et le support.*
+> *Nous remercions Donald Bouchard et Pierre Tremblay pour les échanges et le support.*
+
+Les données transmises par la Nation des Innus d'Essipit sont une intégration de données provenant de divers sources d'informations [@bouchardcomm] :
+
+- Inventaire des sites archéologiques du Québec.
+- Suivi Innu-Aitun, 2004 à 2018, Essipit.
+- Historique des pêches commerciales (crabe des neiges, oursin) et alimentaire (flétan atlantique), 1996 à 2020, Essipit.
+- Atlas des usages côtiers et marins du Saint-Laurent par les Innus de la Côte-Nord, Agence Mamu Innu Kaikusseht​, 2019.
+- Collecte de données sur la récolte d'oiseaux migrateurs dans sept communautés innues de la Côte-Nord, Agence Mamu Innu Kaihusseht, 2014
+
+Le résultat de l'intégration de ces données fournit la localisation de sites d'intérêts localisés dans l'estuaire du Saint-Laurent et la rivière Saguenay . Ces sites sont divisés en sept catégories : 
+
+- Chasse oiseaux migrateurs
+- Chasse phoque
+- Pêche commerciale
+- Pêche traditionnelle
+- Activités touristiques
+- Accès au plan d'eau
+- Culture et patrimoine
+
+Ces catégories de sites d'intérêts sont utilisées pour l'évaluation des effets cumulatifs des activités maritimes dans la zone d'étude.
 
 
-<br>
-
-```{r essipitacceseau, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Essipit - Accès au plan d'eau", out.width = '100%', fig.link = "./figures/figures-integrated/site-essipit_acces_eau.png"}
-knitr::include_graphics("./figures/figures-integrated/site-essipit_acces_eau.png")
-```
 
 <br>
 
@@ -161,19 +176,11 @@ knitr::include_graphics("./figures/figures-integrated/site-essipit_chasse_oiseau
 ```{r essipitchassephoque, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Essipit - Chasse phoques", out.width = '100%', fig.link = "./figures/figures-integrated/site-essipit_chasse_phoque.png"}
 knitr::include_graphics("./figures/figures-integrated/site-essipit_chasse_phoque.png")
 ```
-
-<br>
-
-```{r essipitculturepatrimoine, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Essipit - Culture et patrimoine", out.width = '100%', fig.link = "./figures/figures-integrated/site-essipit_culture_patrimoine.png"}
-knitr::include_graphics("./figures/figures-integrated/site-essipit_culture_patrimoine.png")
-```
-
 <br>
 
 ```{r essipitpechecommerciale, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Essipit - Pêche commerciale", out.width = '100%', fig.link = "./figures/figures-integrated/site-essipit_peche_commerciale.png"}
 knitr::include_graphics("./figures/figures-integrated/site-essipit_peche_commerciale.png")
 ```
-
 <br>
 
 ```{r essipitpechetraditionnelle, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Essipit - Pêche traditionnelle", out.width = '100%', fig.link = "./figures/figures-integrated/site-essipit_peche_traditionnelle.png"}
@@ -188,10 +195,26 @@ knitr::include_graphics("./figures/figures-integrated/site-essipit_tourisme.png"
 
 <br>
 
+```{r essipitacceseau, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Essipit - Accès au plan d'eau", out.width = '100%', fig.link = "./figures/figures-integrated/site-essipit_acces_eau.png"}
+knitr::include_graphics("./figures/figures-integrated/site-essipit_acces_eau.png")
+```
+
+<br>
+
+```{r essipitculturepatrimoine, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Essipit - Culture et patrimoine", out.width = '100%', fig.link = "./figures/figures-integrated/site-essipit_culture_patrimoine.png"}
+knitr::include_graphics("./figures/figures-integrated/site-essipit_culture_patrimoine.png")
+```
+
+<br>
+
 <!-- =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= -->
 <!-- =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= -->
 <!-- =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= -->
 ##### Nation Mohawk de Kahnawà:ke
+
+
+
+
 
 
 <br>
