@@ -54,52 +54,40 @@ Les sections suivantes décrivent brièvement les données partagées par les co
 <!-- =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= -->
 ##### Nation Huronne-Wendat
 
+> *Nous remercions Maria Rodriguez, Stéphanie B. Nadeau et Mario Gros-Louis pour les échanges et le support.*
+
+Les données transmises par la Nation Huronne-Wendat [@nhw2021] sont composées de neuf thèmes divisées en trois catégories uniques : 
+
+- Sites contemporains 
+  - Activités récréatives
+  - Chasse
+  - Pêche
+  - Récolte de végétaux
+  - Occupation du territoire
+- Sites écologiques
+  - Espèces en péril
+- Sites patrimoniaux 
+  - Archéologie
+  - Histoire 
+  - Toponymie
+
+Les thèmes ont été considérés en tant que catégories uniques de composantes valorisées pour l'évaluation des effets cumulatifs.
+
+###### Sites contemporains
 
 <br>
 
 ```{r huronnewendatactiviterecreative, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation Huronne-Wendat - Activité récréative", out.width = '100%', fig.link = "./figures/figures-integrated/site-huronne_wendat_activite_recreative.png"}
 knitr::include_graphics("./figures/figures-integrated/site-huronne_wendat_activite_recreative.png")
 ```
-
-<br>
-
-```{r huronnewendatarcheologie, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation Huronne-Wendat - Archéologie", out.width = '100%', fig.link = "./figures/figures-integrated/site-huronne_wendat_archeologie.png"}
-knitr::include_graphics("./figures/figures-integrated/site-huronne_wendat_archeologie.png")
-```
-
 <br>
 ```{r huronnewendatchasse, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation Huronne-Wendat - Chasse", out.width = '100%', fig.link = "./figures/figures-integrated/site-huronne_wendat_chasse.png"}
 knitr::include_graphics("./figures/figures-integrated/site-huronne_wendat_chasse.png")
 ```
-
-<br>
-
-```{r huronnewendatespeceperil, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation Huronne-Wendat - Espèce en péril", out.width = '100%', fig.link = "./figures/figures-integrated/site-huronne_wendat_espece_peril.png"}
-knitr::include_graphics("./figures/figures-integrated/site-huronne_wendat_espece_peril.png")
-```
-
-<br>
-
-```{r huronnewendathistoire, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation Huronne-Wendat - Histoire", out.width = '100%', fig.link = "./figures/figures-integrated/site-huronne_wendat_histoire.png"}
-knitr::include_graphics("./figures/figures-integrated/site-huronne_wendat_histoire.png")
-```
-
-<br>
-
-```{r huronnewendatoccupation, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation Huronne-Wendat - Occupation", out.width = '100%', fig.link = "./figures/figures-integrated/site-huronne_wendat_occupation.png"}
-knitr::include_graphics("./figures/figures-integrated/site-huronne_wendat_occupation.png")
-```
-
 <br>
 
 ```{r huronnewendatpeche, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation Huronne-Wendat - Pêche", out.width = '100%', fig.link = "./figures/figures-integrated/site-huronne_wendat_peche.png"}
 knitr::include_graphics("./figures/figures-integrated/site-huronne_wendat_peche.png")
-```
-
-<br>
-
-```{r huronnewendattoponymie, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation Huronne-Wendat - Toponymie", out.width = '100%', fig.link = "./figures/figures-integrated/site-huronne_wendat_toponymie.png"}
-knitr::include_graphics("./figures/figures-integrated/site-huronne_wendat_toponymie.png")
 ```
 
 <br>
@@ -110,11 +98,51 @@ knitr::include_graphics("./figures/figures-integrated/site-huronne_wendat_vegeta
 
 <br>
 
+```{r huronnewendatoccupation, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation Huronne-Wendat - Occupation", out.width = '100%', fig.link = "./figures/figures-integrated/site-huronne_wendat_occupation.png"}
+knitr::include_graphics("./figures/figures-integrated/site-huronne_wendat_occupation.png")
+```
+
+<br>
+
+###### Sites écologiques 
+
+<br>
+
+```{r huronnewendatespeceperil, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation Huronne-Wendat - Espèce en péril", out.width = '100%', fig.link = "./figures/figures-integrated/site-huronne_wendat_espece_peril.png"}
+knitr::include_graphics("./figures/figures-integrated/site-huronne_wendat_espece_peril.png")
+```
+
+<br>
+
+###### Sites patrimoniaux
+
+<br>
+
+```{r huronnewendatarcheologie, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation Huronne-Wendat - Archéologie", out.width = '100%', fig.link = "./figures/figures-integrated/site-huronne_wendat_archeologie.png"}
+knitr::include_graphics("./figures/figures-integrated/site-huronne_wendat_archeologie.png")
+```
+
+<br>
+
+```{r huronnewendathistoire, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation Huronne-Wendat - Histoire", out.width = '100%', fig.link = "./figures/figures-integrated/site-huronne_wendat_histoire.png"}
+knitr::include_graphics("./figures/figures-integrated/site-huronne_wendat_histoire.png")
+```
+
+<br>
+
+```{r huronnewendattoponymie, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation Huronne-Wendat - Toponymie", out.width = '100%', fig.link = "./figures/figures-integrated/site-huronne_wendat_toponymie.png"}
+knitr::include_graphics("./figures/figures-integrated/site-huronne_wendat_toponymie.png")
+```
+
+<br>
 
 <!-- =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= -->
 <!-- =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= -->
 <!-- =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= -->
 ##### Nation des Innus d’Essipit
+
+> *Nous remercions  pour les échanges et le support.*
+
 
 <br>
 
