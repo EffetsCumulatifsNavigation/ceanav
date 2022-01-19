@@ -12,6 +12,9 @@ Pour la vulnérabilité : De plus, il est impossible de cartographier adéquatem
 
 TODO: Vérifier la catégorie traffic identifiée par la communauté. Est-ce qu'on devrait l'ajouter aux stresseurs de navigation?
 TODO: Même chose avec la seigneurie
+
+Bien que ces éléments sont ceux qui sont utilisés au sein de l'évaluation des effets cumulatifs, il demeure important de mentionner que le rapport qui accompage les données spatiales permet de contextualiser l'importance de ces sites en termes qui vont au-delà d'une simple délimitation géographique. De plus, les données identifiées sont contemporaires et ne devraient ainsi pas être considérées représentatives du passé ou du futur. GCNWA
+
 -->
 
 Dans le cadre de ce projet pilote, une importance particulière a été attribuée aux sites d'intérêt pour les Premières Nations. Un processus collaboratif a ainsi été enclenché avec des communautés autochtones ayant des activités historiques et contemporaines au sein de la zone d'étude. Les communautés participantes ayant fournit des données sont les suivantes :
@@ -166,7 +169,6 @@ Le résultat de l'intégration de ces données fournit la localisation de sites 
 Ces catégories de sites d'intérêts sont utilisées pour l'évaluation des effets cumulatifs des activités maritimes dans la zone d'étude.
 
 
-
 <br>
 
 ```{r essipitchasseoiseaux, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Essipit - Chasse oiseaux migrateurs", out.width = '100%', fig.link = "./figures/figures-integrated/site-essipit_chasse_oiseaux.png"}
@@ -317,49 +319,46 @@ knitr::include_graphics("./figures/figures-integrated/site-wolastoqiyik_wahsipek
 
 > *Nous remercions Edgar Blanchet et Hadrien Bois pour les échanges et le support.*
 
-Dans le cadre de ce projet pilote, le Grand Conseil de la Nation Waban-Aki (GCNWA) a procédé à l'intégration d'informations spatialisée et non-spatialisées provenant détudes anthropologiques et archéologiques précédemment produites auprès de leur communauté. Ce travail d'intégration a mené à la production d'un rapport présentant les préoccupations connues de certains membres de leur communauté quant aux pressions environnementales exercées au sein de leur territoire et touchant les composantes valorisées couvertes par notre évaluation des effets cumulatifs des activités maritimes [@GCNWA2021]. Ce rapport est accompagné d'une description cartographique de divers éléments d'intérêt identifiés par certaines membres de leur communauté.
+Dans le cadre de ce projet pilote, le Grand Conseil de la Nation Waban-Aki (GCNWA) a procédé à l'intégration d'informations spatialisée et non-spatialisées provenant d'entretiens semi-dirigés individuels ou en petits groupes sur l'utilisation du territoire précédemment effectuées auprès de membres de la communauté. Ces études regroupent un échantillon de 33 répondant pour 74 entretiens. La cartographie est accompagnée d'informations qualitatives provenant principalement de 1) deux ateliers de type "groupe d'expression" tenus en 2016, des entretiens d'ateliers tenus entre 2019 et 2020 avec des femmes de la Nation, et 3) des analyses d'évaluation des effets de projets d'agrandissements portuaires sur les droits ancestraux de la Nation. Ce travail d'intégration a mené à la production d'un rapport présentant les préoccupations connues de certains membres de la Nation quant aux pressions environnementales exercées au sein de leur territoire et touchant les composantes valorisées couvertes par notre évaluation des effets cumulatifs des activités maritimes [@GCNWA2021]. 
 
-<!--
-L'utilisation et l'occupation contemporaine du territoire par la Nation W8banaki y est décrite à partir de quatre types d'informations, soit
+Les données transmises par le GCNWA fournissent la localisation de sites d'intérêt principalement dans la dans la portion fluviale du Saint-Laurent [@GCNWA2021]. Les sites identifiés sont divisée en 13 catégories distinctes : 
 
-1) espèces valorisées par la Nation
-2) activités connues à caractère alimentaire, rituel ou social
-3) changements perçus ou obstacles
-4)
+- Utilisation et occupation contemporaine du territoire 
+  - Pêche (*e.g.* perchaude, dorés, esturgeons)
+  - Chasse aux oiseaux migrateurs (*e.g.* oie blanche, bernache du Canada)
+  - Chasse au gibier (*e.g.* cerf de Virgine, gélinotte hupée)
+  - Trappe d'animaux à fourrure (*e.g.* rat musqué, lièvre d'Amérique)
+  - Cueillette et collecte de végétaux (*e.g.* quenouille, tête de violon)
+  - Navigation 
+  - Site de coucher (*e.g.* campements)
+  - Sites essentiels (*e.g.* sites d'appâtage, site d'appel)
+  - Zones d'activités (*e.g.* zone de chasse, zone de trappe)
+  - Problèmes liés au territoire (*e.g.* site dont l'accès a été perdu)
+- Sites patrimoniaux, culturels et archéologiques
+  - Sites culturels (*e.g.* site de rassemblement, lieu sacré ou rituel)
+  - Sites archéologiques
+  - Sites à potentiel archéologique
 
-Cette description se traduit en x catégories de sites d'intérêts cartographié :
+Ces catégories de sites d'intérêts sont utilisées pour l'évaluation des effets cumulatifs des activités maritimes dans la zone d'étude.
 
-- Cueillette et collecte (*e.g.* ail des bois, bleuets sauvages)
-- Gibier (*e.g.* cerf de virginie, gélinotte huppée)
-- Oiseaux migrateurs (*e.g.* bernache, oie des neiges)
--
+<br>
 
-2 cueillette_collecte = végétaux
-2 gibier = chasse
-2 oiseaux_migrateurs = chasse
-3 problemes_territoire = accès au territoire
-2 sites_coucher = sites de campements
-2 sites_culturels = sites d'importance culturelle (e.g. lieu sacré, site de rassemblement)
-2 sites_essentiels = sites importants pour la chasse
-2 zones_activites = zones d'importance pour divers activités sur le territoire
-
-
-sites_archeologiques =
-sites_potentiel_archeologique =
-
-
-Bien que ces éléments sont ceux qui sont utilisés au sein de l'évaluation des effets cumulatifs, il demeure important de mentionner que le rapport qui accompage les données spatiales permet de contextualiser l'importance de ces sites en termes qui vont au-delà d'une simple délimitation géographique. De plus, les données identifiées sont contemporaires et ne devraient ainsi pas être considérées représentatives du passé ou du futur.
-
-
-Qualité de l'eau
-Érosion des berges
-Espèces envahissantes
--->
+###### Utilisation et occupation contemporaine du territoire 
 
 <br>
 
 ```{r gcnwapeche, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - GCNWA - Pêche", out.width = '100%', fig.link = "./figures/figures-integrated/site-gcnwa_peche.png"}
 knitr::include_graphics("./figures/figures-integrated/site-gcnwa_peche.png")
+```
+<br>
+
+```{r gcnwaoiseauxmigrateurs, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - GCNWA - Oiseaux migrateurs", out.width = '100%', fig.link = "./figures/figures-integrated/site-gcnwa_oiseaux_migrateurs.png"}
+knitr::include_graphics("./figures/figures-integrated/site-gcnwa_oiseaux_migrateurs.png")
+```
+<br>
+
+```{r gcnwagibier, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - GCNWA - Gibier", out.width = '100%', fig.link = "./figures/figures-integrated/site-gcnwa_gibier.png"}
+knitr::include_graphics("./figures/figures-integrated/site-gcnwa_gibier.png")
 ```
 
 <br>
@@ -376,14 +375,24 @@ knitr::include_graphics("./figures/figures-integrated/site-gcnwa_cueillette_coll
 
 <br>
 
-```{r gcnwagibier, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - GCNWA - Gibier", out.width = '100%', fig.link = "./figures/figures-integrated/site-gcnwa_gibier.png"}
-knitr::include_graphics("./figures/figures-integrated/site-gcnwa_gibier.png")
+```{r gcnwanavigation, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - GCNWA - Navigation", out.width = '100%', fig.link = "./figures/figures-integrated/site-gcnwa_navigation.png"}
+knitr::include_graphics("./figures/figures-integrated/site-gcnwa_navigation.png")
 ```
-
 <br>
 
-```{r gcnwaoiseauxmigrateurs, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - GCNWA - Oiseaux migrateurs", out.width = '100%', fig.link = "./figures/figures-integrated/site-gcnwa_oiseaux_migrateurs.png"}
-knitr::include_graphics("./figures/figures-integrated/site-gcnwa_oiseaux_migrateurs.png")
+```{r gcnwasitescoucher, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - GCNWA - Sites de coucher", out.width = '100%', fig.link = "./figures/figures-integrated/site-gcnwa_sites_coucher.png"}
+knitr::include_graphics("./figures/figures-integrated/site-gcnwa_sites_coucher.png")
+```
+<br>
+
+
+```{r gcnwasitesessentiels, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - GCNWA - Sites essentiels", out.width = '100%', fig.link = "./figures/figures-integrated/site-gcnwa_sites_essentiels.png"}
+knitr::include_graphics("./figures/figures-integrated/site-gcnwa_sites_essentiels.png")
+```
+<br>
+
+```{r gcnwazonesactivites, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - GCNWA - Zones d'activités", out.width = '100%', fig.link = "./figures/figures-integrated/site-gcnwa_zones_activites.png"}
+knitr::include_graphics("./figures/figures-integrated/site-gcnwa_zones_activites.png")
 ```
 
 <br>
@@ -394,15 +403,7 @@ knitr::include_graphics("./figures/figures-integrated/site-gcnwa_problemes_terri
 
 <br>
 
-```{r gcnwasitesarcheologiques, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - GCNWA - Sites archéologiques", out.width = '100%', fig.link = "./figures/figures-integrated/site-gcnwa_sites_archeologiques.png"}
-knitr::include_graphics("./figures/figures-integrated/site-gcnwa_sites_archeologiques.png")
-```
-
-<br>
-
-```{r gcnwasitescoucher, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - GCNWA - Sites de coucher", out.width = '100%', fig.link = "./figures/figures-integrated/site-gcnwa_sites_coucher.png"}
-knitr::include_graphics("./figures/figures-integrated/site-gcnwa_sites_coucher.png")
-```
+###### Sites patrimoniaux, culturels et archéologiques
 
 <br>
 
@@ -412,9 +413,8 @@ knitr::include_graphics("./figures/figures-integrated/site-gcnwa_sites_culturels
 
 <br>
 
-
-```{r gcnwasitesessentiels, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - GCNWA - Sites essentiels", out.width = '100%', fig.link = "./figures/figures-integrated/site-gcnwa_sites_essentiels.png"}
-knitr::include_graphics("./figures/figures-integrated/site-gcnwa_sites_essentiels.png")
+```{r gcnwasitesarcheologiques, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - GCNWA - Sites archéologiques", out.width = '100%', fig.link = "./figures/figures-integrated/site-gcnwa_sites_archeologiques.png"}
+knitr::include_graphics("./figures/figures-integrated/site-gcnwa_sites_archeologiques.png")
 ```
 
 <br>
@@ -423,11 +423,6 @@ knitr::include_graphics("./figures/figures-integrated/site-gcnwa_sites_essentiel
 knitr::include_graphics("./figures/figures-integrated/site-gcnwa_sites_potentiel_archeologique.png")
 ```
 
-<br>
-
-```{r gcnwazonesactivites, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - GCNWA - Zones d'activités", out.width = '100%', fig.link = "./figures/figures-integrated/site-gcnwa_zones_activites.png"}
-knitr::include_graphics("./figures/figures-integrated/site-gcnwa_zones_activites.png")
-```
 
 <br>
 
