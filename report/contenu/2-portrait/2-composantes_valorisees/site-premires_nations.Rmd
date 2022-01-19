@@ -73,7 +73,7 @@ Les données transmises par la Nation Huronne-Wendat fournissent la localisation
 
 Les thèmes ont été considérés en tant que catégories uniques de composantes valorisées pour l'évaluation des effets cumulatifs.
 
-###### Sites contemporains
+###### Sites contemporains {-}
 
 <br>
 
@@ -104,7 +104,7 @@ knitr::include_graphics("./figures/figures-integrated/site-huronne_wendat_occupa
 
 <br>
 
-###### Sites écologiques 
+###### Sites écologiques  {-}
 
 <br>
 
@@ -114,7 +114,7 @@ knitr::include_graphics("./figures/figures-integrated/site-huronne_wendat_espece
 
 <br>
 
-###### Sites patrimoniaux
+###### Sites patrimoniaux {-}
 
 <br>
 
@@ -212,21 +212,35 @@ knitr::include_graphics("./figures/figures-integrated/site-essipit_culture_patri
 <!-- =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= -->
 ##### Nation Mohawk de Kahnawà:ke
 
+> *Nous remercions Patrick Ragaz pour les échanges et le support.*
+
+Les données transmises par la Nation Mohawk de Kahnawà:ke fournissent la localisation de sites d'intérêt dans la portion fluviale du Saint-Laurent dans la région de Montréal et du lac St-Pierre [@mck2021]. Les sites identifiés ciblent principalement les activités de chasse, de pêche et de récolte de végétaux visant une variété d'espèces importantes, des sites culturels, et l'utilisation de certaines portions du territoire par la Nation. Ces derniers peuvent être divisés en huit catégories :
+
+- Activités
+  - Chasse à la sauvagine
+  - Pêche commerciale 
+  - Pêche eau libre
+  - Pêche de rivage
+  - Récolte de végétation 
+- Sites d'importance 
+  - Culture et patrimoine
+- Utilisation du territoire 
+  - Seigneurie du Sault-Saint-Louis
+  - Navigation
+
+Les sites composant ces huit catégories ont été utilisées pour l'évaluation des effets cumulatifs des activités maritimes.
+
+Un clause accompagne les données partagées, que nous nous permettons de retranscrire en son intégralité en anglais : 
+
+> The Mohawk Council of Kahnawà:ke (MCK) has gathered some information from community members concerning the value and use of the St. Lawrence River in the vicinity of Kahnawà:ke. These comments have been organized according to the valued components identified for the fluvial section of the river through the Cumulative Effects of Marine Shipping by the Transport Canada team in collaboration with project partners. Therefore, the information provided is based on a limited consultation of community members, with the intent of responding to the specific parameters of this Transport Canada study only and should not be interpreted as a comprehensive study of Mohawk traditional land use or rights throughout the study area. The information provided should also not be used to replace engagement, including the gathering of traditional land use information within the context of any other future study or project. In addition, our participation in this study is without prejudice to the exercise of our jurisdictional rights to our traditional territory to which our stewardship rights and responsibilities apply and that are based on the application of a broader ecosystem-based approach. Therefore, the identification of specific areas of concern or value, including the identification of specific fish species or archaeological sites of interest is to be understood within the context of these broader rights and responsibilities.
 
 
-
-
+###### Activités {-}
 
 <br>
 
 ```{r kahnawakechasse, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Kahnawake - Chasse", out.width = '100%', fig.link = "./figures/figures-integrated/site-kahnawake_chasse.png"}
 knitr::include_graphics("./figures/figures-integrated/site-kahnawake_chasse.png")
-```
-
-<br>
-
-```{r kahnawakeculturepatrimoine, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Kahnawake - Culture et patrimoine", out.width = '100%', fig.link = "./figures/figures-integrated/site-kahnawake_culture_patrimoine.png"}
-knitr::include_graphics("./figures/figures-integrated/site-kahnawake_culture_patrimoine.png")
 ```
 
 <br>
@@ -239,12 +253,26 @@ knitr::include_graphics("./figures/figures-integrated/site-kahnawake_peche_comme
 ```{r kahnawakepecheoffshore, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Kahnawake - Pêche eau libre", out.width = '100%', fig.link = "./figures/figures-integrated/site-kahnawake_peche_offshore.png"}
 knitr::include_graphics("./figures/figures-integrated/site-kahnawake_peche_offshore.png")
 ```
-
 <br>
 
 ```{r kahnawakepecherivage, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Kahnawake - Pêche rivage", out.width = '100%', fig.link = "./figures/figures-integrated/site-kahnawake_peche_rivage.png"}
 knitr::include_graphics("./figures/figures-integrated/site-kahnawake_peche_rivage.png")
 ```
+<br>
+
+```{r kahnawakevegatation, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Kahnawake - Végétation", out.width = '100%', fig.link = "./figures/figures-integrated/site-kahnawake_vegatation.png"}
+knitr::include_graphics("./figures/figures-integrated/site-kahnawake_vegatation.png")
+```
+
+###### Sites d'importance  {-}
+
+<br>
+
+```{r kahnawakeculturepatrimoine, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Kahnawake - Culture et patrimoine", out.width = '100%', fig.link = "./figures/figures-integrated/site-kahnawake_culture_patrimoine.png"}
+knitr::include_graphics("./figures/figures-integrated/site-kahnawake_culture_patrimoine.png")
+```
+
+###### Utilisation du territoire {-}
 
 <br>
 
@@ -258,11 +286,6 @@ knitr::include_graphics("./figures/figures-integrated/site-kahnawake_sssm.png")
 knitr::include_graphics("./figures/figures-integrated/site-kahnawake_traffic.png")
 ```
 
-<br>
-
-```{r kahnawakevegatation, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Kahnawake - Végétation", out.width = '100%', fig.link = "./figures/figures-integrated/site-kahnawake_vegatation.png"}
-knitr::include_graphics("./figures/figures-integrated/site-kahnawake_vegatation.png")
-```
 
 <br>
 
