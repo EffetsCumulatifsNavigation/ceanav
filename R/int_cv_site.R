@@ -59,6 +59,7 @@ cv_site <- function() {
   #   - GCNWA - Sites essentiels : 0066
   #   - GCNWA - Problèmes liés au territoire : 0066
   #   - GCNWA - Zones d'activités : 0066
+  #   - GCNWA - Pêche : 0066
   #   - GCNWA - Sites archéologiques : 0067
   #   - GCNWA - Sites à potentiel archéologique : 0068
   #
@@ -382,6 +383,11 @@ cv_site <- function() {
   # GCNWA - Zones d'activités : 0066
   meta_temp <- meta_update(meta_temp, dat, "gcnwa_zones_activites", "GCNWA - Zones d'activités", type = "GCNWA")
   site$gcnwa_zones_activites <- uid(dat, "Zones d'activités", "category_ressource")
+
+  # ----------------------------
+  # GCNWA - Pêche : 0066
+  meta_temp <- meta_update(meta_temp, dat, "gcnwa_peche", "GCNWA - Pêche", type = "GCNWA")
+  site$gcnwa_peche <- uid(dat, "Pêche", "category_ressource")
 
   # ----------------------------
   # GCNWA - Sites archéologiques : 0067
