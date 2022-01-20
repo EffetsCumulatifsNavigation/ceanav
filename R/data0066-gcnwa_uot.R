@@ -59,7 +59,7 @@ get_data0066 <- function() {
     data0066$category_ressource[data0066$ressource %in% nm] <- "Sites de coucher"
 
     ## Sites culturels
-    nm <- c("LS","SF","SL","SR","OA","ST","XC")
+    nm <- c("LS","SF","SL","SR","OA","ST")
     data0066$category_ressource[data0066$ressource %in% nm] <- "Sites culturels"
 
     ## Sites essentiels
@@ -74,9 +74,9 @@ get_data0066 <- function() {
     nm <- c("ZC","ZT","ZP","ZE","ZX")
     data0066$category_ressource[data0066$ressource %in% nm] <- "Zones d'activités"
 
-    # ## Moyens de transport
-    # nm <- c("MA","RA","CT","QR","VO","BT","MN","XD","XA")
-    # data0066$category_ressource[data0066$ressource %in% nm] <- "Moyens de transport"
+    ## Navigation
+    nm <- c("BT","DB","XC")
+    data0066$category_ressource[data0066$ressource %in% nm] <- "Navigation"
 
     # ## Zones particulières
     # nm <- c("ZF","ZS")
@@ -84,7 +84,17 @@ get_data0066 <- function() {
 
     ## Pêche
     # TODO: Need to check, those accronyms are not defined
-    #       "DC""DR""ES""BA""AC""BR""PE""DB""DQ""OE""XP""VT"
+    # "DC"
+    # "DR" = Doré  (noir ou jaune)
+    # "ES" = Esturgeon (noir ou jaune)
+    # "BA" = Barbotte ou barbue
+    # "AC" = Achigan (petite ou grande bouche)
+    # "BR" = Brochet ou maskinong 
+    # "PE" = Perchaude
+    # "DQ" = 
+    # "OE" = 
+    # "XP" = Autre esp ce poisson
+    # "VT" = 
     uid <- data0066$category_ressource == ""
     data0066$category_ressource[uid] <- "Pêche"
 

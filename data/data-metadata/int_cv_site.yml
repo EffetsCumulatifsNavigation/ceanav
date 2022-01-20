@@ -52,6 +52,7 @@ dataDescription:
     - gcnwa_problemes_territoire
     - gcnwa_zones_activites
     - gcnwa_peche
+    - gcnwa_navigation
     - gcnwa_sites_archeologiques
     - gcnwa_sites_potentiel_archeologique
     francais:
@@ -94,6 +95,7 @@ dataDescription:
     - GCNWA - Problèmes liés au territoire
     - GCNWA - Zones d'activités
     - GCNWA - Pêche
+    - GCNWA - Navigation
     - GCNWA - Sites archéologiques
     - GCNWA - Sites à potentiel archéologique
     type:
@@ -126,6 +128,7 @@ dataDescription:
     - Huronne_wendat
     - Huronne_wendat
     - Huronne_wendat
+    - GCNWA
     - GCNWA
     - GCNWA
     - GCNWA
@@ -178,6 +181,7 @@ dataDescription:
     - '0066'
     - '0066'
     - '0066'
+    - '0066'
     - '0067'
     - 0068
     mdref:
@@ -220,6 +224,7 @@ dataDescription:
     - gcnwaproblemesterritoire
     - gcnwazonesactivites
     - gcnwapeche
+    - gcnwanavigation
     - gcnwasitesarcheologiques
     - gcnwasitespotentielarcheologique
 rawData:
@@ -257,6 +262,7 @@ rawData:
 - '0055'
 - '0055'
 - '0055'
+- '0066'
 - '0066'
 - '0066'
 - '0066'
