@@ -35,6 +35,7 @@ fig_integrated <- function(data_id) {
   # Titles
   main <- meta$title
   nm <- meta$dataDescription$categories$accronyme
+  tp <- meta$dataDescription$categories$type
   subt <- meta$dataDescription$categories$francais
   ref <- meta$dataDescription$categories$source
   un <- meta$dataDescription$units
@@ -46,6 +47,7 @@ fig_integrated <- function(data_id) {
     plot_ceanav(
       dat[, nm[i]],
       main = main,
+      type = tp[i],
       subtitle = subt[i],
       unit_data = un,
       references = ref[i]

@@ -13,6 +13,7 @@
 #' @param subTitle character, type of legend. Choices are 'continuous', 'binary' or 'categorical'
 #' @param type character, type of legend. Choices are 'continuous', 'binary' or 'categorical'
 #' @param nTick numeric, number of ticks in the legend
+#' @param minUp numeric, minimum upper side to write as a function of bbox extent
 #'
 #' @return Opens a graphical interface with the plot
 #'
@@ -21,6 +22,7 @@ plot_legend_cont <- function (range = c(0,1),
                               pal = NULL,
                               cexMain = 1,
                               cexSub = .75,
+                              minUp = .175,
                               mainTitle = NULL,
                               subTitle = NULL,
                               n = 5) {
@@ -39,7 +41,7 @@ plot_legend_cont <- function (range = c(0,1),
   yR <- ymax - ymin
 
   xinit <- xmin + .041*xR # minimum left side to write
-  yinit <- ymax - .175*yR # minimum upper side to write
+  yinit <- ymax - minUp*yR # minimum upper side to write
   ygap <- .056*yR
   xgap <- .014*xR
   ybarUp <- yinit - ygap/2 - .0041*yR
@@ -66,9 +68,16 @@ plot_legend_cont <- function (range = c(0,1),
    lines(x = c(xinit, xinit + .17*xR), y = rep(z$y2[1], 2))
    for(i in 1:n) lines(x = rep(x[i],2), y = c(z$y2[1], z$y2[1]- .003*yR))
 
+   # Labels
+   if(range[2] <= 5) {
+     lab <- round(seq(from = 0, to = max(range[2]), length.out = n), 2)     
+   } else {
+     lab <- round(seq(from = 0, to = max(range[2]), length.out = n))     
+   }
+   
    text(x = x,
         y =  rep(z$y2[1] - .01*yR, n),
-        labels = round(seq(from = 0, to = max(range[2]), length.out = n)),
+        labels = lab,
         cex = cexSub*.75,
         adj = c(1, 1),
         srt = 45)
@@ -104,6 +113,7 @@ plot_legend_cont <- function (range = c(0,1),
 plot_legend_bin <- function (col,
                              cexMain = 1,
                              cexSub = .75,
+                             minUp = .175,
                              mainTitle = NULL,
                              subTitle = NULL) {
 
@@ -116,7 +126,7 @@ plot_legend_bin <- function (col,
   yR <- ymax - ymin
 
   xinit <- xmin + .041*xR # minimum left side to write
-  yinit <- ymax - .175*yR # minimum upper side to write
+  yinit <- ymax - minUp*yR # minimum upper side to write
   ygap <- .056*yR
   xgap <- .014*xR
   ybarUp <- yinit - ygap/2 - .0041*yR

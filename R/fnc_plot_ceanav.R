@@ -4,10 +4,12 @@
 #'
 #' @param dat object of class sf
 #' @param main main title
+#' @param type secondary title / data type (see metadata files)
 #' @param subtitle subtitle
 #' @param unit_data units of data
 #' @param references data citation used for integrated data
 #' @param city logical, if TRUE name of cities are added to graph
+#' @param minUp numeric, minimum upper side to write as a function of bbox extent (legend)
 #' @param ... further specifications, see \link{plot} and details.
 #'
 #' @examples
@@ -23,7 +25,7 @@ plot_ceanav <- function(dat, ...) {
 #' @method plot_ceanav sf
 #' @name plot_ceanav
 #' @export
-plot_ceanav.sf <- function(dat, main = NULL, subtitle = NULL, unit_data = NULL, references = NULL, city = TRUE, ...) {
+plot_ceanav.sf <- function(dat, main = NULL, type = NULL, subtitle = NULL, unit_data = NULL, references = NULL, city = TRUE, ...) {
 
   # pdf(glue('./figures/figures-format/{data_id}.pdf'), width = 7, height = 5, pointsize = 12)
   # png(glue('./figures/delete.png'), res = 300, width = 100, height = 70, units = "mm", pointsize = 12)
@@ -103,13 +105,15 @@ plot_ceanav.sf <- function(dat, main = NULL, subtitle = NULL, unit_data = NULL, 
   bin <- dat[,1,drop = TRUE] %>%
          table() %>%
          names()
+  minUp <- ifelse(is.null(type), .175, .23)
 
   if (length(bin) == 2 | length(bin) == 1) {
     cols <- global_param$col$integrated$palette[4]
     plot_legend_bin(
       col = cols,
       subTitle = "Présence",
-      cexSub = .5
+      cexSub = .5,
+      minUp = minUp
     )
   } else {
     maxDat <- max(dat[,1,drop = TRUE], na.rm = TRUE)
@@ -118,15 +122,18 @@ plot_ceanav.sf <- function(dat, main = NULL, subtitle = NULL, unit_data = NULL, 
       range = range(dat[,1,drop = TRUE], na.rm = TRUE),
       pal = pal,
       subTitle = unit_data,
-      cexSub = .4
+      cexSub = .4,
+      minUp = minUp
     )
   }
 
   # ------------------
   # Text
+  y <- bbox$ymax
   if (!is.null(main)) {
+    y <- y - 10000
     text(x = bbox$xmin + 1000,
-         y = bbox$ymax - 10000,
+         y = y,
          labels = main,
          font = 2,
          adj = c(0,.5),
@@ -134,10 +141,27 @@ plot_ceanav.sf <- function(dat, main = NULL, subtitle = NULL, unit_data = NULL, 
        )
   }
 
-  if (!is.null(subtitle)) {
+  if (!is.null(type)) {
+    y <- y - 30000
     text(
       x = bbox$xmin + 1000,
-      y = bbox$ymax - 40000,
+      y = y,
+      labels = type,
+      adj = c(0,.5),
+      font = 1,
+      cex = .6
+    )
+  }
+
+  if (!is.null(subtitle)) {
+      if (!is.null(type)) {
+        y <- y - 25000
+      } else {
+        y <- y - 30000
+      }
+    text(
+      x = bbox$xmin + 1000,
+      y = y,
       labels = subtitle,
       adj = c(0,.5),
       font = 3,

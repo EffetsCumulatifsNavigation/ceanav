@@ -10,6 +10,7 @@ plot_legend_cont(
   pal = NULL,
   cexMain = 1,
   cexSub = 0.75,
+  minUp = 0.175,
   mainTitle = NULL,
   subTitle = NULL,
   n = 5
@@ -19,6 +20,7 @@ plot_legend_bin(
   col,
   cexMain = 1,
   cexSub = 0.75,
+  minUp = 0.175,
   mainTitle = NULL,
   subTitle = NULL
 )
@@ -27,6 +29,8 @@ plot_legend_bin(
 \item{range}{numeric, vector with minimal and maximal values}
 
 \item{pal}{character, vector of colors, or color palette}
+
+\item{minUp}{numeric, minimum upper side to write as a function of bbox extent}
 
 \item{mainTitle}{character, type of legend. Choices are 'continuous', 'binary' or 'categorical'}
 

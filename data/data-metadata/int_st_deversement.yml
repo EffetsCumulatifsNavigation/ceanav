@@ -3,7 +3,7 @@ description: Distribution et intensité des déversement accidentels dans le Sai
   et le Saguenay
 id: deversement
 dataDescription:
-  units: NA
+  units: Sans unité
   spatial:
     resolution: 1km^2
     extent:

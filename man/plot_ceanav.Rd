@@ -10,6 +10,7 @@ plot_ceanav(dat, ...)
 \method{plot_ceanav}{sf}(
   dat,
   main = NULL,
+  type = NULL,
   subtitle = NULL,
   unit_data = NULL,
   references = NULL,
@@ -24,6 +25,8 @@ plot_ceanav(dat, ...)
 
 \item{main}{main title}
 
+\item{type}{secondary title / data type (see metadata files)}
+
 \item{subtitle}{subtitle}
 
 \item{unit_data}{units of data}
@@ -31,6 +34,8 @@ plot_ceanav(dat, ...)
 \item{references}{data citation used for integrated data}
 
 \item{city}{logical, if TRUE name of cities are added to graph}
+
+\item{minUp}{numeric, minimum upper side to write as a function of bbox extent (legend)}
 }
 \description{
 base plot functions for ceanav project
