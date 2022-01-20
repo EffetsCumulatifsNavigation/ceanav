@@ -164,8 +164,8 @@ Les données transmises par la Nation des Innus d'Essipit sont une intégration 
 
 Le résultat de l'intégration de ces données fournit la localisation de sites d'intérêts localisés dans l'estuaire du Saint-Laurent et la rivière Saguenay . Ces sites sont divisés en sept catégories : 
 
-- Chasse oiseaux migrateurs
-- Chasse phoque
+- Chasse aux oiseaux migrateurs
+- Chasse au phoque
 - Pêche commerciale
 - Pêche traditionnelle
 - Activités touristiques
@@ -229,7 +229,7 @@ Les données transmises par la Nation Mohawk de Kahnawà:ke fournissent la local
 - Activités
   - Chasse à la sauvagine
   - Pêche commerciale 
-  - Pêche eau libre
+  - Pêche en eau libre
   - Pêche de rivage
   - Récolte de végétation 
 - Sites d'importance 

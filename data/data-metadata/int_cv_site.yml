@@ -56,91 +56,91 @@ dataDescription:
     - gcnwa_sites_archeologiques
     - gcnwa_sites_potentiel_archeologique
     francais:
-    - AGHAMM - Pêche commerciale
-    - AGHAMM - Pêche traditionnelle
-    - Essipit - Culture et patrimoine
-    - Essipit - Pêche traditionnelle
-    - Essipit - Chasse oiseaux migrateurs
-    - Essipit - Chasse phoques
-    - Essipit - Pêche commerciale
-    - Essipit - Tourisme
-    - Essipit - Accès au plan d'eau
-    - Wolastoqiyik Wahsipekuk - Pêche traditionnelle
-    - Nation Mohawk de Kahnawà:ke - Culture et patrimoine
-    - Nation Mohawk de Kahnawà:ke - Pêche commerciale
-    - Nation Mohawk de Kahnawà:ke - Chasse
-    - Nation Mohawk de Kahnawà:ke - Pêche rivage
-    - Nation Mohawk de Kahnawà:ke - Pêche eau libre
-    - Nation Mohawk de Kahnawà:ke - Seigneurie du Sault-Saint-Louis
-    - Nation Mohawk de Kahnawà:ke - Navigation
-    - Nation Mohawk de Kahnawà:ke - Végétation
-    - Public - Milieux protégés
-    - Public - Sites patrimoniaux
-    - Nation Huronne-Wendat - Activité récréative
-    - Nation Huronne-Wendat - Pêche
-    - Nation Huronne-Wendat - Chasse
-    - Nation Huronne-Wendat - Récolte de végétaux
-    - Nation Huronne-Wendat - Occupation
-    - Nation Huronne-Wendat - Archéologie
-    - Nation Huronne-Wendat - Toponymie
-    - Nation Huronne-Wendat - Histoire
-    - Nation Huronne-Wendat - Espèce en péril
-    - GCNWA - Gibier
-    - GCNWA - Oiseaux migrateurs
-    - GCNWA - Animaux à fourrure
-    - GCNWA - Cueillette et collecte
-    - GCNWA - Sites de coucher
-    - GCNWA - Sites culturels
-    - GCNWA - Sites essentiels
-    - GCNWA - Problèmes liés au territoire
-    - GCNWA - Zones d'activités
-    - GCNWA - Pêche
-    - GCNWA - Navigation
-    - GCNWA - Sites archéologiques
-    - GCNWA - Sites à potentiel archéologique
+    - Pêche commerciale
+    - Pêche traditionnelle
+    - Culture et patrimoine
+    - Pêche traditionnelle
+    - Chasse aux oiseaux migrateurs
+    - Chasse aux phoques
+    - Pêche commerciale
+    - Activités touristiques
+    - Accès au plan d'eau
+    - Pêche traditionnelle
+    - Culture et patrimoine
+    - Pêche commerciale
+    - Chasse à la sauvagine
+    - Pêche de rivage
+    - Pêche en eau libre
+    - Seigneurie du Sault-Saint-Louis
+    - Navigation
+    - Récolte de végétation
+    - Milieux protégés
+    - Sites patrimoniaux
+    - Activités récréatives
+    - Pêche
+    - Chasse
+    - Récolte de végétaux
+    - Occupation du territoire
+    - Archéologie
+    - Toponymie
+    - Histoire
+    - Espèce en péril
+    - Chasse au gibier
+    - Chasse aux oiseaux migrateurs
+    - Trappe d'animaux à fourrure
+    - Cueillette et collecte de végétaux
+    - Sites de coucher
+    - Sites culturels
+    - Sites essentiels
+    - Problèmes liés à l'accès au territoire
+    - Zones d'activités
+    - Pêche
+    - Navigation
+    - Sites archéologiques
+    - Sites à potentiel archéologique
     type:
-    - AGHAMM
-    - AGHAMM
-    - Essipit
-    - Essipit
-    - Essipit
-    - Essipit
-    - Essipit
-    - Essipit
-    - Essipit
-    - Wolastoqiyik Wahsipekuk
-    - Kahnawake
-    - Kahnawake
-    - Kahnawake
-    - Kahnawake
-    - Kahnawake
-    - Kahnawake
-    - Kahnawake
-    - Kahnawake
+    - Association de gestion halieutique Mi'kmaq et Malécite
+    - Association de gestion halieutique Mi'kmaq et Malécite
+    - Nation des Innus d’Essipit
+    - Nation des Innus d’Essipit
+    - Nation des Innus d’Essipit
+    - Nation des Innus d’Essipit
+    - Nation des Innus d’Essipit
+    - Nation des Innus d’Essipit
+    - Nation des Innus d’Essipit
+    - Nation Wolastoqiyik Wahsipekuk
+    - Nation Mohawk de Kahnawà:ke
+    - Nation Mohawk de Kahnawà:ke
+    - Nation Mohawk de Kahnawà:ke
+    - Nation Mohawk de Kahnawà:ke
+    - Nation Mohawk de Kahnawà:ke
+    - Nation Mohawk de Kahnawà:ke
+    - Nation Mohawk de Kahnawà:ke
+    - Nation Mohawk de Kahnawà:ke
     - Public
     - Public
-    - Huronne_wendat
-    - Huronne_wendat
-    - Huronne_wendat
-    - Huronne_wendat
-    - Huronne_wendat
-    - Huronne_wendat
-    - Huronne_wendat
-    - Huronne_wendat
-    - Huronne_wendat
-    - GCNWA
-    - GCNWA
-    - GCNWA
-    - GCNWA
-    - GCNWA
-    - GCNWA
-    - GCNWA
-    - GCNWA
-    - GCNWA
-    - GCNWA
-    - GCNWA
-    - GCNWA
-    - GCNWA
+    - Nation Huronne-Wendat
+    - Nation Huronne-Wendat
+    - Nation Huronne-Wendat
+    - Nation Huronne-Wendat
+    - Nation Huronne-Wendat
+    - Nation Huronne-Wendat
+    - Nation Huronne-Wendat
+    - Nation Huronne-Wendat
+    - Nation Huronne-Wendat
+    - Nation W8banaki
+    - Nation W8banaki
+    - Nation W8banaki
+    - Nation W8banaki
+    - Nation W8banaki
+    - Nation W8banaki
+    - Nation W8banaki
+    - Nation W8banaki
+    - Nation W8banaki
+    - Nation W8banaki
+    - Nation W8banaki
+    - Nation W8banaki
+    - Nation W8banaki
     source:
     - '0022'
     - '0023'

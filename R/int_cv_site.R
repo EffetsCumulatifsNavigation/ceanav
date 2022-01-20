@@ -130,7 +130,7 @@ cv_site <- function() {
   # ------------------------------------------------------
   # AGHAMM - pêche commerciale : 0022
   dat <- "0022"
-  meta_temp <- meta_update(meta_temp, dat, "aghamm_peche_commerciale", "AGHAMM - Pêche commerciale", type = "AGHAMM")
+  meta_temp <- meta_update(meta_temp, dat, "aghamm_peche_commerciale", "Pêche commerciale", type = "Association de gestion halieutique Mi'kmaq et Malécite")
 
   # -----
   site$aghamm_peche_commerciale <- uid(dat)
@@ -138,7 +138,7 @@ cv_site <- function() {
   # ----------------------------
   # AGHAMM - pêche au saumon Atlantique : 0023
   dat <- "0023"
-  meta_temp <- meta_update(meta_temp, dat, "aghamm_peche_traditionnelle", "AGHAMM - Pêche traditionnelle", type = "AGHAMM")
+  meta_temp <- meta_update(meta_temp, dat, "aghamm_peche_traditionnelle", "Pêche traditionnelle", type = "Association de gestion halieutique Mi'kmaq et Malécite")
 
   # -----
   site$aghamm_peche_traditionnelle <- uid(dat)
@@ -147,46 +147,46 @@ cv_site <- function() {
   # ----------------------------
   # Essipit - Culture et patrimoine : 0024
   dat <- "0024"
-  meta_temp <- meta_update(meta_temp, dat, "essipit_culture_patrimoine", "Essipit - Culture et patrimoine", type = "Essipit")
+  meta_temp <- meta_update(meta_temp, dat, "essipit_culture_patrimoine", "Culture et patrimoine", type = "Nation des Innus d’Essipit")
 
   # -----
   site$essipit_culture_patrimoine <- uid(dat, "Culture et patrimoine", "Categorie")
 
   # ----------------------------
   # Essipit - Pêche traditionnelle : 0024
-  meta_temp <- meta_update(meta_temp, dat, "essipit_peche_traditionnelle", "Essipit - Pêche traditionnelle", type = "Essipit")
+  meta_temp <- meta_update(meta_temp, dat, "essipit_peche_traditionnelle", "Pêche traditionnelle", type = "Nation des Innus d’Essipit")
   site$essipit_peche_traditionnelle <- uid(dat, "Pêche traditionnelle", "Categorie")
 
   # ----------------------------
   # Essipit - Chasse oiseaux migrateurs : 0024
-  meta_temp <- meta_update(meta_temp, dat, "essipit_chasse_oiseaux", "Essipit - Chasse oiseaux migrateurs", type = "Essipit")
+  meta_temp <- meta_update(meta_temp, dat, "essipit_chasse_oiseaux", "Chasse aux oiseaux migrateurs", type = "Nation des Innus d’Essipit")
   site$essipit_chasse_oiseaux <- uid(dat, "Chasse oiseaux migrateurs", "Categorie")
 
   # ----------------------------
   # Essipit - Chasse phoque : 0024
-  meta_temp <- meta_update(meta_temp, dat, "essipit_chasse_phoque", "Essipit - Chasse phoques", type = "Essipit")
+  meta_temp <- meta_update(meta_temp, dat, "essipit_chasse_phoque", "Chasse aux phoques", type = "Nation des Innus d’Essipit")
   site$essipit_chasse_phoque <- uid(dat, "Chasse phoque", "Categorie")
 
   # ----------------------------
   # Essipit - Pêche commerciale : 0024
-  meta_temp <- meta_update(meta_temp, dat, "essipit_peche_commerciale", "Essipit - Pêche commerciale", type = "Essipit")
+  meta_temp <- meta_update(meta_temp, dat, "essipit_peche_commerciale", "Pêche commerciale", type = "Nation des Innus d’Essipit")
   site$essipit_peche_commerciale <- uid(dat, "Pêche commerciale", "Categorie")
 
   # ----------------------------
   # Essipit - Activités touristiques : 0024
-  meta_temp <- meta_update(meta_temp, dat, "essipit_tourisme", "Essipit - Tourisme", type = "Essipit")
+  meta_temp <- meta_update(meta_temp, dat, "essipit_tourisme", "Activités touristiques", type = "Nation des Innus d’Essipit")
   site$essipit_tourisme <- uid(dat, "Activités touristiques", "Categorie")
 
   # ----------------------------
   # Essipit - Accès au plan d'eau : 0024
-  meta_temp <- meta_update(meta_temp, dat, "essipit_acces_eau", "Essipit - Accès au plan d'eau", type = "Essipit")
+  meta_temp <- meta_update(meta_temp, dat, "essipit_acces_eau", "Accès au plan d'eau", type = "Nation des Innus d’Essipit")
   site$essipit_acces_eau <- uid(dat, "Accès au plan d'eau", "Categorie")
 
   # ================================================================================================
   # ----------------------------
   # Wolastoqiyik Wahsipekuk - Pêche commerciale : 0025, 0026
   dat <- c("0025", "0026")
-  meta_temp <- meta_update(meta_temp, dat, "wolastoqiyik_wahsipekuk_peche_commerciale", "Wolastoqiyik Wahsipekuk - Pêche traditionnelle", type = "Wolastoqiyik Wahsipekuk")
+  meta_temp <- meta_update(meta_temp, dat, "wolastoqiyik_wahsipekuk_peche_commerciale", "Pêche traditionnelle", type = "Nation Wolastoqiyik Wahsipekuk")
 
   # -----
   site$wolastoqiyik_wahsipekuk_peche_commerciale <- uid(dat)
@@ -195,45 +195,45 @@ cv_site <- function() {
   # ----------------------------
   # Kahnawake - Cultural Sites : 0032
   dat <- "0032"
-  meta_temp <- meta_update(meta_temp, dat, "kahnawake_culture_patrimoine", "Nation Mohawk de Kahnawà:ke - Culture et patrimoine", type = "Kahnawake")
+  meta_temp <- meta_update(meta_temp, dat, "kahnawake_culture_patrimoine", "Culture et patrimoine", type = "Nation Mohawk de Kahnawà:ke")
   site$kahnawake_culture_patrimoine <- uid(dat, "Cultural Sites", "category")
 
   # ----------------------------
   # Kahnawake - Fishing Commercial : 0032
-  meta_temp <- meta_update(meta_temp, dat, "kahnawake_peche_commerciale", "Nation Mohawk de Kahnawà:ke - Pêche commerciale", type = "Kahnawake")
+  meta_temp <- meta_update(meta_temp, dat, "kahnawake_peche_commerciale", "Pêche commerciale", type = "Nation Mohawk de Kahnawà:ke")
   site$kahnawake_peche_commerciale <- uid(dat, "Fishing Commercial", "category")
 
 
   # ----------------------------
   # Kahnawake - Hunting : 0032
-  meta_temp <- meta_update(meta_temp, dat, "kahnawake_chasse", "Nation Mohawk de Kahnawà:ke - Chasse", type = "Kahnawake")
+  meta_temp <- meta_update(meta_temp, dat, "kahnawake_chasse", "Chasse à la sauvagine", type = "Nation Mohawk de Kahnawà:ke")
   site$kahnawake_chasse <- uid(dat, "Hunting", "category")
 
 
   # ----------------------------
   # Kahnawake - Near Shore Fishing : 0032
-  meta_temp <- meta_update(meta_temp, dat, "kahnawake_peche_rivage", "Nation Mohawk de Kahnawà:ke - Pêche rivage", type = "Kahnawake")
+  meta_temp <- meta_update(meta_temp, dat, "kahnawake_peche_rivage", "Pêche de rivage", type = "Nation Mohawk de Kahnawà:ke")
   site$kahnawake_peche_rivage <- uid(dat, "Near Shore Fishing", "category")
 
   # ----------------------------
   # Kahnawake - Open Water Fishing : 0032
-  meta_temp <- meta_update(meta_temp, dat, "kahnawake_peche_offshore", "Nation Mohawk de Kahnawà:ke - Pêche eau libre", type = "Kahnawake")
+  meta_temp <- meta_update(meta_temp, dat, "kahnawake_peche_offshore", "Pêche en eau libre", type = "Nation Mohawk de Kahnawà:ke")
   site$kahnawake_peche_offshore <- uid(dat, "Open Water Fishing", "category")
 
   # ----------------------------
   # Kahnawake - SSSM : 0032
-  meta_temp <- meta_update(meta_temp, dat, "kahnawake_sssm", "Nation Mohawk de Kahnawà:ke - Seigneurie du Sault-Saint-Louis", type = "Kahnawake")
+  meta_temp <- meta_update(meta_temp, dat, "kahnawake_sssm", "Seigneurie du Sault-Saint-Louis", type = "Nation Mohawk de Kahnawà:ke")
   site$kahnawake_sssm <- uid(dat, "SSSM", "category")
 
 
   # ----------------------------
   # Kahnawake - Traffic : 0032
-  meta_temp <- meta_update(meta_temp, dat, "kahnawake_traffic", "Nation Mohawk de Kahnawà:ke - Navigation", type = "Kahnawake")
+  meta_temp <- meta_update(meta_temp, dat, "kahnawake_traffic", "Navigation", type = "Nation Mohawk de Kahnawà:ke")
   site$kahnawake_traffic <- uid(dat, "Traffic", "category")
 
   # ----------------------------
   # Kahnawake - Vegetation : 0032
-  meta_temp <- meta_update(meta_temp, dat, "kahnawake_vegatation", "Nation Mohawk de Kahnawà:ke - Végétation", type = "Kahnawake")
+  meta_temp <- meta_update(meta_temp, dat, "kahnawake_vegatation", "Récolte de végétation", type = "Nation Mohawk de Kahnawà:ke")
   site$kahnawake_vegatation <- uid(dat, "Vegetation", "category")
 
 
@@ -241,7 +241,7 @@ cv_site <- function() {
   # ----------------------------
   # Milieux protégés : 0030, 0038, 0039, 0040
   dat <- c("0030", "0038", "0039", "0040")
-  meta_temp <- meta_update(meta_temp, dat, "public_milieu_protege", "Public - Milieux protégés", type = "Public")
+  meta_temp <- meta_update(meta_temp, dat, "public_milieu_protege", "Milieux protégés", type = "Public")
 
 
   # ================================================================================================
@@ -278,7 +278,7 @@ cv_site <- function() {
   # ----------------------------
   # Sites patrimoniaux : 0044, 0045
   dat <- c("0044", "0045")
-  meta_temp <- meta_update(meta_temp, dat, "public_sites_patrimoniaux", "Public - Sites patrimoniaux", type = "Public")
+  meta_temp <- meta_update(meta_temp, dat, "public_sites_patrimoniaux", "Sites patrimoniaux", type = "Public")
 
   # -----
   load_format("data0044")
@@ -295,117 +295,117 @@ cv_site <- function() {
   # Nation Huronne-Wendat
   # Huronne-Wendat - Activités récréatives - 0055
   dat <- "0055"
-  meta_temp <- meta_update(meta_temp, dat, "huronne_wendat_activite_recreative", "Nation Huronne-Wendat - Activité récréative", type = "Huronne_wendat")
+  meta_temp <- meta_update(meta_temp, dat, "huronne_wendat_activite_recreative", "Activités récréatives", type = "Nation Huronne-Wendat")
   site$huronne_wendat_activite_recreative <- uid(dat, "Activité récréative", "Thème")
 
   # ----------------------------
   # Huronne-Wendat Pêche - 0055
-  meta_temp <- meta_update(meta_temp, dat, "huronne_wendat_peche", "Nation Huronne-Wendat - Pêche", type = "Huronne_wendat")
+  meta_temp <- meta_update(meta_temp, dat, "huronne_wendat_peche", "Pêche", type = "Nation Huronne-Wendat")
   site$huronne_wendat_peche <- uid(dat, "Pêche", "Thème")
 
   # ----------------------------
   # Huronne-Wendat Chasse - 0055
-  meta_temp <- meta_update(meta_temp, dat, "huronne_wendat_chasse", "Nation Huronne-Wendat - Chasse", type = "Huronne_wendat")
+  meta_temp <- meta_update(meta_temp, dat, "huronne_wendat_chasse", "Chasse", type = "Nation Huronne-Wendat")
   site$huronne_wendat_chasse <- uid(dat, "Chasse", "Thème")
 
   # ----------------------------
   # Huronne-Wendat Récolte de végétaux - 0055
-  meta_temp <- meta_update(meta_temp, dat, "huronne_wendat_vegetaux", "Nation Huronne-Wendat - Récolte de végétaux", type = "Huronne_wendat")
+  meta_temp <- meta_update(meta_temp, dat, "huronne_wendat_vegetaux", "Récolte de végétaux", type = "Nation Huronne-Wendat")
   site$huronne_wendat_vegetaux <- uid(dat, "Récolte de végétaux", "Thème")
 
   # ----------------------------
   # Huronne-Wendat - Occupation - 0055 : Ne se retrouve pas dans notre zone d'étude
-  meta_temp <- meta_update(meta_temp, dat, "huronne_wendat_occupation", "Nation Huronne-Wendat - Occupation", type = "Huronne_wendat")
+  meta_temp <- meta_update(meta_temp, dat, "huronne_wendat_occupation", "Occupation du territoire", type = "Nation Huronne-Wendat")
   site$huronne_wendat_occupation <- uid(dat, "Occupation H-W", "Thème")
 
   # ----------------------------
   # Huronne-Wendat - Archéologie - 0055
-  meta_temp <- meta_update(meta_temp, dat, "huronne_wendat_archeologie", "Nation Huronne-Wendat - Archéologie", type = "Huronne_wendat")
+  meta_temp <- meta_update(meta_temp, dat, "huronne_wendat_archeologie", "Archéologie", type = "Nation Huronne-Wendat")
   site$huronne_wendat_archeologie <- uid(dat, "Archéologie", "Thème")
 
   # ----------------------------
   # Huronne-Wendat - Toponymie - 0055
-  meta_temp <- meta_update(meta_temp, dat, "huronne_wendat_toponymie", "Nation Huronne-Wendat - Toponymie", type = "Huronne_wendat")
+  meta_temp <- meta_update(meta_temp, dat, "huronne_wendat_toponymie", "Toponymie", type = "Nation Huronne-Wendat")
   site$huronne_wendat_toponymie <- uid(dat, "Toponymie", "Thème")
 
   # ----------------------------
   # Huronne-Wendat - Histoire - 0055
-  meta_temp <- meta_update(meta_temp, dat, "huronne_wendat_histoire", "Nation Huronne-Wendat - Histoire", type = "Huronne_wendat")
+  meta_temp <- meta_update(meta_temp, dat, "huronne_wendat_histoire", "Histoire", type = "Nation Huronne-Wendat")
   site$huronne_wendat_histoire <- uid(dat, "Histoire", "Thème")
 
   # ----------------------------
   # Huronne-Wendat - Espèce en péril - 0055
-  meta_temp <- meta_update(meta_temp, dat, "huronne_wendat_espece_peril", "Nation Huronne-Wendat - Espèce en péril", type = "Huronne_wendat")
+  meta_temp <- meta_update(meta_temp, dat, "huronne_wendat_espece_peril", "Espèce en péril", type = "Nation Huronne-Wendat")
   site$huronne_wendat_espece_peril <- uid(dat, "Espèce en péril", "Thème")
 
   # ================================================================================================
   # ----------------------------
   # GCNWA - Gibier : 0066
   dat <- "0066"
-  meta_temp <- meta_update(meta_temp, dat, "gcnwa_gibier", "GCNWA - Gibier", type = "GCNWA")
+  meta_temp <- meta_update(meta_temp, dat, "gcnwa_gibier", "Chasse au gibier", type = "Nation W8banaki")
   site$gcnwa_gibier <- uid(dat, "Gibier", "category_ressource")
 
   # ----------------------------
   # GCNWA - Oiseaux migrateurs : 0066
-  meta_temp <- meta_update(meta_temp, dat, "gcnwa_oiseaux_migrateurs", "GCNWA - Oiseaux migrateurs", type = "GCNWA")
+  meta_temp <- meta_update(meta_temp, dat, "gcnwa_oiseaux_migrateurs", "Chasse aux oiseaux migrateurs", type = "Nation W8banaki")
   site$gcnwa_oiseaux_migrateurs <- uid(dat, "Oiseaux migrateurs", "category_ressource")
 
   # ----------------------------
   # GCNWA - Animaux à fourrure : 0066
-  meta_temp <- meta_update(meta_temp, dat, "gcnwa_animaux_fourrure", "GCNWA - Animaux à fourrure", type = "GCNWA")
+  meta_temp <- meta_update(meta_temp, dat, "gcnwa_animaux_fourrure", "Trappe d'animaux à fourrure", type = "Nation W8banaki")
   site$gcnwa_animaux_fourrure <- uid(dat, "Animaux à fourrure", "category_ressource")
 
   # ----------------------------
   # GCNWA - Cueillette et collecte : 0066
-  meta_temp <- meta_update(meta_temp, dat, "gcnwa_cueillette_collecte", "GCNWA - Cueillette et collecte", type = "GCNWA")
+  meta_temp <- meta_update(meta_temp, dat, "gcnwa_cueillette_collecte", "Cueillette et collecte de végétaux", type = "Nation W8banaki")
   site$gcnwa_cueillette_collecte <- uid(dat, "Cueillette et collecte", "category_ressource")
 
   # ----------------------------
   # GCNWA - Sites de coucher : 0066
-  meta_temp <- meta_update(meta_temp, dat, "gcnwa_sites_coucher", "GCNWA - Sites de coucher", type = "GCNWA")
+  meta_temp <- meta_update(meta_temp, dat, "gcnwa_sites_coucher", "Sites de coucher", type = "Nation W8banaki")
   site$gcnwa_sites_coucher <- uid(dat, "Sites de coucher", "category_ressource")
 
   # ----------------------------
   # GCNWA - Sites culturels : 0066
-  meta_temp <- meta_update(meta_temp, dat, "gcnwa_sites_culturels", "GCNWA - Sites culturels", type = "GCNWA")
+  meta_temp <- meta_update(meta_temp, dat, "gcnwa_sites_culturels", "Sites culturels", type = "Nation W8banaki")
   site$gcnwa_sites_culturels <- uid(dat, "Sites culturels", "category_ressource")
 
   # ----------------------------
   # GCNWA - Sites essentiels : 0066
-  meta_temp <- meta_update(meta_temp, dat, "gcnwa_sites_essentiels", "GCNWA - Sites essentiels", type = "GCNWA")
+  meta_temp <- meta_update(meta_temp, dat, "gcnwa_sites_essentiels", "Sites essentiels", type = "Nation W8banaki")
   site$gcnwa_sites_essentiels <- uid(dat, "Sites essentiels", "category_ressource")
 
   # ----------------------------
   # GCNWA - Problèmes liés au territoire : 0066
-  meta_temp <- meta_update(meta_temp, dat, "gcnwa_problemes_territoire", "GCNWA - Problèmes liés au territoire", type = "GCNWA")
+  meta_temp <- meta_update(meta_temp, dat, "gcnwa_problemes_territoire", "Problèmes liés à l'accès au territoire", type = "Nation W8banaki")
   site$gcnwa_problemes_territoire <- uid(dat, "Problèmes liés au territoire", "category_ressource")
 
   # ----------------------------
   # GCNWA - Zones d'activités : 0066
-  meta_temp <- meta_update(meta_temp, dat, "gcnwa_zones_activites", "GCNWA - Zones d'activités", type = "GCNWA")
+  meta_temp <- meta_update(meta_temp, dat, "gcnwa_zones_activites", "Zones d'activités", type = "Nation W8banaki")
   site$gcnwa_zones_activites <- uid(dat, "Zones d'activités", "category_ressource")
 
   # ----------------------------
   # GCNWA - Pêche : 0066
-  meta_temp <- meta_update(meta_temp, dat, "gcnwa_peche", "GCNWA - Pêche", type = "GCNWA")
+  meta_temp <- meta_update(meta_temp, dat, "gcnwa_peche", "Pêche", type = "Nation W8banaki")
   site$gcnwa_peche <- uid(dat, "Pêche", "category_ressource")
 
   # ----------------------------
   # GCNWA - Navigation : 0066
-  meta_temp <- meta_update(meta_temp, dat, "gcnwa_navigation", "GCNWA - Navigation", type = "GCNWA")
+  meta_temp <- meta_update(meta_temp, dat, "gcnwa_navigation", "Navigation", type = "Nation W8banaki")
   site$gcnwa_navigation <- uid(dat, "Navigation", "category_ressource")
 
 
   # ----------------------------
   # GCNWA - Sites archéologiques : 0067
   dat <- "0067"
-  meta_temp <- meta_update(meta_temp, dat, "gcnwa_sites_archeologiques", "GCNWA - Sites archéologiques", type = "GCNWA")
+  meta_temp <- meta_update(meta_temp, dat, "gcnwa_sites_archeologiques", "Sites archéologiques", type = "Nation W8banaki")
   site$gcnwa_sites_archeologiques <- uid(dat)
 
   # ----------------------------
   # GCNWA - Sites à potentiel archéologique : 0068
   dat <- "0068"
-  meta_temp <- meta_update(meta_temp, dat, "gcnwa_sites_potentiel_archeologique", "GCNWA - Sites à potentiel archéologique", type = "GCNWA")
+  meta_temp <- meta_update(meta_temp, dat, "gcnwa_sites_potentiel_archeologique", "Sites à potentiel archéologique", type = "Nation W8banaki")
   site$gcnwa_sites_potentiel_archeologique <- uid(dat)
 
 

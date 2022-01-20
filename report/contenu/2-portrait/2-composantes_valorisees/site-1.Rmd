@@ -10,13 +10,17 @@ Le Saint-Laurent et le Saguenay constituent un système d'une importance culture
 
 ```{r siteCat}
 tab <- as.data.frame(meta$dataDescription$categories)
-tab <- arrange(tab, francais)
-tab <- select(tab, francais)
+tab <- arrange(tab, type, francais)
+tab <- select(tab, type, francais)
 
+uid <- logical(nrow(tab)) 
+for(i in 2:length(uid)) uid[i] <- ifelse(tab$type[i] == tab$type[i-1], TRUE, FALSE)
 
+tab$type[uid] <- ""  
+  
 tab %>%
   knitr::kable(
-    col.names = c("Catégories de sites"),
+    col.names = c("Sites d'intérêt","Catégories"),
     row.names = FALSE,
     caption = "Catégories de sites d'intérêt culturels, patrimoniaux et archéologiques identifiés pour le Saint-Laurent et le Saguenay."
   )
