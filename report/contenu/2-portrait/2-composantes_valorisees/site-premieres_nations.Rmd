@@ -154,7 +154,7 @@ knitr::include_graphics("./figures/figures-integrated/site-huronne_wendat_topony
 
 > *Nous remercions Donald Bouchard et Pierre Tremblay pour les échanges et le support.*
 
-Les données transmises par la Nation des Innus d'Essipit sont une intégration de données provenant de divers sources d'informations [@bouchardcomm] :
+Les données transmises par la Nation des Innus d'Essipit sont une intégration de données provenant de divers sources d'informations [@bouchard2021] :
 
 - Inventaire des sites archéologiques du Québec.
 - Suivi Innu-Aitun, 2004 à 2018, Essipit.
@@ -307,7 +307,7 @@ knitr::include_graphics("./figures/figures-integrated/site-kahnawake_traffic.png
 
 > *Nous remercions David Poissant pour les échanges et le support.*
 
-Nous utilisont des données qui nous ont été transmises par des représentants de la Nation Wolastoqiyik Wahsipekuk pour caractériser des sites d'importances pour la pêche traditionnelle au homard [*Homarus americanus*; @PNWW2021] et l'oursin [*Strongylocentrotus* sp.; @PNWW2021b]. Ces données identifient des milieux jugés important pour la pêche sur la rive sud du Saint-Laurent.
+Nous utilisont des données qui nous ont été transmises par des représentants de la Nation Wolastoqiyik Wahsipekuk pour caractériser des sites d'importances pour la pêche traditionnelle au homard [*Homarus americanus*; @pnww2021] et l'oursin [*Strongylocentrotus* sp.; @pnww2021b]. Ces données identifient des milieux jugés important pour la pêche sur la rive sud du Saint-Laurent.
 
 <br>
 
@@ -325,9 +325,9 @@ knitr::include_graphics("./figures/figures-integrated/site-wolastoqiyik_wahsipek
 
 > *Nous remercions Edgar Blanchet et Hadrien Bois pour les échanges et le support.*
 
-Dans le cadre de ce projet pilote, le Grand Conseil de la Nation Waban-Aki (GCNWA) a procédé à l'intégration d'informations spatialisée et non-spatialisées provenant d'entretiens semi-dirigés individuels ou en petits groupes sur l'utilisation du territoire précédemment effectuées auprès de membres de la communauté. Ces études regroupent un échantillon de 33 répondant pour 74 entretiens. La cartographie est accompagnée d'informations qualitatives provenant principalement de 1) deux ateliers de type "groupe d'expression" tenus en 2016, des entretiens d'ateliers tenus entre 2019 et 2020 avec des femmes de la Nation, et 3) des analyses d'évaluation des effets de projets d'agrandissements portuaires sur les droits ancestraux de la Nation. Ce travail d'intégration a mené à la production d'un rapport présentant les préoccupations connues de certains membres de la Nation quant aux pressions environnementales exercées au sein de leur territoire et touchant les composantes valorisées couvertes par notre évaluation des effets cumulatifs des activités maritimes [@GCNWA2021]. 
+Dans le cadre de ce projet pilote, le Grand Conseil de la Nation Waban-Aki (GCNWA) a procédé à l'intégration d'informations spatialisée et non-spatialisées provenant d'entretiens semi-dirigés individuels ou en petits groupes sur l'utilisation du territoire précédemment effectuées auprès de membres de la communauté. Ces études regroupent un échantillon de 33 répondant pour 74 entretiens. La cartographie est accompagnée d'informations qualitatives provenant principalement de 1) deux ateliers de type "groupe d'expression" tenus en 2016, des entretiens d'ateliers tenus entre 2019 et 2020 avec des femmes de la Nation, et 3) des analyses d'évaluation des effets de projets d'agrandissements portuaires sur les droits ancestraux de la Nation. Ce travail d'intégration a mené à la production d'un rapport présentant les préoccupations connues de certains membres de la Nation quant aux pressions environnementales exercées au sein de leur territoire et touchant les composantes valorisées couvertes par notre évaluation des effets cumulatifs des activités maritimes [@gcnwa2021]. 
 
-Les données transmises par le GCNWA fournissent la localisation de sites d'intérêt principalement dans la dans la portion fluviale du Saint-Laurent [@GCNWA2021]. Les sites identifiés sont divisée en 13 catégories distinctes : 
+Les données transmises par le GCNWA fournissent la localisation de sites d'intérêt principalement dans la dans la portion fluviale du Saint-Laurent [@gcnwa2021]. Les sites identifiés sont divisée en 13 catégories distinctes : 
 
 - Utilisation et occupation contemporaine du territoire 
   - Pêche (*e.g.* perchaude, dorés, esturgeons)
