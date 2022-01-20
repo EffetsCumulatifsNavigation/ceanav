@@ -195,45 +195,45 @@ cv_site <- function() {
   # ----------------------------
   # Kahnawake - Cultural Sites : 0032
   dat <- "0032"
-  meta_temp <- meta_update(meta_temp, dat, "kahnawake_culture_patrimoine", "Kahnawake - Culture et patrimoine", type = "Kahnawake")
+  meta_temp <- meta_update(meta_temp, dat, "kahnawake_culture_patrimoine", "Nation Mohawk de Kahnawà:ke - Culture et patrimoine", type = "Kahnawake")
   site$kahnawake_culture_patrimoine <- uid(dat, "Cultural Sites", "category")
 
   # ----------------------------
   # Kahnawake - Fishing Commercial : 0032
-  meta_temp <- meta_update(meta_temp, dat, "kahnawake_peche_commerciale", "Kahnawake - Pêche commerciale", type = "Kahnawake")
+  meta_temp <- meta_update(meta_temp, dat, "kahnawake_peche_commerciale", "Nation Mohawk de Kahnawà:ke - Pêche commerciale", type = "Kahnawake")
   site$kahnawake_peche_commerciale <- uid(dat, "Fishing Commercial", "category")
 
 
   # ----------------------------
   # Kahnawake - Hunting : 0032
-  meta_temp <- meta_update(meta_temp, dat, "kahnawake_chasse", "Kahnawake - Chasse", type = "Kahnawake")
+  meta_temp <- meta_update(meta_temp, dat, "kahnawake_chasse", "Nation Mohawk de Kahnawà:ke - Chasse", type = "Kahnawake")
   site$kahnawake_chasse <- uid(dat, "Hunting", "category")
 
 
   # ----------------------------
   # Kahnawake - Near Shore Fishing : 0032
-  meta_temp <- meta_update(meta_temp, dat, "kahnawake_peche_rivage", "Kahnawake - Pêche rivage", type = "Kahnawake")
+  meta_temp <- meta_update(meta_temp, dat, "kahnawake_peche_rivage", "Nation Mohawk de Kahnawà:ke - Pêche rivage", type = "Kahnawake")
   site$kahnawake_peche_rivage <- uid(dat, "Near Shore Fishing", "category")
 
   # ----------------------------
   # Kahnawake - Open Water Fishing : 0032
-  meta_temp <- meta_update(meta_temp, dat, "kahnawake_peche_offshore", "Kahnawake - Pêche eau libre", type = "Kahnawake")
+  meta_temp <- meta_update(meta_temp, dat, "kahnawake_peche_offshore", "Nation Mohawk de Kahnawà:ke - Pêche eau libre", type = "Kahnawake")
   site$kahnawake_peche_offshore <- uid(dat, "Open Water Fishing", "category")
 
   # ----------------------------
   # Kahnawake - SSSM : 0032
-  meta_temp <- meta_update(meta_temp, dat, "kahnawake_sssm", "Kahnawake - Seigneurie du Sault-Saint-Louis", type = "Kahnawake")
+  meta_temp <- meta_update(meta_temp, dat, "kahnawake_sssm", "Nation Mohawk de Kahnawà:ke - Seigneurie du Sault-Saint-Louis", type = "Kahnawake")
   site$kahnawake_sssm <- uid(dat, "SSSM", "category")
 
 
   # ----------------------------
   # Kahnawake - Traffic : 0032
-  meta_temp <- meta_update(meta_temp, dat, "kahnawake_traffic", "Kahnawake - Trafic maritime", type = "Kahnawake")
+  meta_temp <- meta_update(meta_temp, dat, "kahnawake_traffic", "Nation Mohawk de Kahnawà:ke - Navigation", type = "Kahnawake")
   site$kahnawake_traffic <- uid(dat, "Traffic", "category")
 
   # ----------------------------
   # Kahnawake - Vegetation : 0032
-  meta_temp <- meta_update(meta_temp, dat, "kahnawake_vegatation", "Kahnawake - Végétation", type = "Kahnawake")
+  meta_temp <- meta_update(meta_temp, dat, "kahnawake_vegatation", "Nation Mohawk de Kahnawà:ke - Végétation", type = "Kahnawake")
   site$kahnawake_vegatation <- uid(dat, "Vegetation", "category")
 
 
