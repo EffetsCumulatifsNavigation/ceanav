@@ -30,7 +30,7 @@ rep_hyperlien <- function(texte, url) {
   hyperlien <- character(nl)
 
   for(i in 1:nl) {
-    if(!is.na(url[i])) {
+    if(!is.null(url[i])) {
       hyperlien[i] <- paste0("[",texte[i],"](",url[i],")")
     } else {
       hyperlien[i] <- texte[i]

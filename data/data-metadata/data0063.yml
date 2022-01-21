@@ -4,7 +4,7 @@ data_description:
   description: "Matrice de scores de vulnérabilité relative pour les sites d'importance fauniques et floristiques considérés pour l'évaluation des effets cumulatifs des activités maritimes dans le Saint-Laurent et le Saguenay."
   contact_id:
     - "0001"
-    - "0003"
+    - "0002"
     - "0003"
   availability: "open source"
   citation:

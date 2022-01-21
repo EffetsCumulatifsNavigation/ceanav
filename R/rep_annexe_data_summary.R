@@ -11,28 +11,47 @@
 #' @examples
 #' rep_annexe_data_summary()
 
-rep_annexe_data_summary <- function() {
-  # Data and libraries
-  data(data_metadata)
-  library(knitr)
-  library(kableExtra)
+rep_annexe_data_summary <- function() {  
+  # Metadata files 
+  files <- dir("../data/data-metadata", pattern = "data0", full.names = TRUE)
+  nF <- length(files)
+  
+  # -----
+  meta <- data.frame(id = character(nF), 
+                     name = character(nF),
+                     pr = character(nF),
+                     disp = character(nF),
+                     src = character(nF))
 
-  # Select only relevant fields
-  dat <- metadata %>%
-         # Ajouter et modifier colonnes
-         mutate(Citation = "TO DO",
-                Nom = rep_hyperlien(data_description.name,
-                                    data_description.url)) %>%
+  # -----
+  for(i in 1:length(files)) {
+    dat <<- read_yaml(files[i])
+    meta$id[i] <- dat$data_description$id
+    meta$name[i] <- rep_hyperlien(dat$data_description$name, dat$data_description$url)
+    meta$pr[i] <- paste(dat$data_description$contact_id, collapse = ", ")
+    meta$disp[i] <- dat$data_description$availability
+    # meta$src[i] <- paste(dat$data_description$source, collapse = ", ")
+  }
 
-         # Sélectionner et renommer les colonnes à intérer au tableau
-         select(Données_id = data_description.id,
-                Nom,
-                Citation,
-                Disponibilité = data_description.availability) %>%
-
-         # Retirer les doublons
-         unique()
-
+  # Integrated 
+  files <- c(dir("../data/data-metadata", pattern = "int_cv", full.names = TRUE), 
+             dir("../data/data-metadata", pattern = "int_st", full.names = TRUE))
+  # -----
+  l <- list()
+  for(i in 1:length(files)) {
+    dat <<- read_yaml(files[i])
+    l[[i]] <- data.frame(id = dat$rawData, ana = "X")
+  }
+  
+  # -----
+  l <- bind_rows(l) %>%
+       unique()
+       
+  # -----
+  meta <- left_join(meta, l, by = "id") %>%
+          select(id,name,ana,pr,disp,src)
+   
+  # -----
   # Export table
-  kable(dat, row.names = FALSE)
+  kable(meta, row.names = FALSE, col.names = c("ID","Nom","Incluse à l'évaluation","Personne ressource","Disponibilité","Source"))
 }

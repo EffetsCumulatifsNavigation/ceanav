@@ -77,7 +77,7 @@ st_pollution_maritime <- function() {
   dra <- read_yaml("./data/data-metadata/int_st_dragage.yml")
   nav <- read_yaml("./data/data-metadata/int_st_navigation.yml")
   pec <- read_yaml("./data/data-metadata/int_st_peche_commerciale.yml")
-  meta$rawData <- paste0(sort(unique(c(anc$rawData, dra$rawData, nav$rawData, pec$rawData))), collapse = ",")
+  meta$rawData <- sort(unique(c(anc$rawData, dra$rawData, nav$rawData, pec$rawData)))
   # -----
   meta$dataDescription$categories$accronyme <-  "pollution_maritime"
   meta$dataDescription$categories$francais <-  "Pollution maritime"
