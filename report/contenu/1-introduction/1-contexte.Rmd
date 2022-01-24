@@ -10,7 +10,7 @@ Pour répondre à ces préoccupations, Transports Canada collabore avec les Prem
 
 En parallèle, dans le cadre du Plan d’action Saint-Laurent (PASL), le gouvernement du Québec s’est joint au projet pilote en 2018 pour développer et appliquer un cadre commun d’évaluation des effets cumulatifs des activités maritimes sur le Saint-Laurent et le Saguenay. Cette collaboration permet  d’assurer la coordination entre le Gouvernement du Canada (Transports Canada, Pêches et Océans Canada, Garde Côtière Canada et l’Agence d’évaluation d’impact du Canada) et le Gouvernement du Québec (ministère de la Sécurité publique, ministère des Forêts, de la Faune et des Parcs et ministère de l’Environnement et de la Lutte contre les changements climatiques) tout en encourageant une étroite collaboration avec les Premières Nations, les intervenants maritimes et les collectivités côtières. Elle implique la mise en commun des données détenues par chacune des organisations, le partage d’expertise et la co-construction.
 
-Le projet pilote vise donc à effectuer une analyse des effets cumulatifs des activités maritimes dans le Saint-Laurent (tronçon fluvial et estuaire) et dans la rivière Saguenay (partie en eau profonde) au Québec. L’objectif de ce projet pilote est de développer de nouvelles connaissances sur les effets cumulatifs potentiels des activités maritimes ainsi qu’une compréhension commune de ceux-ci. Il favorisera une cohérence dans les stratégies d’atténuation des effets cumulatifs des activités maritimes. Les activités maritimes incluent non seulement les navires commerciaux, mais aussi les bateaux de croisières, traversiers, bateaux de pêche, plaisanciers. La localisation, l’intensité et/ou le mouvement de ces divers types d’embarcations peuvent imposer un ou plusieurs facteurs de stress aux écosystèmes. Les infrastructures portuaires ne sont pas incluses dans ce projet. En tant que tel, ce projet pilote constitue une approche d'évaluation des effets cumulatifs sectorielle qui vise à examiner les questions et les effets environnementaux se rattachant à un secteur particulier (c.-à-d. un cadre axé sur l’évaluation d’un seul secteur d’activités).
+Le projet pilote vise donc à effectuer une analyse des effets cumulatifs des activités maritimes dans le Saint-Laurent (tronçon fluvial et estuaire) et dans la rivière Saguenay (partie en eau profonde) au Québec. L’objectif de ce projet pilote est de développer de nouvelles connaissances sur les effets cumulatifs potentiels des activités maritimes ainsi qu’une compréhension commune de ceux-ci. Il favorisera une cohérence dans les stratégies d’atténuation des effets cumulatifs des activités maritimes. Les activités maritimes incluent non seulement les navires commerciaux, mais aussi les bateaux de croisières, traversiers, bateaux de pêche, plaisanciers. La localisation, l’intensité et/ou le mouvement de ces divers types d’embarcations peuvent imposer un ou plusieurs stresseurs environnementaux aux écosystèmes. Les infrastructures portuaires ne sont pas incluses dans ce projet. En tant que tel, ce projet pilote constitue une approche d'évaluation des effets cumulatifs sectorielle qui vise à examiner les questions et les effets environnementaux se rattachant à un secteur particulier (c.-à-d. un cadre axé sur l’évaluation d’un seul secteur d’activités).
 
 Ce contrat appuiera le Gouvernement du Canada et le Gouvernement du Québec dans la conception d’un cadre commun d’évaluation des effets cumulatifs des activités maritimes; et permettra d’identifier des outils et des stratégies d’atténuation pouvant s’appliquer aux déplacements actuels de navires et au développement de projets futurs. Le tout sera effectué de façon collaborative avec les Premières Nations, les scientifiques de diverses provenances et les organismes de réglementation, afin de prendre des décisions fondées sur les éléments les plus probants.
 
@@ -19,25 +19,25 @@ Ce contrat appuiera le Gouvernement du Canada et le Gouvernement du Québec dans
 L’équipe de Transports Canada a travaillé, au cours des dernières années, avec plusieurs experts Canadiens et à l’international sur la démarche à adopter afin d’évaluer les effets cumulatifs des activités maritimes [*e.g.* @lerner2018; @pickard2019]. En plus de l’importance des processus de concertation et de mobilisation des communautés autochtones et non autochtones, et des diverses parties prenantes, une évaluation d’effets cumulés inclut généralement les étapes suivantes, sans toutefois s’y limiter:
 
 
-1. Identifier, impliquer et communiquer avec les parties prenantes de l’évaluation (p.ex. communautés autochtones et non autochtones), et ce à toutes les étapes de la démarche
+1. Identifier, impliquer et communiquer avec les parties prenantes de l’évaluation, et ce à toutes les étapes de la démarche
 
 2. Définir la portée de l’évaluation
     * Établir les objectifs de l’évaluation
     * Définir les limites spatiales et temporelles de la zone à l’étude
-    * Identifier les activités préoccupantes et les facteurs de stress qui en découlent
+    * Identifier les activités préoccupantes et les stresseurs environnementaux qui en découlent
     * Identifier et prioriser les composantes valorisées sur lesquelles l’évaluation doit être effectuée
 
 3. Établir un portrait de la zone à l'étude
     * Caractériser l'intensité, l'étendue et la fréquence des activités et
-      facteurs de stress.
+      stresseurs environnementaux.
     * Caractériser les composantes valorisées
-    * Évaluer la vulnérabilité des composantes valorisées aux facteurs de stress
+    * Évaluer la vulnérabilité des composantes valorisées aux stresseurs environnementaux
 
 4. Analyse des effets cumulés
 
 5. Diagnostic de l'analyse
     * Répartition spatiale des effets cumulatifs
-    * Exploration détaillée de l’effet des facteurs de stress sur les composantes valorisées
+    * Exploration détaillée de l’effet des stresseurs environnementaux sur les composantes valorisées
     * Identifier les sources d’incertitude et les lacunes en connaissances
 
 6. Mise en place de processus décisionnels
@@ -83,9 +83,13 @@ TODO: add BDTQ to dataset list, with proper reference
 Les limites temporelles de l'étude sont définies par la disponibilité des données permettant d'effectuer l'évaluation des effets cumulatifs. Dans certains cas, des données historiques sont disponibles (*e.g.* dragage), alors que de telles données sont indisponibles pour certains aspects de l'évaluation (*e.g.* distribution des mammifères marins). Pour cette étude pilote, la recherche de données a ainsi été orientée vers une évaluation contemporaine des effets cumulatifs, c.-à-d. au cours des 5 à 10 dernières années selon les données disponibles; les données historiques permettant l’identification d’états de référence n'ont ainsi pas été utilisées. Il est toutefois important de noter que, lorsque disponibles, des données couvrant une période plus longue ont été utilisées (*e.g.* les activités de dragage).
 
 
-### Activités maritimes et facteurs de stress
+### Activités maritimes et stresseurs environnementaux
 
-Les activités maritimes peuvent résulter en une variété de facteurs de stress, ou de stresseurs environnementaux, ayant le potentiel d'affecter l'intégrité des écosystèmes sociaux-écologiques exposés. Un stresseur environnemental est un processus d’origine naturelle ou anthropique pouvant perturber un milieu au-delà de ses limites de tolérance [@kappel2012]. Dans le cadre de ce projet pilote, les stresseurs environnementaux correspondent plus particulièrement à tout processus issus des activités maritimes pouvant perturber divers composantes valorisées (voir section suivante) au sein de la zone d'étude. Les activités maritimes incluent toute activité liée au transport maritime et effectué en milieu aquatique ou marin. Les activités maritimes incluent non seulement les navires commerciaux, mais aussi les bateaux de croisières, traversiers, bateaux de pêche, plaisanciers. Il est important de noter que les stresseurs environnementaux affectant la zone d'étude et issus d'autres vecteurs comme les changements climatiques et la pollution d'origine terrestre ne sont pas considérés par la présente évaluation. Les infrastructures portuaires ne sont ainsi pas incluses au projet pilote.
+Les activités maritimes peuvent résulter en une variété de stresseurs environnementaux ayant le potentiel d'affecter l'intégrité des écosystèmes sociaux-écologiques exposés. Un stresseur environnemental est un processus d’origine naturelle ou anthropique pouvant perturber un milieu au-delà de ses limites de tolérance [@kappel2012]. Dans le cadre de ce projet pilote, les stresseurs environnementaux correspondent plus particulièrement à tout processus issus des activités maritimes pouvant perturber divers composantes valorisées (voir section suivante) au sein de la zone d'étude. Les activités maritimes incluent toute activité liée au transport maritime et effectué en milieu aquatique ou marin. Les activités maritimes incluent non seulement les navires commerciaux, mais aussi les bateaux de croisières, traversiers, bateaux de pêche, plaisanciers. 
+
+Il est important de noter que les stresseurs environnementaux affectant la zone d'étude et issus d'autres vecteurs comme les changements climatiques et la pollution d'origine terrestre ne sont pas considérés par la présente évaluation. Les infrastructures portuaires ne sont ainsi pas incluses au projet pilote. 
+
+Il doit également être mentionné que bien que le terme stresseur suggère que les activités et processus décrits ont des effets négatifs, il n'en est rien; en effet, certaines activités peuvent n'avoir aucun effet sur les composantes valorisées considérées, ou même avoir des effets positifs. Considérer des activités en tant que stresseurs environnementaux ne constitue ainsi pas une supposition inhérente quant à leurs effets négatifs sur les composantes valorisées considérées.
 
 Des ateliers de travail pré-datant le projet pilote ont permis d'identifier une série d'activités maritimes et divers stresseurs qui leur sont associés (Tableau \@ref(tab:activitestress)). Cette liste a guidé le travail effectué afin de caractériser les stresseurs environnementaux dans la zone d'étude pour l'évaluation des effets cumulatifs.
 

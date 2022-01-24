@@ -1,8 +1,8 @@
 ### Habitats floristiques et fauniques
 
-#### Habitats
+#### Milieux naturels
 
-Plusieurs exercices d’évaluation de la vulnérabilité de différents types d’habitats à diverses sources de stress environnementales ont été publiés au Canada [e.g. @ban2010; @clarkemurray2015; @clarkemurray2015a] et ailleurs dans le monde [@teck2010; @kappel2012]. Un processus similaire mené par Pêches et Océans Canada est actuellement en cours afin de caractériser la vulnérabilité des habitats de l’Atlantique Ouest à une cinquantaine de sources de stress. Originellement développée par @halpern2007 afin de caractériser la vulnérabilité des habitats à l'échelle globale, cette approche utilise des métriques d’exposition et de sensibilité afin d'évaluer cinq critères de vulnérabilité des écosystèmes : l’échelle spatiale, la fréquence, l’impact fonctionnel, la résistance et la résilience (Tableau \@ref(tab:critereTeck)).
+Plusieurs exercices d’évaluation de la vulnérabilité de différents types d’habitats à diverses sources de stress environnementales ont été publiés au Canada [e.g. @ban2010; @clarkemurray2015; @clarkemurray2015a] et ailleurs dans le monde [@teck2010; @kappel2012]. Un processus similaire mené par Pêches et Océans Canada est actuellement en cours afin de caractériser la vulnérabilité des habitats de l’Atlantique Ouest à une cinquantaine de sources de stress. Originellement développée par @halpern2007 afin de caractériser la vulnérabilité des habitats à l'échelle globale, cette approche utilise des métriques d’exposition et de sensibilité afin d'évaluer cinq critères de vulnérabilité des écosystèmes (*i.e.* des habitats dans le cadre de notre étude) : l’échelle spatiale, la fréquence, l’impact trophique, la résistance et la résilience (Tableau \@ref(tab:critereTeck)).
 
 <br/>
 

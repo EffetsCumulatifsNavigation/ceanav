@@ -267,7 +267,7 @@ cv_habitat <- function() {
   # Colonies d'oiseaux : 0043, 0058
   nm <- c("0043", "0058")
   dat <- load_temp(nm)
-  meta_temp <- meta_update(meta_temp, nm, "oiseaux", "Oiseaux", descr = "Sites connus d'importance pour les oiseaux marins", type = "Cycles de vie")
+  meta_temp <- meta_update(meta_temp, nm, "oiseaux", "Oiseaux", descr = "Sites connus d'importance pour les oiseaux, tels des sites de nidification et des colonies d'oiseaux marins", type = "Cycles de vie")
   habitat$oiseaux <- uid(dat)
   sup <- c(sup, superficie(dat))
 

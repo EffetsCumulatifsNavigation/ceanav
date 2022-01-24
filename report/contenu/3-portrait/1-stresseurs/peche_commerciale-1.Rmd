@@ -72,8 +72,8 @@ de données des journaux de bord [@dfo2021c]
 
 ```{r pecheEngin}
 tab <- data.frame(
-  gear = c("Casier","Chalut de fond","Drague","Filet maillant","Peche a la ligne",
-           "Palangre","Plongee","Senne bourse","Senne Danoise ou Ecossaise",
+  gear = c("Casier","Chalut de fond","Drague","Filet maillant","Pêche à la ligne",
+           "Palangre","Plongée","Senne bourse","Senne Danoise ou Écossaise",
            "Senne de rivage","Trappe","Turlutte"),
   class = c("DNH","DD","DD","PHB","PLB","PHB","DNL","PLB","DNH","DNH","DNH","PLB"),
   mob = c("Fixes","Mobile","Mobile","Fixes","Fixes","Fixes","Fixes","Fixes","Fixes","Fixes","Fixes","Fixes")

@@ -6,7 +6,7 @@ Les milieux les plus affectés par les stresseurs environnementaux sont essentie
 
 **Autres résultats à discuter**
 
-- L'intégrité des berges est plus à risque en amont du lac Saint-Pierre en raison de la proximité de la voie navigable et des berges. Il est important de noter que l'absence d'effets sur l'intégrité des berges dans le secteur maritime est dû à la portée de l'étude et non à l'absence de risque d'érosion.
+- L'intégrité des berges est plus à risque en amont du lac Saint-Pierre en raison de la proximité de la voie navigable et des berges. Il est important de noter que l'absence d'effets sur l'intégrité des berges dans le secteur maritime est dû à la portée de l'étude qui n'inclut pas la composante d'intégrité des berges dans ce secteur et non à l'absence de risque d'érosion.
 
 <br/>
 
@@ -39,8 +39,8 @@ La figure \@ref(fig:metanetwork) permet de visualiser l'ensemble des chemins d'e
 
 - La navigation et la pollution maritime ont les effets les plus importants. Ces résultats sont attendus puisque ces stresseurs sont les plus répandus parmi ceux considérés pour l'évaluation.
 - Les autres stresseurs ont des effets totaux relativement faibles, sauf les pêches commerciales qui affectent certaines catégories de composantes valorisées plus intensément, comme les gisements coquilliers et certains sites d'intérêt culturels, patrimoniaux et archéologiques.
-- Les sites d'intérêt culturels, patrimoniaux et archéologiques sont les plus exposés aux effets des stresseurs issus des activités maritime. Bien que ce ne soit pas surprenant considérant la vulnérabilité maximale qui leur est attribuée, il s'agit tout de même d'un constat important.
-- Les sites d'intérêt de la Nation Mohawk de Kahnawà:ke semble particulièrement exposée aux effets des stresseurs.
+- Les sites d'intérêt culturels, patrimoniaux et archéologiques sont les plus exposés aux effets des stresseurs issus des activités maritimes. Bien que ce ne soit pas surprenant considérant la vulnérabilité maximale qui leur est attribuée, il s'agit tout de même d'un constat important.
+- Les sites d'intérêt de la Nation Mohawk de Kahnawà:ke semblent particulièrement exposés aux effets des stresseurs.
 - La composante valorisée la moins affectée est celle des mammifères marins. Par contre, il est important de rappeler que ces espèces couvrent un territoire très important et que par conséquent l'évaluation par $km^2$ sous-évalue les scores d'effets cumulatifs prédits. Il faudrait peut-être considérer refaire cette évaluation en ne considérant que les habitats les plus importants pour ces espèces.
 - Outre les sites d'intérêt, l'intégrité des berges est la composante valorisée la plus affectée par les effets cumulatifs de la navigation et des activités de dragage.
 
