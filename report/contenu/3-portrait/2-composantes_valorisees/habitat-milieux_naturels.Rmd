@@ -29,6 +29,16 @@ knitr::include_graphics("./figures/figures-integrated/habitat-zone_inondable.png
 
 ##### Milieux côtiers
 
+La caractérisation des milieux côtiers provient de l'exercice de caractérisation des berges dans la partie fluviale du Saint-Laurent provenant de l'équipe de Patrick Lajeunesse de l'Université Laval qui a été utilisé pour caractériser la composante valorisée d'intégrité des berges [@bernier2020; @bernier2021]; cette caractérisation est ainsi disponible strictement pour la portion fluviale du Saint-Laurent. Cette base de données fournit une caractérisation des types de côtes que nous utilisons au sein de notre évaluation en tant qu'habitats. Un total de 5 milieux côtiers ont été considérés pour l'évaluation (Tableau \@ref(tab:habitatCat)): 
+
+- Meuble sans falaise
+- Rocheux sans escarpement
+- Rocheux sans falaise
+- Terrasse de plage
+- Terrasse fluviale
+
+Ces milieux ont été cartographiés à l'aide d'approche cartographiques à haute résolution combinant des données de relevés terrain, de télédétection et dérivées de connaissances des communautés locales [@bernier2020; @bernier2021].
+
 <br>
 
 ```{r meublesansfalaise, fig.cap = "Distribution des habitats dans le Saint-Laurent et le Saguenay - Meuble sans falaise", out.width = '100%', fig.link = "./figures/figures-integrated/habitat-meuble_sans_falaise.png"}
