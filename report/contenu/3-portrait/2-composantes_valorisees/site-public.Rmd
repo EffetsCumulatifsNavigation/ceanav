@@ -2,6 +2,16 @@
 
 ##### Milieux protégés
 
+Les milieux protégés ont été caractérisé par l'intégration de quatre bases de données. La première base de données correspond à la délimitation des différentes mesures de gestion spatiales mises en place dans le parc marin du Saguenay–Saint-Laurent [@apc2021]. Cette base de données regroupe la délimitation de mesures spatiales règlementaires (*e.g.* zones d'interdiction de navigation et zones de ralentissement) ainsi que des mesures spatiales volontaires (*e.g.* zones de ralentissement et zones à éviter).
+
+La deuxième base de données est le Registre des aires protégées au Québec [@melcc2021]. Ce registre offre une compilation des aires protégées au Québec -- identifiés selon les définitions de la Loi sur la conservation du patrimoine naturel (LCPN; RLRQ, chapitre C-61.01) ou de l'Union internationale pour la conservation de la nature (UICN) -- et des territoires d'importance pour la conservation -- identifiés par le ministère de l'Environnement et de la Lutte contre les changements climatiques (MELCC) ou une instance du gouvernement du Québec. Nous avons retiré de cette base de données les habitats fauniques, les habitats d'une espèces floristique menacée ou vulnérable et les réserves de territoire aux fins d'aire protégée puis ces catégories couvraient l'entièreté de la zone d'étude ou parce qu'elles étaient couvertes par d'autres composantes valorisées. 
+
+La troisième base de données est 
+
+Finalement, la quatrième base de données est
+
+
+
 <br>
 
 ```{r publicmilieuprotege, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Public - Milieux protégés", out.width = '100%', fig.link = "./figures/figures-integrated/site-public_milieu_protege.png"}
