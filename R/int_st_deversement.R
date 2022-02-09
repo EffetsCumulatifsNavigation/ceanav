@@ -26,7 +26,7 @@ st_deversement <- function() {
 
   # Classify by volume
   lvls <- c('0 - 100 litres','100 - 1000 litres','1000 - 7000 litres','100000 - 1000000 litres')
-  dev$volume <- as.numeric(factor(dev$VOLUME_DEVERSE, levels = lvls))+1
+  dev$volume <- as.numeric(factor(dev$VOLUME_DEVERSE, levels = lvls)) + 1 # !!!!!!! This number is arbitrary
 
   # NA volume to 0-100 litres category
   uid <- is.na(dev$volume)
