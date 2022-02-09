@@ -48,6 +48,11 @@ get_data0016 <- function() {
   dev$VOLUME_DEVERSE <- gsub('100- 1000 litres', '100 - 1000 litres', dev$VOLUME_DEVERSE)
 
   # ------------------
+  # Transform Volume of 0 l to 0 - 100 l 
+  uid <- dev$VOLUME_DEVERSE == "0 litre"
+  dev$VOLUME_DEVERSE[uid] <- "0 - 100 litres"
+
+  # ------------------
   # Erroneous locations
   uid <- c(6871, 7686, 7716, 8377, 9343, 9883, 9916, 10057, 10188, 11809,
            11936, 11940)

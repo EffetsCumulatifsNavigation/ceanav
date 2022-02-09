@@ -54,15 +54,13 @@ dataDescription:
     - Déversements dont le contenu est inconnu
   classes:
     lvls:
-    - '1 : 0 litre'
-    - '2 : 0 - 100 litres'
-    - '3 : 100 - 1000 litres'
-    - '4 : 1000 - 7000 litres'
-    - '5 : 100000 - 1000000 litres'
+    - '1 : 0 - 100 litres'
+    - '2 : 100 - 1000 litres'
+    - '3 : 1000 - 7000 litres'
+    - '4 : 100000 - 1000000 litres'
     - 'NA : Volume inconnu'
     nombre:
-    - 2
-    - 106
+    - 108
     - 14
     - 0
     - 0

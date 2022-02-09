@@ -219,7 +219,7 @@ pipeline <- function(
     # Stresseurs
     folder <- "report/contenu/2-portrait/1-stresseurs/"
     rep_portrait_data_description(data_id = "ancrage", output_folder = folder)
-    rep_portrait_data_description(data_id = "deversement", output_folder = folder)
+    # rep_portrait_data_description(data_id = "deversement", output_folder = folder)
     rep_portrait_data_description(data_id = "dragage", output_folder = folder)
     rep_portrait_data_description(data_id = "naufrage", output_folder = folder)
     rep_portrait_data_description(data_id = "navigation", output_folder = folder)

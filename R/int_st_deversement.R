@@ -25,8 +25,8 @@ st_deversement <- function() {
   dev <- data0016
 
   # Classify by volume
-  lvls <- c('0 litre','0 - 100 litres','100 - 1000 litres','1000 - 7000 litres','100000 - 1000000 litres')
-  dev$volume <- as.numeric(factor(dev$VOLUME_DEVERSE, levels = lvls))
+  lvls <- c('0 - 100 litres','100 - 1000 litres','1000 - 7000 litres','100000 - 1000000 litres')
+  dev$volume <- as.numeric(factor(dev$VOLUME_DEVERSE, levels = lvls))+1
 
   # NA volume to 0-100 litres category
   uid <- is.na(dev$volume)
@@ -157,9 +157,9 @@ st_deversement <- function() {
 
   # -----
   deversement <- grid1p %>%
-                 left_join(hydrocarbures, by = "id") %>%
-                 left_join(autres, by = "id") %>%
-                 left_join(inconnus, by = "id") %>%
+                 left_join(hyd2, by = "id") %>%
+                 left_join(aut2, by = "id") %>%
+                 left_join(inc2, by = "id") %>%
                  select(-id)
 
   # -------
@@ -168,8 +168,9 @@ st_deversement <- function() {
   uid <- st_intersects(aoi, deversement) %>% unlist()
   nid <- !1:nrow(deversement) %in% uid
   deversement <- st_drop_geometry(deversement)
-  for(i in 1:ncol(deversement)) deversement[nid, i] <- 0
-  deversement <- cbind(grid1p, deversement)
+  for(i in 1:ncol(deversement)) deversement[nid, i] <- NA
+  deversement <- cbind(grid1p, deversement) %>%
+                 select(-id)
   # ------------------------------------------------------------------------- #
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
@@ -215,21 +216,19 @@ st_deversement <- function() {
   # -----
   tab <- table(dev$VOLUME_DEVERSE, useNA = "always")
   meta$dataDescription$classes$lvls <- c(
-         "1 : 0 litre",
-         "2 : 0 - 100 litres",
-         "3 : 100 - 1000 litres",
-         "4 : 1000 - 7000 litres",
-         "5 : 100000 - 1000000 litres",
+         "1 : 0 - 100 litres",
+         "2 : 100 - 1000 litres",
+         "3 : 1000 - 7000 litres",
+         "4 : 100000 - 1000000 litres",
          "NA : Volume inconnu"
        )
 
-  lvls <- c('0 litre','0 - 100 litres','100 - 1000 litres','1000 - 7000 litres','100000 - 1000000 litres','<NA>')
+  lvls <- c('0 - 100 litres','100 - 1000 litres','1000 - 7000 litres','100000 - 1000000 litres','<NA>')
   meta$dataDescription$classes$nombre <- c(
     sum(dev$VOLUME_DEVERSE == lvls[1], na.rm = TRUE),
     sum(dev$VOLUME_DEVERSE == lvls[2], na.rm = TRUE),
     sum(dev$VOLUME_DEVERSE == lvls[3], na.rm = TRUE),
     sum(dev$VOLUME_DEVERSE == lvls[4], na.rm = TRUE),
-    sum(dev$VOLUME_DEVERSE == lvls[5], na.rm = TRUE),
     sum(is.na(dev$VOLUME_DEVERSE))
   )
 

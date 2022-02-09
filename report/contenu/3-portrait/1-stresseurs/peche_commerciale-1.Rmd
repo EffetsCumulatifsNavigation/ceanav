@@ -9,7 +9,7 @@ L'intensité des activités de pêche commerciale au sein de la zone d'étude a 
 et Océans Canada [@dfo2021; @dfo2021b; @dfo2021c]. Bien que les journaux de bord ne soient pas
 obligatoires pour toutes les pêches, ils fournissent tout de même une évaluation
 suffisamment exhaustive de la distribution et de l'intensité des activités de pêche
-commerciale dans la zone d'étude.
+commerciale dans la zone d'étude. Bien qu'une pêche commerciale existe dans le secteur fluvial et dans la rivière Saguenay, nous n'avons pu obtenir de données permettant d'en caractériser leur distribution et leur intensité. L'absence de données dans ces secteurs ne devrait ainsi pas être interprétée comme une absence de pêche commerciale; cette lacune devrait être adressée pour une évaluation future.
 
 Nous avons utilisé des données entre `r meta$dataDescription$temporal$start` et `r meta$dataDescription$temporal$end`
 pour caractériser la distribution et l'intensité de la pêche commerciale dans la

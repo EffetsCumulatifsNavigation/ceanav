@@ -79,9 +79,30 @@ tab %>%
 
 <br/>
 
-L'intensité des activités de dragage (Figure \@ref(fig:dragage)), de dépôts de sédiments (Figure \@ref(fig:depot)) et de dragages prévus (Figure \@ref(fig:dragageprevu)) a été caractérisé en distribuant les volumes totaux dragués au sein de notre grille de 1 $km^2$. Pour ce faire, nous avons multiplié les volumes totaux au sein de chaque cellule $j$ de la grille d'étude par la proportion de la zone
-visée par l'activité de dragage couvrant la cellule $j$:
+L'intensité des activités de dragage (Figure \@ref(fig:dragage)), de dépôts de sédiments (Figure \@ref(fig:depot)) et de dragages prévus (Figure \@ref(fig:dragageprevu)) a été caractérisé en distribuant les volumes totaux dragués au sein de notre grille de 1 $km^2$. Par exemple, imaginons une activité de dragage ayant résulté en l’extraction de 100 $m^3$ de sédiments sur une superficie totale de 2 $km^2$ et que ce site couvre exactement 2 cellules de notre grille d’étude. Les valeurs attribuées aux cellules de 1 $km^2$ seraient ainsi de 50 $m^3$ chacune.
+
+Pour ce faire, nous avons multiplié les volumes totaux au sein de chaque cellule $j$ de la grille d'étude par la proportion de la zone visée par l'activité de dragage couvrant la cellule $j$:
 
 $$I_{dragage,j} = \sum_{k=1}^{n_j} V_{tot, k} * \frac{A_{j,k}}{A_{tot,k}}$$
 
 où $j$ est une cellule de la grille d'étude, $k$ est une activité de dragage ou de dépôt, $V_{tot}$ est le volume total dragué ou déposé lors de l'activité de dragage ou de dépôt $k$, $A$ est la superficie du site visé $k$ qui intersecte une cellule $j$ et $A_{tot}$ est la superficie totale de l'activité de dragage ou de dépôt $k$. Cette formule calcule une évaluation de l'intensité du dragage en $m^3$. Puisque nous avons calculé l'intensité au sein de cellules de 1 $km^2$, les unités de cette formule sont en $m^3 * km^{-2}$.
+
+<br/>
+
+```{r dragage, fig.cap = "Distribution des sites de dragage et de dépôt de dragage dans le Saint-Laurent et le Saguenay - Sites de dragage", out.width = '100%', fig.link = "./figures/figures-integrated/dragage-dragage.png"}
+knitr::include_graphics("./figures/figures-integrated/dragage-dragage.png")
+```
+
+<br>
+
+```{r depot, fig.cap = "Distribution des sites de dragage et de dépôt de dragage dans le Saint-Laurent et le Saguenay - Sites de dépôts", out.width = '100%', fig.link = "./figures/figures-integrated/dragage-depot.png"}
+knitr::include_graphics("./figures/figures-integrated/dragage-depot.png")
+```
+
+<br>
+
+```{r dragageprevu, fig.cap = "Distribution des sites de dragage et de dépôt de dragage dans le Saint-Laurent et le Saguenay - Dragages de capitalisation prévus", out.width = '100%', fig.link = "./figures/figures-integrated/dragage-dragage_prevu.png"}
+knitr::include_graphics("./figures/figures-integrated/dragage-dragage_prevu.png")
+```
+
+<br>
