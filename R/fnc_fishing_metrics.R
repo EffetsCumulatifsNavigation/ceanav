@@ -13,7 +13,7 @@
 #' @details This function uses fisheries data to evaluate the intensity of fishing over a regular grid
 #'
 
-fishingMetrics <- function(fishData, areaGrid, type = 3) {
+fishingMetrics <- function(fishData, areaGrid, type = 1) {
   # ~~~~~       INITIAL MEASUREMENTS        ~~~~~ #
 
   # Calculate total area of all points transformed in polygons and bind to polygons
@@ -42,10 +42,11 @@ fishingMetrics <- function(fishData, areaGrid, type = 3) {
 
   if (1 %in% type) {
     # Metric 1: Fishing effort density, no normalization
-    areaGrid <- as.character(fishData$ID) %>%
+    areaGrid <- fishData$ID %>%
                 table() %>%
                 as.data.frame(stringsAsFactors = F) %>%
                 rename(ID = 1, FishEffortDens = 2) %>%
+                mutate(ID = as.integer(ID)) %>%
                 left_join(areaGrid, ., by = 'ID') %>%
                 mutate(FishEffortDens = ifelse(is.na(FishEffortDens), 0, FishEffortDens))
   }

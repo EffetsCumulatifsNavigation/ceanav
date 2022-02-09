@@ -88,24 +88,11 @@ tab %>%
 
 <br/>
 
-Pour caractériser l'intensité des activités de pêche ($I_{peche}$), nous avons
-utilisé un indice de biomasse totale capturée [@beauchesne2020].
-Nous avons multiplié la biomasse totale
-capturée pendant la période totale visée (`r meta$dataDescription$temporal$start` - `r meta$dataDescription$temporal$end`)
-au sein de chaque cellule $j$ de la grille d'étude par la proportion de la zone
-d'effet de l'activité de pêche couvrant la cellule $j$:
+Pour caractériser l'intensité des activités de pêche ($I_{peche}$), nous avons évalué la fréquence totale des activités de pêche pendant la période visée (`r meta$dataDescription$temporal$start` - `r meta$dataDescription$temporal$end`) chevauchant chaque cellule de la grille d'étude: 
 
-$$I_{peche,j} = \sum_{k=1}^{n_j} B_{tot, k} * \frac{A_{j,k}}{A_{tot,k}}$$
+$$I_{peche,j} = \sum_{k=1}^{n_j} P_{j,k}$$
 
-où $j$ est une cellule de la grille d'étude, $k$ est une activité de pêche,
-$B_{tot}$ est la biomasse totale capturé lors de l'activité de pêche $k$,
-$A$ est la superficie de l'activité de pêche $k$ qui intersecte une cellule $j$
-et $A_{tot}$ est la superficie totale de l'activité de pêche $k$.
+où $j$ est une cellule de la grille d'étude, $k$ est une activité de pêche et $P_k$ est la zone tampon entourant chaque activité de pêche $k$. Cette formule calcule l'intensité de pêche en nombre d'activités de pêche répertoriées. Puisque nous avons calculé l'intensité au sein de cellules de 1 $km^2$, les unités de cette formule sont en nombre d'activités ($n$) par $km^2$, soit $n * km^{-2}$. Puisque des zones tampons ont été utilisées autour de chaque activité, il est posible qu'une seule activité de pêche soit répertoriée pour plus d'une cellule de la grille d'étude. La somme totale des activités dans la grille d'étude ne sera ainsi pas égale à la somme totale réelle des activités de pêche répertoriées dans la zone d'étude. 
 
-Cette formule calcule une évaluation de l'intensité de pêche en unité de biomasse,
-soit en kilogrammes. Puisque nous avons calculé l'intensité au sein de cellules de 1 $km^2$,
-les unités de cette formule sont en $kg * km^{-2}$. Cet indicateur d'intensité
-distribue la biomasse capturée au sein de chaque cellule de la grille d'étude
-et évalue l'intensité de la pêche en termes de biomasse extraite.
 
 <br>

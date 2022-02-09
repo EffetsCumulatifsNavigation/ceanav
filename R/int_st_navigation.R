@@ -75,6 +75,10 @@ st_navigation <- function() {
   #
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   ais <- ais_segment(ais)
+  
+  # Export this file 
+  save(ais, './data/data-raw/data0021-navigation/ais_segments.RData')
+  st_write(ais, './data/data-raw/data0021-navigation/ais_segments.geojson')
   # _____________________________________________________________________________ #
 
 

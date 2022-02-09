@@ -2,11 +2,11 @@ title: Pêche commerciale
 description: Intensité des activités de pêche commerciale dans le Saint-Laurent
 id: peche_commerciale
 rawData:
-- '0027'
-- 0028
-- 0029
+- '0033'
+- '0034'
+- '0035'
 dataDescription:
-  units: kg*km^{-2}
+  units: n*km^{-2}
   spatial:
     resolution: 1km^2
     extent:
@@ -170,11 +170,11 @@ dataDescription:
     - PLB
     - PHB
     source:
-    - 0027,0028,0029
-    - 0027,0028,0029
-    - 0027,0028,0029
-    - 0027,0028,0029
-    - 0027,0028,0029
+    - '0033,0034,0035'
+    - '0033,0034,0035'
+    - '0033,0034,0035'
+    - '0033,0034,0035'
+    - '0033,0034,0035'
     description:
     - Retrait de biomasse à l'aide d'engins de pêche démersaux pouvant causer des
       dommages aux habitats ou au substrat, e.g. chalut et drague.
