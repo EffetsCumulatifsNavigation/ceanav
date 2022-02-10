@@ -32,6 +32,13 @@ st_navigation <- function() {
 
   # Save memory
   rm(data0021)
+  
+  # -----
+  # Export this file 
+  st_write(obj = ais,
+           dsn = './data/data-raw/data0021-navigation/ais.geojson',
+           delete_dsn = TRUE,
+           quiet = TRUE)
   # _____________________________________________________________________________ #
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
@@ -75,10 +82,6 @@ st_navigation <- function() {
   #
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   ais <- ais_segment(ais)
-  
-  # Export this file 
-  save(ais, './data/data-raw/data0021-navigation/ais_segments.RData')
-  st_write(ais, './data/data-raw/data0021-navigation/ais_segments.geojson')
   # _____________________________________________________________________________ #
 
 
@@ -118,6 +121,7 @@ st_navigation <- function() {
 
   # -----
   meta$dataDescription$segments <- nrow(ais)
+  
   # _____________________________________________________________________________ #
 
 
@@ -129,6 +133,14 @@ st_navigation <- function() {
   # Add vessel type to ais data (again)
   ais <- ais %>%
          left_join(data0020[,c("MMSI","NTYPE")], 'MMSI')
+
+  # -----
+  # Export this object 
+  st_write(obj = ais,
+           dsn = './data/data-raw/data0021-navigation/ais_segments.geojson',
+           delete_dsn = TRUE,
+           quiet = TRUE)
+  # -----
 
   # Divide vessel data by type
   vessels <- list()

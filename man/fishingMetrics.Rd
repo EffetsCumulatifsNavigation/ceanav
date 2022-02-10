@@ -4,7 +4,7 @@
 \alias{fishingMetrics}
 \title{Function to evaluate fishing intensity}
 \usage{
-fishingMetrics(fishData, areaGrid, type = 3)
+fishingMetrics(fishData, areaGrid, type = 1)
 }
 \arguments{
 \item{fishData}{fishing data as sf object}
