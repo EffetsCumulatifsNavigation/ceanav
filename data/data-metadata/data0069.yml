@@ -1,0 +1,12 @@
+data_description:
+  id: "0069"
+  name: "Sites de dragage et de dépôt de la Première Nation des Innus d'Essipit"
+  description: "Position et volume des sites de dragages et de dépôt en 2001, 2011 et 2016 pour la Première Nation des Innus d'Essipit dans la région des Bergeronnes"
+  access_date: 2022-01-31
+  temporal_start: 2001
+  temporal_end: 2016
+  contact_id:
+    - "0025"
+  availability: "available"
+  citation:
+    - "Bourchard D. (communication personnelle) Position et volume dragués et den 2001, 2011 et 2016 pour la Première Nation des Innus d'Essipit dans la région des Bergeronnes."
