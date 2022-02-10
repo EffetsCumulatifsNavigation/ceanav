@@ -25,24 +25,24 @@ dataDescription:
     - Sites de dépôts
     - Dragages de capitalisation prévus
     source:
-    - 0018,0019,0046,0048,0052
-    - 0018,0019,0046,0048
+    - 0018,0019,0046,0048,0052,0069
+    - 0018,0019,0046,0048,0069
     - 0049,0050
     sites:
-    - 36
-    - 27
+    - 37
+    - 29
     - 2
     volume:
-    - 3785882.0
-    - 3421937.0
+    - 3793607.0
+    - 3429662.0
     - 1009000.0
     volume_moyen:
-    - 105163.3888889
-    - 126738.4074074
+    - 102529.9189189
+    - 118264.2068966
     - 504500.0
     volume_sd:
-    - 195330.9968016
-    - 185557.9519589
+    - 193263.9659651
+    - 181596.1002782
     - .na.real
     mdref:
     - dragage
@@ -74,6 +74,7 @@ dataDescription:
     - Godbout
     - Ile-aux-Coudres
     - Ile-aux-Grues
+    - Les Bergeronnes
     - Les Méchins
     - Matane
     - Matane
@@ -111,6 +112,7 @@ dataDescription:
     - Quai de Godbout
     - Desserte
     - Desserte
+    - Première Nation des Innus d'Essipit
     - Quai de Les Méchins
     - Marina de Matane
     - Port de Matane
@@ -148,6 +150,7 @@ dataDescription:
     - 4932.0
     - 338885.0
     - 78628.0
+    - 7725.0
     - 4000.0
     - 21000.0
     - 25393.0
@@ -183,6 +186,8 @@ dataDescription:
     - Godbout
     - Ile-aux-Coudres
     - Ile-aux-Grues
+    - Les Bergeronnes
+    - Les Bergeronnes
     - Matane
     - Matane
     - Rimouski
@@ -211,6 +216,8 @@ dataDescription:
     - Quai de Godbout
     - Desserte
     - Desserte
+    - Première Nation des Innus d'Essipit
+    - Première Nation des Innus d'Essipit
     - Marina de Matane
     - Port de Matane
     - Marina de Rimouski
@@ -239,6 +246,8 @@ dataDescription:
     - 4932.0
     - 338885.0
     - 78628.0
+    - 700.0
+    - 7025.0
     - 21000.0
     - 25393.0
     - 3500.0
@@ -270,3 +279,4 @@ rawData:
 - 0049
 - '0050'
 - '0052'
+- 0069
