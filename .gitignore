@@ -74,6 +74,7 @@ figures/figures-integrated/*.png
 figures/figures-output/*.png
 figures/figures-vulnerability/*.png
 figures/figures-exploration
+report/figures/figures-exploration/
 
 clean/
 report/contenu/notes/

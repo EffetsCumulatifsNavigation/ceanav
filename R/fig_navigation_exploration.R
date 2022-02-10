@@ -105,5 +105,4 @@ fig_navigation_exploration <- function() {
     # 
     dev.off()  
   }
-  
 }

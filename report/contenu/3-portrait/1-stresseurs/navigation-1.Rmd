@@ -34,7 +34,7 @@ de 2 km a été utilisée afin de retirer les segments aberrants de la base de d
 tout en conservant les segments décrivant de la navigation côtière ou des navires
 fréquentant des installations portuaires.
 Cette segmentation a résultée en `r meta$dataDescription$segments` segments
-linéaires de navigation. Puisque plusieurs types de navires naviguent sur les eaux du Saint-Laurent et du Saguenay, nous avons considéré 10 catégories de navires différents pour compléter le portrait
+linéaires de navigation. Puisque plusieurs types de navires naviguent sur les eaux du Saint-Laurent et du Saguenay, nous avons considéré `r length(meta$dataDescription$categories$accronyme)-2` catégories de navires différents pour compléter le portrait
 de l'intensité de la navigation au sein de la zone d'étude (Tableau \@ref(tab:navCat)).
 
 
@@ -100,8 +100,8 @@ knitr::include_graphics("./figures/figures-integrated/navigation-SPECIAL.SHIPS.p
 <br>
 
 
-```{r PASSENGER, fig.cap = "Intensité de la navigation dans le Saint-Laurent et le Saguenay - Passager", out.width = '100%', fig.link = "./figures/figures-integrated/navigation-PASSENGER.png"}
-knitr::include_graphics("./figures/figures-integrated/navigation-PASSENGER.png")
+```{r PASSENGERFERRYRORO, fig.cap = "Intensité de la navigation dans le Saint-Laurent et le Saguenay - Passager", out.width = '100%', fig.link = "./figures/figures-integrated/navigation-PASSENGER.FERRY.RO.RO.png"}
+knitr::include_graphics("./figures/figures-integrated/navigation-PASSENGER.FERRY.RO.RO.png")
 ```
 
 <br>
@@ -120,12 +120,6 @@ knitr::include_graphics("./figures/figures-integrated/navigation-CONTAINER.png")
 
 ```{r TUGSPORT, fig.cap = "Intensité de la navigation dans le Saint-Laurent et le Saguenay - Remorqueur / port", out.width = '100%', fig.link = "./figures/figures-integrated/navigation-TUGS.PORT.png"}
 knitr::include_graphics("./figures/figures-integrated/navigation-TUGS.PORT.png")
-```
-
-<br>
-
-```{r FERRYRORO, fig.cap = "Intensité de la navigation dans le Saint-Laurent et le Saguenay - Traversier / roulier", out.width = '100%', fig.link = "./figures/figures-integrated/navigation-FERRY.RO.RO.png"}
-knitr::include_graphics("./figures/figures-integrated/navigation-FERRY.RO.RO.png")
 ```
 
 <br>

@@ -29,10 +29,9 @@ dataDescription:
     - CARGO
     - CONTAINER
     - DRY.BULK
-    - FERRY.RO.RO
     - GOVERNMENT.RESEARCH
     - Observation
-    - PASSENGER
+    - PASSENGER.FERRY.RO.RO
     - PLEASURE.VESSELS
     - SPECIAL.SHIPS
     - TANKER
@@ -42,10 +41,9 @@ dataDescription:
     - Cargo
     - Containers
     - Dry bulk
-    - Ferry / ro-ro
     - Government / research
     - Marine mammals observation
-    - Passenger
+    - Passenger / ferry / ro-ro
     - Pleasure vessels
     - Special ships
     - Tanker
@@ -55,17 +53,15 @@ dataDescription:
     - Cargo
     - Porte-conteneurs
     - Cargaison sèche
-    - Traversier / roulier
     - Gouvernement / recherche
     - Observation mammifères marins
-    - Passager
+    - Passager / traversier / roulier
     - Navires de plaisance
     - Navires spéciaux
     - Pétrolier
     - Remorqueur / port
     - Navigation portuaire
     source:
-    - '0020,0021'
     - '0020,0021'
     - '0020,0021'
     - '0020,0021'
@@ -81,10 +77,9 @@ dataDescription:
     - 385
     - 156
     - 1424
-    - 45
     - 91
     - .na.integer
-    - 88
+    - 178
     - 67
     - 17
     - 880
@@ -94,10 +89,9 @@ dataDescription:
     - 588245.0
     - 583621.0
     - 2169379.0
-    - 1104006.0
     - 770295.0
     - .na.real
-    - 467829.0
+    - 2675841.0
     - 86338.0
     - 73796.0
     - 1188739.0
@@ -107,10 +101,9 @@ dataDescription:
     - 7729.0
     - 4087.0
     - 22143.0
-    - 11441.0
     - 10766.0
     - .na.real
-    - 4341.0
+    - 27223.0
     - 613.0
     - 941.0
     - 11793.0
@@ -120,10 +113,9 @@ dataDescription:
     - 10.3038329
     - 10.4506378
     - 27.4875327
-    - 8.4064213
     - 4.4883473
     - 55.5916206
-    - 3.1323133
+    - 19.9451559
     - 0.6175429
     - 0.3084837
     - 24.0936139
@@ -133,10 +125,9 @@ dataDescription:
     - CARGO
     - CONTAINER
     - DRYBULK
-    - FERRYRORO
     - GOVERNMENTRESEARCH
     - Observation
-    - PASSENGER
+    - PASSENGERFERRYRORO
     - PLEASUREVESSELS
     - SPECIALSHIPS
     - TANKER
@@ -149,11 +140,11 @@ dataDescription:
       dans des conteneurs de transport.
     - Traffic maritime de navires de commerce transportant des marchandises en vrac,
       e.g. des grain et du charbon.
-    - Traffic maritime de traversiers transportant des passagers et/ou des véhicules.
     - Traffic maritime de navires gouvernementaux et de navires de recherche.
     - Activités d’observation en mer des mammifères marins sur des embarcations avec
       permis de classe 1.
-    - Traffic maritime de navires dédiés au transport de passagers.
+    - Traffic maritime de navires dédiés au transport de passagers, et de traversiers
+      transportant des passagers et/ou des véhicules.
     - Traffic maritime de navires récréatifs.
     - 'Traffic maritime de navires divers tels des drageurs, des poseurs de cables,
       des plateformes, des navires de forage, etc. '

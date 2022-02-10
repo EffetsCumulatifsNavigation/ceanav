@@ -179,7 +179,7 @@ st_navigation <- function() {
   # As single sf object
   navigation <- cbind(grid1p, df)
 
-  # Remove others
+  # Remove others and fishing
   navigation <- dplyr::select(navigation, -OTHERS, -FISHING)
 
   # Set cells that do not touch water to NA
@@ -380,4 +380,74 @@ st_navigation <- function() {
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   clean()
   # ------------------------------------------------------------------------- #}
+
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  # 2022-02-10
+  # Combiner Passagers & Traversiers 
+  # Je prends la décision de le faire en fin de script pour laiser l'option de 
+  # revenir en arrière facilement au besoin. J'aurais pu modifier tout le script, 
+  # mais à ce stade-ci je préfère ajouter du code pour modifier ce qui a déjà été fait. 
+  # Ceci est possible parce que la combinaison peut se faire simplement par une 
+  # addition des deux catégories, alors c'est simple de le faire à postériori.
+  # ------
+  # 
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  # Modifier données intégrées 
+  load_integrated("navigation")
+  navigation$PASSENGER.FERRY.RO.RO <- rowSums(navigation[,c("PASSENGER","FERRY.RO.RO"), drop = TRUE], na.rm = TRUE)
+  navigation <- dplyr::select(navigation, -PASSENGER, -FERRY.RO.RO)
+  
+  # Modifier les métadonnées
+  meta <- load_metadata("int_st_navigation")
+  pas <- which(meta$dataDescription$categories$accronyme == "PASSENGER")
+  fer <- which(meta$dataDescription$categories$accronyme == "FERRY.RO.RO")
+  
+  # Nouvelle catégorie
+  meta$dataDescription$categories$accronyme[pas] <- "PASSENGER.FERRY.RO.RO"
+  meta$dataDescription$categories$english[pas] <- "Passenger / ferry / ro-ro"
+  meta$dataDescription$categories$francais[pas] <- "Passager / traversier / roulier"
+  meta$dataDescription$categories$boats[pas] <- sum(meta$dataDescription$categories$boats[c(pas,fer)])
+  meta$dataDescription$categories$observations[pas] <- sum(meta$dataDescription$categories$observations[c(pas,fer)])
+  meta$dataDescription$categories$segments[pas] <- sum(meta$dataDescription$categories$segments[c(pas,fer)])
+  meta$dataDescription$categories$transit_km2[pas] <- sum(meta$dataDescription$categories$transit_km2[c(pas,fer)])
+  meta$dataDescription$categories$mdref[pas] <- "PASSENGERFERRYRORO"
+  meta$dataDescription$categories$description[pas] <- "Traffic maritime de navires dédiés au transport de passagers, et de traversiers transportant des passagers et/ou des véhicules."
+
+  # Retirer catégorie
+  meta$dataDescription$categories$accronyme <- meta$dataDescription$categories$accronyme[-fer]  
+  meta$dataDescription$categories$english <- meta$dataDescription$categories$english[-fer]  
+  meta$dataDescription$categories$francais <- meta$dataDescription$categories$francais[-fer]  
+  meta$dataDescription$categories$boats <- meta$dataDescription$categories$boats[-fer]  
+  meta$dataDescription$categories$observations <- meta$dataDescription$categories$observations[-fer] 
+  meta$dataDescription$categories$segments <- meta$dataDescription$categories$segments[-fer] 
+  meta$dataDescription$categories$transit_km2 <- meta$dataDescription$categories$transit_km2[-fer] 
+  meta$dataDescription$categories$mdref <- meta$dataDescription$categories$mdref[-fer]  
+  meta$dataDescription$categories$description <- meta$dataDescription$categories$description[-fer] 
+  meta$dataDescription$categories$source <- meta$dataDescription$categories$source[-fer] 
+
+  # --------------------------------------------------------------------------------
+
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  # Export
+  # ------
+  #
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  # -----
+  write_yaml(meta, "./data/data-metadata/int_st_navigation.yml")
+
+  # -----
+  st_write(obj = navigation,
+           dsn = "./data/data-integrated/st_navigation.geojson",
+           delete_dsn = TRUE,
+           quiet = TRUE)
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  # Clean global environment
+  #
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  clean()
+  # ------------------------------------------------------------------------- #}
+
 }

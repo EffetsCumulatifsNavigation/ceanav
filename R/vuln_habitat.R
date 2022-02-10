@@ -82,6 +82,7 @@ vuln_habitat <- function() {
   st_eq <- equiv("PHB", "Fishing: pelagic high bycatch")
   st_eq <- equiv("pollution_maritime", "Ocean pollution (from ships, ports, etc.)")
   st_eq <- equiv("naufrage", "Ocean dumping: shipwrecks")
+  st_eq <- equiv("PASSENGER.FERRY.RO.RO", "Shipping (commercial, cruise, ferry)")
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   # Stressor equivalencies
