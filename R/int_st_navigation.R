@@ -343,7 +343,7 @@ st_navigation <- function() {
     "Traffic maritime de navires de commerce transportant des marchandises exclusivement dans des conteneurs de transport.",
     "Traffic maritime de navires de commerce transportant des marchandises en vrac, e.g. des grain et du charbon.",
     "Traffic maritime de traversiers transportant des passagers et/ou des véhicules.",
-    "Traffic maritime de navires gouvernementaux et de navires de recherche.",
+    "Traffic maritime de navires gouvernementaux et de navires de recherche, tels des ambarcations militaires, des navires de patrouille de la Garde côtière et des navires de recherche scientifique.",
     "Activités d’observation en mer des mammifères marins sur des embarcations avec permis de classe 1.",
     "Traffic maritime de navires dédiés au transport de passagers.",
     "Traffic maritime de navires récréatifs.",
