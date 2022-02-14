@@ -67,7 +67,7 @@ vuln_habitat <- function() {
   st_eq <- equiv("CONTAINER", "Shipping (commercial, cruise, ferry)")
   st_eq <- equiv("DRY.BULK", "Shipping (commercial, cruise, ferry)")
   st_eq <- equiv("FERRY.RO.RO", "Shipping (commercial, cruise, ferry)")
-  st_eq <- equiv("GOVERNMENT.RESEARCH", "Scientific research: collecting;Scientific research: experiments/surveys")
+  st_eq <- equiv("GOVERNMENT.RESEARCH", "Shipping (commercial, cruise, ferry); Military activity; Scientific research: collecting;Scientific research: experiments/surveys")
   st_eq <- equiv("Observation", "Tourism: whale watching")
   st_eq <- equiv("PASSENGER", "Shipping (commercial, cruise, ferry)")
   st_eq <- equiv("PLEASURE.VESSELS", "Shipping (commercial, cruise, ferry)")
