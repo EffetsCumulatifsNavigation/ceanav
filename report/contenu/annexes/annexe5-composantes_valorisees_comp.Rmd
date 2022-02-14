@@ -40,7 +40,7 @@ tab <- data.frame(
     "Rocky intertidal",
     "Rocky intertidal",
     "Beach",
-    "NA",
+    "Saltmarsh",
     "NA",
     "NA",
     "NA",
@@ -48,10 +48,10 @@ tab <- data.frame(
     "Saltmarsh",
     "Saltmarsh",
     "Saltmarsh",
-    "NA",
+    "Nearshore soft bottom",
     "Seagrass",
     "Kelp forest",
-    "NA"
+    "Rocky intertidal, tidal flats, saltmarsh"
   ))
 
 tab %>%

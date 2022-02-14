@@ -32,7 +32,7 @@ tab <- data.frame(
   ),
 
   clark = c(
-    "",
+    "Direct human impact: trampling",
     "Ocean dumping: toxic materials",
     "Ocean dumping: toxic materials",
     "Ocean dumping: toxic materials",
@@ -43,7 +43,7 @@ tab <- data.frame(
     "Shipping (large vessels)",
     "Shipping (large vessels)",
     "Shipping (large vessels)",
-    "Scientific research and collecting",
+    "Shipping (large vessels), military activity, scientific research: collecting, scientific research: experiments/surveys",
     "Tourism: Whale watching",
     "Shipping (large vessels)",
     "Shipping (large vessels)",
