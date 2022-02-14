@@ -33,7 +33,10 @@ L'évaluation des effets cumulatifs proposée permet d'explorer l'ensemble des c
 
 Les effets totaux prédits sur les composantes valorisées et par les stresseurs environnementaux ont été évalués par la somme des effets totaux divisés par la superficie totale de la composante valorisée sur laquelle un effet est prédit. Par exemple, si un habitat d'une superficie de 2 $km^2$ est affecté par deux stresseurs ayant un score de 0.25 et 0.75, respectivement, l'effet total sur la composante valorisée est de 0.5 $km^{-2}$.
 
-La figure \@ref(fig:metanetwork) permet de visualiser l'ensemble des chemins d'effets binaires. Les liens représentent la présence d'un effet d'un stresseur vers une composante valorisée, alors que la taille des points représente les effets relatifs totaux sur les composantes valorisées et en provenance des stresseurs environnementaux. Cette figure permet également de visualiser rapidement la quantité d'information disponible au sein de la base de données générée par l'évaluation des effets cumulatifs proposée. La figure \@ref(fig:ceakm) permet quant à elle d'explorer ces chemins d'effets plus en détails en présentant la contribution relative individuelle de chaque stresseur aux effets prédits pour chaque composante valorisée.
+La figure \@ref(fig:metanetwork) permet de visualiser l'ensemble des chemins d'effets binaires, *i.e. les combinaisons stresseurs - composante valorisées simples. Les liens représentent la présence d'un effet d'un stresseur vers une composante valorisée, alors que la taille des points représente les effets relatifs totaux sur les composantes valorisées et en provenance des stresseurs environnementaux. Cette figure ne peut être interprétée dans les détails; elle permet plutôt de visualiser en un coup d'oeil la quantité d'information disponible au sein de la base de données générée par l'évaluation des effets cumulatifs proposée. 
+
+La figure \@ref(fig:ceakm) permet quant à elle d'explorer ces chemins d'effets plus en détails en présentant la contribution relative individuelle de chaque stresseur aux effets prédits pour chaque composante valorisée. 
+<!-- mettre davantage ici -->
 
 **Principaux résultats**
 
@@ -47,7 +50,7 @@ La figure \@ref(fig:metanetwork) permet de visualiser l'ensemble des chemins d'e
 
 <br/>
 
-```{r metanetwork, fig.cap = "Réseau multiplex présentant la présence d'un effet des stresseurs individuels sur chaque composante valorisée considérées à l'évaluation des effets cumulatifs (*i.e.* liens colorés), les effets cumulatifs totaux sur chaque composante valorisée (*i.e.* taille des points des composantes valorisées) et l'effet moyen des stresseurs (*i.e.* taille des points des stresseurs).", out.width = '100%', fig.link = "./figures/figures-output/cumulative_effects_metanetwork.png"}
+```{r metanetwork, fig.cap = "Réseau multiplex présentant la présence d'un effet des stresseurs individuels sur chaque composante valorisée considérées à l'évaluation des effets cumulatifs (*i.e.* liens colorés), les effets cumulatifs totaux sur chaque composante valorisée (*i.e.* taille des points des composantes valorisées) et l'effet moyen des stresseurs (*i.e.* taille des points des stresseurs). Cette visualisation permet de représenter la quantité d'information disponible au sein de la base de données générée par l'évaluation des effets cumulatifs.", out.width = '100%', fig.link = "./figures/figures-output/cumulative_effects_metanetwork.png"}
 knitr::include_graphics("./figures/figures-output/cumulative_effects_metanetwork.png")
 ```
 
