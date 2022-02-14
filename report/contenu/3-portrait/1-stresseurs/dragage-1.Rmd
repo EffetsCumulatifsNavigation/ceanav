@@ -1,5 +1,7 @@
 ### Dragage
 
+> *Nous remercions Simon Blais d'Environnement et Changement climatique Canada et Pierre Michon du Ministère de l’Environnement et de la Lutte contre les changements climatiques du Québec pour les échanges et le support.*
+
 <!--
   TODO: Mieux expliquer la nature des travaux pour les ports, fin du premier paragraphe
   TODO: Ajouter le nombre d'activités de dragage par sites

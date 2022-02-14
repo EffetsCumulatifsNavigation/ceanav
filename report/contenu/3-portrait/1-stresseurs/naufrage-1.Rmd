@@ -1,5 +1,8 @@
 ### Naufrages
 
+> *Nous remercions Sohaib Gabsis de Pêches et Océans Canada pour les échanges et le support.*
+
+
 ```{r naufrage_setup, echo = FALSE}
 meta <- read_yaml("../data/data-metadata/int_st_naufrage.yml")
 ```

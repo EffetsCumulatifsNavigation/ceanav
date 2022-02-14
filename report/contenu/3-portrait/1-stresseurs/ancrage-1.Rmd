@@ -1,5 +1,8 @@
 ### Ancrages
 
+> *Nous remercions Corinne Berthold de la Garde côtière canadienne pour les échanges et le support.*
+
+
 ```{r ancrage_setup, echo = FALSE}
 meta <- read_yaml("../data/data-metadata/int_st_ancrage.yml")
 ```

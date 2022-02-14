@@ -2,6 +2,8 @@
 
 ##### Frayères et sites d'alevinage
 
+> *Nous remercions Marc Mingelbier du Ministère des Forêts, de la Faune et des Parcs du Québec pour les échanges et le support.*
+
 Les frayères sont des milieux essentiels au maintien de populations de poissons; en effet, des perturbations à ces sites, ou au comportement des espèces pendant la période de fraie, peuvent avoir des impacts majeurs sur la dynamique des populations de poissons. Similairement, les sites d'alimentation et de protection pour les stades de vie initiaux des poissons (*e.g.* larves, alevins, juvéniles), qui sont beaucoup plus susceptibles aux effets de perturbations à leur habitat. Ces sites, nommés aires d'alevinage, sont ainsi essentiels à leur survie. La protection des frayères et des aires d'alevinage est ainsi d'une importance majeure puisqu'ils constituent un goulot d'étranglement pour la dynamique des populations de poissons.
 
 Les données utilisées pour caractériser les frayères et les aires d'alevinage proviennent d'un exercice d'intégration de données d'observation *in situ* couvrant la période de 1974 à 2019 (Tableau \@ref(tab:frayerealevinage)). Les frayères et aires d'alevinage identifiées regroupent des données pour 71 et 49 espèces de poissons, respectivement, et couvrent une superficie d'environ 275 et 230 $km^2$ au sein de la zone d'étude. Les données regroupent des frayères et des aires d'alevinage confirmées ou potentielles lorsque les habitats étaient jugés propices à la fraie ou l'alevinage des poissons. Il est donc probable que ces données soient partielles et ne devraient pas être considérées comme un portrait exhaustif des frayères et des aires d'alevinage dans la zone d'étude. Les données sont composées de points et de polygones. Nous avons ajouté une zone tampon de 100 $m$ autour des points, puis avons intégré la présence de frayères au sein de notre grille d'étude de 1 $km^2$.
@@ -39,6 +41,9 @@ knitr::include_graphics("./figures/figures-integrated/habitat-site_alevinage.png
 <br/>
 
 ##### Oiseaux
+
+> *Nous remercions Jean-François Rail d'Environnement et Changement climatique Canada pour les échanges et le support.*
+
 
 Les données utilisées pour caractériser les sites d'importance pour les oiseaux proviennent de deux sources distinctes qui ont été insérées en présence-absence au sein de la grille d'étude. La première base de données décrit la localisation de colonies d'oiseaux nommée la [Banque Informatisée des Oiseaux Marins du Québec](https://ogsl.ca/fr/biodiversite-oiseaux-eccc-biomq-a-propos/) [BIOMQ; @rail2002; @eccc2021]. Cette dernière a été compilée et est mise à jour par le Service Canadien de la Faune (SCF) pour la région du Québec. La BIOMQ contient des informations sur la localisation de colonies d'oiseaux marins et de leurs sites de nidification pour les familles suivantes : Gaviidés (*i.e.* plongeons), Hydrobatidés (*i.e.* océanites), Sulidés (*i.e.* fous), Phalacrocoracidés (*i.e.* cormorans), Laridés (*i.e.* goélands, mouettes, sternes), Alcidés (*i.e.* guillemots, pingouins, macareux) et l’eider à duvet (*i.e.* Anatidés). Pour notre analyse, nous avons uniquement considéré la localisation des différentes colonies disponibles à travers la BIOMQ sans considérer les espèces individuelles afin d'identifier les lieux abritants des colonies d'oiseaux marins. Nous avons également utilisé les données à partir de l'année 2000 uniquement. Notre zone d'étude comprend `r meta$dataDescription$BIOMQ$Nombre` sites ayant une superficie totale de `r meta$dataDescription$BIOMQ$Superficie` $km^2$.
 

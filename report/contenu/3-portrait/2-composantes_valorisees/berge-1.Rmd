@@ -1,5 +1,7 @@
 ### Intégrité des berges
 
+> *Nous remercions Patrick Lajeunesse et Jean-François Bernier de l'Université Laval pour les échanges et le support.*
+
 ```{r berge_setup, echo = FALSE}
 meta <- read_yaml("../data/data-metadata/int_cv_berge.yml")
 ```

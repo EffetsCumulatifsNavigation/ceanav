@@ -1,5 +1,8 @@
 ### Mammifères marins
 
+> *Nous remercions Sonia Giroux du Réseau d’observation de mammifères marins et Aurélie Cosandey-Godin de WWF-Canada	pour les échanges et le support.*
+
+
 ```{r mm_setup, echo = FALSE}
 meta <- read_yaml("../data/data-metadata/int_cv_mammiferes_marins.yml")
 ```
