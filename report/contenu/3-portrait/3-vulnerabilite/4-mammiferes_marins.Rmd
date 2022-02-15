@@ -3,7 +3,11 @@
 > *Nous remercions Sonia Giroux du Réseau d’observation de mammifères marins et Marie Guilpin du Royal Netherlands Institute for Sea Research les échanges et le support.*
 
 
-La section précédente présente les différents critères utilisés afin de caractériser la vulnérabilité des espèces aux stresseurs environnementaux. La vulnérabilité des mammifères marins a été évaluée en utilisant l'ensemble des critères présentés au tableau \@ref(tab:vulnerabilitySpecies) et l'équation présentée à la section précédente. Les scores de vulnérabilité finaux sont disponibles au tableau \@ref(fig:mmvuln) et les tableaux d'évaluation des critères individuels par espèce de mammifère marin sont disponibles à l'Annexe 8.
+La section précédente présente les différents critères utilisés afin de caractériser la vulnérabilité des espèces aux stresseurs environnementaux. La vulnérabilité des mammifères marins a été évaluée en utilisant l'ensemble des critères présentés au tableau \@ref(tab:vulnerabilitySpecies) et l'équation présentée à la section précédente. 
+
+Les statuts fédéraux du Comité sur la situation des espèces en péril au Canada (COSEPAC) ont été utilisés afin de déterminer le statut des espèces de mammifères marins. 
+
+Les scores de vulnérabilité finaux sont disponibles au tableau \@ref(fig:mmvuln) et les tableaux d'évaluation des critères individuels par espèce de mammifère marin sont disponibles à l'Annexe 8.
 
 <br/>
 
