@@ -33,26 +33,6 @@ analysis/data/cv/habitats/espece_statut/espece_statut_mffp/
 analysis/data/stresseurs/deversements/deversement_gcc/20210223_Demande_UL.csv
 analysis/data/stresseurs/deversements/deversement_gcc/20210223_Demande_UL.xlsx
 
-# R data ---- delete this list
-data/cv_berge.RData
-data/cv_hab_alevinage.RData
-data/cv_hab_benthique.RData
-data/cv_hab_cote.RData
-data/cv_hab_espece_statut.RData
-data/cv_hab_frayere.RData
-data/cv_hab_marais.RData
-data/cv_hab_milieu_humide.RData
-data/cv_hab_milieu_sableux.RData
-data/cv_hab_zone_inondable.RData
-data/cv_hab_zostere.RData
-data/cv_ste_peche.RData
-data/cv_ste_saumon.RData
-data/str_ancrage.RData
-data/str_deversement.RData
-data/str_navigation.RData
-data/str_peche_commerciale.RData
-
-
 # Data ----
 data/data-raw/data*
 data/data-format/*.geojson
@@ -66,6 +46,12 @@ data/data-output/*.geojson
 data/data-output/*.csv
 data/data-output/cea_stresseur
 data/data-output/cea_composante_valorisee
+
+## Exceptions ----
+!data/data-raw/data0063*
+!data/data-raw/data0064*
+!data/data-format/data0063*
+!data/data-format/data0064*
 
 # Figures ----
 figures/figures-format/data*
