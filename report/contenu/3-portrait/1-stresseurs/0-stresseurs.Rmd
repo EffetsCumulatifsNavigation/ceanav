@@ -1,12 +1,10 @@
-## Stresseurs environnementaux
+## Stresseurs environnementaux {#strportrait}
 
 ```{r stresssetup, echo = FALSE}
 st <- read.csv("../data/data-metadata/metadata_stresseurs.csv")
 ```
 
-Dans le cadre d'évaluation d'effets cumulatifs, les stresseurs environnementaux issus d'activités humaines sont typiquement caractérisés en utilisant l'empreinte des activités elles-mêmes comme indice d'intensité des stresseurs [*e.g.* @halpern2019; @beauchesne2020]. En tant que tel, le travail de caractérisation des stresseurs environnementaux dans la zone d'étude visait une caractérisation directe des activités maritimes. De plus, chaque activité maritime est caractérisée par une empreinte unique et nécessite une approche appropriée afin de convenablement en capturer l'intensité et la distribution. Par exemple, une méthode pour caractériser la navigation ne serait pas appropriée pour caractériser les activités de dragage. Des approches individuelles ont ainsi été utilisées afin de caractériser les différents stresseurs environnementaux convenablement.
-
-De plus, certains stresseurs environnementaux peuvent être divisés en sous-catégories ayant une empreinte spatiale différente ou des effets différents sur les composantes valorisées. Par exemple, les traversiers n'utilisent pas les mêmes routes de navigation que les pétroliers, et la pêche au chalut n'affecte pas les écosystèmes de la même façon que la pêche au filet maillant. Nous avons ainsi divisé certains stresseurs en sous-catégories. Il en résulte un total de `r nrow(st)` catégories de stresseurs parmi les `r length(unique(st$stresseur))` stresseurs environnementaux considérés pour l'évaluation des effets cumulatifs (Tableau \@ref(tab:stress)). Les sections suivantes présentent les données, les méthodes et les résultats de l'intégration des données ayant permis la caractérisation des stresseurs environnementaux dans la zone d'étude.
+La caractérisation des stresseurs environnementaux dans la zone d'étude a résulté en la description de `r length(unique(st$stresseur))` stresseurs divisés en `r nrow(st)` sous-catégories qui sont considérées pour l'évaluation des effets cumulatifs des activités maritimes (Tableau \@ref(tab:stress)). Les sections suivantes présentent les données, les méthodes et les résultats de l'intégration des données ayant permis la caractérisation des stresseurs environnementaux dans la zone d'étude.
 
 <br/>
 

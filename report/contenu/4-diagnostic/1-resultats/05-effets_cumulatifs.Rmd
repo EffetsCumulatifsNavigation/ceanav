@@ -1,4 +1,6 @@
-### Effets cumulatifs
+### Effets cumulatifs {#cearesult}
+
+> La méthode utilisée pour obtenir les résultats suivants est présentée à la section \@ref(ceamethod) du rapport.
 
 Le résultat principal de l'évaluation applique l'entièreté de la méthode d'évaluation des effets cumulatifs en incluant la distribution et l'intensité des stresseurs environnementaux, la distribution des composantes valorisées, et la vulnérabilité des composantes valorisées aux stresseurs environnementaux (Figures \@ref(fig:cumEffects) et \@ref(fig:cumEffectsPanel)). Puisque l'évaluation des effets cumulatifs est contrainte par la distribution spatiale des stresseurs et des composantes valorisées, l'exploration des résultats de l'évaluation des effets a déjà été amorcée à partir de l'évaluation des stresseurs cumulés, des composantes valorisées cumulées et de l'exposition cumulée (voir sections précédentes). L'évaluation des effets cumulatifs permet ainsi de moduler l'intensité relative des effets en fonction de la vulnérabilité des composantes valorisées aux stresseurs, sans nécessairement altérer la distribution des effets.
 
