@@ -20,6 +20,7 @@
   meta <- data.frame(id = character(nF), 
                      name = character(nF),
                      pr = character(nF),
+                     temp = character(nF),
                      disp = character(nF),
                      src = character(nF))
 
@@ -31,6 +32,15 @@
     meta$pr[i] <- paste(dat$data_description$contact_id, collapse = ", ")
     meta$disp[i] <- dat$data_description$availability
     meta$src[i] <- paste(glue("@{dat$data_description$citekey}"), collapse = "; ")
+
+    # Temporal
+    tm1 <- dat$data_description$temporal_start
+    tm2 <- dat$data_description$temporal_end
+    if (!is.null(tm1)) {
+      meta$temp[i] <- ifelse(tm1 == tm2, tm1, glue("{tm1} - {tm2}"))
+    } else {
+      meta$temp[i] <- NA
+    }
   }
 
   # Integrated 
@@ -49,7 +59,7 @@
        
   # -----
   meta <- left_join(meta, l, by = "id") %>%
-          select(id,name,ana,pr,disp,src)
+          select(id,name,src,ana,temp, pr,disp)
   
   # -----
   write.csv(meta, "./data/data-metadata/data_summary.csv", row.names = FALSE)

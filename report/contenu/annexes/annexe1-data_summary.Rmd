@@ -1,9 +1,11 @@
 # Annexe 1 {.unnumbered #annexe1} 
 
+<div style="overflow-x:auto;">
 ```{r}
-meta <- read.csv("../data/data-metadata/data_summary.csv")
+meta <- read.csv("../data/data-metadata/data_summary.csv", colClasses=c("id"="character"))
 knitr::kable(meta, row.names = FALSE, 
-      col.names = c("ID","Nom","Incluse à l'évaluation",
-                    "Personne ressource","Disponibilité","Source"))
+      col.names = c("ID","Nom","Source(s)","Incluse à l'évaluation","Période couverte",
+                    "Personne ressource","Disponibilité"))
 
 ```
+</div>
