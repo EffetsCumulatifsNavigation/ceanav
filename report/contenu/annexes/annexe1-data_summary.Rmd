@@ -4,8 +4,8 @@
 ```{r}
 meta <- read.csv("../data/data-metadata/data_summary.csv", colClasses=c("id"="character"))
 knitr::kable(meta, row.names = FALSE, 
-      col.names = c("ID","Nom","Source(s)","Incluse à l'évaluation","Période couverte",
-                    "Personne ressource","Disponibilité"))
+      col.names = c("ID","Nom","Incluse à l'évaluation","Période couverte",
+                    "Personne ressource","Source(s)"))#,"Disponibilité"))
 
 ```
 </div>

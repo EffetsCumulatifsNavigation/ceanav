@@ -21,7 +21,7 @@
                      name = character(nF),
                      pr = character(nF),
                      temp = character(nF),
-                     disp = character(nF),
+                     # disp = character(nF),
                      src = character(nF))
 
   # -----
@@ -30,7 +30,7 @@
     meta$id[i] <- dat$data_description$id
     meta$name[i] <- rep_hyperlien(dat$data_description$name, dat$data_description$url)
     meta$pr[i] <- paste(dat$data_description$contact_id, collapse = ", ")
-    meta$disp[i] <- dat$data_description$availability
+    # meta$disp[i] <- dat$data_description$availability
     meta$src[i] <- paste(glue("@{dat$data_description$citekey}"), collapse = "; ")
 
     # Temporal
@@ -59,7 +59,8 @@
        
   # -----
   meta <- left_join(meta, l, by = "id") %>%
-          select(id,name,src,ana,temp, pr,disp)
+          # select(id,name,src,ana,temp, pr,disp)
+          select(id,name,ana,temp,pr,src)
   
   # -----
   write.csv(meta, "./data/data-metadata/data_summary.csv", row.names = FALSE)
