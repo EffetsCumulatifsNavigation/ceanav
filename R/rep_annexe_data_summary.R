@@ -30,7 +30,7 @@ rep_annexe_data_summary <- function() {
     meta$name[i] <- rep_hyperlien(dat$data_description$name, dat$data_description$url)
     meta$pr[i] <- paste(dat$data_description$contact_id, collapse = ", ")
     meta$disp[i] <- dat$data_description$availability
-    # meta$src[i] <- paste(dat$data_description$source, collapse = ", ")
+    meta$src[i] <- paste(glue("@{dat$data_description$citekey}"), collapse = "; ")
   }
 
   # Integrated 

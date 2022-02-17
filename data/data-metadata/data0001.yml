@@ -9,6 +9,8 @@ data_description:
   url: "https://ouvert.canada.ca/data/fr/dataset/c9ab948f-5009-4dbc-9129-2f6e373f17f6"
   identifiant: "c9ab948f-5009-4dbc-9129-2f6e373f17f6"
   availability: "open source"
+  citekey: 
+    - mpo2009
   citation:
     - "Pêches et Océans Canada (2009) Inventaire de la zostère marine dans la Baie James, la Baie des Chaleurs, l'estuaire et le golfe du Saint-Laurent. url: https://ouvert.canada.ca/data/fr/dataset/c9ab948f-5009-4dbc-9129-2f6e373f17f6"
     - "Calderón, I. 1996. Caractérisation de la végétation et de la faune ichtyenne de la baie de Sept-Îles. Document réalisé par la Corporation de protection de l'environnement de Sept-Îles pour Pêches et Océans Canada. 26p. + 5 annexes."
@@ -35,6 +37,4 @@ data_description:
     - "Naturam Environnement. 1999. Caractérisation biophysique, socio-économique et détermination des enjeux dans un secteur potentiel pour l’identification d’une zone de protection marine pilote: portion ouest de la MRC Manicouagan. Baie-Comeau. 311 p."
     - "Pelletier, Claudel. 2003. Communication personnelle de Claudel Pelletier, FAPAQ, lettre en date du 24 février 2003."
     - "Pereira, S. 2009. Communication personnelle de Selma Pereira (MPO)."
-    - "Vaillancourt, M.-A. et C. Lafontaine. 1999. Caractérisation de la Baie Mitis. Jardins de Métis et Pêches et Océans Canada. Grand-Métis. 185 p."
-  citekey:
-    - mpo2009
+    - "Vaillancourt, M.-A. et C. Lafontaine. 1999. Caractérisation del a Baie Mitis. Jardins de Métis et Pêches et Océans Canada. Grand-Métis. 185 p."
