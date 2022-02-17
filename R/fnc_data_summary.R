@@ -6,12 +6,12 @@
 #'
 #' @export
 #'
-#' @details Cette fonction permet de générer le tableau récapitulatif des données utilisées pour le rapport
+#' @details Cette fonction génère un tableau récapitulatif des données considérées pour l'évaluation
 #'
 #' @examples
-#' rep_annexe_data_summary()
+#' fnc_data_summary()
 
-rep_annexe_data_summary <- function() {  
+  data_summary <- function() {  
   # Metadata files 
   files <- dir("./data/data-metadata", pattern = "data0", full.names = TRUE)
   nF <- length(files)

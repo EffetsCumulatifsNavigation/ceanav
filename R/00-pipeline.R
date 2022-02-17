@@ -141,14 +141,14 @@ pipeline <- function(
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~
   if (pipeline_metadata) {
     # Data summary
-    rep_annexe_data_summary()
+    data_summary()
+
+    # Contacts
+    update_contact()
     
     # Metadata
     # update_metadata("raw")
     # update_metadata("integrated")
-
-    # Contacts
-    update_contact()
     
     # Metadata for stressors and valued components
     metadata_st_cv()
