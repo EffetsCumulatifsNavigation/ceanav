@@ -18,7 +18,7 @@ L'évaluation de la vulnérabilité des habitats aux stresseurs environnementaux
 -->
 
 
-## Données
+## Données {#donneesperspective}
 
 L'accès et la disponibilité des données constitue une limite de l'étude déjà citée; les données sont également une perspective majeure puisque de nouvelles données peuvent aisément être intégrées à la méthode d'évaluation des effets cumulatifs proposée. En cours de projet, certaines données pertinentes n'ont pu être intégrées pour une variété de raisons. Nous présentons ici quelques exemples de données qui devraient, à notre avis, être incluses à une seconde phase de ce projet pilote. Cette liste ne devrait toutefois pas être considérée comme exhaustive.
 
