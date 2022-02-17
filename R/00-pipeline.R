@@ -22,18 +22,6 @@ pipeline <- function(
   pipeline_logo = FALSE
 ) {
 
-
-  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~
-  if (pipeline_metadata) {
-    # Metadata
-    # update_metadata("raw")
-    # update_metadata("integrated")
-
-    # Contacts
-    update_contact()
-  }
-
-
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~
   if (pipeline_data) {
     # -----------------------------------
@@ -135,9 +123,6 @@ pipeline <- function(
 
     # This one MUST be run last, as it is an integrated of integrated stressors
     st_pollution_maritime()
-
-    # Metadata for stressors and valued components
-    metadata_st_cv()
   }
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~
@@ -152,6 +137,23 @@ pipeline <- function(
     # Integrate all
     vulnerability_matrix()
   }
+
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~
+  if (pipeline_metadata) {
+    # Data summary
+    rep_annexe_data_summary()
+    
+    # Metadata
+    # update_metadata("raw")
+    # update_metadata("integrated")
+
+    # Contacts
+    update_contact()
+    
+    # Metadata for stressors and valued components
+    metadata_st_cv()
+  }
+
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~
   if (pipeline_analysis) {

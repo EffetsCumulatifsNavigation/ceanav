@@ -1,0 +1,9 @@
+## Annexe 1 {.unnumbered #annexe1} 
+
+```{r}
+meta <- read.csv("../data/data-metadata/data_summary.csv")
+knitr::kable(meta, row.names = FALSE, 
+      col.names = c("ID","Nom","Incluse à l'évaluation",
+                    "Personne ressource","Disponibilité","Source"))
+
+```

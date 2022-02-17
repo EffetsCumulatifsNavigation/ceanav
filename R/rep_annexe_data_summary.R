@@ -13,7 +13,7 @@
 
 rep_annexe_data_summary <- function() {  
   # Metadata files 
-  files <- dir("../data/data-metadata", pattern = "data0", full.names = TRUE)
+  files <- dir("./data/data-metadata", pattern = "data0", full.names = TRUE)
   nF <- length(files)
   
   # -----
@@ -34,8 +34,8 @@ rep_annexe_data_summary <- function() {
   }
 
   # Integrated 
-  files <- c(dir("../data/data-metadata", pattern = "int_cv", full.names = TRUE), 
-             dir("../data/data-metadata", pattern = "int_st", full.names = TRUE))
+  files <- c(dir("./data/data-metadata", pattern = "int_cv", full.names = TRUE), 
+             dir("./data/data-metadata", pattern = "int_st", full.names = TRUE))
   # -----
   l <- list()
   for(i in 1:length(files)) {
@@ -50,8 +50,7 @@ rep_annexe_data_summary <- function() {
   # -----
   meta <- left_join(meta, l, by = "id") %>%
           select(id,name,ana,pr,disp,src)
-   
+  
   # -----
-  # Export table
-  kable(meta, row.names = FALSE, col.names = c("ID","Nom","Incluse à l'évaluation","Personne ressource","Disponibilité","Source"))
+  write.csv(meta, "./data/data-metadata/data_summary.csv", row.names = FALSE)
 }
