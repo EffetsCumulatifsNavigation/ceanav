@@ -11,9 +11,9 @@ rmd_subdir:
   - "contenu/4-diagnostic"
   - "contenu/5-limites"
   - "contenu/6-perspectives"
+  - "contenu/annexes"
   - "contenu/remerciements"
   - "contenu/references"
-  - "contenu/annexes"
 clean: [packages.bib, bookdown.bbl]
 delete_merged_file: true
 language:

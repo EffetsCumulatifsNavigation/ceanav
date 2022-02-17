@@ -1,4 +1,4 @@
-## Annexe 3 {.unnumbered #annexe3}
+# Annexe 3 {.unnumbered #annexe3}
 
 #### ceanav <a href='https://github.com/EffetsCumulatifsNavigation/ceanav'><img src='./figures/logo.png' align="right" height="175" /></a> {.unnumbered}
 
