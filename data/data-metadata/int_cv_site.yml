@@ -24,7 +24,6 @@ dataDescription:
     - essipit_acces_eau
     - wolastoqiyik_wahsipekuk_peche_commerciale
     - kahnawake_culture_patrimoine
-    - kahnawake_peche_commerciale
     - kahnawake_chasse
     - kahnawake_peche_rivage
     - kahnawake_peche_offshore
@@ -67,7 +66,6 @@ dataDescription:
     - Accès au plan d'eau
     - Pêche traditionnelle
     - Culture et patrimoine
-    - Pêche commerciale
     - Chasse à la sauvagine
     - Pêche de rivage
     - Pêche en eau libre
@@ -109,7 +107,6 @@ dataDescription:
     - Nation des Innus d’Essipit
     - Nation des Innus d’Essipit
     - Nation Wolastoqiyik Wahsipekuk
-    - Nation Mohawk de Kahnawà:ke
     - Nation Mohawk de Kahnawà:ke
     - Nation Mohawk de Kahnawà:ke
     - Nation Mohawk de Kahnawà:ke
@@ -159,7 +156,6 @@ dataDescription:
     - '0032'
     - '0032'
     - '0032'
-    - '0032'
     - 0030,0038,0039,0040
     - '0044,0045'
     - '0055'
@@ -196,7 +192,6 @@ dataDescription:
     - essipitacceseau
     - wolastoqiyikwahsipekukpechecommerciale
     - kahnawakeculturepatrimoine
-    - kahnawakepechecommerciale
     - kahnawakechasse
     - kahnawakepecherivage
     - kahnawakepecheoffshore
@@ -239,7 +234,6 @@ rawData:
 - '0024'
 - '0025'
 - '0026'
-- '0032'
 - '0032'
 - '0032'
 - '0032'

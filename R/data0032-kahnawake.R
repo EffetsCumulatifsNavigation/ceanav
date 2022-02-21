@@ -68,6 +68,10 @@ get_data0032 <- function() {
   # Add certain names
   data0032$description[c(3,9,11,12,18)] <- "Waterfowl hunting"
   data0032$category[c(4,17,19,25)] <- "Near Shore Fishing"
+  
+  # Modify Fishing Commercial, as requested after reviews:
+  # > I understand that the weighting for all elements is the same and when the maps are removed this may be a moot point however this figure identifies “Commercial fishing” whereas our intent was to identify this area as “Open water fishing”.
+  data0032$category[data0032$category == "Fishing Commercial"] <- "Open Water Fishing"
 
   # Transform projection
   data0032 <- st_transform(data0032, crs = global_parameters()$crs)

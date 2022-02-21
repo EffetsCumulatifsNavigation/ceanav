@@ -224,11 +224,10 @@ knitr::include_graphics("./figures/figures-integrated/site-essipit_culture_patri
 
 > *Nous remercions la Nation Mohawk de Kahnawà:ke pour leur participation, ainsi que le Comité Consultatif du Conseil Mohawk de Kahnawà:ke pour les échanges et le support.*
 
-Les données transmises par la Nation Mohawk de Kahnawà:ke fournissent la localisation de sites d'intérêt dans la portion fluviale du Saint-Laurent dans la région de Montréal et du lac St-Pierre [@mck2021]. Les sites identifiés ciblent principalement les activités de chasse, de pêche et de récolte de végétaux visant une variété d'espèces importantes, des sites culturels, et l'utilisation de certaines portions du territoire par la Nation. Ces derniers peuvent être divisés en huit catégories :
+Les données transmises par la Nation Mohawk de Kahnawà:ke fournissent la localisation de sites d'intérêt dans la portion fluviale du Saint-Laurent dans la région de Montréal et du lac St-Pierre [@mck2021]. Les sites identifiés ciblent principalement les activités de chasse, de pêche et de récolte de végétaux visant une variété d'espèces importantes, des sites culturels, et l'utilisation de certaines portions du territoire par la Nation. Ces derniers peuvent être divisés en sept catégories :
 
 - Activités
   - Chasse à la sauvagine
-  - Pêche commerciale 
   - Pêche en eau libre
   - Pêche de rivage
   - Récolte de végétation 
@@ -244,59 +243,58 @@ Un clause accompagne les données partagées, que nous nous permettons de retran
 
 > The Mohawk Council of Kahnawà:ke (MCK) has gathered some information from community members concerning the value and use of the St. Lawrence River in the vicinity of Kahnawà:ke. These comments have been organized according to the valued components identified for the fluvial section of the river through the Cumulative Effects of Marine Shipping by the Transport Canada team in collaboration with project partners. Therefore, the information provided is based on a limited consultation of community members, with the intent of responding to the specific parameters of this Transport Canada study only and should not be interpreted as a comprehensive study of Mohawk traditional land use or rights throughout the study area. The information provided should also not be used to replace engagement, including the gathering of traditional land use information within the context of any other future study or project. In addition, our participation in this study is without prejudice to the exercise of our jurisdictional rights to our traditional territory to which our stewardship rights and responsibilities apply and that are based on the application of a broader ecosystem-based approach. Therefore, the identification of specific areas of concern or value, including the identification of specific fish species or archaeological sites of interest is to be understood within the context of these broader rights and responsibilities.
 
+Bien que des données aient été fournit par la Nation Mohawk de Kahnawà:ke et qu'elles ont été intégrées à l'évaluation des effets cumulatifs, il a été demandé de ne pas présenter de cartes des sites identifiés. Pour de plus amples informations, veuillez contacter le *Mohawk Council of Kahnawà:ke*. La requête originale pour le retrait des figures est la suivante:
+
+> The Mohawk Council of Kahnawà:ke provided information concerning some known sites of interest related to the activities mentioned above. These data were incorporated into the cumulative effects assessment however it was requested that the delineation of these areas not be shown within this report. For further information on this data, please contact the Mohawk Council of Kahnawà:ke
+
+
+<!--
 <br>
 
 ###### Activités 
 
 <br>
 
-```{r kahnawakechasse, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation Mohawk de Kahnawà:ke - Chasse à la sauvagine", out.width = '100%', fig.link = "./figures/figures-integrated/site-kahnawake_chasse.png"}
+{r kahnawakechasse, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation Mohawk de Kahnawà:ke - Chasse à la sauvagine", out.width = '100%', fig.link = "./figures/figures-integrated/site-kahnawake_chasse.png"}
 knitr::include_graphics("./figures/figures-integrated/site-kahnawake_chasse.png")
-```
+
 
 <br>
-
-```{r kahnawakepechecommerciale, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation Mohawk de Kahnawà:ke - Pêche commerciale", out.width = '100%', fig.link = "./figures/figures-integrated/site-kahnawake_peche_commerciale.png"}
-knitr::include_graphics("./figures/figures-integrated/site-kahnawake_peche_commerciale.png")
-```
-
-<br>
-```{r kahnawakepecheoffshore, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation Mohawk de Kahnawà:ke - Pêche en eau libre", out.width = '100%', fig.link = "./figures/figures-integrated/site-kahnawake_peche_offshore.png"}
+{r kahnawakepecheoffshore, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation Mohawk de Kahnawà:ke - Pêche en eau libre", out.width = '100%', fig.link = "./figures/figures-integrated/site-kahnawake_peche_offshore.png"}
 knitr::include_graphics("./figures/figures-integrated/site-kahnawake_peche_offshore.png")
-```
+
 <br>
 
-```{r kahnawakepecherivage, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation Mohawk de Kahnawà:ke - Pêche de rivage", out.width = '100%', fig.link = "./figures/figures-integrated/site-kahnawake_peche_rivage.png"}
+{r kahnawakepecherivage, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation Mohawk de Kahnawà:ke - Pêche de rivage", out.width = '100%', fig.link = "./figures/figures-integrated/site-kahnawake_peche_rivage.png"}
 knitr::include_graphics("./figures/figures-integrated/site-kahnawake_peche_rivage.png")
-```
+
 <br>
 
-```{r kahnawakevegatation, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation Mohawk de Kahnawà:ke - Récolte de végétation", out.width = '100%', fig.link = "./figures/figures-integrated/site-kahnawake_vegatation.png"}
+{r kahnawakevegatation, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation Mohawk de Kahnawà:ke - Récolte de végétation", out.width = '100%', fig.link = "./figures/figures-integrated/site-kahnawake_vegatation.png"}
 knitr::include_graphics("./figures/figures-integrated/site-kahnawake_vegatation.png")
-```
+
 
 ###### Sites d'importance  
 
 <br>
 
-```{r kahnawakeculturepatrimoine, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation Mohawk de Kahnawà:ke - Culture et patrimoine", out.width = '100%', fig.link = "./figures/figures-integrated/site-kahnawake_culture_patrimoine.png"}
+{r kahnawakeculturepatrimoine, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation Mohawk de Kahnawà:ke - Culture et patrimoine", out.width = '100%', fig.link = "./figures/figures-integrated/site-kahnawake_culture_patrimoine.png"}
 knitr::include_graphics("./figures/figures-integrated/site-kahnawake_culture_patrimoine.png")
-```
+
 
 ###### Utilisation du territoire 
 
 <br>
 
-```{r kahnawakesssm, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation Mohawk de Kahnawà:ke - Seigneurie du Sault-Saint-Louis", out.width = '100%', fig.link = "./figures/figures-integrated/site-kahnawake_sssm.png"}
+{r kahnawakesssm, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation Mohawk de Kahnawà:ke - Seigneurie du Sault-Saint-Louis", out.width = '100%', fig.link = "./figures/figures-integrated/site-kahnawake_sssm.png"}
 knitr::include_graphics("./figures/figures-integrated/site-kahnawake_sssm.png")
-```
 
 <br>
 
-```{r kahnawaketraffic, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation Mohawk de Kahnawà:ke - Navigation maritime", out.width = '100%', fig.link = "./figures/figures-integrated/site-kahnawake_traffic.png"}
+{r kahnawaketraffic, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation Mohawk de Kahnawà:ke - Navigation maritime", out.width = '100%', fig.link = "./figures/figures-integrated/site-kahnawake_traffic.png"}
 knitr::include_graphics("./figures/figures-integrated/site-kahnawake_traffic.png")
-```
 
+-->
 
 <br>
 

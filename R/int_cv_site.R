@@ -199,12 +199,6 @@ cv_site <- function() {
   site$kahnawake_culture_patrimoine <- uid(dat, "Cultural Sites", "category")
 
   # ----------------------------
-  # Kahnawake - Fishing Commercial : 0032
-  meta_temp <- meta_update(meta_temp, dat, "kahnawake_peche_commerciale", "Pêche commerciale", type = "Nation Mohawk de Kahnawà:ke")
-  site$kahnawake_peche_commerciale <- uid(dat, "Fishing Commercial", "category")
-
-
-  # ----------------------------
   # Kahnawake - Hunting : 0032
   meta_temp <- meta_update(meta_temp, dat, "kahnawake_chasse", "Chasse à la sauvagine", type = "Nation Mohawk de Kahnawà:ke")
   site$kahnawake_chasse <- uid(dat, "Hunting", "category")
