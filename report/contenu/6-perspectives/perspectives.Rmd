@@ -41,6 +41,10 @@ Les herbiers aquatiques sont des milieux importants pour plusieurs espèces et l
 
 Une pêche commerciale est effectuée au sein du secteur fluvial de la zone d’étude. Les données disponibles n’ont toutefois pu être obtenues puisque le Ministère de l’Agriculture, des Pêcheries et de l’Alimentation du Québec (MAPAQ) et le Ministère des Forêts, de la Faune et des Parcs (MFFP) travaillent actuellement à la production d’un atlas cartographique des zones de pêches qui devrait être publié en 2022. Lorsque disponible, les données de cet atlas devraient être intégrées à l'évaluation des effets cumulatifs afin de bonifier la caractérisation des activités de pêches commerciales dans la zone d'étude.
 
+#### Épaves 
+
+Les sites de naufrage sont actuellement considérés uniquement en tant que stresseur environnemental au sein de notre évaluation. Les épaves sont toutefois également des sites archéologiques faisant partie du patrimoine québécois; ces dernières pourraient ainsi être considérées en tant que sites d'intérêts archéologiques au sein de la composante valorisées de sites d'intérêt culturels, patrimoniaux et archéologiques. Une caractérisation des sites archéologiques d'intérêt existe à travers la l'Inventaire des sites archéologique du Québec du Ministère de la Culture et des Communications. Nous n'avons toutefois pu accéder à cet inventaire dans le cadre de notre évaluation. Il serait ainsi pertinent d'ajouter les données de cet inventaire si une mise à jour de l'évaluation des effets cumulatifs est effectuée. 
+
 
 ## Scénarios de gestion
 

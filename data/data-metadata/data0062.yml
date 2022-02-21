@@ -5,5 +5,6 @@ data_description:
   access_date: 2021-11-18
   contact_id: "0055"
   availability: "data sharing agreement"
+  citekey: gcc2021
   citation:
-    - "Canadian Coast Guard (2021) Inventory of Vessels of Concern (VOC). [Date accessed: 2021-11-18]"
+    - "Garde côtière canadienne (2021) Inventaire des navires préoccupants (Inventory of Vessels of Concern (VOC))."
