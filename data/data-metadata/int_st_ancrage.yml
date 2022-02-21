@@ -7,18 +7,22 @@ dataDescription:
   spatial:
     resolution: 1km^2
     extent:
-    - -1208870.3866312
-    - -153663.7106643
-    - 1149573.3870219
-    - 702041.2959883
+    - -391547.1007397
+    - 187118.0328644
+    - -2196.8414786
+    - 498878.8259232
   temporal:
     resolution: Event based
   categories:
     accronyme: ancrage
-    francais: Sites d'ancrage de navires
-    source: '0015'
+    francais: Sites d'ancrage commerciaux
+    source:
+    - '0070'
+    - '0071'
     mdref: ancrage
-    description: Distribution des sites d'ancrage de navires
+    description: Distribution des sites d'ancrage pour la navigation commerciale
   observations:
-    total: 137
-rawData: '0015'
+    total: 101
+rawData:
+- '0070'
+- '0071'
