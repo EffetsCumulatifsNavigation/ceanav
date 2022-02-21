@@ -9,6 +9,10 @@ data_description:
     - "0023"
     - "0042"
   availability: "available"
+  citekey:
+    - eccc2020
+    - mtq2016
+    - mtq2017
   citation:
     - "Environnement et Changement Climatique Canada (2020) Bilan des activités de dragage dans l’Estuaire du Saint-Laurent de 2009 à 2016. Document de travail"
     - "Ministère des Transports du Québec (2016) Compilation des dragages dans l’ensemble du Saint-Laurent entre 2001 et 2016. Document de travail"

@@ -7,4 +7,5 @@ data_description:
   temporal_end: 2015
   contact_id: "0016"
   availability: "data sharing agreement"
+  citekey: tc2020b
   citation: "Transports Canada (2020) Satellite navigation data from automatic identification system (AIS) in the St. Lawrence estuary from 2017 to 2019. Data provided by Maerospace Corporation via a contract with PWGSC on behalf of the Canadian Space Agency."

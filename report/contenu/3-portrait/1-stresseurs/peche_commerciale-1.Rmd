@@ -6,7 +6,7 @@ meta <- read_yaml("../data/data-metadata/int_st_peche_commerciale.yml")
 
 L'intensité des activités de pêche commerciale au sein de la zone d'étude a été
 évaluée à l'aide de données provenant du programme de journaux de bord de Pêches
-et Océans Canada [@dfo2021; @dfo2021b; @dfo2021c]. Bien que les journaux de bord ne soient pas
+et Océans Canada [@mpo2021; @mpo2021b; @mpo2021c]. Bien que les journaux de bord ne soient pas
 obligatoires pour toutes les pêches, ils fournissent tout de même une évaluation
 suffisamment exhaustive de la distribution et de l'intensité des activités de pêche
 commerciale dans la zone d'étude. Bien qu'une pêche commerciale existe dans le secteur fluvial et dans la rivière Saguenay, nous n'avons pu obtenir de données permettant d'en caractériser leur distribution et leur intensité. L'absence de données dans ces secteurs ne devrait ainsi pas être interprétée comme une absence de pêche commerciale; cette lacune devrait être adressée pour une évaluation future.
@@ -33,7 +33,7 @@ tab$Scientific <- glue("*{tab$Scientific}*")
 tab[,-1] %>%
   knitr::kable(
     col.names = c("Nom scientifique", "Nom français","Nom anglais","Fréquence"),
-    caption = "Espèces capturées par la pêche commerciale dans la zone d'étude [@dfo2021]. Les espèces identifiées en gras sont les espèces ciblées par les activités de pêche. Les identifiants uniques proviennent d'une base de données fournissant un index des espèces pour la pêche commerciale conjointe à la base de données des journaux de bord [@dfo2021c]"
+    caption = "Espèces capturées par la pêche commerciale dans la zone d'étude [@mpo2021]. Les espèces identifiées en gras sont les espèces ciblées par les activités de pêche. Les identifiants uniques proviennent d'une base de données fournissant un index des espèces pour la pêche commerciale conjointe à la base de données des journaux de bord [@mpo2021c]"
   )
 ```
 
@@ -46,7 +46,7 @@ et des palangres. Chaque engin de pêche peut engendrer des effets différents s
 écosystèmes où les activités de pêche se déroulent. Par exemple, la pêche à l'aide
 de casiers a des effets très différents que la pêche au chalut. Nous avons ainsi
 divisé les activités de pêche en fonction de leurs effets environnementaux selon
-les catégories proposées par @halpern2008aa et reprises par @beauchesne2020 pour
+les catégories proposées par @halpern2008a et reprises par @beauchesne2020 pour
 l'estuaire et le golfe du Saint-Laurent (Tableau \@ref(tab:pecheEngin)):
 démersales, destructives, prises accessoires élevées (DD),
 démersales, non-destructives, prises accessoires élevées (DNH),
@@ -66,7 +66,7 @@ Nous avons utilisé une zone ayant un rayon de 200 et 2000 mètres pour les
 activités de pêche avec engins fixes et mobiles, respectivement [@beauchesne2020].
 Les engins ont été caractérisés grâce à une base de données fournissant un
 index des engins de pêche pour la pêche commerciale conjointe à la base
-de données des journaux de bord [@dfo2021c]
+de données des journaux de bord [@mpo2021b]
 
 <br/>
 
@@ -94,5 +94,35 @@ $$I_{peche,j} = \sum_{k=1}^{n_j} P_{j,k}$$
 
 où $j$ est une cellule de la grille d'étude, $k$ est une activité de pêche et $P_k$ est la zone tampon entourant chaque activité de pêche $k$. Cette formule calcule l'intensité de pêche en nombre d'activités de pêche répertoriées. Puisque nous avons calculé l'intensité au sein de cellules de 1 $km^2$, les unités de cette formule sont en nombre d'activités ($n$) par $km^2$, soit $n * km^{-2}$. Puisque des zones tampons ont été utilisées autour de chaque activité, il est posible qu'une seule activité de pêche soit répertoriée pour plus d'une cellule de la grille d'étude. La somme totale des activités dans la grille d'étude ne sera ainsi pas égale à la somme totale réelle des activités de pêche répertoriées dans la zone d'étude. 
 
+
+<br>
+
+```{r DD, fig.cap = "Intensité des activités de pêche commerciale dans le Saint-Laurent - Démersale destructive, prises accessoires élevées", out.width = '100%', fig.link = "./figures/figures-integrated/peche_commerciale-DD.png"}
+knitr::include_graphics("./figures/figures-integrated/peche_commerciale-DD.png")
+```
+
+<br>
+
+```{r DNH, fig.cap = "Intensité des activités de pêche commerciale dans le Saint-Laurent - Démersale non-destructive, prises accessoires élevées", out.width = '100%', fig.link = "./figures/figures-integrated/peche_commerciale-DNH.png"}
+knitr::include_graphics("./figures/figures-integrated/peche_commerciale-DNH.png")
+```
+
+<br>
+
+```{r DNL, fig.cap = "Intensité des activités de pêche commerciale dans le Saint-Laurent - Démersale non-destructive, prises accessoires faibles", out.width = '100%', fig.link = "./figures/figures-integrated/peche_commerciale-DNL.png"}
+knitr::include_graphics("./figures/figures-integrated/peche_commerciale-DNL.png")
+```
+
+<br>
+
+```{r PHB, fig.cap = "Intensité des activités de pêche commerciale dans le Saint-Laurent - Pélagique prises accessoires élevées", out.width = '100%', fig.link = "./figures/figures-integrated/peche_commerciale-PHB.png"}
+knitr::include_graphics("./figures/figures-integrated/peche_commerciale-PHB.png")
+```
+
+<br>
+
+```{r PLB, fig.cap = "Intensité des activités de pêche commerciale dans le Saint-Laurent - Pélagique prises accessoires faibles", out.width = '100%', fig.link = "./figures/figures-integrated/peche_commerciale-PLB.png"}
+knitr::include_graphics("./figures/figures-integrated/peche_commerciale-PLB.png")
+```
 
 <br>

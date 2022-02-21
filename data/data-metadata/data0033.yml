@@ -10,4 +10,5 @@ data_description:
     - "0033"
     - "0034"
   availability: "data sharing agreement"
-  citation: "Fisheries and Oceans Canada (2021). Departement of Fisheries and Oceans Canada’s Fisheries and Oceans Canada Zonal Interchange File Format (ZIFF) data. A compilation of landing data from logbook data between 2000 and 2020. [Data accessed 2021-06-11]"
+  citekey: mpo2021
+  citation: "Pêches et Océans Canada (2021). Departement of Fisheries and Oceans Canada’s Fisheries and Oceans Canada Zonal Interchange File Format (ZIFF) data. A compilation of landing data from logbook data between 2000 and 2020. [Data accessed 2021-06-11]"

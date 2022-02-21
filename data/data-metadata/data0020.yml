@@ -7,4 +7,5 @@ data_description:
   temporal_end: 2015
   contact_id: "0016"
   availability: "data sharing agreement"
+  citekey: tc2020
   citation: "Transports Canada (2020) Static vessel information per MMSI that travelled in Canadian waters between 2015 and 2019."

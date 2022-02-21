@@ -7,5 +7,7 @@ data_description:
     - "0021"
     - "0022"
   availability: "available"
+  citekey: 
+    - gcc2021b
   citation:
-    - "Garde Côtières Canadienne (2021) Programme de gestion des voies navigables de la Garde Côtière Canadienne."
+    - "Garde côtières canadienne (2021) Programme de gestion des voies navigables de la Garde Côtière Canadienne."

@@ -8,5 +8,6 @@ data_description:
   contact_id:
     - "0025"
   availability: "available"
+  citekey: bouchard2022
   citation:
-    - "Bourchard D. (communication personnelle) Position et volume dragués et den 2001, 2011 et 2016 pour la Première Nation des Innus d'Essipit dans la région des Bergeronnes."
+    - "Bourchard D. (2022) Position et volume dragués et den 2001, 2011 et 2016 pour la Première Nation des Innus d'Essipit dans la région des Bergeronnes."

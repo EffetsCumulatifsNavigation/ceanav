@@ -10,4 +10,5 @@ data_description:
     - "0033"
     - "0034"
   availability: "data sharing agreement"
+  citekey: mpo2021c
   citation: "Fisheries and Oceans Canada (2021). Index of species in departement of Fisheries and Oceans Canada’s Fisheries and Oceans Canada Zonal Interchange File Format (ZIFF) data. A compilation of landing data from logbook data between 2000 and 2020. [Data accessed 2021-07-15]"

@@ -11,17 +11,18 @@ La majorité des données ont été intégrées à la grille d'étude en présen
 <br/>
 
 ```{r cv}
-tab <- select(cv, title, type, simple) %>%
+tab <- select(cv, title, type, simple,source) %>%
        arrange(title, type, simple)
 tab$title[duplicated(tab$title)] <- ""
 tab$type[duplicated(tab$type)] <- ""
 uid <- which(tab$title != "")[-1]-1
+tab$source <- gsub(",", ", ", tab$source)
 
 tab %>%
   knitr::kable(
-    col.names = c("Composantes valorisées", "Type", "Sous-catégories"),
+    col.names = c("Composantes valorisées", "Type", "Sous-catégories", "Source"),
     row.names = FALSE,
-    caption = "Liste des sous-catégories de composantes valorisées considérées pour l'évaluation des effets cumulatifs des activités maritimes dans le Saint-Laurent et le Saguenay."
+    caption = "Liste des sous-catégories de composantes valorisées considérées pour l'évaluation des effets cumulatifs des activités maritimes dans le Saint-Laurent et le Saguenay. Consultez l'[annexe 1](#annexe1) pour plus de détails sur les sources de données."
   ) #%>%
   #kableExtra::row_spec(uid, extra_css = "border-bottom: 2px solid")
 ```

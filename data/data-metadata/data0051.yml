@@ -7,6 +7,9 @@ data_description:
   url: "https://open.canada.ca/data/en/dataset/23d26c61-b119-42c0-aa41-bd06cd96a973"
   identifiant: "23d26c61-b119-42c0-aa41-bd06cd96a973"
   availability: "open source"
+  citekey: 
+    - tc2021
+    - tc2021b
   citation:
-    - "Transport Canada (2021) Canada's designated alternate ballast water exchange areas. [Accessed 2021-08-31] url: https://open.canada.ca/data/en/dataset/23d26c61-b119-42c0-aa41-bd06cd96a973"
-    - "Transport Canada (2021) List of Canada's designated alternate ballast water exchange areas and fresh wasters. TP No. 13617E. Edition 10 RDIMS #1412517 v33. Catalogue No. T29-163//2021E. ISBN 978-0-660-39186-1."
+    - "Transports Canada (2021) Canada's designated alternate ballast water exchange areas. [Accessed 2021-08-31] url: https://open.canada.ca/data/en/dataset/23d26c61-b119-42c0-aa41-bd06cd96a973"
+    - "Transports Canada (2021) List of Canada's designated alternate ballast water exchange areas and fresh wasters. TP No. 13617E. Edition 10 RDIMS #1412517 v33. Catalogue No. T29-163//2021E. ISBN 978-0-660-39186-1."

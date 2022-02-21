@@ -7,5 +7,7 @@ data_description:
   temporal_end: 2020
   contact_id: "0018"
   availability: "available"
+  citekey: 
+    - gcc2020
   citation:
-    - "Garde côtière canadienne, Direction des Interventions, Intervention environnementale, région du Centre. Base de données SGI-WEB -2007-2020."
+    - "Garde côtière canadienne (2020) Base de données SGI-WEB -2007-2020. Direction des Interventions, Intervention environnementale, région du Centre."

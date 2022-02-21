@@ -10,7 +10,7 @@ L'intensité de la navigation au sein de la zone d'étude a été évaluée à l
 de données provenant de Système d'Identification Automatique (SIA) -- ou
 *Automatic Identification Système* (AIS) en anglais -- satellitaire mises en forme
 par Maerospace Corporation et acquises pour l'Agence Spatiale Canadienne
-[@transportscanada2020a; @transportscanada2020b].
+[@tc2020; @tc2020b].
 Cette base de données contient `r meta$dataDescription$observations$total`
 localisations de navire (`r meta$dataDescription$observations$moyenne` $\pm$ `r meta$dataDescription$observations$sd` observations par année) pour
 `r sum(meta$dataDescription$categories$boats, na.rm = TRUE)` navires entre
@@ -39,6 +39,17 @@ Cette segmentation a résultée en `r meta$dataDescription$segments` segments
 linéaires de navigation. Puisque plusieurs types de navires naviguent sur les eaux du Saint-Laurent et du Saguenay, nous avons considéré `r length(meta$dataDescription$categories$accronyme)-2` catégories de navires différents pour compléter le portrait
 de l'intensité de la navigation au sein de la zone d'étude (Tableau \@ref(tab:navCat)).
 
+Pour caractériser la navigation, nous avons
+utilisé un indice d'intensité caractérisant la navigation en terme d'utilisation
+-- ou passages -- unique. Pour chaque catégorie de navire, nous avons évalué
+l'intensité de la navigation au sein de la zone d'étude par le nombre
+de segments de navigation qui intersectent chaque cellule de 1 $km^2$ de la
+grille d'étude entre `r meta$dataDescription$temporal$start` et
+`r meta$dataDescription$temporal$end`.
+Cet indice résulte en une évaluation de l'intensité de la navigation en
+nombre de navires ($n$) par $km^2$ ($n$ $navires$ $*$ $km^{-2}$)
+
+<br/>
 
 ```{r navCat}
 tab <- as.data.frame(meta$dataDescription$categories)
@@ -52,21 +63,9 @@ tab %>%
   knitr::kable(
     col.names = c("Types de navire", "Navires", "Localisations", "Segments"),
     row.names = FALSE,
-    caption = "Description des types de navires considérés pour l'analyse d'évaluation des effets cumulatifs et leur représentation au sein des données du Système d'Identification Automatique utilisées [@transportscanada2020a; @transportscanada2020b]. "
+    caption = "Description des types de navires considérés pour l'analyse d'évaluation des effets cumulatifs et leur représentation au sein des données du Système d'Identification Automatique utilisées [@tc2020; @tc2020b]. "
   )
 ```
-
-<br/>
-
-Pour caractériser la navigation, nous avons
-utilisé un indice d'intensité caractérisant la navigation en terme d'utilisation
--- ou passages -- unique. Pour chaque catégorie de navire, nous avons évalué
-l'intensité de la navigation au sein de la zone d'étude par le nombre
-de segments de navigation qui intersectent chaque cellule de 1 $km^2$ de la
-grille d'étude entre `r meta$dataDescription$temporal$start` et
-`r meta$dataDescription$temporal$end` [@ref].
-Cet indice résulte en une évaluation de l'intensité de la navigation en
-nombre de navires ($n$) par $km^2$ ($n$ $navires$ $*$ $km^{-2}$)
 
 <br/>
 

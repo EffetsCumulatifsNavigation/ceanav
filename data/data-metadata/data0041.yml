@@ -9,4 +9,5 @@ data_description:
   url: "https://ouvert.canada.ca/data/fr/dataset/dcf460ae-c27f-4721-bec4-6e4467a5a3b6"
   identifiant: "dcf460ae-c27f-4721-bec4-6e4467a5a3b6"
   availability: "open source"
-  citation: "Ministère des Transports (2021) Port - Installation. url: https://ouvert.canada.ca/data/fr/dataset/dcf460ae-c27f-4721-bec4-6e4467a5a3b6"
+  citekey: mtq2021
+  citation: "Ministère des Transports du Québec (2021) Port - Installation. url: https://ouvert.canada.ca/data/fr/dataset/dcf460ae-c27f-4721-bec4-6e4467a5a3b6"
