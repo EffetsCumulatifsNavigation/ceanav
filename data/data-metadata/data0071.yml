@@ -1,0 +1,12 @@
+data_description:
+  id: "0071"
+  name: "Mouillages et zones de mouillages canadiennes"
+  description: "Mouillages et zones de mouillages canadiennes est composés de quatre fichiers qui comprennent des zones de mouillage (ACHARE) et des mouillages à un seul navire (ACHBRT). Les fichiers sont soit un avec des points et un avec des polygones pour chacun des deux types mouillages. Ces fichiers sont un ensemble complet de données sur les mouillages et les zones de mouillage dans les eaux navigables canadiennes. Cet ensemble de données sera mis à jour au besoin."
+  access_date: 2021-02-21
+  temporal_start: 2020
+  temporal_end: 2020
+  contact_id: "0061"
+  url: "https://ouvert.canada.ca/data/fr/dataset/622a7f72-4a00-4f9e-b04f-af6551c77db3"
+  identifiant: "622a7f72-4a00-4f9e-b04f-af6551c77db3"
+  availability: "open source"
+  citation: "Service Hydrographique du Canada (2020) Mouillages et zones de mouillages canadiennes. url: https://ouvert.canada.ca/data/fr/dataset/622a7f72-4a00-4f9e-b04f-af6551c77db3"
