@@ -11,5 +11,9 @@ data_description:
   url: "https://www.donneesquebec.ca/recherche/dataset/caracterisation-des-berges-et-analyse-de-l-evolution-des-facteurs-hydro-climatiques"
   identifiant: "8301c7ed-6b27-4319-9150-435246634b90"
   availability: "open access"
+  citekey: 
+    - bernier2020
+    - bernier2021
   citation:
-    - "Bernier, J.-F., Chassiot, L., Ouellet, C. et Lajeunesse, P. 2020. Caractérisation des berges de la partie fluviale du Saint-Laurent. Laboratoire de géosciences marines, Département de Géographie, Université Laval, Rapport soumis au Ministère de l’Environnement et de la Lutte contre les changements climatiques. 120 pp + annexes"
+    - "Bernier, J.-F., Chassiot, L., Ouellet, C. et Lajeunesse, P. (2020) Caractérisation des berges de la partie fluviale du Saint-Laurent. Laboratoire de géosciences marines, Département de Géographie, Université Laval, Rapport soumis au Ministère de l’Environnement et de la Lutte contre les changements climatiques. 120 pp + annexes"
+    - "Bernier, J.-F., Chassiot, L., Ouellet, C. et Lajeunesse, P. (2021) Assessing Bank Erosion Hazards along Large Rivers in the Anthropocene: A Geospatial Framework from the St. Lawrence Fluvial System. Geomatics, Natural Hazards nad Risk 12, no. 1 (2021): 1584-1615."

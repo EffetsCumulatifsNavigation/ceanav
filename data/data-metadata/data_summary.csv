@@ -15,7 +15,7 @@
 "0014","[Zones inondables BDZI](https://www.donneesquebec.ca/recherche/fr/dataset/3ac8ddff-fe0a-4a7a-8393-d5938e8f35e5)","X","2018 - 2020","0015",""
 "0015","Ancrages",NA,"2019","0016, 0017",""
 "0016","Déversements accidentels","X","2016 - 2020","0018","@gcc2020"
-"0017","[Caractérisation des berges](https://www.donneesquebec.ca/recherche/dataset/caracterisation-des-berges-et-analyse-de-l-evolution-des-facteurs-hydro-climatiques)","X","2013 - 2020","0019, 0020",""
+"0017","[Caractérisation des berges](https://www.donneesquebec.ca/recherche/dataset/caracterisation-des-berges-et-analyse-de-l-evolution-des-facteurs-hydro-climatiques)","X","2013 - 2020","0019, 0020","@bernier2020; @bernier2021"
 "0018","Chenal de navigation et dragage","X",NA,"0021, 0022","@gcc2021b"
 "0019","Sites de dragage et de dépôt","X","2019 - 2001","0023, 0042","@eccc2020; @mtq2016; @mtq2017"
 "0020","Index des navires données AIS (id: 0021)","X","2019 - 2015","0016","@tc2020"

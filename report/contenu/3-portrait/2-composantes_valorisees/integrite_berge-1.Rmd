@@ -36,3 +36,35 @@ tab %>%
 Ces quatre catégories ont ensuite été intégrées à la grille afin d’obtenir une évaluation de la présence des différentes catégories de berges sensibles à l’érosion au sein de la zone d’étude. Il est important de noter que puisque cette composante valorisée n’a été identifiée que pour la portion fluviale du Saint-Laurent, aucune caractérisation n’a été faite pour l’estuaire et le Saguenay. Une caractérisation similaire a toutefois été récemment publiée à travers le [Projet Résilience côtière](https://ldgizc.uqar.ca/Web/projets/projet-resilience-cotiere) de l’équipe de Pascal Bernatchez à l’Université du Québec à Rimouski.
 
 <br/>
+
+#### Berges artificielles
+
+<br>
+
+```{r artificiellesemivegetalisee, fig.cap = "Distribution des segments de berge sensibles à l'érosion dans le Saint-Laurent et le Saguenay - Artificielle - Semi-végétalisée (IE = 1)", out.width = '100%', fig.link = "./figures/figures-integrated/berge-artificielle_semi_vegetalisee.png"}
+knitr::include_graphics("./figures/figures-integrated/berge-artificielle_semi_vegetalisee.png")
+```
+
+<br>
+
+```{r artificiellevive, fig.cap = "Distribution des segments de berge sensibles à l'érosion dans le Saint-Laurent et le Saguenay - Artificielle - Vive (IE = 2)", out.width = '100%', fig.link = "./figures/figures-integrated/berge-artificielle_vive.png"}
+knitr::include_graphics("./figures/figures-integrated/berge-artificielle_vive.png")
+```
+
+<br>
+
+#### Berges naturelles 
+
+<br>
+
+```{r naturellesemivegetalisee, fig.cap = "Distribution des segments de berge sensibles à l'érosion dans le Saint-Laurent et le Saguenay - Naturelle - Semi-végétalisée (IE = 1)", out.width = '100%', fig.link = "./figures/figures-integrated/berge-naturelle_semi_vegetalisee.png"}
+knitr::include_graphics("./figures/figures-integrated/berge-naturelle_semi_vegetalisee.png")
+```
+
+<br>
+
+```{r naturellevive, fig.cap = "Distribution des segments de berge sensibles à l'érosion dans le Saint-Laurent et le Saguenay - Naturelle - Vive (IE = 2)", out.width = '100%', fig.link = "./figures/figures-integrated/berge-naturelle_vive.png"}
+knitr::include_graphics("./figures/figures-integrated/berge-naturelle_vive.png")
+```
+
+<br>
