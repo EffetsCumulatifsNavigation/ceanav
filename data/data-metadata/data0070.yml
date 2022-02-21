@@ -1,0 +1,12 @@
+data_description:
+  id: "0070"
+  name: "Sites d'ancrage commerciaux "
+  description: "Localisation des sites d'ancrage commerciaux provenant des fiches techniques de mouillage entre Les Escoumins et Montréal"
+  access_date: 2022-02-21
+  temporal_start: 2022
+  temporal_end: 2022
+  contact_id:
+    - "0060"
+  availability: "in press"
+  citation:
+    - "Garde côtière canadienne (2022) Fiches techniques de mouillage - Les Escoumins à Montréal. 59p."
