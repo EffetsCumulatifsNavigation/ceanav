@@ -1,5 +1,5 @@
 data_description:
-  id: "0027"
+  id: "0054"
   name: "Observation mammifères marins"
   description: "Données d'observation de mammifères marins du Réseau d'observation de mammifères marins (ROMM)"
   access_date: 2021-05-19
@@ -8,5 +8,6 @@ data_description:
   contact_id:
     - "0029"
   availability: "open source"
-  citation:
-    - ""
+  url: "https://ogsl.ca/fr/biodiversite-mammiferes-marins-romm-information-sur-les-donnees/"
+  citekey: romm2021
+  citation: "Réseau d’observation de mammifères marins (2021) Données d'observation de mammifères marins du Réseau d'observation de mammifères marins (ROMM) url: https://ogsl.ca/fr/biodiversite-mammiferes-marins-romm-information-sur-les-donnees/. [Accès aux données le 2021-05-19]"

@@ -83,7 +83,8 @@ tab %>%
 <br/>
 
 
-Sur les neuf espèces dont une cartographie est disponible, cinq fréquentent l'estuaire du Saint-Laurent et le Saguenay : le béluga du Saint-Laurent (*Delphinapterus leucas*), le petit rorqual (*Balaenoptera acutorostrata*), le rorqual à bosse (*Megaptera novaeangliae*), le rorqual bleu (*Balaenoptera musculus*) et le rorqual commun (*Balaenoptera physalus*; Tableau \@ref(tab:mmSp)). Pour notre étude, nous avons rééchantillonné les cartes de distribution produites [@wwfromm2021b] afin de les intégrer à notre grille d'étude de 1 $km^2$ en utilisant la valeur moyenne des cellules de la grille du guide qui intersecte chaque cellule de notre grille. Les valeurs ont ensuite été normalisées entre 0 et 1 en divisant chaque valeur par la valeur maximale observée au sein de la grille pour chaque espèce. Les valeurs résultantes peuvent être interprétées en tant que densité relative des observations de mammifères marins, avec des valeurs de 0 représentant une densité relative faible et une valeur de 1 une densité relative élevée.
+Sur les neuf espèces dont une cartographie est disponible, cinq fréquentent l'estuaire du Saint-Laurent et le Saguenay : le béluga du Saint-Laurent (*Delphinapterus leucas*), le petit rorqual (*Balaenoptera acutorostrata*), le rorqual à bosse (*Megaptera novaeangliae*), le rorqual bleu (*Balaenoptera musculus*) et le rorqual commun (*Balaenoptera physalus*; Tableau \@ref(tab:mmSp)). Pour notre étude, nous avons rééchantillonné les cartes de distribution produites [@wwfromm2021b] afin de les intégrer à notre grille d'étude de 1 $km^2$ en utilisant la valeur moyenne des cellules de la grille du guide qui intersecte chaque cellule de notre grille. Les valeurs ont ensuite été normalisées entre 0 et 1 en divisant chaque valeur par la valeur maximale observée au sein de la grille pour chaque espèce. Les valeurs résultantes peuvent être interprétées en tant que densité relative des observations de mammifères marins, avec des valeurs de 0 représentant une densité 
+relative faible et une valeur de 1 une densité relative élevée.
 
 Afin de complémenter ce portrait des mammifères marins, nous avons utilisé des données provenant du Réseau d'observation de mammifères marins [ROMM; @romm2021] et disponibles sur le site de l'Observation Global du Saint-Laurent ([https://ogsl.ca/bio/?lg=fr](https://ogsl.ca/bio/?lg=fr)). Cette base de données est constituée d'observations de mammifères marins relevées par des observateurs membres ayant suivi une formation offerte par le ROMM, récoltées systématiquement par l'équipe du ROMM, et rapportées par des citoyens puis validées par l'équipe du ROMM. Plus d'informations sur le programme sont disponibles sur une [page dédiée](https://ogsl.ca/fr/biodiversite-mammiferes-marins-romm-information-sur-les-donnees/) sur le site de l'OGSL.
 
@@ -99,7 +100,7 @@ Il est important de noter que les cartes de distribution issues pour ces espèce
 
 ```{r mmSp}
 tab <- as.data.frame(meta$dataDescription$categories)
-tab <- arrange(tab, francais)
+tab <- arrange(tab, type, francais)
 tab <- select(tab, francais, scientific)
 tab$scientific <- glue("*{tab$scientific}*")
 
@@ -112,4 +113,67 @@ tab %>%
   )
 ```
 
-<br/>
+<br>
+
+#### Baleines
+
+<br>
+
+```{r beluga, fig.cap = "Distribution des mammifères marins dans le Saint-Laurent et le Saguenay - Béluga", out.width = '100%', fig.link = "./figures/figures-integrated/mammiferes_marins-beluga.png"}
+knitr::include_graphics("./figures/figures-integrated/mammiferes_marins-beluga.png")
+```
+
+<br>
+
+
+```{r harbourporpoise, fig.cap = "Distribution des mammifères marins dans le Saint-Laurent et le Saguenay - Marsouin commun", out.width = '100%', fig.link = "./figures/figures-integrated/mammiferes_marins-harbour_porpoise.png"}
+knitr::include_graphics("./figures/figures-integrated/mammiferes_marins-harbour_porpoise.png")
+```
+
+<br>
+
+```{r petitrorqual, fig.cap = "Distribution des mammifères marins dans le Saint-Laurent et le Saguenay - Petit rorqual", out.width = '100%', fig.link = "./figures/figures-integrated/mammiferes_marins-petit_rorqual.png"}
+knitr::include_graphics("./figures/figures-integrated/mammiferes_marins-petit_rorqual.png")
+```
+
+<br>
+
+```{r rorqualabosse, fig.cap = "Distribution des mammifères marins dans le Saint-Laurent et le Saguenay - Rorqual à bosse", out.width = '100%', fig.link = "./figures/figures-integrated/mammiferes_marins-rorqual_a_bosse.png"}
+knitr::include_graphics("./figures/figures-integrated/mammiferes_marins-rorqual_a_bosse.png")
+```
+
+<br>
+
+```{r rorqualbleu, fig.cap = "Distribution des mammifères marins dans le Saint-Laurent et le Saguenay - Rorqual bleu", out.width = '100%', fig.link = "./figures/figures-integrated/mammiferes_marins-rorqual_bleu.png"}
+knitr::include_graphics("./figures/figures-integrated/mammiferes_marins-rorqual_bleu.png")
+```
+
+<br>
+
+```{r rorqualcommun, fig.cap = "Distribution des mammifères marins dans le Saint-Laurent et le Saguenay - Rorqual commun", out.width = '100%', fig.link = "./figures/figures-integrated/mammiferes_marins-rorqual_commun.png"}
+knitr::include_graphics("./figures/figures-integrated/mammiferes_marins-rorqual_commun.png")
+```
+
+<br>
+
+#### Phoques
+
+<br>
+
+```{r harborseal, fig.cap = "Distribution des mammifères marins dans le Saint-Laurent et le Saguenay - Phoque commun", out.width = '100%', fig.link = "./figures/figures-integrated/mammiferes_marins-harbor_seal.png"}
+knitr::include_graphics("./figures/figures-integrated/mammiferes_marins-harbor_seal.png")
+```
+
+<br>
+
+```{r harpseal, fig.cap = "Distribution des mammifères marins dans le Saint-Laurent et le Saguenay - Phoque du Groenland", out.width = '100%', fig.link = "./figures/figures-integrated/mammiferes_marins-harp_seal.png"}
+knitr::include_graphics("./figures/figures-integrated/mammiferes_marins-harp_seal.png")
+```
+
+<br>
+
+```{r greyseal, fig.cap = "Distribution des mammifères marins dans le Saint-Laurent et le Saguenay - Phoque gris", out.width = '100%', fig.link = "./figures/figures-integrated/mammiferes_marins-grey_seal.png"}
+knitr::include_graphics("./figures/figures-integrated/mammiferes_marins-grey_seal.png")
+```
+
+<br>
