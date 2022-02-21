@@ -1,10 +1,20 @@
 ### Ancrages
 
-> *Nous remercions Corinne Berthold de la Garde côtière canadienne pour les échanges et le support.*
+> *Nous remercions la Garde côtière canadienne et Corinne Berthold pour les échanges et le support.*
 
 
-```{r ancrage_setup, echo = FALSE}
+```{r ancrage_setup, echo = FALSE}  
 meta <- read_yaml("../data/data-metadata/int_st_ancrage.yml")
 ```
 
-Les sites d'ancrage ont été caractérisés grâce à une base de données provenant de la Garde Côtière Canadienne [@gcc2019]. Une [version accessible ouvertement](https://ouvert.canada.ca/data/fr/dataset/622a7f72-4a00-4f9e-b04f-af6551c77db3) est également disponible sur le portail de données ouverte du Gouvernement du Canada, mais cette ressource était moins complète que celle disponible par la Garde Côtière Canadienne. Cette dernière fournit la localisation de l'ensemble des sites d'ancrage pour l'est du Canada. Un total de `r meta$dataDescription$observations$total` sites y sont répertoriés au sein de la zone d'étude. Pour caractériser l'intensité de ce stresseur environnemental, une zone tampon de 2 $km$ a été tracée autour de chaque site d'ancrage. Le nombre de sites d'ancrage qui intersecte chaque cellule de la grille d'étude a ensuite été évalué afin d'obtenir une évaluation du nombre de sites ($n$) par $km^2$ ayant le potentiel d'influencer une cellule ($n$ sites * $km^{-2}$). Cette caractérisation permet d'obtenir une évaluation du risque environnemental associé aux sites d'ancrage au sein de chaque cellule de la grille d'étude en assumant que les risques sont supérieurs lorsque plusieurs sites d'ancrage sont situés à proximité les uns des autres. Il est important de noter que nous ne caractérisons pas ici l'intensité d'utilisation de ces sites par les navires, mais bien la présence de sites d'ancrages.
+Les sites d'ancrage ont été caractérisés grâce à l'intégration de deux bases de données provenant de la Garde côtière canadienne [@gcc2022] et du Service Hydrographique du Canada [@shc2020]. La base de données de la Garde côtière canadienne fournit la localisation des sites d'ancrage commerciaux provenant des fiches techniques de mouillage entre Les Escoumins et Montréal [@gcc2022]. Puisque cette base de données ne couvre pas l'entièreté de la zone d'étude, nous avons complété la caractérisation des sites d'ancrage à l'aide de la base de données du Service Hydrographique du Canada; cette dernière fournit la localisation des mouillages et des zones de mouillages dans les eaux navigables canadiennes [@shc2020]. Nous y avons sélectionné les mouillages et zones de mouillage à l'est des Escoumins afin de compléter le portrait de la zone d'étude. Il est important de mentionner que la couche de données résultante ne considère que la navigation commerciale et que les sites d'ancrage pour la navigation de plaisance n'y sont pas représentés. 
+
+Un total de `r meta$dataDescription$observations$total` sites ont été répertoriés au sein de la zone d'étude. Pour caractériser l'intensité de ce stresseur environnemental, une zone tampon de 2 $km$ a été tracée autour de chaque site d'ancrage. Le nombre de sites d'ancrage qui intersecte chaque cellule de la grille d'étude a ensuite été évalué afin d'obtenir une évaluation du nombre de sites ($n$) par $km^2$ ayant le potentiel d'influencer une cellule ($n$ sites * $km^{-2}$). Cette caractérisation permet d'obtenir une évaluation du risque environnemental associé aux sites d'ancrage au sein de chaque cellule de la grille d'étude en assumant que les risques sont supérieurs lorsque plusieurs sites d'ancrage sont situés à proximité les uns des autres. Il est important de noter que nous ne caractérisons pas ici l'intensité d'utilisation de ces sites par les navires, mais bien la présence de sites d'ancrages. Une version mise à jour de ce stresseur pourrait viser à caractériser l'achalandage des sites d'ancrage; ce travail n'a toutefois pu être effectué dans le cadre de ce rapport.
+
+<br/>
+
+```{r ancrage, fig.cap = "Distribution des sites d'ancrage pour la navigation commerciale dans le Saint-Laurent et le Saguenay", out.width = '100%', fig.link = "./figures/figures-integrated/ancrage-ancrage.png"}
+knitr::include_graphics("./figures/figures-integrated/ancrage-ancrage.png")
+```
+
+<br>

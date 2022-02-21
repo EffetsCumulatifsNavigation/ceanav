@@ -8,5 +8,7 @@ data_description:
   contact_id:
     - "0060"
   availability: "in press"
+  citekey: 
+    - gcc2022
   citation:
     - "Garde côtière canadienne (2022) Fiches techniques de mouillage - Les Escoumins à Montréal. 59p."

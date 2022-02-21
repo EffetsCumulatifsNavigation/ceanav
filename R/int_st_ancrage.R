@@ -23,7 +23,7 @@ st_ancrage <- function() {
   #   - Take the SHC dataset (0071) beyond the GCC dataset, i.e. east of Les Rasades
   #
   # For now, I will do something simple:
-  #   1. 1km buffer around anchorages - arbitrary
+  #   1. 2km buffer around anchorages - arbitrary
   #   2. Intersect with grid
   #   3. Number of buffers intersecting grid cell
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #

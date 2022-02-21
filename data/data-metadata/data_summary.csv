@@ -68,5 +68,5 @@
 "0067","Sites archéologiques GCNWA","X",NA,"0057, 0058, 0059",""
 "0068","Sites à potentiel archéologique GCNWA","X",NA,"0057, 0058, 0059",""
 "0069","Sites de dragage et de dépôt de la Première Nation des Innus d'Essipit","X","2001 - 2016","0025",""
-"0070","Sites d'ancrage commerciaux ","X","2022","0060",""
-"0071","[Mouillages et zones de mouillages canadiennes](https://ouvert.canada.ca/data/fr/dataset/622a7f72-4a00-4f9e-b04f-af6551c77db3)","X","2020","0061",""
+"0070","Sites d'ancrage commerciaux ","X","2022","0060","@gcc2022"
+"0071","[Mouillages et zones de mouillages canadiennes](https://ouvert.canada.ca/data/fr/dataset/622a7f72-4a00-4f9e-b04f-af6551c77db3)","X","2020","0061","@shc2020"
