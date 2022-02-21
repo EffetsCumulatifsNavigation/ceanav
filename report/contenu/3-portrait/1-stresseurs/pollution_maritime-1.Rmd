@@ -21,3 +21,11 @@ L'indice de pollution maritime est obtenu en combinant l'intensité relative de 
 $$I_{pollution,j} = \frac{1}{|S|} \sum_{s \in S} I_{s,j}$$
 
 où $|S|$ est le nombre de stresseurs environnementaux considérés, $s$ sont les stresseurs environnementaux individuels et $I_{s,j}$ est l'intensité relative du stresseurs $s$ au sein de la cellule $j$.
+
+<br>
+
+```{r pollutionmaritime, fig.cap = "Intensité de la pollution maritime dans le Saint-Laurent et le Saguenay - Pollution maritime", out.width = '100%', fig.link = "./figures/figures-integrated/pollution_maritime-pollution_maritime.png"}
+knitr::include_graphics("./figures/figures-integrated/pollution_maritime-pollution_maritime.png")
+```
+
+<br>
