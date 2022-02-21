@@ -6,7 +6,7 @@
 meta <- read_yaml("../data/data-metadata/int_st_deversement.yml")
 ```
 
-Les déversements accidentels ont été caractérisés à l'aide d'un inventaire des incidents de déversements maritimes provenant de la Garde Côtière Canadienne [@gcc2020]. Cet inventaire fournit la localisation de déversements accidentels en milieu maritime pour la période de `r meta$dataDescription$temporal$start` à `r meta$dataDescription$temporal$end`. Un total de `r meta$dataDescription$observations$total` déversements accidentels y sont répertoriés pour la zone d'étude.
+Les déversements accidentels ont été caractérisés à l'aide d'un inventaire des incidents de déversements maritimes provenant de la Garde côtière canadienne [@gcc2020]. Cet inventaire fournit la localisation de déversements accidentels en milieu maritime pour la période de `r meta$dataDescription$temporal$start` à `r meta$dataDescription$temporal$end`. Un total de `r meta$dataDescription$observations$total` déversements accidentels y sont répertoriés pour la zone d'étude.
 
 Chaque déversement est caractérisé selon son contenu et regroupé en trois groupes distincts : hydrocarbures (*e.g.* essence, diésel, propane), autres (*e.g.* eau de ballast, eaux usées, matière organique) et les déversements dont le contenu est inconnu (Tableau \@ref(tab:deversementGen)). Les déversements sont également catégorisés selon le volume de contaminant déversé en litres (Tableau \@ref(tab:deversementlvl)).
 
