@@ -16,9 +16,7 @@ dataDescription:
   categories:
     accronyme: ancrage
     francais: Sites d'ancrage commerciaux
-    source:
-    - '0070'
-    - '0071'
+    source: '0070,0071'
     mdref: ancrage
     description: Distribution des sites d'ancrage pour la navigation commerciale
   observations:

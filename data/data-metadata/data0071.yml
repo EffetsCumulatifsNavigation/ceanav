@@ -9,4 +9,5 @@ data_description:
   url: "https://ouvert.canada.ca/data/fr/dataset/622a7f72-4a00-4f9e-b04f-af6551c77db3"
   identifiant: "622a7f72-4a00-4f9e-b04f-af6551c77db3"
   availability: "open source"
-  citation: "Service Hydrographique du Canada (2020) Mouillages et zones de mouillages canadiennes. url: https://ouvert.canada.ca/data/fr/dataset/622a7f72-4a00-4f9e-b04f-af6551c77db3"
+  citation: 
+    - "Service Hydrographique du Canada (2020) Mouillages et zones de mouillage canadiennes. url: https://ouvert.canada.ca/data/fr/dataset/622a7f72-4a00-4f92-b04f-af6551c77db3"

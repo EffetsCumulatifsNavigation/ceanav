@@ -82,7 +82,7 @@ st_ancrage <- function() {
   # -----
   meta$dataDescription$categories$accronyme <-  "ancrage"
   meta$dataDescription$categories$francais <-  "Sites d'ancrage commerciaux"
-  meta$dataDescription$categories$source <-  meta$rawData
+  meta$dataDescription$categories$source <-  paste(meta$rawData, collapse = ",")
   meta$dataDescription$categories$description <- "Distribution des sites d'ancrage pour la navigation commerciale" 
 
   # --- For proper referencing in markdown syntax
