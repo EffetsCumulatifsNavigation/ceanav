@@ -9,4 +9,5 @@ data_description:
   url: "https://open.canada.ca/data/en/dataset/44769543-7a23-4991-a53f-c2cf7c7a946f"
   identifiant: "44769543-7a23-4991-a53f-c2cf7c7a946f"
   availability: "open source"
-  citation: "Fisheries and Oceans Canada (2021) Other Effective Area-Based Conservation Measures. url: https://open.canada.ca/data/en/dataset/44769543-7a23-4991-a53f-c2cf7c7a946f"
+  citekey: mpo2021d
+  citation: "Pêches et Océans Canada (2021) Other Effective Area-Based Conservation Measures. url: https://open.canada.ca/data/en/dataset/44769543-7a23-4991-a53f-c2cf7c7a946f"

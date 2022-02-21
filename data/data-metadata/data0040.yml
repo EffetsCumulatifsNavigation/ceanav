@@ -9,4 +9,5 @@ data_description:
   url: "https://open.canada.ca/data/en/dataset/a1e18963-25dd-4219-a33f-1a38c4971250"
   identifiant: "a1e18963-25dd-4219-a33f-1a38c4971250"
   availability: "open source"
-  citation: "Fisheries and Oceans Canada (2021) Oceans Act Marine Protected Areas. url: https://open.canada.ca/data/en/dataset/a1e18963-25dd-4219-a33f-1a38c4971250"
+  citekey: mpo2021e
+  citation: "Pêches et Océans Canada (2021) Oceans Act Marine Protected Areas. url: https://open.canada.ca/data/en/dataset/a1e18963-25dd-4219-a33f-1a38c4971250"

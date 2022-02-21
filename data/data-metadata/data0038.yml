@@ -9,4 +9,5 @@ data_description:
   url: "https://www.donneesquebec.ca/recherche/dataset/aires-protegees-au-quebec"
   identifiant: "f0250998-eac1-46a8-8e0c-d7278ae85506"
   availability: "open source"
+  citekey: melcc2021
   citation: "Ministère de l’Environnement et de la Lutte contre les changements climatiques (2021) Registre des aires protégées au Québec. url: https://www.donneesquebec.ca/recherche/dataset/aires-protegees-au-quebec"

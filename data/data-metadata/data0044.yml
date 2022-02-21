@@ -7,4 +7,5 @@ data_description:
   url: "https://www.donneesquebec.ca/recherche/fr/dataset/578d182d-4897-4c11-aa7f-ee0cfed222a0"
   identifiant: "578d182d-4897-4c11-aa7f-ee0cfed222a0"
   availability: "open source"
+  citekey: mcc2021
   citation: "Ministère de la Culture et des Communications (2021) Sites patrimoniaux classés par le ministre de la Culture et des Communications. [Accès aux données 2021-08-19]. url : https://www.donneesquebec.ca/recherche/fr/dataset/578d182d-4897-4c11-aa7f-ee0cfed222a0"

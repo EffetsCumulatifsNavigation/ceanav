@@ -7,6 +7,9 @@ data_description:
   temporal_end: 2015
   contact_id: "0024"
   availability: "open source"
+  citekey: 
+    - racine2017
+    - arsenault2017
   citation:
     - "Racine, M.-J. and Arsenault, L.M. 2017. Commercial Fisheries Data for the communities of Gesgapegiag, Gespeg and Viger. MMAFMA. Data published on St. Lawrence Global Observatory-SLGO. [https://slgo.ca]. Access date: [2021-06-16]."
     - "Arsenault, L.M. Racine, M.-J. and Lambert Koizumi, C. (2017) Atlas of Marine St. Lawrence Mi’gmaq and Maliseet Sites and Their Uses by the Gesgapegiag, Gespeg and Viger Communities. Mi’gmaq Maliseet Aboriginal Fisheries Management Association (MMAFMA), 46 p."

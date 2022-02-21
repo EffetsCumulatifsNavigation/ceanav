@@ -7,4 +7,5 @@ data_description:
   url: "https://www.donneesquebec.ca/recherche/fr/dataset/34ca1a49-a020-4f60-986b-69fb4cfa852a"
   identifiant: "34ca1a49-a020-4f60-986b-69fb4cfa852a"
   availability: "open source"
+  citekey: mcc2021b
   citation: "Ministère de la Culture et des Communications (2021) Sites patrimoniaux cités par les municipalités et les communautés autochtones. [Accès aux données 2021-08-19]. url https://www.donneesquebec.ca/recherche/fr/dataset/34ca1a49-a020-4f60-986b-69fb4cfa852a"
