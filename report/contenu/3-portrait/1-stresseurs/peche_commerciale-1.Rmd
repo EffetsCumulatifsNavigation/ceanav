@@ -47,7 +47,7 @@ et des palangres. Chaque engin de pêche peut engendrer des effets différents s
 de casiers a des effets très différents que la pêche au chalut. Nous avons ainsi
 divisé les activités de pêche en fonction de leurs effets environnementaux selon
 les catégories proposées par @halpern2008a et reprises par @beauchesne2020 pour
-l'estuaire et le golfe du Saint-Laurent (Tableau \@ref(tab:pecheEngin)):
+l'estuaire et le golfe du Saint-Laurent (Tableaux \@ref(tab:pecheEnginFreq) et \@ref(tab:pecheEngin)):
 démersales, destructives, prises accessoires élevées (DD),
 démersales, non-destructives, prises accessoires élevées (DNH),
 démersales, non-destructives, prises accessoires faibles (DNL),
@@ -68,6 +68,20 @@ Les engins ont été caractérisés grâce à une base de données fournissant u
 index des engins de pêche pour la pêche commerciale conjointe à la base
 de données des journaux de bord [@mpo2021b]
 
+<br/>
+
+```{r pecheEnginFreq}
+tab <- as.data.frame(meta$dataDescription$categories) %>%
+       select(francais, description, frequence)
+beg <- meta$dataDescription$temporal$start
+end <- meta$dataDescription$temporal$end
+
+tab %>%
+  knitr::kable(
+    col.names = c("Catégorie", "Description", "Fréquence"),
+    caption = paste("Description des catégories de types d'engins avec la fréquence des activités de pêche commerciale répertoriées dans les journaux de bords entre", beg, "et", end, "[@mpo2021; @mpo2021b; @mpo2021c].")
+  )
+```
 <br/>
 
 ```{r pecheEngin}
