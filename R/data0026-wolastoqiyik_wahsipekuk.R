@@ -34,14 +34,13 @@ get_data0026 <- function() {
   # ----------------------------------------
   data0026 <- list()
   data0026[[1]] <- st_read(paste0(folder, "Oursins_zones_exploitation_potentielleA.shp"))
-  # Retrait des rectangle devant Rimouski et Saint-Siméon à la requête de la Nation
-  # data0026[[2]] <- st_read(paste0(folder, "Oursins_zones_exploitation_potentielleB.shp"))
-  # data0026[[3]] <- st_read(paste0(folder, "Oursins_zones_exploitation_potentielleC.shp"))
+  data0026[[2]] <- st_read(paste0(folder, "Oursins_zones_exploitation_potentielleB.shp"))
+  data0026[[3]] <- st_read(paste0(folder, "Oursins_zones_exploitation_potentielleC.shp"))
 
   # Add missing id in dataset
   data0026[[1]]$iid <- "A"
-  # data0026[[2]]$iid <- "B"
-  # data0026[[3]]$iid <- "C"
+  data0026[[2]]$iid <- "B"
+  data0026[[3]]$iid <- "C"
 
   # Single dataset
   data0026 <- bind_rows(data0026)

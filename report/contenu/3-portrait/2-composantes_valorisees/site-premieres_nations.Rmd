@@ -29,7 +29,7 @@ Un protocole de partage d'informations a été élaboré en collaboration avec l
 
 Des rencontres individuelles ont été organisées avec des représentants des communautés participantes afin de présenter le projet et de discuter des besoins en informations en vue d'intégrer les sites d'intérêt au sein de l'évaluation des effets cumulatifs. Les communautés participantes ont subséquemment procédé au rassemblement d'informations cartographiques et non-cartographiques représentant des sites d'intérêt pour leur communauté respective. 
 
-Un atlas cartographique en accès libre développé par l'Association de gestion halieutique Mi'kmaq et Malécite [AGHAMM; @arsenault2017] a également permi d'obtenir des données d'utilisation du territoire pour les Nations Mi'kmaq de Gespeg et Mi'kmaq de Gesgapegiag.
+Un atlas cartographique en accès libre développé par l'Association de gestion halieutique Mi'kmaq et Malécite [AGHAMM; @arsenault2017] a également permi d'obtenir des données d'utilisation du territoire pour les Nations Mi'kmaq de Gespeg, Mi'kmaq de Gesgapegiag et Wolastoqiyik Wahsipekuk.
 
 Les sites d'intérêt proviennent généralement d'un exercice d'intégration de connaissances issues d'autres études effectuées avec les membres des Premières Nations. Les sites d'intérêt identifiés par les communautés participantes peuvent globalement être classés en 9 grandes catégories :
 
@@ -60,11 +60,11 @@ Les sections suivantes décrivent brièvement les données partagées par les co
 <!-- =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= -->
 <!-- =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= -->
 <!-- =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= -->
-##### Association de gestion halieutique Mi'kmaq et Malécite
+##### Association de gestion halieutique Mi'kmaq et Malécite {#aghammportrait}
 
 > *Nous remercions Lisa M. Arsenault pour les échanges et le support.*
 
-L'Association de gestion halieutique Mi'kmaq et Malécite (AGHAMM) a developpé un atlas cartographique décrivant divers sites et usages reliés aux activités de pêche commerciale et traditionnelle d'importance pour les communautés de Gesgapegiag, Gespeg et Viger [@arsenault2017]. Plus spécifiquement, nous avons utilisé les couches de données décrivant les activités de pêches commerciales ciblant neuf espèces différentes : le buccin (*Buccinum* sp.), le concombre de mer (*Holothurie* sp.), le crabe commun (*Cancer irroratus*), le crage des neiges (*Chionoecetes opilio*), la crevette nordique (*Pandalus* sp.), le flétan Atlantique (*Hippoglossus hippoglossus*), le flétan du Groenland (*Reinhardtius hippoglossoides*), le homard (*Homarus americanus*) et l'oursin (*Strongylocentrotus* sp.) dans l'estuaire du Saint-Laurent [@arsenault2017; @racine2017].
+L'Association de gestion halieutique Mi'kmaq et Malécite (AGHAMM) a developpé un atlas cartographique décrivant divers sites et usages reliés aux activités de pêche commerciale et traditionnelle d'importance pour les Nations de Gesgapegiag, Gespeg et Wolastoqiyik Wahsipekuk [@arsenault2017]. L'Atlas décrit des activités de pêches commerciales ciblant neuf espèces différentes : le buccin (*Buccinum* sp.), le concombre de mer (*Holothurie* sp.), le crabe commun (*Cancer irroratus*), le crage des neiges (*Chionoecetes opilio*), la crevette nordique (*Pandalus* sp.), le flétan Atlantique (*Hippoglossus hippoglossus*), le flétan du Groenland (*Reinhardtius hippoglossoides*), le homard (*Homarus americanus*) et l'oursin (*Strongylocentrotus* sp.) dans l'estuaire du Saint-Laurent [@arsenault2017; @racine2017]. Puisque la majorité de ces pêches sont effectuées par la Nation Wolastoqiyik Wahsipekuk, ces données sont utilisées afin de décrire les activités de pêches commerciales de cette dernière (voir section \@ref(pnwwportrait)). Puisque la Nation Mi'kmaq de Gespeg effectue également une pêche commerciale à la crevette nordique dans l'estuaire du Saint-Laurent, nous avons sélectionné cette pêche parmi les données de l'Atlas.
 
 L'atlas identifie également les rivières Rimouski, Métis et Matane en tant que sites d'importance pour la pêche au Saumon Atlantique [*Salmo salar*; @arsenault2017]. Nous avons ainsi ajouter une zone tampon de 3 $km$ à l'embouchure de ces trois rivière afin de capturer leur présence en tant que site d'intérêt pour l'évaluation.
 
@@ -443,11 +443,13 @@ knitr::include_graphics("./figures/figures-integrated/site-gcnwa_sites_potentiel
 <!-- =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= -->
 <!-- =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= -->
 <!-- =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= -->
-##### Nation Wolastoqiyik Wahsipekuk
+##### Nation Wolastoqiyik Wahsipekuk {#pnwwportrait}
 
 > *Nous remercions la Nation Wolastoqiyik Wahsipekuk pour leur participation, ainsi que David Poissant pour les échanges et le support.*
 
-Nous utilisont des données qui nous ont été transmises par des représentants de la Nation Wolastoqiyik Wahsipekuk pour caractériser des sites d'importances pour la pêche commerciale au homard [*Homarus americanus*; @pnww2021] et l'oursin [*Strongylocentrotus* sp.; @pnww2021b]. Ces données identifient des milieux jugés important pour la pêche sur la rive sud du Saint-Laurent. Deux sites d'intérêt pour l'observation du béluga et pour le développement portuaire sont également considérés en tant que sites d'intérêt pour la Nation Wolastoqiyik Wahsipekuk [@pnww2022]. Il est toutefois important de noter que malgré l'inclusion de sites d'intérêt pour la Nation Wolastoqiyik Wahsipekuk, un processus collaboratif semble à celui effectué avec les autres Nations n'a pu être mis en place. Les données socio-culturelles de la Nation Wolastoqiyik Wahsipekuk n'ont ainsi pu être incluses au sein de notre évaluation. 
+Nous utilisont des données qui nous ont été transmises par des représentants de la Nation Wolastoqiyik Wahsipekuk pour caractériser des sites d'importances pour la pêche commerciale au homard [*Homarus americanus*; @pnww2021]. Ces données identifient des milieux jugés important pour la pêche sur la rive sud du Saint-Laurent. Ces données ont été complétées avec les données de de l'AGHAMM (voir section \@ref(aghammportrait)) sur les pêche commerciales au buccin (*Buccinum* sp.), le concombre de mer (*Holothurie* sp.), le crabe commun (*Cancer irroratus*), le crage des neiges (*Chionoecetes opilio*), la crevette nordique (*Pandalus* sp.), le flétan Atlantique (*Hippoglossus hippoglossus*), le flétan du Groenland (*Reinhardtius hippoglossoides*), le homard (*Homarus americanus*) et l'oursin (*Strongylocentrotus* sp.) dans l'estuaire du Saint-Laurent [@arsenault2017; @racine2017]. 
+
+Deux sites d'intérêt pour l'observation du béluga et pour le développement portuaire sont également considérés en tant que sites d'intérêt pour la Nation Wolastoqiyik Wahsipekuk [@pnww2022]. Il est toutefois important de noter que malgré l'inclusion de sites d'intérêt pour la Nation Wolastoqiyik Wahsipekuk, un processus collaboratif semble à celui effectué avec les autres Nations n'a pu être mis en place. Les données socio-culturelles de la Nation Wolastoqiyik Wahsipekuk n'ont ainsi pu être incluses au sein de notre évaluation. 
 
 <br>
 

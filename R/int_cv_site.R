@@ -133,7 +133,8 @@ cv_site <- function() {
   meta_temp <- meta_update(meta_temp, dat, "aghamm_peche_commerciale", "Pêche commerciale", type = "Association de gestion halieutique Mi'kmaq et Malécite")
 
   # -----
-  site$aghamm_peche_commerciale <- uid(dat)
+  site$aghamm_peche_commerciale <- uid(dat, "Crevette nordique", "ESPECE")
+
 
   # ----------------------------
   # AGHAMM - pêche au saumon Atlantique : 0023
@@ -184,8 +185,8 @@ cv_site <- function() {
 
   # ================================================================================================
   # ----------------------------
-  # Wolastoqiyik Wahsipekuk - Pêche commerciale : 0025, 0026
-  dat <- c("0025", "0026")
+  # wolastoqiyik Wahsipekuk - Pêche commerciale : 0025, 0026
+  dat <- c("0022","0025") #, "0026") # Retrait de la pêche à l'oursin et intégration de la pêche commerciale caractérisée par l'AGHAMM
   meta_temp <- meta_update(meta_temp, dat, "wolastoqiyik_wahsipekuk_peche_commerciale", "Pêche commerciale", type = "Nation Wolastoqiyik Wahsipekuk")
 
   # -----
