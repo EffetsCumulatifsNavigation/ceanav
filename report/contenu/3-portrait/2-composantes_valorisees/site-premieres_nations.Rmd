@@ -57,6 +57,101 @@ Finalement, la participation des Premières Nations à cette étude est faite sa
 
 Les sections suivantes décrivent brièvement les données partagées par les communautés participantes et les données qui ont été accessibles à travers des plateformes ouvertes.
 
+<!-- =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= -->
+<!-- =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= -->
+<!-- =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= -->
+##### Association de gestion halieutique Mi'kmaq et Malécite
+
+> *Nous remercions Lisa M. Arsenault pour les échanges et le support.*
+
+L'Association de gestion halieutique Mi'kmaq et Malécite (AGHAMM) a developpé un atlas cartographique décrivant divers sites et usages reliés aux activités de pêche commerciale et traditionnelle d'importance pour les communautés de Gesgapegiag, Gespeg et Viger [@arsenault2017]. Plus spécifiquement, nous avons utilisé les couches de données décrivant les activités de pêches commerciales ciblant neuf espèces différentes : le buccin (*Buccinum* sp.), le concombre de mer (*Holothurie* sp.), le crabe commun (*Cancer irroratus*), le crage des neiges (*Chionoecetes opilio*), la crevette nordique (*Pandalus* sp.), le flétan Atlantique (*Hippoglossus hippoglossus*), le flétan du Groenland (*Reinhardtius hippoglossoides*), le homard (*Homarus americanus*) et l'oursin (*Strongylocentrotus* sp.) dans l'estuaire du Saint-Laurent [@arsenault2017; @racine2017].
+
+L'atlas identifie également les rivières Rimouski, Métis et Matane en tant que sites d'importance pour la pêche au Saumon Atlantique [*Salmo salar*; @arsenault2017]. Nous avons ainsi ajouter une zone tampon de 3 $km$ à l'embouchure de ces trois rivière afin de capturer leur présence en tant que site d'intérêt pour l'évaluation.
+
+
+<br>
+
+```{r aghammpechetraditionnelle, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - AGHAMM - Pêche traditionnelle", out.width = '100%', fig.link = "./figures/figures-integrated/site-aghamm_peche_traditionnelle.png"}
+knitr::include_graphics("./figures/figures-integrated/site-aghamm_peche_traditionnelle.png")
+```
+
+<br>
+
+```{r aghammpechecommerciale, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - AGHAMM - Pêche commerciale", out.width = '100%', fig.link = "./figures/figures-integrated/site-aghamm_peche_commerciale.png"}
+knitr::include_graphics("./figures/figures-integrated/site-aghamm_peche_commerciale.png")
+```
+
+<br>
+
+<!-- =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= -->
+<!-- =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= -->
+<!-- =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= -->
+##### Nation des Innus d’Essipit
+
+> *Nous remercions la Nation des Innus d'Essipit pour leur participation, ainsi que Donald Bouchard et Pierre Tremblay pour les échanges et le support.*
+
+Les données transmises par la Nation des Innus d'Essipit sont une intégration de données provenant de divers sources d'informations [@bouchard2021] :
+
+- Inventaire des sites archéologiques du Québec.
+- Suivi Innu-Aitun, 2004 à 2018, Essipit.
+- Historique des pêches commerciales (crabe des neiges, oursin) et alimentaire (flétan atlantique), 1996 à 2020, Essipit.
+- Atlas des usages côtiers et marins du Saint-Laurent par les Innus de la Côte-Nord, Agence Mamu Innu Kaikusseht​, 2019.
+- Collecte de données sur la récolte d'oiseaux migrateurs dans sept communautés innues de la Côte-Nord, Agence Mamu Innu Kaihusseht, 2014
+
+Le résultat de l'intégration de ces données fournit la localisation de sites d'intérêts localisés dans l'estuaire du Saint-Laurent et la rivière Saguenay . Ces sites sont divisés en sept catégories : 
+
+- Chasse aux oiseaux migrateurs
+- Chasse au phoque
+- Pêche commerciale
+- Pêche traditionnelle
+- Activités touristiques
+- Accès au plan d'eau
+- Culture et patrimoine
+
+Ces catégories de sites d'intérêts sont utilisées pour l'évaluation des effets cumulatifs des activités maritimes dans la zone d'étude.
+
+
+<br>
+
+```{r essipitchasseoiseaux, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation des Innus d’Essipit - Chasse aux oiseaux migrateurs", out.width = '100%', fig.link = "./figures/figures-integrated/site-essipit_chasse_oiseaux.png"}
+knitr::include_graphics("./figures/figures-integrated/site-essipit_chasse_oiseaux.png")
+```
+
+<br>
+
+```{r essipitchassephoque, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation des Innus d’Essipit - Chasse aux phoques", out.width = '100%', fig.link = "./figures/figures-integrated/site-essipit_chasse_phoque.png"}
+knitr::include_graphics("./figures/figures-integrated/site-essipit_chasse_phoque.png")
+```
+<br>
+
+```{r essipitpechecommerciale, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation des Innus d’Essipit - Pêche commerciale", out.width = '100%', fig.link = "./figures/figures-integrated/site-essipit_peche_commerciale.png"}
+knitr::include_graphics("./figures/figures-integrated/site-essipit_peche_commerciale.png")
+```
+<br>
+
+```{r essipitpechetraditionnelle, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation des Innus d’Essipit - Pêche traditionnelle", out.width = '100%', fig.link = "./figures/figures-integrated/site-essipit_peche_traditionnelle.png"}
+knitr::include_graphics("./figures/figures-integrated/site-essipit_peche_traditionnelle.png")
+```
+
+<br>
+
+```{r essipittourisme, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation des Innus d’Essipit - Activités touristiques", out.width = '100%', fig.link = "./figures/figures-integrated/site-essipit_tourisme.png"}
+knitr::include_graphics("./figures/figures-integrated/site-essipit_tourisme.png")
+```
+
+<br>
+
+```{r essipitacceseau, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation des Innus d’Essipit - Accès au plan d'eau", out.width = '100%', fig.link = "./figures/figures-integrated/site-essipit_acces_eau.png"}
+knitr::include_graphics("./figures/figures-integrated/site-essipit_acces_eau.png")
+```
+
+<br>
+
+```{r essipitculturepatrimoine, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation des Innus d’Essipit - Culture et patrimoine", out.width = '100%', fig.link = "./figures/figures-integrated/site-essipit_culture_patrimoine.png"}
+knitr::include_graphics("./figures/figures-integrated/site-essipit_culture_patrimoine.png")
+```
+
+<br>
 
 <!-- =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= -->
 <!-- =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= -->
@@ -147,75 +242,7 @@ knitr::include_graphics("./figures/figures-integrated/site-huronne_wendat_topony
 
 <br>
 
-<!-- =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= -->
-<!-- =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= -->
-<!-- =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= -->
-##### Nation des Innus d’Essipit
 
-> *Nous remercions la Nation des Innus d'Essipit pour leur participation, ainsi que Donald Bouchard et Pierre Tremblay pour les échanges et le support.*
-
-Les données transmises par la Nation des Innus d'Essipit sont une intégration de données provenant de divers sources d'informations [@bouchard2021] :
-
-- Inventaire des sites archéologiques du Québec.
-- Suivi Innu-Aitun, 2004 à 2018, Essipit.
-- Historique des pêches commerciales (crabe des neiges, oursin) et alimentaire (flétan atlantique), 1996 à 2020, Essipit.
-- Atlas des usages côtiers et marins du Saint-Laurent par les Innus de la Côte-Nord, Agence Mamu Innu Kaikusseht​, 2019.
-- Collecte de données sur la récolte d'oiseaux migrateurs dans sept communautés innues de la Côte-Nord, Agence Mamu Innu Kaihusseht, 2014
-
-Le résultat de l'intégration de ces données fournit la localisation de sites d'intérêts localisés dans l'estuaire du Saint-Laurent et la rivière Saguenay . Ces sites sont divisés en sept catégories : 
-
-- Chasse aux oiseaux migrateurs
-- Chasse au phoque
-- Pêche commerciale
-- Pêche traditionnelle
-- Activités touristiques
-- Accès au plan d'eau
-- Culture et patrimoine
-
-Ces catégories de sites d'intérêts sont utilisées pour l'évaluation des effets cumulatifs des activités maritimes dans la zone d'étude.
-
-
-<br>
-
-```{r essipitchasseoiseaux, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation des Innus d’Essipit - Chasse aux oiseaux migrateurs", out.width = '100%', fig.link = "./figures/figures-integrated/site-essipit_chasse_oiseaux.png"}
-knitr::include_graphics("./figures/figures-integrated/site-essipit_chasse_oiseaux.png")
-```
-
-<br>
-
-```{r essipitchassephoque, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation des Innus d’Essipit - Chasse aux phoques", out.width = '100%', fig.link = "./figures/figures-integrated/site-essipit_chasse_phoque.png"}
-knitr::include_graphics("./figures/figures-integrated/site-essipit_chasse_phoque.png")
-```
-<br>
-
-```{r essipitpechecommerciale, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation des Innus d’Essipit - Pêche commerciale", out.width = '100%', fig.link = "./figures/figures-integrated/site-essipit_peche_commerciale.png"}
-knitr::include_graphics("./figures/figures-integrated/site-essipit_peche_commerciale.png")
-```
-<br>
-
-```{r essipitpechetraditionnelle, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation des Innus d’Essipit - Pêche traditionnelle", out.width = '100%', fig.link = "./figures/figures-integrated/site-essipit_peche_traditionnelle.png"}
-knitr::include_graphics("./figures/figures-integrated/site-essipit_peche_traditionnelle.png")
-```
-
-<br>
-
-```{r essipittourisme, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation des Innus d’Essipit - Activités touristiques", out.width = '100%', fig.link = "./figures/figures-integrated/site-essipit_tourisme.png"}
-knitr::include_graphics("./figures/figures-integrated/site-essipit_tourisme.png")
-```
-
-<br>
-
-```{r essipitacceseau, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation des Innus d’Essipit - Accès au plan d'eau", out.width = '100%', fig.link = "./figures/figures-integrated/site-essipit_acces_eau.png"}
-knitr::include_graphics("./figures/figures-integrated/site-essipit_acces_eau.png")
-```
-
-<br>
-
-```{r essipitculturepatrimoine, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation des Innus d’Essipit - Culture et patrimoine", out.width = '100%', fig.link = "./figures/figures-integrated/site-essipit_culture_patrimoine.png"}
-knitr::include_graphics("./figures/figures-integrated/site-essipit_culture_patrimoine.png")
-```
-
-<br>
 
 <!-- =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= -->
 <!-- =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= -->
@@ -297,36 +324,6 @@ knitr::include_graphics("./figures/figures-integrated/site-kahnawake_traffic.png
 -->
 
 <br>
-
-<!-- =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= -->
-<!-- =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= -->
-<!-- =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= -->
-##### Nation Wolastoqiyik Wahsipekuk
-
-> *Nous remercions la Nation Wolastoqiyik Wahsipekuk pour leur participation, ainsi que David Poissant pour les échanges et le support.*
-
-Nous utilisont des données qui nous ont été transmises par des représentants de la Nation Wolastoqiyik Wahsipekuk pour caractériser des sites d'importances pour la pêche commerciale au homard [*Homarus americanus*; @pnww2021] et l'oursin [*Strongylocentrotus* sp.; @pnww2021b]. Ces données identifient des milieux jugés important pour la pêche sur la rive sud du Saint-Laurent. Deux sites d'intérêt pour l'observation du béluga et pour le développement portuaire sont également considérés en tant que sites d'intérêt pour la Nation Wolastoqiyik Wahsipekuk [@pnww2022]. Il est toutefois important de noter que malgré l'inclusion de sites d'intérêt pour la Nation Wolastoqiyik Wahsipekuk, un processus collaboratif semble à celui effectué avec les autres Nations n'a pu être mis en place. Les données socio-culturelles de la Nation Wolastoqiyik Wahsipekuk n'ont ainsi pu être incluses au sein de notre évaluation. 
-
-<br>
-
-```{r wolastoqiyikwahsipekukpechecommerciale, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation Wolastoqiyik Wahsipekuk - Pêche commerciale", out.width = '100%', fig.link = "./figures/figures-integrated/site-wolastoqiyik_wahsipekuk_peche_commerciale.png"}
-knitr::include_graphics("./figures/figures-integrated/site-wolastoqiyik_wahsipekuk_peche_commerciale.png")
-```
-
-<br>
-
-```{r wolastoqiyikwahsipekukobservationbeluga, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation Wolastoqiyik Wahsipekuk - Observation du béluga", out.width = '100%', fig.link = "./figures/figures-integrated/site-wolastoqiyik_wahsipekuk_observation_beluga.png"}
-knitr::include_graphics("./figures/figures-integrated/site-wolastoqiyik_wahsipekuk_observation_beluga.png")
-```
-
-<br>
-
-```{r wolastoqiyikwahsipekukdeveloppementportuaire, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation Wolastoqiyik Wahsipekuk - Développement portuaire", out.width = '100%', fig.link = "./figures/figures-integrated/site-wolastoqiyik_wahsipekuk_developpement_portuaire.png"}
-knitr::include_graphics("./figures/figures-integrated/site-wolastoqiyik_wahsipekuk_developpement_portuaire.png")
-```
-
-<br>
-
 
 
 <!-- =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= -->
@@ -443,30 +440,32 @@ knitr::include_graphics("./figures/figures-integrated/site-gcnwa_sites_potentiel
 
 <br>
 
-
-
 <!-- =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= -->
 <!-- =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= -->
 <!-- =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= -->
-##### Association de gestion halieutique Mi'kmaq et Malécite
+##### Nation Wolastoqiyik Wahsipekuk
 
-> *Nous remercions Lisa M. Arsenault pour les échanges et le support.*
+> *Nous remercions la Nation Wolastoqiyik Wahsipekuk pour leur participation, ainsi que David Poissant pour les échanges et le support.*
 
-L'Association de gestion halieutique Mi'kmaq et Malécite (AGHAMM) a developpé un atlas cartographique décrivant divers sites et usages reliés aux activités de pêche commerciale et traditionnelle d'importance pour les communautés de Gesgapegiag, Gespeg et Viger [@arsenault2017]. Plus spécifiquement, nous avons utilisé les couches de données décrivant les activités de pêches commerciales ciblant neuf espèces différentes : le buccin (*Buccinum* sp.), le concombre de mer (*Holothurie* sp.), le crabe commun (*Cancer irroratus*), le crage des neiges (*Chionoecetes opilio*), la crevette nordique (*Pandalus* sp.), le flétan Atlantique (*Hippoglossus hippoglossus*), le flétan du Groenland (*Reinhardtius hippoglossoides*), le homard (*Homarus americanus*) et l'oursin (*Strongylocentrotus* sp.) dans l'estuaire du Saint-Laurent [@arsenault2017; @racine2017].
-
-L'atlas identifie également les rivières Rimouski, Métis et Matane en tant que sites d'importance pour la pêche au Saumon Atlantique [*Salmo salar*; @arsenault2017]. Nous avons ainsi ajouter une zone tampon de 3 $km$ à l'embouchure de ces trois rivière afin de capturer leur présence en tant que site d'intérêt pour l'évaluation.
-
+Nous utilisont des données qui nous ont été transmises par des représentants de la Nation Wolastoqiyik Wahsipekuk pour caractériser des sites d'importances pour la pêche commerciale au homard [*Homarus americanus*; @pnww2021] et l'oursin [*Strongylocentrotus* sp.; @pnww2021b]. Ces données identifient des milieux jugés important pour la pêche sur la rive sud du Saint-Laurent. Deux sites d'intérêt pour l'observation du béluga et pour le développement portuaire sont également considérés en tant que sites d'intérêt pour la Nation Wolastoqiyik Wahsipekuk [@pnww2022]. Il est toutefois important de noter que malgré l'inclusion de sites d'intérêt pour la Nation Wolastoqiyik Wahsipekuk, un processus collaboratif semble à celui effectué avec les autres Nations n'a pu être mis en place. Les données socio-culturelles de la Nation Wolastoqiyik Wahsipekuk n'ont ainsi pu être incluses au sein de notre évaluation. 
 
 <br>
 
-```{r aghammpechetraditionnelle, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - AGHAMM - Pêche traditionnelle", out.width = '100%', fig.link = "./figures/figures-integrated/site-aghamm_peche_traditionnelle.png"}
-knitr::include_graphics("./figures/figures-integrated/site-aghamm_peche_traditionnelle.png")
+```{r wolastoqiyikwahsipekukpechecommerciale, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation Wolastoqiyik Wahsipekuk - Pêche commerciale", out.width = '100%', fig.link = "./figures/figures-integrated/site-wolastoqiyik_wahsipekuk_peche_commerciale.png"}
+knitr::include_graphics("./figures/figures-integrated/site-wolastoqiyik_wahsipekuk_peche_commerciale.png")
 ```
 
 <br>
 
-```{r aghammpechecommerciale, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - AGHAMM - Pêche commerciale", out.width = '100%', fig.link = "./figures/figures-integrated/site-aghamm_peche_commerciale.png"}
-knitr::include_graphics("./figures/figures-integrated/site-aghamm_peche_commerciale.png")
+```{r wolastoqiyikwahsipekukobservationbeluga, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation Wolastoqiyik Wahsipekuk - Observation du béluga", out.width = '100%', fig.link = "./figures/figures-integrated/site-wolastoqiyik_wahsipekuk_observation_beluga.png"}
+knitr::include_graphics("./figures/figures-integrated/site-wolastoqiyik_wahsipekuk_observation_beluga.png")
 ```
 
 <br>
+
+```{r wolastoqiyikwahsipekukdeveloppementportuaire, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation Wolastoqiyik Wahsipekuk - Développement portuaire", out.width = '100%', fig.link = "./figures/figures-integrated/site-wolastoqiyik_wahsipekuk_developpement_portuaire.png"}
+knitr::include_graphics("./figures/figures-integrated/site-wolastoqiyik_wahsipekuk_developpement_portuaire.png")
+```
+
+<br>
+
