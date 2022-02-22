@@ -164,7 +164,8 @@ dataDescription:
       (*e.g.* larves, alevins, juvéniles)
     - Sites de reproduction où des poissons femelles pondent des oeufs pour fécondation
       par les mâles
-    - Sites connus d'importance pour les oiseaux, tels des sites de nidification et des colonies d'oiseaux marins
+    - Sites connus d'importance pour les oiseaux, tels des sites de nidification et
+      des colonies d'oiseaux marins
     - Gisements connus et exploités de mactre de Stimpson des eaux côtières du Québec
     - Dépôt non consolidé sans falaise
     - Roche consolidée sans falaise
@@ -380,6 +381,317 @@ dataDescription:
       - 4.45
       - 8.73
       - 1.59
+    Faune:
+      Statut:
+      - Menacée
+      - Menacée
+      - Menacée
+      - Menacée
+      - Menacée
+      - Menacée
+      - Susceptible
+      - Susceptible
+      - Susceptible
+      - Susceptible
+      - Susceptible
+      - Susceptible
+      - Susceptible
+      - Susceptible
+      - Susceptible
+      - Susceptible
+      - Susceptible
+      - Susceptible
+      - Susceptible
+      - Susceptible
+      - Susceptible
+      - Susceptible
+      - Susceptible
+      - Susceptible
+      - Susceptible
+      - Susceptible
+      - Vulnérable
+      - Vulnérable
+      - Vulnérable
+      - Vulnérable
+      - Vulnérable
+      - Vulnérable
+      - Vulnérable
+      - Vulnérable
+      - Vulnérable
+      - Vulnérable
+      - Vulnérable
+      Scientific:
+      - Melanerpes erythrocephalus
+      - Coturnicops noveboracensis
+      - Hydroprogne caspia
+      - Ammocrypta pellucida
+      - Moxostoma hubbsi
+      - Emydoidea blandingii
+      - Acipenser oxyrinchus
+      - Acipenser fulvescens
+      - Elliptio crassidens
+      - Eurynia dilatata
+      - Obovaria olivaria
+      - Utterbackiana implicata
+      - Microtus chrotorrhinus
+      - Desmognathus fuscus
+      - Diadophis punctatus
+      - Cistothorus platensis
+      - Ammospiza nelsoni
+      - Asio flammeus
+      - Chaetura pelagica
+      - Salvelinus alpinus oquassa
+      - Storeria dekayi
+      - Opheodrys vernalis
+      - Noturus flavus
+      - Hemidactylium scutatum
+      - Lampropeltis triangulum
+      - Nerodia sipedon
+      - Haliaeetus leucocephalus
+      - Falco peregrinus
+      - Ixobrychus exilis
+      - Bucephala islandica pop. 1
+      - Notropis bifrenatus
+      - Moxostoma carinatum
+      - Osmerus mordax pop. 1
+      - Pseudacris triseriata
+      - Percina copelandi
+      - Graptemys geographica
+      - Glyptemys insculpta
+      Common:
+      - Pic à tête rouge
+      - Râle jaune
+      - Sterne caspienne
+      - Dard de sable
+      - Chevalier cuivré
+      - Tortue mouchetée
+      - Esturgeon noir
+      - Esturgeon jaune
+      - Elliptio à dents fortes
+      - Elliptio pointu
+      - Obovarie olivâtre
+      - Anodonte du gaspareau
+      - Campagnol des rochers
+      - Salamandre sombre du nord
+      - Couleuvre à collier
+      - Troglodyte à bec court
+      - Bruant de nelson
+      - Hibou des marais
+      - Martinet ramoneur
+      - Omble chevalier oquassa
+      - Couleuvre brune
+      - Couleuvre verte
+      - Chat-fou des rapides
+      - Salamandre à quatre orteils
+      - Couleuvre tachetée
+      - Couleuvre d'eau
+      - Pygargue à tête blanche
+      - Faucon pèlerin
+      - Petit blongios
+      - Garrot d'islande, pop. de l'est
+      - Méné d'herbe
+      - Chevalier de rivière
+      - Éperlan arc-en-ciel, pop. du sud de l'estuaire du saint-laurent
+      - Rainette faux-grillon de l'ouest
+      - Fouille-roche gris
+      - Tortue géographique
+      - Tortue des bois
+    Flore:
+      Statut:
+      - Menacée
+      - Menacée
+      - Menacée
+      - Menacée
+      - Menacée
+      - Menacée
+      - Menacée
+      - Menacée
+      - Menacée
+      - Menacée
+      - Susceptible
+      - Susceptible
+      - Susceptible
+      - Susceptible
+      - Susceptible
+      - Susceptible
+      - Susceptible
+      - Susceptible
+      - Susceptible
+      - Susceptible
+      - Susceptible
+      - Susceptible
+      - Susceptible
+      - Susceptible
+      - Susceptible
+      - Susceptible
+      - Susceptible
+      - Susceptible
+      - Susceptible
+      - Susceptible
+      - Susceptible
+      - Susceptible
+      - Susceptible
+      - Susceptible
+      - Susceptible
+      - Susceptible
+      - Susceptible
+      - Susceptible
+      - Susceptible
+      - Susceptible
+      - Susceptible
+      - Susceptible
+      - Susceptible
+      - Susceptible
+      - Susceptible
+      - Susceptible
+      - Susceptible
+      - Susceptible
+      - Susceptible
+      - Susceptible
+      - Susceptible
+      - Susceptible
+      - Susceptible
+      - Susceptible
+      - Susceptible
+      - Susceptible
+      - Susceptible
+      - Susceptible
+      - Susceptible
+      - Vulnérable
+      - Vulnérable
+      - Vulnérable
+      - Vulnérable
+      - Vulnérable
+      Scientific:
+      - Cicuta maculata var. victorinii
+      - Eriocaulon parkeri
+      - Erigeron philadelphicus var. provancheri
+      - Neottia bifolia
+      - Arisaema dracontium
+      - Ulmus thomasii
+      - Gentianopsis virgata subsp. victorinii
+      - Carex glacialis -p09
+      - Pterospora andromedea
+      - Boechera quebecensis
+      - Panicum virgatum
+      - Woodsia oregana subsp. cathcartiana
+      - Corallorhiza striata var. striata
+      - Carex argyrantha
+      - Carex muehlenbergii var. muehlenbergii
+      - Torreyochloa pallida var. pallida
+      - Cardamine bulbosa
+      - Hypericum ascyron subsp. pyramidatum
+      - Veronica catenata
+      - Crataegus suborbiculata
+      - Carex folliculata
+      - Juglans cinerea
+      - Physostegia virginiana subsp. virginiana
+      - Platanthera flava var. herbiola
+      - Juncus longistylis
+      - Boechera collinsii
+      - Echinochloa walteri
+      - Cyperus erythrorhizos
+      - Botrychium michiganense
+      - Botrychium pallidum
+      - Pedicularis palustris subsp. palustris
+      - Iris virginica var. shrevei
+      - Carex laxiculmis var. laxiculmis
+      - Carya ovata var. ovata
+      - Crataegus coccinioides
+      - Salix amygdaloides
+      - Ephemerum serratum
+      - Apopellia endiviifolia
+      - Scapania glaucocephala var. glaucocephala
+      - Buxbaumia piperi
+      - Seligeria diversifolia
+      - Aulacomnium androgynum
+      - Eleocharis aestuum
+      - Proserpinaca palustris
+      - Elymus villosus
+      - Claytonia virginica
+      - Crataegus crus-galli var. crus-galli
+      - Fissidens exilis
+      - Ctenidium subrectifolium
+      - Bryum knowltonii
+      - Grimmia teretinervis
+      - Schistidium pulchrum
+      - Carex cumulata
+      - Crataegus canadensis
+      - Sisyrinchium angustifolium
+      - Quercus bicolor
+      - Strophostyles helvola
+      - Carex typhina
+      - Schoenoplectus heterochaetus
+      - Ionactis linariifolia
+      - Goodyera pubescens
+      - Acer nigrum
+      - Valeriana uliginosa
+      - Floerkea proserpinacoides
+      Common:
+      - Cicutaire de victorin
+      - Ériocaulon de parker
+      - Vergerette de provancher
+      - Listère du sud
+      - Arisème dragon
+      - Orme liège
+      - Gentiane de victorin
+      - Carex des glaces
+      - Ptérospore à fleurs d'andromède
+      - Arabette du québec
+      - Panic raide
+      - Woodsie de cathcart
+      - Corallorhize striée
+      - Carex argenté
+      - Carex de mühlenberg
+      - Glycérie pâle
+      - Cardamine bulbeuse
+      - Millepertuis à grandes fleurs
+      - Véronique en chaîne
+      - Aubépine suborbiculaire
+      - Carex folliculé
+      - Noyer cendré
+      - Physostégie de virginie
+      - Platanthère petite-herbe
+      - Jonc longistyle
+      - Arabette de collins
+      - Échinochloé de walter
+      - Souchet à racines rouges
+      - Botryche du michigan
+      - Botryche pâle
+      - Pédiculaire des marais
+      - Iris de shreve
+      - Carex à tiges faibles
+      - Caryer ovale
+      - Aubépine dilatée
+      - Saule à feuilles de pêcher
+      - Éphémère à feuilles dentées
+      - Pellie ramifiée
+      - Scapanie glauque
+      - Gnome mat
+      - Séligérie à feuilles variées
+      - Petite aulacomnie
+      - Éléocharide des estuaires
+      - Proserpinie des marais
+      - Élyme velu
+      - Claytonie de virginie
+      - Aubépine ergot-de-coq
+      - Fissident mince
+      - Hypne papilleuse
+      - Bryum nordique
+      - Grimmie à nervure cylindrique
+      - Grimmie ravissante
+      - Carex dense
+      - Aubépine du canada
+      - Bermudienne à feuilles étroites
+      - Chêne bicolore
+      - Strophostyle ochracé
+      - Carex massette
+      - Scirpe à soies inégales
+      - Aster à feuilles de linaire
+      - Goodyérie pubescente
+      - Érable noir
+      - Valériane des tourbières
+      - Floerkée fausse-proserpinie
   zostere:
     mpo:
       sites: 226

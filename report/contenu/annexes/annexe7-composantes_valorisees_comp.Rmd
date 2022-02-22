@@ -1,6 +1,4 @@
-# Annexe 5 {-}
-
-<!-- TODO: Verify list at the end of project -->
+# Annexe 7 {.unnumbered #annexe7}
 
 ```{r cvcomp}
 tab <- data.frame(

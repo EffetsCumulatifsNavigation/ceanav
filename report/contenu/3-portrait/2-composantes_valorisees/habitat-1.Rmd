@@ -25,7 +25,7 @@ tab %>%
   knitr::kable(
     col.names = c("Catégories d'habitats", "Sous-catégories", "Description", "Superficie $km^2$", "Données utilisées$^*$"),
     row.names = FALSE,
-    caption = "Catégories d'habitats considérés pour l'analyse des effets cumulatifs de la navigation dans le Saint-Laurent et le Saguenay et leur superficie totale dans la zone d'étude. $^*$Consultez les annexes 3 et 4 pour plus de détails sur les données utilisées."
+    caption = "Catégories d'habitats considérés pour l'analyse des effets cumulatifs de la navigation dans le Saint-Laurent et le Saguenay et leur superficie totale dans la zone d'étude. $^*$Consultez l'[annexe 1](#annexe1) pour plus de détails sur les sources de données."
   )
 ```
 

@@ -7,7 +7,7 @@ La section précédente présente les différents critères utilisés afin de ca
 
 Les statuts fédéraux du Comité sur la situation des espèces en péril au Canada (COSEPAC) ont été utilisés afin de déterminer le statut des espèces de mammifères marins. 
 
-Les scores de vulnérabilité finaux sont disponibles au tableau \@ref(fig:mmvuln) et les tableaux d'évaluation des critères individuels par espèce de mammifère marin sont disponibles à l'Annexe 8.
+Les scores de vulnérabilité finaux sont disponibles au tableau \@ref(fig:mmvuln) et les tableaux d'évaluation des critères individuels par espèce de mammifère marin sont disponibles à l'[annexe 9](#annexe9).
 
 <br/>
 

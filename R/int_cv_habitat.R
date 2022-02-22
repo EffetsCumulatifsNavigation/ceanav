@@ -505,6 +505,12 @@ cv_habitat <- function() {
          summarize(species = length(unique(SNAME)),
                    area = round(as.numeric(sum(area)),2)) %>%
          mutate(Type = "Faune")
+         
+  datFauneSP <- dat %>%
+                group_by(LOIEMV) %>%
+                summarize(species = unique(SNAME), 
+                          common = unique(SCOMNAME)) %>%
+                mutate(common = str_to_sentence(common)) 
 
   # <=~ - ~=> <=~ - ~=> <=~ - ~=> <=~ - ~=> #
   # --- Flore à statut
@@ -523,6 +529,11 @@ cv_habitat <- function() {
                    area = round(as.numeric(sum(area)),2)) %>%
          mutate(Type = "Flore")
 
+  datFloreSP <- dat %>%
+                group_by(LOIEMV) %>%
+                summarize(species = unique(SNAME), 
+                          common = unique(SCOMNAME)) %>%
+                mutate(common = str_to_sentence(common)) 
 
   # ----
   dat <- rbind(datFaune, datFlore)
@@ -536,6 +547,12 @@ cv_habitat <- function() {
   meta$dataDescription$CDPNQ$details$loiemv <- dat$LOIEMV
   meta$dataDescription$CDPNQ$details$species <- dat$species
   meta$dataDescription$CDPNQ$details$area <- dat$area
+  meta$dataDescription$CDPNQ$Faune$Statut <- datFauneSP$LOIEMV
+  meta$dataDescription$CDPNQ$Faune$Scientific <- datFauneSP$species
+  meta$dataDescription$CDPNQ$Faune$Common <- datFauneSP$common
+  meta$dataDescription$CDPNQ$Flore$Statut <- datFloreSP$LOIEMV
+  meta$dataDescription$CDPNQ$Flore$Scientific <- datFloreSP$species
+  meta$dataDescription$CDPNQ$Flore$Common <- datFloreSP$common
 
   # <=~ - ~=> <=~ - ~=> <=~ - ~=> <=~ - ~=> #
   # --- Zosteres

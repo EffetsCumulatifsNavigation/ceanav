@@ -1,0 +1,11 @@
+# Annexe 4 {.unnumbered #annexe4}
+
+```{r}
+meta <- read_yaml("../data/data-metadata/int_cv_habitat.yml")
+tab <- as.data.frame(meta$dataDescription$CDPNQ$Faune)
+tab %>%
+  knitr::kable(
+    col.names = c("Statut", "Nom scientifique", "Nom commun"),
+    row.names = FALSE
+  )
+```

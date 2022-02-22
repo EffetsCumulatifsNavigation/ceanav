@@ -1,4 +1,4 @@
-# Annexe 4 {-}
+# Annexe 6 {.unnumbered #annexe6}
 
 ```{r stresscomp}
 tab <- data.frame(
