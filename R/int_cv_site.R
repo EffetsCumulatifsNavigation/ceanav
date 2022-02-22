@@ -186,7 +186,7 @@ cv_site <- function() {
   # ----------------------------
   # Wolastoqiyik Wahsipekuk - Pêche commerciale : 0025, 0026
   dat <- c("0025", "0026")
-  meta_temp <- meta_update(meta_temp, dat, "wolastoqiyik_wahsipekuk_peche_commerciale", "Pêche traditionnelle", type = "Nation Wolastoqiyik Wahsipekuk")
+  meta_temp <- meta_update(meta_temp, dat, "wolastoqiyik_wahsipekuk_peche_commerciale", "Pêche commerciale", type = "Nation Wolastoqiyik Wahsipekuk")
 
   # -----
   site$wolastoqiyik_wahsipekuk_peche_commerciale <- uid(dat)
@@ -288,8 +288,9 @@ cv_site <- function() {
   # ----------------------------
   # Nation Huronne-Wendat
   # Huronne-Wendat - Activités récréatives - 0055
+  # Terme modifié suite aux commentaires à Edgar. Éviter d'utiliser le terme récréatif puisque ça minimise l'importance de ces activités
   dat <- "0055"
-  meta_temp <- meta_update(meta_temp, dat, "huronne_wendat_activite_recreative", "Activités récréatives", type = "Nation Huronne-Wendat")
+  meta_temp <- meta_update(meta_temp, dat, "huronne_wendat_activite_recreative", "Activités rituelles ou sociales", type = "Nation Huronne-Wendat")
   site$huronne_wendat_activite_recreative <- uid(dat, "Activité récréative", "Thème")
 
   # ----------------------------

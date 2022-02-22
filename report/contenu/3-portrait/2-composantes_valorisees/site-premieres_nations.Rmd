@@ -33,7 +33,7 @@ Un atlas cartographique en accès libre développé par l'Association de gestion
 
 Les sites d'intérêt proviennent généralement d'un exercice d'intégration de connaissances issues d'autres études effectuées avec les membres des Premières Nations. Les sites d'intérêt identifiés par les communautés participantes peuvent globalement être classés en 9 grandes catégories :
 
-- Activités récréatives
+- Activités rituelles ou sociales
 - Chasse
 - Culture et patrimoine
 - Occupation du territoire
@@ -68,7 +68,7 @@ Les sections suivantes décrivent brièvement les données partagées par les co
 Les données transmises par la Nation Huronne-Wendat fournissent la localisation de sites d'intérêt principalement dans la portion fluviale du Saint-Laurent et dans l'estuaire et dans une moindre mesure dans l'estuaire du Saint-Laurent [@nhw2021]. Les sites sont composées de neuf thèmes divisées en trois catégories uniques : 
 
 - Sites contemporains 
-  - Activités récréatives
+  - Activités rituelles ou sociales
   - Chasse
   - Pêche
   - Récolte de végétaux
@@ -88,7 +88,7 @@ Les thèmes ont été considérés en tant que catégories uniques de composante
 
 <br>
 
-```{r huronnewendatactiviterecreative, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation Huronne-Wendat - Activités récréatives", out.width = '100%', fig.link = "./figures/figures-integrated/site-huronne_wendat_activite_recreative.png"}
+```{r huronnewendatactiviterecreative, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation Huronne-Wendat - Activités rituelles ou sociales", out.width = '100%', fig.link = "./figures/figures-integrated/site-huronne_wendat_activite_recreative.png"}
 knitr::include_graphics("./figures/figures-integrated/site-huronne_wendat_activite_recreative.png")
 ```
 <br>
@@ -305,11 +305,11 @@ knitr::include_graphics("./figures/figures-integrated/site-kahnawake_traffic.png
 
 > *Nous remercions la Nation Wolastoqiyik Wahsipekuk pour leur participation, ainsi que David Poissant pour les échanges et le support.*
 
-Nous utilisont des données qui nous ont été transmises par des représentants de la Nation Wolastoqiyik Wahsipekuk pour caractériser des sites d'importances pour la pêche traditionnelle au homard [*Homarus americanus*; @pnww2021] et l'oursin [*Strongylocentrotus* sp.; @pnww2021b]. Ces données identifient des milieux jugés important pour la pêche sur la rive sud du Saint-Laurent. Il est toutefois important de noter que malgré l'inclusion de sites d'intérêt pour la Nation Wolastoqiyik Wahsipekuk, un processus collaboratif semble à celui effectué avec les autres Nations n'a pu être mis en place. Les données socio-culturelles de la Nation Wolastoqiyik Wahsipekuk n'ont ainsi pu être incluses au sein de notre évaluation. 
+Nous utilisont des données qui nous ont été transmises par des représentants de la Nation Wolastoqiyik Wahsipekuk pour caractériser des sites d'importances pour la pêche commerciale au homard [*Homarus americanus*; @pnww2021] et l'oursin [*Strongylocentrotus* sp.; @pnww2021b]. Ces données identifient des milieux jugés important pour la pêche sur la rive sud du Saint-Laurent. Il est toutefois important de noter que malgré l'inclusion de sites d'intérêt pour la Nation Wolastoqiyik Wahsipekuk, un processus collaboratif semble à celui effectué avec les autres Nations n'a pu être mis en place. Les données socio-culturelles de la Nation Wolastoqiyik Wahsipekuk n'ont ainsi pu être incluses au sein de notre évaluation. 
 
 <br>
 
-```{r wolastoqiyikwahsipekukpechecommerciale, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation Wolastoqiyik Wahsipekuk - Pêche traditionnelle", out.width = '100%', fig.link = "./figures/figures-integrated/site-wolastoqiyik_wahsipekuk_peche_commerciale.png"}
+```{r wolastoqiyikwahsipekukpechecommerciale, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation Wolastoqiyik Wahsipekuk - Pêche commerciale", out.width = '100%', fig.link = "./figures/figures-integrated/site-wolastoqiyik_wahsipekuk_peche_commerciale.png"}
 knitr::include_graphics("./figures/figures-integrated/site-wolastoqiyik_wahsipekuk_peche_commerciale.png")
 ```
 
