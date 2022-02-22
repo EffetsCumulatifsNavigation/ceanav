@@ -8,6 +8,9 @@ data_description:
   contact_id: "0006"
   url: "https://catalogue.ogsl.ca/fr/dataset/93fd20e8-c80b-4304-9eb4-80ac13a2d365"
   availability: "open source"
+  citekey: 
+    - comitezipestuaire2012
+    - bachand2014
   citation:
     - "Comité ZIP du Sud-de-l'Estuaire. (2012, 2013, 2014 du jeu de données téléchargé). Restauration expérimentale d’une zostéraie dans la Baie de Mitis. Données diffusées sur l'Observatoire global du Saint-Laurent-OGSL. [https://ogsl.ca]. Consulté le [2021-06-08]"
     - "Bachand, É., Joubert, J-É, 2014. RESTAURATION DE L’HERBIER DE ZOSTÈRE MARINE (Zostera marina L.) DANS LA BAIE DE MITIS, GRAND-MÉTIS – Rapport des travaux et de suivi, Rimouski, 42p."

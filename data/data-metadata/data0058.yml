@@ -8,6 +8,9 @@ data_description:
     - "0052"
   url: "https://www.ibacanada.com/explore_how.jsp?lang=fr"
   availability: "open source"
+  citekey: 
+    - oiseauxcanada2015
+    - etudesoiseauxcanada2015
   citation:
     - "Oiseaux Canada (2015) Zones importantes pour la conservation des oiseaux et de la biodiversité au Canada (KMZ) (Keyhole Markup Language), Oiseaux Canada, Ontario [En ligne] IBA Canada [https://www.ibacanada.com/explore_how.jsp?lang=fr] (Consulté le 3 novembre 2021)."
     - "Études d’oiseaux Canada (2015) Base de données des zones importantes pour la conservation des oiseaux au Canada. Port Rowan, Ontario : Études d’oiseaux Canada. http://www.ibacanada.org"

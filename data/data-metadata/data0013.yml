@@ -7,5 +7,6 @@ data_description:
   url: "https://www.donneesquebec.ca/recherche/fr/dataset/0d9de0d6-9873-4a8c-adc7-0e94d51b3fa0"
   identifiant: "0d9de0d6-9873-4a8c-adc7-0e94d51b3fa0"
   availability: "open access"
+  citekey: mamh2020
   citation:
     - "Ministère des Affaires municipales et de l'Habitation (2020) Grille de présence de zone inondable identifiée par les MRC. url: https://www.donneesquebec.ca/recherche/fr/dataset/0d9de0d6-9873-4a8c-adc7-0e94d51b3fa0"

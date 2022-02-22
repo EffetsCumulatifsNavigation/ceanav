@@ -9,6 +9,9 @@ data_description:
   url: "https://www.donneesquebec.ca/recherche/dataset/milieux-humides-potentiels"
   identifiant: "640ba2cf-e1e1-4618-84d6-874f0d657dd3"
   availability: "open source"
+  citekey:
+    - melcc2019b
+    - melcc2019c
   citation:
     - "Ministère de l’Environnement et de la Lutte contre les changements climatiques (2019). Cartographie des milieux humides potentiels du Québec – version 2019. [Accès aux données 2021-10-05]. url : https://www.donneesquebec.ca/recherche/dataset/milieux-humides-potentiels."
     - Ministère de l’Environnement et de la Lutte contre les changements climatiques (2019b). Cartographie des milieux humides potentiels du Québec – Guide de l’utilisateur – version 2019. 26 p."

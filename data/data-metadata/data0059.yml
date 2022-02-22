@@ -5,5 +5,6 @@ data_description:
   access_date: 2021-11-08
   contact_id: "0053"
   availability: "data sharing agreement"
+  citekey: cdpnq2021
   citation:
     - "Centre de données sur le patrimoine naturel du Québec. (2021). Extractions du système de données d'espèces fauniques à statut pour le territoire du fleuve Saint-Laurent ou ses abords, de Beauharnois à Pointe-des-Monts, et de la rivère Saguenay. Ministère des Forêts, de la Faune et des Parcs (MFFP) et Ministère de l’Environnement et de la Lutte contre les Changements Climatiques (MELCC), Québec."

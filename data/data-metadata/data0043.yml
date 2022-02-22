@@ -9,6 +9,9 @@ data_description:
   url: "https://catalogue.ogsl.ca/en/dataset/b04cc62f-8774-4978-9a6f-6beae584d6b5"
   identifiant: "b04cc62f-8774-4978-9a6f-6beae584d6b5"
   availability: "open source"
+  citekey:
+    - eccc2021
+    - rail2002
   citation:
     - "Environnement et Changement Climatique Canada. (2021). Observations d'oiseaux marins. Données diffusées sur l'Observatoire global du Saint-Laurent-OGSL. [https://ogsl.ca]. Consulté le [2021-08-13]."
     - "Rail, J.-F. et G. Chapdelaine 2002. Quinzième inventaire des oiseaux marins dans les refuges de la Côte-Nord: techniques et résultats détaillés. Série de rapports techniques No. 392. Seryice  canadien de la faune, région du Québec, Environnement Canada, Sainte-Foy, xvi + 307 pages. Diffusé sur l'Observatoire global du Saint-Laurent-OGSL. [https://ogsl.ca]. Consulté le [2021-08-13]."

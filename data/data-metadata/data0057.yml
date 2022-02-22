@@ -9,6 +9,9 @@ data_description:
   url: "https://ouvert.canada.ca/data/fr/dataset/8bb29ee0-6cd8-4dd4-abe0-afe8682a69d9"
   identifiant: "8bb29ee0-6cd8-4dd4-abe0-afe8682a69d9"
   availability: "open source"
+  citekey:
+    - mpo2019
+    - trottier2015
   citation:
     - "Pêches et Océans Canada (2019) Gisements connus et exploités de mactre de Stimpson des eaux côtières du Québec. url: https://ouvert.canada.ca/data/fr/dataset/8bb29ee0-6cd8-4dd4-abe0-afe8682a69d9"
     - "Trottier, S. et Goudreau, P. 2015. Évaluation des stocks de mactre de Stimpson (Mactromeris polynyma) des eaux côtières du Québec en 2014. Secr. Can. de. Cons. Sci. du MPO. Doc. de Rech: 72 + ix p."
