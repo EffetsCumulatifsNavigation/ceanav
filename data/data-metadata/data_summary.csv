@@ -38,7 +38,7 @@
 "0037","[Habitat floristique](https://www.donneesquebec.ca/recherche/dataset/habitats-floristiques)",NA,"2021","0036",""
 "0038","[Registre des aires protégées au Québec](https://www.donneesquebec.ca/recherche/dataset/aires-protegees-au-quebec)","X","2021","0037","@melcc2021"
 "0039","[Other Effective Area-Based Conservation Measures](https://open.canada.ca/data/en/dataset/44769543-7a23-4991-a53f-c2cf7c7a946f)","X","2016 - 2021","0038","@mpo2021d"
-"0040","[Oceans Act Marine Protected Areas](https://open.canada.ca/data/en/dataset/a1e18963-25dd-4219-a33f-1a38c4971250)","X","2016 - 2021","0038","@mpo2021e"
+"0040","[Oceans Act Marine Protected Areas](https://open.canada.ca/data/en/dataset/a1e18963-25dd-4219-a33f-1a38c4971250)",NA,"2016 - 2021","0038","@mpo2021e"
 "0041","[Installations portuaires](https://ouvert.canada.ca/data/fr/dataset/dcf460ae-c27f-4721-bec4-6e4467a5a3b6)","X","2016 - 2021","0039","@mtq2021"
 "0042","[Territoires d’intérêt pour la conservation - milieux humides](https://www.donneesquebec.ca/recherche/dataset/atlas-des-territoires-interet-conservation-btsl#)",NA,"2014 - 2016","0010",""
 "0043","[Computerized Database of Québec Seabirds (CDQS)](https://catalogue.ogsl.ca/en/dataset/b04cc62f-8774-4978-9a6f-6beae584d6b5)","X","2000 - 2018","0040","@eccc2021; @rail2002"
@@ -70,3 +70,4 @@
 "0069","Sites de dragage et de dépôt de la Première Nation des Innus d'Essipit","X","2001 - 2016","0025","@bouchard2022"
 "0070","Sites d'ancrage commerciaux ","X","2022","0060","@gcc2022"
 "0071","[Mouillages et zones de mouillages canadiennes](https://ouvert.canada.ca/data/fr/dataset/622a7f72-4a00-4f9e-b04f-af6551c77db3)","X","2020","0061","@shc2020"
+"0072","Communauté Wolastoqiyik Wahsipekuk sites d'intérêt","X","2022","0027","@pnww2022"
