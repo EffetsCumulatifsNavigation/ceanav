@@ -39,7 +39,7 @@ cv_site <- function() {
   #   - Essipit - Pêche commerciale : 0024
   #   - Essipit - Activités touristiques : 0024
   #   - Essipit - Accès au plan d'eau : 0024
-  #   - Wolastoqiyik Wahsipekuk - Pêche commerciale : 0025, 0026
+  #   - Wolastoqiyik Wahsipekuk - Pêche commerciale : 0025, 0026, 0072
   #   - Kahnawake - Cultural Sites : 0032
   #   - Kahnawake - Fishing Commercial : 0032
   #   - Kahnawake - Hunting : 0032
@@ -190,6 +190,16 @@ cv_site <- function() {
 
   # -----
   site$wolastoqiyik_wahsipekuk_peche_commerciale <- uid(dat)
+
+  # Sites d'intérêt supplémentaires partagé en février 2022
+  dat <- "0072"
+  meta_temp <- meta_update(meta_temp, dat, "wolastoqiyik_wahsipekuk_observation_beluga", "Observation du béluga", type = "Nation Wolastoqiyik Wahsipekuk")
+  site$wolastoqiyik_wahsipekuk_observation_beluga <- uid(dat, "Observation du béluga", "nom")
+
+  # ---
+  meta_temp <- meta_update(meta_temp, dat, "wolastoqiyik_wahsipekuk_developpement_portuaire", "Développement portuaire", type = "Nation Wolastoqiyik Wahsipekuk")
+  site$wolastoqiyik_wahsipekuk_developpement_portuaire <- uid(dat, "Développement portuaire", "nom")
+
 
   # ================================================================================================
   # ----------------------------

@@ -1,0 +1,11 @@
+data_description:
+  id: "0072"
+  name: "Communauté Wolastoqiyik Wahsipekuk sites d'intérêt"
+  description: "Localisation de sites d'intérêt pour l'observation du béluga et le développement portuaire"
+  access_date: 2022-02-22
+  temporal_start: 2022
+  temporal_end: 2022
+  contact_id: "0027"
+  availability: "data sharing agreement"
+  citekey: pnww2022
+  citation: "Première Nation Wolastoqiyik Wahsipekuk (2022) Localisation de sites d'intérêt pour l'observation du béluga et le développement portuaire"

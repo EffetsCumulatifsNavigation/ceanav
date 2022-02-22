@@ -23,6 +23,8 @@ dataDescription:
     - essipit_tourisme
     - essipit_acces_eau
     - wolastoqiyik_wahsipekuk_peche_commerciale
+    - wolastoqiyik_wahsipekuk_observation_beluga
+    - wolastoqiyik_wahsipekuk_developpement_portuaire
     - kahnawake_culture_patrimoine
     - kahnawake_chasse
     - kahnawake_peche_rivage
@@ -65,6 +67,8 @@ dataDescription:
     - Activités touristiques
     - Accès au plan d'eau
     - Pêche commerciale
+    - Observation du béluga
+    - Développement portuaire
     - Culture et patrimoine
     - Chasse à la sauvagine
     - Pêche de rivage
@@ -106,6 +110,8 @@ dataDescription:
     - Nation des Innus d’Essipit
     - Nation des Innus d’Essipit
     - Nation des Innus d’Essipit
+    - Nation Wolastoqiyik Wahsipekuk
+    - Nation Wolastoqiyik Wahsipekuk
     - Nation Wolastoqiyik Wahsipekuk
     - Nation Mohawk de Kahnawà:ke
     - Nation Mohawk de Kahnawà:ke
@@ -149,6 +155,8 @@ dataDescription:
     - '0024'
     - '0024'
     - '0025,0026'
+    - '0072'
+    - '0072'
     - '0032'
     - '0032'
     - '0032'
@@ -191,6 +199,8 @@ dataDescription:
     - essipittourisme
     - essipitacceseau
     - wolastoqiyikwahsipekukpechecommerciale
+    - wolastoqiyikwahsipekukobservationbeluga
+    - wolastoqiyikwahsipekukdeveloppementportuaire
     - kahnawakeculturepatrimoine
     - kahnawakechasse
     - kahnawakepecherivage
@@ -234,6 +244,8 @@ rawData:
 - '0024'
 - '0025'
 - '0026'
+- '0072'
+- '0072'
 - '0032'
 - '0032'
 - '0032'
