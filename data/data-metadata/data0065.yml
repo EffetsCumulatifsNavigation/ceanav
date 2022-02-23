@@ -7,4 +7,5 @@ data_description:
   url: "https://www.donneesquebec.ca/recherche/dataset/decoupages-administratifs"
   identifiant: "eec20550-7916-4ff9-b9bf-9e07288b4a17"
   availability: "open source"
+  citekey: mern2021b
   citation: "Ministère de l'Énergie et des Ressources naturelles (2021) Découpages administratifs. url: https://www.donneesquebec.ca/recherche/dataset/decoupages-administratifs"

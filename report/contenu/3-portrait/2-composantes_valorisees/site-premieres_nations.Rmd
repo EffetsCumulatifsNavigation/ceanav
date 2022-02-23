@@ -451,10 +451,11 @@ Nous utilisont des données qui nous ont été transmises par des représentants
 
 Deux sites d'intérêt pour l'observation du béluga et pour le développement portuaire sont également considérés en tant que sites d'intérêt pour la Nation Wolastoqiyik Wahsipekuk [@pnww2022]. Il est toutefois important de noter que malgré l'inclusion de sites d'intérêt pour la Nation Wolastoqiyik Wahsipekuk, un processus collaboratif semble à celui effectué avec les autres Nations n'a pu être mis en place. Les données socio-culturelles de la Nation Wolastoqiyik Wahsipekuk n'ont ainsi pu être incluses au sein de notre évaluation. 
 
+
 <br>
 
-```{r wolastoqiyikwahsipekukpechecommerciale, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation Wolastoqiyik Wahsipekuk - Pêche commerciale", out.width = '100%', fig.link = "./figures/figures-integrated/site-wolastoqiyik_wahsipekuk_peche_commerciale.png"}
-knitr::include_graphics("./figures/figures-integrated/site-wolastoqiyik_wahsipekuk_peche_commerciale.png")
+```{r wolastoqiyikwahsipekukdeveloppementportuaire, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation Wolastoqiyik Wahsipekuk - Développement portuaire", out.width = '100%', fig.link = "./figures/figures-integrated/site-wolastoqiyik_wahsipekuk_developpement_portuaire.png"}
+knitr::include_graphics("./figures/figures-integrated/site-wolastoqiyik_wahsipekuk_developpement_portuaire.png")
 ```
 
 <br>
@@ -465,9 +466,9 @@ knitr::include_graphics("./figures/figures-integrated/site-wolastoqiyik_wahsipek
 
 <br>
 
-```{r wolastoqiyikwahsipekukdeveloppementportuaire, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation Wolastoqiyik Wahsipekuk - Développement portuaire", out.width = '100%', fig.link = "./figures/figures-integrated/site-wolastoqiyik_wahsipekuk_developpement_portuaire.png"}
-knitr::include_graphics("./figures/figures-integrated/site-wolastoqiyik_wahsipekuk_developpement_portuaire.png")
+
+```{r wolastoqiyikwahsipekukpechecommerciale, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation Wolastoqiyik Wahsipekuk - Pêche commerciale", out.width = '100%', fig.link = "./figures/figures-integrated/site-wolastoqiyik_wahsipekuk_peche_commerciale.png"}
+knitr::include_graphics("./figures/figures-integrated/site-wolastoqiyik_wahsipekuk_peche_commerciale.png")
 ```
 
 <br>
-
