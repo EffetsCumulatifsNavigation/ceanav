@@ -1,6 +1,6 @@
 #### Sites d'intérêt pour les Premières Nations {#pnportrait}
 
-Dans le cadre de ce projet pilote, une importance particulière a été attribuée aux sites d'intérêt pour les Premières Nations. Un processus collaboratif a ainsi été enclenché avec des Nations autochtones ayant des activités historiques et contemporaines au sein de la zone d'étude. Les Nations autochtones participantes ayant fournit des données sont les suivantes :
+Dans le cadre de ce projet pilote, une importance particulière a été attribuée aux sites d'intérêt pour les Premières Nations. Les activités maritimes peuvent affecter les conditions qui sous-tendent l’exercice des droits ancestraux des Premières Nations, notamment l'accès aux ressources et au territoire. Un processus collaboratif a ainsi été enclenché avec des Nations autochtones ayant des activités historiques et contemporaines au sein de la zone d'étude. Les Nations autochtones participantes ayant fournit des données sont les suivantes :
 
 - Nation Huronne-Wendat
 - Nation des Innus d’Essipit
@@ -34,7 +34,9 @@ Il est important de noter quelques mises en gardes quant aux sites d'intérêt p
 
 Deuxièmement, le lien et l'appartenance des Premières Nations au territoire va au-delà d'une vision strictement utilitaire et fonctionnelle; cette vision est difficile à capturer à travers une cartographie des sites d'intérêt, qui a pour effet de les objectiver. Il est ainsi important de considérer que les sites d'intérêts qui ont été identifiés s'insèrent dans un contexte culturel et écologique plus large qu'une simple localisation géographique. 
 
-Troisièmement, les limites spatio-temporelles de la présente étude a été évoquée comme une limite importance dans un contexte autochtone puisqu'elle ne capture pas adéquatement le caractère évolutif de l'occupation et de l'utilisation du territoire qu'ils en font. Le portrait des sites d'intérêt présenté ne devrait ainsi pas être interprété comme représentatif du passé ou garant du futur. 
+Troisièmement, la notion d'utilisation du territoire des Premières Nations va au-delà d'une simple utilisation. En effet, les activités coutumières autochtones constituent des droits ancestraux protégés par l’article 35(1) de la Constitution canadienne. La Loi constitutionnelle de 1982 affirme les droits existants ancestraux ou issus de traités. Cependant, la plupart de ces droits demeurent indéfinis et la Proclamation royale de 1763 stipule que les peuples autochtones continuent à détenir toutes terres qu’ils n’ont pas cédées ou vendues. Il importe donc de bien distinguer ces activités alimentaires, rituelles et sociales faisant l’objet de droits protégés par la Constitution et liés à la subsistance de la Nation, des activités de pêche, de chasse et de piégeage sportives et de loisir pratiquées par la population allochtone.
+
+Quatrièmement, les limites spatio-temporelles de la présente étude a été évoquée comme une limite importance dans un contexte autochtone puisqu'elle ne capture pas adéquatement le caractère évolutif de l'occupation et de l'utilisation du territoire qu'ils en font. Le portrait des sites d'intérêt présenté ne devrait ainsi pas être interprété comme représentatif du passé ou garant du futur. 
 
 Finalement, la participation des Premières Nations à cette étude est faite sans préjudice à l'exercice de leurs droits juridiques sur leur territoire traditionnel respectif pour lesquels s'appliquent leurs droits et responsabilités d'intendance et qui se basent sur l'application d'une approche écosystémique plus large. Les sites d'intérêt identifiés doivent ainsi être interprétés dans le contexte élargi de ces droits et responsabilités.
 
@@ -81,7 +83,7 @@ Les données transmises par la Nation des Innus d'Essipit sont une intégration 
 - Atlas des usages côtiers et marins du Saint-Laurent par les Innus de la Côte-Nord, Agence Mamu Innu Kaikusseht​, 2019.
 - Collecte de données sur la récolte d'oiseaux migrateurs dans sept communautés innues de la Côte-Nord, Agence Mamu Innu Kaihusseht, 2014
 
-Le résultat de l'intégration de ces données fournit la localisation de sites d'intérêts localisés dans l'estuaire du Saint-Laurent et la rivière Saguenay . Ces sites sont divisés en sept catégories : 
+Le résultat de l'intégration de ces données fournit la localisation de sites d'intérêts localisés dans l'estuaire du Saint-Laurent et la rivière Saguenay. Ces sites sont divisés en sept catégories : 
 
 - Chasse aux oiseaux migrateurs
 - Chasse au phoque
@@ -91,7 +93,7 @@ Le résultat de l'intégration de ces données fournit la localisation de sites 
 - Accès au plan d'eau
 - Culture et patrimoine
 
-Ces catégories de sites d'intérêts sont utilisées pour l'évaluation des effets cumulatifs des activités maritimes dans la zone d'étude.
+Ces catégories de sites d'intérêts sont utilisées pour l'évaluation des effets cumulatifs des activités maritimes dans la zone d'étude. Il est important de noter que les données originales utilisées couvrent un territoire plus large que la zone d'étude de la présente évaluation, mais que ces dernières ont été intersectées et limitées à notre zone d'étude.
 
 
 <br>
@@ -158,7 +160,7 @@ Les données transmises par la Nation Huronne-Wendat fournissent la localisation
   - Histoire 
   - Toponymie
 
-La catégorie d'occupation du territoire regroupe divers types de sites d’intérêt pour la Nation Huronne-Wendat. Une formule générale pour désigner ces sites a été conservée en raison de la sensibilité des données qui y sont incluses. Les thèmes ont été considérés en tant que catégories uniques de composantes valorisées pour l'évaluation des effets cumulatifs.
+La catégorie d'occupation du territoire regroupe divers types de sites d’intérêt pour la Nation Huronne-Wendat. Une formule générale pour désigner ces sites a été conservée en raison de la sensibilité des données qui y sont incluses. Les thèmes ont été considérés en tant que catégories uniques de composantes valorisées pour l'évaluation des effets cumulatifs. Il est important de noter que les données originales utilisées couvrent un territoire plus large que la zone d'étude de la présente évaluation, mais que ces dernières ont été intersectées et limitées à notre zone d'étude.
 
 <br>
 
@@ -247,7 +249,7 @@ Les données transmises par la Nation Mohawk de Kahnawà:ke fournissent la local
   - Seigneurie du Sault-Saint-Louis
   - Navigation
 
-Les sites composant ces huit catégories ont été utilisées pour l'évaluation des effets cumulatifs des activités maritimes.
+Les sites composant ces huit catégories ont été utilisées pour l'évaluation des effets cumulatifs des activités maritimes. Il est important de noter que les données originales utilisées couvrent un territoire plus large que la zone d'étude de la présente évaluation, mais que ces dernières ont été intersectées et limitées à notre zone d'étude.
 
 Un clause accompagne les données partagées, que nous nous permettons de retranscrire en son intégralité en anglais : 
 
@@ -316,6 +318,9 @@ knitr::include_graphics("./figures/figures-integrated/site-kahnawake_traffic.png
 
 > *Nous remercions la Nation W8banaki pour leur participation, ainsi que le Grand Conseil de la Nation Waban-Aki, Edgar Blanchet, Hadrien Bois et David Bernard pour les échanges et le support.*
 
+<!-- Pour de plus amples informations, veuillez contacter directement le GCNWA. -->
+
+
 Dans le cadre de ce projet pilote, le Grand Conseil de la Nation Waban-Aki (GCNWA) a procédé à l'intégration d'informations spatialisée et non-spatialisées provenant d'entretiens semi-dirigés individuels ou en petits groupes sur l'utilisation du territoire précédemment effectuées auprès de membres de la Nation. Ces études regroupent un échantillon de 33 répondant pour 74 entretiens. La cartographie est accompagnée d'informations qualitatives provenant principalement de 1) deux ateliers de type "groupe d'expression" tenus en 2016, des entretiens d'ateliers tenus entre 2019 et 2020 avec des femmes de la Nation, et 3) des analyses d'évaluation des effets de projets d'agrandissements portuaires sur les droits ancestraux de la Nation. Ce travail d'intégration a mené à la production d'un rapport présentant les préoccupations connues de certains membres de la Nation quant aux pressions environnementales exercées au sein de leur territoire et touchant les composantes valorisées couvertes par notre évaluation des effets cumulatifs des activités maritimes [@gcnwa2021]. 
 
 Les données transmises par le GCNWA fournissent la localisation de sites d'intérêt principalement dans la dans la portion fluviale du Saint-Laurent [@gcnwa2021]. Les sites identifiés sont divisée en 13 catégories distinctes : 
@@ -336,7 +341,7 @@ Les données transmises par le GCNWA fournissent la localisation de sites d'int�
   - Sites archéologiques
   - Sites à potentiel archéologique
 
-Ces catégories de sites d'intérêts sont utilisées pour l'évaluation des effets cumulatifs des activités maritimes dans la zone d'étude.
+Ces catégories de sites d'intérêts sont utilisées pour l'évaluation des effets cumulatifs des activités maritimes dans la zone d'étude. Il est important de noter que les données originales utilisées couvrent un territoire plus large que la zone d'étude de la présente évaluation, mais que ces dernières ont été intersectées et limitées à notre zone d'étude.
 
 <br>
 
