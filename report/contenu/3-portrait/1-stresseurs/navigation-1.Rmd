@@ -1,6 +1,6 @@
 ### Navigation
 
-> *Nous remercions Clément Chion et Jean-François Sénécal de l'Université du Québec en Outaouais, Jeff Campagnola de Transports Canada et Samuel Turgeon du Parc marin du Saguenay–Saint-Laurent pour les échanges et le support.*
+> *Nous remercions Clément Chion et Jean-François Sénécal de l'Université du Québec en Outaouais, Jeff Campagnola de Transports Canada et Samuel Turgeon du Parc marin du Saguenay–Saint-Laurent pour les échanges et le soutien.*
 
 ```{r navigation_setup, echo = FALSE}
 meta <- read_yaml("../data/data-metadata/int_st_navigation.yml")
@@ -28,18 +28,18 @@ afin de tracer leurs déplacements au sein de la zone d'étude.
 Puisque les bateaux peuvent entrer et sortir de la zone d'étude, ou encore
 demeurer à quai pour des périodes plus longues, les déplacements des navires ont
 été segmentés en plusieurs segments linéaires individuels.
-Une segmentation a été effectuée lorsque deux localisations consécutives était
+Une segmentation a été effectuée lorsque deux localisations consécutives étaient
 espacées de plus de 5 heures ou distantes de plus de 80,5 km.
 Les segments linéaires chevauchant le milieu terrestre à une distance
 de plus de 2 km ont été retirés de la base de données. Cette distance arbitraire
 de 2 km a été utilisée afin de retirer les segments aberrants de la base de données,
 tout en conservant les segments décrivant de la navigation côtière ou des navires
-fréquentant des installations portuaires. Cette segmentation a résultée en `r meta$dataDescription$segments` segments
+fréquentant des installations portuaires. Cette segmentation a résulté en `r meta$dataDescription$segments` segments
 linéaires de navigation. Puisque plusieurs types de navires naviguent sur les eaux du Saint-Laurent et du Saguenay, nous avons considéré `r length(meta$dataDescription$categories$accronyme)-2` catégories de navires différents pour compléter le portrait
 de l'intensité de la navigation au sein de la zone d'étude (Tableau \@ref(tab:navCat)). Parmi les catégories disponibles, nous avons retiré la catégorie *Autres* dû à son manque de spécificité et la catégorie *Pêche* puisque peu de transits étaient disponibles au sein de la base de données.
 
 Pour caractériser la navigation, nous avons
-utilisé un indice d'intensité caractérisant la navigation en terme d'utilisation
+utilisé un indice d'intensité caractérisant la navigation en termes d'utilisation
 -- ou passages -- unique. Pour chaque catégorie de navire, nous avons évalué
 l'intensité de la navigation au sein de la zone d'étude par le nombre
 de segments de navigation qui intersectent chaque cellule de 1 $km^2$ de la

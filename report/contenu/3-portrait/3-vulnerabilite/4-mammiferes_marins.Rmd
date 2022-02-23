@@ -1,6 +1,6 @@
 ### Mammifères marins {#vulnmm}
 
-> *Nous remercions Sonia Giroux du Réseau d’observation de mammifères marins et Marie Guilpin du Royal Netherlands Institute for Sea Research les échanges et le support.*
+> *Nous remercions Sonia Giroux du Réseau d’observation de mammifères marins et Marie Guilpin du Royal Netherlands Institute for Sea Research les échanges et le soutien.*
 
 
 La section précédente présente les différents critères utilisés afin de caractériser la vulnérabilité des espèces aux stresseurs environnementaux. La vulnérabilité des mammifères marins a été évaluée en utilisant l'ensemble des critères présentés au tableau \@ref(tab:vulnerabilitySpecies) et l'équation présentée à la section précédente. 

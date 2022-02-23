@@ -60,7 +60,7 @@ ont un effet plus localisé. Les engins mobiles comme les chaluts peuvent quant
 à eux être tractés sur plusieurs kilomètres lors des activités de pêche.
 Nous avons utilisé le type de mobilité pour générer une zone d'effets des activités
 de pêche. Cette approche permet de considérer l'incertitude potentielle associée
-aux coordonées des activités de pêche, la mobilité des engins et l'absence des
+aux coordonnées des activités de pêche, la mobilité des engins et l'absence des
 coordonnées de début et de fin des activités de pêche pour les engins mobiles.
 Nous avons utilisé une zone ayant un rayon de 200 et 2000 mètres pour les
 activités de pêche avec engins fixes et mobiles, respectivement [@beauchesne2020].
@@ -106,7 +106,7 @@ Pour caractériser l'intensité des activités de pêche ($I_{peche}$), nous avo
 
 $$I_{peche,j} = \sum_{k=1}^{n_j} P_{j,k}$$
 
-où $j$ est une cellule de la grille d'étude, $k$ est une activité de pêche et $P_k$ est la zone tampon entourant chaque activité de pêche $k$. Cette formule calcule l'intensité de pêche en nombre d'activités de pêche répertoriées. Puisque nous avons calculé l'intensité au sein de cellules de 1 $km^2$, les unités de cette formule sont en nombre d'activités ($n$) par $km^2$, soit $n * km^{-2}$. Puisque des zones tampons ont été utilisées autour de chaque activité, il est posible qu'une seule activité de pêche soit répertoriée pour plus d'une cellule de la grille d'étude. La somme totale des activités dans la grille d'étude ne sera ainsi pas égale à la somme totale réelle des activités de pêche répertoriées dans la zone d'étude. 
+où $j$ est une cellule de la grille d'étude, $k$ est une activité de pêche et $P_k$ est la zone tampon entourant chaque activité de pêche $k$. Cette formule calcule l'intensité de pêche en nombre d'activités de pêche répertoriées. Puisque nous avons calculé l'intensité au sein de cellules de 1 $km^2$, les unités de cette formule sont en nombre d'activités ($n$) par $km^2$, soit $n * km^{-2}$. Puisque des zones tampons ont été utilisées autour de chaque activité, il est possible qu'une seule activité de pêche soit répertoriée pour plus d'une cellule de la grille d'étude. La somme totale des activités dans la grille d'étude ne sera ainsi pas égale à la somme totale réelle des activités de pêche répertoriées dans la zone d'étude. 
 
 
 <br>

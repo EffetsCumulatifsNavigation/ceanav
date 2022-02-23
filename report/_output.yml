@@ -9,7 +9,7 @@ bookdown::gitbook:
     toc:
       collapse: no
       before: |
-        <li><a href="./">Effets cumulatives - activités maritimes</a></li>
+        <li><a href="./">Effets cumulatifs - activités maritimes</a></li>
       after: |
         <li><a href="https://bookdown.org" target="_blank">Published with bookdown</a></li>
     download: [pdf, epub, mobi]

@@ -1,3 +1,3 @@
 ## Vulnérabilité {#vulnportrait}
 
-Les sections suivantes présentent les données, les approches et les résultats de l'évaluation de la vulnérabilité des composantes valorisées aux stresseurs environnementaux considérés pour l'évaluation des effets cumulatifs des activités maritimes dans la zone d'étude. Une description générale de l'évaluation de la vulnérabilité dans une contexte d'évaluation des effets cumulatifs est présenté à la section \@ref(vulnmethod) du rapport.
+Les sections suivantes présentent les données, les approches et les résultats de l'évaluation de la vulnérabilité des composantes valorisées aux stresseurs environnementaux considérés pour l'évaluation des effets cumulatifs des activités maritimes dans la zone d'étude. Une description générale de l'évaluation de la vulnérabilité dans une contexte d'évaluation des effets cumulatifs est présentée à la section \@ref(vulnmethod) du rapport.

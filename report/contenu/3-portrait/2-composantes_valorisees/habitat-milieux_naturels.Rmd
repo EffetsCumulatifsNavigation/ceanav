@@ -40,7 +40,7 @@ La caractérisation des milieux côtiers provient de l'exercice de caractérisat
 - Terrasse de plage
 - Terrasse fluviale
 
-Ces milieux ont été cartographiés à l'aide d'approche cartographiques à haute résolution combinant des données de relevés terrain, de télédétection et dérivées de connaissances des communautés locales [@bernier2020; @bernier2021].
+Ces milieux ont été cartographiés à l'aide d'approches cartographiques à haute résolution combinant des données de relevés terrain, de télédétection et dérivées de connaissances des communautés locales [@bernier2020; @bernier2021].
 
 <br>
 
@@ -117,7 +117,7 @@ knitr::include_graphics("./figures/figures-integrated/habitat-milieu_humide.png"
 
 ##### Gisements coquilliers
 
-Les données utilisées pour caractériser les gisements coquilliers dans la zone d'étude proviennent d'une description des stocks de mactre de Stimpton (*Mactromeris polynyma*) en milieux côtiers au Québec [@trottier2015; @mpo2019]. Les données fournissent la délimitation de gisements connus et commercialement exploités hitoriquement ou actuellement pour toute la région québécoise de l'estuaire et du golfe du Saint-Laurent. 
+Les données utilisées pour caractériser les gisements coquilliers dans la zone d'étude proviennent d'une description des stocks de mactre de Stimpson (*Mactromeris polynyma*) en milieux côtiers au Québec [@trottier2015; @mpo2019]. Les données fournissent la délimitation de gisements connus et commercialement exploités historiquement ou actuellement pour toute la région québécoise de l'estuaire et du golfe du Saint-Laurent. 
 
 <br>
 

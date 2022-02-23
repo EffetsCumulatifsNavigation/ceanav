@@ -1,6 +1,6 @@
 ### Ancrages
 
-> *Nous remercions la Garde côtière canadienne et Corinne Berthold pour les échanges et le support.*
+> *Nous remercions la Garde côtière canadienne et Corinne Berthold pour les échanges et le soutien.*
 
 
 ```{r ancrage_setup, echo = FALSE}  

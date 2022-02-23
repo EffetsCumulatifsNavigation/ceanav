@@ -318,7 +318,7 @@ st_peche_commerciale <- function() {
   meta$dataDescription$categories$description <- c(
     "Activités de pêches commerciales à l'aide d'engins de pêche démersaux pouvant causer des dommages aux habitats ou au substrat, e.g. chalut et drague.",
     "Activités de pêches commerciales à l'aide d'engins de pêche démersaux avec peu ou en l'absence de prises accessoires et ne causant aucune modification des habitats, e.g. la pêche en plongée sous-marine.",
-    "Activités de pêches commerciales à l'aide d'engins de pêche démersaux avec d'importantes prises accessoires et ne causant aucune modification des habitats, e.g. casiers et senne.",
+    "Activités de pêches commerciales à l'aide d'engins de pêche démersaux avec d'importantes prises accessoires et ne causant aucune modification des habitats, e.g. casier et senne.",
     "Activités de pêches commerciales à l'aide d'engins de pêche pélagiques avec peu ou en l'absence de prises accessoires et ne causant aucune modification des habitats, e.g. pêche à la ligne, senne bourse.",
     "Activités de pêches commerciales à l'aide d'engins de pêche pélagiques avec d'importantes prises accessoires et ne causant aucune modification des habitats, e.g. filet maillant et palangre.")
 

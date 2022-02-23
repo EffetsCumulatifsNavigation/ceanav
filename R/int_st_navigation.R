@@ -339,17 +339,17 @@ st_navigation <- function() {
 
   # -----
   meta$dataDescription$categories$description <- c(
-    "Traffic maritime de navires de commerce transportant des marchandises sous diverses formes.",
-    "Traffic maritime de navires de commerce transportant des marchandises exclusivement dans des conteneurs de transport.",
-    "Traffic maritime de navires de commerce transportant des marchandises en vrac, e.g. des grain et du charbon.",
-    "Traffic maritime de traversiers transportant des passagers et/ou des véhicules.",
-    "Traffic maritime de navires gouvernementaux et de navires de recherche, tels des ambarcations militaires, des navires de patrouille de la Garde côtière et des navires de recherche scientifique.",
+    "Trafic maritime de navires de commerce transportant des marchandises sous diverses formes.",
+    "Trafic maritime de navires de commerce transportant des marchandises exclusivement dans des conteneurs de transport.",
+    "Trafic maritime de navires de commerce transportant des marchandises en vrac, e.g. du grain et du charbon.",
+    "Trafic maritime de traversiers transportant des passagers et/ou des véhicules.",
+    "Trafic maritime de navires gouvernementaux et de navires de recherche, tels des embarcations militaires, des navires de patrouille de la Garde côtière et des navires de recherche scientifique.",
     "Activités d’observation en mer des mammifères marins sur des embarcations avec permis de classe 1.",
-    "Traffic maritime de navires dédiés au transport de passagers.",
-    "Traffic maritime de navires récréatifs.",
-    "Traffic maritime de navires divers tels des drageurs, des poseurs de cables, des plateformes, des navires de forage, etc. ",
-    "Traffic maritime de navires transportant des produits pétroliers en vrac.",
-    "Traffic maritime de navires remorqueurs.",
+    "Trafic maritime de navires dédiés au transport de passagers.",
+    "Trafic maritime de navires récréatifs.",
+    "Trafic maritime de navires divers tels des dragueurs, des poseurs de câbles, des plateformes, des navires de forage, etc. ",
+    "Trafic maritime de navires transportant des produits pétroliers en vrac.",
+    "Trafic maritime de navires remorqueurs.",
     "Activités de navigation qui ont lieu près des installations portuaires telles les ports et les marinas."
   )
 
@@ -412,7 +412,7 @@ st_navigation <- function() {
   meta$dataDescription$categories$segments[pas] <- sum(meta$dataDescription$categories$segments[c(pas,fer)])
   meta$dataDescription$categories$transit_km2[pas] <- sum(meta$dataDescription$categories$transit_km2[c(pas,fer)])
   meta$dataDescription$categories$mdref[pas] <- "PASSENGERFERRYRORO"
-  meta$dataDescription$categories$description[pas] <- "Traffic maritime de navires dédiés au transport de passagers, et de traversiers transportant des passagers et/ou des véhicules."
+  meta$dataDescription$categories$description[pas] <- "Trafic maritime de navires dédiés au transport de passagers, et de traversiers transportant des passagers et/ou des véhicules."
 
   # Retirer catégorie
   meta$dataDescription$categories$accronyme <- meta$dataDescription$categories$accronyme[-fer]  

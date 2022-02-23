@@ -2,7 +2,7 @@
 
 ##### Frayères et sites d'alevinage
 
-> *Nous remercions Marc Mingelbier du Ministère des Forêts, de la Faune et des Parcs du Québec pour les échanges et le support.*
+> *Nous remercions Marc Mingelbier du Ministère des Forêts, de la Faune et des Parcs du Québec pour les échanges et le soutien.*
 
 Les frayères sont des milieux essentiels au maintien de populations de poissons; en effet, des perturbations à ces sites, ou au comportement des espèces pendant la période de fraie, peuvent avoir des impacts majeurs sur la dynamique des populations de poissons. Similairement, les sites d'alimentation et de protection pour les stades de vie initiaux des poissons (*e.g.* larves, alevins, juvéniles), qui sont beaucoup plus susceptibles aux effets de perturbations à leur habitat. Ces sites, nommés aires d'alevinage, sont ainsi essentiels à leur survie. La protection des frayères et des aires d'alevinage est ainsi d'une importance majeure puisqu'ils constituent un goulot d'étranglement pour la dynamique des populations de poissons.
 
@@ -42,7 +42,7 @@ knitr::include_graphics("./figures/figures-integrated/habitat-site_alevinage.png
 
 ##### Oiseaux
 
-> *Nous remercions Jean-François Rail d'Environnement et Changement climatique Canada pour les échanges et le support.*
+> *Nous remercions Jean-François Rail d'Environnement et Changement climatique Canada pour les échanges et le soutien.*
 
 
 Les données utilisées pour caractériser les sites d'importance pour les oiseaux proviennent de deux sources distinctes qui ont été insérées en présence-absence au sein de la grille d'étude. La première base de données décrit la localisation de colonies d'oiseaux nommée la [Banque Informatisée des Oiseaux Marins du Québec](https://ogsl.ca/fr/biodiversite-oiseaux-eccc-biomq-a-propos/) [BIOMQ; @rail2002; @eccc2021]. Cette dernière a été compilée et est mise à jour par le Service Canadien de la Faune (SCF) pour la région du Québec. La BIOMQ contient des informations sur la localisation de colonies d'oiseaux marins et de leurs sites de nidification pour les familles suivantes : Gaviidés (*i.e.* plongeons), Hydrobatidés (*i.e.* océanites), Sulidés (*i.e.* fous), Phalacrocoracidés (*i.e.* cormorans), Laridés (*i.e.* goélands, mouettes, sternes), Alcidés (*i.e.* guillemots, pingouins, macareux) et l’eider à duvet (*i.e.* Anatidés). Pour notre analyse, nous avons uniquement considéré la localisation des différentes colonies disponibles à travers la BIOMQ sans considérer les espèces individuelles afin d'identifier les lieux abritants des colonies d'oiseaux marins. Nous avons également utilisé les données à partir de l'année 2000 uniquement. Notre zone d'étude comprend `r meta$dataDescription$BIOMQ$Nombre` sites ayant une superficie totale de `r meta$dataDescription$BIOMQ$Superficie` $km^2$.
