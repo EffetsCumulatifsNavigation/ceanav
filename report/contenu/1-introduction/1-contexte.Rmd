@@ -9,9 +9,9 @@ Cette étude a été réalisée à partir de données actuellement disponibles s
 Ce projet permettra le développement de nouvelles connaissances sur les effets cumulatifs potentiels des activités maritimes et une compréhension commune de ceux-ci. Il favorisera une cohérence dans l’élaboration et la mise en oeuvre de stratégies d’atténuation des effets cumulatifs de la navigation et permettra d’enrichir la réflexion pour la prise de décision.
 
 
-## Démarche
+# Démarche
 
-L’équipe de Transports Canada a travaillé, au cours des dernières années, avec plusieurs experts Canadiens et à l’international sur la démarche à adopter afin d’évaluer les effets cumulatifs des activités maritimes [*e.g.* @lerner2018; @pickard2019]. Une évaluation des effets cumulatifs vise à établir les effets de multiples [stresseurs environnementaux](#stintro) sur la viabilité de récepteurs environnementaux d'intérêt, communément appelés [composantes valorisées](#cvintro) [@beanlands1983; @sinclair2017]. En plus de l’importance des processus de concertation et de mobilisation des divers collaborateurs, une évaluation d’effets cumulés inclut généralement les étapes suivantes, sans toutefois s’y limiter:
+Une évaluation des effets cumulatifs vise à établir les effets de multiples [stresseurs environnementaux](#stintro) sur la viabilité de récepteurs environnementaux d'intérêt, communément appelés [composantes valorisées](#cvintro) [@beanlands1983; @sinclair2017]. En plus de l’importance des processus de concertation et de mobilisation des divers collaborateurs, une évaluation d’effets cumulés inclut généralement les étapes suivantes, sans toutefois s’y limiter:
 
 
 1. Identifier, impliquer et communiquer avec les parties prenantes de l’évaluation, et ce à toutes les étapes de la démarche
