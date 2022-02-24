@@ -1,4 +1,4 @@
-# Évaluation des effets cumulatifs
+# Évaluation des effets cumulatifs {#sectioncea}
 
 ## Effets cumulatifs
 
@@ -20,7 +20,7 @@ Les processus d'évaluation des effets cumulatifs sont ainsi typiquement effectu
 
 À l’instar d’une approche par projet dans le cadre d'évaluation d'impacts environnementaux, l’approche régionale s’intéresse plutôt aux effets (*effect-based*) totaux et à la viabilité de récepteurs environnementaux d’intérêt, communément appelés composantes valorisées [@beanlands1983; @sinclair2017]. Plusieurs contraintes limitent son application en pratique, notamment la nécessité d'utiliser des mesures environnementales -- *e.g.* variation du taux de mortalité d'une espèce en fonction d'un stresseur environnemental -- afin d’établir les effets d’un ou de plusieurs stresseurs sur une composante valorisée. Ces types de mesures sont particulièrement difficiles à obtenir dans le cadre d'évaluation d'effets cumulatifs; elles rendent également forcément les évaluations réactives puisque les effets doivent être observés afin d'établir un lien significatif entre la présence d'un stresseurs et la dégradation d'une composante valorisée [@dube2003]. Une approche idéale permettrait plutôt de combiner les approches d’évaluations des effets cumulatifs basées sur les effets et sur les stresseurs [@dube2003; @sinclair2017].
 
-## Méthode
+## Méthode {#methode}
 
 Une étude menée par @halpern2008a a enclenché un pas majeur vers une évaluation systémique et spatialement explicite des effets cumulatifs des activités humaines sur les océans mondiaux en évaluant les effets cumulatifs de 17 stresseurs environnementaux sur 20 types d’écosystèmes marins. Cette étude a démontré que peu de milieux demeurent libres de l’empreinte des activités humaines et que la majorité des écosystèmes sont affectés par de multiples stresseurs environnementaux. Les mises à jour publiées par le même groupe en 2015 [@halpern2015a] et en 2019 [@halpern2019] indiquent également un accroissement généralisé des effets cumulatifs sur les océans. En plus d'être utilisée à l'échelle globale, cette méthode a été utilisée à de mainte reprises dans différentes régions du globe afin de caractériser les effets cumulatifs, dont la Californie [@halpern2009], l'Arctique [@andersen2015; @afflerbach2017], l'Océan Pacifique Canadien [@ban2010; @clarkemurray2015; @clarkemurray2015a; @singh2020]. Au moment d’écrire ces lignes, une évaluation appliquant une approche similaire est en cours pour la région pilote de Placentia Bay (Terre-Neuve-et-Labrador) dans le cadre de l’initiative nationale sur les effets cumulatifs du transport maritime de Transports Canada. Pêches et Océans Canada mène également une évaluation pour la région des maritimes et étudie l'applicabilité générale de l'approche en vue de caractériser les effets cumulatifs sur les océans canadiens.
 
