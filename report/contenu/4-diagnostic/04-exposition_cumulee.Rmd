@@ -1,4 +1,4 @@
-### Exposition cumulée {#cumexpresult}
+## Exposition cumulée {#cumexpresult}
 
 > La méthode utilisée pour obtenir les résultats suivants est présentée à la section \@ref(cumexpmethod) du rapport.
 

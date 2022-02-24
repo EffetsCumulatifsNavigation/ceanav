@@ -1,4 +1,4 @@
-### Composantes valorisées cumulées {#cvcumresult}
+## Composantes valorisées cumulées {#cvcumresult}
 
 > La méthode utilisée pour obtenir les résultats suivants est présentée à la section \@ref(cvcummethod) du rapport.
 

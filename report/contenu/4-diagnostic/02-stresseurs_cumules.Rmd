@@ -1,4 +1,4 @@
-### Stresseurs et hotspots cumulés {#strcumresult}
+## Stresseurs et hotspots cumulés {#strcumresult}
 
 > La méthode utilisée pour obtenir les résultats suivants est présentée à la section \@ref(strcummethod) du rapport.
 

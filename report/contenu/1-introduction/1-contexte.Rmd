@@ -9,7 +9,7 @@ Cette étude a été réalisée à partir de données actuellement disponibles s
 Ce projet permettra le développement de nouvelles connaissances sur les effets cumulatifs potentiels des activités maritimes et une compréhension commune de ceux-ci. Il favorisera une cohérence dans l’élaboration et la mise en oeuvre de stratégies d’atténuation des effets cumulatifs de la navigation et permettra d’enrichir la réflexion pour la prise de décision.
 
 
-# Démarche
+# Portée et objectifs de l'évaluation
 
 Une évaluation des effets cumulatifs vise à établir les effets de multiples [stresseurs environnementaux](#stintro) sur la viabilité de récepteurs environnementaux d'intérêt, communément appelés [composantes valorisées](#cvintro) [@beanlands1983; @sinclair2017]. En plus de l’importance des processus de concertation et de mobilisation des divers collaborateurs, une évaluation d’effets cumulés inclut généralement les étapes suivantes, sans toutefois s’y limiter:
 
@@ -44,9 +44,7 @@ Une évaluation des effets cumulatifs vise à établir les effets de multiples [
 L’identification et l’implication des parties prenantes (1) et la définition de la portée de l’évaluation (2) ont été définies en amont du déclenchement des travaux présentés au sein de ce rapport à travers divers processus de concertation, de mobilisation et d'ateliers de travail organisés par Transports Canada et les membres du comité du Plan d'Action Saint-Laurent (PASL). Ces processus ont permi de considérer les préoccupations des Premières Nations, des communautés côtières et de diverses parties prenantes du projet en vue d'établir la portée de l'évaluation des effets cumulatifs des activités maritimes dans la zone d'étude, *i.e.* d'identifier les stresseurs environnementaux et les composantes valorisées à considérer pour l'évaluation. À la lumière de ces processus, le projet pilote présenté par ce rapport se concentre sur le portrait de la zone à l’étude (3), l’analyse des effets cumulatifs (4) et l’évaluation critique de l’analyse (5). Les étapes 6 et 7 ne font pas partie de cette évaluation. Les prochaines sections du rapport présentent les étapes couvertes par le contrat.
 
 
-## Portée
-
-### Objectifs
+## Objectifs
 
 L'objectif général du projet pilote est de développer une méthodologie d'analyse et d'effectuer une évaluation des effets cumulatifs des activités maritimes dans le Saint-Laurent (tronçon fluvial et estuaire) et la rivière Saguenay (partie en eau profonde) au Québec. Plus spécifiquement, les objectifs du projet pilote sont de :
 
@@ -56,7 +54,7 @@ L'objectif général du projet pilote est de développer une méthodologie d'ana
 - Évaluer les effets cumulatifs des stresseurs environnementaux sur les composantes valorisées dans le Saint-Laurent et le Saguenay
 
 
-### Cadre spatial et temporel
+## Portée spatialle et temporelle
 
 La région visée par l'évaluation des effets cumulatifs des activités maritimes couvre le Saint-Laurent fluvial et l'estuaire du Saint-Laurent entre l'ouest de Montréal -- *i.e.* près de Châteauguay et Dorval -- et Pointe-des-Monts sur la côte nord et Cap-Chat sur la rive sud, et la partie en eau profonde du Saguenay de son embouchure sur le Saint-Laurent jusqu'à Saint-Fulgence (Figure \@ref(fig:aoi)). La zone d'étude a été délimitée en combinant la [classification des rivages du Québec et du Fleuve Saint-Laurent](https://ouvert.canada.ca/data/fr/dataset/ba580518-59e8-4d1c-b3ef-41d2658e6965) [@sergy2008] et les [bases de données topographiques du Québec (BDTQ) à l'échelle 1/20 000](https://www.donneesquebec.ca/recherche/dataset/cartes-topographiques-a-l-echelle-de-1-20-000) [@mern2021]. Une grille d'étude constituée de cellules de 1 $km^2$ a été construite à partir de la délimitation de la zone d'étude en y ajoutant une zone de tampon de 2.6 $km$ (Figure \@ref(fig:aoi)). Cette zone tampon a été ajoutée afin de s'assurer que tous les milieux aquatiques et marins étaient couverts par la grille résultante. Le code et les données décrivant la zone d'étude sont disponibles par le dépôt GitHub dédié à la délimitation de la zone d'étude ([https://github.com/EffetsCumulatifsNavigation/ZoneEtude](https://github.com/EffetsCumulatifsNavigation/ZoneEtude)).
 
@@ -77,7 +75,7 @@ TODO: add BDTQ to dataset list, with proper reference
 
 Les limites temporelles de l'étude sont définies par la disponibilité des données permettant d'effectuer l'évaluation des effets cumulatifs. Dans la majorité des cas, des données historiques demeurent indisponibles, limitant ainsi l'identification d'états de référence. Pour cette étude pilote, la recherche de données a ainsi été orientée vers une évaluation contemporaine des effets cumulatifs, c.-à-d. au cours des 5 à 10 dernières années selon les données disponibles; les données historiques permettant l’identification d’états de référence n'ont ainsi pas été utilisées. Il est toutefois important de noter que, lorsque disponibles, des données couvrant une période plus longue ont été utilisées (*e.g.* les activités de dragage; voir section \@ref(dragageportrait)).
 
-### Activités maritimes et stresseurs environnementaux {#stintro}
+## Activités maritimes et stresseurs environnementaux {#stintro}
 
 Les activités maritimes peuvent résulter en une variété de stresseurs environnementaux ayant le potentiel d'affecter l'intégrité des écosystèmes sociaux-écologiques exposés. Un stresseur environnemental est un processus d’origine naturelle ou anthropique pouvant perturber un milieu au-delà de ses limites de tolérance [@kappel2012]. Dans le cadre de ce projet pilote, les stresseurs environnementaux correspondent plus particulièrement à tout processus issus des activités maritimes pouvant perturber divers composantes valorisées (voir section \@ref(cvintro)) au sein de la zone d'étude. Les activités maritimes incluent toute activité liée au transport maritime et effectué en milieu aquatique ou marin. Les activités maritimes incluent non seulement les navires commerciaux, mais aussi les bateaux de croisières, traversiers, bateaux de pêche, plaisanciers. 
 
@@ -109,7 +107,7 @@ knitr::kable(dat, col.names = c("Activités maritimes","Stresseurs environnement
 ```
 
 
-### Composantes valorisées {#cvintro}
+## Composantes valorisées {#cvintro}
 
 Les composantes valorisées correspondent essentiellement aux éléments sociaux ou écologiques sur lesquels l’analyse des effets cumulatifs est effectuée. Dans le cadre du projet pilote, les composantes valorisées ont été identifiées au préalable lors d’activités de concertation et d’ateliers de travail avec des experts du milieu, des représentants autochtones et de multiples parties prenantes. Les composantes valorisées ont été sélectionnées séparément pour les secteurs fluvial (Montréal à Québec) et maritime (rivière Saguenay et l’estuaire) du Saint-Laurent (Tableau \@ref(tab:composantevalorisees)). Cette liste a guidé le travail effectué afin de caractériser les composantes valorisées identifiées dans la zone d'étude pour l'évaluation des effets cumulatifs.
 
@@ -129,7 +127,7 @@ knitr::kable(dat, col.names = c("Composantes valorisées", "Secteur fluvial","Se
 
 ```
 
-### Limites et considérations particulières {#limiteportee}
+## Limites et considérations particulières {#limiteportee}
 
 La portée de l'évaluation impose certaines limites à la présente étude; nous présentons certaines de ces limites en amont du portrait et de l'évaluation des effets cumulatifs des activités maritimes afin qu'un lecteur puisse faire une lecture éclairée des prochaines sections du rapport. Des limites supplémentaires relatives à la méthode utilisée, aux éléments du portrait de la zone d'étude et aux résultats de l'évaluation des effets cumulatifs sont également présentés à la section \@ref(perspective) du rapport.  
 
