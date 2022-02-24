@@ -42,15 +42,21 @@ knitr::include_graphics("Figures/IC.png")
 
 Le modèle général d'évaluation des effets cumulatifs peut aisément être déconstruit en modèles partiels afin d'explorer des portions simplifiées de l'évaluation. Nous présentons ainsi trois indicateurs supplémentaires qui permettent d'explorer les résultats de l'évaluation. 
 
-#### Stresseurs cumulés {#strcummethod}
+#### Stresseurs et hotspots cumulés {#strcummethod}
 
-Considérer uniquement la distribution spatiale et l’intensité relative des stresseurs environnementaux considérés ($S_j$) fournit une évaluation des stresseurs cumulés $E_{S,x}$, qui correspond au cumul de l'ensemble des stresseurs environnementaux $S$ au sein de chaque cellule $x$ considérés pour l'évaluation :
+Considérer uniquement la distribution spatiale et l’intensité relative des stresseurs environnementaux considérés ($S_j$) fournit une évaluation des stresseurs cumulés $E_{S,x}$ [@beauchesne2020], qui correspond au cumul de l'ensemble des stresseurs environnementaux $S$ au sein de chaque cellule $x$ considérés pour l'évaluation :
 
 $$E_{S_x} = \sum_{j=1}^m S_{j,x} \label{eq2}$$
 
 L'évaluation des stresseurs cumulés des stresseurs environnementaux permet d'identifier les sites qui sont le plus exposés aux effets potentiels des stresseurs environnementaux considérés pour l'évaluation des effets cumulatifs. Elle ne fournit pas d'évaluation des effets, puisqu'elle ne considère que les stresseurs, leur intensité et leur distribution. Elle permet toutefois d'obtenir une évaluation des milieux qui sont le plus propices d'être affectés par les stresseurs dans notre zone d'étude. 
 
-Afin de limiter une surreprésentation de stresseurs composés de plusieurs sous-catégories, il est également possible de normaliser les valeurs d'intensité d'une catégorie de stresseur par le nombre de sous-catégories qui la compose. Par exemple, un stresseur composé de 10 catégories aurait un poids supérieur à un stresseur composé d'une seule catégorie. Afin de normaliser les valeurs d'intensité, il suffit de diviser l'intensité de ces sous-catégories par le nombre de sous-catégories, *e.g.* par 10 pour une catégorie composée de 10 sous-catégories. Les résultats de stresseurs cumulés normalisés et non-normalisés sont présentés à la section \@ref(strcumresult).
+Afin de limiter une surreprésentation de stresseurs composés de plusieurs sous-catégories, il est également possible de normaliser les valeurs d'intensité d'une catégorie de stresseur par le nombre de sous-catégories qui la compose. Par exemple, un stresseur composé de 10 catégories aurait un poids supérieur à un stresseur composé d'une seule catégorie. Afin de normaliser les valeurs d'intensité, il suffit de diviser l'intensité de ces sous-catégories par le nombre de sous-catégories, *e.g.* par 10 pour une catégorie composée de 10 sous-catégories. 
+
+À partir de l'évaluation des stresseurs cumulés, il est également possible d'obtenir une évaluation des hotspots de stresseurs cumulés, qui correspond à l'identification des milieux où les stresseurs environnementaux co-occurrent à haute intensité relative [@beauchesne2020]. Les hotspots cumulés $E_{H_x}$ est calculé au sein de chaque cellule de la grille d'étude et correspond à la somme des stresseurs dont l'intensité est contenue au sein de leur $80e$ percentile respectifs : 
+
+$$E_{H_x} = \sum_{j=1}^m \mathbb{1} (S_{j,x} \; \epsilon \; P_{80, S_j})$$
+
+où $P_{80, S_j}$ est le $80e$ percentile du stresseur $j$. Les résultats de stresseurs cumulés normalisés et non-normalisés et de hotspots cumulés sont présentés à la section \@ref(strcumresult).
 
 
 #### Composantes valorisées cumulées {#cvcummethod}
