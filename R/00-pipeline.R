@@ -168,8 +168,9 @@ pipeline <- function(
     ana_stresseurs_format()
     ana_composantes_valorisees_format()
 
-    # Stresseurs et composantes valorisées cumulés
+    # Stresseurs, hotspots et composantes valorisées cumulés
     ana_cumulative_stresseurs()
+    ana_cumulative_hotspots()
     ana_cumulative_composantes_valorisees()
 
     # Cumulative exposure
@@ -202,6 +203,7 @@ pipeline <- function(
 
     # Analyses
     fig_cumulative_stresseurs()
+    fig_cumulative_hotspots()
     fig_cumulative_composantes_valorisees()
     fig_cumulative_exposure()
     fig_cumulative_effects()
@@ -233,9 +235,9 @@ pipeline <- function(
     # rep_portrait_data_description(data_id = "pollution_maritime", output_folder = folder)
 
     # Composantes valorisées
-    folder <- "report/contenu/2-portrait/2-composantes_valorisees/"
+    # folder <- "report/contenu/2-portrait/2-composantes_valorisees/"
     # rep_portrait_data_description(data_id = "berge", output_folder = folder)
-    rep_portrait_data_description(data_id = "mammiferes_marins", output_folder = folder)
+    # rep_portrait_data_description(data_id = "mammiferes_marins", output_folder = folder)
     # rep_portrait_data_description(data_id = "habitat", output_folder = folder)
     # rep_portrait_data_description(data_id = "site", output_folder = folder)
   }
