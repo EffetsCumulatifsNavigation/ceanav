@@ -39,11 +39,9 @@ La [méthode](#methode) sélectionnée afin d'évaluer les [effets cumulatifs](
 
 Dans le cadre de la présente évaluation, le rassemblement des données nécessaires à l'application de la méthode d'évaluation des effets cumulatifs correspond au [portrait](#portrait) de la zone d'étude. La caractérisation des [stresseurs environnementaux](#strportrait) a été obtenue à partir de l'intégration de `r src(st)` bases de données et résulté en la description de `r length(unique(st$title))` stresseurs divisés en `r nrow(st)` sous-catégories : `r ct1(st)`. 
 La caractérisation des [composantes valorisées](#cvportrait) a quant à elle été effectuée à partir de l'intégration de `r src(cv)` bases de données et résulté en la description de `r length(unique(cv$title))` stresseurs divisés en `r nrow(cv)` sous-catégories : `r ct2(cv)`. 
-Enfin, des approches XXX ont été utilisées afin de caractériser la vulnérabilité relative de l'ensemble des catégories de composantes valorisées à l'ensemble des catégories des stresseurs environnementaux.
+Enfin, une approche combinant divers métriques d’exposition et de sensibilité -- *e.g.* fréquence des stresseurs, impacts trophiques, résistance, résilience, statut légaux -- afin de caractériser la [vulnérabilité relative](#vulnportrait) de l'ensemble des catégories de composantes valorisées à l'ensemble des catégories des stresseurs environnementaux.
 
-> *Mettre plus d'informations ici*
-
-Nous présentons ici les constats généraux issus de l'évaluation des effets cumulatifs en points de forme. Des constats additionnels pourraient être faits en explorant davantage les résultats obtenus et nous invitons le lecteur à s'attarder à la section \@ref(resultats) du rapport pour davantage d'informations et à explorer les figures qui y sont présentées plus en détails.
+Nous présentons ici les constats généraux issus de l'évaluation des effets cumulatifs en points de forme. Des constats additionnels sont présentés au sein du rapport et pourraient également être faits en explorant davantage les résultats obtenus; nous invitons le lecteur à s'attarder à la section \@ref(resultats) du rapport pour davantage d'informations et à explorer les figures qui y sont présentées plus en détails.
 
 <br/>
 
@@ -88,7 +86,3 @@ Nous présentons ici les constats généraux issus de l'évaluation des effets c
 - **Régions administratives les plus affectées**
   - Les régions administratives du secteur fluvial sont les plus affectées par les effets cumulatifs des activités maritimes, un constat particulièrement important pour la Montérégie;
   - La Côte Nord est la région administrative la plus affectée au sein du secteur maritime.
-
-> *Mettre plus d'informations ici, peut-être minimalement un lien vers les perspectives du rapport*
-
-<br>
