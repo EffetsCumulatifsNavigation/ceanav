@@ -1,4 +1,4 @@
-### Sites d’intérêt culturels, patrimoniaux et archéologiques
+### Sites d’intérêt culturels, patrimoniaux et archéologiques {#site}
 
 ```{r site_setup, echo = FALSE}
 meta <- read_yaml("../data/data-metadata/int_cv_site.yml")

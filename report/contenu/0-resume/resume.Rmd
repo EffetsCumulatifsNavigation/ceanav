@@ -1,16 +1,49 @@
 # Sommaire {-}
 
-Dans le cadre du Plan d’action Saint-Laurent (PASL), le Gouvernement du Canada et le Gouvernement du Québec collaborent depuis 2018 à la conception d’un cadre commun d’évaluation des effets cumulatifs des activités maritimes sur le Saint-Laurent et le Saguenay de concert avec les Premières Nations, divers acteurs du milieu maritime et les collectivités côtières. Une équipe de l’Université Laval a été mandatée afin de proposer et de mettre à l’essai un cadre méthodologique d’évaluation des effets cumulatifs dans le Saint-Laurent (tronçon fluvial et estuaire) et la rivière Saguenay (partie en eau profonde). 
+```{r sommairesetup, echo = FALSE}
+st <- read.csv("../data/data-metadata/metadata_stresseurs.csv")
+cv <- read.csv("../data/data-metadata/metadata_composantes_valorisees.csv")
+src <- function(dat) {
+    paste(dat$source, collapse = ",") %>%
+    str_split(",") %>%
+    unlist() %>%
+    unique() %>%
+    length()
+}
 
-Ce projet pilote se concentre sur les effets des stresseurs environnementaux issus des activités maritimes sur certaines composantes valorisées identifiées au préalable lors d’activités de concertation et d’ateliers de travail avec des experts du milieu, des représentants autochtones et de multiples parties prenantes.
+ct1 <- function(dat) {
+  dat %>%
+  group_by(title, stresseur) %>%
+  summarize(tot = n()) %>%
+  apply(., 1., function(x) glue("[{x[1]}](#{x[2]}) ({x[3]})")) %>%
+  gsub("\\( ", "\\(", .) %>%
+  paste(collapse = "; ") %>%
+  tolower()
+}
+
+ct2 <- function(dat) {
+  dat %>%
+  group_by(title, comp_val) %>%
+  summarize(tot = n()) %>%
+  apply(., 1., function(x) glue("[{x[1]}](#{x[2]}) ({x[3]})")) %>%
+  gsub("\\( ", "\\(", .) %>%
+  paste(collapse = "; ") %>%
+  tolower()
+}
+```
 
 
+Dans le cadre du Plan d’action Saint-Laurent (PASL), le Gouvernement du Canada et le Gouvernement du Québec collaborent depuis 2018 à la conception d’un cadre commun d’évaluation des effets cumulatifs des activités maritimes sur le Saint-Laurent et le Saguenay de concert avec les Premières Nations, divers acteurs du milieu maritime et les collectivités côtières. Une équipe de l’Université Laval a été mandatée afin d'entreprendre une projet pilote d'évaluation des effets cumulatifs. L'[objectif](#objectifs) du projet pilote était de proposer et de mettre à l’essai un cadre méthodologique d’évaluation des effets cumulatifs au sein d'une [zone d'étude](#zoneetude) qui couvre le Saint-Laurent (tronçon fluvial et estuaire) et la rivière Saguenay (partie en eau profonde). Ce projet pilote se concentre sur l'évaluation des effets cumulatifs de [7 stresseurs environnementaux](#stintro) issus des activités maritimes sur [5 composantes valorisées](#cvintro) identifiées au préalable lors d’activités de concertation et d’ateliers de travail avec des experts du milieu, des représentants autochtones et de multiples parties prenantes. 
 
+La [méthode](#methode) sélectionnée afin d'évaluer les [effets cumulatifs](#sectioncea) des activités maritimes au sein de la zone d'étude provient de @halpern2008a et requiert trois types de données : 1) [la présence ou l'absence cartographiée des composantes valorisées](#cvmethod), 2) [la distribution spatiale et l’intensité relative des stresseurs environnementaux](#strmethod) et 3) [la vulnérabilité relative de chaque composante valorisée à chaque stresseur](#vulnmethod). La méthode proposée combine ces trois éléments afin d'obtenir des prédictions d'[effets cumulatifs relatifs et spatialement explicites](#ceamethod).
 
+Dans le cadre de la présente évaluation, le rassemblement des données nécessaires à l'application de la méthode d'évaluation des effets cumulatifs correspond au [portrait](#portrait) de la zone d'étude. La caractérisation des [stresseurs environnementaux](#strportrait) a été obtenue à partir de l'intégration de `r src(st)` bases de données et résulté en la description de `r length(unique(st$title))` stresseurs divisés en `r nrow(st)` sous-catégories : `r ct1(st)`. 
+La caractérisation des [composantes valorisées](#cvportrait) a quant à elle été effectuée à partir de l'intégration de `r src(cv)` bases de données et résulté en la description de `r length(unique(cv$title))` stresseurs divisés en `r nrow(cv)` sous-catégories : `r ct2(cv)`. 
+Enfin, des approches XXX ont été utilisées afin de caractériser la vulnérabilité relative de l'ensemble des catégories de composantes valorisées à l'ensemble des catégories des stresseurs environnementaux.
 
+> *Mettre plus d'informations ici*
 
-
-Nous présentons au sein du sommaire les constats généraux issus de l'évaluation des effets cumulatifs en points de forme. Des constats additionnels pourraient être faits en explorant davantage les résultats obtenus et nous invitons le lecteur à s'attarder à la section \@ref(resultats) du rapport pour davantage d'informations et à explorer les figures qui y sont présentées plus en détails.
+Nous présentons ici les constats généraux issus de l'évaluation des effets cumulatifs en points de forme. Des constats additionnels pourraient être faits en explorant davantage les résultats obtenus et nous invitons le lecteur à s'attarder à la section \@ref(resultats) du rapport pour davantage d'informations et à explorer les figures qui y sont présentées plus en détails.
 
 <br/>
 
@@ -56,3 +89,6 @@ Nous présentons au sein du sommaire les constats généraux issus de l'évaluat
   - Les régions administratives du secteur fluvial sont les plus affectées par les effets cumulatifs des activités maritimes, un constat particulièrement important pour la Montérégie;
   - La Côte Nord est la région administrative la plus affectée au sein du secteur maritime.
 
+> *Mettre plus d'informations ici, peut-être minimalement un lien vers les perspectives du rapport*
+
+<br>

@@ -1,4 +1,4 @@
-### Navigation
+### Navigation {#navigation}
 
 > *Nous remercions Clément Chion et Jean-François Sénécal de l'Université du Québec en Outaouais, Jeff Campagnola de Transports Canada et Samuel Turgeon du Parc marin du Saguenay–Saint-Laurent pour les échanges et le soutien.*
 

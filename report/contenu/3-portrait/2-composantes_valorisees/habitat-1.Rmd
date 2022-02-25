@@ -1,4 +1,4 @@
-### Habitats floristiques et fauniques
+### Habitats floristiques et fauniques {#habitat}
 
 ```{r habitat_setup, echo = FALSE}
 meta <- read_yaml("../data/data-metadata/int_cv_habitat.yml")
