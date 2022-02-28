@@ -9,5 +9,6 @@ data_description:
     - "0016"
     - "0017"
   availability: "data sharing agreement"
+  citekey: gcc2019
   citation:
     - "Garde côtière canadienne (2019) Distribution des sites d'ancrages de SIGTM-INNAV dans l'Est du Canada. url: https://www.innav.gc.ca/home.aspx"

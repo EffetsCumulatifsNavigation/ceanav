@@ -9,4 +9,5 @@ data_description:
   url: "https://www.donneesquebec.ca/recherche/dataset/habitats-floristiques"
   identifiant: "75eecd68-eb35-42ff-9ca0-ca518845cc9f"
   availability: "open source"
+  citekey: melcc2021b
   citation: "Ministère de l’Environnement et de la Lutte contre les changements climatiques (2021) Habitats floristiques. url: https://www.donneesquebec.ca/recherche/dataset/habitats-floristiques"

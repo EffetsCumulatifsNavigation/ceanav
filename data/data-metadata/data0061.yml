@@ -5,6 +5,7 @@ data_description:
   access_date: 2021-11-24
   contact_id: "0054"
   availability: "open source"
+  citekey: kappel2012
   citation:
     -"Kappel, Halpern, and Napoli. (2012, January) Mapping Cumulative Impacts of Human Activities on Marine Ecosystems (03.NCEAS.12) Boston: SeaPlan."
   habitats:

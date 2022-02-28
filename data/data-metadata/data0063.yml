@@ -7,5 +7,6 @@ data_description:
     - "0002"
     - "0003"
   availability: "open source"
+  citekey: beauchesnedata2022
   citation:
     - "Beauchesne D, Grant C, Archambault P (2022) Scores de vulnérabilité pour les sites d'importance fauniques et floristiques. Pour l'évaluation des effets cumulatifs des activités maritimes sur le Saint-Laurent et la rivière Saguenay – Projet pilote. Réalisé pour Transports Canada."

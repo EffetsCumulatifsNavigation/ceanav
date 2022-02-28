@@ -7,4 +7,5 @@ data_description:
   temporal_end: 2020
   contact_id: "0011"
   availability: "available"
+  citekey: apc2021b
   citation: "Agence Parcs Canada (2021) Données du suivi du phoque commun dans le fjord du Saguenay entre 2007 et 2020 exprimées en pourcentage d'individus observés selon la grille d'étude du projet d'évaluation des effets cumulatifs des activités maritime dans le Saint-Laurent et le Saguenay"

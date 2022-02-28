@@ -9,4 +9,5 @@ data_description:
   url: "https://www.donneesquebec.ca/recherche/dataset/habitats-fauniques"
   identifiant: "626f2aaa-1574-409c-b327-1315c18fb0f0"
   availability: "open source"
+  citekey: mffp2021
   citation: "Ministère des Forêts, de la Faune et des Parcs (2021) Géodatabase des habitats fauniques. url: https://www.donneesquebec.ca/recherche/dataset/habitats-fauniques"

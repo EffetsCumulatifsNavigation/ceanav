@@ -9,5 +9,6 @@ data_description:
   url: "https://ouvert.canada.ca/data/fr/dataset/82e082be-8f04-4273-830a-8aea63319f07"
   identifiant: "82e082be-8f04-4273-830a-8aea63319f07"
   availability: "open source"
+  citekey: mpo2019b
   citation:
     - "Pêches et Océans Canada (2019) Gisements connus et exploités de pétoncles dans l'estuaire et le golfe du Saint-Laurent. url: https://ouvert.canada.ca/data/fr/dataset/82e082be-8f04-4273-830a-8aea63319f07"

@@ -7,5 +7,6 @@ data_description:
   temporal_end: 2020
   contact_id: "0012"
   availability: "data sharing agreement"
+  citekey: cdpnq2020
   citation:
     - "Centre de données sur le patrimoine naturel du Québec (2020) Espèces à statut dans le Saint-Laurent fluvial."
