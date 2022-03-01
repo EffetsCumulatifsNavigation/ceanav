@@ -171,12 +171,16 @@ plot_ceanav.sf <- function(dat, main = NULL, type = NULL, subtitle = NULL, unit_
 
   # Add sources
   if(!is.null(references)) {
-  mtext(text = glue("Donnée(s) brute(s) : {references}"),
-        side = 1,
-        font = 3,
-        adj = .98,
-        cex = .4,
-        line = -.45)
+    refs <- stringr::str_split(references, ",") %>% unlist()
+    txt <- ifelse(length(refs) == 1, 
+                  glue("Donnée brute : {references}. Détails : annexe 1."),
+                  glue("Données brutes : {references}. Détails : annexe 1."))
+    mtext(text = txt,
+          side = 1,
+          font = 3,
+          adj = .98,
+          cex = .4,
+          line = -.45)
   }
 
 
