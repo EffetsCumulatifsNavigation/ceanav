@@ -13,7 +13,8 @@ plot_legend_cont(
   minUp = 0.175,
   mainTitle = NULL,
   subTitle = NULL,
-  n = 5
+  n = 5,
+  showNA = FALSE
 )
 
 plot_legend_bin(
@@ -22,7 +23,8 @@ plot_legend_bin(
   cexSub = 0.75,
   minUp = 0.175,
   mainTitle = NULL,
-  subTitle = NULL
+  subTitle = NULL,
+  showNA = FALSE
 )
 }
 \arguments{
@@ -35,6 +37,8 @@ plot_legend_bin(
 \item{mainTitle}{character, type of legend. Choices are 'continuous', 'binary' or 'categorical'}
 
 \item{subTitle}{character, type of legend. Choices are 'continuous', 'binary' or 'categorical'}
+
+\item{showNA}{logical, add box that shows regions identified as NA in the figure}
 
 \item{cex.text}{numeric, cex for legend text}
 
