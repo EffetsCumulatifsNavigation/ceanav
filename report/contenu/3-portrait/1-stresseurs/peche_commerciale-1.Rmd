@@ -1,8 +1,11 @@
 ### Pêche commerciale {#peche_commerciale}
 
-```{r peche_setup, echo = FALSE}
+```{r peche_setup, echo = FALSE, results = 'asis'}
 meta <- read_yaml("../data/data-metadata/int_st_peche_commerciale.yml")
+show_source(meta$rawData)
 ```
+
+<br/>
 
 L'intensité des activités de pêche commerciale au sein de la zone d'étude a été
 évaluée à l'aide de données provenant du programme de journaux de bord de Pêches

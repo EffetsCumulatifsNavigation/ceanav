@@ -2,6 +2,19 @@
 
 ##### Milieux protégés
 
+```{r mpa_data, results = 'asis'}
+uid <- meta$dataDescription$categories$accronyme %in% 
+          c("public_milieu_protege")
+meta$dataDescription$categories$source[uid] %>%
+sapply(., function(x) stringr::str_split(x, ",")) %>%
+unlist() %>%
+unique() %>%
+sort() %>%
+show_source()
+```
+
+<br/>
+
 Les milieux protégés ont été caractérisés par l'intégration de trois bases de données. La première base de données correspond à la délimitation des différentes mesures de gestion spatiale mises en place dans le parc marin du Saguenay–Saint-Laurent [@apc2021]. Cette base de données regroupe la délimitation de mesures spatiales réglementaires (*e.g.* zones d'interdiction de navigation et zones de ralentissement) ainsi que des mesures spatiales volontaires (*e.g.* zones de ralentissement et zones à éviter). La deuxième base de données provient du Gouvernement du Canada et délimite des milieux où des mesures de gestion reconnues comme *autres mesures efficaces de conservation par zone* [EMCEZ; @mpo2021d]. Au sein de notre zone d'étude, cette base de données présente une seule zone protégée [en amont de la Rivière Saguenay](https://www.dfo-mpo.gc.ca/oceans/oecm-amcepz/refuges/saguenay-fra.html) qui limite les activités de pêche pour protéger l'habitat du béluga et pour éviter la remise en suspension de sédiments contaminés.
 
 
@@ -18,6 +31,19 @@ knitr::include_graphics("./figures/figures-integrated/site-public_milieu_protege
 
 
 ##### Sites patrimoniaux
+
+```{r patrimoniaux_data, results = 'asis'}
+uid <- meta$dataDescription$categories$accronyme %in% 
+          c("public_sites_patrimoniaux")
+meta$dataDescription$categories$source[uid] %>%
+sapply(., function(x) stringr::str_split(x, ",")) %>%
+unlist() %>%
+unique() %>%
+sort() %>%
+show_source()
+```
+
+<br/>
 
 La caractérisation des sites patrimoniaux publics provient de l'intégration de deux bases de données provenant du Ministère de la Culture et des Communications. La première base de données présente des données sur les sites patrimoniaux classés par la ministre et qui font partie du patrimoine protégé en vertu de la Loi sur le patrimoine culturel [L.R.Q., c. 21; @mcc2021]. La deuxième base de données correspond à des sites patrimoniaux cités par les municipalités et les communautés autochtones [@mcc2021b]; ces sites font également partie du patrimoine protégé en vertu de la Loi sur le patrimoine culturel.
 

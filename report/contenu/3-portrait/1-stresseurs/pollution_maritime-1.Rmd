@@ -1,5 +1,12 @@
 ### Pollution maritime {#pollution_maritime}
 
+```{r pollution_setup, echo = FALSE, results = 'asis'}
+meta <- read_yaml("../data/data-metadata/int_st_pollution_maritime.yml")
+show_source(meta$rawData)
+```
+
+<br/>
+
 Nous introduisons un stresseur environnemental afin de remplacer les rejets opérationnels du côté des stresseurs environnementaux, et la qualité de l'eau du côté des composantes valorisées. Ce nouveau stresseur est utilisé afin de pallier aux difficultés de caractériser ces deux éléments initialement identifiés comme préoccupants par les parties impliquées au projet.
 
 Du côté des rejets opérationnels, cette décision a été prise dû à l'absence de données couvrant l'entièreté de la zone d'étude. D'un point de vue législatif, les navires qui transitent en eaux canadiennes sont tenus d'effectuer tout échange d'eaux de ballast au sein de régions pré-établies appelées *Zones désignées de renouvellement d’eau de ballast du Canada* [@tc2021; @tc2021b]. Or, la zone la plus près de la zone d'étude est située à l'entrée du Golfe du Saint-Laurent et ne touche ainsi pas la zone d'étude couverte par notre évaluation (Figure \@ref(fig:ballast)). Les données touchant spécifiquement les rejets opérationnels des navires auraient, quant à elles, été disponibles uniquement pour une faible proportion de la flotte canadienne naviguant les eaux de la zone d'étude et auraient nécessité un effort de saisie de données considérable. En tant que tel, ces données n'ont pas été considérées pour l'évaluation.

@@ -47,7 +47,21 @@ Les sections suivantes décrivent brièvement les données partagées par les Pr
 <!-- =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= -->
 ##### Association de gestion halieutique Mi'kmaq et Malécite {#aghammportrait}
 
-> *Nous remercions Lisa M. Arsenault pour les échanges et le soutien.*
+> ***Nous remercions Lisa M. Arsenault pour les échanges et le soutien.***
+
+```{r aghamm_data, results = 'asis'}
+uid <- meta$dataDescription$categories$type %in% 
+       "Association de gestion halieutique Mi'kmaq et Malécite"
+meta$dataDescription$categories$source[uid] %>%
+sapply(., function(x) stringr::str_split(x, ",")) %>%
+unlist() %>%
+unique() %>%
+sort() %>%
+show_source()
+```
+
+<br/>
+
 
 L'Association de gestion halieutique Mi'kmaq et Malécite (AGHAMM) a développé un atlas cartographique décrivant divers sites et usages reliés aux activités de pêche commerciale et traditionnelle d'importance pour les Nations de Gesgapegiag, Gespeg et Wolastoqiyik Wahsipekuk [@arsenault2017]. L'Atlas décrit des activités de pêches commerciales ciblant neuf espèces différentes : le buccin (*Buccinum* sp.), le concombre de mer (*Holothurie* sp.), le crabe commun (*Cancer irroratus*), le crabe des neiges (*Chionoecetes opilio*), la crevette nordique (*Pandalus* sp.), le flétan Atlantique (*Hippoglossus hippoglossus*), le flétan du Groenland (*Reinhardtius hippoglossoides*), le homard (*Homarus americanus*) et l'oursin (*Strongylocentrotus* sp.) dans l'estuaire du Saint-Laurent [@arsenault2017; @racine2017]. Puisque la majorité de ces pêches sont effectuées par la Nation Wolastoqiyik Wahsipekuk, ces données sont utilisées afin de décrire les activités de pêches commerciales de cette dernière (voir section \@ref(pnwwportrait)). Puisque la Nation Mi'kmaq de Gespeg effectue également une pêche commerciale à la crevette nordique dans l'estuaire du Saint-Laurent, nous avons sélectionné cette pêche parmi les données de l'Atlas.
 
@@ -73,7 +87,20 @@ knitr::include_graphics("./figures/figures-integrated/site-aghamm_peche_commerci
 <!-- =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= -->
 ##### Nation des Innus d’Essipit
 
-> *Nous remercions la Nation des Innus d'Essipit pour leur participation, ainsi que Donald Bouchard et Pierre Tremblay pour les échanges et le soutien.*
+> ***Nous remercions la Nation des Innus d'Essipit pour leur participation, ainsi que Donald Bouchard et Pierre Tremblay pour les échanges et le soutien.***
+
+```{r essipit_data, results = 'asis'}
+uid <- meta$dataDescription$categories$type %in% 
+       "Nation des Innus d’Essipit"
+meta$dataDescription$categories$source[uid] %>%
+sapply(., function(x) stringr::str_split(x, ",")) %>%
+unlist() %>%
+unique() %>%
+sort() %>%
+show_source()
+```
+
+<br/>
 
 Les données transmises par la Nation des Innus d'Essipit sont une intégration de données provenant de divers sources d'informations [@bouchard2021] :
 
@@ -143,7 +170,20 @@ knitr::include_graphics("./figures/figures-integrated/site-essipit_culture_patri
 <!-- =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= -->
 ##### Nation Huronne-Wendat
 
-> *Nous remercions la Nation Huronne-Wendat pour leur participation, ainsi que Maria Rodriguez, Stéphanie B. Nadeau et Mario Gros-Louis pour les échanges et le soutien.*
+> ***Nous remercions la Nation Huronne-Wendat pour leur participation, ainsi que Maria Rodriguez, Stéphanie B. Nadeau et Mario Gros-Louis pour les échanges et le soutien.***
+
+```{r nhw_data, results = 'asis'}
+uid <- meta$dataDescription$categories$type %in% 
+       "Nation Huronne-Wendat"
+meta$dataDescription$categories$source[uid] %>%
+sapply(., function(x) stringr::str_split(x, ",")) %>%
+unlist() %>%
+unique() %>%
+sort() %>%
+show_source()
+```
+
+<br/>
 
 Les données transmises par la Nation Huronne-Wendat fournissent la localisation de sites d'intérêt principalement dans la portion fluviale du Saint-Laurent et dans l'estuaire et dans une moindre mesure dans l'estuaire du Saint-Laurent [@nhw2021]. Les sites sont composées de neuf thèmes divisées en trois catégories uniques : 
 
@@ -234,7 +274,20 @@ knitr::include_graphics("./figures/figures-integrated/site-huronne_wendat_topony
 <!-- =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= -->
 ##### Nation Mohawk de Kahnawà:ke
 
-> *Nous remercions la Nation Mohawk de Kahnawà:ke pour leur participation, ainsi que le Comité Consultatif du Conseil Mohawk de Kahnawà:ke pour les échanges et le soutien.*
+> ***Nous remercions la Nation Mohawk de Kahnawà:ke pour leur participation, ainsi que le Comité Consultatif du Conseil Mohawk de Kahnawà:ke pour les échanges et le soutien.***
+
+```{r nmk_data, results = 'asis'}
+uid <- meta$dataDescription$categories$type %in% 
+       "Nation Mohawk de Kahnawà:ke"
+meta$dataDescription$categories$source[uid] %>%
+sapply(., function(x) stringr::str_split(x, ",")) %>%
+unlist() %>%
+unique() %>%
+sort() %>%
+show_source()
+```
+
+<br/>
 
 Les données transmises par la Nation Mohawk de Kahnawà:ke fournissent la localisation de sites d'intérêt dans la portion fluviale du Saint-Laurent dans la région de Montréal et du lac St-Pierre [@mck2021]. Les sites identifiés ciblent principalement les activités de chasse, de pêche et de récolte de végétaux visant une variété d'espèces importantes, des sites culturels, et l'utilisation de certaines portions du territoire par la Nation. Ces derniers peuvent être divisés en sept catégories :
 
@@ -316,7 +369,22 @@ knitr::include_graphics("./figures/figures-integrated/site-kahnawake_traffic.png
 <!-- =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= -->
 ##### Nation W8banaki
 
-> *Nous remercions la Nation W8banaki pour leur participation, ainsi que le Grand Conseil de la Nation Waban-Aki, Edgar Blanchet, Hadrien Bois et David Bernard pour les échanges et le soutien.*
+> ***Nous remercions la Nation W8banaki pour leur participation, ainsi que le Grand Conseil de la Nation Waban-Aki, Edgar Blanchet, Hadrien Bois et David Bernard pour les échanges et le soutien.***
+
+```{r nw_data, results = 'asis'}
+uid <- meta$dataDescription$categories$type %in% 
+       "Nation W8banaki"
+meta$dataDescription$categories$source[uid] %>%
+sapply(., function(x) stringr::str_split(x, ",")) %>%
+unlist() %>%
+unique() %>%
+sort() %>%
+show_source()
+```
+
+<br/>
+
+
 
 <!-- Pour de plus amples informations, veuillez contacter directement le GCNWA. -->
 
@@ -433,7 +501,20 @@ knitr::include_graphics("./figures/figures-integrated/site-gcnwa_sites_potentiel
 <!-- =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= -->
 ##### Nation Wolastoqiyik Wahsipekuk {#pnwwportrait}
 
-> *Nous remercions la Nation Wolastoqiyik Wahsipekuk pour leur participation, ainsi que David Poissant pour les échanges et le soutien.*
+> ***Nous remercions la Nation Wolastoqiyik Wahsipekuk pour leur participation, ainsi que David Poissant pour les échanges et le soutien.***
+
+```{r nww, results = 'asis'}
+uid <- meta$dataDescription$categories$type %in% 
+       "Nation Wolastoqiyik Wahsipekuk"
+meta$dataDescription$categories$source[uid] %>%
+sapply(., function(x) stringr::str_split(x, ",")) %>%
+unlist() %>%
+unique() %>%
+sort() %>%
+show_source()
+```
+
+<br/>
 
 Nous utilisons des données qui nous ont été transmises par des représentants de la Nation Wolastoqiyik Wahsipekuk pour caractériser des sites d'importances pour la pêche commerciale au homard [*Homarus americanus*; @pnww2021]. Ces données identifient des milieux jugés importants pour la pêche sur la rive sud du Saint-Laurent. Ces données ont été complétées avec les données de de l'AGHAMM (voir section \@ref(aghammportrait)) sur les pêche commerciales au buccin (*Buccinum* sp.), le concombre de mer (*Holothurie* sp.), le crabe commun (*Cancer irroratus*), le crabe des neiges (*Chionoecetes opilio*), la crevette nordique (*Pandalus* sp.), le flétan Atlantique (*Hippoglossus hippoglossus*), le flétan du Groenland (*Reinhardtius hippoglossoides*), le homard (*Homarus americanus*) et l'oursin (*Strongylocentrotus* sp.) dans l'estuaire du Saint-Laurent [@arsenault2017; @racine2017]. 
 

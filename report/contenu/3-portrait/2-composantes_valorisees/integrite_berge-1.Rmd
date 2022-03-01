@@ -1,10 +1,13 @@
 ### Intégrité des berges {#berge}
 
-> *Nous remercions Patrick Lajeunesse et Jean-François Bernier de l'Université Laval pour les échanges et le soutien.*
+> ***Nous remercions Patrick Lajeunesse et Jean-François Bernier de l'Université Laval pour les échanges et le soutien.***
 
-```{r berge_setup, echo = FALSE}
+```{r berge_setup, echo = FALSE, results = 'asis'}
 meta <- read_yaml("../data/data-metadata/int_cv_berge.yml")
+show_source(meta$rawData)
 ```
+
+<br/>
 
 La composante valorisée d’intégrité des berges a été caractérisée à partir de données géospatiales d’un exercice récent de caractérisation des berges dans la partie fluviale du Saint-Laurent de l’équipe de Patrick Lajeunesse de l’Université Laval [@bernier2020; @bernier2021]. Cette caractérisation a été faite à l’aide d’une approche cartographique à haute résolution visant entre autres à positionner spatialement, caractériser et évaluer la susceptibilité à l’érosion de berges naturelles et artificialisées, et ce, en combinant des données de relevés terrain, de télédétection et dérivées de connaissances des communautés locales [@bernier2020; @bernier2021]. Les données géospatiales issues de ce projet offrent une caractérisation de la susceptibilité des berges à l’érosion en divisant leur état en trois niveaux d’indice d’érosion [IE; Figure 2 dans @bernier2021] :
 

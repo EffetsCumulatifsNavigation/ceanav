@@ -1,10 +1,13 @@
 ### Navigation {#navigation}
 
-> *Nous remercions Clément Chion et Jean-François Sénécal de l'Université du Québec en Outaouais, Jeff Campagnola de Transports Canada et Samuel Turgeon du Parc marin du Saguenay–Saint-Laurent pour les échanges et le soutien.*
+> ***Nous remercions Clément Chion et Jean-François Sénécal de l'Université du Québec en Outaouais, Jeff Campagnola de Transports Canada et Samuel Turgeon du Parc marin du Saguenay–Saint-Laurent pour les échanges et le soutien.***
 
-```{r navigation_setup, echo = FALSE}
+```{r navigation_setup, echo = FALSE, results = 'asis'}
 meta <- read_yaml("../data/data-metadata/int_st_navigation.yml")
+show_source(meta$rawData)
 ```
+
+<br/>
 
 L'intensité de la navigation au sein de la zone d'étude a été évaluée à l'aide
 de données provenant de Système d'Identification Automatique (SIA) -- ou

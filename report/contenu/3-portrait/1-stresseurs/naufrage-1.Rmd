@@ -1,11 +1,14 @@
 ### Naufrages {#naufrage}
 
-> *Nous remercions Sohaib Gabsis de Pêches et Océans Canada pour les échanges et le soutien.*
+> ***Nous remercions Sohaib Gabsis de Pêches et Océans Canada pour les échanges et le soutien.***
 
 
-```{r naufrage_setup, echo = FALSE}
+```{r naufrage_setup, echo = FALSE, results = 'asis'}
 meta <- read_yaml("../data/data-metadata/int_st_naufrage.yml")
+show_source(meta$rawData)
 ```
+
+<br/>
 
 Le stress environnemental relié aux épaves a été caractérisé grâce à une base de données de la Garde côtière canadienne sur la distribution de navires préoccupants [@gcc2021]. La majorité des navires doivent toujours être validés par la Garde côtière canadienne et la précision des coordonnées ne peut être garantie; cette base de données correspond toutefois à la meilleure source d'information disponible, et en tant que telle est utilisée pour l'évaluation des effets cumulatifs. Il sera possible de mettre à jour l'évaluation lorsque les données seront validées par la Garde côtière canadienne. Cette base de données identifie `r meta$dataDescription$observations$total` épaves au sein de la zone d'étude. L'intensité de ce stresseur environnemental a été caractérisée à l'aide d'un lissage gaussien -- *i.e.* méthode d'interpolation basée sur une distribution normale -- de 3 $km$ afin d'identifier les zones potentiellement soumises aux effets des épaves et pour considérer l'incertitude des coordonnées des épaves relevées par la Garde côtière canadienne.
 

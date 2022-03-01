@@ -1,11 +1,14 @@
 ### Ancrages {#ancrage}
 
-> *Nous remercions la Garde côtière canadienne et Corinne Berthold pour les échanges et le soutien.*
+> ***Nous remercions la Garde côtière canadienne et Corinne Berthold pour les échanges et le soutien.***
 
 
-```{r ancrage_setup, echo = FALSE}  
+```{r ancrage_setup, echo = FALSE, results = 'asis'}  
 meta <- read_yaml("../data/data-metadata/int_st_ancrage.yml")
+show_source(meta$rawData)
 ```
+
+<br/>
 
 Les sites d'ancrage ont été caractérisés grâce à l'intégration de deux bases de données provenant de la Garde côtière canadienne [@gcc2022] et du Service Hydrographique du Canada [@shc2020]. La base de données de la Garde côtière canadienne fournit la localisation des sites d'ancrage commerciaux provenant des fiches techniques de mouillage entre Les Escoumins et Montréal [@gcc2022]. Puisque cette base de données ne couvre pas l'entièreté de la zone d'étude, nous avons complété la caractérisation des sites d'ancrage à l'aide de la base de données du Service Hydrographique du Canada; cette dernière fournit la localisation des mouillages et des zones de mouillages dans les eaux navigables canadiennes [@shc2020]. Nous y avons sélectionné les mouillages et zones de mouillage à l'est des Escoumins afin de compléter le portrait de la zone d'étude. Il est important de mentionner que la couche de données résultante ne considère que la navigation commerciale et que les sites d'ancrage pour la navigation de plaisance n'y sont pas représentés. 
 

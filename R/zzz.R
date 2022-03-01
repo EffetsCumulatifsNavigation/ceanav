@@ -91,3 +91,16 @@ modif_md <- function(dat) {
   dat <- gsub("_", "", dat)
   dat <- gsub("\\.", "", dat)
 }
+
+
+# ------------------------------------------------------------------------------
+# To acknowledge data sources for each sections 
+show_source <- function(dat) {
+  nid <- length(dat)
+  nm <- paste(dat, collapse = ", ")
+  if (nid == 1) {
+      glue("> *L'identifiant unique attribué aux données présentées au sein de cette section est :* ***{nm}***. *Consultez la section suivante et l'[annexe 1](#annexe1) pour plus de détails sur ces données.*")
+  } else {
+      glue("> *L'identifiant unique attribué aux données présentées au sein de cette section sont :* ***{nm}***. *Consultez la section suivante et l'[annexe 1](#annexe1) pour plus de détails sur ces données.*")
+  }
+}
