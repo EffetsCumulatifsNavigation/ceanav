@@ -28,6 +28,7 @@ pipeline <- function(
     # Study area and basemaps
     get_aoi()
     get_basemap()
+    get_zonesNA()
 
     # -----------------------------------
     # Individual datasets
