@@ -6,6 +6,7 @@ inconnus,1,2,2
 dragage,2,2,2
 depot,2,2,2
 dragage_prevu,1,2,2
+naufrage,1,0,2
 CARGO,4,1,2
 CONTAINER,4,1,2
 DRY.BULK,4,1,2
@@ -22,5 +23,4 @@ DNL,3,2,2
 DNH,3,2,2
 PLB,3,2,2
 PHB,3,2,2
-naufrage,1,0,2
 pollution_maritime,3,2,2

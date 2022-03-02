@@ -4,7 +4,7 @@
 \alias{fnc_heatmap}
 \title{Function to generate a heatmap with given data, and rows and columns names}
 \usage{
-fnc_heatmap(dat, columns, rows, output)
+fnc_heatmap(dat, columns, rows, gr, output)
 }
 \description{
 Function to generate a heatmap with given data, and rows and columns names
