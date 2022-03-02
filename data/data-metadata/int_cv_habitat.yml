@@ -184,6 +184,28 @@ dataDescription:
     - Espèces floristiques susceptibles d'être désignées menacées ou vulnérables
     - Espèces floristiques désignées vulnérables
     - Espèces floristiques désignées menacées
+    zonesNA:
+    - .na.character
+    - .na.character
+    - .na.character
+    - .na.character
+    - .na.character
+    - .na.character
+    - alevinage
+    - frayere
+    - .na.character
+    - .na.character
+    - berge_fluvial
+    - berge_fluvial
+    - berge_fluvial
+    - berge_fluvial
+    - berge_fluvial
+    - .na.character
+    - .na.character
+    - .na.character
+    - .na.character
+    - .na.character
+    - .na.character
   frayere_alevinage:
     Source:
     - 'Alliance Environnement GDG Conseil-Daniel Arbour & Associés (n.d.) Frayère

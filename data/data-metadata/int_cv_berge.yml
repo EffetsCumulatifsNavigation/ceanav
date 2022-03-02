@@ -55,4 +55,9 @@ dataDescription:
       de 25 à 75%
     - Berge artificielle présentant des signes d'érosion apparente ou un couvert végétal
       < 25%
+    zonesNA:
+    - berge_fluvial
+    - .na.character
+    - .na.character
+    - .na.character
 rawData: '0017'

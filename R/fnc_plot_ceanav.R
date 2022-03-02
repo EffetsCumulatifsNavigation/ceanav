@@ -92,15 +92,19 @@ plot_ceanav.sf <- function(dat, main = NULL, type = NULL, subtitle = NULL, unit_
 
   # ------------------
   # NA zones 
+  showNA <- FALSE # Has to do with legend
   if (!is.null(zones_NA)) {
-    basemap("zonesNA")
-    plot(
-      st_geometry(zonesNA[zonesNA$name %in% zones_NA, ]),
-      lwd = 1,
-      add = TRUE,
-      col = global_param$col$naValues,
-      border = "#00000000"
-    )  
+    if (!is.na(zones_NA)) {
+      showNA <- TRUE
+      basemap("zonesNA")
+      plot(
+        st_geometry(zonesNA[zonesNA$name %in% zones_NA, ]),
+        lwd = 1,
+        add = TRUE,
+        col = global_param$col$naValues,
+        border = "#00000000"
+      )  
+    }    
   }
 
 
@@ -120,7 +124,7 @@ plot_ceanav.sf <- function(dat, main = NULL, type = NULL, subtitle = NULL, unit_
          table() %>%
          names()
   minUp <- ifelse(is.null(type), .175, .23)
-
+  
   if (length(bin) == 2 | length(bin) == 1) {
     cols <- global_param$col$integrated$palette[4]
     plot_legend_bin(
@@ -128,7 +132,7 @@ plot_ceanav.sf <- function(dat, main = NULL, type = NULL, subtitle = NULL, unit_
       subTitle = "Présence",
       cexSub = .5,
       minUp = minUp,
-      showNA = !is.null(zones_NA)
+      showNA = showNA
     )
   } else {
     maxDat <- max(dat[,1,drop = TRUE], na.rm = TRUE)
@@ -139,7 +143,7 @@ plot_ceanav.sf <- function(dat, main = NULL, type = NULL, subtitle = NULL, unit_
       subTitle = unit_data,
       cexSub = .4,
       minUp = minUp,
-      showNA = !is.null(zones_NA)
+      showNA = showNA
     )
   }
 

@@ -124,7 +124,7 @@ cv_habitat <- function() {
 
 
   # ------------------------------------------------------
-  meta_update <- function(meta, dat, accr, fr, descr = "", type = "") {
+  meta_update <- function(meta, dat, accr, fr, descr = "", type = "", zonesNA = NA) {
     meta$rawData <- c(meta$rawData, dat)
     meta$accronyme <- c(meta$accronyme, accr)
     meta$type <- c(meta$type, type)
@@ -132,6 +132,7 @@ cv_habitat <- function() {
     meta$source <- c(meta$source, paste0(dat, collapse = ","))
     # meta$superficie <- c(meta$superficie, superficie(dat))
     meta$description <- c(meta$description, descr)
+    meta$zonesNA <- c(meta$zonesNA, zonesNA)
     meta
   }
 

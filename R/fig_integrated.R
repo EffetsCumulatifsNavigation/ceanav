@@ -39,7 +39,7 @@ fig_integrated <- function(data_id) {
   subt <- meta$dataDescription$categories$francais
   ref <- meta$dataDescription$categories$source
   un <- meta$dataDescription$units
-
+  na <- meta$dataDescription$categories$zonesNA
 
   for(i in 1:length(nm)) {
     # pdf(glue('./figures/figures-format/{data_id}.pdf'), width = 7, height = 5, pointsize = 12)
@@ -50,7 +50,8 @@ fig_integrated <- function(data_id) {
       type = tp[i],
       subtitle = subt[i],
       unit_data = un,
-      references = ref[i]
+      references = ref[i],
+      zones_NA = na[i]
     )
     dev.off()
   }

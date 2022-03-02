@@ -127,7 +127,7 @@ cv_berge <- function() {
     "Berge artificielle présentant des signes d'érosion apparente ou un couvert végétal < 25%"
   )
 
-
+  meta$dataDescription$categories$zonesNA <- c("berge_fluvial", NA, NA, NA)
 
 
   # ---
