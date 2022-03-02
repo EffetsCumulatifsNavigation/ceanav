@@ -22,9 +22,14 @@ fig_region_cea_km2 <- function() {
     # Stressor fullnames
     st <- mutate(st, fullname = glue("{stresseur}_{accronyme}"))
 
-    # Stressor groups
-    grNames <- unique(st[,c('stresseur','title')])
+    # Stressor groups    
+    grNames <- st[,c('stresseur','title')] %>%
+               group_by(stresseur, title) %>%
+               summarize(size = n()) %>%
+               ungroup() %>%
+               mutate(cumsize = cumsum(size))
     nGroup <- nrow(grNames)
+
 
     # Régions administratives
     load_format("data0065")
@@ -90,7 +95,7 @@ fig_region_cea_km2 <- function() {
     # NOTE: This is true of the current settings from 2nd graph only
     #       Should be updated if x and y ranges change for either graph
     g1 <- c(-543864.9, 182186.7)
-    g2 <- c(-3.56, 11.56)
+    g2 <- c(-4.56, 11.56)
     # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     # Graph ranges
     g1_range <- diff(g1)
@@ -231,15 +236,26 @@ fig_region_cea_km2 <- function() {
     #=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=#
     par(family = 'serif')
     par(mar = c(0,2,0,2))
-    xR <- c(-3, nrow(cekm))
+    xR <- c(-4, nrow(cekm))
     yR <- c(-5, nrow(st))
     plot0(x = xR, y = yR)
     for(i in 1:nrow(cekm)) lines(x = c(i,i), y = c(0.5,yR[2]+3), lty = 2, lwd = 1.5, col = "#909090")
     for(i in 1:nrow(st)) lines(x = c(0.75,xR[2]+.25), y = c(i,i), lty = 2, lwd = 1.5, col = "#90909066")
     points(x = dat$rg_id, y = dat$st_id, cex = dat$cea*4, col = "#000000", bg = dat$col, pch = 21)
     text(x = 1:xR[2], y = 0, labels = cekm$region, srt = 45, cex = .85, adj = c(1,.5))
-    text(x = .5, y = 1:yR[2], labels = st$francais, cex = .85, adj = c(1,.5))
+    text(x = -3.6, y = 1:yR[2], labels = st$francais, cex = .85, adj = c(0,.5))
 
+    # Stressor groups
+    for(i in 1:nGroup) {
+      if (grNames$size[i] > 1) {
+        r1 <- ifelse(i == 1, 0, grNames$cumsize[i-1])
+        grRange <- c(r1+1, grNames$cumsize[i])
+        lines(x = c(-3.8,-3.8), y = c(grRange[1], grRange[2]))
+        text(x = -4, y = mean(grRange), labels = gsub(" ", "\n", grNames$title[i]), 
+             srt = 90, adj = c(.5,0), font = 3)
+      }
+    }
+    
     #<=~-.-~=><=~-.-~=><=~-.-~=><=~-.-~=><=~-.-~=>
     dev.off()
   }
