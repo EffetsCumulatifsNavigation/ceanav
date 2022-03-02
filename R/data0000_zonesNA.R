@@ -53,7 +53,8 @@ get_zonesNA <- function() {
                           st_polygon() %>%
                           st_sfc(crs = 4326) %>%
                           st_transform(crs = global_param$crs) %>%
-                          st_intersection(aoi, .) %>%
+                          st_intersection(aoi, .) %>% 
+                          st_union(zonesNA[["saguenay"]]) %>%
                           mutate(name = "fluvial_peche")
 
   # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

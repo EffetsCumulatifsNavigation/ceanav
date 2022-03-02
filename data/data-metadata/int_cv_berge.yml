@@ -57,7 +57,7 @@ dataDescription:
       < 25%
     zonesNA:
     - berge_fluvial
-    - .na.character
-    - .na.character
-    - .na.character
+    - berge_fluvial
+    - berge_fluvial
+    - berge_fluvial
 rawData: '0017'

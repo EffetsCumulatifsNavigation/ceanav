@@ -322,10 +322,12 @@ st_peche_commerciale <- function() {
     "Activités de pêches commerciales à l'aide d'engins de pêche pélagiques avec peu ou en l'absence de prises accessoires et ne causant aucune modification des habitats, e.g. pêche à la ligne, senne bourse.",
     "Activités de pêches commerciales à l'aide d'engins de pêche pélagiques avec d'importantes prises accessoires et ne causant aucune modification des habitats, e.g. filet maillant et palangre.")
 
-    # ----- frequence 
-    dat <- data.frame(acr = meta$dataDescription$categories$accronyme) %>%
-           left_join(gear_freq, by = c("acr" = "Var1"))
-    meta$dataDescription$categories$frequence <- dat$Freq
+  meta$dataDescription$categories$zonesNA <- rep("fluvial_peche", length(meta$dataDescription$categories$accronyme))
+  
+  # ----- frequence 
+  dat <- data.frame(acr = meta$dataDescription$categories$accronyme) %>%
+         left_join(gear_freq, by = c("acr" = "Var1"))
+  meta$dataDescription$categories$frequence <- dat$Freq
 
   # -----
   obs <- peche %>% group_by(years) %>% summarize(total = n())
