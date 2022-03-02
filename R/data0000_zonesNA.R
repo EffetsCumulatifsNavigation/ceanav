@@ -13,6 +13,9 @@ get_zonesNA <- function() {
   # Study area
   data(aoi)
   data(grid1p)
+  
+  # Simplify aoi 
+  aoi <- suppressWarnings(st_simplify(aoi, dTolerance = 100, preserveTopology = F))
 
   # Zones NA 
   zonesNA <- list()

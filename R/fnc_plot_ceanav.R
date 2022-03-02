@@ -10,6 +10,7 @@
 #' @param references data citation used for integrated data
 #' @param city logical, if TRUE name of cities are added to graph
 #' @param minUp numeric, minimum upper side to write as a function of bbox extent (legend)
+#' @param zones_NA character, name of zones for which data is not available. Data is available as a basemap in `./data/data-basemap/zonesNA.geojson`.
 #' @param ... further specifications, see \link{plot} and details.
 #'
 #' @examples
@@ -25,7 +26,7 @@ plot_ceanav <- function(dat, ...) {
 #' @method plot_ceanav sf
 #' @name plot_ceanav
 #' @export
-plot_ceanav.sf <- function(dat, main = NULL, type = NULL, subtitle = NULL, unit_data = NULL, references = NULL, city = TRUE, ...) {
+plot_ceanav.sf <- function(dat, main = NULL, type = NULL, subtitle = NULL, unit_data = NULL, references = NULL, city = TRUE, zones_NA = NULL, ...) {
 
   # pdf(glue('./figures/figures-format/{data_id}.pdf'), width = 7, height = 5, pointsize = 12)
   # png(glue('./figures/delete.png'), res = 300, width = 100, height = 70, units = "mm", pointsize = 12)
@@ -89,6 +90,19 @@ plot_ceanav.sf <- function(dat, main = NULL, type = NULL, subtitle = NULL, unit_
   plot0(x = c(bbox$xmin, bbox$xmax), y = c(bbox$ymin, bbox$ymax))
   box()
 
+  # ------------------
+  # NA zones 
+  if (!is.null(zones_NA)) {
+    basemap("zonesNA")
+    plot(
+      st_geometry(zonesNA[zonesNA$name %in% zones_NA, ]),
+      lwd = 1,
+      add = TRUE,
+      col = global_param$col$naValues,
+      border = "#00000000"
+    )  
+  }
+
 
   # ------------------
   # Inserts location
@@ -113,7 +127,8 @@ plot_ceanav.sf <- function(dat, main = NULL, type = NULL, subtitle = NULL, unit_
       col = cols,
       subTitle = "Présence",
       cexSub = .5,
-      minUp = minUp
+      minUp = minUp,
+      showNA = !is.null(zones_NA)
     )
   } else {
     maxDat <- max(dat[,1,drop = TRUE], na.rm = TRUE)
@@ -123,7 +138,8 @@ plot_ceanav.sf <- function(dat, main = NULL, type = NULL, subtitle = NULL, unit_
       pal = pal,
       subTitle = unit_data,
       cexSub = .4,
-      minUp = minUp
+      minUp = minUp,
+      showNA = !is.null(zones_NA)
     )
   }
 
