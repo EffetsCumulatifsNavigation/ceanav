@@ -41,7 +41,7 @@ fig_aoi <- function() {
 
   # ------------------------------------------------------------------------
   # Graph principal
-  png(glue('./figures/aoi.png'), res = 300, width = 100, height = 70, units = "mm", pointsize = 12)
+  png(glue('./figures/aoi.png'), res = global_param$figures$resolution, width = global_param$figures$width, height = global_param$figures$height, units = "mm", pointsize = global_param$figures$pointsize)
 
   # ------------------
   par(family = 'serif', mar = c(.5, .5, .5, .5))

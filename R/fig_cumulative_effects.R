@@ -12,10 +12,12 @@
 
 
 fig_cumulative_effects <- function() {
+  # ------------------
+  global_parameters()
 
   # Function to cycle through elements to plot
   temp <- function(dat, data_id, main = "", subtitle = "") {
-    png(glue('./figures/figures-output/{data_id}.png'), res = 300, width = 100, height = 70, units = "mm", pointsize = 12)
+    png(glue('./figures/figures-output/{data_id}.png'), res = global_param$figures$resolution, width = global_param$figures$width, height = global_param$figures$height, units = "mm", pointsize = global_param$figures$pointsize)
     plot_ceanav(
       dat[, data_id],
       main = main,

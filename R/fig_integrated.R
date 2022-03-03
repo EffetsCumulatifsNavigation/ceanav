@@ -23,6 +23,9 @@ fig_integrated <- function(data_id) {
   # Integrated data
   load_integrated(data_id)
   dat <- get(data_id)
+  
+  # Global parameters 
+  global_parameters()
 
   # Metadata
   meta_id <- data_id
@@ -43,7 +46,7 @@ fig_integrated <- function(data_id) {
 
   for(i in 1:length(nm)) {
     # pdf(glue('./figures/figures-format/{data_id}.pdf'), width = 7, height = 5, pointsize = 12)
-    png(glue('./figures/figures-integrated/{data_id}-{nm[i]}.png'), res = 300, width = 100, height = 70, units = "mm", pointsize = 12)
+    png(glue('./figures/figures-integrated/{data_id}-{nm[i]}.png'), res = global_param$figures$resolution, width = global_param$figures$width, height = global_param$figures$height, units = "mm", pointsize = global_param$figures$pointsize)
     plot_ceanav(
       dat[, nm[i]],
       main = main,

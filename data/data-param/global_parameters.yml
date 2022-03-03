@@ -1,5 +1,10 @@
 project: ceanav
 crs: 32198
+figures: 
+  resolution: 400
+  width: 200
+  height: 140
+  pointsize: 24
 col:
   format:
     coastline: "#00000044"
