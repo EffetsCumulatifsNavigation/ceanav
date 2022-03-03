@@ -21,13 +21,21 @@ cekm <- cumulative_effects_cv_km2
 st <- read.csv("data/data-metadata/metadata_stresseurs.csv")
 cv <- read.csv("data/data-metadata/metadata_composantes_valorisees.csv")
 
+# #=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=#
+# # Manually modify certain names to 
+# # make graph clearer
+# #=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=#
+# Composantes valorisées
+cv$title[cv$title == "Sites d’intérêt"] <- "Sites d’intérêt culturels, patrimoniaux et archéologiques"
+cv$type[cv$type == "Association de gestion halieutique Mi'kmaq et Malécite"] <- "AGHAMM"
+
+#=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=#
 # Stressor groups
 grNames <- unique(st[,c('stresseur','title')])
 nGroup <- nrow(grNames)
 
 # Stressor fullnames
 st <- mutate(st, fullname = glue("{stresseur}_{accronyme}"))
-
 
 #=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=#
 # Colors
@@ -37,42 +45,30 @@ gg_color_hue <- function(n) {
   hues = seq(15, 375, length = n + 1)
   hcl(h = hues, l = 65, c = 100, alpha = .5)[1:n]
 }
-
-cols <- c("#426E88",
-          "#9EA8B5",
-          "#413249",
-          "#876F74",
-          "#BD2A4D",
-          "#E89B40",
-          "#5BB2AD")
-
-cols <- c("#2a2a2a",
-          "#622b2b",
-          "#856226",
-          "#286039",
-          "#2d81a4",
-          "#68457c",
-          "#8c3449")
+global_parameters() 
+cols <- global_param$col$stresseurs
 gg_color_hue <- colorRampPalette(cols)
 
 #=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=#
 # Stresseurs
 #=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=#
-# trans1 <- c('FF','DD','BB','99','77','55','33','11')
-trans2 <- c('FF','DD','AA','88','66','44')
-trans3 <- c('FF','DD','BB','99','77','55','33','11','22','44','66','88','AA','CC','EE')
 st$col <- gg_color_hue(nGroup)[as.numeric(as.factor(st$title))]
-# for(i in 1:nrow(st)) st$col[i] <- darken(st$col[i], 20)
 
 for(i in levels(as.factor(st$title))) {
   id <- which(st$title == i)
   nId <- length(id)
-  if (nId > 5) trans <- trans3
-  if (nId <= 5) trans <- trans2
-  for(j in 1:nId) {
-    st$col[id[j]] <- paste0(substr(st$col[id[j]],1,7), trans[j])
+  if (nId > 5) {
+    for(j in 1:nId) {
+      st$col[id[j]] <- lighten(st$col[id[j]], j*8)
+    }    
+  }
+  if (nId <= 5) {
+    for(j in 1:nId) {
+      st$col[id[j]] <- lighten(st$col[id[j]], j*15)
+    }        
   }
 }
+
 
 
 #=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=#
@@ -109,8 +105,8 @@ gr2 <- cekm[, 'gr2', drop = FALSE] %>%
 #           as.data.frame(stringsAsFactors = FALSE)
 
 # Manually adjust some names
-gr1$gr1 <- gsub("Intégrité des berges", "Berges", gr1$gr1)
-gr2$gr2 <- gsub("Wolastoqiyik Wahsipekuk","",gr2$gr2)
+gr1$gr1 <- gsub("Intégrité des berges", "Intégrité\ndes berges", gr1$gr1)
+gr2$gr2 <- gsub("Nation Wolastoqiyik Wahsipekuk","Nt. Wolastoqiyik\nWahsipekuk",gr2$gr2)
 cekm$simple[cekm$francais == "Wolastoqiyik Wahsipekuk - Pêche traditionnelle"] <- "Wolastoqiyik Wahsipekuk - Pêche traditionnelle"
 gr2$gr2 <- gsub("Naturelle","", gr2$gr2)
 gr2$gr2 <- gsub("Artificielle","", gr2$gr2)
@@ -148,15 +144,15 @@ di <- cea[, st$fullname] %>%
 #=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=#
 # Graph
 #=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=#
-png('./figures/figures-output/cumulative_effects_regional_contribution.png', res = 300, width = 425, height = 225, units = "mm")
+png('./figures/figures-output/cumulative_effects_regional_contribution.png', res = 300, width = 600, height = 225, units = "mm")
 layout(matrix(1:2, nrow = 2), heights = c(.8,.2))
 par(family = 'serif')
 par(mar = c(0,1,1,0))
 
-yMax <- maxVals[1]+2
+yMax <- maxVals[1]+2.5
 yMin <- -.1
 
-plot0(x = c(-2,nrow(cea)), y = c(yMin,yMax))
+plot0(x = c(-2,nrow(cea)), y = c(yMin,yMax+.1))
 
 #=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=#
 # Graph elements
@@ -192,7 +188,7 @@ for(i in 1:nrow(di)) {
 for(i in 1:nrow(gr1)) {
   x = as.numeric(gr1[i, c('min','max')])
   lines(y = rep(yMax-.1,2), x = x)
-  text(y = yMax+.1, x = mean(x), adj = .5, font = 2, labels = gr1$gr1[i])
+  text(y = yMax+.175, x = mean(x), adj = c(.5,.5), font = 2, labels = gr1$gr1[i])
 }
 
 # 2nd group

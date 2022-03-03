@@ -23,15 +23,6 @@ cv <- read.csv("data/data-metadata/metadata_composantes_valorisees.csv")
 # # Manually modify certain names to 
 # # make graph clearer
 # #=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=#
-# modnm <- function(from, to) {
-#   st$title[st$title == from] <- to
-#   st
-# }
-# st <- modnm("Déversements accidentels", "Déversements")
-# 
-# Stresseurs 
-# st$title 
-
 # Composantes valorisées
 cv$title[cv$title == "Sites d’intérêt"] <- "Sites d’intérêt culturels, patrimoniaux et archéologiques"
 cv$type[cv$type == "Association de gestion halieutique Mi'kmaq et Malécite"] <- "AGHAMM"
@@ -68,22 +59,8 @@ gg_color_hue <- function(n) {
   hues = seq(15, 375, length = n + 1)
   hcl(h = hues, l = 65, c = 100, alpha = .5)[1:n]
 }
-
-cols <- c("#426E88",
-          "#9EA8B5",
-          "#413249",
-          "#876F74",
-          "#BD2A4D",
-          "#E89B40",
-          "#5BB2AD")
-
-cols <- c("#2a2a2a",
-          "#622b2b",
-          "#856226",
-          "#286039",
-          "#2d81a4",
-          "#68457c",
-          "#8c3449")
+global_parameters() 
+cols <- global_param$col$stresseurs
 gg_color_hue <- colorRampPalette(cols)
 
 #=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=#
