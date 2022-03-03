@@ -18,7 +18,25 @@ load_output("cumulative_effects_cv_km2")
 cekm <- cumulative_effects_cv_km2
 st <- read.csv("data/data-metadata/metadata_stresseurs.csv")
 cv <- read.csv("data/data-metadata/metadata_composantes_valorisees.csv")
+ 
+# #=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=#
+# # Manually modify certain names to 
+# # make graph clearer
+# #=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=#
+# modnm <- function(from, to) {
+#   st$title[st$title == from] <- to
+#   st
+# }
+# st <- modnm("Déversements accidentels", "Déversements")
+# 
+# Stresseurs 
+# st$title 
 
+# Composantes valorisées
+cv$title[cv$title == "Sites d’intérêt"] <- "Sites d’intérêt culturels, patrimoniaux et archéologiques"
+cv$type[cv$type == "Association de gestion halieutique Mi'kmaq et Malécite"] <- "AGHAMM"
+
+#=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=#
 # Stressor groups
 grNames <- unique(st[,c('stresseur','title')])
 nGroup <- nrow(grNames)
@@ -26,6 +44,21 @@ nGroup <- nrow(grNames)
 # Stressor fullnames
 st <- mutate(st, fullname = glue("{stresseur}_{accronyme}"))
 
+#=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=#
+# Function to add transparent nodes for spacing between each node groups
+#=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=#
+insertRow <- function(dat, uid, group, network) {
+  r1 <- min(uid)
+  r2 <- max(uid)+2
+  randomString <- function() paste0(letters[runif(20,1,26)], collapse = '')
+  newrow <- data.frame(group = group, network = network, name = randomString(), 
+                       cex = 0, cols = '#00000000', stringsAsFactors = FALSE)
+  dat[seq(r1+1,nrow(dat)+1),] <- dat[seq(r1,nrow(dat)),]
+  dat[r1,] <- newrow
+  dat[seq(r2+1,nrow(dat)+1),] <- dat[seq(r2,nrow(dat)),]
+  dat[r2,] <- newrow
+  dat
+}
 
 #=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=#
 # Colors
@@ -74,7 +107,7 @@ for(i in levels(as.factor(st$title))) {
 
 # Groups
 grNames$cols <- gg_color_hue(nGroup)[as.numeric(as.factor(grNames$stresseur))]
-for(i in 1:length(grNames$cols)) grNames$cols[i] <- darken(grNames$cols[i], 10)
+for(i in 1:length(grNames$cols)) grNames$cols[i] <- darken(grNames$cols[i], 30)
 
 
 #=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=#
@@ -111,11 +144,11 @@ gr2 <- cekm[, 'gr2', drop = FALSE] %>%
 #           as.data.frame(stringsAsFactors = FALSE)
 
 # Manually adjust some names
-gr1$gr1 <- gsub("Intégrité des berges", "Berges", gr1$gr1)
-gr2$gr2 <- gsub("Wolastoqiyik Wahsipekuk","",gr2$gr2)
-cekm$simple[cekm$francais == "Wolastoqiyik Wahsipekuk - Pêche traditionnelle"] <- "Wolastoqiyik Wahsipekuk - Pêche traditionnelle"
-gr2$gr2 <- gsub("Naturelle","", gr2$gr2)
-gr2$gr2 <- gsub("Artificielle","", gr2$gr2)
+# gr1$gr1 <- gsub("Intégrité des berges", "Berges", gr1$gr1)
+# gr2$gr2 <- gsub("Wolastoqiyik Wahsipekuk","",gr2$gr2)
+# cekm$simple[cekm$francais == "Wolastoqiyik Wahsipekuk - Pêche traditionnelle"] <- "Wolastoqiyik Wahsipekuk - Pêche traditionnelle"
+# gr2$gr2 <- gsub("Naturelle","", gr2$gr2)
+# gr2$gr2 <- gsub("Artificielle","", gr2$gr2)
 
 
 
@@ -134,14 +167,14 @@ metanetwork <- list()
 metanetwork$nodes <- nodesTx
 metanetwork$links <- data.frame(1)
 
-colBerge <- '#1ba28e'
+colBerge <- '#356638'
 colHab <- '#ad7c27'
 colMM <- '#734444'
-colSite <- '#7343fc'
+colSite <- '#0f2e40'
 
-trans <- c('FF','DD','BB','99','77','55')
-cols <- c(paste0(colBerge, trans[c(1,4)]),
-          paste0(colHab, trans[c(1,3,5)]),
+trans <- c('FF','DD','BB','99','77','55','33')
+cols <- c(paste0(colHab, trans[c(1,3,5)]),
+          paste0(colBerge, trans[c(1,4)]),
           paste0(colMM, trans[c(1,4)]),
           paste0(colSite, trans))
 pal_insileco <- cols
@@ -152,6 +185,40 @@ metanetwork$networkGroup <- bound(metanetwork, order = unique(nodesTx$network))
 metanetwork <- colGroups(metanetwork, colPal = pal_insileco)
 nodesTx <- metanetwork[[1]]
 colGr <- metanetwork[[3]][,c('Var1','cols')]
+
+# <=~-.-~=><=~-.-~=><=~-.-~=><=~-.-~=>
+# Add blank spaces 
+# Cycles de vie
+uid <- which(nodesTx$network == "Cycles de vie")
+nodesTx <- insertRow(nodesTx, uid, "Habitats","Cycles de vie")
+
+# Artificielle
+uid <- which(nodesTx$network == "Artificielle")
+nodesTx <- insertRow(nodesTx, uid, "Intégrité des berges","Artificielle")
+
+# Naturelle
+uid <- which(nodesTx$network == "Naturelle")
+nodesTx <- insertRow(nodesTx, uid, "Intégrité des berges","Naturelle")
+
+# AGHAMM
+uid <- which(nodesTx$network == "AGHAMM")
+nodesTx <- insertRow(nodesTx, uid, "Sites d’intérêt culturels, patrimoniaux et archéologiques","AGHAMM")
+
+# Nation Mohawk de Kahnawà:ke
+uid <- which(nodesTx$network == "Nation Mohawk de Kahnawà:ke")
+nodesTx <- insertRow(nodesTx, uid, "Sites d’intérêt culturels, patrimoniaux et archéologiques","Nation Mohawk de Kahnawà:ke")
+
+# Nation Wolastoqiyik Wahsipekuk
+uid <- which(nodesTx$network == "Nation Wolastoqiyik Wahsipekuk")
+nodesTx <- insertRow(nodesTx, uid, "Sites d’intérêt culturels, patrimoniaux et archéologiques","Nation Wolastoqiyik Wahsipekuk")
+
+# Public
+uid <- which(nodesTx$network == "Public")
+nodesTx <- insertRow(nodesTx, uid, "Sites d’intérêt culturels, patrimoniaux et archéologiques","Public")
+
+# Remove last line if empty
+ll <- nrow(nodesTx)
+if (is.na(nodesTx$group[ll])) nodesTx <- nodesTx[-ll, ]
 
 #=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=#
 # Link and nodes for drivers
@@ -186,17 +253,37 @@ nodesDr <- st %>%
            dplyr::select(title.x, fullname, cols) %>%
            rename(network = title.x, name = fullname, cols = cols) %>%
            left_join(cexDr, by = c('name'='drivers')) %>%
-           mutate(group = 'Stresseurs') %>%
+           mutate(group = 'Stresseurs environnementaux') %>%
            dplyr::select(group, network, name, cex, cols)
 
-# # Add transparent nodes for spacing between each stressors
-# randomString <- function() paste0(letters[runif(20,1,26)], collapse = '')
-#
-#
-#
-# # Ancrage
-# x <- data.frame(group = 'Stressors', network = 'Marine traffic', name = randomString(), cex = 0,
-#
+# Add blank spaces
+# Ancrage
+uid <- which(nodesDr$network == "Ancrage")
+nodesDr <- insertRow(nodesDr, uid, "Stresseurs environnementaux","Ancrage")
+
+# Naufrages
+uid <- which(nodesDr$network == "Naufrage")
+nodesDr <- insertRow(nodesDr, uid, "Stresseurs environnementaux","Naufrage")
+
+# Pollution maritime
+uid <- which(nodesDr$network == "Pollution maritime")
+nodesDr <- insertRow(nodesDr, uid, "Stresseurs environnementaux","Pollution maritime")
+
+# Pêche commerciale
+uid <- which(nodesDr$network == "Pêche commerciale")
+nodesDr <- insertRow(nodesDr, uid, "Stresseurs environnementaux","Pêche commerciale")
+
+# Dragage
+uid <- which(nodesDr$network == "Dragage")
+nodesDr <- insertRow(nodesDr, uid, "Stresseurs environnementaux","Dragage")
+
+# Déversements accidentels
+uid <- which(nodesDr$network == "Déversements accidentels")
+nodesDr <- insertRow(nodesDr, uid, "Stresseurs environnementaux","Déversements accidentels")
+
+# Remove last line if empty
+ll <- nrow(nodesDr)
+if (is.na(nodesDr$group[ll])) nodesDr <- nodesDr[-ll, ]
 
 #=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=#
 # Combine
@@ -229,23 +316,45 @@ rad1 = .925
 rad2 = 1
 shadowEdge = TRUE
 
-#=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=#
-# Graph elements
-#=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=#
 
+#=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=#
+# Graph 
+#=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=#
 png('./figures/figures-output/cumulative_effects_metanetwork.png', res = 300, width = 300, height = 300 ,units = "mm")
 # Plot
 par(mar = c(2,2,2,2))
 plot0(x = c(-1.1, 1.1))
 
-metanetwork$networkGroup$Var1[12] <- 'Others'
+# Remove problematic names 
+nmrm <- c("Pollution maritime","Déversements accidentels","Nation Wolastoqiyik Wahsipekuk")
+uid <- numeric()
+for(i in 1:length(nmrm)) uid[i] <- which(metanetwork$networkGroup$Var1 == nmrm[i])
+colNames <- rep("#ffffff", nrow(metanetwork$networkGroup))
+colNames[uid] <- metanetwork$networkGroup$cols[uid]
+metanetwork$networkGroup$Var1[uid] <- "."
+
 boxGroup(metanetwork,
          rad1 = rad1,
          colBox = metanetwork$networkGroup$cols,
-         colNames = metanetwork$networkGroup$colNames,
+         colNames = colNames,
          border = 'transparent',
          # border = '#000000',
-         cexNetwork = .75)
+         cexNetwork = .6)
+
+# # Problematic names 
+metanetwork$networkGroup$Var1[uid] <- nmrm
+arctext2 <- function(var1, l1, l2, cl = TRUE, cx = .6) {
+  uid <- metanetwork$networkGroup$Var1 == var1
+  middle <- mean(c(metanetwork$networkGroup$lower[uid],
+                   metanetwork$networkGroup$upper[uid]))
+  plotrix::arctext(x = as.character(l1),radius = rad2-.02, middle = middle, 
+                   col = "#ffffff", clockwise = cl, font = 2, cex = cx)
+  plotrix::arctext(x = as.character(l2), radius = rad1+.02, middle = middle, 
+                   col = "#ffffff", clockwise = cl, font = 2, cex = cx)  
+}
+arctext2("Déversements accidentels", "Déversements", "accidentels")
+arctext2("Pollution maritime", "Pollution", "maritime", cx = .55)
+arctext2("Nation Wolastoqiyik Wahsipekuk", "Wahsipekuk", "Nt. Wolastoqiyik", cl = FALSE, cx = .55)
 
 plotLinks(metanetwork, col = metanetwork$links$col)
 
@@ -281,13 +390,6 @@ boxGroup2(metanetwork,
          colBox = '#00000000', colNames = '#000000',
          border = '#000000',
          cexNetwork = 1.1)
-
-# Letter
-text(x = -1.1, y = 1.065, labels = 'b', cex = 1.5, font = 2)
-
-
-
-
 
 #<=~-.-~=><=~-.-~=><=~-.-~=><=~-.-~=><=~-.-~=>
 dev.off()
