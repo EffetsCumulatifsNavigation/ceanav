@@ -1,5 +1,7 @@
 # Annexe 6 {.unnumbered #annexe6}
 
+Équivalences entre les stresseurs environnementaux considérés pour l'évaluation des effets cumulatifs des activités maritimes dans le Saint-Laurent et le Saguenay et celles retrouvées dans la matrice de vulnérabilité des habitats proposée par @clarkemurray2015a.
+
 ```{r stresscomp}
 tab <- data.frame(
   stress = c(
@@ -63,8 +65,7 @@ tab <- data.frame(
 tab %>%
   knitr::kable(
     col.names = c("Sources de stress", "Équivalences"),
-    row.names = FALSE,
-    caption = "Équivalence entre les sources de stress considérées pour l'évaluation des effets cumulatifs des activités maritimes dans le Saint-Laurent et le Saguenay et celles retrouvées dans la matrice de vulnérabilité des habitats proposée par @clarkemurray2015a."
+    row.names = FALSE
   )
 
 ```

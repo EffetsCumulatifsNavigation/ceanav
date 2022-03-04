@@ -1,5 +1,7 @@
 # Annexe 7 {.unnumbered #annexe7}
 
+Équivalences entre les composantes valorisées considérées pour l'évaluation des effets cumulatifs des activités maritimes dans le Saint-Laurent et le Saguenay et celles retrouvées dans la matrice de vulnérabilité des habitats proposée par @clarkemurray2015a.
+
 ```{r cvcomp}
 tab <- data.frame(
   cv = c(
@@ -55,7 +57,6 @@ tab <- data.frame(
 tab %>%
   knitr::kable(
     col.names = c("Composantes valorisées", "Équivalences"),
-    row.names = FALSE,
-    caption = "Équivalence entre les composantes valorisées considérées pour l'évaluation des effets cumulatifs des activités maritimes dans le Saint-Laurent et le Saguenay et celles retrouvées dans la matrice de vulnérabilité des habitats proposée par @clarkemurray2015a."
+    row.names = FALSE
   )
 ```

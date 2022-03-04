@@ -1,5 +1,7 @@
 # Annexe 3 {.unnumbered #annexe3}
 
+Description du compendium de recherche préparé pour structurer l'évaluation des effets cumulatifs des activités maritimes au sein du Saint-Laurent et du Saguenay.
+
 #### ceanav <a href='https://github.com/EffetsCumulatifsNavigation/ceanav'><img src='./figures/logo.png' align="right" height="175" /></a> {.unnumbered}
 
 <!-- ```{r logoannexe3, out.width = '30%', fig.link = "https://github.com/EffetsCumulatifsNavigation/ceanav"}
