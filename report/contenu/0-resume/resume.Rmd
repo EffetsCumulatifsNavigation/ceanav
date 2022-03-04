@@ -33,13 +33,13 @@ ct2 <- function(dat) {
 ```
 
 
-Dans le cadre du Plan d’action Saint-Laurent (PASL), le Gouvernement du Canada et le Gouvernement du Québec collaborent depuis 2018 à la conception d’un cadre commun d’évaluation des effets cumulatifs des activités maritimes sur le Saint-Laurent et le Saguenay de concert avec les Premières Nations, divers acteurs du milieu maritime et les collectivités côtières. Une équipe de l’Université Laval a été mandatée afin d'entreprendre une projet pilote d'évaluation des effets cumulatifs. L'[objectif](#objectifs) du projet pilote était de proposer et de mettre à l’essai un cadre méthodologique d’évaluation des effets cumulatifs au sein d'une [zone d'étude](#zoneetude) qui couvre le Saint-Laurent (tronçon fluvial et estuaire) et la rivière Saguenay (partie en eau profonde). Ce projet pilote se concentre sur l'évaluation des effets cumulatifs de [7 stresseurs environnementaux](#stintro) issus des activités maritimes sur [5 composantes valorisées](#cvintro) identifiées au préalable lors d’activités de concertation et d’ateliers de travail avec des experts du milieu, des représentants autochtones et de multiples parties prenantes. 
+Dans le cadre du Plan d’action Saint-Laurent (PASL), le Gouvernement du Canada et le Gouvernement du Québec collaborent depuis 2018 à la conception d’un cadre commun d’évaluation des effets cumulatifs des activités maritimes sur le Saint-Laurent et le Saguenay de concert avec les Premières Nations, divers acteurs du milieu maritime et les collectivités côtières. Une équipe de l’Université Laval a été mandatée afin d'entreprendre une évaluation pilote des effets cumulatifs. L'[objectif](#objectifs) du projet pilote était de proposer et de mettre à l’essai un cadre méthodologique d’évaluation des effets cumulatifs au sein d'une [zone d'étude](#zoneetude) qui couvre le Saint-Laurent (tronçon fluvial et estuaire) et la rivière Saguenay (partie en eau profonde). Ce projet pilote se concentre sur l'évaluation des effets cumulatifs de [7 stresseurs environnementaux](#stintro) issus des activités maritimes sur [5 composantes valorisées](#cvintro) identifiées au préalable lors d’activités de concertation et d’ateliers de travail avec des experts du milieu et les collaborateurs identifiés précédemment. 
 
 La [méthode](#methode) sélectionnée afin d'évaluer les [effets cumulatifs](#sectioncea) des activités maritimes au sein de la zone d'étude provient de @halpern2008a et requiert trois types de données : 1) [la présence ou l'absence cartographiée des composantes valorisées](#cvmethod), 2) [la distribution spatiale et l’intensité relative des stresseurs environnementaux](#strmethod) et 3) [la vulnérabilité relative de chaque composante valorisée à chaque stresseur](#vulnmethod). La méthode proposée combine ces trois éléments afin d'obtenir des prédictions d'[effets cumulatifs relatifs et spatialement explicites](#ceamethod).
 
 Dans le cadre de la présente évaluation, le rassemblement des données nécessaires à l'application de la méthode d'évaluation des effets cumulatifs correspond au [portrait](#portrait) de la zone d'étude. La caractérisation des [stresseurs environnementaux](#strportrait) a été obtenue à partir de l'intégration de `r src(st)` bases de données et résulté en la description de `r length(unique(st$title))` stresseurs divisés en `r nrow(st)` sous-catégories : `r ct1(st)`. 
 La caractérisation des [composantes valorisées](#cvportrait) a quant à elle été effectuée à partir de l'intégration de `r src(cv)` bases de données et résulté en la description de `r length(unique(cv$title))` stresseurs divisés en `r nrow(cv)` sous-catégories : `r ct2(cv)`. 
-Enfin, une approche combinant divers métriques d’exposition et de sensibilité -- *e.g.* fréquence des stresseurs, impacts trophiques, résistance, résilience, statut légaux -- afin de caractériser la [vulnérabilité relative](#vulnportrait) de l'ensemble des catégories de composantes valorisées à l'ensemble des catégories des stresseurs environnementaux.
+Enfin, une approche combinant divers métriques d’exposition et de sensibilité -- *e.g.* fréquence des stresseurs, impacts trophiques, résistance, résilience, statut légaux -- a été utilisée afin de caractériser la [vulnérabilité relative](#vulnportrait) de l'ensemble des catégories de composantes valorisées à l'ensemble des catégories des stresseurs environnementaux.
 
 Nous présentons ici les constats généraux issus de l'évaluation des effets cumulatifs en points de forme. Des constats additionnels sont présentés au sein du rapport et pourraient également être faits en explorant davantage les résultats obtenus; nous invitons le lecteur à s'attarder à la section \@ref(resultats) du rapport pour davantage d'informations et à explorer les figures qui y sont présentées plus en détails.
 
@@ -47,8 +47,8 @@ Nous présentons ici les constats généraux issus de l'évaluation des effets c
 
 - **Distribution des stresseurs environnementaux issus des activités maritimes**
   - L'ensemble de la zone d'étude est exposé aux stresseurs environnementaux;
-  - Les grandes villes portuaires et la voie navigable sont particulièrement exposées;
-  - La navigation et la pollution maritime sont les stresseurs les plus répandus.
+  - Les grandes villes portuaires et la voie navigable sont particulièrement exposées aux stresseurs cumulés;
+  - La navigation et la pollution maritime sont les stresseurs les plus répandus dans la zone d'étude.
 
 <br/>
 
@@ -61,14 +61,14 @@ Nous présentons ici les constats généraux issus de l'évaluation des effets c
 <br/>
 
 - **Distribution des effets cumulatifs**
-  - L'entièreté de la zone d'étude est affectée par les effets cumulatifs des activités maritimes;
+  - L'entièreté de la zone d'étude est affectée par les effets cumulatifs des activités maritimes à divers niveaux d'intensité;
   - Les effets cumulatifs sont particulièrement intenses et concentrés au sein du secteur fluvial; les effets y sont plus intenses dans les régions de Québec et du sud de l'Île d'Orléans, du lac Saint-Pierre et du chenal de navigation entre Trois-Rivières et Montréal;
   - Les effets cumulatifs sont plus diffus au sein du secteur maritime; les effets les plus intenses sont situés à l'embouchure de la Rivière Saguenay.
 
   <br/>
 
 - **Stresseurs environnementaux les plus importants**
-  - La navigation et la pollution maritime ont les effets les plus importants à l'échelle régionale puisqu'ils sont les stresseurs les plus répandus au sein de la zone d'étude;
+  - La navigation et la pollution maritime ont les effets prédits les plus importants à l'échelle régionale puisqu'ils sont les stresseurs les plus répandus au sein de la zone d'étude;
   - Les pêches commerciales ont des effets importants sur un nombre limité de composantes valorisées considérées, comme les gisements coquilliers et certains sites d'intérêt culturels, patrimoniaux et archéologiques;
   - Les sites d'ancrage, les déversements accidentels et les activités de dragage ont des effets localisés sur certaines composantes valorisées. Ces stresseurs, bien que moins répandus, ajoutent leurs effets à ceux de la navigation et de la pollution maritime et sont généralement présents au sein des milieux qui sont les plus affectés par les effets cumulatifs (*e.g.* lac Saint-Pierre).
 
@@ -76,13 +76,13 @@ Nous présentons ici les constats généraux issus de l'évaluation des effets c
 
 - **Composantes valorisées les plus affectées**
   - Les sites d'intérêt culturels, patrimoniaux et archéologiques sont particulièrement exposés aux effets des activités maritimes. Bien que ce résultat soit attendu considérant leur vulnérabilité élevée, ce constat demeure important et témoigne du chevauchement important entre les sites d'intérêt pour les Premières Nations et les activités maritimes dans la zone d'étude;
-  - Les sites d'intérêt des Premières Nations situés au sein du secteur fluvial sont davantage exposés aux effets cumulatifs de la navigation dû à la concentration des effets au sein de ce milieu;
+  - Les sites d'intérêt des Premières Nations situés au sein du secteur fluvial sont davantage exposés aux effets cumulatifs des activités maritimes dû à la concentration des effets au sein de ce milieu;
   - L'intégrité des berges au sein du secteur fluvial est particulièrement affectée par la navigation, et ce particulièrement au sein du lac Saint-Pierre;
-  - Les habitats considérés sont affectés par une diversité importante de stresseurs environnementaux et il y a une diversité importante au niveau des effets totaux prédits entre les différents types d'habitats
+  - Les habitats considérés sont affectés par une diversité importante de stresseurs environnementaux et il y a une diversité importante au niveau des effets totaux prédits entre les différents types d'habitats;
   - Bien que les mammifères marins semblent moins affectés que les autres composantes valorisées par les effets cumulatifs des activités maritimes, il est important de considérer la large répartition spatiale de ces espèces au sein du secteur maritime de la zone d'étude. Les effets cumulatifs sur les mammifères marins sont plutôt localisés au niveau de l'embouchure de la Rivière Saguenay.
 
   <br/>
 
 - **Régions administratives les plus affectées**
-  - Les régions administratives du secteur fluvial sont les plus affectées par les effets cumulatifs des activités maritimes, un constat particulièrement important pour la Montérégie;
-  - La Côte Nord est la région administrative la plus affectée au sein du secteur maritime.
+  - Les régions administratives du secteur fluvial sont les plus affectées par les effets cumulatifs des activités maritimes, un constat particulièrement important pour la Montérégie. Ces effets sont influencés majoritairement par la navigation et principalement par le transport de marchandise. (*e.g.* pétrolier, cargaison sèche, cargo et porte-conteneurs);
+  - La Côte Nord est la région administrative la plus affectée au sein du secteur maritime, principalement dû aux effets de la navigation sur les mammifères marins.

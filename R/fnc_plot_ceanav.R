@@ -111,12 +111,12 @@ plot_ceanav.sf <- function(dat, main = NULL, type = NULL, subtitle = NULL, unit_
   # ------------------
   # Inserts location
   # rect(fluvial[1], fluvial[3], fluvial[2], fluvial[4], lty = 2, border = "#00000088")
-  rect(montreal[1], montreal[3], montreal[2], montreal[4], lty = 2,
-       border = paste0(global_param$col$insert[1], "88"))
-  rect(lacstpierre[1], lacstpierre[3], lacstpierre[2], lacstpierre[4], lty = 2,
-       border = paste0(global_param$col$insert[2], "88"))
-  rect(quebec[1], quebec[3], quebec[2], quebec[4], lty = 2,
-       border = paste0(global_param$col$insert[3], "88"))
+  # rect(montreal[1], montreal[3], montreal[2], montreal[4], lty = 2,
+  #      border = paste0(global_param$col$insert[1], "88"))
+  # rect(lacstpierre[1], lacstpierre[3], lacstpierre[2], lacstpierre[4], lty = 2,
+  #      border = paste0(global_param$col$insert[2], "88"))
+  # rect(quebec[1], quebec[3], quebec[2], quebec[4], lty = 2,
+  #      border = paste0(global_param$col$insert[3], "88"))
 
   # ------------------
   # Legend
@@ -222,49 +222,49 @@ plot_ceanav.sf <- function(dat, main = NULL, type = NULL, subtitle = NULL, unit_
     }
   }
 
-  # ------------------------------------------------------------------------
-  # Inserts
-  # Place name
-  name <- function(nm) {
-    xmin <- par("usr")[1]
-    xmax <- par("usr")[2]
-    ymin <- par("usr")[3]
-    ymax <- par("usr")[4]
-    x <- xmin + 2500
-    y <- ymax - 4000
-    text(x, y, nm, adj = c(0,.5), cex = .5, col = global_param$col$integrated$textOff)
-  }
-
-  # ---------------------------
-  # Montreal
-  par(new = TRUE)
-  par(fig = c(.525,.68,.05,.3), mar = c(0,0,0,0))
-  # par(fig = c(.545,.745,.05,.25), mar = c(0,0,0,0))
-  plot0(x = c(montreal$xmin, montreal$xmax), y = c(montreal$ymin+5000, montreal$ymax))
-  box(col = paste0(global_param$col$insert[1], "88"))
-  plotDat()
-  name("Montréal")
-
-  # ---------------------------
-  # Lac St-Pierre
-  par(new = TRUE)
-  par(fig = c(.7,.965,.05,.3), mar = c(0,0,0,0))
-  # par(fig = c(.765,.965,.05,.25), mar = c(0,0,0,0))
-  plot0(x = c(lacstpierre$xmin, lacstpierre$xmax), y = c(lacstpierre$ymin, lacstpierre$ymax))
-  box(col = paste0(global_param$col$insert[2], "88"))
-  plotDat()
-  name("Lac St-Pierre")
-
-
-  # ---------------------------
-  # Québec
-  par(new = TRUE)
-  par(fig = c(.7,.965,.325,.575), mar = c(0,0,0,0))
-  # par(fig = c(.765,.965,.275,.475), mar = c(0,0,0,0))
-  plot0(x = c(quebec$xmin, quebec$xmax), y = c(quebec$ymin, quebec$ymax))
-  box(col = paste0(global_param$col$insert[3], "88"))
-  plotDat()
-  name("Québec")
+  # # ------------------------------------------------------------------------
+  # # Inserts
+  # # Place name
+  # name <- function(nm) {
+  #   xmin <- par("usr")[1]
+  #   xmax <- par("usr")[2]
+  #   ymin <- par("usr")[3]
+  #   ymax <- par("usr")[4]
+  #   x <- xmin + 2500
+  #   y <- ymax - 4000
+  #   text(x, y, nm, adj = c(0,.5), cex = .5, col = global_param$col$integrated$textOff)
+  # }
+  # 
+  # # ---------------------------
+  # # Montreal
+  # par(new = TRUE)
+  # par(fig = c(.525,.68,.05,.3), mar = c(0,0,0,0))
+  # # par(fig = c(.545,.745,.05,.25), mar = c(0,0,0,0))
+  # plot0(x = c(montreal$xmin, montreal$xmax), y = c(montreal$ymin+5000, montreal$ymax))
+  # box(col = paste0(global_param$col$insert[1], "88"))
+  # plotDat()
+  # name("Montréal")
+  # 
+  # # ---------------------------
+  # # Lac St-Pierre
+  # par(new = TRUE)
+  # par(fig = c(.7,.965,.05,.3), mar = c(0,0,0,0))
+  # # par(fig = c(.765,.965,.05,.25), mar = c(0,0,0,0))
+  # plot0(x = c(lacstpierre$xmin, lacstpierre$xmax), y = c(lacstpierre$ymin, lacstpierre$ymax))
+  # box(col = paste0(global_param$col$insert[2], "88"))
+  # plotDat()
+  # name("Lac St-Pierre")
+  # 
+  # 
+  # # ---------------------------
+  # # Québec
+  # par(new = TRUE)
+  # par(fig = c(.7,.965,.325,.575), mar = c(0,0,0,0))
+  # # par(fig = c(.765,.965,.275,.475), mar = c(0,0,0,0))
+  # plot0(x = c(quebec$xmin, quebec$xmax), y = c(quebec$ymin, quebec$ymax))
+  # box(col = paste0(global_param$col$insert[3], "88"))
+  # plotDat()
+  # name("Québec")
 
 
   # dev.off()
