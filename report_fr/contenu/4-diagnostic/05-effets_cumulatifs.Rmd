@@ -1,0 +1,91 @@
+## Effets cumulatifs {#cearesult}
+
+> La méthode utilisée pour obtenir les résultats suivants est présentée à la section \@ref(ceamethod) du rapport.
+
+Le résultat principal de l'évaluation applique le modèle global d'évaluation des effets cumulatifs en incluant la distribution et l'intensité des stresseurs environnementaux, la distribution des composantes valorisées, et la vulnérabilité des composantes valorisées aux stresseurs environnementaux. La présentation des résultats du modèle global a ainsi déjà été amorcée par l'exploration des résultats des modèles partiels (voir sections \@ref(strcumresult), \@ref(cvcumresult) et \@ref(cumexpresult)). En incluant la vulnérabilité des composantes valorisées aux stresseurs environnementaux, le modèle global permet de moduler l'intensité des effets cumulatifs prédits; la distribution des effets cumulatifs peut ainsi être similaire à celle de l'exposition cumulée, mais l'intensité relative des effets prédits peut être supérieure ou inférieure en fonction de la vulnérabilité des composantes valorisées (voir section \@ref(methode) pour plus de détails).
+
+Les résultats de l'évaluation des effets cumulatifs révèlent que les milieux les plus affectés par les stresseurs environnementaux sont similaires à ceux identifiés par l'évaluation de l'exposition cumulée (Figures \@ref(fig:cumExp) et \@ref(fig:cumEffects)); une interprétation similaire peut ainsi être faite quant à la distribution spatiale des effets cumulatifs. Les composantes valorisées sont à risque des effets cumulatifs des stresseurs environnementaux issus des activités maritimes dans l'ensemble de la zone d'étude. Les milieux les plus à risque des effets cumulatifs des activités maritimes sont ceux où se chevauchent une plus grande diversité de composantes valorisées (Figure \@ref(fig:cvCum)) et de stresseurs environnementaux (Figure \@ref(fig:stCum)). 
+
+Au sein du secteur fluvial, ce sont les régions de Québec et le sud de l'Île d'Orléans, ainsi que l'entièreté du chenal de navigation entre Trois-Rivières et Montréal, incluant le lac Saint-Pierre, qui sont particulièrement à risque; l'embouchure de la rivière Saguenay est la région du secteur maritime la plus affectée par les stresseurs reliés aux activités maritimes (Figure \@ref(fig:cumEffects) et \@ref(fig:cumEffectsPanel)). En terme de composantes valorisées, ces milieux affichent une diversité importante d'habitats et de sites d'intérêt, en plus d'afficher des zones où l'intégrité des berges est à risque des activités maritime un peu partout (Figure \@ref(fig:cumEffectsPanel) et \@ref(fig:cvPanel)). Ces milieux sont également soumis à une diversité importantes de stresseurs environnementaux à haute intensité (Figure \@ref(fig:stPanel))
+
+Au sein du secteur maritime, les effets cumulatifs prédits sont largement répandus à faible intensité (Figure \@ref(fig:cumEffects)). Seule l'embouchure de la Rivière Saguenay affiche des effets cumulatifs plus intenses (Figure \@ref(fig:cumEffects)) qui sont largement dictés par les effets de la navigation sur les mammifères marins qui fréquentent cette région de la zone d'étude (Figure \@ref(fig:cumEffectsPanel)). En plus des mammifères marins, plusieurs sites d'intérêt ont également été identifiés dans cette région (Figure \@ref(fig:cumEffectsPanel)).
+
+<br/>
+
+```{r cumEffects, fig.cap = "Distribution des effets cumulatifs des sources de stress reliés aux activités maritimes sur les composantes valorisée", out.width = '100%', fig.link = "./figures/figures-output/cumulative_effects.png"}
+knitr::include_graphics("./figures/figures-output/cumulative_effects.png")
+```
+
+<br/>
+
+```{r cumEffectsPanel, fig.cap = "Distribution des effets cumulatifs des sources de stress reliés aux activités maritimes sur l'intégrité des berges, les habitats, les mammifères marins et les sites d’intérêt culturels, patrimoniaux et archéologiques", out.width = '100%', fig.link = "./figures/figures-output/cumulative_effects_panel.png"}
+knitr::include_graphics("./figures/figures-output/cumulative_effects_panel.png")
+```
+
+<br/>
+
+## Chemins d'effet
+
+```{r pathwayssetup, echo = FALSE}
+st <- read.csv("../data/data-metadata/metadata_stresseurs.csv")
+cv <- read.csv("../data/data-metadata/metadata_composantes_valorisees.csv")
+```
+
+L'évaluation des effets cumulatifs proposée permet en théorie d'explorer l'ensemble des combinaisons de stresseurs et de composantes valorisées incluses à l'évaluation. Considérant les `r nrow(st)` catégories de stresseurs et les `r nrow(cv)` catégories de composantes valorisées, il s'agit de près de 2 000 paires possibles; ces paires forment l'ensemble des chemins d'effets directs que peuvent emprunter les stresseurs environnementaux pour affecter les composantes valorisées. Un chemin d'effet établit les liens entre les activités et leurs incidences potentielles sur divers aspects de l’écosystème [@dfo2020]. 
+
+Bien que nous ne pouvons explorer l'ensemble de ces chemins d'effet au sein de ce rapport, les figures \@ref(fig:metanetwork) et \@ref(fig:ceakm) fournissent une représentation visuelle de l'ensemble de ces combinaisons et de la contribution des stresseurs aux effets cumulatifs totaux prédits pour chaque composante valorisée considérée. Les effets totaux des stresseurs environnementaux sur les composantes valorisées ont été évalués par la somme des effets divisée par la superficie totale de la composante valorisée sur laquelle un effet est prédit. Par exemple, si un habitat d'une superficie de 2 $km^2$ est affecté par deux stresseurs ayant des effets prédits de 0.25 et 0.75, respectivement, l'effet total sur la composante valorisée est de 0.5 $km^{-2}$. Plus un stresseur a une répartition spatiale importante, plus son effet total risque d'être élevé; similairement, les effets totaux risquent d'être plus élevés plus une composante valorisée dont la répartition est moins répandue. 
+
+```{r meta}
+cekm <- read.csv("../data/data-output/cumulative_effects_cv_km2.csv") %>%
+        select(-cv, -area, -cea) %>%
+        as.matrix()
+uid <- cekm > 0
+npof <- sum(uid)
+mpof <- round(mean(cekm[uid]),2)
+spof <- round(sd(cekm[uid]),2)
+```
+
+La figure \@ref(fig:metanetwork) permet de visualiser l'ensemble des chemins d'effets directs prédits au sein de l'évaluation des effets cumulatifs. Les liens représentent la présence d'un effet prédit d'un stresseur sur une composante valorisée. La taille des points représente les effets totaux prédits sur les composantes valorisées ou en provenance des stresseurs environnementaux. Il est important de noter que cette figure ne devrait pas être interprétée dans les détails; elle permet plutôt de visualiser en un coup d'oeil la quantité d'information disponible au sein de l'évaluation des effets cumulatifs effectuée. On y dénombre `r npof` chemins d'effet directs exerçant un effet relatif moyen de `r mpof` $\pm$ `r spof`, considérant que l'effet relatif maximal possible est de 1 selon notre méthode d'évaluation.  
+
+La figure \@ref(fig:ceakm) est complémentaire à la figure \@ref(fig:metanetwork) et permet d'explorer les chemins d'effets plus en détails en présentant la contribution relative de chaque stresseur aux effets prédits pour chaque composante valorisée. On y note des effets importants de la navigation et de la pollution maritime sur l'ensemble des composantes valorisées considérées. Ces résultats sont attendus puisque ces stresseurs sont les plus répandus parmi ceux considérés pour l'évaluation. En général, les autres stresseurs environnementaux ont des effets totaux plus faibles, sauf les pêches commerciales qui affectent certaines catégories de composantes valorisées plus intensément, comme les gisements coquilliers et certains sites d'intérêt culturels, patrimoniaux et archéologiques. Les effets totaux plus faibles peuvent être expliqués par la distribution davantage ponctuelle des autres stresseurs environnementaux au sein de la zone d'étude. 
+
+Les sites d'intérêt culturels, patrimoniaux et archéologiques sont les plus exposés aux effets des stresseurs issus des activités maritimes. Il faut toutefois noter que l'ensemble des sites d'intérêt ont été considérés vulnérables à l'ensemble des stresseurs environnementaux; en tant que tel, un chevauchement spatial entre un stresseur et un site d'intérêt était suffisant à l'identification d'un chemin d'effet. Une comparaison entre les effets totaux sur les sites d'intérêt et les autres composantes valorisées devrait ainsi être évitée, ou minimalement prendre en considération la vulnérabilité maximale attribuée aux sites d'intérêt. Il s'agit néanmoins d'un résultat important qui est informatif quant à l'exposition des sites d'intérêt aux activités maritimes dans la zone d'étude. 
+
+Outre les sites d'intérêt, l'intégrité des berges est la composante valorisée qui est la plus affectée, et ce principalement par la navigation et en moindre mesure par les activités de dragage. Les effets totaux sur les habitats varient quant à eux selon les types d'habitats, bien que ces derniers soient affectés par une diversité importante de stresseurs environnementaux. 
+
+Finalement, la composante valorisée la moins affectée est celle des mammifères marins. Par contre, il est important de rappeler que ces espèces couvrent un territoire très important et que par conséquent l'évaluation par $km^2$ sous-évalue les scores d'effets cumulatifs prédits. Une analyse visant spécifiquement les milieux essentiels de ces espèces augmenterait sans doute les effets totaux prédits sur les mammifères marins. Il est également important de ne pas minimiser les effets cumulatifs sur les mammifères marins puisqu'une des zones les plus à risque des effets cumulatifs des activités maritimes se trouve à l'embouchure de la Rivière Saguenay dû à la présence importante de mammifères marins (Figures \@ref(fig:cumEffects) et \@ref(fig:cumEffectsPanel)). 
+
+
+<br/>
+
+```{r metanetwork, fig.cap = "Réseau multiplex présentant la présence d'un effet des stresseurs individuels sur chaque composante valorisée considérées à l'évaluation des effets cumulatifs (*i.e.* liens colorés), les effets cumulatifs totaux sur chaque composante valorisée (*i.e.* taille des points des composantes valorisées) et l'effet moyen des stresseurs (*i.e.* taille des points des stresseurs). Cette visualisation permet de représenter la quantité d'information disponible au sein de la base de données générée par l'évaluation des effets cumulatifs.", out.width = '100%', fig.link = "./figures/figures-output/cumulative_effects_metanetwork.png"}
+knitr::include_graphics("./figures/figures-output/cumulative_effects_metanetwork.png")
+```
+
+<br/>
+
+```{r ceakm, fig.cap = "Contribution moyenne par $km^2$ des stresseurs aux effets cumulatifs des activités maritimes sur les composantes valorisées dans la zone d'étude", out.width = '100%', fig.link = "./figures/figures-output/cumulative_effects_regional_contribution.png"}
+knitr::include_graphics("./figures/figures-output/cumulative_effects_regional_contribution.png")
+```
+
+<br/>
+
+
+## Régions administratives
+
+Une évaluation des effets cumulatifs par $km^2$ au sein des 11 régions administratives [@mern2021b] qui se séparent la zone d'étude a également été effectuée afin d'explorer les différences régionales au niveau de l'intensité des effets cumulatifs (Figures \@ref(fig:regionadmin) et \@ref(fig:regionadminpanel)). L'évaluation globale combinant l'ensemble des composantes valorisées révèle que les régions administratives du secteur fluvial sont beaucoup plus à risque des effets cumulatifs des activités maritimes, alors que le secteur maritime semble moins à risque. La Montérégie en particulier semble être la région la plus affectée par les effets des activités maritimes. Ces observations sont dues à la concentration des activités maritimes au sein d'un corridor beaucoup plus étroit au sein du secteur fluvial comparativement au secteur maritime. Bien que cette observation ne soit pas étonnante, elle suggère qu'une augmentation du trafic maritime au sein du secteur maritime risque d'avoir des conséquences disproportionnées au sein du secteur fluvial si ce trafic se dirige vers les Grands Lacs. Le passage d'un navire supplémentaire à Québec ne peut ainsi être interprété de la même façon qu'un navire supplémentaire à Montréal. Par extension à la navigation, le second stresseur d'importance au sein des régions administratives du secteur fluvial est le risque de pollution maritime. Les types de navires ayant les effets les plus importants sont d'ailleurs ceux reliés au transport de marchandise (*e.g.* pétrolier, cargaison sèche, cargo et porte-conteneurs). Les navires gouvernementaux semblent également pouvoir affecter négativement les composantes valorisées de la zone d'étude, sans doute dû à des routes de navigations moins contraintes par la voie navigable et ainsi des activités plus répandues à moindre intensité sur l'ensemble de la zone d'étude. La catégorie de navigation gouvernementale et de recherche est toutefois composée d'une diversité importante de types de navires, dont des embarcations militaires, des navires de patrouille et des navires de recherche scientifique. Cette diversité accroît l'incertitude quant à la vulnérabilité des composantes valorisées à ce type de navigation, et par conséquent aux effets prédits. 
+
+
+<br/>
+
+```{r regionadmin, fig.cap = "Contribution moyenne par $km^2$ des stresseurs aux effets cumulatifs des activités maritimes sur les composantes valorisées dans les régions administratives du Québec couvrant la zone d'étude", out.width = '100%', fig.link = "./figures/figures-output/cumulative_effects_region_cea.png"}
+knitr::include_graphics("./figures/figures-output/cumulative_effects_region_cea.png")
+```
+
+<br/>
+
+```{r regionadminpanel, fig.cap = "Contribution moyenne par $km^2$ des stresseurs aux effets cumulatifs des activités maritimes sur l'intégrité des berges, les habitats, les mammifères marins et les sites d’intérêt culturels, patrimoniaux et archéologiques dans les régions administratives du Québec couvrant la zone d'étude", out.width = '100%', fig.link = "./figures/figures-output/cumulative_effects_region_cea_panel.png"}
+knitr::include_graphics("./figures/figures-output/cumulative_effects_region_cea_panel.png")
+```
+
+<br/>

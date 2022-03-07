@@ -1,0 +1,15 @@
+# Appendix 5 {.unnumbered #annexe5}
+
+Liste des espèces floristiques à statut désignées en vertu de la Loi sur les espèces menacées ou vulnérables et disponibles par le Centre de données sur le patrimoine naturel du Québec [CDPNQ; @cdpnq2021b].
+
+```{r}
+meta <- read_yaml("../data/data-metadata/int_cv_habitat.yml")
+tab <- as.data.frame(meta$dataDescription$CDPNQ$Flore) %>%
+       mutate(Scientific = glue("*{Scientific}*")) %>%
+       arrange(Statut, Common)
+tab %>%
+  knitr::kable(
+    col.names = c("Statut", "Nom scientifique", "Nom commun"),
+    row.names = FALSE
+  )
+```

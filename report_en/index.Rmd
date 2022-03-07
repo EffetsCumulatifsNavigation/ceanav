@@ -1,0 +1,90 @@
+---
+title: "Cumulative Effects of Marine Vessel Activities in the St. Lawrence River and the Saguenay River – Pilot Project"
+# subtitle: "Rapport préliminaire"
+author: "David Beauchesne, Cindy Grant, Philippe Archambault"
+date: "`r Sys.Date()`"
+knit: "bookdown::render_book"
+documentclass: scrbook
+bibliography: [TC.bib]
+# biblio-style: apalike
+csl: frontiers.csl
+link-citations: yes
+colorlinks: yes
+lot: yes
+lof: yes
+fontsize: 12pt
+monofont: "Courier"
+monofontoptions: "Scale=0.7"
+site: bookdown::bookdown_site
+always_allow_html: true
+---
+
+<!-- description: "TO WRITE"
+url: 'https\://bookdown.org/yihui/bookdown/'
+github-repo: rstudio/bookdown
+cover-image: images/cover.jpg -->
+
+<!--
+suppressWarnings(bookdown::render_book("index.Rmd", "bookdown::gitbook"))
+-->
+
+<!--
+<img src="https://img.shields.io/badge/Zone-Fluvial-brightgreen">
+-->
+
+
+```{r setup, include = FALSE, purl = FALSE}
+knitr::opts_chunk$set(
+  comment = "#>",
+  collapse = TRUE,
+  warning = FALSE,
+  echo = FALSE,
+  message = FALSE,
+  dev = "png",
+  dpi = 108,
+  fig.width = 8,
+  fig.height = 6,
+  fig.align = 'center',
+  width = 120#,
+  # table.attr = 'class="flat-table"'
+)
+
+
+
+# Load project package
+library(ceanav)
+```
+
+# {-}
+
+#### Université Laval {-}
+
+David Beauchesne, Ph.D. <br/>
+Postdoctoral researcher<br/>
+david.beauchesne@hotmail.com<br/>
+
+<br/>
+
+Cindy Grant<br/>
+Research professional<br/>
+cindy.grant@bio.ulaval.ca<br/>
+
+<br/>
+
+Philippe Archambault<br/>
+Professor<br/>
+philippe.archambault@bio.ulaval.ca<br/>
+
+
+#### Transport Canada {-}
+
+Catherine Guillemette<br/>
+Environmental assessment advisor<br/>
+catherine.guillemette@tc.gc.ca<br/>
+
+<br/>
+
+
+#### Citation {-}
+
+Beauchesne D, Grant C, Archambault P (2022) Cumulative Effects of Marine Vessel Activities in the St. Lawrence River and the Saguenay River – Pilot Project. Report for Transport Canada.

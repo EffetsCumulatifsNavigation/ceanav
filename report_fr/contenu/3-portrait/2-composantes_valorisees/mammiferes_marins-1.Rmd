@@ -1,0 +1,182 @@
+### Mammifères marins {#mammiferes_marins}
+
+> ***Nous remercions Sonia Giroux du Réseau d’observation de mammifères marins et Aurélie Cosandey-Godin de WWF-Canada	pour les échanges et le soutien.***
+
+
+```{r mm_setup, echo = FALSE, results = 'asis'}
+meta <- read_yaml("../data/data-metadata/int_cv_mammiferes_marins.yml")
+show_source(meta$rawData)
+```
+
+<br/>
+
+<!--
+Citation: Le WWF-Canada et le Réseau d’observation de mammifères marins. Données cartographiques : Navires et baleines de l’Atlantique Nord-Ouest : Guide à l’intention de l’industrie maritime, 2e édition. 2021. Données disponibles sur le site https://www.navigationbaleines.ca/fr/accueil/
+--->
+
+La caractérisation de la distribution des mammifères marins dans la zone d'étude provient de la deuxième édition d'un guide publié à l'intention des navigateurs qui fréquentent l'Atlantique Nord-Ouest [@wwfromm2021]. Ce guide vise à informer les navigateurs sur la problématique de collisions entre navires et baleines, sur les mesures permettant de minimiser les incidents, sur les différentes espèces de baleines et de la tortue luth sur le territoire et de leur présence potentielle, et sur des zones où une vigilance accrue est de mise. Ce guide présente des cartes de distribution pour neuf espèces de mammifères marins qui fréquentent l'Atlantique Nord-Ouest [@wwfromm2021; @wwfromm2021b]. Ces espèces ont été sélectionnées dû à leur statut de conservation et à leur risque connu de collision avec des navires.
+
+Les cartes de distributions ont été évaluées grâce à l'intégration de 14 ensembles de données distincts provenant d'observations scientifiques et opportunistes (Tableau \@ref(tab:datamm); @wwfromm2021c). Les données d'observations couvrant la période de 2010 à 2015 et les limites géographiques de 40$^o$ à 55$^o$ N et de -72$^o$ à -48$^o$ O ont été sélectionnées pour créer les cartes partagées dans le guide. L'aire d'étude a été divisée en une grille régulière de 0.05$^o$ x 0.05$^o$. Pour chaque espèce, le nombre d'observations relevées au sein de 14 bases de données disponibles a été évalué pour chaque cellule de la grille d'étude. Un lissage gaussien -- *i.e.* méthode d'interpolation basée sur une distribution normale -- de 0.2$^o$ a ensuite été appliqué sur la grille. Les valeurs obtenues dans chaque cellule ont été normalisées par le nombre total d'observations pour une espèce; la valeur d'une cellule représente ainsi la proportion du nombre total d'observations par espèce au sein de l'aire d'étude. Finalement, une transformation logarithmique a ensuite été appliquée afin de minimiser l'effet des valeurs extrêmes sur les cartes résultantes.
+
+Des mises en gardes accompagnent ces cartes et sont rapportées *verbatim* à ce rapport:
+
+> - L'effort d'observation n'a pas été quantifié et varie considérablement dans le temps et l'espace. Les données représentent l’occurrence relative des données d’observation signalées plutôt que la densité ou l'abondance réelle de l'espèce.
+
+> - La qualité de certaines des données d'observation est inconnue. Les observations proviennent de personnes ayant des niveaux variés d’expertise dans l'identification des mammifères marins.
+
+
+<br/>
+
+```{r datamm}
+tab <- data.frame(nom = c("Whitehead, Université Dalhousie",
+                          "WWAM",
+                          "WWAM_C",
+                          "Predator pelagic prey",
+                          "NAISS",
+                          "NARW",
+                          "NARW",
+                          "WSDB",
+                          "TC",
+                          "MICS",
+                          "NOAA",
+                          "NARWC",
+                          "AOM_MMON",
+                          "Shipping_MMON"),
+                 temp = c("1988-2019",
+                          "2015-2019",
+                          "2015-2019",
+                          "2015-2018",
+                          "2016",
+                          "2017",
+                          "2018",
+                          "1963-2019",
+                          "2018",
+                          "2014-2018",
+                          "2018-2020",
+                          "2015-2019",
+                          "2014-2019",
+                          "2015-2019"),
+                 prop = c("Université Dalhousie",
+                          "Parcs Canada",
+                          "Parcs Canada",
+                          "Parcs Canada",
+                          "Pêches et Océans Canada",
+                          "Pêches et Océans Canada",
+                          "Pêches et Océans Canada",
+                          "Base de données des observations de mammifères marins et d’animaux pélagiques, Pêches et Océans Canada, Dartmouth, N.-É. [2020/02/13]",
+                          "Transports Canada",
+                          "Station de recherche des îles Mingan",
+                          "National Oceanic and Atmospheric Administration",
+                          "North Atlantic Right Whale Consortium",
+                          "Réseau d’observation de mammifères marins",
+                          "Réseau d’observation de mammifères marins"),
+                  esp = c(27,7,7,7,39,31,39,67,19,11,5,16,8,35),
+                  obs = c(2464,1353,1774,816,2508,2910,7312,24538,3517,4808,2699,18190,4705,5891),
+                 type = c("S/O","S","S","S","S","S","S","O","S","S","S","S","S","O"))
+# -----
+tab %>%
+  knitr::kable(
+    col.names = c("Nom de l’ensemble de données","Série temporelle","Propriétaire","No d’espèces",
+                  "No d’observations","Scientifique (S) ou Opportuniste (O)"),
+    row.names = FALSE,
+    caption = "Liste des ensembles de données scientifiques et opportunistes utilisés pour créer les cartes, y compris des renseignements sur la période couverte par l’ensemble de données, le nombre d'espèces et le nombre d'observations d'un ou de plusieurs individus disponibles pour l'analyse, et le propriétaire de l’ensemble de données. Tableau tiré de : @wwfromm2021c."
+  )
+```
+
+<br/>
+
+
+Sur les neuf espèces dont une cartographie est disponible, cinq fréquentent l'estuaire du Saint-Laurent et le Saguenay : le béluga du Saint-Laurent (*Delphinapterus leucas*), le petit rorqual (*Balaenoptera acutorostrata*), le rorqual à bosse (*Megaptera novaeangliae*), le rorqual bleu (*Balaenoptera musculus*) et le rorqual commun (*Balaenoptera physalus*; Tableau \@ref(tab:mmSp)). Pour notre étude, nous avons rééchantillonné les cartes de distribution produites [@wwfromm2021b] afin de les intégrer à notre grille d'étude de 1 $km^2$ en utilisant la valeur moyenne des cellules de la grille du guide qui intersecte chaque cellule de notre grille. Les valeurs ont ensuite été normalisées entre 0 et 1 en divisant chaque valeur par la valeur maximale observée au sein de la grille pour chaque espèce. Les valeurs résultantes peuvent être interprétées en tant que densité relative des observations de mammifères marins, avec des valeurs de 0 représentant une densité 
+relative faible et une valeur de 1 une densité relative élevée.
+
+Afin de complémenter ce portrait des mammifères marins, nous avons utilisé des données provenant du Réseau d'observation de mammifères marins [ROMM; @romm2021] et disponibles sur le site de l'Observation Global du Saint-Laurent ([https://ogsl.ca/bio/?lg=fr](https://ogsl.ca/bio/?lg=fr)). Cette base de données est constituée d'observations de mammifères marins relevées par des observateurs membres ayant suivi une formation offerte par le ROMM, récoltées systématiquement par l'équipe du ROMM, et rapportées par des citoyens puis validées par l'équipe du ROMM. Plus d'informations sur le programme sont disponibles sur une [page dédiée](https://ogsl.ca/fr/biodiversite-mammiferes-marins-romm-information-sur-les-donnees/) sur le site de l'OGSL.
+
+Cette base de données contient près de 50000 observations de mammifères marins entre 1996 et 2021 sur 21 espèces différentes [@romm2021]. De ce nombre, nous avons sélectionné les données pour la période allant de 2000 à 2021 pour les espèces non décrites au sein du guide et ayant plus de 50 observations uniques. Nous avons appliquer la même méthodologie décrite pour le guide afin de caractériser la distribution de quatre espèces supplémentaires fréquentant le Saint-Laurent et le Saguenay : le marsouin commun	(*Phocoena phocoena*), le phoque commun	(*Phoca vitulina*), le phoque du Groenland	(*Phoca groenlandica*) et le phoque gris	(*Halichoerus grypus*; Tableau \@ref(tab:mmSp)).
+
+Il est important de noter que les cartes de distribution issues pour ces espèces ne sont pas informées par un processus et une quantité de données semblables à ce qui a été utilisé pour créer le guide à l'intention de l'industrie maritime [@wwfromm2021]. Tout comme pour les cartes issues des données du Guide, les valeurs résultantes peuvent être interprétées en tant que densité relative des observations de mammifères marins, avec des valeurs de 0 représentant une densité relative faible et une valeur de 1 une densité relative élevée. Une mise en garde supplémentaire doit également accompagner ces données :
+
+> - Une absence de données dans un secteur ne doit pas être interprétée comme une absence de mammifères marins. Pour certains secteurs et certaines périodes de l’année, il n’existe actuellement aucune donnée disponible quant à la fréquentation des mammifères marins.
+
+
+
+<br/>
+
+```{r mmSp}
+tab <- as.data.frame(meta$dataDescription$categories)
+tab <- arrange(tab, type, francais)
+tab <- select(tab, francais, scientific)
+tab$scientific <- glue("*{tab$scientific}*")
+
+
+tab %>%
+  knitr::kable(
+    col.names = c("Espèces", "Noms scientifiques"),
+    row.names = FALSE,
+    caption = "Espèces de mammifères marins dont la distribution dans l'estuaire du Saint-Laurent et le Saguenay est disponible dans @wwfromm2021 et @romm2021."
+  )
+```
+
+<br>
+
+#### Baleines
+
+<br>
+
+```{r beluga, fig.cap = "Distribution des mammifères marins dans le Saint-Laurent et le Saguenay - Béluga", out.width = '100%', fig.link = "./figures/figures-integrated/mammiferes_marins-beluga.png"}
+knitr::include_graphics("./figures/figures-integrated/mammiferes_marins-beluga.png")
+```
+
+<br>
+
+
+```{r harbourporpoise, fig.cap = "Distribution des mammifères marins dans le Saint-Laurent et le Saguenay - Marsouin commun", out.width = '100%', fig.link = "./figures/figures-integrated/mammiferes_marins-harbour_porpoise.png"}
+knitr::include_graphics("./figures/figures-integrated/mammiferes_marins-harbour_porpoise.png")
+```
+
+<br>
+
+```{r petitrorqual, fig.cap = "Distribution des mammifères marins dans le Saint-Laurent et le Saguenay - Petit rorqual", out.width = '100%', fig.link = "./figures/figures-integrated/mammiferes_marins-petit_rorqual.png"}
+knitr::include_graphics("./figures/figures-integrated/mammiferes_marins-petit_rorqual.png")
+```
+
+<br>
+
+```{r rorqualabosse, fig.cap = "Distribution des mammifères marins dans le Saint-Laurent et le Saguenay - Rorqual à bosse", out.width = '100%', fig.link = "./figures/figures-integrated/mammiferes_marins-rorqual_a_bosse.png"}
+knitr::include_graphics("./figures/figures-integrated/mammiferes_marins-rorqual_a_bosse.png")
+```
+
+<br>
+
+```{r rorqualbleu, fig.cap = "Distribution des mammifères marins dans le Saint-Laurent et le Saguenay - Rorqual bleu", out.width = '100%', fig.link = "./figures/figures-integrated/mammiferes_marins-rorqual_bleu.png"}
+knitr::include_graphics("./figures/figures-integrated/mammiferes_marins-rorqual_bleu.png")
+```
+
+<br>
+
+```{r rorqualcommun, fig.cap = "Distribution des mammifères marins dans le Saint-Laurent et le Saguenay - Rorqual commun", out.width = '100%', fig.link = "./figures/figures-integrated/mammiferes_marins-rorqual_commun.png"}
+knitr::include_graphics("./figures/figures-integrated/mammiferes_marins-rorqual_commun.png")
+```
+
+<br>
+
+#### Phoques
+
+<br>
+
+```{r harborseal, fig.cap = "Distribution des mammifères marins dans le Saint-Laurent et le Saguenay - Phoque commun", out.width = '100%', fig.link = "./figures/figures-integrated/mammiferes_marins-harbor_seal.png"}
+knitr::include_graphics("./figures/figures-integrated/mammiferes_marins-harbor_seal.png")
+```
+
+<br>
+
+```{r harpseal, fig.cap = "Distribution des mammifères marins dans le Saint-Laurent et le Saguenay - Phoque du Groenland", out.width = '100%', fig.link = "./figures/figures-integrated/mammiferes_marins-harp_seal.png"}
+knitr::include_graphics("./figures/figures-integrated/mammiferes_marins-harp_seal.png")
+```
+
+<br>
+
+```{r greyseal, fig.cap = "Distribution des mammifères marins dans le Saint-Laurent et le Saguenay - Phoque gris", out.width = '100%', fig.link = "./figures/figures-integrated/mammiferes_marins-grey_seal.png"}
+knitr::include_graphics("./figures/figures-integrated/mammiferes_marins-grey_seal.png")
+```
+
+<br>

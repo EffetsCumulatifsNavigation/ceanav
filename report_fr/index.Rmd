@@ -1,6 +1,6 @@
 ---
 title: "Évaluation des effets cumulatifs des activités maritimes sur le Saint-Laurent et la rivière Saguenay – Projet pilote"
-subtitle: "Rapport préliminaire"
+# subtitle: "Rapport préliminaire"
 author: "David Beauchesne, Cindy Grant, Philippe Archambault"
 date: "`r Sys.Date()`"
 knit: "bookdown::render_book"

@@ -1,0 +1,27 @@
+## Composantes valorisées cumulées {#cvcumresult}
+
+> La méthode utilisée pour obtenir les résultats suivants est présentée à la section \@ref(cvcummethod) du rapport.
+
+L'évaluation des composantes valorisées cumulées montre que l'entièreté de la zone d'étude est couverte par au moins une composante valorisée (Figures \@ref(fig:cvCum) et \@ref(fig:cvCumNorm)). Les milieux côtiers sont toutefois généralement couverts par un plus grand nombre de composantes valorisées. Ce constat est principalement influencé par les composantes valorisées d'intégrité des berges et d'habitats, dont la description est principalement côtière, et par un nombre importants de sites d'intérêt en milieux côtiers (Figure \@ref(fig:cvPanel)). L'ensemble des milieux côtiers du secteur fluvial est caractérisé par plusieurs composantes valorisées, mais la région du lac Saint-Pierre, incluant les secteurs en amont et en aval, semble particulièrement importante (Figures \@ref(fig:cvCum) et \@ref(fig:cvCumNorm)). Un examen plus détaillé permet d'observer que cette région est caractérisée par une diversité importante d'habitats et de sites d'intérêt, en plus de présenter plusieurs catégories de berges sensibles à l'érosion (Figure \@ref(fig:cvPanel)).
+
+D'ordre général, le secteur fluvial est caractérisé par davantage de composantes valorisées que le secteur maritime. La région du secteur maritime présentant le plus grand nombre de composantes valorisées est l'embouchure de la rivière Saguenay, qui couvre essentiellement le Parc marin du Saguenay-Saint-Laurent (Figures \@ref(fig:cvCum) et \@ref(fig:cvCumNorm)). Cette observation est reliée à la diversité importante de mammifères marins qui fréquentent cette région et à une quantité importante de sites d'intérêt (Figure \@ref(fig:cvPanel)). Il est également important de rappeler que la caractérisation de la composante valorisée d'intégrité des berges s'est limitée au secteur fluvial uniquement.
+
+<br/>
+
+```{r cvCum, fig.cap = "Distribution des composantes valorisées cumulées au sein de la zone d'étude", out.width = '100%', fig.link="./figures/figures-output/cumulative_cv.png"}
+knitr::include_graphics("./figures/figures-output/cumulative_cv.png")
+```
+
+<br/>
+
+```{r cvCumNorm, fig.cap = "Distribution des composantes valorisées cumulées normalisés au sein de la zone d'étude", out.width = '100%', fig.link = "./figures/figures-output/cumulative_cv_norm.png"}
+knitr::include_graphics("./figures/figures-output/cumulative_cv_norm.png")
+```
+
+<br/>
+
+```{r cvPanel, fig.cap = "Cumul des catégories de composantes valorisées au sein de la zone d'étude", out.width = '100%', fig.link = "./figures/figures-output/cumulative_cv_panel.png"}
+knitr::include_graphics("./figures/figures-output/cumulative_cv_panel.png")
+```
+
+<br/>

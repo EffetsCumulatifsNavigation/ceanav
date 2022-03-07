@@ -1,0 +1,26 @@
+## Stresseurs environnementaux {#strportrait}
+
+```{r stresssetup, echo = FALSE}
+st <- read.csv("../data/data-metadata/metadata_stresseurs.csv")
+```
+
+La caractérisation des stresseurs environnementaux dans la zone d'étude a résulté en la description de `r length(unique(st$stresseur))` stresseurs divisés en `r nrow(st)` sous-catégories qui sont considérées pour l'évaluation des effets cumulatifs des activités maritimes (Tableau \@ref(tab:stress)). Les sections suivantes présentent les données, les méthodes et les résultats de l'intégration des données ayant permis la caractérisation des stresseurs environnementaux dans la zone d'étude.
+
+<br/>
+
+```{r stress}
+tab <- select(st, title, francais, description, source)
+tab$title[duplicated(tab$title)] <- ""
+uid <- which(tab$title != "")[-1]-1
+tab$source <- gsub(",", ", ", tab$source)
+
+tab %>%
+  knitr::kable(
+    col.names = c("Stresseurs environnementaux", "Sous-catégories", "Description", "Source"),
+    row.names = FALSE,
+    caption = "Liste des sous-catégories de stresseurs environnementaux considérés pour l'évaluation des effets cumulatifs des activités maritimes dans le Saint-Laurent et le Saguenay. Consultez l'[annexe 1](#annexe1) pour plus de détails sur les sources de données."
+  ) #%>%
+  #kableExtra::row_spec(uid, extra_css = "border-bottom: 2px solid")
+```
+
+<br/>

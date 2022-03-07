@@ -1,0 +1,83 @@
+#### Habitats d'importance pour les cycles de vie
+
+##### Frayères et sites d'alevinage
+
+> ***Nous remercions Marc Mingelbier du Ministère des Forêts, de la Faune et des Parcs du Québec pour les échanges et le soutien.***
+
+```{r frayere_data, results = 'asis'}
+uid <- meta$dataDescription$categories$accronyme %in% c("site_alevinage","frayere")
+meta$dataDescription$categories$source[uid] %>%
+sapply(., function(x) stringr::str_split(x, ",")) %>%
+unlist() %>%
+unique() %>%
+sort() %>%
+show_source()
+```
+
+<br/>
+
+Les frayères sont des milieux essentiels au maintien de populations de poissons; en effet, des perturbations à ces sites, ou au comportement des espèces pendant la période de fraie, peuvent avoir des impacts majeurs sur la dynamique des populations de poissons. Similairement, les sites d'alimentation et de protection pour les stades de vie initiaux des poissons (*e.g.* larves, alevins, juvéniles), qui sont beaucoup plus susceptibles aux effets de perturbations à leur habitat. Ces sites, nommés aires d'alevinage, sont ainsi essentiels à leur survie. La protection des frayères et des aires d'alevinage est ainsi d'une importance majeure puisqu'ils constituent un goulot d'étranglement pour la dynamique des populations de poissons.
+
+Les données utilisées pour caractériser les frayères et les aires d'alevinage proviennent d'un exercice d'intégration de données d'observation *in situ* couvrant la période de 1974 à 2019 [@mffp2020; Tableau \@ref(tab:frayerealevinage)]. Les frayères et aires d'alevinage identifiées regroupent des données pour 71 et 49 espèces de poissons, respectivement, et couvrent une superficie d'environ 275 et 230 $km^2$ au sein de la zone d'étude. Les données regroupent des frayères et des aires d'alevinage confirmées ou potentielles lorsque les habitats étaient jugés propices à la fraie ou l'alevinage des poissons. Il est donc probable que ces données soient partielles et ne devraient pas être considérées comme un portrait exhaustif des frayères et des aires d'alevinage dans la zone d'étude. Les données sont composées de points et de polygones. Nous avons ajouté une zone tampon de 100 $m$ autour des points, puis avons intégré la présence de frayères au sein de notre grille d'étude de 1 $km^2$.
+
+Il est à noter que les données utilisées couvrent uniquement la portion fluviale de la zone d'étude; d'autres données devraient être ajoutées afin de caractériser convenablement l'entièreté de la zone d'étude.
+
+<br/>
+
+```{r frayerealevinage}
+tab <- as.data.frame(meta$dataDescription$frayere_alevinage)
+tab <- arrange(tab, Source)
+tab$Superficie_frayere <- round(tab$Superficie_frayere, 2)
+tab$Superficie_alevinage <- round(tab$Superficie_alevinage, 2)
+
+tab %>%
+  knitr::kable(
+    col.names = c("Source", "Nombre de frayères", "Superficie des frayères $km^2$", "Nombre d'aires d'alevinage","Superficie des aires d'alevinage $km^2$"),
+    row.names = FALSE,
+    caption = "Sources utilisées pour caractériser les frayères et les aires d'alevinage dans la zone d'étude."
+  )
+```
+
+<br/>
+
+```{r frayere, fig.cap = "Distribution des habitats dans le Saint-Laurent et le Saguenay - Frayères", out.width = '100%', fig.link = "./figures/figures-integrated/habitat-frayere.png"}
+knitr::include_graphics("./figures/figures-integrated/habitat-frayere.png")
+```
+
+<br/>
+
+```{r sitealevinage, fig.cap = "Distribution des habitats dans le Saint-Laurent et le Saguenay - Sites d'alevinage", out.width = '100%', fig.link = "./figures/figures-integrated/habitat-site_alevinage.png"}
+knitr::include_graphics("./figures/figures-integrated/habitat-site_alevinage.png")
+```
+
+<br/>
+
+##### Oiseaux
+
+> ***Nous remercions Jean-François Rail d'Environnement et Changement climatique Canada pour les échanges et le soutien.***
+
+```{r oiseaux_data, results = 'asis'}
+uid <- meta$dataDescription$categories$accronyme %in% c("oiseaux")
+meta$dataDescription$categories$source[uid] %>%
+sapply(., function(x) stringr::str_split(x, ",")) %>%
+unlist() %>%
+unique() %>%
+sort() %>%
+show_source()
+```
+
+<br/>
+
+
+Les données utilisées pour caractériser les sites d'importance pour les oiseaux proviennent de deux sources distinctes qui ont été insérées en présence-absence au sein de la grille d'étude. La première base de données décrit la localisation de colonies d'oiseaux nommée la [Banque Informatisée des Oiseaux Marins du Québec](https://ogsl.ca/fr/biodiversite-oiseaux-eccc-biomq-a-propos/) [BIOMQ; @rail2002; @eccc2021]. Cette dernière a été compilée et est mise à jour par le Service Canadien de la Faune (SCF) pour la région du Québec. La BIOMQ contient des informations sur la localisation de colonies d'oiseaux marins et de leurs sites de nidification pour les familles suivantes : Gaviidés (*i.e.* plongeons), Hydrobatidés (*i.e.* océanites), Sulidés (*i.e.* fous), Phalacrocoracidés (*i.e.* cormorans), Laridés (*i.e.* goélands, mouettes, sternes), Alcidés (*i.e.* guillemots, pingouins, macareux) et l’eider à duvet (*i.e.* Anatidés). Pour notre analyse, nous avons uniquement considéré la localisation des différentes colonies disponibles à travers la BIOMQ sans considérer les espèces individuelles afin d'identifier les lieux abritants des colonies d'oiseaux marins. Nous avons également utilisé les données à partir de l'année 2000 uniquement. Notre zone d'étude comprend `r meta$dataDescription$BIOMQ$Nombre` sites ayant une superficie totale de `r meta$dataDescription$BIOMQ$Superficie` $km^2$.
+
+La deuxième base de données identifie les Zones importantes pour la conservation des oiseaux [ZICO; @oiseauxcanada2015; @etudesoiseauxcanada2015]. Les ZICO sont identifiées à partir d'informations sur les espèces d'oiseaux menacées, les sites abritant d'importantes populations d'oiseaux ou d'espèces à aires de répartitions réduites. Des [critères](https://www.ibacanada.org/documents/current_Canadian_IBA_Criteria.pdf) d'évaluation acceptés internationalement sont utilisés afin d'identifier les ZICO. Notre zone d'étude couvre `r meta$dataDescription$ZICO$Nombre` ZICO ayant une superficie totale de `r meta$dataDescription$ZICO$Superficie` $km^2$.
+
+Il est important de noter que ces sites correspondent à des milieux terrestres et ne capturent ainsi pas convenablement l'utilisation des milieux aquatiques et marins associés à ces sites d'importance. L'extrapolation d'une zone d'utilisation marine basée sur des variables comme le rayon d’action des espèces et le nombre d’individus permettrait de pallier à cette lacune [*e.g.* @lieske2020]. Il n'a toutefois pas été possible d'effectuer ce type d'analyse dans le cadre de ce projet pilote.
+
+
+```{r oiseaux, fig.cap = "Distribution des habitats dans le Saint-Laurent et le Saguenay - Oiseaux", out.width = '100%', fig.link = "./figures/figures-integrated/habitat-oiseaux.png"}
+knitr::include_graphics("./figures/figures-integrated/habitat-oiseaux.png")
+```
+
+<br>

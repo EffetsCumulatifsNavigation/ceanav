@@ -1,0 +1,71 @@
+# Appendix 6 {.unnumbered #annexe6}
+
+Équivalences entre les stresseurs environnementaux considérés pour l'évaluation des effets cumulatifs des activités maritimes dans le Saint-Laurent et le Saguenay et celles retrouvées dans la matrice de vulnérabilité des habitats proposée par @clarkemurray2015a.
+
+```{r stresscomp}
+tab <- data.frame(
+  stress = c(
+    "Sites d'ancrage",
+    "Déversements accidentels : Hydrocarbures",
+    "Déversements accidentels : Autres",
+    "Déversements accidentels : Contenu inconnu",
+    "Dragage : Sites de dragage",
+    "Dragage : Sites de dépôts",
+    "Dragage : Dragages de capitalisation prévus",
+    "Navigation : Cargo",
+    "Navigation : Porte-conteneurs",
+    "Navigation : Cargaison sèche",
+    "Navigation : Traversier / roulier",
+    "Navigation : Gouvernement / recherche",
+    "Navigation : Observation mammifères marins",
+    "Navigation : Passager",
+    "Navigation : Navires de plaisance",
+    "Navigation : Navires spéciaux",
+    "Navigation : Pétrolier",
+    "Navigation : Remorqueur / port",
+    "Navigation : Navigation portuaire",
+    "Pêche commerciale : Démersale destructive",
+    "Pêche commerciale : Démersale non-destructive, prises accessoires faibles",
+    "Pêche commerciale : Démersale non-destructive, prises accessoires élevées",
+    "Pêche commerciale : Pélagique prises accessoires faibles",
+    "Pêche commerciale : Pélagique prises accessoires élevées",
+    "Naufrages : Sites de naufrage",
+    "Pollution maritime : Pollution maritime"
+  ),
+
+  clark = c(
+    "Direct human impact: trampling",
+    "Ocean dumping: toxic materials",
+    "Ocean dumping: toxic materials",
+    "Ocean dumping: toxic materials",
+    "Dredging",
+    "Sediment input: Increase",
+    "Dredging",
+    "Shipping (large vessels)",
+    "Shipping (large vessels)",
+    "Shipping (large vessels)",
+    "Shipping (large vessels)",
+    "Shipping (large vessels), military activity, scientific research: collecting, scientific research: experiments/surveys",
+    "Tourism: Whale watching",
+    "Shipping (large vessels)",
+    "Shipping (large vessels)",
+    "Shipping (large vessels)",
+    "Shipping (large vessels)",
+    "Shipping (large vessels)",
+    "Shipping (large vessels)",
+    "Fishing: demersal, habitat-modifying",
+    "Fishing: demersal, non-habitat-modifying, low bycatch",
+    "Fishing: demersal, non-habitat-modifying, high bycatch",
+    "Fishing: pelagic, low bycatch",
+    "Fishing: pelagic, high bycatch",
+    "Ocean dumping: shipwrecks",
+    "Ocean pollution from ships and ports"
+  ))
+
+tab %>%
+  knitr::kable(
+    col.names = c("Sources de stress", "Équivalences"),
+    row.names = FALSE
+  )
+
+```

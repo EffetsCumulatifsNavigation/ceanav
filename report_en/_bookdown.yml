@@ -1,0 +1,24 @@
+book_filename: bookdown
+repo: https://github.com/david-beauchesne/rapport
+output_dir: docs
+rmd_subdir:
+  # - "contenu/accronymes"
+  # - "contenu/glossaire"
+  - "contenu/0-resume"
+  - "contenu/1-introduction"
+  - "contenu/2-effets_cumulatifs"
+  - "contenu/3-portrait"
+  - "contenu/4-diagnostic"
+  - "contenu/5-perspectives"
+  - "contenu/annexes"
+  - "contenu/remerciements"
+  - "contenu/references"
+clean: [packages.bib, bookdown.bbl]
+delete_merged_file: true
+language:
+  label:
+    fig: "Figure "
+    tab: "Table "
+  ui:
+    edit: "Edit"
+    chapter_name: ""

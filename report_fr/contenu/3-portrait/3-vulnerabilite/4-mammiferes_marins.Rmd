@@ -1,0 +1,27 @@
+### Mammifères marins {#vulnmm}
+
+> *Nous remercions Sonia Giroux du Réseau d’observation de mammifères marins et Marie Guilpin du Royal Netherlands Institute for Sea Research les échanges et le soutien.*
+
+
+La section précédente présente les différents critères utilisés afin de caractériser la vulnérabilité des espèces aux stresseurs environnementaux. La vulnérabilité des mammifères marins a été évaluée en utilisant l'ensemble des critères présentés au tableau \@ref(tab:vulnerabilitySpecies) et l'équation présentée à la section précédente. 
+
+Les statuts fédéraux du Comité sur la situation des espèces en péril au Canada (COSEPAC) ont été utilisés afin de déterminer le statut des espèces de mammifères marins. 
+
+Les scores de vulnérabilité finaux sont disponibles au tableau \@ref(fig:mmvuln) et les tableaux d'évaluation des critères individuels par espèce de mammifère marin sont disponibles à l'[annexe 9](#annexe9).
+
+<br/>
+
+```{r mmvuln, fig.cap = "Scores de vulnérabilité relative des habitats d'importance pour les espèces face aux stresseurs environnementaux.", fig.height = 6, fig.link = "./figures/figures-vulnerability/mammiferes_marins.png"}
+knitr::include_graphics("./figures/figures-vulnerability/mammiferes_marins.png")
+```
+
+<br/>
+
+
+
+
+<!--
+La  caractérisation de la vulnérabilité des baleines, aidée par [Baleine en direct](https://baleinesendirect.org/).
+
+Une justification référencée est fournie avec les scores de vulnérabilité pour les scores de vulnérabilité qui ne pas intuitifs à partir de connaissances écologiques générales (*e.g.* un bateau immobile n'entraînera pas la mort d'un mammifère marin, outside of a freak accident)
+-->

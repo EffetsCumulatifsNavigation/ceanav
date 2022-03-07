@@ -1,0 +1,62 @@
+# Appendix 7 {.unnumbered #annexe7}
+
+Équivalences entre les composantes valorisées considérées pour l'évaluation des effets cumulatifs des activités maritimes dans le Saint-Laurent et le Saguenay et celles retrouvées dans la matrice de vulnérabilité des habitats proposée par @clarkemurray2015a.
+
+```{r cvcomp}
+tab <- data.frame(
+  cv = c(
+    "Espèces à statut : Espèces fauniques menacées",
+    "Espèces à statut : Espèces fauniques susceptibles",
+    "Espèces à statut : Espèces fauniques vulnérables",
+    "Espèces à statut : Espèces floristiques menacées",
+    "Espèces à statut : Espèces floristiques susceptibles",
+    "Espèces à statut : Espèces floristiques vulnérables",
+    "Habitats côtiers : Meuble sans falaise",
+    "Habitats côtiers : Rocheuse sans escarpement",
+    "Habitats côtiers : Rocheuse sans falaise",
+    "Habitats côtiers : Terrasse de plage",
+    "Habitats côtiers : Terrasse fluviale",
+    "Habitats fauniques : Frayères",
+    "Habitats fauniques : Habitats d’alevinage",
+    "Habitats fauniques : Habitats importants pour les oiseaux",
+    "Milieu humide : Eau peu profonde",
+    "Milieu humide : Marais",
+    "Milieu humide : Marécage",
+    "Milieu humide : Milieu humide",
+    "Milieux aquatiques : Gisements coquilliers",
+    "Milieux aquatiques : Zostères",
+    "Milieux aquatiques : Herbiers aquatiques",
+    "Zones inondables"
+  ),
+
+  clark = c(
+    "NA",
+    "NA",
+    "NA",
+    "NA",
+    "NA",
+    "NA",
+    "Tidal flat",
+    "Rocky intertidal",
+    "Rocky intertidal",
+    "Beach",
+    "Saltmarsh",
+    "NA",
+    "NA",
+    "NA",
+    "Saltmarsh",
+    "Saltmarsh",
+    "Saltmarsh",
+    "Saltmarsh",
+    "Nearshore soft bottom",
+    "Seagrass",
+    "Kelp forest",
+    "Rocky intertidal, tidal flats, saltmarsh"
+  ))
+
+tab %>%
+  knitr::kable(
+    col.names = c("Composantes valorisées", "Équivalences"),
+    row.names = FALSE
+  )
+```
