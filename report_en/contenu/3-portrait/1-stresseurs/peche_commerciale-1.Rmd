@@ -1,4 +1,4 @@
-### Pêche commerciale {#peche_commerciale}
+### Pêche commerciale {#pechecommerciale}
 
 ```{r peche_setup, echo = FALSE, results = 'asis'}
 meta <- read_yaml("../data/data-metadata/int_st_peche_commerciale.yml")

@@ -3,6 +3,9 @@
 ```{r sommairesetup, echo = FALSE}
 st <- read.csv("../data/data-metadata/metadata_stresseurs.csv")
 cv <- read.csv("../data/data-metadata/metadata_composantes_valorisees.csv")
+st$stresseur <- gsub("_","",st$stresseur)
+cv$comp_val <- gsub("_","",cv$comp_val)
+
 src <- function(dat) {
     paste(dat$source, collapse = ",") %>%
     str_split(",") %>%
