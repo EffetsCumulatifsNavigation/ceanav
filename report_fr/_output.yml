@@ -5,6 +5,8 @@ bookdown::gitbook:
   split_by: chapter
   split_bib: no
   toc_depth: 3
+  includes:
+    in_header: [google_analytics.html]
   config:
     toc:
       collapse: no
