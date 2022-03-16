@@ -185,7 +185,7 @@ show_source()
 
 <br/>
 
-Les données transmises par la Nation Huronne-Wendat fournissent la localisation de sites d'intérêt principalement dans la portion fluviale du Saint-Laurent et dans l'estuaire et dans une moindre mesure dans l'estuaire du Saint-Laurent [@nhw2021]. Les sites sont composées de neuf thèmes divisées en trois catégories uniques : 
+Les données transmises par la Nation Huronne-Wendat fournissent la localisation de sites d'intérêt principalement dans la portion fluviale du Saint-Laurent et dans une moindre mesure dans l'estuaire du Saint-Laurent [@nhw2021]. Les sites sont composées de neuf thèmes divisées en trois catégories uniques : 
 
 - Sites contemporains 
   - Activités rituelles ou sociales

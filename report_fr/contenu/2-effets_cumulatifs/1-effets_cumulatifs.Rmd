@@ -70,7 +70,7 @@ L'évaluation de l'empreinte cumulée permet d'identifier les milieux qui sont l
 
 #### Exposition cumulée {#cumexpmethod}
 
-Le croisement de l'évaluation des stresseurs et des composantes valorisées cumulés fournissent le troisième modèle partiel que nous présentons en complément du modèle global, *i.e.* l'exposition cumulée. L'exposition cumulée $E_{E,x}$ correspond au produit de l'intensité des stresseurs environnementaux $S_{j,x}$ et de la présence des composantes valorisées $CV_{i,x}$ au sein de chaque cellule $x$ :
+Le croisement de l'évaluation des stresseurs et des composantes valorisées cumulés fournit le troisième modèle partiel que nous présentons en complément du modèle global, *i.e.* l'exposition cumulée. L'exposition cumulée $E_{E,x}$ correspond au produit de l'intensité des stresseurs environnementaux $S_{j,x}$ et de la présence des composantes valorisées $CV_{i,x}$ au sein de chaque cellule $x$ :
 
 $$E_{E_x} = \sum_{i=1}^n \sum_{j=1}^m CV_{i,x} * S_{j,x} \label{eq4}$$
 
