@@ -1,12 +1,12 @@
-## Composantes valorisées {#cvportrait}
+## Valued components {#cvportrait}
 
 ```{r cvsetup, echo = FALSE}
 cv <- read.csv("../data/data-metadata/metadata_composantes_valorisees.csv")
 ```
 
-La caractérisation des composantes valorisées dans la zone d'étude a résulté en la description de `r length(unique(cv$title))` composantes valorisées divisées en `r nrow(cv)` sous-catégories qui sont considérées pour l'évaluation des effets cumulatifs des activités maritimes (Tableau \@ref(tab:cv)). Les sous-catégories ont été identifiées principalement par la disponibilité et l'accessibilité des données pour les composantes valorisées biophysiques (*i.e.* intégrité des berges, habitats et mammifères marins); elles ne devraient ainsi pas être considérées comme une représentation exhaustive de la diversité des sous-catégories de composantes valorisées. Dans le cas des sites d'intérêt culturels, patrimoniaux et archéologiques, les catégories identifiées correspondent aux données rapportées par les différentes Premières Nations, mais ne devraient pas être interprétées comme une représentation exhaustive de l'utilisation du territoire des Premières Nations (voir section \@ref(pnportrait) pour plus de détails) 
+Characterization of valued components in the study area resulted in the description of `r length(unique(cv$title))` valued components divided into `r nrow(cv)`subcategories that are considered for the marine activities cumulative effects assessment (Table \@ref(tab:cv)). The subcategories were identified primarily by the availability and accessibility of data for the biophysical valued components (*i.e.* bank integrity, habitats, and marine mammals); thus, they should not be considered an exhaustive representation of the diversity of valued component subcategories. In the case of cultural, heritage and archeological areas of interest, the categories identified correspond to the data reported by various First Nations, but should not be interpreted as an exhaustive representation of First Nations land use (see section \@ref(pnportrait) for more details). 
 
-La majorité des données ont été intégrées à la grille d'étude en présence-absence; une caractérisation quantitative continue a été effectuée pour les mammifères marins uniquement. L'approche utilisée est décrite à la section spécifique pour les mammifères marins. Les sections suivantes présentent les données et les résultats de l'intégration des données ayant permis la caractérisation des composantes valorisées dans la zone d'étude.
+Most of the data were integrated into the study grid as presence-absence; continuous quantitative characterization was performed for marine mammals only. The approach used is described in the section specific to marine mammals. The following sections present the data and results of the data integration enabling us to characterize the valued components in the study area.
 
 <br/>
 

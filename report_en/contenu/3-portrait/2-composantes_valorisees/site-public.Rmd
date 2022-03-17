@@ -1,6 +1,6 @@
-#### Sites d'intérêt publics
+#### Areas of public interest
 
-##### Milieux protégés
+##### Protected areas
 
 ```{r mpa_data, results = 'asis'}
 uid <- meta$dataDescription$categories$accronyme %in% 
@@ -15,10 +15,10 @@ show_source()
 
 <br/>
 
-Les milieux protégés ont été caractérisés par l'intégration de trois bases de données. La première base de données correspond à la délimitation des différentes mesures de gestion spatiale mises en place dans le parc marin du Saguenay–Saint-Laurent [@apc2021]. Cette base de données regroupe la délimitation de mesures spatiales réglementaires (*e.g.* zones d'interdiction de navigation et zones de ralentissement) ainsi que des mesures spatiales volontaires (*e.g.* zones de ralentissement et zones à éviter). La deuxième base de données provient du Gouvernement du Canada et délimite des milieux où des mesures de gestion reconnues comme *autres mesures efficaces de conservation par zone* [EMCEZ; @mpo2021d]. Au sein de notre zone d'étude, cette base de données présente une seule zone protégée [en amont de la Rivière Saguenay](https://www.dfo-mpo.gc.ca/oceans/oecm-amcepz/refuges/saguenay-fra.html) qui limite les activités de pêche pour protéger l'habitat du béluga et pour éviter la remise en suspension de sédiments contaminés.
+The protected areas were characterized by integrating three databases. The first database corresponds to the delineation of the different spatial management measures implemented in the Saguenay-St. Lawrence Marine Park [@apc2021]. This database includes the delineation of regulatory spatial measures (*e.g.* no-shipping zones and slow-down zones) as well as voluntary spatial measures (*e.g.* slow-down zones and avoidance zones). The second database comes from the Government of Canada and delineates environments where management measures are recognized as *other effective conservation measures by area* [EMCEZ; @mpo2021d]. Within our study area, this database shows a single protected area [upstream of the Saguenay River](https://www.dfo-mpo.gc.ca/oceans/oecm-amcepz/refuges/saguenay-eng.html) that limits fishing activities to protect beluga habitat and to avoid resuspension of contaminated sediments.
 
 
-Finalement, les données du Registre des aires protégées au Québec [@melcc2021] ont été utilisées afin de compléter le portrait. Ce registre offre une compilation des aires protégées au Québec -- identifiés selon les définitions de la Loi sur la conservation du patrimoine naturel (LCPN; RLRQ, chapitre C-61.01) ou de l'Union internationale pour la conservation de la nature (UICN) -- et des territoires d'importance pour la conservation -- identifiés par le ministère de l'Environnement et de la Lutte contre les changements climatiques (MELCC) ou une instance du gouvernement du Québec. Nous avons retiré de cette base de données les habitats fauniques, les habitats d'une espèces floristique menacée ou vulnérable et les réserves de territoire aux fins d'aire protégée puis ces catégories couvraient l'entièreté de la zone d'étude ou parce qu'elles étaient couvertes par d'autres composantes valorisées. 
+Finally, data from the Quebec register of protected areas (Registre des aires protégées au Québec) [@melcc2021] were used to complete the work. This register provides a compilation of protected areas in Quebec -- identified according to the definitions of the Natural Heritage Conservation Act (NHCA; RLRQ, chapter C-61.01) or the International Union for Conservation of Nature (IUCN) -- and territories of conservation importance -- identified by the Ministère de l’Environnement et de la Lutte contre les changements climatiques (MELCC) or an authority of the Quebec government. We removed from this database wildlife habitats, habitats of threatened or vulnerable plant species, and land reserves for protected area purposes because these categories covered the entire study area or because they were covered by other valued components. 
 
 
 <br>
@@ -30,7 +30,7 @@ knitr::include_graphics("./figures/figures-integrated/site-public_milieu_protege
 <br>
 
 
-##### Sites patrimoniaux
+##### Heritage sites
 
 ```{r patrimoniaux_data, results = 'asis'}
 uid <- meta$dataDescription$categories$accronyme %in% 
@@ -45,7 +45,7 @@ show_source()
 
 <br/>
 
-La caractérisation des sites patrimoniaux publics provient de l'intégration de deux bases de données provenant du Ministère de la Culture et des Communications. La première base de données présente des données sur les sites patrimoniaux classés par la ministre et qui font partie du patrimoine protégé en vertu de la Loi sur le patrimoine culturel [L.R.Q., c. 21; @mcc2021]. La deuxième base de données correspond à des sites patrimoniaux cités par les municipalités et les communautés autochtones [@mcc2021b]; ces sites font également partie du patrimoine protégé en vertu de la Loi sur le patrimoine culturel.
+The characterization of public heritage sites comes from the integration of two databases from the Ministère de la Culture et des Communications. The first database presents data on heritage sites classified by the Minister and which are part of the heritage protected under the Cultural Heritage Act [R.S.Q., c. 21; @mcc2021]. The second database corresponds to heritage sites cited by municipalities and Indigenous communities [@mcc2021b]; these sites are also part of the heritage protected under the Cultural Heritage Act.
 
 
 <br>

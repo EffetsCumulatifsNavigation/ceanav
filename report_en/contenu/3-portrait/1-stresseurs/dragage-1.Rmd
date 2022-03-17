@@ -1,7 +1,6 @@
-### Dragage {#dragage}
+### Dredging {#dragage}
 
-> ***Nous remercions Simon Blais d'Environnement et Changement climatique Canada et Pierre Michon du Ministère de l’Environnement et de la Lutte contre les changements climatiques du Québec pour les échanges et le soutien.***
-
+> ***We thank Simon Blais of Environment and Climate Change Canada and Pierre Michon of the Quebec Ministry of the Environment and the Fight Against Climate Change for the discussions and support.***
 
 ```{r dragage_setup, echo = FALSE, results = 'asis'}
 meta <- read_yaml("../data/data-metadata/int_st_dragage.yml")
@@ -10,15 +9,15 @@ show_source(meta$rawData)
 
 <br/>
 
-La voie navigable du Saint-Laurent a historiquement été draguée partout où la profondeur naturelle ne permettrait pas le passage sécuritaire des bateaux. Entre Montréal et Cap Gribane, qui situé en aval du Cap Tourmente à environ 30 $km$ de l'Îles d'Orléans, la voie navigable est d'une longueur totale d'environ 340 km et elle a été artificialisée sur une longueur d'environ 210 km afin d'y assurer une navigation sécuritaire [@ghd2019]. La voie navigable a été approfondie et élargie à travers le temps, principalement en raison de l'accroissement de la taille des navires et de l'augmentation du trafic maritime. Une caractérisation historique des activités de dragage de capitalisation -- *i.e.* dragage visant à approfondir et élargir la voie de navigation -- de la voie navigable du Saint-Laurent est décrite par @cote2007 et @cote2007a. Certaines portions de la voie navigable doivent également être draguées à intervalles réguliers -- *i.e.* dragages d'entretien -- dû à la dynamique sédimentaire des milieux. Il en est de même pour certaines installations portuaires bordant le Saint-Laurent et le Saguenay, qui doivent s'assurer de la sécurité de leurs installations pour les navires.
+The St. Lawrence Seaway has historically been dredged wherever the natural depth would not allow boats to pass safely. Between Montreal and Cap Gribane, which is located downstream from Cap Tourmente, about 30 $km$ from Île d’Orléans, the navigable waterway is approximately 340 km long and artificial banks have added over a distance of about 210 km to ensure safe navigation [@ghd2019]. The waterway has been deepened and widened over time, mainly due to increases in the size of vessels and marine traffic. A historic characterization of capitalization dredging activities -- *i.e.* dredging to deepen and widen the waterway -- of the St. Lawrence Seaway is described by @cote2007 and @cote2007a. Some portions of the waterway must also be dredged at regular intervals -- *i.e.* maintenance dredging -- due to the sediment dynamics of the environments. The same is true for certain port facilities along the St. Lawrence and Saguenay rivers, which must ensure the ability of their vessel facilities to operate safely.
 
-Dans le cadre de cette étude, les activités de dragage contemporaines pour la période de `r meta$dataDescription$temporal$start` à `r meta$dataDescription$temporal$end` ont été caractérisées. La majorité des données de volumes dragués et déposés provient d'un exercice de compilation des activités de dragage dans l'ensemble du Saint-Laurent [@mtq2016; @mtq2017; @eccc2020]. Ces données ont été complémentées par des données de dragage disponibles au sein d'un rapport d'évaluation des effets environnementaux du dragage pour la voie navigable du Saint-Laurent [@ghd2019]. Les activités de dragage pour le Port de Québec ont quant à elles été caractérisées grâce à des échanges avec une représentante du Port de Québec (Marie-Ève Lemieux, communications personnelles). Divers rapports ont été utilisés afin de caractériser les activités de dragages d'entretien du Port Alfred [@englobe2016; @englobe2017; @melcc2019], et les activités de dragages de capitalisation prévues pour le Port de Montréal à Contrecoeur [@snclavalin2017; @snclavalin2017b; @aeic2021] et pour le Port de Trois-Rivière [@stantec2015]. Finalement, des sites de dragage et de dépôt nous ont été transmis par la Première Nation des Innus d'Essipit [@bouchard2022].
+In this study, contemporary dredging activities for the period `r meta$dataDescription$temporal$start` to `r meta$dataDescription$temporal$end` were characterized. Most of the data on dredged and deposited volumes come from a compilation exercise of dredging activities throughout the St. Lawrence [@mtq2016; @mtq2017; @eccc2020]. Dredging data available in a report assessing the environmental impacts of dredging in the St. Lawrence Seaway completed these data [@ghd2019]. Dredging activities for the Port of Quebec were characterized through discussions with a representative of the Port of Quebec City (Marie-Ève Lemieux, personal communication). Various reports were used to characterize maintenance dredging activities for Port Alfred [@englobe2016; @englobe2017; @melcc2019], and capitalization dredging activities planned for the Port of Montreal at Contrecoeur [@snclavalin2017; @snclavalin2017b; @aeic2021] and for the Port of Trois-Rivières [@stantec2015]. Lastly, data on dredging and disposal sites were transmitted by the Essipit Innu First Nation [@bouchard2022].
 
-Les volumes relevés ont ensuite été rapportés sur les sites de dragage et de dépôt. Lorsque fournies au sein des rapports, les coordonnées délimitant les sites visés ont été utilisées. Lorsqu'une coordonnée unique représentant le centroïde des sites visés était disponible sans information supplémentaire sur la localisation exacte de l'activité, une zone d'un rayon de 100 $m$ a été tracée afin de représenter la zone de dragage ou de dépôt. Lorsque la localisation était décrite, ou qu'une figure était disponible au sein de rapports détaillés, les zones de dragage et de dépôt ont été géoréférencées manuellement. La localisation des sites de dragages et de dépôts utilisés pour le dragage de la voie navigable du Saint-Laurent proviennent d'une base de données fournie par la Garde côtière canadienne [@gcc2021b].
+The volumes recorded were then plotted for the dredging and disposal sites. Where provided within the reports, coordinates delineating the sites considered were used. Where a single coordinate representing the geometric centre of the sites where dredging would take place was available without additional information on the exact location of the activity, an area with a radius of 100 $m$ was drawn to represent the dredging or disposal area. Where the location was described, or a figure was available in the detailed reports, the dredged and disposal areas were georeferenced manually. The St. Lawrence Seaway dredging and disposal site locations were taken from a database provided by the Canadian Coast Guard [@gcc2021b].
 
-Les sites de dragage et les sites de dépôts de sédiments dragués ont été caractérisés en fonction du volume total dragué en $m^3$ pendant la période visée (Tableau \@ref(tab:dragageGen)). Un total de `r length(meta$dataDescription$dragage$volume)` sites de dragage (Tableau \@ref(tab:dragageSite)) et `r length(meta$dataDescription$depot$volume)` sites de dépôt (Tableau \@ref(tab:dragageDepot)) ont été caractérisés au sein de la zone d'étude. Il faut noter que les volumes totaux dragués ne correspondent pas aux volumes totaux déposés puisque certains sites de dépôt se retrouvent en milieu terrestres; ces derniers n'ont ainsi pas été comptabilisés pour la présente étude.
+Dredging sites and dredged sediment disposal sites were characterized based on the total volume dredged in $m^3$ during the period considered (Table \@ref(tab:dragageGen)). A total of `r length(meta$dataDescription$dragage$volume)` dredging sites (Table \@ref(tab:dragageSite)) and `r length(meta$dataDescription$depot$volume)` disposal sites (Table \@ref(tab:dragageDepot)) were characterized in the study area. It should be noted that the total volumes dredged do not correspond to the total volumes deposited since some of the disposal sites are on land and accordingly, were not included in this study.
 
-Des projets d'expansions portuaire pour le Port de Montréal à Contrecoeur [@snclavalin2017; @snclavalin2017b; @aeic2021] et pour le Port de Trois-Rivière [@stantec2015] fournissent des plans de dragages de capitalisation prévus dans les prochaines années. Ces derniers ont donc été répertoriés (Tableau \@ref(tab:dragageGen); Tableau \@ref(tab:dragagePrevu)).
+Port expansion projects for the Port of Montreal at Contrecoeur [@snclavalin2017; @snclavalin2017b; @aeic2021] and for the Port of Trois-Rivières [@stantec2015] provided plans for capitalization dredging in the coming years. These plans were therefore identified (Table \@ref(tab:dragageGen); Table \@ref(tab:dragagePrevu)).
 
 <br/>
 
@@ -28,9 +27,9 @@ tab <- as.data.frame(meta$dataDescription$categories) %>%
 
 tab %>%
   knitr::kable(
-    col.names = c("Catégorie", "Nombre de sites", "Volumes totaux", "Volumes totaux moyens", "Écart-type"),
+    col.names = c("Category", "Number of sites", "Total volumes", "Average total volumes", "Standard deviation"),
     row.names = FALSE,
-    caption = "Catégories et description des activités de dragage répertoriées entre 2001 et 2020 dans le Saint-Laurent et le Saguenay. Les volumes sont présentés en $m^3$."
+    caption = "Categories and description of dredging activities recorded in the St. Lawrence and the Saguenay river between 2001 and 2020. The volumes are presented in $m^3$."
   )
 ```
 
@@ -42,9 +41,9 @@ tab <- as.data.frame(meta$dataDescription$dragage) %>%
 
 tab %>%
   knitr::kable(
-    col.names = c("Région", "Nom du site", "Volumes totaux"),
+    col.names = c("Region", "Site name", "Total volumes"),
     row.names = FALSE,
-    caption = "Sites de dragage et volumes totaux dragués en $m^3$ entre 2001 et 2020 dans le Saint-Laurent et le Saguenay."
+    caption = "Dredging sites and total volumes dredged in $m^3$ in the St. Lawrence and the Saguenay river between 2001 and 2020."
   )
 ```
 
@@ -56,9 +55,9 @@ tab <- as.data.frame(meta$dataDescription$depot) %>%
 
 tab %>%
   knitr::kable(
-    col.names = c("Région", "Nom du site", "Volumes totaux"),
+    col.names = c("Region", "Site name", "Total volumes"),
     row.names = FALSE,
-    caption = "Sites de dépôt et volumes totaux déposés en $m^3$ entre 2001 et 2020 dans le Saint-Laurent et le Saguenay."
+    caption = "Disposal sites and total volumes deposited in $m^3$ in the St. Lawrence and the Saguenay river between 2001 and 2020."
   )
 ```
 
@@ -70,37 +69,37 @@ tab <- as.data.frame(meta$dataDescription$dragage_prevu) %>%
 
 tab %>%
   knitr::kable(
-    col.names = c("Région", "Nom du site", "Volumes totaux"),
+    col.names = c("Region", "Site name", "Total volumes"),
     row.names = FALSE,
-    caption = "Sites de dragage de capitalisation et volumes totaux prévus en $m^3$ dans le Saint-Laurent et le Saguenay."
+    caption = "Capitalization dredging sites and total expected volumes in $m^3$ in the St. Lawrence and the Saguenay river."
   )
 ```
 
 <br/>
 
-L'intensité des activités de dragage (Figure \@ref(fig:dragage)), de dépôts de sédiments (Figure \@ref(fig:depot)) et de dragages prévus (Figure \@ref(fig:dragageprevu)) a été caractérisé en distribuant les volumes totaux dragués au sein de notre grille de 1 $km^2$. Par exemple, imaginons une activité de dragage ayant résulté en l’extraction de 100 $m^3$ de sédiments sur une superficie totale de 2 $km^2$ et que ce site couvre exactement 2 cellules de notre grille d’étude. Les valeurs attribuées aux cellules de 1 $km^2$ seraient ainsi de 50 $m^3$ chacune.
+The intensity of dredging (Figure \@ref(fig:dragage)), sediment disposal (Figure \@ref(fig:depot)), and planned dredging (Figure \@ref(fig:dragageprevu)) activities was characterized by distributing the total volumes dredged within our 1 $km^2$ grid. For example, imagine a dredging activity that resulted in the extraction of 100 $m^3$ of sediment over a total area of 2 $km^2$ and that this site covers exactly 2 cells of our study grid. This means that the values assigned to the 1 $km^2$ cells would be 50 $m^3$ each.
 
-Pour ce faire, nous avons multiplié les volumes totaux au sein de chaque cellule $j$ de la grille d'étude par la proportion de la zone visée par l'activité de dragage couvrant la cellule $j$:
+To do so, we multiplied the total volumes in each $j$ cell of the study grid by the proportion of the area where dredging would take place covering cell $j$:
 
 $$I_{dragage,j} = \sum_{k=1}^{n_j} V_{tot, k} * \frac{A_{j,k}}{A_{tot,k}}$$
 
-où $j$ est une cellule de la grille d'étude, $k$ est une activité de dragage ou de dépôt, $V_{tot}$ est le volume total dragué ou déposé lors de l'activité de dragage ou de dépôt $k$, $A$ est la superficie du site visé $k$ qui intersecte une cellule $j$ et $A_{tot}$ est la superficie totale de l'activité de dragage ou de dépôt $k$. Cette formule calcule une évaluation de l'intensité du dragage en $m^3$. Puisque nous avons calculé l'intensité au sein de cellules de 1 $km^2$, les unités de cette formule sont en $m^3 * km^{-2}$.
+where $j$ is a study grid cell, $k$ is a dredging or disposal activity, $V_{tot}$ is the total volume dredged or deposited during the dredging or disposal activity, $A$ is the dredging area where dredging would take place $k$ that intersects a $j$ cell, and $A_{tot}$ is the total area where the $k$ dredging or disposal occurs. This formula calculates an assessment of the dredging intensity in $m^3$. Since we have calculated the intensity in cells of 1 $km^2$, the units of this formula are in $m^3 * km^{-2}$.
 
 <br/>
 
-```{r dragage, fig.cap = "Distribution des sites de dragage et de dépôt de dragage dans le Saint-Laurent et le Saguenay - Sites de dragage", out.width = '100%', fig.link = "./figures/figures-integrated/dragage-dragage.png"}
+```{r dragage, fig.cap = "Distribution of dredging and disposal sites in the St. Lawrence and the Saguenay river - Dredging sites", out.width = '100%', fig.link = "./figures/figures-integrated/dragage-dragage.png"}
 knitr::include_graphics("./figures/figures-integrated/dragage-dragage.png")
 ```
 
 <br>
 
-```{r depot, fig.cap = "Distribution des sites de dragage et de dépôt de dragage dans le Saint-Laurent et le Saguenay - Sites de dépôts", out.width = '100%', fig.link = "./figures/figures-integrated/dragage-depot.png"}
+```{r depot, fig.cap = "Distribution of dredging and disposal sites in the St. Lawrence and the Saguenay river - Disposal sites", out.width = '100%', fig.link = "./figures/figures-integrated/dragage-depot.png"}
 knitr::include_graphics("./figures/figures-integrated/dragage-depot.png")
 ```
 
 <br>
 
-```{r dragageprevu, fig.cap = "Distribution des sites de dragage et de dépôt de dragage dans le Saint-Laurent et le Saguenay - Dragages de capitalisation prévus", out.width = '100%', fig.link = "./figures/figures-integrated/dragage-dragage_prevu.png"}
+```{r dragageprevu, fig.cap = "Distribution of dredging and disposal sites in the St. Lawrence and the Saguenay river - Planned capitalization dredging", out.width = '100%', fig.link = "./figures/figures-integrated/dragage-dragage_prevu.png"}
 knitr::include_graphics("./figures/figures-integrated/dragage-dragage_prevu.png")
 ```
 

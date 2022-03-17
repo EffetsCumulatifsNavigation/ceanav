@@ -1,10 +1,10 @@
-## Stresseurs environnementaux {#strportrait}
+## Environmental stressors {#strportrait}
 
 ```{r stresssetup, echo = FALSE}
 st <- read.csv("../data/data-metadata/metadata_stresseurs.csv")
 ```
 
-La caractérisation des stresseurs environnementaux dans la zone d'étude a résulté en la description de `r length(unique(st$stresseur))` stresseurs divisés en `r nrow(st)` sous-catégories qui sont considérées pour l'évaluation des effets cumulatifs des activités maritimes (Tableau \@ref(tab:stress)). Les sections suivantes présentent les données, les méthodes et les résultats de l'intégration des données ayant permis la caractérisation des stresseurs environnementaux dans la zone d'étude.
+Characterization of environmental stressors in the study area resulted in the description of `r length(unique(st$stresseur))` stressors divided into `r nrow(st)` subcategories that are considered for the cumulative effects assessment of marine activities (Table \@ref(tab:stress)). The following sections present the data, methods, and results of the data integration allowing us to characterize the environmental stressors in the study area.
 
 <br/>
 
@@ -16,9 +16,10 @@ tab$source <- gsub(",", ", ", tab$source)
 
 tab %>%
   knitr::kable(
-    col.names = c("Stresseurs environnementaux", "Sous-catégories", "Description", "Source"),
+    col.names = c("Environmental stressors", "Subcategories", "Description", "Source"),
     row.names = FALSE,
-    caption = "Liste des sous-catégories de stresseurs environnementaux considérés pour l'évaluation des effets cumulatifs des activités maritimes dans le Saint-Laurent et le Saguenay. Consultez l'[annexe 1](#annexe1) pour plus de détails sur les sources de données."
+    caption = "
+    List of environmental stressor subcategories considered for the cumulative effects assessment of marine activities in the St. Lawrence and the Saguenay river. See [Appendix 1](#annexe1) for more details on data sources."
   ) #%>%
   #kableExtra::row_spec(uid, extra_css = "border-bottom: 2px solid")
 ```

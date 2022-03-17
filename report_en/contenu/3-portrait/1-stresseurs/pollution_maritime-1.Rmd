@@ -1,4 +1,4 @@
-### Pollution maritime {#pollutionmaritime}
+### Marine pollution {#pollutionmaritime}
 
 ```{r pollution_setup, echo = FALSE, results = 'asis'}
 meta <- read_yaml("../data/data-metadata/int_st_pollution_maritime.yml")
@@ -7,31 +7,32 @@ show_source(meta$rawData)
 
 <br/>
 
-Nous introduisons un stresseur environnemental afin de remplacer les rejets opérationnels du côté des stresseurs environnementaux, et la qualité de l'eau du côté des composantes valorisées. Ce nouveau stresseur est utilisé afin de pallier aux difficultés de caractériser ces deux éléments initialement identifiés comme préoccupants par les parties impliquées au projet.
+We introduced an environmental stressor to replace operational discharges on the environmental stressor side, and water quality on the valued component side. This new stressor was used to address the difficulties in characterizing these two elements initially identified as concerns by the parties involved in the project.
 
-Du côté des rejets opérationnels, cette décision a été prise dû à l'absence de données couvrant l'entièreté de la zone d'étude. D'un point de vue législatif, les navires qui transitent en eaux canadiennes sont tenus d'effectuer tout échange d'eaux de ballast au sein de régions pré-établies appelées *Zones désignées de renouvellement d’eau de ballast du Canada* [@tc2021; @tc2021b]. Or, la zone la plus près de la zone d'étude est située à l'entrée du Golfe du Saint-Laurent et ne touche ainsi pas la zone d'étude couverte par notre évaluation (Figure \@ref(fig:ballast)). Les données touchant spécifiquement les rejets opérationnels des navires auraient, quant à elles, été disponibles uniquement pour une faible proportion de la flotte canadienne naviguant les eaux de la zone d'étude et auraient nécessité un effort de saisie de données considérable. En tant que tel, ces données n'ont pas été considérées pour l'évaluation.
+On the operational discharge side, this decision was made due to the lack of data covering the entire study area. From a legislative perspective, vessels transiting Canadian waters must exchange any ballast water within pre-established areas called “Canada’s Designated Alternate Ballast Water Exchange Areas” [@tc2021; @tc2021b]. However, the area closest to the study area is located at the entrance to the Gulf of St. Lawrence, meaning it does not affect the study area covered by our assessment (Figure \@ref(fig:ballast)). Data specific to operational discharges from vessels is apparently available for only a small proportion of the Canadian fleet operating in the study area and would have triggered a considerable data capture effort. As such, these data were not considered in the assessment.
 
 <br/>
 
-```{r ballast, fig.cap = "Emplacement des zones désignées de renouvellement d'eau de ballast relativement à la position de la zone d'étude pour l'évaluation des effets cumulatifs des activités maritimes dans le Saint-Laurent et le Saguenay.", out.width = '80%', fig.link = "./figures/data0051-ballast.png"}
+```{r ballast, fig.cap = "Location of Canada's designated alternate ballast water exchange areas relative to the position of the study area for the cumulative effects assessment of marine activities in the St. Lawrence and the Saguenay river.", out.width = '80%', fig.link = "./figures/data0051-ballast.png"}
 knitr::include_graphics("./figures/data0051-ballast.png")
 ```
 
 <br/>
 
-Du côté de la qualité de l'eau, cette décision a été prise dû à la difficulté d'attribuer des variations en qualité de l'eau spécifiquement aux activités maritimes. En effet, de nombreux autres facteurs influencent la qualité de l'eau en milieux côtier, aquatique et marin, et départager ces effets était hors de portée dans le cadre de ce projet pilote. Plus de détails à ce sujet sont disponibles à la section sur la qualité de l'eau.
+On the water quality side, this decision was made due to the difficulty of attributing variations in water quality specifically to marine activities. There are many other factors that influence water quality in coastal, aquatic and marine environments, and differentiating these effects was beyond the scope of this pilot project. More details are available in the section on water quality.
 
-À l’instar de @halpern2019, la pollution maritime a été caractérisée en combinant les stresseurs environnementaux reliés aux activités maritimes. Ce choix suppose que la qualité de l'eau est plus à risque face aux activités de navigation et de la pollution qui en résulte via des rejets opérationnels, des fuites de gaz, des décharges de déchets, etc. En l'absence de données exhaustives sur les rejets opérationnels et de la difficulté d'établir un lien direct entre la qualité de l'eau et les activités maritimes cumulées, l'indice de pollution maritime nous sert de proxy visant à identifier les milieux les plus à risque de pollution issues des activités maritimes.
+As in @halpern2019, marine pollution was characterized by combining environmental stressors related to marine activities. This choice assumes that water quality is more at risk from shipping activities and the resulting pollution via operational discharges, gas leaks, waste discharges, etc. In the absence of exhaustive data on operational discharges and the difficulty of establishing a direct link between water quality and cumulative marine activities, we used the marine pollution index as a proxy to identify the environments most at risk from pollution from marine activities.
 
-L'indice de pollution maritime est obtenu en combinant l'intensité relative de tous les stresseurs associés directement aux activités de navigation, *i.e.* les sites d'ancrage, les activités de dragage, la navigation et la pêche commerciale. Les déversements accidentels n'y sont pas inclus puisqu'ils décrivent déjà explicitement des problématiques de déversements toxiques dans l'environnement plutôt qu'un stresseur relié aux opérations régulières d'activité de navigation. L'intensité de la pollution maritime ($I_{pollution}$) au sein d'une cellule $j$ correspond à la somme de l'intensité des stresseurs environnementaux sélectionnés normalisés entre 0 et 1 :
+The marine pollution index is obtained by combining the relative intensity of all stressors directly associated with shipping activities, *i.e.* anchorage sites, dredging activities, shipping-related activities and commercial fishing. Characterization of the accidental spills is not included since it has already been explained in detail in the issue of toxic spills in the environment rather than as a stressor related to regular shipping problems. The marine pollution intensity ($I_{pollution}$) within a cell $j$ is the sum of the intensity of selected environmental stressors normalized between 0 and 1:
 
 $$I_{pollution,j} = \frac{1}{|S|} \sum_{s \in S} I_{s,j}$$
 
-où $|S|$ est le nombre de stresseurs environnementaux considérés, $s$ sont les stresseurs environnementaux individuels et $I_{s,j}$ est l'intensité relative du stresseurs $s$ au sein de la cellule $j$.
+where $|S|$ is the number of environmental stressors considered, $s$ are the individual environmental stressors, and $I_{s,j}$ is the relative intensity of the stressor $s$ within cell $j$.
+
 
 <br>
 
-```{r pollutionmaritime, fig.cap = "Intensité de la pollution maritime dans le Saint-Laurent et le Saguenay - Pollution maritime", out.width = '100%', fig.link = "./figures/figures-integrated/pollution_maritime-pollution_maritime.png"}
+```{r pollutionmaritime, fig.cap = "Distribution and intensity of marine pollution in the St. Lawrence and the Saguenay river - Marine pollution", out.width = '100%', fig.link = "./figures/figures-integrated/pollution_maritime-pollution_maritime.png"}
 knitr::include_graphics("./figures/figures-integrated/pollution_maritime-pollution_maritime.png")
 ```
 

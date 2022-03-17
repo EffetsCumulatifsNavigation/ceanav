@@ -1,6 +1,6 @@
-### Mammifères marins {#mammiferesmarins}
+### Marine mammals {#mammiferes_marins}
 
-> ***Nous remercions Sonia Giroux du Réseau d’observation de mammifères marins et Aurélie Cosandey-Godin de WWF-Canada	pour les échanges et le soutien.***
+> ***We thank Sonia Giroux of the Marine Mammal Observation Network (Réseau d’observation de mammifères marins, ROMM) and Aurélie Cosandey-Godin of WWF-Canada for their discussions and support.***
 
 
 ```{r mm_setup, echo = FALSE, results = 'asis'}
@@ -14,16 +14,15 @@ show_source(meta$rawData)
 Citation: Le WWF-Canada et le Réseau d’observation de mammifères marins. Données cartographiques : Navires et baleines de l’Atlantique Nord-Ouest : Guide à l’intention de l’industrie maritime, 2e édition. 2021. Données disponibles sur le site https://www.navigationbaleines.ca/fr/accueil/
 --->
 
-La caractérisation de la distribution des mammifères marins dans la zone d'étude provient de la deuxième édition d'un guide publié à l'intention des navigateurs qui fréquentent l'Atlantique Nord-Ouest [@wwfromm2021]. Ce guide vise à informer les navigateurs sur la problématique de collisions entre navires et baleines, sur les mesures permettant de minimiser les incidents, sur les différentes espèces de baleines et de la tortue luth sur le territoire et de leur présence potentielle, et sur des zones où une vigilance accrue est de mise. Ce guide présente des cartes de distribution pour neuf espèces de mammifères marins qui fréquentent l'Atlantique Nord-Ouest [@wwfromm2021; @wwfromm2021b]. Ces espèces ont été sélectionnées dû à leur statut de conservation et à leur risque connu de collision avec des navires.
+The characterization of marine mammal distribution in the study area was taken from the second edition of a guidebook published for mariners who frequent the Northwest Atlantic [@wwfromm2021]. The purpose of this guide is to inform mariners on the problem of collisions between vessels and whales, how to minimize such incidents, the various species of whales and leatherback turtles in the area and where they might be present, and on areas where heightened vigilance is required. This guide provides distribution maps for nine species of marine mammals that frequent the Northwest Atlantic [@wwfromm2021; @wwfromm2021b]. These species were selected because of their conservation status and their known risk of collision with vessels.
 
-Les cartes de distributions ont été évaluées grâce à l'intégration de 14 ensembles de données distincts provenant d'observations scientifiques et opportunistes (Tableau \@ref(tab:datamm); @wwfromm2021c). Les données d'observations couvrant la période de 2010 à 2015 et les limites géographiques de 40$^o$ à 55$^o$ N et de -72$^o$ à -48$^o$ O ont été sélectionnées pour créer les cartes partagées dans le guide. L'aire d'étude a été divisée en une grille régulière de 0.05$^o$ x 0.05$^o$. Pour chaque espèce, le nombre d'observations relevées au sein de 14 bases de données disponibles a été évalué pour chaque cellule de la grille d'étude. Un lissage gaussien -- *i.e.* méthode d'interpolation basée sur une distribution normale -- de 0.2$^o$ a ensuite été appliqué sur la grille. Les valeurs obtenues dans chaque cellule ont été normalisées par le nombre total d'observations pour une espèce; la valeur d'une cellule représente ainsi la proportion du nombre total d'observations par espèce au sein de l'aire d'étude. Finalement, une transformation logarithmique a ensuite été appliquée afin de minimiser l'effet des valeurs extrêmes sur les cartes résultantes.
+Distribution maps were assessed by integrating 14 separate datasets from scientific and opportunistic sightings (Table \@ref(tab:datamm); @wwfromm2021c). Sighting data covering the period 2010-2015 and geographic boundaries of $40^o$ to $55^o$ N and -72$^o$ to -48$^o$ W were selected to create the maps shared in the guide. The study area was divided into a regular 0.05$^o$ x 0.05$^o$ grid. For each species, the number of sightings recorded in 14 available databases was assessed for each cell of the study grid. A Gaussian smoothing -- *i.e.* an interpolation method based on a normal distribution -- of 0.2$^o$ was then applied to the grid. The values obtained in each cell were normalized by the total number of sightings for a species; the value in a cell therefore represents the proportion of the total number of sightings per species within the study area. Lastly, a log transformation was then applied to minimize the effect of extreme values on the resulting maps.
 
-Des mises en gardes accompagnent ces cartes et sont rapportées *verbatim* à ce rapport:
+Caveats accompany these maps and are reported *verbatim* in this report:
 
-> - L'effort d'observation n'a pas été quantifié et varie considérablement dans le temps et l'espace. Les données représentent l’occurrence relative des données d’observation signalées plutôt que la densité ou l'abondance réelle de l'espèce.
+> - Sighting effort was not quantified and varies considerably in time and space. The data represent the relative occurrence of reported sightings rather than the actual density or abundance of the species.
 
-> - La qualité de certaines des données d'observation est inconnue. Les observations proviennent de personnes ayant des niveaux variés d’expertise dans l'identification des mammifères marins.
-
+> - The quality of some of the sighting data is unknown. Sightings are reported from individuals with varying degrees of expertise in identifying marine mammals.
 
 <br/>
 
@@ -86,16 +85,16 @@ tab %>%
 <br/>
 
 
-Sur les neuf espèces dont une cartographie est disponible, cinq fréquentent l'estuaire du Saint-Laurent et le Saguenay : le béluga du Saint-Laurent (*Delphinapterus leucas*), le petit rorqual (*Balaenoptera acutorostrata*), le rorqual à bosse (*Megaptera novaeangliae*), le rorqual bleu (*Balaenoptera musculus*) et le rorqual commun (*Balaenoptera physalus*; Tableau \@ref(tab:mmSp)). Pour notre étude, nous avons rééchantillonné les cartes de distribution produites [@wwfromm2021b] afin de les intégrer à notre grille d'étude de 1 $km^2$ en utilisant la valeur moyenne des cellules de la grille du guide qui intersecte chaque cellule de notre grille. Les valeurs ont ensuite été normalisées entre 0 et 1 en divisant chaque valeur par la valeur maximale observée au sein de la grille pour chaque espèce. Les valeurs résultantes peuvent être interprétées en tant que densité relative des observations de mammifères marins, avec des valeurs de 0 représentant une densité 
-relative faible et une valeur de 1 une densité relative élevée.
+Of the nine species for which mappings are available, five frequent the St. Lawrence Estuary and the Saguenay River: the St. Lawrence beluga whale (*Delphinapterus leucas*), the minke whale (*Balaenoptera acutorostrata*), the humpback whale (*Megaptera novaeangliae*), the blue whale (*Balaenoptera musculus*), and the fin whale (*Balaenoptera physalus*; Table \@ref(tab:mmSp)). For our study, we resampled the distribution maps produced [@wwfromm2021b] to integrate them into our 1 $km^2$ study grid using the average value of the guide grid cells that intersect each cell in our grid. The values were then normalized between 0 and 1 by dividing each value by the maximum value observed within the grid for each species. The resulting values can be interpreted as the relative density of marine mammal sightings, with values of 0 representing a low relative density 
+and a value of 1 a high relative density.
 
-Afin de complémenter ce portrait des mammifères marins, nous avons utilisé des données provenant du Réseau d'observation de mammifères marins [ROMM; @romm2021] et disponibles sur le site de l'Observation Global du Saint-Laurent ([https://ogsl.ca/bio/?lg=fr](https://ogsl.ca/bio/?lg=fr)). Cette base de données est constituée d'observations de mammifères marins relevées par des observateurs membres ayant suivi une formation offerte par le ROMM, récoltées systématiquement par l'équipe du ROMM, et rapportées par des citoyens puis validées par l'équipe du ROMM. Plus d'informations sur le programme sont disponibles sur une [page dédiée](https://ogsl.ca/fr/biodiversite-mammiferes-marins-romm-information-sur-les-donnees/) sur le site de l'OGSL.
+To complete this characterization of marine mammals, we used data from the Marine Mammal Observation Network [MMON; @romm2021] available on the St. Lawrence Global Observatory website ([https://ogsl.ca/bio/?lg=en](https://ogsl.ca/bio/?lg=en)). This database is made up of marine mammal sightings recorded by member observers who have been trained by MMON; the sightings are reported by the public and systematically collected by the MMON team, which then validates these sightings. More information about the program is available on a [dedicated page](https://ogsl.ca/en/biodiversity-marine-mammals-data-information/) on the SLGO website.
 
-Cette base de données contient près de 50000 observations de mammifères marins entre 1996 et 2021 sur 21 espèces différentes [@romm2021]. De ce nombre, nous avons sélectionné les données pour la période allant de 2000 à 2021 pour les espèces non décrites au sein du guide et ayant plus de 50 observations uniques. Nous avons appliquer la même méthodologie décrite pour le guide afin de caractériser la distribution de quatre espèces supplémentaires fréquentant le Saint-Laurent et le Saguenay : le marsouin commun	(*Phocoena phocoena*), le phoque commun	(*Phoca vitulina*), le phoque du Groenland	(*Phoca groenlandica*) et le phoque gris	(*Halichoerus grypus*; Tableau \@ref(tab:mmSp)).
+This database contains nearly 50,000 marine mammal sightings of 21 different species between 1996 and 2021 [@romm2021]. Of these, we selected data for the period from 2000 to 2021 for species not described in the guide that had more than 50 unique sightings. We applied the same methodology described for the guide to characterize the distribution of four additional species frequenting the St. Lawrence and Saguenay rivers: harbour porpoise	(*Phocoena phocoena*), harbour seal	(*Phoca vitulina*), harp seal	(*Phoca groenlandica*) and grey seal	(*Halichoerus grypus*; Table \@ref(tab:mmSp)).
 
-Il est important de noter que les cartes de distribution issues pour ces espèces ne sont pas informées par un processus et une quantité de données semblables à ce qui a été utilisé pour créer le guide à l'intention de l'industrie maritime [@wwfromm2021]. Tout comme pour les cartes issues des données du Guide, les valeurs résultantes peuvent être interprétées en tant que densité relative des observations de mammifères marins, avec des valeurs de 0 représentant une densité relative faible et une valeur de 1 une densité relative élevée. Une mise en garde supplémentaire doit également accompagner ces données :
+It is important to note that the resulting distribution maps for these species are not informed by a process and amount of data similar to what was used to create the marine industry guide [@wwfromm2021]. As with the maps created from Guide data, the resulting values can be interpreted as the relative density of marine mammal sightings, with values of 0 representing a low relative density and a value of 1 a high relative density. An additional caveat must also accompany these data:
 
-> - Une absence de données dans un secteur ne doit pas être interprétée comme une absence de mammifères marins. Pour certains secteurs et certaines périodes de l’année, il n’existe actuellement aucune donnée disponible quant à la fréquentation des mammifères marins.
+> - A lack of data in a sector must not be interpreted as an absence of marine mammals. There are currently no data available on marine mammal traffic for some sectors and some periods of the year.
 
 
 
@@ -118,7 +117,7 @@ tab %>%
 
 <br>
 
-#### Baleines
+#### Whales
 
 <br>
 
@@ -159,7 +158,7 @@ knitr::include_graphics("./figures/figures-integrated/mammiferes_marins-rorqual_
 
 <br>
 
-#### Phoques
+#### Seals
 
 <br>
 

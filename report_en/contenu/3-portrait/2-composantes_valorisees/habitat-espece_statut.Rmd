@@ -1,4 +1,4 @@
-#### Espèces fauniques et floristiques à statut
+#### Endangered wildlife and plant species
 
 ```{r statut_data, results = 'asis'}
 uid <- meta$dataDescription$categories$accronyme %in% 
@@ -14,8 +14,7 @@ show_source()
 
 <br/>
 
-
-Plusieurs espèces ayant un [statut précaire](https://www.environnement.gouv.qc.ca/biodiversite/especes/index.htm) fréquentent et bordent les eaux du Saint-Laurent et du Saguenay. Afin de capturer la nature sensible de ces espèces et de les intégrer à notre analyse, nous avons considéré les lieux où ces espèces ont été observées historiquement dans la zone d'étude. Les données utilisées pour caractériser les habitats pour les espèces à statut ont été préparées par le Centre de données sur le patrimoine naturel du Québec [CDPNQ; @cdpnq2021; @cdpnq2021b]. Ces données contiennent des occurrences qui désignent un territoire abritant ou ayant déjà abrité des espèces à statut. Nous avons retiré de la base de données les observations historiques ainsi que les espèces extirpées ou celles n'ayant aucune observation récente, c'est-à-dire depuis l'année 2000. Finalement, nous avons considéré les espèces susceptibles, vulnérables et menacées. Il en résulte un total de `r meta$dataDescription$CDPNQ$EspecesFaune` espèces et `r meta$dataDescription$CDPNQ$NombreFaune` sites pour les espèces fauniques, et `r meta$dataDescription$CDPNQ$EspecesFlore` espèces et `r meta$dataDescription$CDPNQ$NombreFlore` sites pour les espèces floristiques (Tableau \@ref(tab:statut)). Référez à l'[annexe 4](#annexe4) et à l'[annexe 5](#annexe5) pour les listes d'espèces fauniques et floristiques à statut, respectivement.
+A number of species with a [precarious status](https://www.environnement.gouv.qc.ca/biodiversite/especes/index.htm) frequent the waters and banks of the St. Lawrence and Saguenay rivers. In order to capture the sensitive nature of these species and incorporate them into our analysis, we considered the locations where these species have been historically sighted in the study area. The data used to characterize habitats for special status species were prepared by the Quebec Natural Heritage Data Centre (Centre de données sur le patrimoine naturel du Québec) [CDPNQ; @cdpnq2021; @cdpnq2021b]. These data contain occurrences that designate a territory that is or was home to special status species. We removed historical sightings from the database, as well as species that were extirpated or had not been sighted recently, i.e., since the year 2000. Lastly, we considered sensitive, vulnerable and threatened species. This resulted in a total of `r meta$dataDescription$CDPNQ$EspecesFaune` species and `r meta$dataDescription$CDPNQ$NombreFaune` sites for wildlife species, and `r meta$dataDescription$CDPNQ$EspecesFlore` species and `r meta$dataDescription$CDPNQ$NombreFlore` sites for plant species (Table \@ref(tab:status)). Refer to [Appendix 4](#annexe4) and [Appendix 5](#annexe5) for the lists of special status wildlife and plant species, respectively.
 
 <br/>
 
@@ -33,7 +32,7 @@ tab %>%
 <br/>
 
 
-Ces sites d'importances pour les espèces à statut ont été intégrés à la grille d'étude en présence-absence par statut afin d'identifier les sites qui abritent des espèces fauniques ou floristiques susceptibles, vulnérables ou menacées. Les données intégrées ne discriminent ainsi par les différentes espèces considérées; elles fournissent plutôt une délimitation spatiale des zones fréquentées par des espèces à statut. Il en résulte 6 catégories distinctes de sites.
+These sites of importance for special status species were integrated into the study grid as presence-absence based on status in order to identify sites that are home to sensitive, vulnerable or threatened wildlife or plant species. This means that the integrated data do not discriminate between the different species considered; rather, they provide a spatial delineation of areas frequented by special status species. This results in 6 distinct categories of sites.
 
 <br>
 

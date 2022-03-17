@@ -1,13 +1,13 @@
-### Mammifères marins {#vulnmm}
+### Marine mammals {#vulnmm}
 
-> *Nous remercions Sonia Giroux du Réseau d’observation de mammifères marins et Marie Guilpin du Royal Netherlands Institute for Sea Research les échanges et le soutien.*
+> *We thank Sonia Giroux of the Marine Mammal Observation Network and Marie Guilpin of the Royal Netherlands Institute for Sea Research for their discussions and support.*
 
 
-La section précédente présente les différents critères utilisés afin de caractériser la vulnérabilité des espèces aux stresseurs environnementaux. La vulnérabilité des mammifères marins a été évaluée en utilisant l'ensemble des critères présentés au tableau \@ref(tab:vulnerabilitySpecies) et l'équation présentée à la section précédente. 
+The previous section presents the different criteria used to characterize species vulnerability to environmental stressors. Vulnerability of marine mammals was assessed using the set of criteria presented in table \@ref(tab:vulnerabilitySpecies) and the equation presented in the previous section. 
 
-Les statuts fédéraux du Comité sur la situation des espèces en péril au Canada (COSEPAC) ont été utilisés afin de déterminer le statut des espèces de mammifères marins. 
+The Committee on the Status of Endangered Wildlife in Canada (COSEWIC) federal statuses were used to determine the status of marine mammal species. 
 
-Les scores de vulnérabilité finaux sont disponibles au tableau \@ref(fig:mmvuln) et les tableaux d'évaluation des critères individuels par espèce de mammifère marin sont disponibles à l'[annexe 9](#annexe9).
+The final vulnerability scores are available in Table \@ref(fig:mmvuln) and the individual criteria assessment tables by marine mammal species are available in [Appendix 9](#annexe9).
 
 <br/>
 

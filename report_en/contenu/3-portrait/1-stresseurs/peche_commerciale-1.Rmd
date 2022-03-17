@@ -1,4 +1,4 @@
-### Pêche commerciale {#pechecommerciale}
+### Commercial fishing {#pechecommerciale}
 
 ```{r peche_setup, echo = FALSE, results = 'asis'}
 meta <- read_yaml("../data/data-metadata/int_st_peche_commerciale.yml")
@@ -7,21 +7,9 @@ show_source(meta$rawData)
 
 <br/>
 
-L'intensité des activités de pêche commerciale au sein de la zone d'étude a été
-évaluée à l'aide de données provenant du programme de journaux de bord de Pêches
-et Océans Canada [@mpo2021; @mpo2021b; @mpo2021c]. Bien que les journaux de bord ne soient pas
-obligatoires pour toutes les pêches, ils fournissent tout de même une évaluation
-suffisamment exhaustive de la distribution et de l'intensité des activités de pêche
-commerciale dans la zone d'étude. Bien qu'une pêche commerciale existe dans le secteur fluvial et dans la rivière Saguenay, nous n'avons pu obtenir de données permettant d'en caractériser leur distribution et leur intensité. L'absence de données dans ces secteurs ne devrait ainsi pas être interprétée comme une absence de pêche commerciale; cette lacune devrait être adressée pour une évaluation future.
+The intensity of commercial fishing activity within the study area was assessed using data from the Fisheries and Oceans Canada logbook program [@mpo2021; @mpo2021b; @mpo2021c]. Although logbooks are not mandatory for all fisheries, they still provide a sufficiently exhaustive assessment of commercial fishing activity distribution and intensity in the study area. Although there is a commercial fishery in the fluvial sector and in the Saguenay River, we were unable to obtain data enabling us to characterize its distribution and intensity. The lack of data in these areas should therefore not be interpreted as an absence of commercial fishing; this gap should be addressed for a future assessment.
 
-Nous avons utilisé des données entre `r meta$dataDescription$temporal$start` et `r meta$dataDescription$temporal$end`
-pour caractériser la distribution et l'intensité de la pêche commerciale dans la
-zone d'étude. Cette période est caractérisée par `r meta$dataDescription$observations$total`
-activités de pêche (`r meta$dataDescription$observations$moyenne` $\pm$ `r meta$dataDescription$observations$sd` observations
-par année). Pendant cette période, un total de `r length(meta$dataDescription$especes$cible)`
-espèces étaient ciblées pour la pêche commerciale et un total de
-`r length(meta$dataDescription$especes$capture$ID)` espèces différentes ont été capturées
-(Tableau \@ref(tab:pecheEspece)).
+We used data between `r meta$dataDescription$temporal$start` and `r meta$dataDescription$temporal$end` to characterize commercial fishing distribution and intensity in the study area. This period is characterized by `r meta$dataDescription$observations$total` fishing activities (`r meta$dataDescription$observations$moyenne` $\pm$ `r meta$dataDescription$observations$sd` observations per year). During this period, a total of `r length(meta$dataDescription$especes$cible)` species were targeted for commercial fishing and a total of `r length(meta$dataDescription$especes$capture$ID)` different species were caught (Table \@ref(tab:pecheEspece)).
 
 <br/>
 
@@ -35,41 +23,26 @@ tab$Scientific <- glue("*{tab$Scientific}*")
 
 tab[,-1] %>%
   knitr::kable(
-    col.names = c("Nom scientifique", "Nom français","Nom anglais","Fréquence"),
-    caption = "Espèces capturées par la pêche commerciale dans la zone d'étude [@mpo2021]. Les espèces identifiées en gras sont les espèces ciblées par les activités de pêche. Les identifiants uniques proviennent d'une base de données fournissant un index des espèces pour la pêche commerciale conjointe à la base de données des journaux de bord [@mpo2021c]"
+    col.names = c("Scientific name", "French name","English name","Frequency"),
+    caption = "Species captured by commercial fisheries in the study area [@mpo2021]. Species in bold are the species targetted by fisheries. The unique identifiers come from a dataset providing an index of species for commercial fisheries [@mpo2021c]"
   )
 ```
 
 <br/>
 
 
-Les activités de pêche commerciale sont effectuées à l'aide d'une grande variété
-d'engins de pêche comme des casiers, des chaluts, des dragues, des filets maillants
-et des palangres. Chaque engin de pêche peut engendrer des effets différents sur les
-écosystèmes où les activités de pêche se déroulent. Par exemple, la pêche à l'aide
-de casiers a des effets très différents que la pêche au chalut. Nous avons ainsi
-divisé les activités de pêche en fonction de leurs effets environnementaux selon
-les catégories proposées par @halpern2008a et reprises par @beauchesne2020 pour
-l'estuaire et le golfe du Saint-Laurent (Tableaux \@ref(tab:pecheEnginFreq) et \@ref(tab:pecheEngin)):
-démersales, destructives, prises accessoires élevées (DD),
-démersales, non-destructives, prises accessoires élevées (DNH),
-démersales, non-destructives, prises accessoires faibles (DNL),
-pélagiques, prises accessoires élevées (PHB),
-pélagiques, prises accessoires faibles (PLB).
+Commercial fishing is carried out with a wide variety of fishing gear such as traps, trawls, dragging, gillnets and longlines. Each type of fishing gear may have different effects on the ecosystems where fishing activities take place. For example, fishing with traps has very different effects from fishing with trawls. We thus divided fishing based on their environmental effects according to the categories suggested by @halpern2008a and repeated by @beauchesne2020 for the Estuary and Gulf of St. Lawrence (Tables \@ref(tab:pecheEnginFreq) and \@ref(tab:pecheEngin)):
+demersal, destructive, high bycatch (DD)
+demersal, non-destructive, high bycatch (DNH)
+demersal, non-destructive, low bycatch (DNL)
+pelagic, high bycatch (PHB)
+pelagic, low bycatch (PLB)
 
-Les engins peuvent également être catégorisés selon leur mobilité.
-Des engins fixes tels les casiers sont laissés sur place et
-ont un effet plus localisé. Les engins mobiles comme les chaluts peuvent quant
-à eux être tractés sur plusieurs kilomètres lors des activités de pêche.
-Nous avons utilisé le type de mobilité pour générer une zone d'effets des activités
-de pêche. Cette approche permet de considérer l'incertitude potentielle associée
-aux coordonnées des activités de pêche, la mobilité des engins et l'absence des
-coordonnées de début et de fin des activités de pêche pour les engins mobiles.
-Nous avons utilisé une zone ayant un rayon de 200 et 2000 mètres pour les
-activités de pêche avec engins fixes et mobiles, respectivement [@beauchesne2020].
-Les engins ont été caractérisés grâce à une base de données fournissant un
-index des engins de pêche pour la pêche commerciale conjointe à la base
-de données des journaux de bord [@mpo2021b]
+Gear can also be categorized based on its mobility.
+Fixed gear such as traps are left in place and have a more localized effect. Mobile gear such as trawls can be towed for several kilometres during fishing activities.
+We used the type of mobility to generate an area of effects for fishing activities. This approach allows for the potential uncertainty associated with fishing activity coordinates, gear mobility, and the absence of start and end coordinates for mobile gear.
+We used an area with a radius of 200 and 2000 metres for fixed and mobile gear fishing activities, respectively [@beauchesne2020].
+Types of gear were characterized using a commercial fisheries fishing gear index database together with the logbook database [@mpo2021b].
 
 <br/>
 
@@ -81,64 +54,64 @@ end <- meta$dataDescription$temporal$end
 
 tab %>%
   knitr::kable(
-    col.names = c("Catégorie", "Description", "Fréquence"),
-    caption = paste("Description des catégories de types d'engins avec la fréquence des activités de pêche commerciale répertoriées dans les journaux de bords entre", beg, "et", end, "[@mpo2021; @mpo2021b; @mpo2021c].")
+    col.names = c("Category", "Description", "Frequency"),
+    caption = paste("Description of gear type categories with the frequency of commercial fishing activities recorded in logbooks between", beg, "and", end, "[@mpo2021; @mpo2021b; @mpo2021c].")
   )
 ```
 <br/>
 
 ```{r pecheEngin}
 tab <- data.frame(
-  gear = c("Casier","Chalut de fond","Drague","Filet maillant","Pêche à la ligne",
-           "Palangre","Plongée","Senne bourse","Senne Danoise ou Écossaise",
-           "Senne de rivage","Trappe","Turlutte"),
+  gear = c("Trap","Bottom trawl","Drag","Gillnet","Line fishing",
+           "Longline","Diving","Purse seine","Danish or Scottish seine",
+           "Shoreline seine","Trap","Jigger"),
   class = c("DNH","DD","DD","PHB","PLB","PHB","DNL","PLB","DNH","DNH","DNH","PLB"),
-  mob = c("Fixes","Mobile","Mobile","Fixes","Fixes","Fixes","Fixes","Fixes","Fixes","Fixes","Fixes","Fixes")
+  mob = c("Fixed","Mobile","Mobile","Fixed","Fixed","Fixed","Fixed","Fixed","Fixed","Fixed","Fixed","Fixed")
 )
 
 tab %>%
   knitr::kable(
-    col.names = c("Type d'engin", "Catégorie", "Mobilité"),
-    caption = "Classification des types d'engins selon leur effets environnementaux et leur mobilité. DD: démersales, destructives, prises accessoires élevées; DNH: démersales, non-destructives, prises accessoires élevées; DNL: démersales, non-destructives, prises accessoires faibles; PHB: pélagiques, prises accessoires élevées; PLB: pélagiques, prises accessoires faibles. Adapté de [@beauchesne2020]"
+    col.names = c("Type of gear", "Category", "Mobility"),
+    caption = "Classification of gear types according to their environmental effects and mobility. DD: demersal, destructive, high bycatch; DNH: demersal, non-destructive, high bycatch; DNL: demersal, non-destructive, low bycatch; PHB: pelagic, high bycatch; PLB: pelagic, low bycatch. Adapted from @beauchesne2020."
   )
 ```
 
 <br/>
 
-Pour caractériser l'intensité des activités de pêche ($I_{peche}$), nous avons évalué la fréquence totale des activités de pêche pendant la période visée (`r meta$dataDescription$temporal$start` - `r meta$dataDescription$temporal$end`) chevauchant chaque cellule de la grille d'étude: 
+
+To characterize fishing intensity ($I_{peche}$), we assessed the total frequency of fishing activities during the period considered (`r meta$dataDescription$temporal$start` - `r meta$dataDescription$temporal$end`) overlapping each study grid cell: 
 
 $$I_{peche,j} = \sum_{k=1}^{n_j} P_{j,k}$$
 
-où $j$ est une cellule de la grille d'étude, $k$ est une activité de pêche et $P_k$ est la zone tampon entourant chaque activité de pêche $k$. Cette formule calcule l'intensité de pêche en nombre d'activités de pêche répertoriées. Puisque nous avons calculé l'intensité au sein de cellules de 1 $km^2$, les unités de cette formule sont en nombre d'activités ($n$) par $km^2$, soit $n * km^{-2}$. Puisque des zones tampons ont été utilisées autour de chaque activité, il est possible qu'une seule activité de pêche soit répertoriée pour plus d'une cellule de la grille d'étude. La somme totale des activités dans la grille d'étude ne sera ainsi pas égale à la somme totale réelle des activités de pêche répertoriées dans la zone d'étude. 
-
+where $j$ is a study grid cell, $k$ is a fishing activity, and $P_k$ is the buffer zone surrounding each $k$ fishing activity. This formula calculates fishing intensity expressed as the number of identified fishing activities. Since we have calculated the intensity within cells of 1 $km^2$, the units of this formula are in number of activities ($n$) per $km^2$, or $n * km^{-2}$. Since buffer zones were used around each activity, it is possible that a single fishing activity is identified for more than one cell in the study grid. The total sum of activities in the study grid will therefore not equal the actual total sum of fishing activities identified in the study area. 
 
 <br>
 
-```{r DD, fig.cap = "Intensité des activités de pêche commerciale dans le Saint-Laurent - Démersale destructive, prises accessoires élevées", out.width = '100%', fig.link = "./figures/figures-integrated/peche_commerciale-DD.png"}
+```{r DD, fig.cap = "Distribution and intensity of commercial fisheries in the St. Lawrence and the Saguenay river - Demersal, destructive, high bycatch", out.width = '100%', fig.link = "./figures/figures-integrated/peche_commerciale-DD.png"}
 knitr::include_graphics("./figures/figures-integrated/peche_commerciale-DD.png")
 ```
 
 <br>
 
-```{r DNH, fig.cap = "Intensité des activités de pêche commerciale dans le Saint-Laurent - Démersale non-destructive, prises accessoires élevées", out.width = '100%', fig.link = "./figures/figures-integrated/peche_commerciale-DNH.png"}
+```{r DNH, fig.cap = "Distribution and intensity of commercial fisheries in the St. Lawrence and the Saguenay river - Demersal, non-destructive, high bycatch", out.width = '100%', fig.link = "./figures/figures-integrated/peche_commerciale-DNH.png"}
 knitr::include_graphics("./figures/figures-integrated/peche_commerciale-DNH.png")
 ```
 
 <br>
 
-```{r DNL, fig.cap = "Intensité des activités de pêche commerciale dans le Saint-Laurent - Démersale non-destructive, prises accessoires faibles", out.width = '100%', fig.link = "./figures/figures-integrated/peche_commerciale-DNL.png"}
+```{r DNL, fig.cap = "Distribution and intensity of commercial fisheries in the St. Lawrence and the Saguenay river - Demersal, non-destructive, low bycatch", out.width = '100%', fig.link = "./figures/figures-integrated/peche_commerciale-DNL.png"}
 knitr::include_graphics("./figures/figures-integrated/peche_commerciale-DNL.png")
 ```
 
 <br>
 
-```{r PHB, fig.cap = "Intensité des activités de pêche commerciale dans le Saint-Laurent - Pélagique prises accessoires élevées", out.width = '100%', fig.link = "./figures/figures-integrated/peche_commerciale-PHB.png"}
+```{r PHB, fig.cap = "Distribution and intensity of commercial fisheries in the St. Lawrence and the Saguenay river - Pelagic, high bycatch", out.width = '100%', fig.link = "./figures/figures-integrated/peche_commerciale-PHB.png"}
 knitr::include_graphics("./figures/figures-integrated/peche_commerciale-PHB.png")
 ```
 
 <br>
 
-```{r PLB, fig.cap = "Intensité des activités de pêche commerciale dans le Saint-Laurent - Pélagique prises accessoires faibles", out.width = '100%', fig.link = "./figures/figures-integrated/peche_commerciale-PLB.png"}
+```{r PLB, fig.cap = "Distribution and intensity of commercial fisheries in the St. Lawrence and the Saguenay river - Pelagic, low bycatch", out.width = '100%', fig.link = "./figures/figures-integrated/peche_commerciale-PLB.png"}
 knitr::include_graphics("./figures/figures-integrated/peche_commerciale-PLB.png")
 ```
 

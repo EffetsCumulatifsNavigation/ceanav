@@ -1,6 +1,6 @@
-#### Milieux naturels
+#### Natural environments
 
-##### Zostères
+##### Eelgrass
 
 ```{r zostere_data, results = 'asis'}
 uid <- meta$dataDescription$categories$accronyme %in% 
@@ -16,9 +16,9 @@ show_source()
 <br/>
 
 
-La zostère marine (*Zostera marina*) forme des habitats complexes et importants qui peuvent réduire les courants, réduire la prédation et l'érosion, en plus de contribuer à la production primaire [@hemminga2000; @cimon2021]. La distribution spatiale de la zostère marine au sein de la zone d'étude a été décrite en intégrant trois bases de données différentes. La première base de données est la plus complète et provient d'une revue de littérature documentaire du MPO dans la Baie James, la Baie des Chaleurs, l'estuaire et le golfe du Saint-Laurent couvrant la période allant de 1987 à 2009 [@mpo2009]. Cette revue de littérature regroupe des données sur la distribution de la zostères marine provenant de 24 ressources différentes; elle comprend `r meta$dataDescription$zostere$mpo$sites` sites sur une superficie de `r meta$dataDescription$zostere$mpo$superficie` $km^2$ dans la zone d'étude.
+Eelgrass (*Zostera marina*) forms complex, important habitats that can reduce currents, reduce predation and erosion, and contribute to primary production [@hemminga2000; @cimon2021]. The spatial distribution of eelgrass within the study area was described by integrating three different databases. The first database is the most complete and comes from a DFO literature review for James Bay, Baie des Chaleurs, and the Estuary and Gulf of St. Lawrence covering the period from 1987 to 2009 [@mpo2009]. This literature review brings together data on eelgrass distribution from 24 different resources; it includes `r meta$dataDescription$zostere$mpo$sites` sites over an area of `r meta$dataDescription$zostere$mpo$superficie` $km^2$ in the study area.
 
-Cette base de données a été complémentée par deux bases de données localisées fournissant des informations supplémentaires sur les zostères dans la zone d'étude. La première provient d'un projet de restauration de la zostère marine dans l'Anse de Pointe-au-Père à Rimouski qui fournit des informations sur `r meta$dataDescription$zostere$pop$sites` sites couvrant une superficie de `r meta$dataDescription$zostere$pop$superficie` $km^2$ [@bois2018]; la deuxième provient d'un exercice similaire dans la Baie de Mitis et fournit des informations sur `r meta$dataDescription$zostere$metis$sites` site couvrant une superficie de `r meta$dataDescription$zostere$metis$superficie` $km^2$ [@comitezipestuaire2012; @bachand2014]. Ces trois bases de données ont été intégrées en présence-absence au sein de la grille d'étude.
+Two local databases providing additional information on eelgrass in the study area completed these data. The first is from an eelgrass restoration project in Anse de Pointe-au-Père in Rimouski that provides information on `r meta$dataDescription$zostere$pop$sites` sites covering an area of `r meta$dataDescription$zostere$pop$superficie` $km^2$ [@bois2018]; the second is from a similar exercise in Baie de Mitis and provides information on `r meta$dataDescription$zostere$metis$sites` sites covering an area of `r meta$dataDescription$zostere$metis$superficie` $km^2$ [@comitezipestuaire2012; @bachand2014]. These three databases were integrated into the study grid on a presence-absence basis.
 
 
 <br>
@@ -30,7 +30,7 @@ knitr::include_graphics("./figures/figures-integrated/habitat-zostere.png")
 <br>
 
 
-##### Zones inondables
+##### Floodplains
 
 
 ```{r inondable_data, results = 'asis'}
@@ -46,7 +46,7 @@ show_source()
 
 <br/>
 
-La caractérisation des zones inondables dans la zone d'étude a été faite en combinant les données de la base de données des zones à risque d'inondation [BDZI; @melcc2020] et de données sur la présence de zones inondables préparées par les MRC [@mamh2020]. Ces bases de données fournissent la délimitation de territoires côtiers à risque d'inondation sur le territoire québécois.
+The characterization of floodplains in the study area was done by combining data from the Flood Risk Areas Database [BDZI; @melcc2020] and data on the presence of floodplains prepared by the regional county municipalities [@mamh2020]. These databases provide the delineation of coastal areas at risk of flooding in Quebec.
 
 
 <br>
@@ -58,7 +58,7 @@ knitr::include_graphics("./figures/figures-integrated/habitat-zone_inondable.png
 <br>
 
 
-##### Milieux côtiers
+##### Coastal environments
 
 ```{r cotier_data, results = 'asis'}
 uid <- meta$dataDescription$categories$accronyme %in% 
@@ -75,15 +75,15 @@ show_source()
 
 <br/>
 
-La caractérisation des milieux côtiers provient de l'exercice de caractérisation des berges dans la partie fluviale du Saint-Laurent provenant de l'équipe de Patrick Lajeunesse de l'Université Laval qui a été utilisé pour caractériser la composante valorisée d'intégrité des berges [@bernier2020; @bernier2021]; cette caractérisation est ainsi disponible strictement pour la portion fluviale du Saint-Laurent. Cette base de données fournit une caractérisation des types de côtes que nous utilisons au sein de notre évaluation en tant qu'habitats. Un total de 5 milieux côtiers ont été considérés pour l'évaluation (Tableau \@ref(tab:habitatCat)): 
+The characterization of coastal environments comes from the bank characterization exercise in the fluvial portion of the St. Lawrence River conducted by Patrick Lajeunesse’s team at Université Laval. This exercise was used to characterize the bank integrity valued component [@bernier2020; @bernier2021]; this characterization is therefore available solely for the fluvial portion of the St. Lawrence. This database provides a characterization of the types of coasts we use as habitats in our assessment. A total of 5 coastal environments were considered for the assessment (Table \@ref(tab:habitatCat)): 
 
-- Meuble sans falaise
-- Rocheux sans escarpement
-- Rocheux sans falaise
-- Terrasse de plage
-- Terrasse fluviale
+- Soft without cliff
+- Rocky without bluff
+- Rocky without cliff
+- Beach terrace
+- Fluvial terrace
 
-Ces milieux ont été cartographiés à l'aide d'approches cartographiques à haute résolution combinant des données de relevés terrain, de télédétection et dérivées de connaissances des communautés locales [@bernier2020; @bernier2021].
+These environments were mapped using high-resolution mapping approaches combining the data from land surveys, remote sensing, and local community knowledge [@bernier2020; @bernier2021].
 
 <br>
 
@@ -118,7 +118,7 @@ knitr::include_graphics("./figures/figures-integrated/habitat-terrasse_fluviale.
 
 <br>
 
-##### Milieux humides
+##### Wetlands
 
 ```{r milhumsum, echo = FALSE, results = 'asis'}
 tab <- as.data.frame(meta$dataDescription$categories)
@@ -136,9 +136,9 @@ show_source()
 
 <br/>
 
-Les milieux humides constituent un lien entre les milieux aquatiques et terrestres; ils abritent une forte richesse faunique et floristique, fournissent un habitat crucial au cours du cycle de vie de multiples espèces, et sont des habitats essentiels pour plusieurs espèces en péril. Les milieux humides fournissent des services écosystémiques essentiels tels la protection du rivage contre l'érosion, l'amélioration de la qualité de l'eau, et le stockage de carbone; ils sont également largement utilisés pour des activités culturelles et récréatives tel la chasse et le tourisme [@clarkson2013]. Les milieux humides regroupent une diversité importante de types d'habitats qui se succèdent, allant des eaux peu profondes aux marécages, affichant une proportion croissante de plantes arbustives.
+Wetlands are a link between aquatic and land environments, are home to an abundance of wildlife and plants, provide critical habitat during the life cycle of multiple species, and are critical habitats for many species at risk. Wetlands provide essential ecosystem services such as protecting shorelines from erosion, improving water quality, and storing carbon; they are also widely used for cultural and recreational activities such as hunting and tourism [@clarkson2013]. Wetlands encompass a significant diversity of habitat types, ranging from shallow water to swamp, with an increasing proportion of shrubs.
 
-Les milieux humides ont été caractérisés grâce à une cartographie des milieux humides potentiels du Québec [@melcc2019b; @melcc2019c]. Cette base de données fournit une cartographie des milieux humides pour l'ensemble du Québec, classés en grands types : eau peu profonde, marais, marécage et tourbière (Tableau \@ref(tab:habitatCat)). Une catégorie générale pour les milieux humides non catégorisés est également disponible. Les milieux humides occupent une superficie totale de `r sup` $km^2$ au sein de la zone d'étude (Tableau \@ref(tab:habitatCat)).
+The wetlands were characterized using a mapping of potential wetlands in Quebec [@melcc2019b; @melcc2019c]. This database provides a mapping of wetlands for all of Quebec, classified in broad types: shallow water, marsh, swamp and peatbog (Table \@ref(tab:habitatCat)). A general category for uncategorized wetlands is also available. Wetlands occupy a total area of `r sup` $km^2$ within the study area (Table \@ref(tab:habitatCat)).
 
 <br/>
 
@@ -168,7 +168,7 @@ knitr::include_graphics("./figures/figures-integrated/habitat-milieu_humide.png"
 <br>
 
 
-##### Gisements coquilliers
+##### Mollusk beds
 
 ```{r gisement_data, results = 'asis'}
 uid <- meta$dataDescription$categories$accronyme %in% 
@@ -183,7 +183,7 @@ show_source()
 
 <br/>
 
-Les données utilisées pour caractériser les gisements coquilliers dans la zone d'étude proviennent d'une description des stocks de mactre de Stimpson (*Mactromeris polynyma*) en milieux côtiers au Québec [@trottier2015; @mpo2019]. Les données fournissent la délimitation de gisements connus et commercialement exploités historiquement ou actuellement pour toute la région québécoise de l'estuaire et du golfe du Saint-Laurent. 
+The data used to characterize the mollusk beds in the study area were taken from a description of surf clam (*Mactromeris polynyma*) stocks in coastal environments in Quebec [@trottier2015; @mpo2019]. The data provide the delimitation of known and commercially harvested deposits, both historically or currently, for the entire Quebec region of the Estuary and Gulf of St. Lawrence. 
 
 <br>
 

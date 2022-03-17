@@ -1,6 +1,7 @@
-### Navigation {#navigation}
+### Shipping {#navigation}
 
-> ***Nous remercions Clément Chion et Jean-François Sénécal de l'Université du Québec en Outaouais, Jeff Campagnola de Transports Canada et Samuel Turgeon du Parc marin du Saguenay–Saint-Laurent pour les échanges et le soutien.***
+> ***We thank Clément Chion and Jean-François Sénécal of the Université du Québec en Outaouais, Jeff Campagnola of Transport Canada and Samuel Turgeon of the Saguenay-St. Lawrence Marine Park for the discussions and support.***
+
 
 ```{r navigation_setup, echo = FALSE, results = 'asis'}
 meta <- read_yaml("../data/data-metadata/int_st_navigation.yml")
@@ -9,49 +10,25 @@ show_source(meta$rawData)
 
 <br/>
 
-L'intensité de la navigation au sein de la zone d'étude a été évaluée à l'aide
-de données provenant de Système d'Identification Automatique (SIA) -- ou
-*Automatic Identification Système* (AIS) en anglais -- satellitaire mises en forme
-par Maerospace Corporation et acquises pour l'Agence Spatiale Canadienne
+The intensity of shipping within the study area was assessed using satellite data from the Automatic Identification System (AIS) developed by Maerospace Corporation and acquired for the Canadian Space Agency
 [@tc2020; @tc2020b].
-Cette base de données contient `r meta$dataDescription$observations$total`
-localisations de navire (`r meta$dataDescription$observations$moyenne` $\pm$ `r meta$dataDescription$observations$sd` observations par année) pour
-`r sum(meta$dataDescription$categories$boats, na.rm = TRUE)` navires entre
-`r meta$dataDescription$temporal$start` et `r meta$dataDescription$temporal$end`.
-Il est important de noter que ce nombre n'indique pas le nombre de transit, mais
-bien le nombre de localisations géographiques relevées par le SIA.
+This database contains `r meta$dataDescription$observations$total`
+vessel locations (`r meta$dataDescription$observations$moyenne` $\pm$ `r meta$dataDescription$observations$sd` observations per year) for
+`r sum(meta$dataDescription$categories$boats, na.rm = TRUE)` vessels between
+`r meta$dataDescription$temporal$start` and `r meta$dataDescription$temporal$end`.
+It is important to note that this number does not indicate the number of transits, but rather the number of geographic locations identified by the AIS.
 
-Les données de localisations individuelles ont été transformées en segments linéaires
-de navigation représentant des transits de navires individuels et continus, en
-supposant un transit en ligne droite entre localisations successives.
-Les navires ont été identifiés grâce à leur numéro d'identité dans le service mobile
-maritime (ISSM).
-Pour chaque navire, l'ensemble des localisations disponibles ont été utilisées
-afin de tracer leurs déplacements au sein de la zone d'étude.
-Puisque les bateaux peuvent entrer et sortir de la zone d'étude, ou encore
-demeurer à quai pour des périodes plus longues, les déplacements des navires ont
-été segmentés en plusieurs segments linéaires individuels.
-Une segmentation a été effectuée lorsque deux localisations consécutives étaient
-espacées de plus de 5 heures ou distantes de plus de 80,5 km.
-Les segments linéaires chevauchant le milieu terrestre à une distance
-de plus de 2 km ont été retirés de la base de données. Cette distance arbitraire
-de 2 km a été utilisée afin de retirer les segments aberrants de la base de données,
-tout en conservant les segments décrivant de la navigation côtière ou des navires
-fréquentant des installations portuaires. Cette segmentation a résulté en `r meta$dataDescription$segments` segments
-linéaires de navigation. Puisque plusieurs types de navires naviguent sur les eaux du Saint-Laurent et du Saguenay, nous avons considéré `r length(meta$dataDescription$categories$accronyme)-2` catégories de navires différents pour compléter le portrait
-de l'intensité de la navigation au sein de la zone d'étude (Tableau \@ref(tab:navCat)). Parmi les catégories disponibles, nous avons retiré la catégorie *Autres* dû à son manque de spécificité et la catégorie *Pêche* puisque peu de transits étaient disponibles au sein de la base de données.
+Individual location data were transformed into linear shipping segments representing individual and continuous vessel transits, assuming a straight line transit between successive locations.
+Vessels were identified by their Maritime Mobile Service Identity (MMSI) number.
+All available locations were used for each vessel to plot their movements within the study area.
+Since vessels may enter and exit the study area, or stay in berth for longer periods of time, vessel movements were segmented into a number of individual linear segments.
+Segmentation was performed when two consecutive locations were over 5 hours or more than 80.5 km apart.
+Linear segments overlapping the land environment at a distance of over 2 km were removed from the database. This arbitrary distance of 2 km was used to remove outlier segments from the database, while still keeping segments describing coastal shipping or vessels frequenting port facilities. This segmentation resulted in `r meta$dataDescription$segments` linear shipping segments. Since a number of vessel types navigate the waters of the St. Lawrence and Saguenay rivers, we considered `r length(meta$dataDescription$categories$accronyme)-2` different vessel categories to complete the characterization of shipping intensity in the study area (Table \@ref(tab:navCat)). Among the available categories, we removed the *Other* category due to its lack of specificity and the *Fishing* category since few transits were available in the database.
 
-Pour caractériser la navigation, nous avons
-utilisé un indice d'intensité caractérisant la navigation en termes d'utilisation
--- ou passages -- unique. Pour chaque catégorie de navire, nous avons évalué
-l'intensité de la navigation au sein de la zone d'étude par le nombre
-de segments de navigation qui intersectent chaque cellule de 1 $km^2$ de la
-grille d'étude entre `r meta$dataDescription$temporal$start` et
-`r meta$dataDescription$temporal$end`.
-Cet indice résulte en une évaluation de l'intensité de la navigation en
-nombre de navires ($n$) par $km^2$ ($n$ $navires$ $*$ $km^{-2}$)
+To characterize shipping, we used an intensity index characterizing shipping in terms of single use -- or transits. For each vessel category, we assessed shipping intensity within the study area by the number of shipping segments that intersect each 1 $km^2$ cell of the study grid between `r meta$dataDescription$temporal$start` and `r meta$dataDescription$temporal$end`.
+This index results in an assessment of shipping intensity expressed as number of vessels ($n$) per $km^2$ ($n$ $navires$ $*$ $km^{-2}$)
 
-Malgré l'effort de segmentation et de retrait des transits impossibles, il demeure toutefois possible que certains transits impossibles demeurent. Par exemple, un nombre très faible de transits est observé au nord de l'Île d'Orléans pour la navigation par cargo (Figure \@ref(fig:CARGO)); ces transits n'ont pu être retirés par la segmentation automatique effectuée et le nombre total de transit rend un retrait manuel peu pratique. Ces transits impossibles demeurent toutefois très peu présents dans la base de données et n'affectent ainsi pas les résultats finaux de l'évaluation des effets cumulatifs des activités maritimes dans la zone d'étude. 
+Despite the effort to segment and remove impossible transits, some impossible transits may still remain. For example, a very small number of transits is observed north of Île d’Orléans for cargo shipping (Figure \@ref(fig:CARGO)); these transits could not be removed by the automatic segmentation that was done and the total number of transits makes it impractical to remove them manually. However, there are very few of the impossible transits in the database, so this does not affect the final results of the cumulative effects assessment of marine activities in the study area. 
 
 <br/>
 
@@ -65,87 +42,87 @@ tab <- select(tab, francais, boats, observations, segments)
 
 tab %>%
   knitr::kable(
-    col.names = c("Types de navire", "Navires", "Localisations", "Segments"),
+    col.names = c("Ship type", "Ships", "Locations", "Tracks"),
     row.names = FALSE,
-    caption = "Description des types de navires considérés pour l'analyse d'évaluation des effets cumulatifs et leur représentation au sein des données du Système d'Identification Automatique utilisées [@tc2020; @tc2020b]. "
+    caption = "Description of the types of ships considered for the cumulative effects assessment of marine activities in the St. Lawrence and the Saguenay river and their representation in the Automatic Identification System data used [@tc2020; @tc2020b]. "
   )
 ```
 
 <br/>
 
-```{r DRYBULK, fig.cap = "Intensité de la navigation dans le Saint-Laurent et le Saguenay - Cargaison sèche", out.width = '100%', fig.link = "./figures/figures-integrated/navigation-DRY.BULK.png"}
+```{r DRYBULK, fig.cap = "Distribution and intensity of shipping in the St. Lawrence and the Saguenay river - Dry cargo", out.width = '100%', fig.link = "./figures/figures-integrated/navigation-DRY.BULK.png"}
 knitr::include_graphics("./figures/figures-integrated/navigation-DRY.BULK.png")
 ```
 
 <br>
 
-```{r CARGO, fig.cap = "Intensité de la navigation dans le Saint-Laurent et le Saguenay - Cargo", out.width = '100%', fig.link = "./figures/figures-integrated/navigation-CARGO.png"}
+```{r CARGO, fig.cap = "Distribution and intensity of shipping in the St. Lawrence and the Saguenay river - Cargo", out.width = '100%', fig.link = "./figures/figures-integrated/navigation-CARGO.png"}
 knitr::include_graphics("./figures/figures-integrated/navigation-CARGO.png")
 ```
 
 <br>
 
-```{r GOVERNMENTRESEARCH, fig.cap = "Intensité de la navigation dans le Saint-Laurent et le Saguenay - Gouvernement / recherche", out.width = '100%', fig.link = "./figures/figures-integrated/navigation-GOVERNMENT.RESEARCH.png"}
+```{r GOVERNMENTRESEARCH, fig.cap = "Distribution and intensity of shipping in the St. Lawrence and the Saguenay river - Government / research", out.width = '100%', fig.link = "./figures/figures-integrated/navigation-GOVERNMENT.RESEARCH.png"}
 knitr::include_graphics("./figures/figures-integrated/navigation-GOVERNMENT.RESEARCH.png")
 ```
 
 <br>
 
-```{r PLEASUREVESSELS, fig.cap = "Intensité de la navigation dans le Saint-Laurent et le Saguenay - Navires de plaisance", out.width = '100%', fig.link = "./figures/figures-integrated/navigation-PLEASURE.VESSELS.png"}
+```{r PLEASUREVESSELS, fig.cap = "Distribution and intensity of shipping in the St. Lawrence and the Saguenay river - Pleasure craft", out.width = '100%', fig.link = "./figures/figures-integrated/navigation-PLEASURE.VESSELS.png"}
 knitr::include_graphics("./figures/figures-integrated/navigation-PLEASURE.VESSELS.png")
 ```
 
 <br>
 
 
-```{r SPECIALSHIPS, fig.cap = "Intensité de la navigation dans le Saint-Laurent et le Saguenay - Navires spéciaux", out.width = '100%', fig.link = "./figures/figures-integrated/navigation-SPECIAL.SHIPS.png"}
+```{r SPECIALSHIPS, fig.cap = "Distribution and intensity of shipping in the St. Lawrence and the Saguenay river - Special vessels", out.width = '100%', fig.link = "./figures/figures-integrated/navigation-SPECIAL.SHIPS.png"}
 knitr::include_graphics("./figures/figures-integrated/navigation-SPECIAL.SHIPS.png")
 ```
 
 <br>
 
 
-```{r PASSENGERFERRYRORO, fig.cap = "Intensité de la navigation dans le Saint-Laurent et le Saguenay - Passager", out.width = '100%', fig.link = "./figures/figures-integrated/navigation-PASSENGER.FERRY.RO.RO.png"}
+```{r PASSENGERFERRYRORO, fig.cap = "Distribution and intensity of shipping in the St. Lawrence and the Saguenay river - 	Passenger / ferry / Ro-Ro", out.width = '100%', fig.link = "./figures/figures-integrated/navigation-PASSENGER.FERRY.RO.RO.png"}
 knitr::include_graphics("./figures/figures-integrated/navigation-PASSENGER.FERRY.RO.RO.png")
 ```
 
 <br>
 
-```{r TANKER, fig.cap = "Intensité de la navigation dans le Saint-Laurent et le Saguenay - Pétrolier", out.width = '100%', fig.link = "./figures/figures-integrated/navigation-TANKER.png"}
+```{r TANKER, fig.cap = "Distribution and intensity of shipping in the St. Lawrence and the Saguenay river - Oil tanker", out.width = '100%', fig.link = "./figures/figures-integrated/navigation-TANKER.png"}
 knitr::include_graphics("./figures/figures-integrated/navigation-TANKER.png")
 ```
 
 <br>
 
-```{r CONTAINER, fig.cap = "Intensité de la navigation dans le Saint-Laurent et le Saguenay - Porte-conteneurs", out.width = '100%', fig.link = "./figures/figures-integrated/navigation-CONTAINER.png"}
+```{r CONTAINER, fig.cap = "Distribution and intensity of shipping in the St. Lawrence and the Saguenay river - Container ships", out.width = '100%', fig.link = "./figures/figures-integrated/navigation-CONTAINER.png"}
 knitr::include_graphics("./figures/figures-integrated/navigation-CONTAINER.png")
 ```
 
 <br>
 
-```{r TUGSPORT, fig.cap = "Intensité de la navigation dans le Saint-Laurent et le Saguenay - Remorqueur / port", out.width = '100%', fig.link = "./figures/figures-integrated/navigation-TUGS.PORT.png"}
+```{r TUGSPORT, fig.cap = "Distribution and intensity of shipping in the St. Lawrence and the Saguenay river - Tugboat / port", out.width = '100%', fig.link = "./figures/figures-integrated/navigation-TUGS.PORT.png"}
 knitr::include_graphics("./figures/figures-integrated/navigation-TUGS.PORT.png")
 ```
 
 <br>
 
 
-Nous avons complété le portrait de l'intensité de la navigation avec deux catégories de navigation supplémentaires. La première touche l'intensité des activités d'observation en mer des mammifères marins sur des embarcations avec permis de classe 1 en 2017 [@turgeon2019]. Les données disponibles par @turgeon2019 fournissent une caractérisation du nombre de navires d'observation ayant traversé une grille régulière de 500m x 500m. Nous avons rééchantillonné cette grille afin de distribuer le nombre de transit qui y sont relevés au sein de notre grille d'étude de 1 $km^2$. Bien que cet exercice soit limité au parc marin du Saguenay–Saint-Laurent, il s'agit de l'endroit où se déroule la majorité des excursions d'observation de mammifères marins au sein de la zone d'étude.
+We have completed the description of shipping intensity with two additional shipping categories. The first deals with the intensity of marine mammal watching activities at sea on craft with a class 1 permit in 2017 [@turgeon2019]. The data available from @turgeon2019 provides a characterization of the number of observation vessels that went through a regular 500m x 500m grid. We resampled this grid to distribute the number of transits recorded in it within our 1 $km^2$ study grid. Although this exercise is limited to the Saguenay-St. Lawrence Marine Park, this is where most of the marine mammal watching excursions take place in the study area.
 
 <br/>
 
-```{r Observation, fig.cap = "Intensité de la navigation dans le Saint-Laurent et le Saguenay - Observation mammifères marins", out.width = '100%', fig.link = "./figures/figures-integrated/navigation-Observation.png"}
+```{r Observation, fig.cap = "Distribution and intensity of shipping in the St. Lawrence and the Saguenay river - Marine mammal observation", out.width = '100%', fig.link = "./figures/figures-integrated/navigation-Observation.png"}
 knitr::include_graphics("./figures/figures-integrated/navigation-Observation.png")
 ```
 
 <br>
 
 
-La deuxième catégorie ajoutée touche la navigation en zone portuaire, *i.e.* les activités de navigation qui ont lieu près des installations portuaires telles les ports et les marinas. Sous l'hypothèse que les activités de navigation sont plus prépondérantes dans les zones portuaires, les données SIA ont été utilisées pour quantifier le nombre de transit à travers les zones portuaires de la zone d'étude. Les zones portuaires ont été caractérisées à partir de données sur la localisation des installations portuaires [@mtq2021] et des zones industrialo-portuaires [@mei2021] au Québec. Une zone d'influence des zones portuaires a été tracée en appliquant une zone tampon de 200 $m$. Cette zone est délibérément étroite afin de capturer principalement les navires qui fréquentent les zones portuaires plutôt que ceux qui transitent par la voie de navigation du Saint-Laurent, surtout pour les installations en milieu fluvial. Le nombre de transit à travers ces zones portuaires a ensuite été calculé à partir des données SIA. Selon cette approche, un total de `r meta$dataDescription$navigationPortuaire$transits` transits sont répertoriés en zones portuaires entre `r meta$dataDescription$temporal$start` et `r meta$dataDescription$temporal$end`. Ces transits ont ensuite été rapportés à la grille d'étude de 1 $km^2$ en attribuant pour chaque cellule le nombre de transits de la zone portuaire la chevauchant qui était la plus fréquentée. Par exemple, si une cellule de la grille était touchée par une première zone portuaire ayant 100 transits et une deuxième zone ayant 200 transits, une valeur de 200 était attribuée à cette cellule.
+The second category deals with shipping in port areas, *i.e.* activities that take place near port facilities such as ports and marinas. Using the assumption that shipping activities are more prevalent in port areas, AIS data were used to quantify the number of transits through the study area port areas. The port areas were characterized using data on the location of port facilities [@mtq2021] and industrial port areas [@mei2021] in Quebec. A port area zone of influence was plotted by applying a buffer zone of 200 $m$. This zone is deliberately narrow in order to primarily capture vessels that frequent port areas rather than vessels transiting the St. Lawrence River waterway, especially for facilities in the fluvial environment. The number of transits through these port areas was then calculated using the AIS data. According to this approach, a total of `r meta$dataDescription$navigationPortuaire$transits` transits were identified in port areas between `r meta$dataDescription$temporal$start` and `r meta$dataDescription$temporal$end`. These transits were then plotted in the 1 $km^2$ study grid by assigning to each cell the number of transits of the most heavily frequented overlapping port area. For example, if a grid cell was affected by a first port area with 100 transits and a second area with 200 transits, that cell was assigned a value of 200.
 
 <br/>
 
-```{r navigationportuaire, fig.cap = "Intensité de la navigation dans le Saint-Laurent et le Saguenay - Navigation portuaire", out.width = '100%', fig.link = "./figures/figures-integrated/navigation-navigation_portuaire.png"}
+```{r navigationportuaire, fig.cap = "Distribution and intensity of shipping in the St. Lawrence and the Saguenay river - Port shipping", out.width = '100%', fig.link = "./figures/figures-integrated/navigation-navigation_portuaire.png"}
 knitr::include_graphics("./figures/figures-integrated/navigation-navigation_portuaire.png")
 ```
 

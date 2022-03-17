@@ -1,10 +1,10 @@
-### Habitats floristiques et fauniques {#habitat}
+### Plant and wildlife habitats {#habitat}
 
 ```{r habitat_setup, echo = FALSE}
 meta <- read_yaml("../data/data-metadata/int_cv_habitat.yml")
 ```
 
-Une recherche de données a été effectuée afin de caractériser différents types d'habitats caractéristiques du Saint-Laurent et du Saguenay et pouvant être affectés par les activités maritimes. Les habitats considérés sont ceux pour lesquels des données ont été accessibles ouvertement sur des plateformes comme la plateforme fédérale [Gouvernement ouvert](https://open.canada.ca/fr), la plateforme provinciale [Données Québec](https://www.donneesquebec.ca/) et l'[Observatoire Global du Saint-Laurent](https://ogsl.ca/), ou partagées par divers ministères et collaborateurs. Cette recherche de données nous a permis de caractériser `r length(meta$dataDescription$categories$accronyme)` types d'habitats au sein de la zone d'étude (Tableau \@ref(tab:habitatCat)). Les habitats ont été caractérisés en présence-absence au sein de la grille d'étude. Les sections suivantes fournissent davantage d'informations sur la caractérisation des différents types d'habitats.
+A data search was conducted to characterize various types of habitats characteristic of the St. Lawrence and Saguenay rivers that could be affected by marine activities. The habitats considered are those for which data have been open and accessible from the federal and provincial platforms [Open Government](https://open.canada.ca/en), [Données Québec] (https://www.donneesquebec.ca/) and the [St. Lawrence Global Observatory](https://ogsl.ca/), or data shared by various departments/ministries and partners. This data search enabled us to characterize `r length(meta$dataDescription$categories$accronyme)` habitat types within the study area (Table \@ref(tab:habitatCat)). The habitats were characterized as presence-absence in the study grid. The following sections provide more information on the characterization of the various habitat types.
 
 
 

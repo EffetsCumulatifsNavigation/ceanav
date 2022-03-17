@@ -1,145 +1,137 @@
-# Contexte
+# Context
 
-Dans le cadre du Plan d’action Saint-Laurent (PASL), le Gouvernement du Canada et le Gouvernement du Québec collaborent depuis 2018 à la conception d’un cadre commun d’évaluation des effets cumulatifs des activités maritimes sur le Saint-Laurent et le Saguenay de concert avec les Premières Nations, divers acteurs du milieu maritime et les collectivités côtières. 
+As part of the St. Lawrence Action Plan (SLAP), the Government of Canada and the Government of Quebec have been working closely since 2018 to develop a common framework for assessing the cumulative effects of marine activities in the St. Lawrence and Saguenay rivers together with First Nations, various marine stakeholders and coastal communities. 
 
-À titre de co-responsable du projet, Transports Canada a mandaté une équipe de l’Université Laval afin de proposer et de mettre à l’essai un cadre méthodologique d’évaluation des effets cumulatifs des activités maritimes dans le Saint-Laurent (tronçon fluvial et estuaire) et la rivière Saguenay (partie en eau profonde), appliqué sur une première série de données. Dans le contexte de ce projet pilote et collaboratif, les activités maritimes considérées incluent les navires commerciaux, les bateaux de croisières, les traversiers, les bateaux de pêche et les embarcations de plaisance; la localisation, l’intensité et/ou le mouvement de ces diverses activités pouvant être des sources de stress environnementaux. L’analyse a permis de caractériser et cartographier certaines composantes valorisées ciblées par l’étude, d’évaluer la vulnérabilité de ces composantes à de multiples facteurs de stress liés aux activités maritimes, et finalement d’évaluer les effets cumulatifs à partir de la cartographie produite.
+As project co-lead, Transport Canada has commissioned a team from Université Laval to recommend and test a methodological framework for assessing the cumulative effects of marine activities in the St. Lawrence River (fluvial section and estuary) and the Saguenay River (deep water section), using an initial series of data. In the context of this collaborative pilot project, the marine activities considered include those of commercial vessels, cruise ships, ferries, fishing boats and pleasure craft. The location, intensity and/or motion of these various activities can be environmental stressors. The analysis made it possible to characterize and map selected valued components targeted by the study, assess the vulnerability of these components to multiple stressors arising from marine activities, and then assess the cumulative effects based on the mapping produced.
 
-Cette étude a été réalisée à partir de données actuellement disponibles sur les activités maritimes du secteur à l’étude ainsi que de données environnementales, culturelles et traditionnelles collectées auprès des divers participants. De plus, elle implique la mise en commun d’expertise, des discussions sur la méthodologie et son application au cas du Saint-Laurent/Saguenay ainsi que la diffusion des résultats. 
+This study was based on currently available data on marine activities in the study area as well as environmental, cultural and traditional data collected from the various participants. In addition, this study involves the pooling of expertise, discussions on methodology and its application to the St. Lawrence/Saguenay, and the dissemination of results. 
 
-Ce projet permettra le développement de nouvelles connaissances sur les effets cumulatifs potentiels des activités maritimes et une compréhension commune de ceux-ci. Il favorisera une cohérence dans l’élaboration et la mise en oeuvre de stratégies d’atténuation des effets cumulatifs de la navigation et permettra d’enrichir la réflexion pour la prise de décision.
-
-
-# Portée et objectifs de l'évaluation
-
-Une évaluation des effets cumulatifs vise à établir les effets de multiples [stresseurs environnementaux](#stintro) sur la viabilité de récepteurs environnementaux d'intérêt, communément appelés [composantes valorisées](#cvintro) [@beanlands1983; @sinclair2017]. En plus de l’importance des processus de concertation et de mobilisation des divers collaborateurs, une évaluation d’effets cumulés inclut généralement les étapes suivantes, sans toutefois s’y limiter:
+This project will make it possible to develop new knowledge and a common understanding of the potential cumulative effects of marine activities. It will promote consistency in the development and implementation of strategies to mitigate the cumulative effects of shipping, and provide more food for thought for decision making.
 
 
-1. Identifier, impliquer et communiquer avec les parties prenantes de l’évaluation, et ce à toutes les étapes de la démarche
+# Scope and objectives of the assessment
 
-2. Définir la portée de l’évaluation
-    * Établir les objectifs de l’évaluation
-    * Définir les limites spatiales et temporelles de la zone à l’étude
-    * Identifier les activités préoccupantes et les stresseurs environnementaux qui en découlent
-    * Identifier et prioriser les composantes valorisées sur lesquelles l’évaluation doit être effectuée
-
-3. Établir un portrait de la zone à l'étude
-    * Caractériser l'intensité, l'étendue et la fréquence des activités et
-      stresseurs environnementaux.
-    * Caractériser les composantes valorisées
-    * Évaluer la vulnérabilité des composantes valorisées aux stresseurs environnementaux
-
-4. Analyse des effets cumulés
-
-5. Diagnostic de l'analyse
-    * Répartition spatiale des effets cumulatifs
-    * Exploration détaillée de l’effet des stresseurs environnementaux sur les composantes valorisées
-    * Identifier les sources d’incertitude et les lacunes en connaissances
-
-6. Mise en place de processus décisionnels
-    * Identifier et mettre en place des mesures de gestion
-    * Identifier des mesures d'atténuation
-
-7. Suivi et gestion adaptative
-
-L’identification et l’implication des parties prenantes (1) et la définition de la portée de l’évaluation (2) ont été définies en amont du déclenchement des travaux présentés au sein de ce rapport à travers divers processus de concertation, de mobilisation et d'ateliers de travail organisés par Transports Canada et les membres du comité du Plan d'Action Saint-Laurent (PASL). Ces processus ont permi de considérer les préoccupations des Premières Nations, des communautés côtières et de diverses parties prenantes du projet en vue d'établir la portée de l'évaluation des effets cumulatifs des activités maritimes dans la zone d'étude, *i.e.* d'identifier les stresseurs environnementaux et les composantes valorisées à considérer pour l'évaluation. À la lumière de ces processus, le projet pilote présenté par ce rapport se concentre sur le portrait de la zone à l’étude (3), l’analyse des effets cumulatifs (4) et l’évaluation critique de l’analyse (5). Les étapes 6 et 7 ne font pas partie de cette évaluation. Les prochaines sections du rapport présentent les étapes couvertes par le contrat.
+The purpose of a cumulative effects assessment is to determine the effects of multiple [environmental stressors](#stintro) on the viability of environmental receptors of interest, commonly referred to as [valued components](#cvintro) [@beanlands1983; @sinclair2017]. In addition to the importance of the consultative process and the engagement of various partners, a cumulative effects assessment typically includes, but is not limited to, the following:
 
 
-## Objectifs {#objectifs}
+1. Identifying, involving, and communicating with assessment stakeholders at all stages of the process
 
-L'objectif général du projet pilote est de développer une méthodologie d'analyse et d'effectuer une évaluation des effets cumulatifs des activités maritimes dans le Saint-Laurent (tronçon fluvial et estuaire) et la rivière Saguenay (partie en eau profonde) au Québec. Plus spécifiquement, les objectifs du projet pilote sont de :
+2. Determining the scope of the assessment
+    * Establishing the objectives of the assessment
+    * Determining the spatial and temporal boundaries of the study area
+    * Identifying activities of concern and the environmental stressors they produce
+    * Identifying and prioritizing the valued components to be assessed.
 
-- Caractériser l'intensité et la distribution spatiale d'activités maritimes et des stresseurs environnementaux résultants ciblés du Saint-Laurent et du Saguenay;
-- Caractériser la structure spatiale de certaines composantes valorisées ciblées du Saint-Laurent et du Saguenay;
-- Évaluer la vulnérabilité des composantes valorisées aux stresseurs environnementaux;
-- Évaluer les effets cumulatifs des stresseurs environnementaux sur les composantes valorisées dans le Saint-Laurent et le Saguenay
+3. Establishing a profile of the study area
+    * Characterizing the intensity, extent, and frequency of activities and environmental stressors.
+    * Characterizing the valued components
+    * Assessing the vulnerability of valued components to environmental stressors
+
+4. Analysis of cumulative effects
+
+5. Analytic diagnosis
+    * Spatial distribution of cumulative effects
+    * Detailed exploration of the effect of environmental stressors on valued components
+    * Identifying sources of uncertainty and gaps in knowledge
+
+6. Implementation of decision-making processes
+    * Identifying and implementing management measures
+    * Identifying mitigation measures
+
+7. Follow-up and adaptive management
+
+The identification and involvement of stakeholders (1) and determining the scope of the assessment (2) were defined prior to starting the work presented in this report through various consultation, engagement and workshop processes organized by Transport Canada and the members of the St. Lawrence Action Plan (SLAP) committee. These processes made it possible to take into account the concerns of First Nations, coastal communities and various project stakeholders in order to establish the scope of the cumulative effects assessment of marine activities in the study area, *i.e.* to identify the environmental stressors and valued components to be considered in the assessment. In light of these processes, the pilot project presented in this report focuses on the profile of the study area (3), the cumulative effects analysis (4), and the critical assessment of the analysis (5). Steps 6 and 7 are not part of this assessment. The next sections of the report outline the steps covered by the contract.
 
 
-## Portée spatialle et temporelle {#zoneetude}
+## Objectives {#objectifs}
 
-La région visée par l'évaluation des effets cumulatifs des activités maritimes couvre le Saint-Laurent fluvial et l'estuaire du Saint-Laurent entre l'ouest de Montréal -- *i.e.* près de Châteauguay et Dorval -- et Pointe-des-Monts sur la côte nord et Cap-Chat sur la rive sud, et la partie en eau profonde du Saguenay de son embouchure sur le Saint-Laurent jusqu'à Saint-Fulgence (Figure \@ref(fig:aoi)). La zone d'étude a été délimitée en combinant la [classification des rivages du Québec et du Fleuve Saint-Laurent](https://ouvert.canada.ca/data/fr/dataset/ba580518-59e8-4d1c-b3ef-41d2658e6965) [@sergy2008] et les [bases de données topographiques du Québec (BDTQ) à l'échelle 1/20 000](https://www.donneesquebec.ca/recherche/dataset/cartes-topographiques-a-l-echelle-de-1-20-000) [@mern2021]. Une grille d'étude constituée de cellules de 1 $km^2$ a été construite à partir de la délimitation de la zone d'étude en y ajoutant une zone de tampon de 2.6 $km$ (Figure \@ref(fig:aoi)). Cette zone tampon a été ajoutée afin de s'assurer que tous les milieux aquatiques et marins étaient couverts par la grille résultante. Le code et les données décrivant la zone d'étude sont disponibles par le dépôt GitHub dédié à la délimitation de la zone d'étude ([https://github.com/EffetsCumulatifsNavigation/ZoneEtude](https://github.com/EffetsCumulatifsNavigation/ZoneEtude)).
+The general objective of the pilot project is to develop a methodology to assess the cumulative effects of marine activities in the St. Lawrence River (fluvial section and estuary) and the Saguenay River (deep water section) in Quebec. Specifically, the pilot project objectives are to:
 
+- Characterize the intensity and spatial distribution of marine activities and the resulting targeted environmental stressors in the St. Lawrence and Saguenay rivers
+- Characterize the spatial structure of certain targeted valued components of the St. Lawrence and Saguenay rivers
+- Assess the vulnerability of valued components to the environmental stressors
+- Assess the cumulative effects of the environmental stressors on valued components in the St. Lawrence and Saguenay rivers
+
+
+## Spatial and temporal scope {#zoneetude}
+
+The region for which the cumulative effects assessment of marine activities is being conducted covers the fluvial portion of the St. Lawrence River and the St. Lawrence Estuary between the west side of Montreal -- *i.e.* near Chateauguay and Dorval -- and Pointe-des-Monts on the north shore and Cap-Chat on the south shore, and the deep water portion of the Saguenay River from its mouth on the St. Lawrence River to Saint-Fulgence (Figure \@ref(fig:aoi)). The study area was delimited by combining the [Quebec - St. Lawrence River - Shoreline Classification](https://open.canada.ca/data/en/dataset/ba580518-59e8-4d1c-b3ef-41d2658e6965) [@sergy2008] and the [Quebec Topographic Databases (BDTQ) at 1/20,000 scale](https://www.donneesquebec.ca/recherche/dataset/cartes-topographiques-a-l-echelle-de-1-20-000) [@mern2021]. A study grid consisting of 1 $km^2$ cells was constructed based on the delimited study area with the addition of a 2.6 $km$ buffer zone (Figure \@ref(fig:aoi)). This buffer zone was added to ensure that all aquatic and marine environments were covered by the resulting grid. The code and data describing the study area are available at the GitHub repository showing the study area boundaries ([https://github.com/EffetsCumulatifsNavigation/ZoneEtude](https://github.com/EffetsCumulatifsNavigation/ZoneEtude)).
 
 <br/>
 
-```{r aoi, fig.cap = "Délimitation de la zone d'étude pour le projet pilote d'évaluation des effets cumulatifs des activités maritimes dans le Saint-Laurent et le Saguenay", out.width = '100%', fig.link = "./figures/aoi.png"}
+```{r aoi, fig.cap = "Limits of the study area for the cumulative effects assessment of marine activities in the St. Lawrence and the Saguenay river pilot projet.", out.width = '100%', fig.link = "./figures/aoi.png"}
 knitr::include_graphics("./figures/aoi.png")
 ```
 
 <br/>
 
+The availability of data allowing for the cumulative effects assessment to be conducted defines the study’s temporal boundaries. In most cases, historical data are not available, making it more difficult to identify baseline states. For this pilot study, the data search was directed towards a contemporary assessment of cumulative effects, i.e., within the last 5 to 10 years depending on the data available. Therefore, no historical data allowing the identification of baseline states were used. It is important to note, however, that where available, data covering a longer period of time were used (*e.g.* dredging activities; see section \@ref(dragage)).
 
-<!--
-TODO: add BDTQ to dataset list, with proper reference
-      https://www.donneesquebec.ca/recherche/dataset/cartes-topographiques-a-l-echelle-de-1-20-000
--->
 
-Les limites temporelles de l'étude sont définies par la disponibilité des données permettant d'effectuer l'évaluation des effets cumulatifs. Dans la majorité des cas, des données historiques demeurent indisponibles, limitant ainsi l'identification d'états de référence. Pour cette étude pilote, la recherche de données a ainsi été orientée vers une évaluation contemporaine des effets cumulatifs, c.-à-d. au cours des 5 à 10 dernières années selon les données disponibles; les données historiques permettant l’identification d’états de référence n'ont ainsi pas été utilisées. Il est toutefois important de noter que, lorsque disponibles, des données couvrant une période plus longue ont été utilisées (*e.g.* les activités de dragage; voir section \@ref(dragage)).
+## Marine activities and environmental stressors {#stintro}
 
-## Activités maritimes et stresseurs environnementaux {#stintro}
+Marine activities can create a variety of environmental stressors potentially affecting the integrity of the social-ecological ecosystems exposed. An environmental stressor is a process of natural or anthropogenic origin that can disturb an environment beyond its maximum levels of tolerance [@kappel2012]. For the purposes of this pilot project, environmental stressors refer specifically to any processes arising from marine activities that may disrupt various valued components (see section \@ref(cvintro)) in the study area. Marine activities include any activity related to marine transportation conducted in an aquatic or marine environment. Marine activities include not only the activities of commercial vessels, but also cruise ships, ferries, fishing boats, and pleasure craft. 
 
-Les activités maritimes peuvent résulter en une variété de stresseurs environnementaux ayant le potentiel d'affecter l'intégrité des écosystèmes sociaux-écologiques exposés. Un stresseur environnemental est un processus d’origine naturelle ou anthropique pouvant perturber un milieu au-delà de ses limites de tolérance [@kappel2012]. Dans le cadre de ce projet pilote, les stresseurs environnementaux correspondent plus particulièrement à tout processus issus des activités maritimes pouvant perturber divers composantes valorisées (voir section \@ref(cvintro)) au sein de la zone d'étude. Les activités maritimes incluent toute activité liée au transport maritime et effectué en milieu aquatique ou marin. Les activités maritimes incluent non seulement les navires commerciaux, mais aussi les bateaux de croisières, traversiers, bateaux de pêche, plaisanciers. 
+It is important to note that environmental stressors affecting the study area from other vectors such as climate change and land-based pollution are not considered in this assessment. Port infrastructure is therefore not included in the pilot project. Any reference to environmental stressors in this report therefore target environmental stressors arising from marine activities, unless otherwise noted. 
 
-Il est important de noter que les stresseurs environnementaux affectant la zone d'étude et issus d'autres vecteurs comme les changements climatiques et la pollution d'origine terrestre ne sont pas considérés par la présente évaluation. Les infrastructures portuaires ne sont ainsi pas incluses au projet pilote. Toute mention de stresseurs environnementaux au sein de ce rapport cible ainsi spécifiquement les stresseurs environnementaux issus des activités maritimes, à moins d'indication contraire. 
+It should also be noted that although the term “stressor” suggests that the activities and processes described have negative effects, this is not necessarily so; in fact, some activities may have no effect on the valued components being considered, or even have positive effects. Considering activities as environmental stressors does not inherently assume that they have negative effects on the valued components considered.
 
-Il doit également être mentionné que bien que le terme stresseur suggère que les activités et processus décrits ont des effets négatifs, il n'en est rien; en effet, certaines activités peuvent n'avoir aucun effet sur les composantes valorisées considérées, ou même avoir des effets positifs. Considérer des activités en tant que stresseurs environnementaux ne constitue ainsi pas une supposition inhérente quant à leurs effets négatifs sur les composantes valorisées considérées.
-
-Des ateliers de travail pré-datant le projet pilote ont permis d'identifier une série d'activités maritimes et divers stresseurs qui leur sont associés (Tableau \@ref(tab:activitestress)). Cette liste a guidé le travail effectué afin de caractériser les stresseurs environnementaux dans la zone d'étude pour l'évaluation des effets cumulatifs.
+In pre-pilot workshops, a series of marine activities and various stressors arising from them were identified (Table \@ref(tab:activitestress)). This list guided the work done to characterize the environmental stressors in the study area for the cumulative effects assessment.
 
 <br/>
 
 ```{r activitestress}
 dat <- data.frame(
-  activite = c("Dragage","Ancrages","Échouements / Naufrages", "Rejets opérationnels",
-               "Déversements accidentels","Déplacements (eau libre de glace)","Engins de pêche"),
+  activite = c("Dredging","Anchorage","Groundings / Shipwrecks", "Operational discharges",
+               "Accidental spills","Movements (ice-free water)","Fishing gear"),
   stress = c(
-    "Hydrologie, érosion, accumulation sédimentaire, contamination",
-    "Perturbation du substrat, lumière, bruit, espèces aquatiques envahissantes, emmêlement, agents pathogènes, vibrations",
-    "Perturbation du substrat, débris, lumière, bruit, espèces aquatiques envahissantes, largage de cargaison",
-    "Espèces aquatiques envahissantes, hydrocarbures, produits chimiques, contaminants, émissions atmosphériques, eaux usées, agents pathogènes, salinité",
-    "Déversement d'hydrocarbures/contaminants, largage de cargaison, émissions atmosphériques, bioaccumulation, perturbation du substrat",
-    "Lumière, bruit, sillages/remous, espèces aquatiques envahissantes, agents pathogènes, vibrations, perturbation du substrat, érosion, collisions, déglaçage, emmêlement",
-    "Sillages/remous, perte de matériel")
+    "Hydrology, erosion, sediment accumulation, contamination",
+    "Substrate disturbance, light, noise, invasive aquatic species, entanglement, pathogens, vibrations",
+    "Substrate disturbance, debris, light, noise, invasive aquatic species, cargo spillage",
+    "Aquatic invasive species, hydrocarbons, chemicals, contaminants, atmospheric emissions, wastewater, pathogens, salinity",
+    "Hydrocarbon/contaminant spills, cargo spillage, atmospheric emissions, bioaccumulation, substrate disturbance",
+    "Light, noise, wakes/washes, invasive aquatic species, pathogens, vibrations, substrate disturbance, erosion, collisions, de-icing, entanglement",
+    "Wakes/washes, loss of equipment")
   )
 
-knitr::kable(dat, col.names = c("Activités maritimes","Stresseurs environnementaux"),
+knitr::kable(dat, col.names = c("Marine activities","Environmental stressors"),
       row.names = FALSE,
-      caption = "Activités maritimes et stresseurs environnementaux issus des activités maritimes identifiés lors d'ateliers de travail en amont du projet pilote et considérés pour l'évaluation des effets cumulatifs des activités maritimes dans la zone d'étude.")
+      caption = "Marine activities and environmental stressors from marine activities identified in workshops prior to the pilot project and considered in the cumulative effects assessment of marine activities in the study area.")
 ```
 
 
-## Composantes valorisées {#cvintro}
+## Valued components {#cvintro}
 
-Les composantes valorisées correspondent essentiellement aux éléments sociaux ou écologiques sur lesquels l’analyse des effets cumulatifs est effectuée. Dans le cadre du projet pilote, les composantes valorisées ont été identifiées au préalable lors d’activités de concertation et d’ateliers de travail avec des experts du milieu, des représentants autochtones et de multiples parties prenantes. Les composantes valorisées ont été sélectionnées séparément pour les secteurs fluvial (Montréal à Québec) et maritime (rivière Saguenay et l’estuaire) du Saint-Laurent (Tableau \@ref(tab:composantevalorisees)). Cette liste a guidé le travail effectué afin de caractériser les composantes valorisées identifiées dans la zone d'étude pour l'évaluation des effets cumulatifs.
+The valued components (VCs) are essentially the social or ecological elements on which the cumulative effects analysis is performed. As part of the pilot project, the valued components were identified in advance during consultation activities and workshops with community experts, Indigenous representatives and multiple stakeholders. Valued components were selected separately for the fluvial (Montreal to Quebec City) and marine (Saguenay River and estuary) sectors of the St. Lawrence River (Table \@ref(tab:composantevalorisees)). This list guided the work done to characterize the valued components identified in the study area for the cumulative effects assessment.
 
 <br/>
 
 ```{r composantevalorisees}
 dat <- data.frame(
-  cv = c("Intégrité des berges","Habitats","Mammifères marins","Qualité de l'eau","Sites d’intérêt culturels, patrimoniaux et archéologiques"),
+  cv = c("Bank integrity","Habitats","Marine mammals","Water quality","Areas of cultural, heritage and archeological interest"),
   fluvial = c("X","X","","X","X"),
   maritime = c("","X","X","X","X")
 )
 
-knitr::kable(dat, col.names = c("Composantes valorisées", "Secteur fluvial","Secteur maritime"),
+knitr::kable(dat, col.names = c("Valued components", "Fluvial sector","Marine sector"),
       row.names = FALSE,
       align = c("l","c","c"),
-      caption = "Composantes valorisées identifiées lors d'ateliers de travail en amont du projet pilote et considérées pour l'évaluation des effets cumulatifs des activités maritimes dans la zone d'étude.")
+      caption = "Valued components identified in workshops prior to the pilot project and considered in the cumulative effects assessment of marine activities in the study area.")
 
 ```
 
-## Limites et considérations particulières {#limiteportee}
+## Limitations and special considerations {#limiteportee}
 
-La portée de l'évaluation impose certaines limites à la présente étude; nous présentons certaines de ces limites en amont du portrait et de l'évaluation des effets cumulatifs des activités maritimes afin qu'un lecteur puisse faire une lecture éclairée des prochaines sections du rapport. Des limites supplémentaires relatives à la méthode utilisée, aux éléments du portrait de la zone d'étude et aux résultats de l'évaluation des effets cumulatifs sont également présentés à la section \@ref(perspective) du rapport.  
+The scope of the assessment imposes certain limitations on this study; we have presented some of these limitations prior to presenting the full profile of the study area and cumulative effects assessment of marine activities so that the reader can make an informed interpretation of the next sections of the report. Additional limitations related to the methodology used, elements of the full profile of the study area, and the results of the cumulative effects assessment are also presented in section \@ref(perspective) of the report.  
 
-Il est crucial de considérer que la portée de l'étude balise entièrement l'interprétation possible du portrait de la zone d'étude et des résultats de l'évaluation : *l'évaluation est entièrement contrainte par les limites spatiales et temporelles, par les stresseurs environnementaux et par les composantes valorisées considérés pour l'étude. Aucune interprétation débordant de cette portée ne peut être effectuée*. L'interprétation des résultats doit ainsi être faite en considérant la résolution, l'étendue, et la quantité d'éléments inclus à l'évaluation; toute interprétation qui déborde de ces paramètres est nécessairement erronnée.
+It is crucial to bear in mind that the full profile of the study area and the assessment results can only be interpreted in reference to the study scope: *the assessment is fully constrained by the spatial and temporal boundaries, environmental stressors and valued components considered for the study. No interpretation beyond this scope can be made*. The results must therefore be interpreted with the resolution, extent, and quantity of the elements included in the assessment in mind; any interpretation that goes beyond these parameters is necessarily erroneous.
 
-La présente étude est une évaluation sectorielle des effets cumulatifs concentrée sur les activités maritimes liées à la navigation. En plus des activités maritimes, la zone d'étude est soumise à une variété de stresseurs environnementaux tels les changements climatiques et les stresseurs d'origine terrestre [*e.g.* @beauchesne2020]. La présente évaluation ne peut ainsi être considérée comme représentative de l'ensemble des stresseurs environnementaux exerçant des pressions environnementales au sein de la zone d'étude. 
+This study is a sectoral cumulative effects assessment focused on marine activities related to shipping. In addition to marine activities, the study area is subjected to a variety of environmental stressors such as climate change and land-based stressors [*e.g.* @beauchesne2020]. Thus, this assessment cannot be deemed to represent all the environmental stressors exerting environmental pressures within the study area. 
 
-Similairement, les composantes valorisées sélectionnées représentent une série de préoccupations identifiées par des experts et des communautés locales et diverses parties prenantes lors d'activités de concertation et de co-développements à l'origine de ce projet pilote. Ces préoccupations sont valides et importantes, mais elles ne peuvent être considérées représentatives de l'entièreté des composantes environnementales, sociales, culturelles, patrimoniales et archéologiques d'importance au sein de la zone d'étude. Il est donc important d'interpréter les résultats de l'évaluation uniquement dans le contexte des composantes valorisées identifiées. Par exemple, une intensité inférieure des activités maritimes sur les composantes valorisées au sein du secteur maritime ne peut être interprétée comme une absence d'effets environnementaux ou sociaux. Les résultats de l'évaluation seraient différents si des composantes valorisées différentes étaient considérées. Par exemple, une évaluation ne considérant que les mammifères marins aurait prédit des effets uniquement au sein du secteur maritime de la zone d'étude; ceci n'aurait pu être interprété comme une absence de pression environnementale au sein du secteur fluvial.  
+Similarly, the selected valued components represent a series of concerns identified by experts and local communities and various stakeholders during consultation and co-development activities that led to this pilot project. These concerns are valid and important, but cannot be considered representative of all the environmental, social, cultural, heritage and archeological components of importance within the study area. It is therefore important to interpret the assessment results only in the context of the identified valued components. For example, a lower intensity of marine activities on the valued components in the marine sector cannot be interpreted as an absence of environmental or social effects. The assessment results would be different if different valued components were considered. For example, an assessment considering only marine mammals would have predicted effects only within the marine sector of the study area; this could not be interpreted as an absence of environmental pressure in the fluvial sector.  
 
-Il est également important de mentionner que l'étude est contrainte par la disponibilité et l'accessibilité aux données nécessaires à l'évaluation des effets cumulatifs. Puisqu'aucune nouvelle donnée n'était collectée dans le cadre de ce projet, le portrait de la zone d'étude représente une veille des connaissances de données disponibles et accessibles pour décrire les stresseurs et les composantes valorisées considérées. Dans certains cas, des données étaient indisponibles (*e.g.* rejets opérationnels de la flotte internationale, voir section \@ref(pollutionmaritime)), alors que dans certains cas elles étaient inaccessibles même si elles existent (*e.g.* pêche commerciale dans le secteur fluvial et bruit maritime; voir section \@ref(pechecommerciale)). Certaines données sont également en cours d'acquisition à travers d'autres projets de caractérisation du milieu (voir section \@ref(perspective)). Ces données, lorsque disponibles, pourront être ajoutées à l'évaluation des effets cumulatifs. 
+It is also important to mention that the study is constrained by the availability and accessibility of data needed to assess cumulative effects. Since no new data were collected in this project, the profile of the study area was a monitoring of the available and accessible data to describe the stressors and valued components considered. In some cases, data were not available (*e.g.* international fleet operational discharges, see section \@ref(pollutionmaritime)), while in some cases they were inaccessible even if they did exist (*e.g.* commercial fishing in the fluvial sector and marine noise; see section \@ref(pechecommerciale)). Some data are also in the process of being acquired through other environmental characterization projects (see section \@ref(perspective)). When they become available, these data can be added to the cumulative effects assessment. 
 
-Enfin, la zone d'étude contraint le portrait présenté; le portrait est ainsi représentatif de la zone d'étude, et non des éléments qui y sont caractérisés. Par exemple, les sites d'intérêt culturels, patrimoniaux et archéologiques identifiés par les Premières Nations s'étendent bien au-delà des limites spatiales de la zone d'étude. Il serait donc faux de considérer que l'évaluation des effets cumulatifs capture l'ensemble des effets pressentis sur les sites d'intérêts pour les Premières Nations.
+Lastly, the study area constrains the profile presented; the profile is thus representative of the study area, not of the elements characterized there. For example, areas of cultural, heritage and archeological interest identified by First Nations extend well beyond the spatial boundaries of the study area. It would therefore be incorrect to assume that the cumulative effects assessment captures all of the effects felt on the areas of interest to First Nations.
 
-De plus, l'évaluation proposée est régionale et explicitement spatiale; elle a ainsi nécessité des données spatialisées à une échelle régionale ou qui pouvaient être rattachées à des éléments de la zone d'étude afin d'être incluses à l'évaluation. L'utilisation de données ponctuelles ne couvrant qu'une portion du territoire était ainsi difficile, tout comme l'ajout de considérations d'ordre sociales et culturelles comme l'attachement territorial. Ces considérations demeurent toutefois importantes et ont été considérées dans le cadre d'une autre étude parallèle effectuée par l'équipe de Roxane Lavoie de l'Université Laval intitulée Projet Cultures et Nations Saint-Laurent (voir section \@ref(perspective)).
-
+In addition, the proposed assessment is regional and explicitly spatial; thus, it required data that were regionally spatialized or that could be tied to elements of the study area in order to be included in the assessment. It was therefore difficult to use point data covering only a portion of the territory, and it was also difficult to add social and cultural considerations such as territorial attachment. These considerations are still important, however, and were taken into account in another parallel study conducted by Roxane Lavoie’s team at Université Laval entitled Projet Cultures et Nations Saint-Laurent (see section \@ref(perspective)).

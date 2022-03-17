@@ -1,53 +1,53 @@
-#### Sites d'intérêt pour les Premières Nations {#pnportrait}
+#### Areas of interest to First Nations {#pnportrait}
 
-Dans le cadre de ce projet pilote, une importance particulière a été attribuée aux sites d'intérêt pour les Premières Nations. Les activités maritimes peuvent affecter les conditions qui sous-tendent l’exercice des droits ancestraux des Premières Nations, notamment l'accès aux ressources et au territoire. Un processus collaboratif a ainsi été enclenché avec des Nations autochtones ayant des activités historiques et contemporaines au sein de la zone d'étude. Les Nations autochtones participantes ayant fourni des données sont les suivantes :
+In this pilot project, particular importance was assigned to areas of interest to First Nations. Marine activities may affect the conditions that underlie the exercise of First Nations’ Indigenous rights, especially in terms of access to resources and the land. A collaborative process was therefore initiated with Indigenous nations who conduct activities in the study area now or have done in the past. The following participating Indigenous Nations provided data
 
-- Nation Huronne-Wendat
-- Nation des Innus d’Essipit
-- Nation Mohawk de Kahnawà:ke
-- Nation Wolastoqiyik Wahsipekuk
-- Nation W8banaki
+- Huron-Wendat Nation
+- Innu Nation of Essipit
+- Mohawk Nation of Kahnawà:ke
+- Wolastoqiyik Wahsipekuk Nation
+- W8banaki Nation
 
-Un protocole de partage d'informations a été élaboré en collaboration avec les Premières Nations participantes. Ce protocole offre un cadre pour l’utilisation des données qui soutient les principes des Premières Nations de PCAP$^{MD}$ (propriété, contrôle, accès, possession) dans le domaine de la recherche. L’application de ces principes sert de mécanisme de protection du patrimoine informationnel et des connaissances des Premières Nations. Ces principes évoquent la propriété collective de l’information par une communauté, une nation, un groupe. Ces principes s’appliquent à tous types de recherche et à tous les domaines de recherche qui se déroulent sur les territoires des Premières Nations et/ou qui concernent les Premières Nations.
+An information sharing protocol was developed in cooperation with the participating First Nations. This protocol provides a framework for data use that supports First Nations OCAP principles in research: PCAP$^{MD}$ (Ownership, Control, Access, Possession). Applying these principles serves to protect First Nations’ information and knowledge assets. These principles state that a community, a nation, or a group owns information collectively. These principles apply to all types and fields of research conducted on First Nations lands and/or that concern First Nations.
 
-Des rencontres individuelles ont été organisées avec des représentants des Premières Nations participantes afin de présenter le projet et de discuter des besoins en informations en vue d'intégrer les sites d'intérêt au sein de l'évaluation des effets cumulatifs. Les Premières Nations participantes ont subséquemment procédé au rassemblement d'informations cartographiques et non-cartographiques représentant des sites d'intérêt pour leur Nation respective. Notre équipe de recherche n'a ainsi effectué aucune collecte de données; ce travail a été effectué par les Premières Nations participantes, qui nous ont subséquemment fait parvenir les données désignant des sites d'intérêt à considérer pour l'évaluation des effets cumulatifs des activités maritimes.
+One-on-one meetings were held with representatives of participating First Nations to present the project and discuss the needs for information in order to incorporate the areas of interest into the cumulative effects assessment. The participating First Nations subsequently proceeded to gather cartographic and non-cartographic information representing their respective Nations’ areas of interest. Our research team therefore did not collect any data; this work was carried out by the participating First Nations, who subsequently sent us data designating areas of interest to be considered in the cumulative effects assessment of marine activities.
 
-Un atlas cartographique en accès libre développé par l'Association de gestion halieutique Mi'kmaq et Malécite [AGHAMM; @arsenault2017] a également permis d'obtenir des données d'utilisation du territoire pour les Nations Mi'kmaq de Gespeg, Mi'kmaq de Gesgapegiag et Wolastoqiyik Wahsipekuk.
+An open access cartographic atlas developed by the Mi’kmaq and Maliseet Aboriginal Fisheries Management Association [MMAFMA; @arsenault2017] also provided land use data for the Gespeg Mi’kmaq, Gesgapegiag Mi’kmaq and Wolastoqiyik Wahsipekuk Nations.
 
-Les sites d'intérêt proviennent généralement d'un exercice d'intégration de connaissances issues d'autres études effectuées avec les membres des Premières Nations. Les sites d'intérêt identifiés par les Premières Nations participantes peuvent globalement être classés en 9 grandes catégories :
+The areas of interest are generally identified through exercises to integrate knowledge from other studies conducted with First Nations members. The areas of interest identified by the participating First Nations can be broadly classified into 9 main categories:
 
-- Activités rituelles ou sociales
-- Chasse
-- Culture et patrimoine
-- Occupation du territoire
-- Pêche commerciale
-- Pêche traditionnelle
-- Récolte de végétaux
-- Sites archéologiques
-- Tourisme
+- Ritual or social activities
+- Hunting
+- Culture and heritage
+- Land use
+- Commercial fishing
+- Traditional fishing
+- Harvesting of vegetation
+- Archeological sites
+- Tourism
 
-Les sites d'intérêt identifiés par les Nations ont été conservés distincts plutôt qu'intégrés en une couche unique par grandes catégories de sites d'intérêt, et ce malgré l'identification de catégories de sites d'intérêt similaires entre Nations. Par exemple, bien que la majorité des Nations aient identifié des sites d'intérêt pour la chasse, les sites identifiés demeurent distincts entre Nations pour l'évaluation des effets cumulatifs. Cette approche a pour but de respecter l'indépendance de chaque Nation et d'attribuer une importance supérieure à un milieu si ce dernier est identifié par plus d'une Nation. C'est le cas, entre autres, du Lac Saint-Pierre, qui est identifié en tant que site d'intérêt par plus d'une Nation participante.
+The areas of interest identified by the Nations have been kept separate rather than integrated into a single layer by broad area of interest category, despite Nations identifying similar categories. For example, although most Nations identified areas of interest for hunting, the areas identified by individual First Nations remained separate for the cumulative effects assessment. This approach is intended to respect the independence of each Nation and to assign greater importance to an environment if it is identified by more than one Nation. This is the case of Lake St. Pierre, among other areas, which is identified as an area of interest by more than one participating Nation.
 
-Chaque Nation a organisé et catégorisé ses propres sites d'intérêt; ces catégories ont été conservées telles que rapportées bien que des catégories similaires ont été identifiées entre les Premières Nations participantes. Aucune tentative d'harmonisation des catégories entre Premières Nations n'a été effectuée. Cette absence d'harmonisation a été adoptée afin d'éviter de dénaturer les informations transmises par les Nations. De plus, puisque les sites provenant des différentes Nations demeurent distincts pour l'évaluation, l'harmonisation des catégories de sites d'intérêt n'aurait pas affecté l'évaluation. Nous avons ainsi décidé de conserver les libellés utilisés dans les données transmises.
+Each Nation organized and categorized its own areas of interest; these categories have been kept as reported despite similarities between the categories having been identified among the participating First Nations. There has been no attempt to harmonize categories among the First Nations. This choice was made in order to avoid distorting the information transmitted by the Nations. In addition, since the areas identified by the various Nations remain separate for the assessment, harmonizing the categories of areas of interest would not have affected the assessment. We thus decided to keep the wording used in the data transmitted.
 
-Il est important de noter quelques mises en garde quant aux sites d'intérêt pour les Premières Nations. Premièrement, les informations rapportées ne peuvent être considérées comme un portrait exhaustif des sites d'intérêt pour l'ensemble des membres des Nations autochtones; en effet, les informations résultent d'un processus de consultation limité des membres de chaque Nation et intégrées uniquement dans le contexte du projet d'évaluation des effets cumulatifs des activités maritimes. Les sites d'intérêt identifiés proviennent d'autres d'études dont les données ont été intégrées afin de répondre aux objectifs de la présente étude. De plus, toutes les Premières Nations ayant un intérêt au sein de la zone d'étude n'ont pu être impliquées au projet. Par exemple, malgré l'inclusion de sites d'intérêt pour la Nation Wolastoqiyik Wahsipekuk, un processus collaboratif semble à celui effectué avec les autres Nations n'a pu être mis en place; les données socio-culturelles de la Nation Wolastoqiyik Wahsipekuk n'ont ainsi pu être incluses au sein de notre évaluation. La caractérisation des sites d'intérêt ne peut ainsi être considérée exhaustive pour l'ensemble des Premières Nations sur le territoire à l'étude.
+There are a few points that must be kept in mind regarding areas of interest to First Nations. First, the information reported cannot be considered an exhaustive description of the areas of interest for all members of Indigenous Nations; the consultation process with the members of each Nation from which the information was derived was limited, and the information was integrated only in the context of the project assessing the cumulative effects of marine activities. The areas of interest identified come from other studies whose data were integrated to meet the objectives of this study. In addition, not all First Nations with an area of interest in the study area were able to be involved in the project. For example, despite the areas of interest for the Wolastoqiyik Wahsipekuk Nation being included, a collaborative process similar to that carried out with the other Nations could not be established; the socio-cultural data of the Wolastoqiyik Wahsipekuk Nation could therefore not be included in our assessment. The characterization of the areas of interest cannot be deemed exhaustive for all the First Nations in the region being studied.
 
-Deuxièmement, le lien et l'appartenance des Premières Nations au territoire va au-delà d'une vision strictement utilitaire et fonctionnelle; cette vision est difficile à capturer à travers une cartographie des sites d'intérêt, qui a pour effet de les objectiver. Il est ainsi important de considérer que les sites d'intérêts qui ont été identifiés s'insèrent dans un contexte culturel et écologique plus large qu'une simple localisation géographique. 
+Second, the First Nations’ connection to place goes beyond a strictly utilitarian and functional perspective; this perspective is difficult to capture through a mapping of areas of interest, which has the effect of objectifying them. This means it is important to consider that the areas of interest identified are part of a broader cultural and ecological context as opposed to a mere geographical location. 
 
-Troisièmement, la notion d'utilisation du territoire des Premières Nations va au-delà d'une simple utilisation. En effet, les activités coutumières autochtones constituent des droits ancestraux protégés par l’article 35(1) de la Constitution canadienne. La Loi constitutionnelle de 1982 affirme les droits existants ancestraux ou issus de traités. Cependant, la plupart de ces droits demeurent indéfinis et la Proclamation royale de 1763 stipule que les peuples autochtones continuent à détenir toutes terres qu’ils n’ont pas cédées ou vendues. Il importe donc de bien distinguer ces activités alimentaires, rituelles et sociales faisant l’objet de droits protégés par la Constitution et liés à la subsistance de la Nation, des activités de pêche, de chasse et de piégeage sportives et de loisir pratiquées par la population allochtone.
+Third, the concept of First Nations land use goes beyond mere use. Indeed, Indigenous customary activities are aboriginal rights protected by section 35(1) of the Canadian Constitution. The Constitution Act, 1982 affirms the existing aboriginal and treaty rights. However, most of these rights remain undefined and the Royal Proclamation of 1763 states that Aboriginal peoples continue to hold any lands they have not ceded or sold. It is therefore important to distinguish these food, ritual and social activities, which are protected by the Constitution and are linked to the Nation’s subsistence, from non-native fishing, hunting and trapping which are for sport and leisure.
 
-Quatrièmement, les limites spatio-temporelles de la présente étude a été évoquée comme une limite importante dans un contexte autochtone puisqu'elle ne capture pas adéquatement le caractère évolutif de l'occupation et de l'utilisation du territoire qu'ils en font. Le portrait des sites d'intérêt présenté ne devrait ainsi pas être interprété comme représentatif du passé ou garant du futur. 
+Fourth, the spatio-temporal boundaries of the present study were raised as an important limitation in an Indigenous context since the study does not appropriately capture the evolving nature of their land occupation and use. The description of the areas of interest presented should not be interpreted as representative of the past or as a guarantee of the future. 
 
-Finalement, la participation des Premières Nations à cette étude est faite sans préjudice à l'exercice de leurs droits juridiques sur leur territoire traditionnel respectif pour lesquels s'appliquent leurs droits et responsabilités d'intendance et qui se basent sur l'application d'une approche écosystémique plus large. Les sites d'intérêt identifiés doivent ainsi être interprétés dans le contexte élargi de ces droits et responsabilités.
+Lastly, the First Nations’ participation in this study is without prejudice to the exercise of their legal rights in their respective traditional territories to which their stewardship rights and responsibilities apply and which are based on the application of a broader ecosystemic approach. This means that the identified areas of interest must be interpreted in the broader context of these rights and responsibilities.
 
-Les sections suivantes décrivent brièvement les données partagées par les Premières Nations participantes et les données qui ont été accessibles à travers des plateformes ouvertes.
+The following sections briefly describe the data shared by the participating First Nations and the data accessible through open platforms.
 
 <!-- =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= -->
 <!-- =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= -->
 <!-- =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= -->
-##### Association de gestion halieutique Mi'kmaq et Malécite {#aghammportrait}
+##### Mi’kmaq and Maliseet Aboriginal Fisheries Management Association {#aghammportrait}
 
-> ***Nous remercions Lisa M. Arsenault pour les échanges et le soutien.***
+> ***We thank Lisa M. Arsenault for the discussions and support.***
 
 ```{r aghamm_data, results = 'asis'}
 uid <- meta$dataDescription$categories$type %in% 
@@ -63,9 +63,9 @@ show_source()
 <br/>
 
 
-L'Association de gestion halieutique Mi'kmaq et Malécite (AGHAMM) a développé un atlas cartographique décrivant divers sites et usages reliés aux activités de pêche commerciale et traditionnelle d'importance pour les Nations de Gesgapegiag, Gespeg et Wolastoqiyik Wahsipekuk [@arsenault2017]. L'Atlas décrit des activités de pêches commerciales ciblant neuf espèces différentes : le buccin (*Buccinum* sp.), le concombre de mer (*Holothurie* sp.), le crabe commun (*Cancer irroratus*), le crabe des neiges (*Chionoecetes opilio*), la crevette nordique (*Pandalus* sp.), le flétan Atlantique (*Hippoglossus hippoglossus*), le flétan du Groenland (*Reinhardtius hippoglossoides*), le homard (*Homarus americanus*) et l'oursin (*Strongylocentrotus* sp.) dans l'estuaire du Saint-Laurent [@arsenault2017; @racine2017]. Puisque la majorité de ces pêches sont effectuées par la Nation Wolastoqiyik Wahsipekuk, ces données sont utilisées afin de décrire les activités de pêches commerciales de cette dernière (voir section \@ref(pnwwportrait)). Puisque la Nation Mi'kmaq de Gespeg effectue également une pêche commerciale à la crevette nordique dans l'estuaire du Saint-Laurent, nous avons sélectionné cette pêche parmi les données de l'Atlas.
+The Mi’kmaq and Maliseet Aboriginal Fisheries Management Association (MMAFMA) has developed a cartographic atlas describing various sites and uses related to commercial and traditional fishing that are of importance to the Gesgapegiag, Gespeg and Wolastoqiyik Wahsipekuk Nations [@arsenault2017]. The Atlas describes commercial fishing targeting nine different species: whelk (*Buccinum* sp.), sea cucumber (*Holothuria* sp.), rock crab (*Cancer irroratus*), snow crab (*Chionoecetes opilio*), northern shrimp (*Pandalus* sp.), Atlantic halibut (*Hippoglossus hippoglossus*), Greenland halibut (*Reinhardtius hippoglossoides*), lobster (*Homarus americanus*), and sea urchin (*Strongylocentrotus* sp.) in the St. Lawrence Estuary [@arsenault2017; @racine2017]. Since most of these fisheries are conducted by the Wolastoqiyik Wahsipekuk Nation, these data are used to describe that Nation’s commercial fisheries (see section \@ref(pnwwportrait)). Since the Gespeg Mi’kmaq Nation also has a commercial northern shrimp fishery in the St. Lawrence Estuary, we selected this fishery from the Atlas data.
 
-L'atlas identifie également les rivières Rimouski, Métis et Matane en tant que sites d'importance pour la pêche au Saumon Atlantique [*Salmo salar*; @arsenault2017]. Nous avons ainsi ajouter une zone tampon de 3 $km$ à l'embouchure de ces trois rivièrs afin de capturer leur présence en tant que site d'intérêt pour l'évaluation.
+The Atlas also identifies the Rimouski, Métis and Matane rivers as sites of importance to Atlantic salmon fishing [*Salmo salar*; @arsenault2017]. We added a 3 $km$ buffer zone at the mouth of these three rivers to capture their presence as an area of interest for the assessment.
 
 
 <br>
@@ -85,9 +85,9 @@ knitr::include_graphics("./figures/figures-integrated/site-aghamm_peche_commerci
 <!-- =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= -->
 <!-- =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= -->
 <!-- =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= -->
-##### Nation des Innus d’Essipit
+##### Innu Nation of Essipit
 
-> ***Nous remercions la Nation des Innus d'Essipit pour leur participation, ainsi que Donald Bouchard et Pierre Tremblay pour les échanges et le soutien.***
+> ***We thank the Innu Nation of Essipit for their participation, as well as Donald Bouchard and Pierre Tremblay for the discussions and support.***
 
 ```{r essipit_data, results = 'asis'}
 uid <- meta$dataDescription$categories$type %in% 
@@ -102,25 +102,25 @@ show_source()
 
 <br/>
 
-Les données transmises par la Nation des Innus d'Essipit sont une intégration de données provenant de divers sources d'informations [@bouchard2021] :
+The data transmitted by the Innu Nation of Essipit are an integration of data from various sources [@bouchard2021]:
 
-- Inventaire des sites archéologiques du Québec.
-- Suivi Innu-Aitun, 2004 à 2018, Essipit.
-- Historique des pêches commerciales (crabe des neiges, oursin) et alimentaire (flétan atlantique), 1996 à 2020, Essipit.
-- Atlas des usages côtiers et marins du Saint-Laurent par les Innus de la Côte-Nord, Agence Mamu Innu Kaikusseht​, 2019.
-- Collecte de données sur la récolte d'oiseaux migrateurs dans sept communautés innues de la Côte-Nord, Agence Mamu Innu Kaihusseht, 2014
+- Inventory of archeological sites in Quebec.
+- Innu-Aitun follow-up, 2004 to 2018, Essipit.
+- History of the commercial (snow crab, sea urchin) and food (Atlantic halibut) fisheries, 1996 to 2020, Essipit.
+- Atlas of coastal and marine uses of the St. Lawrence by the Innu of the North Shore, Agence Mamu Innu Kaikusseht, 2019.
+- Collection of data on the harvesting of migratory birds in seven Innu communities of the North Shore, Agence Mamu Innu Kaihusseht, 2014
 
-Le résultat de l'intégration de ces données fournit la localisation de sites d'intérêts localisés dans l'estuaire du Saint-Laurent et la rivière Saguenay. Ces sites sont divisés en sept catégories : 
+The result of the integration of these data provides the location of areas of interest located in the St. Lawrence Estuary and the Saguenay River. These areas are divided into seven categories: 
 
-- Chasse aux oiseaux migrateurs
-- Chasse au phoque
-- Pêche commerciale
-- Pêche traditionnelle
-- Activités touristiques
-- Accès au plan d'eau
-- Culture et patrimoine
+- Migratory bird hunting
+- Seal hunting
+- Commercial fishing
+- Traditional fishing
+- Tourist activities
+- Access to the water
+- Culture and heritage
 
-Ces catégories de sites d'intérêts sont utilisées pour l'évaluation des effets cumulatifs des activités maritimes dans la zone d'étude. Il est important de noter que les données originales utilisées couvrent un territoire plus large que la zone d'étude de la présente évaluation, mais que ces dernières ont été intersectées et limitées à notre zone d'étude.
+These categories of area of interest are used in the marine activities cumulative effects assessment in the study area. It is important to note that the original data used cover a wider area than the study area of this assessment, but were intersected and limited to our study area.
 
 
 <br>
@@ -168,9 +168,9 @@ knitr::include_graphics("./figures/figures-integrated/site-essipit_culture_patri
 <!-- =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= -->
 <!-- =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= -->
 <!-- =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= -->
-##### Nation Huronne-Wendat
+##### Huron-Wendat Nation
 
-> ***Nous remercions la Nation Huronne-Wendat pour leur participation, ainsi que Maria Rodriguez, Stéphanie B. Nadeau et Mario Gros-Louis pour les échanges et le soutien.***
+> ***We thank the Huron-Wendat Nation for their participation, as well as Maria Rodriguez, Stéphanie B. Nadeau and Mario Gros-Louis for their discussions and support.***
 
 ```{r nhw_data, results = 'asis'}
 uid <- meta$dataDescription$categories$type %in% 
@@ -185,26 +185,27 @@ show_source()
 
 <br/>
 
-Les données transmises par la Nation Huronne-Wendat fournissent la localisation de sites d'intérêt principalement dans la portion fluviale du Saint-Laurent et dans l'estuaire et dans une moindre mesure dans l'estuaire du Saint-Laurent [@nhw2021]. Les sites sont composées de neuf thèmes divisées en trois catégories uniques : 
+The data transmitted by the Huron-Wendat Nation provide the location of areas of interest mainly in the fluvial portion of the St. Lawrence and the estuary, and to a lesser extent in the St. Lawrence estuary [@nhw2021]. The areas are composed of nine themes divided into three unique categories: 
 
-- Sites contemporains 
-  - Activités rituelles ou sociales
-  - Chasse
-  - Pêche
-  - Récolte de végétaux
-  - Occupation du territoire
-- Sites écologiques
-  - Espèces en péril
-- Sites patrimoniaux 
-  - Archéologie
-  - Histoire 
-  - Toponymie
+- Contemporary sites 
+  - Ritual or social activities
+  - Hunting
+  - Fishing
+  - Harvesting of vegetation
+  - Land use
+- Ecological sites
+  - Species at risk
+- Heritage sites 
+  - Archeology
+  - History 
+  - Toponymy
 
-La catégorie d'occupation du territoire regroupe divers types de sites d’intérêt pour la Nation Huronne-Wendat. Une formule générale pour désigner ces sites a été conservée en raison de la sensibilité des données qui y sont incluses. Les thèmes ont été considérés en tant que catégories uniques de composantes valorisées pour l'évaluation des effets cumulatifs. Il est important de noter que les données originales utilisées couvrent un territoire plus large que la zone d'étude de la présente évaluation, mais que ces dernières ont été intersectées et limitées à notre zone d'étude.
+The land use category groups together various types of areas of interest for the Huron-Wendat Nation. A general formula for designating these areas has been kept due to the sensitivity of the data included. The themes were considered as unique categories of valued components for the cumulative effects assessment. It is important to note that the original data used cover a wider area than the study area of this assessment, but were intersected and limited to our study area.
+
 
 <br>
 
-###### Sites contemporains 
+###### Contemporary sites 
 
 <br>
 
@@ -235,7 +236,7 @@ knitr::include_graphics("./figures/figures-integrated/site-huronne_wendat_occupa
 
 <br>
 
-###### Sites écologiques  
+###### Ecological sites  
 
 <br>
 
@@ -245,7 +246,7 @@ knitr::include_graphics("./figures/figures-integrated/site-huronne_wendat_espece
 
 <br>
 
-###### Sites patrimoniaux 
+###### Heritage sites 
 
 <br>
 
@@ -272,9 +273,9 @@ knitr::include_graphics("./figures/figures-integrated/site-huronne_wendat_topony
 <!-- =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= -->
 <!-- =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= -->
 <!-- =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= -->
-##### Nation Mohawk de Kahnawà:ke
+##### Mohawk Nation of Kahnawà:ke
 
-> ***Nous remercions la Nation Mohawk de Kahnawà:ke pour leur participation, ainsi que le Comité Consultatif du Conseil Mohawk de Kahnawà:ke pour les échanges et le soutien.***
+> ***We thank the Mohawk Nation of Kahnawà:ke for their participation, as well as the Mohawk Council Advisory Committee of Kahnawà:ke (Comité Consultatif du Conseil Mohawk de Kahnawà:ke) for the discussions and support.***
 
 ```{r nmk_data, results = 'asis'}
 uid <- meta$dataDescription$categories$type %in% 
@@ -289,26 +290,26 @@ show_source()
 
 <br/>
 
-Les données transmises par la Nation Mohawk de Kahnawà:ke fournissent la localisation de sites d'intérêt dans la portion fluviale du Saint-Laurent dans la région de Montréal et du lac St-Pierre [@mck2021]. Les sites identifiés ciblent principalement les activités de chasse, de pêche et de récolte de végétaux visant une variété d'espèces importantes, des sites culturels, et l'utilisation de certaines portions du territoire par la Nation. Ces derniers peuvent être divisés en sept catégories :
+The data transmitted by the Mohawk Nation of Kahnawà:ke provide the location of areas of interest in the fluvial portion of the St. Lawrence River in the Montreal and Lake St. Pierre area [@mck2021]. The areas identified focus primarily on hunting, fishing and vegetation harvesting activities for a variety of important species, cultural sites, and the use of certain portions of the territory by the Nation. These areas can be divided into seven categories:
 
-- Activités
-  - Chasse à la sauvagine
-  - Pêche en eau libre
-  - Pêche de rivage
-  - Récolte de végétation 
-- Sites d'importance 
-  - Culture et patrimoine
-- Utilisation du territoire 
+- Activities
+  - Waterfowl hunting
+  - Open water fishing
+  - Shoreline fishing
+  - Vegetation harvesting 
+- Sites of importance 
+  - Culture and heritage
+- Land use 
   - Seigneurie du Sault-Saint-Louis
-  - Navigation
+  - Shipping
 
-Les sites composant ces huit catégories ont été utilisés pour l'évaluation des effets cumulatifs des activités maritimes. Il est important de noter que les données originales utilisées couvrent un territoire plus large que la zone d'étude de la présente évaluation, mais que ces dernières ont été intersectées et limitées à notre zone d'étude.
+The sites making up these eight categories were used for the cumulative effects assessment of marine activities. It is important to note that the original data used cover a wider area than the study area of this assessment, but were intersected and limited to our study area.
 
-Un clause accompagne les données partagées, que nous nous permettons de retranscrire en son intégralité en anglais : 
+A clause accompanies the shared data, which we take the liberty of transcribing in its entirety in English: 
 
-> The Mohawk Council of Kahnawà:ke (MCK) has gathered some information from community members concerning the value and use of the St. Lawrence River in the vicinity of Kahnawà:ke. These comments have been organized according to the valued components identified for the fluvial section of the river through the Cumulative Effects of Marine Shipping by the Transport Canada team in collaboration with project partners. Therefore, the information provided is based on a limited consultation of community members, with the intent of responding to the specific parameters of this Transport Canada study only and should not be interpreted as a comprehensive study of Mohawk traditional land use or rights throughout the study area. The information provided should also not be used to replace engagement, including the gathering of traditional land use information within the context of any other future study or project. In addition, our participation in this study is without prejudice to the exercise of our jurisdictional rights to our traditional territory to which our stewardship rights and responsibilities apply and that are based on the application of a broader ecosystem-based approach. Therefore, the identification of specific areas of concern or value, including the identification of specific fish species or archaeological sites of interest is to be understood within the context of these broader rights and responsibilities.
+> The Mohawk Council of Kahnawà:ke (MCK) has gathered some information from community members concerning the value and use of the St. Lawrence River in the vicinity of Kahnawà:ke. These comments have been organized according to the valued components identified for the fluvial section of the river through the Cumulative Effects of Marine Shipping by the Transport Canada team in collaboration with project partners. Therefore, the information provided is based on a limited consultation of community members, with the intent of responding to the specific parameters of this Transport Canada study only and should not be interpreted as a comprehensive study of Mohawk traditional land use or rights throughout the study area. The information provided should also not be used to replace engagement, including the gathering of traditional land use information within the context of any other future study or project. In addition, our participation in this study is without prejudice to the exercise of our jurisdictional rights to our traditional territory to which our stewardship rights and responsibilities apply and that are based on the application of a broader ecosystem-based approach. Therefore, the identification of specific areas of concern or value, including the identification of specific fish species or archeological sites of interest is to be understood within the context of these broader rights and responsibilities.
 
-Bien que des données aient été fournies par la Nation Mohawk de Kahnawà:ke et qu'elles ont été intégrées à l'évaluation des effets cumulatifs, il a été demandé de ne pas présenter de cartes des sites identifiés. Pour de plus amples informations, veuillez contacter le *Mohawk Council of Kahnawà:ke*. La requête originale pour le retrait des figures est la suivante:
+Although data were provided by the Mohawk Nation of Kahnawà:ke and incorporated into the cumulative effects assessment, it was requested that maps of identified sites not be presented. For more information, please contact the *Mohawk Council of Kahnawà:ke*. The original request to remove the figures is as follows:
 
 > The Mohawk Council of Kahnawà:ke provided information concerning some known sites of interest related to the activities mentioned above. These data were incorporated into the cumulative effects assessment however it was requested that the delineation of these areas not be shown within this report. For further information on this data, please contact the Mohawk Council of Kahnawà:ke
 
@@ -367,9 +368,10 @@ knitr::include_graphics("./figures/figures-integrated/site-kahnawake_traffic.png
 <!-- =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= -->
 <!-- =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= -->
 <!-- =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= -->
-##### Nation W8banaki
+##### W8banaki Nation
 
-> ***Nous remercions la Nation W8banaki pour leur participation, ainsi que le Grand Conseil de la Nation Waban-Aki, Edgar Blanchet, Hadrien Bois et David Bernard pour les échanges et le soutien.***
+> ***We thank the W8banaki Nation for their participation, as well as the Grand Council of the Waban-Aki Nation, Edgar Blanchet, Hadrien Bois and David Bernard for the discussions and support.***
+
 
 ```{r nw_data, results = 'asis'}
 uid <- meta$dataDescription$categories$type %in% 
@@ -384,36 +386,33 @@ show_source()
 
 <br/>
 
-
-
 <!-- Pour de plus amples informations, veuillez contacter directement le GCNWA. -->
 
+As part of this pilot project, the Grand Council of the Waban-Aki Nation (Grand Conseil de la Nation Waban-Aki, GCNWA) integrated spatialized and non-spatialized information from semi-directed individual and small group land use interviews previously conducted with members of the Nation. These studies include a sample of 33 respondents from 74 interviews. The mapping is supported by qualitative information primarily from 1) two focus group workshops held in 2016, workshop interviews held between 2019 and 2020 with women from the Nation, and 3) impact assessment analyses of port expansion projects on the Nation’s ancestral rights. This integrative work has led to the production of a report outlining the known concerns of some Nation members about environmental pressures within their territory affecting the valued components covered by our marine activities cumulative effects assessment [@gcnwa2021]. 
 
-Dans le cadre de ce projet pilote, le Grand Conseil de la Nation Waban-Aki (GCNWA) a procédé à l'intégration d'informations spatialisée et non-spatialisées provenant d'entretiens semi-dirigés individuels ou en petits groupes sur l'utilisation du territoire précédemment effectuées auprès de membres de la Nation. Ces études regroupent un échantillon de 33 répondant pour 74 entretiens. La cartographie est accompagnée d'informations qualitatives provenant principalement de 1) deux ateliers de type "groupe d'expression" tenus en 2016, des entretiens d'ateliers tenus entre 2019 et 2020 avec des femmes de la Nation, et 3) des analyses d'évaluation des effets de projets d'agrandissements portuaires sur les droits ancestraux de la Nation. Ce travail d'intégration a mené à la production d'un rapport présentant les préoccupations connues de certains membres de la Nation quant aux pressions environnementales exercées au sein de leur territoire et touchant les composantes valorisées couvertes par notre évaluation des effets cumulatifs des activités maritimes [@gcnwa2021]. 
+The data provided by the GCNWA provide the location of areas of interest primarily in the fluvial portion of the St. Lawrence River [@gcnwa2021]. The identified sites are divided into 13 distinct categories: 
 
-Les données transmises par le GCNWA fournissent la localisation de sites d'intérêt principalement dans la dans la portion fluviale du Saint-Laurent [@gcnwa2021]. Les sites identifiés sont divisée en 13 catégories distinctes : 
+- Contemporary land use and occupation 
+  - Fishing (*e.g.* perch, walleye, sturgeon)
+  - Migratory bird hunting (*e.g.* snow geese, Canada geese)
+  - Game hunting (*e.g.* white-tailed deer, ruffed grouse)
+  - Trapping of furbearing species (*e.g.* muskrat, snowshoe hare)
+  - Harvesting and gathering of vegetation (*e.g.* cattail, fiddlehead)
+  - Shipping 
+  - Overnight site (*e.g.* camps)
+  - Essential sites (*e.g.* baiting sites, calling sites)
+  - Activity areas (*e.g.* hunting area, trapping area)
+  - Problems related to the territory (*e.g.* site to which access has been lost)
+- Heritage, cultural and archeological sites
+  - Cultural sites (*e.g.* gathering site, sacred or ritual place)
+  - Archeological sites
+  - Sites with archeological potential
 
-- Utilisation et occupation contemporaine du territoire 
-  - Pêche (*e.g.* perchaude, dorés, esturgeons)
-  - Chasse aux oiseaux migrateurs (*e.g.* oie blanche, bernache du Canada)
-  - Chasse au gibier (*e.g.* cerf de Virginie, gélinotte huppée)
-  - Trappe d'animaux à fourrure (*e.g.* rat musqué, lièvre d'Amérique)
-  - Cueillette et collecte de végétaux (*e.g.* quenouille, tête de violon)
-  - Navigation 
-  - Site de coucher (*e.g.* campements)
-  - Sites essentiels (*e.g.* sites d'appâtage, site d'appel)
-  - Zones d'activités (*e.g.* zone de chasse, zone de trappe)
-  - Problèmes liés au territoire (*e.g.* site dont l'accès a été perdu)
-- Sites patrimoniaux, culturels et archéologiques
-  - Sites culturels (*e.g.* site de rassemblement, lieu sacré ou rituel)
-  - Sites archéologiques
-  - Sites à potentiel archéologique
-
-Ces catégories de sites d'intérêts sont utilisées pour l'évaluation des effets cumulatifs des activités maritimes dans la zone d'étude. Il est important de noter que les données originales utilisées couvrent un territoire plus large que la zone d'étude de la présente évaluation, mais que ces dernières ont été intersectées et limitées à notre zone d'étude.
+These categories of areas of interest are used in the marine activities cumulative effects assessment in the study area. It is important to note that the original data used cover a wider area than the study area of this assessment, but were intersected and limited to our study area.
 
 <br>
 
-###### Utilisation et occupation contemporaine du territoire 
+###### Contemporary land use and occupation 
 
 <br>
 
@@ -473,7 +472,7 @@ knitr::include_graphics("./figures/figures-integrated/site-gcnwa_problemes_terri
 
 <br>
 
-###### Sites patrimoniaux, culturels et archéologiques
+###### Heritage, cultural and archeological sites
 
 <br>
 
@@ -499,9 +498,9 @@ knitr::include_graphics("./figures/figures-integrated/site-gcnwa_sites_potentiel
 <!-- =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= -->
 <!-- =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= -->
 <!-- =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= =~-~= -->
-##### Nation Wolastoqiyik Wahsipekuk {#pnwwportrait}
+##### Wolastoqiyik Wahsipekuk Nation {#pnwwportrait}
 
-> ***Nous remercions la Nation Wolastoqiyik Wahsipekuk pour leur participation, ainsi que David Poissant pour les échanges et le soutien.***
+> ***We thank the Wolastoqiyik Wahsipekuk Nation for their participation, as well as David Poissant for the discussions and support.***
 
 ```{r nww, results = 'asis'}
 uid <- meta$dataDescription$categories$type %in% 
@@ -516,9 +515,9 @@ show_source()
 
 <br/>
 
-Nous utilisons des données qui nous ont été transmises par des représentants de la Nation Wolastoqiyik Wahsipekuk pour caractériser des sites d'importances pour la pêche commerciale au homard [*Homarus americanus*; @pnww2021]. Ces données identifient des milieux jugés importants pour la pêche sur la rive sud du Saint-Laurent. Ces données ont été complétées avec les données de de l'AGHAMM (voir section \@ref(aghammportrait)) sur les pêche commerciales au buccin (*Buccinum* sp.), le concombre de mer (*Holothurie* sp.), le crabe commun (*Cancer irroratus*), le crabe des neiges (*Chionoecetes opilio*), la crevette nordique (*Pandalus* sp.), le flétan Atlantique (*Hippoglossus hippoglossus*), le flétan du Groenland (*Reinhardtius hippoglossoides*), le homard (*Homarus americanus*) et l'oursin (*Strongylocentrotus* sp.) dans l'estuaire du Saint-Laurent [@arsenault2017; @racine2017]. 
+We are using data provided to us by representatives of the Wolastoqiyik Wahsipekuk Nation to characterize sites of importance to the commercial lobster [*Homarus americanus*; @pnww2021] fishery. These data identify environments deemed important to fishing on the south shore of the St. Lawrence. These data were complemented with data from the MMAFMA (see section \@ref(aghammportrait)) on commercial fishing of whelk (*Buccinum* sp.), sea cucumber (*Holothuria* sp.), rock crab (*Cancer irroratus*), snow crab (*Chionoecetes opilio*), northern shrimp (*Pandalus* sp.), Atlantic halibut (*Hippoglossus hippoglossus*), Greenland halibut (*Reinhardtius hippoglossoides*), lobster (*Homarus americanus*), and sea urchin (*Strongylocentrotus* sp.) in the St. Lawrence Estuary [@arsenault2017; @racine2017]. 
 
-Deux sites d'intérêt pour l'observation du béluga et pour le développement portuaire sont également considérés en tant que sites d'intérêt pour la Nation Wolastoqiyik Wahsipekuk [@pnww2022]. Il est toutefois important de noter que malgré l'inclusion de sites d'intérêt pour la Nation Wolastoqiyik Wahsipekuk, un processus collaboratif semblable à celui effectué avec les autres Nations n'a pu être mis en place. Les données socio-culturelles de la Nation Wolastoqiyik Wahsipekuk n'ont ainsi pu être incluses au sein de notre évaluation. 
+Two areas of interest for beluga whale watching and harbour development are also considered areas of interest for the Wolastoqiyik Wahsipekuk Nation [@pnww2022]. It is important to note, however, that despite the inclusion of areas of interest to the Wolastoqiyik Wahsipekuk Nation, a collaborative process similar to that carried out with the other Nations could not be established. This means that the socio-cultural data of the Wolastoqiyik Wahsipekuk Nation could not be included in our assessment. 
 
 
 <br>

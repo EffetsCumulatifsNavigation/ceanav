@@ -1,6 +1,7 @@
-### Naufrages {#naufrage}
+### Shipwrecks {#naufrage}
 
-> ***Nous remercions Sohaib Gabsis de Pêches et Océans Canada pour les échanges et le soutien.***
+> ***We thank Sohaib Gabsis at Fisheries and Oceans Canada for the discussions and support.***
+
 
 
 ```{r naufrage_setup, echo = FALSE, results = 'asis'}
@@ -10,14 +11,14 @@ show_source(meta$rawData)
 
 <br/>
 
-Le stress environnemental relié aux épaves a été caractérisé grâce à une base de données de la Garde côtière canadienne sur la distribution de navires préoccupants [@gcc2021]. La majorité des navires doivent toujours être validés par la Garde côtière canadienne et la précision des coordonnées ne peut être garantie; cette base de données correspond toutefois à la meilleure source d'information disponible, et en tant que telle est utilisée pour l'évaluation des effets cumulatifs. Il sera possible de mettre à jour l'évaluation lorsque les données seront validées par la Garde côtière canadienne. Cette base de données identifie `r meta$dataDescription$observations$total` épaves au sein de la zone d'étude. L'intensité de ce stresseur environnemental a été caractérisée à l'aide d'un lissage gaussien -- *i.e.* méthode d'interpolation basée sur une distribution normale -- de 3 $km$ afin d'identifier les zones potentiellement soumises aux effets des épaves et pour considérer l'incertitude des coordonnées des épaves relevées par la Garde côtière canadienne.
+Environmental stress related to shipwrecks was characterized using a Canadian Coast Guard database on the distribution of vessels of concern [@gcc2021]. Most of the vessel data still need to be validated by the Canadian Coast Guard and the accuracy of the coordinates cannot be guaranteed; however, this database is the best available source of information and as such is used for the cumulative effects assessment. It will be possible to update the assessment once the data is validated by the Canadian Coast Guard. This database identifies `r meta$dataDescription$observations$total` shipwrecks within the study area. The intensity of this environmental stressor was characterized using Gaussian smoothing -- *i.e.* an interpolation method based on a normal distribution -- of 3 $km$ in order to identify areas potentially affected by shipwrecks and to account for the uncertainty of the shipwreck coordinates recorded by the Canadian Coast Guard.
 
-Il est important de noter que les épaves peuvent également faire l’objet d’une protection lorsqu’elles sont considérées en tant que sites archéologiques; dans ce contexte, les épaves ne présentant aucun risque pour l’environnement devraient plutôt être considérées en tant que sites d'intérêts archéologiques au sein de la composante valorisées de sites d'intérêt culturels, patrimoniaux et archéologiques. Une caractérisation des sites archéologiques d'intérêt existe à travers la l'Inventaire des sites archéologiques du Québec du Ministère de la Culture et des Communications. Nous n'avons toutefois pu accéder à cet inventaire dans le cadre de notre évaluation. 
+It is important to note that shipwrecks may be protected when they are considered archeological sites; in this context, shipwrecks posing no risk to the environment should instead be considered archeological areas of interest within areas of cultural, heritage and archeological interest valued components. A characterization of the archeological areas of interest is available through the Inventory of Archeological Sites in Quebec (Inventaire des sites archéologiques du Québec) of the Ministry of Culture and Communications (Ministère de la Culture et des Communications). However, we were not able to access this inventory during our assessment. 
 
 
 <br>
 
-```{r naufrage, fig.cap = "Distribution des sites de naufrages de navires répertoriés dans le Saint-Laurent et le Saguenay", out.width = '100%', fig.link = "./figures/figures-integrated/naufrage-naufrage.png"}
+```{r naufrage, fig.cap = "Distribution of known shipwreck sites in the St. Lawrence and the Saguenay river", out.width = '100%', fig.link = "./figures/figures-integrated/naufrage-naufrage.png"}
 knitr::include_graphics("./figures/figures-integrated/naufrage-naufrage.png")
 ```
 

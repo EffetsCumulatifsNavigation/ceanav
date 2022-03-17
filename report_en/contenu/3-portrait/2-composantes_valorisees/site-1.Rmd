@@ -1,10 +1,10 @@
-### Sites d’intérêt culturels, patrimoniaux et archéologiques {#site}
+### Areas of cultural, heritage and archeological interest {#site}
 
 ```{r site_setup, echo = FALSE}
 meta <- read_yaml("../data/data-metadata/int_cv_site.yml")
 ```
 
-Le Saint-Laurent et le Saguenay constituent un système d'une importance culturelle, patrimoniale et archéologique majeure pour les Premières Nations et pour les communautés côtières. Les sites d'intérêt culturels, patrimoniaux et archéologiques ont ainsi été identifiés en tant que composante valorisée à considérer pour le projet pilote d'évaluation des effets cumulatifs des activités maritimes. Les sites d'intérêt caractérisés proviennent principalement des Premières Nations, de sites patrimoniaux inscrits aux registres publics et d'aires protégées sur le territoire. Il en résulte un total de `r length(meta$dataDescription$categories$accronyme)` catégories distinctes de sites d'intérêt (Tableau \@ref(tab:siteCat)). Les données caractérisant les sites d'intérêt ont été intégrées directement à la grille d'étude en présence-absence. Les sections suivantes décrivent les données utilisées pour dresser le portrait des sites d'intérêt culturels, patrimoniaux et archéologiques dans la zone d'étude.
+The St. Lawrence and Saguenay rivers constitute a system of major cultural, heritage and archeological importance for the First Nations and the coastal communities. Areas of cultural, heritage and archeological interest were therefore identified as a valued component to be considered in the pilot project to assess the cumulative effects of marine activities. The areas of interest characterized are mainly provided by the First Nations, as well as heritage sites listed in public registers and protected areas in the region. This results in a total of `r length(meta$dataDescription$categories$accronyme)` distinct categories of areas of interest (Table \@ref(tab:siteCat)). Data characterizing the areas of interest were incorporated directly into the study grid as presence-absence. The following sections describe the data used to develop a profile of cultural, heritage and archeological areas of interest in the study area.
 
 <br/>
 

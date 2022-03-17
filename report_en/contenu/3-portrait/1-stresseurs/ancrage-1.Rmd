@@ -1,7 +1,6 @@
-### Ancrages {#ancrage}
+### Anchorage {#ancrage}
 
-> ***Nous remercions la Garde côtière canadienne et Corinne Berthold pour les échanges et le soutien.***
-
+> ***We thank the Canadian Coast Guard and Corinne Berthold for the discussions and support.***
 
 ```{r ancrage_setup, echo = FALSE, results = 'asis'}  
 meta <- read_yaml("../data/data-metadata/int_st_ancrage.yml")
@@ -10,13 +9,13 @@ show_source(meta$rawData)
 
 <br/>
 
-Les sites d'ancrage ont été caractérisés grâce à l'intégration de deux bases de données provenant de la Garde côtière canadienne [@gcc2022] et du Service Hydrographique du Canada [@shc2020]. La base de données de la Garde côtière canadienne fournit la localisation des sites d'ancrage commerciaux provenant des fiches techniques de mouillage entre Les Escoumins et Montréal [@gcc2022]. Puisque cette base de données ne couvre pas l'entièreté de la zone d'étude, nous avons complété la caractérisation des sites d'ancrage à l'aide de la base de données du Service Hydrographique du Canada; cette dernière fournit la localisation des mouillages et des zones de mouillages dans les eaux navigables canadiennes [@shc2020]. Nous y avons sélectionné les mouillages et zones de mouillage à l'est des Escoumins afin de compléter le portrait de la zone d'étude. Il est important de mentionner que la couche de données résultante ne considère que la navigation commerciale et que les sites d'ancrage pour la navigation de plaisance n'y sont pas représentés. 
+Anchorage sites were characterized through the integration of two databases from the Canadian Coast Guard [@gcc2022] and the Canadian Hydrographic Service [@shc2020]. The Canadian Coast Guard database provides the location of commercial anchorage sites from the mooring data sheets between Les Escoumins and Montreal [@gcc2022]. Since this database does not cover the entire study area, we completed the characterization of anchorage sites using the Canadian Hydrographic Service database; this database provides the location of moorings and mooring areas in Canadian navigable waters [@shc2020]. We selected the moorings and mooring areas east of Les Escoumins in order to complete the profile of the study area. It is important to mention that the resulting data layer considers only commercial navigation and that anchorage sites for recreational boating are not represented. 
 
-Un total de `r meta$dataDescription$observations$total` sites ont été répertoriés au sein de la zone d'étude. Pour caractériser l'intensité de ce stresseur environnemental, une zone tampon de 2 $km$ a été tracée autour de chaque site d'ancrage. Le nombre de sites d'ancrage qui intersecte chaque cellule de la grille d'étude a ensuite été évalué afin d'obtenir une évaluation du nombre de sites ($n$) par $km^2$ ayant le potentiel d'influencer une cellule ($n$ sites * $km^{-2}$). Cette caractérisation permet d'obtenir une évaluation du risque environnemental associé aux sites d'ancrage au sein de chaque cellule de la grille d'étude en assumant que les risques sont supérieurs lorsque plusieurs sites d'ancrage sont situés à proximité les uns des autres. Il est important de noter que nous ne caractérisons pas ici l'intensité d'utilisation de ces sites par les navires, mais bien la présence de sites d'ancrages. Une version mise à jour de ce stresseur pourrait viser à caractériser l'achalandage des sites d'ancrage; ce travail n'a toutefois pu être effectué dans le cadre de ce rapport.
+A total of `r meta$dataDescription$observations$total` sites were identified in the study area. To characterize the intensity of this environmental stressor, a 2 $km$ buffer zone was drawn around each anchoring site. The number of anchorage sites intersecting each study grid cell was then assessed to obtain an assessment of the number of sites ($n$) per $km^2$ with the potential to affect a cell ($n$ sites * $km^{-2}$). This characterization allows us to obtain an assessment of the environmental risk associated with anchorage sites in each study grid cell by assuming that risks are higher when multiple anchorage sites are located close to each other. It is important to note that we are not characterizing the intensity of use of these sites by vessels here, but rather the presence of anchorage sites. Anchorage site use could be characterized in an updated version of this stressor; however, this work could not be completed as part of this report.
 
 <br/>
 
-```{r ancrage, fig.cap = "Distribution des sites d'ancrage pour la navigation commerciale dans le Saint-Laurent et le Saguenay", out.width = '100%', fig.link = "./figures/figures-integrated/ancrage-ancrage.png"}
+```{r ancrage, fig.cap = "Distribution of anchorages for commercial shipping in the St. Lawrence and the Saguenay river.", out.width = '100%', fig.link = "./figures/figures-integrated/ancrage-ancrage.png"}
 knitr::include_graphics("./figures/figures-integrated/ancrage-ancrage.png")
 ```
 

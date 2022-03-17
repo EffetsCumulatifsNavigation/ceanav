@@ -1,8 +1,9 @@
-#### Habitats d'importance pour les cycles de vie
+#### Habitats that are important to life cycles
 
-##### Frayères et sites d'alevinage
+##### Spawning and nursery sites
 
-> ***Nous remercions Marc Mingelbier du Ministère des Forêts, de la Faune et des Parcs du Québec pour les échanges et le soutien.***
+> ***We thank Marc Mingelbier at the Quebec Ministry of Forests, Wildlife and Parks for the discussions and support.***
+
 
 ```{r frayere_data, results = 'asis'}
 uid <- meta$dataDescription$categories$accronyme %in% c("site_alevinage","frayere")
@@ -16,11 +17,11 @@ show_source()
 
 <br/>
 
-Les frayères sont des milieux essentiels au maintien de populations de poissons; en effet, des perturbations à ces sites, ou au comportement des espèces pendant la période de fraie, peuvent avoir des impacts majeurs sur la dynamique des populations de poissons. Similairement, les sites d'alimentation et de protection pour les stades de vie initiaux des poissons (*e.g.* larves, alevins, juvéniles), qui sont beaucoup plus susceptibles aux effets de perturbations à leur habitat. Ces sites, nommés aires d'alevinage, sont ainsi essentiels à leur survie. La protection des frayères et des aires d'alevinage est ainsi d'une importance majeure puisqu'ils constituent un goulot d'étranglement pour la dynamique des populations de poissons.
+Spawning sites are environments critical to the maintenance of fish populations; indeed, disturbances to these sites, or to species behaviour during the spawning period, can have major impacts on fish population dynamics. Similarly, feeding and protection sites for early life stages of fish (*e.g.* larvae, fry, juveniles) are much more susceptible to disturbances to their habitat. These sites, called nursery areas, are thus critical to fish survival. This means that the protection of spawning and nursery sites is of major importance since they constitute a bottleneck for fish population dynamics.
 
-Les données utilisées pour caractériser les frayères et les aires d'alevinage proviennent d'un exercice d'intégration de données d'observation *in situ* couvrant la période de 1974 à 2019 [@mffp2020; Tableau \@ref(tab:frayerealevinage)]. Les frayères et aires d'alevinage identifiées regroupent des données pour 71 et 49 espèces de poissons, respectivement, et couvrent une superficie d'environ 275 et 230 $km^2$ au sein de la zone d'étude. Les données regroupent des frayères et des aires d'alevinage confirmées ou potentielles lorsque les habitats étaient jugés propices à la fraie ou l'alevinage des poissons. Il est donc probable que ces données soient partielles et ne devraient pas être considérées comme un portrait exhaustif des frayères et des aires d'alevinage dans la zone d'étude. Les données sont composées de points et de polygones. Nous avons ajouté une zone tampon de 100 $m$ autour des points, puis avons intégré la présence de frayères au sein de notre grille d'étude de 1 $km^2$.
+The data used to characterize spawning and nursery areas come from an *in situ* observation data integration exercise covering the period from 1974 to 2019 [@mffp2020; Table \@ref(tab:frayerealevinage)]. The identified spawning and nursery sites aggregate data for 71 and 49 fish species, respectively, and cover an area of approximately 275 and 230 $km^2$ within the study area. The data aggregate confirmed or potential spawning and nursery sites where habitats were deemed suitable for fish spawning or rearing. Therefore, it is likely that these data are partial and should not be considered an exhaustive description of spawning and nursery sites in the study area. The data are composed of points and polygons. We added a 100 $m$ buffer zone around the points, and then incorporated the presence of spawning sites within our 1 $km^2$ study grid.
 
-Il est à noter que les données utilisées couvrent uniquement la portion fluviale de la zone d'étude; d'autres données devraient être ajoutées afin de caractériser convenablement l'entièreté de la zone d'étude.
+It should be noted that the data used covers only the fluvial portion of the study area; additional data should be added to properly characterize the entire study area.
 
 <br/>
 
@@ -52,9 +53,9 @@ knitr::include_graphics("./figures/figures-integrated/habitat-site_alevinage.png
 
 <br/>
 
-##### Oiseaux
+##### Birds
 
-> ***Nous remercions Jean-François Rail d'Environnement et Changement climatique Canada pour les échanges et le soutien.***
+> ***We thank Jean-François Rail of Environment and Climate Change Canada for the discussions and support.***
 
 ```{r oiseaux_data, results = 'asis'}
 uid <- meta$dataDescription$categories$accronyme %in% c("oiseaux")
@@ -69,11 +70,11 @@ show_source()
 <br/>
 
 
-Les données utilisées pour caractériser les sites d'importance pour les oiseaux proviennent de deux sources distinctes qui ont été insérées en présence-absence au sein de la grille d'étude. La première base de données décrit la localisation de colonies d'oiseaux nommée la [Banque Informatisée des Oiseaux Marins du Québec](https://ogsl.ca/fr/biodiversite-oiseaux-eccc-biomq-a-propos/) [BIOMQ; @rail2002; @eccc2021]. Cette dernière a été compilée et est mise à jour par le Service Canadien de la Faune (SCF) pour la région du Québec. La BIOMQ contient des informations sur la localisation de colonies d'oiseaux marins et de leurs sites de nidification pour les familles suivantes : Gaviidés (*i.e.* plongeons), Hydrobatidés (*i.e.* océanites), Sulidés (*i.e.* fous), Phalacrocoracidés (*i.e.* cormorans), Laridés (*i.e.* goélands, mouettes, sternes), Alcidés (*i.e.* guillemots, pingouins, macareux) et l’eider à duvet (*i.e.* Anatidés). Pour notre analyse, nous avons uniquement considéré la localisation des différentes colonies disponibles à travers la BIOMQ sans considérer les espèces individuelles afin d'identifier les lieux abritants des colonies d'oiseaux marins. Nous avons également utilisé les données à partir de l'année 2000 uniquement. Notre zone d'étude comprend `r meta$dataDescription$BIOMQ$Nombre` sites ayant une superficie totale de `r meta$dataDescription$BIOMQ$Superficie` $km^2$.
+The data used to characterize sites of importance to birds came from two separate sources that were inserted into the study grid on a presence-absence basis. The first database, which describes the location of bird colonies, is called the [Computerized Database of Quebec Seabirds](https://ogsl.ca/en/biodiversity-birds-eccc-biomq-about/) [CDQS; @rail2002; @eccc2021]. This database was compiled and is updated by the Canadian Wildlife Service (CWS) for the Quebec region. The CDQS contains information on the location of seabird colonies and their nesting sites for the following families: Gaviidae (*i.e.* loons), Hydrobatidae (*i.e.* petrels), Sulidae (*i.e.* gannets/boobies), Phalacrocoracidae (*i.e.* cormorants), Laridae (*i.e.* seagulls, gulls, terns), Alcidae (*i.e.* guillemots, penguins, puffins), and the common eider (*i.e.* Anatidae). For our analysis, we considered only the location of the various colonies available through the CDQS without considering individual species in order to identify the locations that are home to seabird colonies. We also used data from the year 2000 onward only. Our study area included `r meta$dataDescription$BIOMQ$Nombre` sites with a total area of `r meta$dataDescription$BIOMQ$Superficie` $km^2$.
 
-La deuxième base de données identifie les Zones importantes pour la conservation des oiseaux [ZICO; @oiseauxcanada2015; @etudesoiseauxcanada2015]. Les ZICO sont identifiées à partir d'informations sur les espèces d'oiseaux menacées, les sites abritant d'importantes populations d'oiseaux ou d'espèces à aires de répartitions réduites. Des [critères](https://www.ibacanada.org/documents/current_Canadian_IBA_Criteria.pdf) d'évaluation acceptés internationalement sont utilisés afin d'identifier les ZICO. Notre zone d'étude couvre `r meta$dataDescription$ZICO$Nombre` ZICO ayant une superficie totale de `r meta$dataDescription$ZICO$Superficie` $km^2$.
+The second database identified Important Bird Areas [IBAs; @oiseauxcanada2015; @etudesoiseauxcanada2015]. IBAs are identified based on information on threatened bird species, sites with significant bird populations, or range-restricted species. Internationally accepted assessment [criteria](https://www.ibacanada.org/documents/current_Canadian_IBA_Criteria.pdf) are used to identify IBAs. Our study area covers `r meta$dataDescription$ZICO$Nombre` IBA sites with a total area of `r meta$dataDescription$ZICO$Superficie` $km^2$.
 
-Il est important de noter que ces sites correspondent à des milieux terrestres et ne capturent ainsi pas convenablement l'utilisation des milieux aquatiques et marins associés à ces sites d'importance. L'extrapolation d'une zone d'utilisation marine basée sur des variables comme le rayon d’action des espèces et le nombre d’individus permettrait de pallier à cette lacune [*e.g.* @lieske2020]. Il n'a toutefois pas été possible d'effectuer ce type d'analyse dans le cadre de ce projet pilote.
+It is important to note that these sites are land environments, meaning that they do not properly capture aquatic and marine use environments associated with these sites of importance. Extrapolation of a marine use area based on variables such as the species range and number of individuals would enable us to address this gap [*e.g.* @lieske2020]. However, it was not possible to conduct this type of analysis as part of this pilot project.
 
 
 ```{r oiseaux, fig.cap = "Distribution des habitats dans le Saint-Laurent et le Saguenay - Oiseaux", out.width = '100%', fig.link = "./figures/figures-integrated/habitat-oiseaux.png"}

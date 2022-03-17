@@ -72,15 +72,15 @@ Here, we detail the general observations that arise from the cumulative effects 
 
 - **Most important environmental stressors**
   - Shipping and maritime pollution have the most important cumulative effects predicted at the regional scale, as they are also the most widespread in the study area;
-  - Commercial fisheries have an important effect on a limited number of valued components, namely clam beds and some sites of cultural, patrimonial and archeological interest; 
+  - Commercial fisheries have an important effect on a limited number of valued components, namely clam beds and some sites of cultural, heritage and archeological interest; 
   - Anchorages, accidental spills and dredging activities have localized effects on certain valued components. Those stressors, even if less widespread, combine with shipping and maritime pollution and are generally located in areas that are the most affected to cumulative effects (*e.g.* lake Saint-Pierre).
 
 <br/>
 
 - **Valued components most affected**
-  - Sites of cultural, patrimonial and archeological interest are particularly exposed to the effects of maritime activities. Although this result is expected considering their high vulnerability in the context of this study, it remains an important observation and showcases the overlap between sites of interest for First Nations and maritime activities in the study area;
+  - Sites of cultural, heritage and archeological interest are particularly exposed to the effects of maritime activities. Although this result is expected considering their high vulnerability in the context of this study, it remains an important observation and showcases the overlap between sites of interest for First Nations and maritime activities in the study area;
   - Sites of interest for First Nations in the fluvial sector are more exposed to the effects of maritime activities because of the high concentration of effects in the sector;
-  - Coastal integrity in the fluvial sector is particularly affected by shipping, especially in the lake Saint-Pierre;
+  - Bank integrity in the fluvial sector is particularly affected by shipping, especially in the lake Saint-Pierre;
   - Habitats that were considered are affected by a wide variety of environmental stressors and predicted cumulative effects also varies between habitat types;
   - Although marine mammals seem less affected than other valued components by the effects of maritime activities, it is important to consider the wide spatial distribution of those species in the maritime sector of the study area. Cumulative effects on marine mammals are instead localized and most intense at the mouth of the Saguenay River.
 
