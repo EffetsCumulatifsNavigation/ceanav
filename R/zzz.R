@@ -95,12 +95,20 @@ modif_md <- function(dat) {
 
 # ------------------------------------------------------------------------------
 # To acknowledge data sources for each sections 
-show_source <- function(dat) {
+show_source <- function(dat, lang = "fr") {
   nid <- length(dat)
   nm <- paste(dat, collapse = ", ")
   if (nid == 1) {
+    if (lang == "fr") {
       glue("> *L'identifiant unique attribué aux données présentées au sein de cette section est :* ***{nm}***. *Consultez la section suivante et l'[annexe 1](#annexe1) pour plus de détails sur ces données.*")
+    } else if (lang == "en") {
+      glue("> *The unique identifier given to the data presented in this section is:* ***{nm}***. *Refer to the following section and to [Appendix 1](#annexe1) for more details on these data.*")
+    }
   } else {
-      glue("> *L'identifiant unique attribué aux données présentées au sein de cette section sont :* ***{nm}***. *Consultez la section suivante et l'[annexe 1](#annexe1) pour plus de détails sur ces données.*")
+    if (lang == "fr") {
+      glue("> *Les identifiants uniques attribués aux données présentées au sein de cette section sont :* ***{nm}***. *Consultez la section suivante et l'[annexe 1](#annexe1) pour plus de détails sur ces données.*")
+    } else if (lang == "en") {
+      glue("> *The unique identifiers given to the data presented in this section are:* ***{nm}***. *Refer to the following section and to [Appendix 1](#annexe1) for more details on these data.*")
+    }
   }
 }

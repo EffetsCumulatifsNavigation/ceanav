@@ -12,7 +12,7 @@ sapply(., function(x) stringr::str_split(x, ",")) %>%
 unlist() %>%
 unique() %>%
 sort() %>%
-show_source()
+show_source(lang = "en")
 ```
 
 <br/>
@@ -64,7 +64,7 @@ sapply(., function(x) stringr::str_split(x, ",")) %>%
 unlist() %>%
 unique() %>%
 sort() %>%
-show_source()
+show_source(lang = "en")
 ```
 
 <br/>

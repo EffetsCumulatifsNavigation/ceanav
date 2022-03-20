@@ -5,7 +5,7 @@
 
 ```{r mm_setup, echo = FALSE, results = 'asis'}
 meta <- read_yaml("../data/data-metadata/int_cv_mammiferes_marins.yml")
-show_source(meta$rawData)
+show_source(meta$rawData, lang = "en")
 ```
 
 <br/>

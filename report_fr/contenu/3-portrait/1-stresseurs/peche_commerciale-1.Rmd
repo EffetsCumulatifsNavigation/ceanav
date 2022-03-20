@@ -2,7 +2,7 @@
 
 ```{r peche_setup, echo = FALSE, results = 'asis'}
 meta <- read_yaml("../data/data-metadata/int_st_peche_commerciale.yml")
-show_source(meta$rawData)
+show_source(meta$rawData, lang = "fr")
 ```
 
 <br/>

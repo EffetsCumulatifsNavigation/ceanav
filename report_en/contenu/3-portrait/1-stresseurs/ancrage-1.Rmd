@@ -4,7 +4,7 @@
 
 ```{r ancrage_setup, echo = FALSE, results = 'asis'}  
 meta <- read_yaml("../data/data-metadata/int_st_ancrage.yml")
-show_source(meta$rawData)
+show_source(meta$rawData, lang = "en")
 ```
 
 <br/>
