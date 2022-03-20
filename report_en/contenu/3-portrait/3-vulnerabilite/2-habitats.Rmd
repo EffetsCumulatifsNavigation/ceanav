@@ -7,21 +7,21 @@ Several exercises to assess the vulnerability of different habitat types to vari
 <br/>
 
 ```{r critereTeck}
-tab <- data.frame(critere = c("Échelle spatiale", "Fréquence",
-                              "Impact trophique","Résistance",
-                              "Résilience"),
+tab <- data.frame(critere = c("Spatial scale", "Frequency",
+                              "Trophic impact","Resistance",
+                              "Recovery time"),
                   descr = c(
-                            "L'échelle spatiale ($km^2$) à laquelle un stresseur affecte un habitat directement et indirectement",
-                            "La fréquence annuelle (nombre / année) moyenne d'un stresseur à une localisation particulière au sein d'une région",
-                            "L'étendue de la vie marine affectée par un stresseur au sein d'un écosystème et d'une région donnée (c.-à-d. une ou plusieurs espèces, un ou plusieurs niveaux trophiques, ou un écosystème entier)",
-                            "Le degré (en %) auquel les espèces, les niveaux trophiques, ou l'état naturel d'un écosystème entier est affecté par le stresseur",
-                            "Le temps moyen (années) requis pour que l'espèce, le niveau trophique, ou la communauté entière affecté retourne à son état naturel suite à la perturbation causée par le stresseur"))
+                            "The spatial scale ($km^2$) at which a stressor impacts the habitat, both directly and indirectly",
+                            "The mean annual frequency (number/year) of a stressor at a particular location within a given region",
+                            "The degree to which marine life is affected by a stressor within a given ecosystem and region (i.e., one or more species, one or more trophic levels, or an entire ecosystem)",
+                            "The degree (in %) to which species, trophic levels, or the natural state of an entire ecosystem is affected by the stressor",
+                            "The mean time (in years) required for the affected species, trophic level(s), or entire community to return to its former natural state following disturbance caused by the stressor"))
 
 tab %>%
   knitr::kable(
-    col.names = c("Critère de vulnérabilité", "Description"),
+    col.names = c("Vulnerability criterion", "Description"),
     row.names = FALSE,
-    caption = "Description des cinq critères de vulnérabilité utilisés pour évaluer la vulnérabilité relative des habitats à chaque stresseur [adapté de @teck2010]"
+    caption = "Description of the five vulnerability criteria used to assess the relative vulnerability of habitats to each stressor [adapted from @teck2010]."
   )
 ```
 
@@ -41,7 +41,7 @@ Some modifications were also made to the vulnerability scores reported by @kappe
 
 <br/>
 
-```{r habitatvuln, fig.cap = "Scores de vulnérabilité relative des habitats face aux stresseurs environnementaux. Les scores sont obtenus à partir des scores de vulnérabilités établis par [@kappel2012] et normalisés entre 0 et 1 à partir de la valeur maximale de vulnérabilité observée parmis les habitats considérés (i.e. 3.6). Les scores originaux dérivés de la matrice de @kappel2012 peuvent être obtenus en multipliant les valeurs de la matrice par 3.6.", fig.height = 6, fig.link = "./figures/figures-vulnerability/habitat.png"}
+```{r habitatvuln, fig.cap = "Relative vulnerability scores of habitats to environmental stressors. Scores are obtained from @kappel2012 and normalized between 0 and 1 using the maximum vulnerability score among habitats considered (*i.e.* 3.6). Original scores from @kappel2012 can be obtained by multiplying matrix values by 3.6.", fig.height = 6, fig.link = "./figures/figures-vulnerability/habitat.png"}
 knitr::include_graphics("./figures/figures-vulnerability/habitat.png")
 ```
 
@@ -80,9 +80,9 @@ tab <- dplyr::bind_rows(tab)
 # -----
 tab %>%
   knitr::kable(
-    col.names = c("Critères de vulnérabilité", "Rang", "Catégories", "Description", "Exemples"),
+    col.names = c("Vulnerability criteria", "Rank", "Categories", "Description", "Examples"),
     row.names = FALSE,
-    caption = "Critères considérés pour évaluer la vulnérabilité des composantes valorisées relatives au espèces -- *i.e.* milieux d'importance pour les cycles de vie, les espèces à statut et les mammifères marins -- aux sources de stress considérées pour l'évaluation des effets cumulatifs des activités maritimes dans le Saint-Laurent et le Saguenay. Les critères ont été adaptés de @maxwell2013, auxquels ont été ajoutés les critères de statut et de résidence des espèces afin de des particularités régionales propres au Saint-Laurent et au Saguenay. "
+    caption = "Criteria considered for assessing the vulnerability of valued components with regard to species – i.e. - important environmental conditions for life cycles, special status species and marine mammals – to the stressors considered for the CEA of marine activities in the St. Lawrence and the Saguenay river.  The criteria were adapted from @maxwell2013, to which species special status and residence criteria were added in order to account for the regional particularities of the St. Lawrence and the Saguenay river."
   ) #%>%
   #kableExtra::row_spec(lin, extra_css = "border-bottom: 2px solid")
 ```
@@ -102,7 +102,7 @@ Lastly, a relative score was assessed by normalizing the total scores by the max
 
 <br/>
 
-```{r speciesvuln, fig.cap = "Scores de vulnérabilité relative des habitats d'importance pour les espèces face aux stresseurs environnementaux.", fig.height = 6, fig.link = "./figures/figures-vulnerability/faune_flore.png"}
+```{r speciesvuln, fig.cap = "Relative vulnerability scores of habitats of importance to wildlife and plant species to environmental stressors.", fig.height = 6, fig.link = "./figures/figures-vulnerability/faune_flore.png"}
 knitr::include_graphics("./figures/figures-vulnerability/faune_flore.png")
 ```
 

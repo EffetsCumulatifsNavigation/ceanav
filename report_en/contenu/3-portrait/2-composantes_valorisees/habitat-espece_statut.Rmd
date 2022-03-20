@@ -14,7 +14,7 @@ show_source()
 
 <br/>
 
-A number of species with a [precarious status](https://www.environnement.gouv.qc.ca/biodiversite/especes/index.htm) frequent the waters and banks of the St. Lawrence and Saguenay rivers. In order to capture the sensitive nature of these species and incorporate them into our analysis, we considered the locations where these species have been historically sighted in the study area. The data used to characterize habitats for special status species were prepared by the Quebec Natural Heritage Data Centre (Centre de données sur le patrimoine naturel du Québec) [CDPNQ; @cdpnq2021; @cdpnq2021b]. These data contain occurrences that designate a territory that is or was home to special status species. We removed historical sightings from the database, as well as species that were extirpated or had not been sighted recently, i.e., since the year 2000. Lastly, we considered sensitive, vulnerable and threatened species. This resulted in a total of `r meta$dataDescription$CDPNQ$EspecesFaune` species and `r meta$dataDescription$CDPNQ$NombreFaune` sites for wildlife species, and `r meta$dataDescription$CDPNQ$EspecesFlore` species and `r meta$dataDescription$CDPNQ$NombreFlore` sites for plant species (Table \@ref(tab:status)). Refer to [Appendix 4](#annexe4) and [Appendix 5](#annexe5) for the lists of special status wildlife and plant species, respectively.
+A number of species with a [precarious status](https://www.environnement.gouv.qc.ca/biodiversite/especes/index.htm) frequent the waters and banks of the St. Lawrence and Saguenay rivers. In order to capture the sensitive nature of these species and incorporate them into our analysis, we considered the locations where these species have been historically sighted in the study area. The data used to characterize habitats for special status species were prepared by the Quebec Natural Heritage Data Centre (Centre de données sur le patrimoine naturel du Québec) [CDPNQ; @cdpnq2021; @cdpnq2021b]. These data contain occurrences that designate a territory that is or was home to special status species. We removed historical sightings from the database, as well as species that were extirpated or had not been sighted recently, i.e., since the year 2000. Lastly, we considered sensitive, vulnerable and threatened species. This resulted in a total of `r meta$dataDescription$CDPNQ$EspecesFaune` species and `r meta$dataDescription$CDPNQ$NombreFaune` sites for wildlife species, and `r meta$dataDescription$CDPNQ$EspecesFlore` species and `r meta$dataDescription$CDPNQ$NombreFlore` sites for plant species (Table \@ref(tab:statut)). Refer to [Appendix 4](#annexe4) and [Appendix 5](#annexe5) for the lists of special status wildlife and plant species, respectively.
 
 <br/>
 
@@ -23,9 +23,9 @@ tab <- as.data.frame(meta$dataDescription$CDPNQ$details)
 
 tab %>%
   knitr::kable(
-    col.names = c("Type", "Statut", "Nombre d'espèces", "Superficie $km^2$"),
+    col.names = c("Type", "Status", "Number of species", "Area $km^2$"),
     row.names = FALSE,
-    caption = "Nombre d'espèces et superficie totale des sites d'importance pour les espèces fauniques et floristiques à statut dans la zone d'étude [@cdpnq2021; @cdpnq2021b]."
+    caption = "Number of species and total area of sites of importance for special status wildlife and floristic species in the study area [@cdpnq2021; @cdpnq2021b]."
   )
 ```
 
@@ -36,37 +36,37 @@ These sites of importance for special status species were integrated into the st
 
 <br>
 
-```{r faunesusceptible, fig.cap = "Distribution des habitats dans le Saint-Laurent et le Saguenay - Espèces fauniques susceptibles", out.width = '100%', fig.link = "./figures/figures-integrated/habitat-faune_susceptible.png"}
+```{r faunesusceptible, fig.cap = "Distribution of habitats in the St. Lawrence and the Saguenay river - Susceptible wildlife species", out.width = '100%', fig.link = "./figures/figures-integrated/habitat-faune_susceptible.png"}
 knitr::include_graphics("./figures/figures-integrated/habitat-faune_susceptible.png")
 ```
 
 <br>
 
-```{r faunevulnerable, fig.cap = "Distribution des habitats dans le Saint-Laurent et le Saguenay - Espèces fauniques vulnérables", out.width = '100%', fig.link = "./figures/figures-integrated/habitat-faune_vulnerable.png"}
+```{r faunevulnerable, fig.cap = "Distribution of habitats in the St. Lawrence and the Saguenay river - Vulnerable wildlife species", out.width = '100%', fig.link = "./figures/figures-integrated/habitat-faune_vulnerable.png"}
 knitr::include_graphics("./figures/figures-integrated/habitat-faune_vulnerable.png")
 ```
 
 <br>
 
-```{r faunemenacee, fig.cap = "Distribution des habitats dans le Saint-Laurent et le Saguenay - Espèces fauniques menacées", out.width = '100%', fig.link = "./figures/figures-integrated/habitat-faune_menacee.png"}
+```{r faunemenacee, fig.cap = "Distribution of habitats in the St. Lawrence and the Saguenay river - Threatened wildlife species", out.width = '100%', fig.link = "./figures/figures-integrated/habitat-faune_menacee.png"}
 knitr::include_graphics("./figures/figures-integrated/habitat-faune_menacee.png")
 ```
 
 <br>
 
-```{r floresusceptible, fig.cap = "Distribution des habitats dans le Saint-Laurent et le Saguenay - Espèces floristiques susceptibles", out.width = '100%', fig.link = "./figures/figures-integrated/habitat-flore_susceptible.png"}
+```{r floresusceptible, fig.cap = "Distribution of habitats in the St. Lawrence and the Saguenay river - Susceptible plant species", out.width = '100%', fig.link = "./figures/figures-integrated/habitat-flore_susceptible.png"}
 knitr::include_graphics("./figures/figures-integrated/habitat-flore_susceptible.png")
 ```
 
 <br>
 
-```{r florevulnerable, fig.cap = "Distribution des habitats dans le Saint-Laurent et le Saguenay - Espèces floristiques vulnérables", out.width = '100%', fig.link = "./figures/figures-integrated/habitat-flore_vulnerable.png"}
+```{r florevulnerable, fig.cap = "Distribution of habitats in the St. Lawrence and the Saguenay river - Vulnerable plant species", out.width = '100%', fig.link = "./figures/figures-integrated/habitat-flore_vulnerable.png"}
 knitr::include_graphics("./figures/figures-integrated/habitat-flore_vulnerable.png")
 ```
 
 <br>
 
-```{r floremenacee, fig.cap = "Distribution des habitats dans le Saint-Laurent et le Saguenay - Espèces floristiques menacées", out.width = '100%', fig.link = "./figures/figures-integrated/habitat-flore_menacee.png"}
+```{r floremenacee, fig.cap = "Distribution of habitats in the St. Lawrence and the Saguenay river - Threatened plant species", out.width = '100%', fig.link = "./figures/figures-integrated/habitat-flore_menacee.png"}
 knitr::include_graphics("./figures/figures-integrated/habitat-flore_menacee.png")
 ```
 

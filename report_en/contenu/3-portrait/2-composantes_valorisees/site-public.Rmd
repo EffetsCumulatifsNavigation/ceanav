@@ -23,7 +23,7 @@ Finally, data from the Quebec register of protected areas (Registre des aires pr
 
 <br>
 
-```{r publicmilieuprotege, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Public - Milieux protégés", out.width = '100%', fig.link = "./figures/figures-integrated/site-public_milieu_protege.png"}
+```{r publicmilieuprotege, fig.cap = "Distribution of sites of cultural, heritage and archeological interest in the St. Lawrence and the Saguenay river - Public - Protected areas", out.width = '100%', fig.link = "./figures/figures-integrated/site-public_milieu_protege.png"}
 knitr::include_graphics("./figures/figures-integrated/site-public_milieu_protege.png")
 ```
 
@@ -50,7 +50,7 @@ The characterization of public heritage sites comes from the integration of two 
 
 <br>
 
-```{r publicsitespatrimoniaux, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Public - Sites patrimoniaux", out.width = '100%', fig.link = "./figures/figures-integrated/site-public_sites_patrimoniaux.png"}
+```{r publicsitespatrimoniaux, fig.cap = "Distribution of sites of cultural, heritage and archeological interest in the St. Lawrence and the Saguenay river - Public - Heritage sites", out.width = '100%', fig.link = "./figures/figures-integrated/site-public_sites_patrimoniaux.png"}
 knitr::include_graphics("./figures/figures-integrated/site-public_sites_patrimoniaux.png")
 ```
 

@@ -11,7 +11,7 @@ The final vulnerability scores are available in Table \@ref(fig:mmvuln) and the 
 
 <br/>
 
-```{r mmvuln, fig.cap = "Scores de vulnérabilité relative des habitats d'importance pour les espèces face aux stresseurs environnementaux.", fig.height = 6, fig.link = "./figures/figures-vulnerability/mammiferes_marins.png"}
+```{r mmvuln, fig.cap = "Relative vulnerability scores of marine mammals to environmental stressors.", fig.height = 6, fig.link = "./figures/figures-vulnerability/mammiferes_marins.png"}
 knitr::include_graphics("./figures/figures-vulnerability/mammiferes_marins.png")
 ```
 

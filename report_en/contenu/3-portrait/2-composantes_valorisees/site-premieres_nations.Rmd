@@ -70,13 +70,13 @@ The Atlas also identifies the Rimouski, Métis and Matane rivers as sites of imp
 
 <br>
 
-```{r aghammpechetraditionnelle, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - AGHAMM - Pêche traditionnelle", out.width = '100%', fig.link = "./figures/figures-integrated/site-aghamm_peche_traditionnelle.png"}
+```{r aghammpechetraditionnelle, fig.cap = "Distribution of sites of cultural, heritage and archeological interest in the St. Lawrence and the Saguenay river - MMAFMA - Traditional fishing", out.width = '100%', fig.link = "./figures/figures-integrated/site-aghamm_peche_traditionnelle.png"}
 knitr::include_graphics("./figures/figures-integrated/site-aghamm_peche_traditionnelle.png")
 ```
 
 <br>
 
-```{r aghammpechecommerciale, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - AGHAMM - Pêche commerciale", out.width = '100%', fig.link = "./figures/figures-integrated/site-aghamm_peche_commerciale.png"}
+```{r aghammpechecommerciale, fig.cap = "Distribution of sites of cultural, heritage and archeological interest in the St. Lawrence and the Saguenay river - MMAFMA - Commercial fisheries", out.width = '100%', fig.link = "./figures/figures-integrated/site-aghamm_peche_commerciale.png"}
 knitr::include_graphics("./figures/figures-integrated/site-aghamm_peche_commerciale.png")
 ```
 
@@ -91,7 +91,7 @@ knitr::include_graphics("./figures/figures-integrated/site-aghamm_peche_commerci
 
 ```{r essipit_data, results = 'asis'}
 uid <- meta$dataDescription$categories$type %in% 
-       "Nation des Innus d’Essipit"
+       "Innu Nation of Essipit"
 meta$dataDescription$categories$source[uid] %>%
 sapply(., function(x) stringr::str_split(x, ",")) %>%
 unlist() %>%
@@ -125,41 +125,41 @@ These categories of area of interest are used in the marine activities cumulativ
 
 <br>
 
-```{r essipitchasseoiseaux, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation des Innus d’Essipit - Chasse aux oiseaux migrateurs", out.width = '100%', fig.link = "./figures/figures-integrated/site-essipit_chasse_oiseaux.png"}
+```{r essipitchasseoiseaux, fig.cap = "Distribution of sites of cultural, heritage and archeological interest in the St. Lawrence and the Saguenay river - Innu Nation of Essipit - Migratory bird hunting", out.width = '100%', fig.link = "./figures/figures-integrated/site-essipit_chasse_oiseaux.png"}
 knitr::include_graphics("./figures/figures-integrated/site-essipit_chasse_oiseaux.png")
 ```
 
 <br>
 
-```{r essipitchassephoque, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation des Innus d’Essipit - Chasse aux phoques", out.width = '100%', fig.link = "./figures/figures-integrated/site-essipit_chasse_phoque.png"}
+```{r essipitchassephoque, fig.cap = "Distribution of sites of cultural, heritage and archeological interest in the St. Lawrence and the Saguenay river - Innu Nation of Essipit - Seal hunting", out.width = '100%', fig.link = "./figures/figures-integrated/site-essipit_chasse_phoque.png"}
 knitr::include_graphics("./figures/figures-integrated/site-essipit_chasse_phoque.png")
 ```
 <br>
 
-```{r essipitpechecommerciale, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation des Innus d’Essipit - Pêche commerciale", out.width = '100%', fig.link = "./figures/figures-integrated/site-essipit_peche_commerciale.png"}
+```{r essipitpechecommerciale, fig.cap = "Distribution of sites of cultural, heritage and archeological interest in the St. Lawrence and the Saguenay river - Innu Nation of Essipit - Commercial fishing", out.width = '100%', fig.link = "./figures/figures-integrated/site-essipit_peche_commerciale.png"}
 knitr::include_graphics("./figures/figures-integrated/site-essipit_peche_commerciale.png")
 ```
 <br>
 
-```{r essipitpechetraditionnelle, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation des Innus d’Essipit - Pêche traditionnelle", out.width = '100%', fig.link = "./figures/figures-integrated/site-essipit_peche_traditionnelle.png"}
+```{r essipitpechetraditionnelle, fig.cap = "Distribution of sites of cultural, heritage and archeological interest in the St. Lawrence and the Saguenay river - Innu Nation of Essipit - Traditional fishing", out.width = '100%', fig.link = "./figures/figures-integrated/site-essipit_peche_traditionnelle.png"}
 knitr::include_graphics("./figures/figures-integrated/site-essipit_peche_traditionnelle.png")
 ```
 
 <br>
 
-```{r essipittourisme, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation des Innus d’Essipit - Activités touristiques", out.width = '100%', fig.link = "./figures/figures-integrated/site-essipit_tourisme.png"}
+```{r essipittourisme, fig.cap = "Distribution of sites of cultural, heritage and archeological interest in the St. Lawrence and the Saguenay river - Innu Nation of Essipit - Tourist activities", out.width = '100%', fig.link = "./figures/figures-integrated/site-essipit_tourisme.png"}
 knitr::include_graphics("./figures/figures-integrated/site-essipit_tourisme.png")
 ```
 
 <br>
 
-```{r essipitacceseau, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation des Innus d’Essipit - Accès au plan d'eau", out.width = '100%', fig.link = "./figures/figures-integrated/site-essipit_acces_eau.png"}
+```{r essipitacceseau, fig.cap = "Distribution of sites of cultural, heritage and archeological interest in the St. Lawrence and the Saguenay river - Innu Nation of Essipit - Access to waterbody", out.width = '100%', fig.link = "./figures/figures-integrated/site-essipit_acces_eau.png"}
 knitr::include_graphics("./figures/figures-integrated/site-essipit_acces_eau.png")
 ```
 
 <br>
 
-```{r essipitculturepatrimoine, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation des Innus d’Essipit - Culture et patrimoine", out.width = '100%', fig.link = "./figures/figures-integrated/site-essipit_culture_patrimoine.png"}
+```{r essipitculturepatrimoine, fig.cap = "Distribution of sites of cultural, heritage and archeological interest in the St. Lawrence and the Saguenay river - Innu Nation of Essipit - Culture and heritage", out.width = '100%', fig.link = "./figures/figures-integrated/site-essipit_culture_patrimoine.png"}
 knitr::include_graphics("./figures/figures-integrated/site-essipit_culture_patrimoine.png")
 ```
 
@@ -174,7 +174,7 @@ knitr::include_graphics("./figures/figures-integrated/site-essipit_culture_patri
 
 ```{r nhw_data, results = 'asis'}
 uid <- meta$dataDescription$categories$type %in% 
-       "Nation Huronne-Wendat"
+       "Huron-Wendat Nation"
 meta$dataDescription$categories$source[uid] %>%
 sapply(., function(x) stringr::str_split(x, ",")) %>%
 unlist() %>%
@@ -209,28 +209,28 @@ The land use category groups together various types of areas of interest for the
 
 <br>
 
-```{r huronnewendatactiviterecreative, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation Huronne-Wendat - Activités rituelles ou sociales", out.width = '100%', fig.link = "./figures/figures-integrated/site-huronne_wendat_activite_recreative.png"}
+```{r huronnewendatactiviterecreative, fig.cap = "Distribution of sites of cultural, heritage and archeological interest in the St. Lawrence and the Saguenay river - Huron-Wendat Nation - Ritual or social activities", out.width = '100%', fig.link = "./figures/figures-integrated/site-huronne_wendat_activite_recreative.png"}
 knitr::include_graphics("./figures/figures-integrated/site-huronne_wendat_activite_recreative.png")
 ```
 <br>
-```{r huronnewendatchasse, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation Huronne-Wendat - Chasse", out.width = '100%', fig.link = "./figures/figures-integrated/site-huronne_wendat_chasse.png"}
+```{r huronnewendatchasse, fig.cap = "Distribution of sites of cultural, heritage and archeological interest in the St. Lawrence and the Saguenay river - Huron-Wendat Nation - Hunting", out.width = '100%', fig.link = "./figures/figures-integrated/site-huronne_wendat_chasse.png"}
 knitr::include_graphics("./figures/figures-integrated/site-huronne_wendat_chasse.png")
 ```
 <br>
 
-```{r huronnewendatpeche, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation Huronne-Wendat - Pêche", out.width = '100%', fig.link = "./figures/figures-integrated/site-huronne_wendat_peche.png"}
+```{r huronnewendatpeche, fig.cap = "Distribution of sites of cultural, heritage and archeological interest in the St. Lawrence and the Saguenay river - Huron-Wendat Nation - Fishing", out.width = '100%', fig.link = "./figures/figures-integrated/site-huronne_wendat_peche.png"}
 knitr::include_graphics("./figures/figures-integrated/site-huronne_wendat_peche.png")
 ```
 
 <br>
 
-```{r huronnewendatvegetaux, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation Huronne-Wendat - Récolte de végétaux", out.width = '100%', fig.link = "./figures/figures-integrated/site-huronne_wendat_vegetaux.png"}
+```{r huronnewendatvegetaux, fig.cap = "Distribution of sites of cultural, heritage and archeological interest in the St. Lawrence and the Saguenay river - Huron-Wendat Nation - Harvesting of vegetation", out.width = '100%', fig.link = "./figures/figures-integrated/site-huronne_wendat_vegetaux.png"}
 knitr::include_graphics("./figures/figures-integrated/site-huronne_wendat_vegetaux.png")
 ```
 
 <br>
 
-```{r huronnewendatoccupation, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation Huronne-Wendat - Occupation du territoire", out.width = '100%', fig.link = "./figures/figures-integrated/site-huronne_wendat_occupation.png"}
+```{r huronnewendatoccupation, fig.cap = "Distribution of sites of cultural, heritage and archeological interest in the St. Lawrence and the Saguenay river - Huron-Wendat Nation - Land use", out.width = '100%', fig.link = "./figures/figures-integrated/site-huronne_wendat_occupation.png"}
 knitr::include_graphics("./figures/figures-integrated/site-huronne_wendat_occupation.png")
 ```
 
@@ -240,7 +240,7 @@ knitr::include_graphics("./figures/figures-integrated/site-huronne_wendat_occupa
 
 <br>
 
-```{r huronnewendatespeceperil, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation Huronne-Wendat - Espèce en péril", out.width = '100%', fig.link = "./figures/figures-integrated/site-huronne_wendat_espece_peril.png"}
+```{r huronnewendatespeceperil, fig.cap = "Distribution of sites of cultural, heritage and archeological interest in the St. Lawrence and the Saguenay river - Huron-Wendat Nation - Species at risk", out.width = '100%', fig.link = "./figures/figures-integrated/site-huronne_wendat_espece_peril.png"}
 knitr::include_graphics("./figures/figures-integrated/site-huronne_wendat_espece_peril.png")
 ```
 
@@ -250,19 +250,19 @@ knitr::include_graphics("./figures/figures-integrated/site-huronne_wendat_espece
 
 <br>
 
-```{r huronnewendatarcheologie, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation Huronne-Wendat - Archéologie", out.width = '100%', fig.link = "./figures/figures-integrated/site-huronne_wendat_archeologie.png"}
+```{r huronnewendatarcheologie, fig.cap = "Distribution of sites of cultural, heritage and archeological interest in the St. Lawrence and the Saguenay river - Huron-Wendat Nation - Archeology", out.width = '100%', fig.link = "./figures/figures-integrated/site-huronne_wendat_archeologie.png"}
 knitr::include_graphics("./figures/figures-integrated/site-huronne_wendat_archeologie.png")
 ```
 
 <br>
 
-```{r huronnewendathistoire, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation Huronne-Wendat - Histoire", out.width = '100%', fig.link = "./figures/figures-integrated/site-huronne_wendat_histoire.png"}
+```{r huronnewendathistoire, fig.cap = "Distribution of sites of cultural, heritage and archeological interest in the St. Lawrence and the Saguenay river - Huron-Wendat Nation - History", out.width = '100%', fig.link = "./figures/figures-integrated/site-huronne_wendat_histoire.png"}
 knitr::include_graphics("./figures/figures-integrated/site-huronne_wendat_histoire.png")
 ```
 
 <br>
 
-```{r huronnewendattoponymie, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation Huronne-Wendat - Toponymie", out.width = '100%', fig.link = "./figures/figures-integrated/site-huronne_wendat_toponymie.png"}
+```{r huronnewendattoponymie, fig.cap = "Distribution of sites of cultural, heritage and archeological interest in the St. Lawrence and the Saguenay river - Huron-Wendat Nation - Toponymy", out.width = '100%', fig.link = "./figures/figures-integrated/site-huronne_wendat_toponymie.png"}
 knitr::include_graphics("./figures/figures-integrated/site-huronne_wendat_toponymie.png")
 ```
 
@@ -321,22 +321,22 @@ Although data were provided by the Mohawk Nation of Kahnawà:ke and incorporated
 
 <br>
 
-{r kahnawakechasse, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation Mohawk de Kahnawà:ke - Chasse à la sauvagine", out.width = '100%', fig.link = "./figures/figures-integrated/site-kahnawake_chasse.png"}
+{r kahnawakechasse, fig.cap = "Distribution of sites of cultural, heritage and archeological interest in the St. Lawrence and the Saguenay river - Nation Mohawk de Kahnawà:ke - Chasse à la sauvagine", out.width = '100%', fig.link = "./figures/figures-integrated/site-kahnawake_chasse.png"}
 knitr::include_graphics("./figures/figures-integrated/site-kahnawake_chasse.png")
 
 
 <br>
-{r kahnawakepecheoffshore, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation Mohawk de Kahnawà:ke - Pêche en eau libre", out.width = '100%', fig.link = "./figures/figures-integrated/site-kahnawake_peche_offshore.png"}
+{r kahnawakepecheoffshore, fig.cap = "Distribution of sites of cultural, heritage and archeological interest in the St. Lawrence and the Saguenay river - Nation Mohawk de Kahnawà:ke - Pêche en eau libre", out.width = '100%', fig.link = "./figures/figures-integrated/site-kahnawake_peche_offshore.png"}
 knitr::include_graphics("./figures/figures-integrated/site-kahnawake_peche_offshore.png")
 
 <br>
 
-{r kahnawakepecherivage, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation Mohawk de Kahnawà:ke - Pêche de rivage", out.width = '100%', fig.link = "./figures/figures-integrated/site-kahnawake_peche_rivage.png"}
+{r kahnawakepecherivage, fig.cap = "Distribution of sites of cultural, heritage and archeological interest in the St. Lawrence and the Saguenay river - Nation Mohawk de Kahnawà:ke - Pêche de rivage", out.width = '100%', fig.link = "./figures/figures-integrated/site-kahnawake_peche_rivage.png"}
 knitr::include_graphics("./figures/figures-integrated/site-kahnawake_peche_rivage.png")
 
 <br>
 
-{r kahnawakevegatation, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation Mohawk de Kahnawà:ke - Récolte de végétation", out.width = '100%', fig.link = "./figures/figures-integrated/site-kahnawake_vegatation.png"}
+{r kahnawakevegatation, fig.cap = "Distribution of sites of cultural, heritage and archeological interest in the St. Lawrence and the Saguenay river - Nation Mohawk de Kahnawà:ke - Récolte de végétation", out.width = '100%', fig.link = "./figures/figures-integrated/site-kahnawake_vegatation.png"}
 knitr::include_graphics("./figures/figures-integrated/site-kahnawake_vegatation.png")
 
 
@@ -344,7 +344,7 @@ knitr::include_graphics("./figures/figures-integrated/site-kahnawake_vegatation.
 
 <br>
 
-{r kahnawakeculturepatrimoine, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation Mohawk de Kahnawà:ke - Culture et patrimoine", out.width = '100%', fig.link = "./figures/figures-integrated/site-kahnawake_culture_patrimoine.png"}
+{r kahnawakeculturepatrimoine, fig.cap = "Distribution of sites of cultural, heritage and archeological interest in the St. Lawrence and the Saguenay river - Nation Mohawk de Kahnawà:ke - Culture et patrimoine", out.width = '100%', fig.link = "./figures/figures-integrated/site-kahnawake_culture_patrimoine.png"}
 knitr::include_graphics("./figures/figures-integrated/site-kahnawake_culture_patrimoine.png")
 
 
@@ -352,12 +352,12 @@ knitr::include_graphics("./figures/figures-integrated/site-kahnawake_culture_pat
 
 <br>
 
-{r kahnawakesssm, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation Mohawk de Kahnawà:ke - Seigneurie du Sault-Saint-Louis", out.width = '100%', fig.link = "./figures/figures-integrated/site-kahnawake_sssm.png"}
+{r kahnawakesssm, fig.cap = "Distribution of sites of cultural, heritage and archeological interest in the St. Lawrence and the Saguenay river - Nation Mohawk de Kahnawà:ke - Seigneurie du Sault-Saint-Louis", out.width = '100%', fig.link = "./figures/figures-integrated/site-kahnawake_sssm.png"}
 knitr::include_graphics("./figures/figures-integrated/site-kahnawake_sssm.png")
 
 <br>
 
-{r kahnawaketraffic, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation Mohawk de Kahnawà:ke - Navigation maritime", out.width = '100%', fig.link = "./figures/figures-integrated/site-kahnawake_traffic.png"}
+{r kahnawaketraffic, fig.cap = "Distribution of sites of cultural, heritage and archeological interest in the St. Lawrence and the Saguenay river - Nation Mohawk de Kahnawà:ke - Navigation maritime", out.width = '100%', fig.link = "./figures/figures-integrated/site-kahnawake_traffic.png"}
 knitr::include_graphics("./figures/figures-integrated/site-kahnawake_traffic.png")
 
 -->
@@ -375,7 +375,7 @@ knitr::include_graphics("./figures/figures-integrated/site-kahnawake_traffic.png
 
 ```{r nw_data, results = 'asis'}
 uid <- meta$dataDescription$categories$type %in% 
-       "Nation W8banaki"
+       "W8banaki Nation"
 meta$dataDescription$categories$source[uid] %>%
 sapply(., function(x) stringr::str_split(x, ",")) %>%
 unlist() %>%
@@ -416,57 +416,57 @@ These categories of areas of interest are used in the marine activities cumulati
 
 <br>
 
-```{r gcnwapeche, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation W8banaki - Pêche", out.width = '100%', fig.link = "./figures/figures-integrated/site-gcnwa_peche.png"}
+```{r gcnwapeche, fig.cap = "Distribution of sites of cultural, heritage and archeological interest in the St. Lawrence and the Saguenay river - W8banaki Nation - Fishing", out.width = '100%', fig.link = "./figures/figures-integrated/site-gcnwa_peche.png"}
 knitr::include_graphics("./figures/figures-integrated/site-gcnwa_peche.png")
 ```
 <br>
 
-```{r gcnwaoiseauxmigrateurs, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation W8banaki - Chasse aux oiseaux migrateurs", out.width = '100%', fig.link = "./figures/figures-integrated/site-gcnwa_oiseaux_migrateurs.png"}
+```{r gcnwaoiseauxmigrateurs, fig.cap = "Distribution of sites of cultural, heritage and archeological interest in the St. Lawrence and the Saguenay river - W8banaki Nation - Migratory bird hunting", out.width = '100%', fig.link = "./figures/figures-integrated/site-gcnwa_oiseaux_migrateurs.png"}
 knitr::include_graphics("./figures/figures-integrated/site-gcnwa_oiseaux_migrateurs.png")
 ```
 <br>
 
-```{r gcnwagibier, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation W8banaki - Chasse au gibier", out.width = '100%', fig.link = "./figures/figures-integrated/site-gcnwa_gibier.png"}
+```{r gcnwagibier, fig.cap = "Distribution of sites of cultural, heritage and archeological interest in the St. Lawrence and the Saguenay river - W8banaki Nation - Game hunting", out.width = '100%', fig.link = "./figures/figures-integrated/site-gcnwa_gibier.png"}
 knitr::include_graphics("./figures/figures-integrated/site-gcnwa_gibier.png")
 ```
 
 <br>
 
-```{r gcnwaanimauxfourrure, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation W8banaki - Trappe d'animaux à fourrure", out.width = '100%', fig.link = "./figures/figures-integrated/site-gcnwa_animaux_fourrure.png"}
+```{r gcnwaanimauxfourrure, fig.cap = "Distribution of sites of cultural, heritage and archeological interest in the St. Lawrence and the Saguenay river - W8banaki Nation - Fur trapping", out.width = '100%', fig.link = "./figures/figures-integrated/site-gcnwa_animaux_fourrure.png"}
 knitr::include_graphics("./figures/figures-integrated/site-gcnwa_animaux_fourrure.png")
 ```
 
 <br>
 
-```{r gcnwacueillettecollecte, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation W8banaki - Cueillette et collecte de végétaux", out.width = '100%', fig.link = "./figures/figures-integrated/site-gcnwa_cueillette_collecte.png"}
+```{r gcnwacueillettecollecte, fig.cap = "Distribution of sites of cultural, heritage and archeological interest in the St. Lawrence and the Saguenay river - W8banaki Nation - Picking and gathering vegetation", out.width = '100%', fig.link = "./figures/figures-integrated/site-gcnwa_cueillette_collecte.png"}
 knitr::include_graphics("./figures/figures-integrated/site-gcnwa_cueillette_collecte.png")
 ```
 
 <br>
 
-```{r gcnwanavigation, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation W8banaki - Navigation", out.width = '100%', fig.link = "./figures/figures-integrated/site-gcnwa_navigation.png"}
+```{r gcnwanavigation, fig.cap = "Distribution of sites of cultural, heritage and archeological interest in the St. Lawrence and the Saguenay river - W8banaki Nation - Shipping", out.width = '100%', fig.link = "./figures/figures-integrated/site-gcnwa_navigation.png"}
 knitr::include_graphics("./figures/figures-integrated/site-gcnwa_navigation.png")
 ```
 <br>
 
-```{r gcnwasitescoucher, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation W8banaki - Sites de coucher", out.width = '100%', fig.link = "./figures/figures-integrated/site-gcnwa_sites_coucher.png"}
+```{r gcnwasitescoucher, fig.cap = "Distribution of sites of cultural, heritage and archeological interest in the St. Lawrence and the Saguenay river - W8banaki Nation - Overnight sites", out.width = '100%', fig.link = "./figures/figures-integrated/site-gcnwa_sites_coucher.png"}
 knitr::include_graphics("./figures/figures-integrated/site-gcnwa_sites_coucher.png")
 ```
 <br>
 
 
-```{r gcnwasitesessentiels, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation W8banaki - Sites essentiels", out.width = '100%', fig.link = "./figures/figures-integrated/site-gcnwa_sites_essentiels.png"}
+```{r gcnwasitesessentiels, fig.cap = "Distribution of sites of cultural, heritage and archeological interest in the St. Lawrence and the Saguenay river - W8banaki Nation - Essential sites", out.width = '100%', fig.link = "./figures/figures-integrated/site-gcnwa_sites_essentiels.png"}
 knitr::include_graphics("./figures/figures-integrated/site-gcnwa_sites_essentiels.png")
 ```
 <br>
 
-```{r gcnwazonesactivites, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation W8banaki - Zones d'activités", out.width = '100%', fig.link = "./figures/figures-integrated/site-gcnwa_zones_activites.png"}
+```{r gcnwazonesactivites, fig.cap = "Distribution of sites of cultural, heritage and archeological interest in the St. Lawrence and the Saguenay river - W8banaki Nation - Activity areas", out.width = '100%', fig.link = "./figures/figures-integrated/site-gcnwa_zones_activites.png"}
 knitr::include_graphics("./figures/figures-integrated/site-gcnwa_zones_activites.png")
 ```
 
 <br>
 
-```{r gcnwaproblemesterritoire, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation W8banaki - Problèmes liés à l'accès au territoire", out.width = '100%', fig.link = "./figures/figures-integrated/site-gcnwa_problemes_territoire.png"}
+```{r gcnwaproblemesterritoire, fig.cap = "Distribution of sites of cultural, heritage and archeological interest in the St. Lawrence and the Saguenay river - W8banaki Nation - Problems related to access to territory", out.width = '100%', fig.link = "./figures/figures-integrated/site-gcnwa_problemes_territoire.png"}
 knitr::include_graphics("./figures/figures-integrated/site-gcnwa_problemes_territoire.png")
 ```
 
@@ -476,19 +476,19 @@ knitr::include_graphics("./figures/figures-integrated/site-gcnwa_problemes_terri
 
 <br>
 
-```{r gcnwasitesculturels, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation W8banaki - Sites culturels", out.width = '100%', fig.link = "./figures/figures-integrated/site-gcnwa_sites_culturels.png"}
+```{r gcnwasitesculturels, fig.cap = "Distribution of sites of cultural, heritage and archeological interest in the St. Lawrence and the Saguenay river - W8banaki Nation - Cultural sites", out.width = '100%', fig.link = "./figures/figures-integrated/site-gcnwa_sites_culturels.png"}
 knitr::include_graphics("./figures/figures-integrated/site-gcnwa_sites_culturels.png")
 ```
 
 <br>
 
-```{r gcnwasitesarcheologiques, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation W8banaki - Sites archéologiques", out.width = '100%', fig.link = "./figures/figures-integrated/site-gcnwa_sites_archeologiques.png"}
+```{r gcnwasitesarcheologiques, fig.cap = "Distribution of sites of cultural, heritage and archeological interest in the St. Lawrence and the Saguenay river - W8banaki Nation - Archeological sites", out.width = '100%', fig.link = "./figures/figures-integrated/site-gcnwa_sites_archeologiques.png"}
 knitr::include_graphics("./figures/figures-integrated/site-gcnwa_sites_archeologiques.png")
 ```
 
 <br>
 
-```{r gcnwasitespotentielarcheologique, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation W8banaki - Sites à potentiel archéologique", out.width = '100%', fig.link = "./figures/figures-integrated/site-gcnwa_sites_potentiel_archeologique.png"}
+```{r gcnwasitespotentielarcheologique, fig.cap = "Distribution of sites of cultural, heritage and archeological interest in the St. Lawrence and the Saguenay river - W8banaki Nation - Sites with archeological potential", out.width = '100%', fig.link = "./figures/figures-integrated/site-gcnwa_sites_potentiel_archeologique.png"}
 knitr::include_graphics("./figures/figures-integrated/site-gcnwa_sites_potentiel_archeologique.png")
 ```
 
@@ -522,20 +522,20 @@ Two areas of interest for beluga whale watching and harbour development are also
 
 <br>
 
-```{r wolastoqiyikwahsipekukdeveloppementportuaire, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation Wolastoqiyik Wahsipekuk - Développement portuaire", out.width = '100%', fig.link = "./figures/figures-integrated/site-wolastoqiyik_wahsipekuk_developpement_portuaire.png"}
+```{r wolastoqiyikwahsipekukdeveloppementportuaire, fig.cap = "Distribution of sites of cultural, heritage and archeological interest in the St. Lawrence and the Saguenay river - Wolastoqiyik Wahsipekuk Nation - Port development", out.width = '100%', fig.link = "./figures/figures-integrated/site-wolastoqiyik_wahsipekuk_developpement_portuaire.png"}
 knitr::include_graphics("./figures/figures-integrated/site-wolastoqiyik_wahsipekuk_developpement_portuaire.png")
 ```
 
 <br>
 
-```{r wolastoqiyikwahsipekukobservationbeluga, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation Wolastoqiyik Wahsipekuk - Observation du béluga", out.width = '100%', fig.link = "./figures/figures-integrated/site-wolastoqiyik_wahsipekuk_observation_beluga.png"}
+```{r wolastoqiyikwahsipekukobservationbeluga, fig.cap = "Distribution of sites of cultural, heritage and archeological interest in the St. Lawrence and the Saguenay river - Wolastoqiyik Wahsipekuk Nation - Beluga whale watching", out.width = '100%', fig.link = "./figures/figures-integrated/site-wolastoqiyik_wahsipekuk_observation_beluga.png"}
 knitr::include_graphics("./figures/figures-integrated/site-wolastoqiyik_wahsipekuk_observation_beluga.png")
 ```
 
 <br>
 
 
-```{r wolastoqiyikwahsipekukpechecommerciale, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Nation Wolastoqiyik Wahsipekuk - Pêche commerciale", out.width = '100%', fig.link = "./figures/figures-integrated/site-wolastoqiyik_wahsipekuk_peche_commerciale.png"}
+```{r wolastoqiyikwahsipekukpechecommerciale, fig.cap = "Distribution of sites of cultural, heritage and archeological interest in the St. Lawrence and the Saguenay river - Wolastoqiyik Wahsipekuk Nation - Commercial fishing", out.width = '100%', fig.link = "./figures/figures-integrated/site-wolastoqiyik_wahsipekuk_peche_commerciale.png"}
 knitr::include_graphics("./figures/figures-integrated/site-wolastoqiyik_wahsipekuk_peche_commerciale.png")
 ```
 

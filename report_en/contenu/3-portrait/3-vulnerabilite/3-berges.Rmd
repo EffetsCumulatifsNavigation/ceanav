@@ -13,6 +13,6 @@ We can thus classify the categories of banks based on the magnitude of their vul
 
 No comparison was made to distinguish the vulnerability of the banks to shipping from that of dredging; we instead opted to assign them similar vulnerability values (Table \@ref(fig:bergevuln)).
 
-```{r bergevuln, fig.cap = "Scores de vulnérabilité relative des berges à l'érosion face aux stresseurs environnementaux.", fig.height = 6, fig.link = "./figures/figures-vulnerability/berge.png"}
+```{r bergevuln, fig.cap = "Relative vulnerability scores of coastlines to erosion from the effects of environmental stressors.", fig.height = 6, fig.link = "./figures/figures-vulnerability/berge.png"}
 knitr::include_graphics("./figures/figures-vulnerability/berge.png")
 ```

@@ -20,9 +20,9 @@ tab$source <- gsub(",", ", ", tab$source)
 
 tab %>%
   knitr::kable(
-    col.names = c("Composantes valorisées", "Type", "Sous-catégories", "Source"),
+    col.names = c("Valued components", "Type", "Subcategories", "Source"),
     row.names = FALSE,
-    caption = "Liste des sous-catégories de composantes valorisées considérées pour l'évaluation des effets cumulatifs des activités maritimes dans le Saint-Laurent et le Saguenay. Consultez l'[annexe 1](#annexe1) pour plus de détails sur les sources de données."
+    caption = "List of valued component subcategories considered for the cumulative effects assessment of marine activities in the St. Lawrence and the Saguenay river. See [Appendix 1](#annexe1) for more details on data sources."
   ) #%>%
   #kableExtra::row_spec(uid, extra_css = "border-bottom: 2px solid")
 ```

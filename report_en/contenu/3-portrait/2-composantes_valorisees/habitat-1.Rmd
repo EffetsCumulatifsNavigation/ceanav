@@ -23,9 +23,9 @@ tab$francais[uid] <- "Milieu humide"
 
 tab %>%
   knitr::kable(
-    col.names = c("Catégories d'habitats", "Sous-catégories", "Description", "Superficie $km^2$", "Données utilisées$^*$"),
+    col.names = c("Categories", "Subcategories", "Description", "Area $km^2$", "Source$^*$"),
     row.names = FALSE,
-    caption = "Catégories d'habitats considérés pour l'analyse des effets cumulatifs de la navigation dans le Saint-Laurent et le Saguenay et leur superficie totale dans la zone d'étude. $^*$Consultez l'[annexe 1](#annexe1) pour plus de détails sur les sources de données."
+    caption = "Categories of habitats considered for the analysis of the cumulative effects of navigation in the St. Lawrence and the Saguenay river and their total area in the study area. $^*$See [Appendix 1](#annexe1) for more details on data sources."
   )
 ```
 

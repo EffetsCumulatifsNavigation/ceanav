@@ -33,21 +33,21 @@ tab$Superficie_alevinage <- round(tab$Superficie_alevinage, 2)
 
 tab %>%
   knitr::kable(
-    col.names = c("Source", "Nombre de frayères", "Superficie des frayères $km^2$", "Nombre d'aires d'alevinage","Superficie des aires d'alevinage $km^2$"),
+    col.names = c("Source", "Number of spawning sites", "Spawning sites area $km^2$", "Number of nursery sites","Area of nursery sites $km^2$"),
     row.names = FALSE,
-    caption = "Sources utilisées pour caractériser les frayères et les aires d'alevinage dans la zone d'étude."
+    caption = "Data sources to characterize spawning and nursery sites in the study area."
   )
 ```
 
 <br/>
 
-```{r frayere, fig.cap = "Distribution des habitats dans le Saint-Laurent et le Saguenay - Frayères", out.width = '100%', fig.link = "./figures/figures-integrated/habitat-frayere.png"}
+```{r frayere, fig.cap = "Distribution of habitats in the St. Lawrence and the Saguenay river - Spawning sites", out.width = '100%', fig.link = "./figures/figures-integrated/habitat-frayere.png"}
 knitr::include_graphics("./figures/figures-integrated/habitat-frayere.png")
 ```
 
 <br/>
 
-```{r sitealevinage, fig.cap = "Distribution des habitats dans le Saint-Laurent et le Saguenay - Sites d'alevinage", out.width = '100%', fig.link = "./figures/figures-integrated/habitat-site_alevinage.png"}
+```{r sitealevinage, fig.cap = "Distribution of habitats in the St. Lawrence and the Saguenay river - Nursery sites", out.width = '100%', fig.link = "./figures/figures-integrated/habitat-site_alevinage.png"}
 knitr::include_graphics("./figures/figures-integrated/habitat-site_alevinage.png")
 ```
 
@@ -77,7 +77,7 @@ The second database identified Important Bird Areas [IBAs; @oiseauxcanada2015; @
 It is important to note that these sites are land environments, meaning that they do not properly capture aquatic and marine use environments associated with these sites of importance. Extrapolation of a marine use area based on variables such as the species range and number of individuals would enable us to address this gap [*e.g.* @lieske2020]. However, it was not possible to conduct this type of analysis as part of this pilot project.
 
 
-```{r oiseaux, fig.cap = "Distribution des habitats dans le Saint-Laurent et le Saguenay - Oiseaux", out.width = '100%', fig.link = "./figures/figures-integrated/habitat-oiseaux.png"}
+```{r oiseaux, fig.cap = "Distribution of habitats in the St. Lawrence and the Saguenay river - Birds", out.width = '100%', fig.link = "./figures/figures-integrated/habitat-oiseaux.png"}
 knitr::include_graphics("./figures/figures-integrated/habitat-oiseaux.png")
 ```
 

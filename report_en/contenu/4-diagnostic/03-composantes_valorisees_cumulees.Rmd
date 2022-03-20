@@ -8,19 +8,19 @@ In general, the fluvial sector is characterized by more valued components than t
 
 <br/>
 
-```{r cvCum, fig.cap = "Distribution des composantes valorisées cumulées au sein de la zone d'étude", out.width = '100%', fig.link="./figures/figures-output/cumulative_cv.png"}
+```{r cvCum, fig.cap = "Distribution of cumulative valued components in the study area.", out.width = '100%', fig.link="./figures/figures-output/cumulative_cv.png"}
 knitr::include_graphics("./figures/figures-output/cumulative_cv.png")
 ```
 
 <br/>
 
-```{r cvCumNorm, fig.cap = "Distribution des composantes valorisées cumulées normalisés au sein de la zone d'étude", out.width = '100%', fig.link = "./figures/figures-output/cumulative_cv_norm.png"}
+```{r cvCumNorm, fig.cap = "Distribution of normalized cumulative valued components in the study area.", out.width = '100%', fig.link = "./figures/figures-output/cumulative_cv_norm.png"}
 knitr::include_graphics("./figures/figures-output/cumulative_cv_norm.png")
 ```
 
 <br/>
 
-```{r cvPanel, fig.cap = "Cumul des catégories de composantes valorisées au sein de la zone d'étude", out.width = '100%', fig.link = "./figures/figures-output/cumulative_cv_panel.png"}
+```{r cvPanel, fig.cap = "Distribution of cumulative valued components in the study area for each category of valued component.", out.width = '100%', fig.link = "./figures/figures-output/cumulative_cv_panel.png"}
 knitr::include_graphics("./figures/figures-output/cumulative_cv_panel.png")
 ```
 

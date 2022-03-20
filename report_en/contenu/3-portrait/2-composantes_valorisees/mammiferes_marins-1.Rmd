@@ -75,10 +75,10 @@ tab <- data.frame(nom = c("Whitehead, Université Dalhousie",
 # -----
 tab %>%
   knitr::kable(
-    col.names = c("Nom de l’ensemble de données","Série temporelle","Propriétaire","No d’espèces",
-                  "No d’observations","Scientifique (S) ou Opportuniste (O)"),
+    col.names = c("Name of dataset","Temporal series","Owner","Species (n)",
+                  "Observations (n)","Scientific (S) or Opportunistic (O)"),
     row.names = FALSE,
-    caption = "Liste des ensembles de données scientifiques et opportunistes utilisés pour créer les cartes, y compris des renseignements sur la période couverte par l’ensemble de données, le nombre d'espèces et le nombre d'observations d'un ou de plusieurs individus disponibles pour l'analyse, et le propriétaire de l’ensemble de données. Tableau tiré de : @wwfromm2021c."
+    caption = "List of scientific and opportunistic datasets used to generate maps, including informations on the period covered by the data, the number of species and the number of observations of one or more individuals available for the analysis, and the owner of the dataset. Table from: @wwfromm2021c."
   )
 ```
 
@@ -102,16 +102,16 @@ It is important to note that the resulting distribution maps for these species a
 
 ```{r mmSp}
 tab <- as.data.frame(meta$dataDescription$categories)
-tab <- arrange(tab, type, francais)
-tab <- select(tab, francais, scientific)
+tab <- arrange(tab, type, english)
+tab <- select(tab, english, scientific)
 tab$scientific <- glue("*{tab$scientific}*")
 
 
 tab %>%
   knitr::kable(
-    col.names = c("Espèces", "Noms scientifiques"),
+    col.names = c("Species", "Scientific names"),
     row.names = FALSE,
-    caption = "Espèces de mammifères marins dont la distribution dans l'estuaire du Saint-Laurent et le Saguenay est disponible dans @wwfromm2021 et @romm2021."
+    caption = "Marine mammal species for which the distribution in the St. Lawrence and the Saguenay river is available in @wwfromm2021 et @romm2021."
   )
 ```
 
@@ -121,38 +121,38 @@ tab %>%
 
 <br>
 
-```{r beluga, fig.cap = "Distribution des mammifères marins dans le Saint-Laurent et le Saguenay - Béluga", out.width = '100%', fig.link = "./figures/figures-integrated/mammiferes_marins-beluga.png"}
+```{r beluga, fig.cap = "Distribution of marine mammals in the St. Lawrence and the Saguenay river - Beluga", out.width = '100%', fig.link = "./figures/figures-integrated/mammiferes_marins-beluga.png"}
 knitr::include_graphics("./figures/figures-integrated/mammiferes_marins-beluga.png")
 ```
 
 <br>
 
 
-```{r harbourporpoise, fig.cap = "Distribution des mammifères marins dans le Saint-Laurent et le Saguenay - Marsouin commun", out.width = '100%', fig.link = "./figures/figures-integrated/mammiferes_marins-harbour_porpoise.png"}
+```{r harbourporpoise, fig.cap = "Distribution of marine mammals in the St. Lawrence and the Saguenay river - Harbour porpoise", out.width = '100%', fig.link = "./figures/figures-integrated/mammiferes_marins-harbour_porpoise.png"}
 knitr::include_graphics("./figures/figures-integrated/mammiferes_marins-harbour_porpoise.png")
 ```
 
 <br>
 
-```{r petitrorqual, fig.cap = "Distribution des mammifères marins dans le Saint-Laurent et le Saguenay - Petit rorqual", out.width = '100%', fig.link = "./figures/figures-integrated/mammiferes_marins-petit_rorqual.png"}
+```{r petitrorqual, fig.cap = "Distribution of marine mammals in the St. Lawrence and the Saguenay river - Minke whale", out.width = '100%', fig.link = "./figures/figures-integrated/mammiferes_marins-petit_rorqual.png"}
 knitr::include_graphics("./figures/figures-integrated/mammiferes_marins-petit_rorqual.png")
 ```
 
 <br>
 
-```{r rorqualabosse, fig.cap = "Distribution des mammifères marins dans le Saint-Laurent et le Saguenay - Rorqual à bosse", out.width = '100%', fig.link = "./figures/figures-integrated/mammiferes_marins-rorqual_a_bosse.png"}
+```{r rorqualabosse, fig.cap = "Distribution of marine mammals in the St. Lawrence and the Saguenay river - Humpback whale", out.width = '100%', fig.link = "./figures/figures-integrated/mammiferes_marins-rorqual_a_bosse.png"}
 knitr::include_graphics("./figures/figures-integrated/mammiferes_marins-rorqual_a_bosse.png")
 ```
 
 <br>
 
-```{r rorqualbleu, fig.cap = "Distribution des mammifères marins dans le Saint-Laurent et le Saguenay - Rorqual bleu", out.width = '100%', fig.link = "./figures/figures-integrated/mammiferes_marins-rorqual_bleu.png"}
+```{r rorqualbleu, fig.cap = "Distribution of marine mammals in the St. Lawrence and the Saguenay river - Blue whale", out.width = '100%', fig.link = "./figures/figures-integrated/mammiferes_marins-rorqual_bleu.png"}
 knitr::include_graphics("./figures/figures-integrated/mammiferes_marins-rorqual_bleu.png")
 ```
 
 <br>
 
-```{r rorqualcommun, fig.cap = "Distribution des mammifères marins dans le Saint-Laurent et le Saguenay - Rorqual commun", out.width = '100%', fig.link = "./figures/figures-integrated/mammiferes_marins-rorqual_commun.png"}
+```{r rorqualcommun, fig.cap = "Distribution of marine mammals in the St. Lawrence and the Saguenay river - Fin whale", out.width = '100%', fig.link = "./figures/figures-integrated/mammiferes_marins-rorqual_commun.png"}
 knitr::include_graphics("./figures/figures-integrated/mammiferes_marins-rorqual_commun.png")
 ```
 
@@ -162,19 +162,19 @@ knitr::include_graphics("./figures/figures-integrated/mammiferes_marins-rorqual_
 
 <br>
 
-```{r harborseal, fig.cap = "Distribution des mammifères marins dans le Saint-Laurent et le Saguenay - Phoque commun", out.width = '100%', fig.link = "./figures/figures-integrated/mammiferes_marins-harbor_seal.png"}
+```{r harborseal, fig.cap = "Distribution of marine mammals in the St. Lawrence and the Saguenay river - Harbor seal", out.width = '100%', fig.link = "./figures/figures-integrated/mammiferes_marins-harbor_seal.png"}
 knitr::include_graphics("./figures/figures-integrated/mammiferes_marins-harbor_seal.png")
 ```
 
 <br>
 
-```{r harpseal, fig.cap = "Distribution des mammifères marins dans le Saint-Laurent et le Saguenay - Phoque du Groenland", out.width = '100%', fig.link = "./figures/figures-integrated/mammiferes_marins-harp_seal.png"}
+```{r harpseal, fig.cap = "Distribution of marine mammals in the St. Lawrence and the Saguenay river - Harp seal", out.width = '100%', fig.link = "./figures/figures-integrated/mammiferes_marins-harp_seal.png"}
 knitr::include_graphics("./figures/figures-integrated/mammiferes_marins-harp_seal.png")
 ```
 
 <br>
 
-```{r greyseal, fig.cap = "Distribution des mammifères marins dans le Saint-Laurent et le Saguenay - Phoque gris", out.width = '100%', fig.link = "./figures/figures-integrated/mammiferes_marins-grey_seal.png"}
+```{r greyseal, fig.cap = "Distribution of marine mammals in the St. Lawrence and the Saguenay river - Grey seal", out.width = '100%', fig.link = "./figures/figures-integrated/mammiferes_marins-grey_seal.png"}
 knitr::include_graphics("./figures/figures-integrated/mammiferes_marins-grey_seal.png")
 ```
 

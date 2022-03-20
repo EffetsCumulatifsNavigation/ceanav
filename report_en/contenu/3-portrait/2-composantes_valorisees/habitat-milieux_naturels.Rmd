@@ -23,7 +23,7 @@ Two local databases providing additional information on eelgrass in the study ar
 
 <br>
 
-```{r zostere, fig.cap = "Distribution des habitats dans le Saint-Laurent et le Saguenay - Zostères", out.width = '100%', fig.link = "./figures/figures-integrated/habitat-zostere.png"}
+```{r zostere, fig.cap = "Distribution of habitats in the St. Lawrence and the Saguenay river - Eelgrass", out.width = '100%', fig.link = "./figures/figures-integrated/habitat-zostere.png"}
 knitr::include_graphics("./figures/figures-integrated/habitat-zostere.png")
 ```
 
@@ -51,7 +51,7 @@ The characterization of floodplains in the study area was done by combining data
 
 <br>
 
-```{r zoneinondable, fig.cap = "Distribution des habitats dans le Saint-Laurent et le Saguenay - Zones inondables", out.width = '100%', fig.link = "./figures/figures-integrated/habitat-zone_inondable.png"}
+```{r zoneinondable, fig.cap = "Distribution of habitats in the St. Lawrence and the Saguenay river - Floodplains", out.width = '100%', fig.link = "./figures/figures-integrated/habitat-zone_inondable.png"}
 knitr::include_graphics("./figures/figures-integrated/habitat-zone_inondable.png")
 ```
 
@@ -87,32 +87,32 @@ These environments were mapped using high-resolution mapping approaches combinin
 
 <br>
 
-```{r meublesansfalaise, fig.cap = "Distribution des habitats dans le Saint-Laurent et le Saguenay - Meuble sans falaise", out.width = '100%', fig.link = "./figures/figures-integrated/habitat-meuble_sans_falaise.png"}
+```{r meublesansfalaise, fig.cap = "Distribution of habitats in the St. Lawrence and the Saguenay river - Soft without cliff", out.width = '100%', fig.link = "./figures/figures-integrated/habitat-meuble_sans_falaise.png"}
 knitr::include_graphics("./figures/figures-integrated/habitat-meuble_sans_falaise.png")
 ```
 
 <br>
 
 
-```{r rocheusesansescarpement, fig.cap = "Distribution des habitats dans le Saint-Laurent et le Saguenay - Rocheux sans escarpement", out.width = '100%', fig.link = "./figures/figures-integrated/habitat-rocheuse_sans_escarpement.png"}
+```{r rocheusesansescarpement, fig.cap = "Distribution of habitats in the St. Lawrence and the Saguenay river - Rocky without bluff", out.width = '100%', fig.link = "./figures/figures-integrated/habitat-rocheuse_sans_escarpement.png"}
 knitr::include_graphics("./figures/figures-integrated/habitat-rocheuse_sans_escarpement.png")
 ```
 
 <br>
 
-```{r rocheusesansfalaise, fig.cap = "Distribution des habitats dans le Saint-Laurent et le Saguenay - Rocheux sans falaise", out.width = '100%', fig.link = "./figures/figures-integrated/habitat-rocheuse_sans_falaise.png"}
+```{r rocheusesansfalaise, fig.cap = "Distribution of habitats in the St. Lawrence and the Saguenay river - Rocky without cliff", out.width = '100%', fig.link = "./figures/figures-integrated/habitat-rocheuse_sans_falaise.png"}
 knitr::include_graphics("./figures/figures-integrated/habitat-rocheuse_sans_falaise.png")
 ```
 
 <br>
 
-```{r terrasseplage, fig.cap = "Distribution des habitats dans le Saint-Laurent et le Saguenay - Terrasse de plage", out.width = '100%', fig.link = "./figures/figures-integrated/habitat-terrasse_plage.png"}
+```{r terrasseplage, fig.cap = "Distribution of habitats in the St. Lawrence and the Saguenay river - Beach terrace", out.width = '100%', fig.link = "./figures/figures-integrated/habitat-terrasse_plage.png"}
 knitr::include_graphics("./figures/figures-integrated/habitat-terrasse_plage.png")
 ```
 
 <br>
 
-```{r terrassefluviale, fig.cap = "Distribution des habitats dans le Saint-Laurent et le Saguenay - Terrasse fluviale", out.width = '100%', fig.link = "./figures/figures-integrated/habitat-terrasse_fluviale.png"}
+```{r terrassefluviale, fig.cap = "Distribution of habitats in the St. Lawrence and the Saguenay river - Fluvial terrace", out.width = '100%', fig.link = "./figures/figures-integrated/habitat-terrasse_fluviale.png"}
 knitr::include_graphics("./figures/figures-integrated/habitat-terrasse_fluviale.png")
 ```
 
@@ -142,26 +142,26 @@ The wetlands were characterized using a mapping of potential wetlands in Quebec 
 
 <br/>
 
-```{r eaupeuprofonde, fig.cap = "Distribution des habitats dans le Saint-Laurent et le Saguenay - Eau peu profonde", out.width = '100%', fig.link = "./figures/figures-integrated/habitat-eau_peu_profonde.png"}
+```{r eaupeuprofonde, fig.cap = "Distribution of habitats in the St. Lawrence and the Saguenay river - Shallow water", out.width = '100%', fig.link = "./figures/figures-integrated/habitat-eau_peu_profonde.png"}
 knitr::include_graphics("./figures/figures-integrated/habitat-eau_peu_profonde.png")
 ```
 
 <br>
 
-```{r marais, fig.cap = "Distribution des habitats dans le Saint-Laurent et le Saguenay - Marais", out.width = '100%', fig.link = "./figures/figures-integrated/habitat-marais.png"}
+```{r marais, fig.cap = "Distribution of habitats in the St. Lawrence and the Saguenay river - Marshes", out.width = '100%', fig.link = "./figures/figures-integrated/habitat-marais.png"}
 knitr::include_graphics("./figures/figures-integrated/habitat-marais.png")
 ```
 
 <br>
 
 
-```{r marecage, fig.cap = "Distribution des habitats dans le Saint-Laurent et le Saguenay - Marécage", out.width = '100%', fig.link = "./figures/figures-integrated/habitat-marecage.png"}
+```{r marecage, fig.cap = "Distribution of habitats in the St. Lawrence and the Saguenay river - Swamps", out.width = '100%', fig.link = "./figures/figures-integrated/habitat-marecage.png"}
 knitr::include_graphics("./figures/figures-integrated/habitat-marecage.png")
 ```
 
 <br>
 
-```{r milieuhumide, fig.cap = "Distribution des habitats dans le Saint-Laurent et le Saguenay - Milieu humide", out.width = '100%', fig.link = "./figures/figures-integrated/habitat-milieu_humide.png"}
+```{r milieuhumide, fig.cap = "Distribution of habitats in the St. Lawrence and the Saguenay river - Wetland", out.width = '100%', fig.link = "./figures/figures-integrated/habitat-milieu_humide.png"}
 knitr::include_graphics("./figures/figures-integrated/habitat-milieu_humide.png")
 ```
 
@@ -187,7 +187,7 @@ The data used to characterize the mollusk beds in the study area were taken from
 
 <br>
 
-```{r gisementcoquilliers, fig.cap = "Distribution des habitats dans le Saint-Laurent et le Saguenay - Gisements coquilliers", out.width = '100%', fig.link = "./figures/figures-integrated/habitat-gisement_coquilliers.png"}
+```{r gisementcoquilliers, fig.cap = "Distribution of habitats in the St. Lawrence and the Saguenay river - Mollusk beds", out.width = '100%', fig.link = "./figures/figures-integrated/habitat-gisement_coquilliers.png"}
 knitr::include_graphics("./figures/figures-integrated/habitat-gisement_coquilliers.png")
 ```
 

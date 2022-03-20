@@ -20,9 +20,9 @@ tab$type[uid] <- ""
   
 tab %>%
   knitr::kable(
-    col.names = c("Sites d'intérêt","Catégories"),
+    col.names = c("Areas of interest","Categories"),
     row.names = FALSE,
-    caption = "Catégories de sites d'intérêt culturels, patrimoniaux et archéologiques identifiés pour le Saint-Laurent et le Saguenay."
+    caption = "Categories of identified areas of cultural, heritage and archeological interest for the St. Lawrence and the Saguenay river"
   )
 ```
 
