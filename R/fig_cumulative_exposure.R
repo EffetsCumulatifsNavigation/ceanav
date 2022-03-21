@@ -55,8 +55,8 @@ fig_cumulative_exposure <- function(lang = "fr") {
       "Exposition cumulée normalisée",
       "Exposition cumulée des berges",
       "Exposition cumulée des habitats",
-      "Exposition cumulés des mammifères marins",
-      "Exposition cumulés des sites d'intérêt"
+      "Exposition cumulée des mammifères marins",
+      "Exposition cumulée des sites d'intérêt"
     )
   } else if (lang == "en") {
     main <- c(

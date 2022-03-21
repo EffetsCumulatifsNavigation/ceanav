@@ -5,11 +5,13 @@ bookdown::gitbook:
   split_by: chapter
   split_bib: no
   toc_depth: 3
+  includes:
+    in_header: [google_analytics.html]
   config:
     toc:
       collapse: no
       before: |
-        <li><a href="./">Cumulative effects - Maritime activities</a></li>
+        <li><a href="./">Cumulative effects - Marine vessel activities</a></li>
       after: |
         <li><a href="https://bookdown.org" target="_blank">Published with bookdown</a></li>
     download: [pdf, epub, mobi]
