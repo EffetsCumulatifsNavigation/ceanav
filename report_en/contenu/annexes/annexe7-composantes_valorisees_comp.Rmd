@@ -1,32 +1,32 @@
 # Appendix 7 {.unnumbered #annexe7}
 
-Équivalences entre les composantes valorisées considérées pour l'évaluation des effets cumulatifs des activités maritimes dans le Saint-Laurent et le Saguenay et celles retrouvées dans la matrice de vulnérabilité des habitats proposée par @clarkemurray2015a.
+Equivalencies between valued components considered for the cumulative effects assessments of marine activities in the St. Lawrence and the Saguenay river and those described in the vulnerability matrix proposed by @clarkemurray2015a.
 
 ```{r cvcomp}
 tab <- data.frame(
   cv = c(
-    "Espèces à statut : Espèces fauniques menacées",
-    "Espèces à statut : Espèces fauniques susceptibles",
-    "Espèces à statut : Espèces fauniques vulnérables",
-    "Espèces à statut : Espèces floristiques menacées",
-    "Espèces à statut : Espèces floristiques susceptibles",
-    "Espèces à statut : Espèces floristiques vulnérables",
-    "Habitats côtiers : Meuble sans falaise",
-    "Habitats côtiers : Rocheuse sans escarpement",
-    "Habitats côtiers : Rocheuse sans falaise",
-    "Habitats côtiers : Terrasse de plage",
-    "Habitats côtiers : Terrasse fluviale",
-    "Habitats fauniques : Frayères",
-    "Habitats fauniques : Habitats d’alevinage",
-    "Habitats fauniques : Habitats importants pour les oiseaux",
-    "Milieu humide : Eau peu profonde",
-    "Milieu humide : Marais",
-    "Milieu humide : Marécage",
-    "Milieu humide : Milieu humide",
-    "Milieux aquatiques : Gisements coquilliers",
-    "Milieux aquatiques : Zostères",
-    "Milieux aquatiques : Herbiers aquatiques",
-    "Zones inondables"
+    "Species at risk: Threatened wildlife species",
+    "Species at risk: Susceptible wildlife species",
+    "Species at risk: Vulnerable wildlife species",
+    "Species at risk: Threatened plant species",
+    "Species at risk: Susceptible plant species",
+    "Species at risk: Vulnerable plant species",
+    "Natural areas: Soft without cliff",
+    "Natural areas: Rocky without bluff",
+    "Natural areas: Rocky without cliff",
+    "Natural areas: Beach terrace",
+    "Natural areas: Fluvial terrace",
+    "Life cycles: Spawning sites",
+    "Life cycles: Nursery sites",
+    "Life cycles: Birds",
+    "Natural areas: Shallow water",
+    "Natural areas: Swamps",
+    "Natural areas: Marshes",
+    "Natural areas: Wetland",
+    "Natural areas: Mollusk beds",
+    "Natural areas: Eelgrass",
+    "Natural areas: Aquatic grass beds",
+    "Natural areas: Floodplain zones"
   ),
 
   clark = c(
@@ -56,7 +56,7 @@ tab <- data.frame(
 
 tab %>%
   knitr::kable(
-    col.names = c("Composantes valorisées", "Équivalences"),
+    col.names = c("Valued components", "Equivalencies"),
     row.names = FALSE
   )
 ```

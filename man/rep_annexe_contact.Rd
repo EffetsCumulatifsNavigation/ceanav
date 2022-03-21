@@ -4,7 +4,7 @@
 \alias{rep_annexe_contact}
 \title{Tableau récapitulatif des personnes et organisations ressources}
 \usage{
-rep_annexe_contact()
+rep_annexe_contact(lang = "fr")
 }
 \description{
 Fonction utilisée pour générer un tableau récapitulatif des personnes et organisations ressources pour le projet.

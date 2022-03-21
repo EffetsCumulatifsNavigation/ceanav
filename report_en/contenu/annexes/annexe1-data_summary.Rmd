@@ -1,13 +1,13 @@
 # Appendix 1 {.unnumbered #annexe1} 
 
-Liste et description des bases de données considérées pour l'évaluation des effets cumulatifs des activités maritimes au sein du Saint-Laurent et du Saguenay. Les bases de données considérées pour l'évaluation sont identifiées par un identifiant unique utilisé au sein du rapport et du compendium de recherche. Les données qui n'ont pas été retenues ont été conservées afin de documenter l'ensemble des données qui ont été explorées pour l'évaluation. Les données non incluses ont été laissées de côté parce qu'elles étaient couvertes par d'autres bases de données sélectionnées ou parce qu'elles ne répondaient pas un objectif spécifique de l'évaluation.
+List and desription of datasets considsered for the cumulative effects assessments of marine activities in the St. Lawrence and the Saguenay river. The datasets considered for the assessment are identified with a unique identifier used in the report and the research compendium. The datasets that were not retained were kept to document which datasets were considered for the assessment. The datasets were not retained because they were covered by other datasets or because they did not address a specific objective of the assessment.
 
 <div style="overflow-x:auto;">
 ```{r}
 meta <- read.csv("../data/data-metadata/data_summary.csv", colClasses=c("id"="character"))
 knitr::kable(meta, row.names = FALSE, 
-      col.names = c("ID","Nom","Incluse à l'évaluation","Période couverte",
-                    "Personne ressource","Source(s)"))#,"Disponibilité"))
+      col.names = c("ID","Name","Included in assessment","Period covered",
+                    "Contact(s)","Source(s)"))#,"Disponibilité"))
 
 ```
 </div>

@@ -1,6 +1,6 @@
 # Appendix 3 {.unnumbered #annexe3}
 
-Description du compendium de recherche préparé pour structurer l'évaluation des effets cumulatifs des activités maritimes au sein du Saint-Laurent et du Saguenay.
+Description of the research compendium prepared to structure the cumulative effects assessment of marine activities in the St. Lawrence and the river Saguenay.
 
 #### ceanav <a href='https://github.com/EffetsCumulatifsNavigation/ceanav'><img src='./figures/logo.png' align="right" height="175" /></a> {.unnumbered}
 
@@ -11,61 +11,63 @@ knitr::include_graphics("./figures/logo.png")
 [![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#preliminary)
 ![](https://img.shields.io/badge/status-preliminary-blue.svg)
 
-Ce dépôt contient le compendium de recherche pour le projet pilote d'évaluation des effets cumulatifs des activités maritimes sur le Saint-Laurent et la rivière Saguenay. Il contient l'ensemble du code nécessaire pour importer, formater et intégrer les données, et pour faire les analyses, les figures et le rapport d'étude.
+This repository contains the research compendium for the pilot project on the cumulative effects assessment of marine activities in the St. Lawrence and the river Saguenay. It contains all the code to import, format, and integrate the datasets, and to run the analyses, create the figures, and render the assessment report. 
 
-Puisque les données ne sont pas incluses à ce compendium de recherche, l'ensemble du code doit être exécuter afin de reproduire l'évaluation des effets cumulatifs. Il est toutefois à noter que l'ensemble des données ne sont pas disponibles ou accessibles par des plateformes de données ouvertes dû à des ententes de partage de données. Il est donc nécessaire de nous contacter ou de contacter les personnes ressources identifiées afin d'obtenir ces données.
+Since the data are not included in the research compendium, the whole pipeline must be executed to reproduce the cumulative effects assessment. It must however be noted that not all data are openly available or accessible through open-data portals due to some data sharing agreements. It is therefore necessary to contact us or the contacts identified to obtain the necessary data.
 
-#### Comment citer {-}
 
-Veuillez citer ce compendium de recherche comme suit:
+#### How to cite {-}
 
-> Beauchesne D (2022) Compendium de recherche pour le projet pilote d'évaluation des effets cumulatifs des activités maritimes sur le Saint-Laurent et la rivière Saguenay. Consulté le [AAAA-MM-JJ]. https://github.com/EffetsCumulatifsNavigation/ceanav.
+Cite the research compendium as follows: 
 
-#### Contenu {-}
+> Beauchesne D (2022) Research compendium for the pilot project on the cumulative effects assessment of marine activities in the St. Lawrence and the river Saguenay. Consulted on [AAAA-MM-JJ]. https://github.com/EffetsCumulatifsNavigation/ceanav.
 
-Ce compendium de recherche est structuré comme suit:
+#### Content {-}
 
-- [**data/**](https://github.com/EffetsCumulatifsNavigation/ceanav/tree/main/data): contient les données du projet. Notez que la majorité des données ne sont pas incluses au dépôt, mais que les métadonnées pour l'ensemble des données sont accesibles.
-  - *data-basemap/*: contient des données spatiales pour générer les cartes de bases du projet
-  - *data-contact/*: contient les données sur les différentes personnes ressources
-  - *data-format/*: contient les données formatées
-  - *data-integrated/*: contient les données formatées
-  - *data-metadata/*: contient les métadonnées pour les données brutes et les données intégrées
-  - *data-output/*: contient les résultats des analyses du projet
-  - *data-param/*: contient les paramètres généraux utilisés pour le projet (*i.e.* projection spatiale, étendues spatiales, palettes de couleur, nomenclature, etc.)
-  - *data-raw/*: contient les données brutes; *avertissement* : l'ensemble des données du projet ne sont pas disponibles puisque certaines données sont protégées par des ententes de confidentialité. Consultez les métadonnées pour de plus amples informations
-  - *data-vulnerability/*: contient les données de vulnérabilité des composantes valorisées aux stresseurs environnementaux
+This research compendium is structure as follows:
 
-- [**docs/**](https://github.com/EffetsCumulatifsNavigation/ceanav/tree/main/docs): contient la page web de ce compendium de recherche générée à l'aide de [`pkgdown`](https://pkgdown.r-lib.org/)
+- [**data/**](https://github.com/EffetsCumulatifsNavigation/ceanav/tree/main/data): 
+contains all the data. Note that the majority of the data are not included in the repository, but the metadata are available for all data presented.
+  - *data-basemap/*: contains spatial data used to generate project figures
+  - *data-contact/*: contains data on organizations and resource persons for the project
+  - *data-format/*: contains the formatted data
+  - *data-integrated/*: contains the integrated datasets
+  - *data-metadata/*: contains the metadata for the raw data and integrated data
+  - *data-output/*: contains the assessment results
+  - *data-param/*: contains the general parameters used for the project (*i.e.* spatial projection, spatial extents, color palettes, nomenclature, etc.)
+  - *data-raw/*: contains the raw data; *warning* : all the data are not available due to data sharing agreements. Refer to metadata for more information on specific datasets
+  - *data-vulnerability/*: contains the data for the vulnerability of valued components to environmental stressors
 
-- [**figures/**](https://github.com/EffetsCumulatifsNavigation/ceanav/tree/main/figures): contient l'ensemble des figures générées pour le projet pilote
-  - *figures-integrated*: figures des données intégrées pour chaque catégorie de stresseurs environnementaux et de composanges valorisées
-  - *figures-output*: figures des résultats d'analyses
+- [**docs/**](https://github.com/EffetsCumulatifsNavigation/ceanav/tree/main/docs): contains the web page for the research compendium generated by [`pkgdown`](https://pkgdown.r-lib.org/)
 
-- [**inst/templates**](https://github.com/EffetsCumulatifsNavigation/ceanav/tree/main/inst/templates): canevas de présentation utilisés pour présenter les données brutes et les données formatées
+- [**figures/**](https://github.com/EffetsCumulatifsNavigation/ceanav/tree/main/figures): contains the project figures
+  - *figures-integrated*: figures of integrated data for each category of environmental stressor and valued component
+  - *figures-output*: figures of assessment results
 
-- [**man/**](https://github.com/EffetsCumulatifsNavigation/ceanav/tree/main/man): contient la documentation des fonctions R
+- [**inst/templates**](https://github.com/EffetsCumulatifsNavigation/ceanav/tree/main/inst/templates): presentation templates used to present data
 
-- [**R/**](https://github.com/EffetsCumulatifsNavigation/ceanav/tree/main/R): contient l'ensemble des fonctions R développées pour le projet pilote
-  - `00-pipeline.R`: contient une fonction qui permet d'accéder aux données brutes, les formater, l'intégration des données, les analyses, les figures et tableaux, et le rapport du projet. *Avertissement* : cette fonction prend un temps considérable è executer.
-  - `ana_nom.R`: contiennent les scripts d'analyse du projet
-  - `dataXXXX-nom.R`: contiennent les routines pour accéder aux données brutes et pour les formater
-  - `fig_nom.R`: contiennent les scripts pour générer les figures
-  - `fnc_nom.R`: contiennent les fonctions R utilisées pour le projet
-  - `int-cv_nom.R`: contiennent les routines pour faire l'intégration des composantes valorisées
-  - `int-st_nom.R`: contiennent les routines pour faire l'intégration des stresseurs environnementaux
-  - `rep_nom.R`: contiennent des fonctions R utilisées pour générer des portions du rapport d'étude
-  - `vuln_nom.R`: contiennent des les scripts utilisés pour intégrer les données de vulnérabilité des composantes valorisées aux stresseurs environnementaux
+- [**man/**](https://github.com/EffetsCumulatifsNavigation/ceanav/tree/main/man): contains the documentation of R functions built for the project
 
-- [**report/**](https://github.com/EffetsCumulatifsNavigation/ceanav/tree/main/report): contient le rapport du projet
+- [**R/**](https://github.com/EffetsCumulatifsNavigation/ceanav/tree/main/R): contains all the R function developed for the project
+  - `00-pipeline.R`: contains a function that executes the whole project pipeline, *i.e.* accessing, formatting and integrating the raw data, run the analyses, generate the tables and figures, and render the assessment reports. *Warning* : this function, if executed in its entirety, will take a long time to run.
+  - `ana_nom.R`: contains analyses scripts
+  - `dataXXXX-nom.R`: contains the routines to access and format raw data
+  - `fig_nom.R`: contains scripts to generate figures
+  - `fnc_nom.R`: contains R function developed for the project
+  - `int-cv_nom.R`: contains the routines to integrate valued components
+  - `int-st_nom.R`: contains the routines to integrate environmental stressors
+  - `rep_nom.R`: contain code to generate portions of the reports 
+  - `vuln_nom.R`: contains the routines to integrated the data on the vulnerability of valued components to environmental stressors
 
-- `_pkgdown.yml`: fichier de métadonnées pour générer la page web du compendium de recherche
-- `DESCRIPTION`: contient les métadonnées du projet (auteurs, date, dépendences, etc.)
-- `README.Rmd`: description du compendium de recherche
+- [**report/**](https://github.com/EffetsCumulatifsNavigation/ceanav/tree/main/report): contains the report
 
-#### Utilisation {-}
+- `_pkgdown.yml`: metadata to generate the research compendium web page
+- `DESCRIPTION`: project metadata 
+- `README.Rmd`: research compendium description
 
-Clonez ce dépôt et executez ces commandes dans votre terminal:
+#### How to use {-}
+
+Clone and execute the following commands in your terminal: 
 
 ```{r eval=FALSE, echo = TRUE}
 R -e 'library(devtools);document()'
@@ -75,4 +77,4 @@ library(ceanav)
 pipeline()
 ```
 
-*Avertissement* : ce compendium de recherche n'est pas entièrement reproductible dû à des restriction imposées au partage de certaines des données utilisées pour l'évaluation.
+*Warning* : this research compendium is not fully reproducible due to data sharing agreements imposing restrictions on sharing certain datasets. 

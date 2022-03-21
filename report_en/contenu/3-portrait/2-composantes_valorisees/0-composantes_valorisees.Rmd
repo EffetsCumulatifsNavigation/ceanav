@@ -11,9 +11,9 @@ Most of the data were integrated into the study grid as presence-absence; contin
 <br/>
 
 ```{r cv}
-tab <- select(cv, title, type, title_en, type_en, simple,source) %>%
-       arrange(title, type, simple) %>%
-       select(-title, -type)
+tab <- select(cv, title, type, title_en, type_en, francais, english,source) %>%
+       arrange(title, type, francais) %>%
+       select(-title, -type, -francais)
 tab$title_en[duplicated(tab$title_en)] <- ""
 tab$type_en[duplicated(tab$type_en)] <- ""
 uid <- which(tab$title_en != "")[-1]-1

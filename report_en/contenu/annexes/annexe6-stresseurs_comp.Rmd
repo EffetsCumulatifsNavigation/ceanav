@@ -1,36 +1,35 @@
 # Appendix 6 {.unnumbered #annexe6}
 
-Équivalences entre les stresseurs environnementaux considérés pour l'évaluation des effets cumulatifs des activités maritimes dans le Saint-Laurent et le Saguenay et celles retrouvées dans la matrice de vulnérabilité des habitats proposée par @clarkemurray2015a.
+Equivalencies between environmental stressors considered for the cumulative effects assessments of marine activities in the St. Lawrence and the Saguenay river and those described in the vulnerability matrix proposed by @clarkemurray2015a.
 
 ```{r stresscomp}
 tab <- data.frame(
   stress = c(
-    "Sites d'ancrage",
-    "Déversements accidentels : Hydrocarbures",
-    "Déversements accidentels : Autres",
-    "Déversements accidentels : Contenu inconnu",
-    "Dragage : Sites de dragage",
-    "Dragage : Sites de dépôts",
-    "Dragage : Dragages de capitalisation prévus",
-    "Navigation : Cargo",
-    "Navigation : Porte-conteneurs",
-    "Navigation : Cargaison sèche",
-    "Navigation : Traversier / roulier",
-    "Navigation : Gouvernement / recherche",
-    "Navigation : Observation mammifères marins",
-    "Navigation : Passager",
-    "Navigation : Navires de plaisance",
-    "Navigation : Navires spéciaux",
-    "Navigation : Pétrolier",
-    "Navigation : Remorqueur / port",
-    "Navigation : Navigation portuaire",
-    "Pêche commerciale : Démersale destructive",
-    "Pêche commerciale : Démersale non-destructive, prises accessoires faibles",
-    "Pêche commerciale : Démersale non-destructive, prises accessoires élevées",
-    "Pêche commerciale : Pélagique prises accessoires faibles",
-    "Pêche commerciale : Pélagique prises accessoires élevées",
-    "Naufrages : Sites de naufrage",
-    "Pollution maritime : Pollution maritime"
+    "Anchorage",
+    "Accidental spills: Hydrocarbures",
+    "Accidental spills: Autres",
+    "Accidental spills: Contenu inconnu",
+    "Dredging: Dredging sites",
+    "Dredging: Disposal sites",
+    "Dredging: Planned capitalization dredging",
+    "Shipping: Cargo",
+    "Shipping: Containers",
+    "Shipping: Dry bulk",
+    "Shipping: Passenger / ferry / ro-ro",
+    "Shipping: Government / research",
+    "Shipping: Marine mammals observation",
+    "Shipping: Pleasure vessels",
+    "Shipping: Special ships",
+    "Shipping: Tanker",
+    "Shipping: Tugboat / port",
+    "Shipping: Port shipping	",
+    "Commercial fishing: Demersal, destructive, high-bycatch",
+    "Commercial fishing: Demersal, non-destructive, low-bycatch",
+    "Commercial fishing: Demersal, non-destructive, high-bycatch",
+    "Commercial fishing: Pelagic, low-bycatch",
+    "Commercial fishing: Pelagic, high-bycatch",
+    "Shipwrecks",
+    "Marine pollution"
   ),
 
   clark = c(
@@ -52,7 +51,6 @@ tab <- data.frame(
     "Shipping (large vessels)",
     "Shipping (large vessels)",
     "Shipping (large vessels)",
-    "Shipping (large vessels)",
     "Fishing: demersal, habitat-modifying",
     "Fishing: demersal, non-habitat-modifying, low bycatch",
     "Fishing: demersal, non-habitat-modifying, high bycatch",
@@ -64,7 +62,7 @@ tab <- data.frame(
 
 tab %>%
   knitr::kable(
-    col.names = c("Sources de stress", "Équivalences"),
+    col.names = c("Environmental stressors", "Equivalencies"),
     row.names = FALSE
   )
 

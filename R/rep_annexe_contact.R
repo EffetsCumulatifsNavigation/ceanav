@@ -11,22 +11,22 @@
 #' @examples
 #' rep_annexe_contact()
 
-rep_annexe_contact <- function() {
+rep_annexe_contact <- function(lang = "fr") {
   # Data and libraries
   data(data_contact)
   library(knitr)
   library(kableExtra)
 
-  # Select only relevant fields
-  dat <- contact %>%
-         # Sélectionner et renommer les colonnes à intérer au tableau
-         select(Contact_id = id,
-                Prénom = prenom,
-                Nom = nom,
-                Organisation = organisation,
-                Courriel = courriel)
+    # Select only relevant fields
+    dat <- contact %>%
+           select(id, prenom, nom, organisation, courriel)    
 
   # Export table
   options(knitr.kable.NA = '')
-  kable(dat, row.names = FALSE)
+  if (lang == "fr") {
+    kable(dat, row.names = FALSE, col.names = c("ID","Prénom","Nom","Organisation","Courriel"))
+  } else if (lang == "en") {
+    kable(dat, row.names = FALSE, col.names = c("ID","First name","Last name","Organization","Mail"))
+  }
+
 }
