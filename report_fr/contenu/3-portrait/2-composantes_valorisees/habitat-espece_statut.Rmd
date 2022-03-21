@@ -20,7 +20,9 @@ Plusieurs espèces ayant un [statut précaire](https://www.environnement.gouv.qc
 <br/>
 
 ```{r statut}
-tab <- as.data.frame(meta$dataDescription$CDPNQ$details)
+tab <- as.data.frame(meta$dataDescription$CDPNQ$details) %>%
+       select(type, loiemv, species, area)
+
 
 tab %>%
   knitr::kable(

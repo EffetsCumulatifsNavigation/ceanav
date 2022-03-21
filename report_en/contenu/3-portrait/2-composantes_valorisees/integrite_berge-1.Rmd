@@ -23,13 +23,13 @@ For our study, we consider only those banks that have apparent signs of erosion,
 ```{r bergeCat}
 tab <- as.data.frame(meta$dataDescription$categories)
 tab <- arrange(tab, francais)
-tab <- select(tab, francais, longueur)
+tab <- select(tab, english, longueur)
 tab$longueur <- round(tab$longueur, 2)
 
 
 tab %>%
   knitr::kable(
-    col.names = c("Catégories", "Longueur (km)"),
+    col.names = c("Categories", "Length (km)"),
     row.names = FALSE,
     caption = "
     Categories of bank segments sensitive to erosion according to their artificiality and their erosion index (EI) considered for the CEA analysis and their total length in $km$ within the bank characterization data of the fluvial portion of the St. Lawrence River [@bernier2020; @bernier2021]"

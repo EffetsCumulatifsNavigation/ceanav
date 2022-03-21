@@ -20,7 +20,7 @@ Each spill is characterized according to its content and grouped into three dist
 
 ```{r deversementGen}
 tab <- as.data.frame(meta$dataDescription$categories) %>%
-       select(francais, souscategories, observations)
+       select(english, souscategories_en, observations)
 
 tab %>%
   knitr::kable(
@@ -37,7 +37,8 @@ tab %>%
 <br/>
 
 ```{r deversementlvl}
-tab <- as.data.frame(meta$dataDescription$classes)
+tab <- as.data.frame(meta$dataDescription$classes) %>%
+       select(lvls_en, nombre)
 
 tab %>%
   knitr::kable(

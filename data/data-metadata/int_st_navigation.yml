@@ -1,4 +1,5 @@
 title: Navigation
+title_en: Shipping
 description: Intensité de la navigation dans le Saint-Laurent et le Saguenay
 id: navigation
 rawData:
@@ -154,7 +155,7 @@ dataDescription:
     - Trafic maritime de navires remorqueurs.
     - Activités de navigation qui ont lieu près des installations portuaires telles
       les ports et les marinas.
-    desciption_en:
+    description_en:
     - Marine traffic of commercial vessels transporting goods in various forms.
     - Marine traffic of commercial vessels transporting goods exclusively in transport containers.
     - Marine traffic of commercial vessels transporting goods in bulk, i.e. grain and coal.

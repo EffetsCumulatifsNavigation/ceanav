@@ -25,8 +25,9 @@ metadata_st_cv <- function() {
     stresseurs[[i]] <- meta$dataDescription$categories %>%
                        as.data.frame() %>%
                        mutate(title = meta$title,
+                              title_en = meta$title_en,
                               stresseur = i) %>%
-                       select(stresseur, accronyme, title, francais, description, source)
+                       select(stresseur, accronyme, title, title_en, francais, description, source, english, description_en)
   }
   stresseurs <- bind_rows(stresseurs)
 
@@ -37,8 +38,9 @@ metadata_st_cv <- function() {
     composantes_valorisees[[i]] <- meta$dataDescription$categories %>%
                        as.data.frame() %>%
                        mutate(title = meta$title,
+                              title_en = meta$title_en,
                               comp_val = i) %>%
-                       select(comp_val, accronyme, title, type, francais, source)#, description)
+                       select(comp_val, accronyme, title, title_en, type, francais, source, english, type_en)#, description)
   }
   composantes_valorisees <- bind_rows(composantes_valorisees)
 

@@ -11,11 +11,12 @@ Most of the data were integrated into the study grid as presence-absence; contin
 <br/>
 
 ```{r cv}
-tab <- select(cv, title, type, simple,source) %>%
-       arrange(title, type, simple)
-tab$title[duplicated(tab$title)] <- ""
-tab$type[duplicated(tab$type)] <- ""
-uid <- which(tab$title != "")[-1]-1
+tab <- select(cv, title, type, title_en, type_en, simple,source) %>%
+       arrange(title, type, simple) %>%
+       select(-title, -type)
+tab$title_en[duplicated(tab$title_en)] <- ""
+tab$type_en[duplicated(tab$type_en)] <- ""
+uid <- which(tab$title_en != "")[-1]-1
 tab$source <- gsub(",", ", ", tab$source)
 
 tab %>%

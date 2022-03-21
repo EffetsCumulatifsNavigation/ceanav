@@ -48,7 +48,7 @@ Types of gear were characterized using a commercial fisheries fishing gear index
 
 ```{r pecheEnginFreq}
 tab <- as.data.frame(meta$dataDescription$categories) %>%
-       select(francais, description, frequence)
+       select(english, description_en, frequence)
 beg <- meta$dataDescription$temporal$start
 end <- meta$dataDescription$temporal$end
 

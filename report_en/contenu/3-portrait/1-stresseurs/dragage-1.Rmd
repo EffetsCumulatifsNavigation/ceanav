@@ -23,7 +23,7 @@ Port expansion projects for the Port of Montreal at Contrecoeur [@snclavalin2017
 
 ```{r dragageGen}
 tab <- as.data.frame(meta$dataDescription$categories) %>%
-       select(francais, sites, volume, volume_moyen, volume_sd)
+       select(english, sites, volume, volume_moyen, volume_sd)
 
 tab %>%
   knitr::kable(

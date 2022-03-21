@@ -34,10 +34,10 @@ Despite the effort to segment and remove impossible transits, some impossible tr
 
 ```{r navCat}
 tab <- as.data.frame(meta$dataDescription$categories)
-tab <- arrange(tab, francais)
+tab <- arrange(tab, english)
 tab$transit <- as.character(round(tab$transit, 2))
 tab <- tab[!tab$accronyme %in% c("Observation","navigation_portuaire"), ] # Remove observation mm and ports
-tab <- select(tab, francais, boats, observations, segments)
+tab <- select(tab, english, boats, observations, segments)
 
 
 tab %>%

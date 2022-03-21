@@ -1,4 +1,5 @@
 title: Habitats
+title_en: Habitats
 description: Distribution des habitats dans le Saint-Laurent et le Saguenay
 id: habitat
 dataDescription:
@@ -459,6 +460,13 @@ dataDescription:
       - Flore
       - Flore
       - Flore
+      type_en:
+      - Wildlife
+      - Wildlife
+      - Wildlife
+      - Plant
+      - Plant
+      - Plant
       loiemv:
       - Menacée
       - Susceptible
@@ -466,6 +474,13 @@ dataDescription:
       - Menacée
       - Susceptible
       - Vulnérable
+      loiemv_en:
+      - Threatened
+      - Susceptible
+      - Vulnerable
+      - Threatened
+      - Susceptible
+      - Vulnerable
       species:
       - 6
       - 20

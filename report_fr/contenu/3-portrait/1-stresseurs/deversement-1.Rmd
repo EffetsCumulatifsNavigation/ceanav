@@ -35,7 +35,8 @@ tab %>%
 <br/>
 
 ```{r deversementlvl}
-tab <- as.data.frame(meta$dataDescription$classes)
+tab <- as.data.frame(meta$dataDescription$classes) %>%
+       select(lvls, nombre)
 
 tab %>%
   knitr::kable(

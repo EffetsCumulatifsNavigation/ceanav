@@ -9,9 +9,9 @@ Characterization of environmental stressors in the study area resulted in the de
 <br/>
 
 ```{r stress}
-tab <- select(st, title, francais, description, source)
-tab$title[duplicated(tab$title)] <- ""
-uid <- which(tab$title != "")[-1]-1
+tab <- select(st, title_en, english, description_en, source)
+tab$title_en[duplicated(tab$title_en)] <- ""
+uid <- which(tab$title_en != "")[-1]-1
 tab$source <- gsub(",", ", ", tab$source)
 
 tab %>%

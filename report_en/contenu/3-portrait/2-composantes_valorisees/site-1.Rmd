@@ -11,12 +11,12 @@ The St. Lawrence and Saguenay rivers constitute a system of major cultural, heri
 ```{r siteCat}
 tab <- as.data.frame(meta$dataDescription$categories)
 tab <- arrange(tab, type, francais)
-tab <- select(tab, type, francais)
+tab <- select(tab, type_en, english)
 
 uid <- logical(nrow(tab)) 
-for(i in 2:length(uid)) uid[i] <- ifelse(tab$type[i] == tab$type[i-1], TRUE, FALSE)
+for(i in 2:length(uid)) uid[i] <- ifelse(tab$type_en[i] == tab$type_en[i-1], TRUE, FALSE)
 
-tab$type[uid] <- ""  
+tab$type_en[uid] <- ""  
   
 tab %>%
   knitr::kable(
