@@ -91,7 +91,7 @@ knitr::include_graphics("./figures/figures-integrated/site-aghamm_peche_commerci
 
 ```{r essipit_data, results = 'asis'}
 uid <- meta$dataDescription$categories$type %in% 
-       "Innu Nation of Essipit"
+       "Nation des Innus d’Essipit"
 meta$dataDescription$categories$source[uid] %>%
 sapply(., function(x) stringr::str_split(x, ",")) %>%
 unlist() %>%
@@ -174,7 +174,7 @@ knitr::include_graphics("./figures/figures-integrated/site-essipit_culture_patri
 
 ```{r nhw_data, results = 'asis'}
 uid <- meta$dataDescription$categories$type %in% 
-       "Huron-Wendat Nation"
+       "Nation Huronne-Wendat"
 meta$dataDescription$categories$source[uid] %>%
 sapply(., function(x) stringr::str_split(x, ",")) %>%
 unlist() %>%
@@ -375,7 +375,7 @@ knitr::include_graphics("./figures/figures-integrated/site-kahnawake_traffic.png
 
 ```{r nw_data, results = 'asis'}
 uid <- meta$dataDescription$categories$type %in% 
-       "W8banaki Nation"
+       "Nation W8banaki"
 meta$dataDescription$categories$source[uid] %>%
 sapply(., function(x) stringr::str_split(x, ",")) %>%
 unlist() %>%

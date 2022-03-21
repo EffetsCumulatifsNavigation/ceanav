@@ -9,9 +9,15 @@
 #' fig_region_cea_km2()
 
 
-fig_region_cea_km2 <- function() {
-
-  temp <- function(data_id, output_name, suffix = NULL) {
+fig_region_cea_km2 <- function(lang = "fr") {
+  # Output folder
+  if (lang == "fr") {
+    output <- "./figures/figures-output/"
+  } else if (lang == "en") {
+    output <- "./figures_en/figures-output/"
+  }
+  
+  temp <- function(data_id, output_name, suffix = NULL, language = lang) {
     #=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=#
     # Data
     #=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=#
@@ -23,12 +29,22 @@ fig_region_cea_km2 <- function() {
     st <- mutate(st, fullname = glue("{stresseur}_{accronyme}"))
 
     # Stressor groups    
-    grNames <- st[,c('stresseur','title')] %>%
-               group_by(stresseur, title) %>%
-               summarize(size = n()) %>%
-               ungroup() %>%
-               mutate(cumsize = cumsum(size))
-    nGroup <- nrow(grNames)
+    if (language == "fr") {
+      grNames <- st[,c('stresseur','title')] %>%
+                 group_by(stresseur, title) %>%
+                 summarize(size = n()) %>%
+                 ungroup() %>%
+                 mutate(cumsize = cumsum(size))
+      nGroup <- nrow(grNames)      
+    } else if (language == "en") {
+      grNames <- st[,c('stresseur','title_en')] %>%
+                 rename(title = title_en) %>%
+                 group_by(stresseur, title) %>%
+                 summarize(size = n()) %>%
+                 ungroup() %>%
+                 mutate(cumsize = cumsum(size))
+      nGroup <- nrow(grNames)
+    }
 
 
     # Régions administratives
@@ -181,7 +197,7 @@ fig_region_cea_km2 <- function() {
     #=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=#
     # Graph
     #=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=#
-    png(glue('./figures/figures-output/{output_name}.png'), res = 300, width = 300, height = 300, units = "mm")
+    png(glue('{output}{output_name}.png'), res = 300, width = 300, height = 300, units = "mm")
     layout(matrix(1:2, 2, 1), heights = c(.25,.75))
 
     #=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=#
@@ -205,10 +221,15 @@ fig_region_cea_km2 <- function() {
       pal = pal,
     )
 
+    if (language == "fr") {
+      lab <- "Effets cumulatifs par région administrative"
+    } else if (language == "en") {
+      lab <- "Cumulative effects per administrative region"
+    }
     bbox <- st_bbox(regions_rotate)
     text(x = bbox$xmin + 1000,
          y = bbox$ymax,
-         labels = "Effets cumulatifs par région administrative",
+         labels = lab,
          font = 2,
          adj = c(0,.5),
          cex = 1
@@ -224,9 +245,14 @@ fig_region_cea_km2 <- function() {
          )
     }
 
+    if (language == "fr") {
+      lab <- "Effets cumulatifs * $km^{-2}"
+    } else if (language == "en") {
+      lab <- "Cumulative effects * $km^{-2}"
+    }
     text(x = bbox$xmin + 2500,
          y = bbox$ymax - 10000,
-         labels = TeX("Effets cumulatifs * $km^{-2}"),
+         labels = TeX(lab),
          font = 2,
          adj = c(0,.5),
          cex = .7
@@ -243,7 +269,12 @@ fig_region_cea_km2 <- function() {
     for(i in 1:nrow(st)) lines(x = c(0.75,xR[2]+.25), y = c(i,i), lty = 2, lwd = 1.5, col = "#90909066")
     points(x = dat$rg_id, y = dat$st_id, cex = dat$cea*4, col = "#000000", bg = dat$col, pch = 21)
     text(x = 1:xR[2], y = 0, labels = cekm$region, srt = 45, cex = .85, adj = c(1,.5))
-    text(x = -3.6, y = 1:yR[2], labels = st$francais, cex = .85, adj = c(0,.5))
+    if (language == "fr") {
+      lab <- st$francais 
+    } else if (language == "en") {
+      lab <- st$english
+    }
+    text(x = -3.6, y = 1:yR[2], labels = lab, cex = .85, adj = c(0,.5))
 
     # Stressor groups
     for(i in 1:nGroup) {
@@ -264,38 +295,47 @@ fig_region_cea_km2 <- function() {
   temp("cumulative_effects_region_km2",
        "cumulative_effects_region_cea")
 
+  # Suffix 
+  if (lang == "fr") {
+    nms <- c("Intégrité des berges","Habitats","Mammifères marins",
+                "Sites d'intérêt culturels, patrimoniaux\net archéologiques")
+  } else if (lang == "en") {
+    nms <- c("Bank integrity","Habitats","Marine mammals",
+                "Sites of cultural, heritage and\narcheological interest")
+  }
+
   # Berge
   temp("cumulative_effects_region_km2_berge",
        "cumulative_effects_region_cea_berge",
-       "Intégrité des berges")
+       nms[1])
 
   # Habitat
   temp("cumulative_effects_region_km2_habitat",
        "cumulative_effects_region_cea_habitat",
-       "Habitats")
+       nms[2])
 
   # Mammifères marins
   temp("cumulative_effects_region_km2_mammiferes_marins",
        "cumulative_effects_region_cea_mammiferes_marins",
-       "Mammifères marins")
+       nms[3])
 
   # Sites
   temp("cumulative_effects_region_km2_site",
        "cumulative_effects_region_cea_site",
-       "Sites d'intérêt culturels, patrimoniaux\net archéologiques")
+       nms[4])
 
   # -----
   # Stack individual figures using magick package
-  i1 <- magick::image_read("figures/figures-output/cumulative_effects_region_cea_berge.png")
-  i2 <- magick::image_read("figures/figures-output/cumulative_effects_region_cea_habitat.png")
-  i3 <- magick::image_read("figures/figures-output/cumulative_effects_region_cea_mammiferes_marins.png")
-  i4 <- magick::image_read("figures/figures-output/cumulative_effects_region_cea_site.png")
+  i1 <- magick::image_read(glue("{output}cumulative_effects_region_cea_berge.png"))
+  i2 <- magick::image_read(glue("{output}cumulative_effects_region_cea_habitat.png"))
+  i3 <- magick::image_read(glue("{output}cumulative_effects_region_cea_mammiferes_marins.png"))
+  i4 <- magick::image_read(glue("{output}cumulative_effects_region_cea_site.png"))
 
   l1 <- image_append(c(i1,i2))
   l2 <- image_append(c(i3,i4))
 
   img <- image_append(c(l1,l2), stack = TRUE)
-  magick::image_write(img, path = "./figures/figures-output/cumulative_effects_region_cea_panel.png", format = "png")
+  magick::image_write(img, path = glue("{output}cumulative_effects_region_cea_panel.png"), format = "png")
 
 
 } # end function

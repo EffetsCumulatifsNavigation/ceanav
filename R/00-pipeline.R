@@ -218,8 +218,11 @@ pipeline <- function(
     fig_cumulative_effects()
     fig_cumulative_effects("en")
     fig_regional_contribution()
+    fig_regional_contribution_en()
     fig_metanetwork()
+    fig_metanetwork_en()
     fig_region_cea_km2()
+    fig_region_cea_km2("en")
   }
 
 
@@ -255,32 +258,32 @@ pipeline <- function(
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~
   if (pipeline_report) {
-    # # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    # # French report
-    # file.copy("./figures/", "./report_fr/", recursive = TRUE)
-    # suppressWarnings({
-    #   setwd('./report_fr/')
-    # 
-    #   # HTML format
-    #   bookdown::render_book(input = "index.Rmd",
-    #                         output_format = "bookdown::gitbook",
-    #                         config_file = "_bookdown.yml")
-    # 
-    #   # # PDF format
-    #   # bookdown::render_book(input = "index.Rmd",
-    #   #                       output_format = "bookdown::pdf_book",
-    #   #                       config_file = "_bookdown.yml")
-    # 
-    #   setwd('../')
-    # })
-    # 
-    # # WARNING: Temporary pipeline to export report only to another repo.
-    # # TODO: This is not reproducible and should be removed from the pipeline as soon as this
-    # #       repository can be made available publicly
-    # unlink("../Rapport/docs/", recursive = TRUE)
-    # unlink("./report_fr/figures/", recursive = TRUE)
-    # file.copy("./report_fr/docs", "../Rapport/", recursive = TRUE)
-    # 
+    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    # French report
+    file.copy("./figures/", "./report_fr/", recursive = TRUE)
+    suppressWarnings({
+      setwd('./report_fr/')
+    
+      # HTML format
+      bookdown::render_book(input = "index.Rmd",
+                            output_format = "bookdown::gitbook",
+                            config_file = "_bookdown.yml")
+    
+      # # PDF format
+      # bookdown::render_book(input = "index.Rmd",
+      #                       output_format = "bookdown::pdf_book",
+      #                       config_file = "_bookdown.yml")
+    
+      setwd('../')
+    })
+    
+    # WARNING: Temporary pipeline to export report only to another repo.
+    # TODO: This is not reproducible and should be removed from the pipeline as soon as this
+    #       repository can be made available publicly
+    unlink("../Rapport/docs/", recursive = TRUE)
+    unlink("./report_fr/figures/", recursive = TRUE)
+    file.copy("./report_fr/docs", "../Rapport/", recursive = TRUE)
+    
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     # English report
     file.copy("./figures_en/", "./report_en/", recursive = TRUE)

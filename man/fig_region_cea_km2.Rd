@@ -4,7 +4,7 @@
 \alias{fig_region_cea_km2}
 \title{Figure effects cumulatifs par région administrative par km2}
 \usage{
-fig_region_cea_km2()
+fig_region_cea_km2(lang = "fr")
 }
 \description{
 Figure effects cumulatifs par région administrative par km2
