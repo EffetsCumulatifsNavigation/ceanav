@@ -11,6 +11,7 @@
 #' @param city logical, if TRUE name of cities are added to graph
 #' @param minUp numeric, minimum upper side to write as a function of bbox extent (legend)
 #' @param zones_NA character, name of zones for which data is not available. Data is available as a basemap in `./data/data-basemap/zonesNA.geojson`.
+#' @param lang character, language "fr" for French or "en" for English
 #' @param ... further specifications, see \link{plot} and details.
 #'
 #' @examples
@@ -26,7 +27,7 @@ plot_ceanav <- function(dat, ...) {
 #' @method plot_ceanav sf
 #' @name plot_ceanav
 #' @export
-plot_ceanav.sf <- function(dat, main = NULL, type = NULL, subtitle = NULL, unit_data = NULL, references = NULL, city = TRUE, zones_NA = NULL, ...) {
+plot_ceanav.sf <- function(dat, main = NULL, type = NULL, subtitle = NULL, unit_data = NULL, references = NULL, city = TRUE, zones_NA = NULL, lang = "fr", ...) {
 
   # pdf(glue('./figures/figures-format/{data_id}.pdf'), width = 7, height = 5, pointsize = 12)
   # png(glue('./figures/delete.png'), res = 300, width = 100, height = 70, units = "mm", pointsize = 12)
@@ -126,10 +127,15 @@ plot_ceanav.sf <- function(dat, main = NULL, type = NULL, subtitle = NULL, unit_
   minUp <- ifelse(is.null(type), .175, .23)
   
   if (length(bin) == 2 | length(bin) == 1) {
+    if (lang == "fr") {
+      sbt <- "Présence"
+    } else if (lang == "en") {
+      sbt <- "Presence"
+    }
     cols <- global_param$col$integrated$palette[4]
     plot_legend_bin(
       col = cols,
-      subTitle = "Présence",
+      subTitle = sbt,
       cexSub = .5,
       minUp = minUp,
       showNA = showNA
@@ -192,9 +198,11 @@ plot_ceanav.sf <- function(dat, main = NULL, type = NULL, subtitle = NULL, unit_
   # Add sources
   if(!is.null(references)) {
     refs <- stringr::str_split(references, ",") %>% unlist()
-    txt <- ifelse(length(refs) == 1, 
-                  glue("Donnée brute : {references}. Détails : annexe 1."),
-                  glue("Données brutes : {references}. Détails : annexe 1."))
+    if (lang == "fr") {
+      txt <- glue("Données brutes : {references}. Détails : annexe 1.") 
+    } else if (lang == "en") {
+      txt <- glue("Raw data : {references}. Details : Appendix 1.")      
+    }
     mtext(text = txt,
           side = 1,
           font = 3,

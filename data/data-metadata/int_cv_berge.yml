@@ -56,9 +56,9 @@ dataDescription:
     - Artificial bank with apparent signs of erosion or vegetation cover of < 25%
     zonesNA:
     - berge_fluvial
-    - .na.character
-    - .na.character
-    - .na.character
+    - berge_fluvial
+    - berge_fluvial
+    - berge_fluvial
     english:
     - Natural - Semi-vegetated (EI = 1)
     - Natural - Active (EI = 2)

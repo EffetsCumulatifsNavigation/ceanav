@@ -147,7 +147,7 @@ cv_berge <- function() {
     "Artificial bank with apparent signs of erosion or vegetation cover of < 25%"
   )
 
-  meta$dataDescription$categories$zonesNA <- c("berge_fluvial", NA, NA, NA)
+  meta$dataDescription$categories$zonesNA <- c("berge_fluvial", "berge_fluvial", "berge_fluvial", "berge_fluvial")
 
 
   # ---

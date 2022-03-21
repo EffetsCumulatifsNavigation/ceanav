@@ -16,6 +16,7 @@ plot_ceanav(dat, ...)
   references = NULL,
   city = TRUE,
   zones_NA = NULL,
+  lang = "fr",
   ...
 )
 }
@@ -37,6 +38,8 @@ plot_ceanav(dat, ...)
 \item{city}{logical, if TRUE name of cities are added to graph}
 
 \item{zones_NA}{character, name of zones for which data is not available. Data is available as a basemap in \code{./data/data-basemap/zonesNA.geojson}.}
+
+\item{lang}{character, language "fr" for French or "en" for English}
 
 \item{minUp}{numeric, minimum upper side to write as a function of bbox extent (legend)}
 }

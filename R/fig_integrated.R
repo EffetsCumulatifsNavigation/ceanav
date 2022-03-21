@@ -66,7 +66,8 @@ fig_integrated <- function(data_id, lang = "fr") {
       subtitle = subt[i],
       unit_data = un,
       references = ref[i],
-      zones_NA = na[i]
+      zones_NA = na[i],
+      lang = lang
     )
     dev.off()
   }
