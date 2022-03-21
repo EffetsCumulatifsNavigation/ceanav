@@ -81,7 +81,7 @@ tab %>%
 
 To characterize fishing intensity ($I_{peche}$), we assessed the total frequency of fishing activities during the period considered (`r meta$dataDescription$temporal$start` - `r meta$dataDescription$temporal$end`) overlapping each study grid cell: 
 
-$$I_{peche,j} = \sum_{k=1}^{n_j} P_{j,k}$$
+$$I_{fishing,j} = \sum_{k=1}^{n_j} P_{j,k}$$
 
 where $j$ is a study grid cell, $k$ is a fishing activity, and $P_k$ is the buffer zone surrounding each $k$ fishing activity. This formula calculates fishing intensity expressed as the number of identified fishing activities. Since we have calculated the intensity within cells of 1 $km^2$, the units of this formula are in number of activities ($n$) per $km^2$, or $n * km^{-2}$. Since buffer zones were used around each activity, it is possible that a single fishing activity is identified for more than one cell in the study grid. The total sum of activities in the study grid will therefore not equal the actual total sum of fishing activities identified in the study area. 
 

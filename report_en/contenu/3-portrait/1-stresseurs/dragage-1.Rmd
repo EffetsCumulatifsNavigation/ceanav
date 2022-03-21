@@ -81,7 +81,7 @@ The intensity of dredging (Figure \@ref(fig:dragage)), sediment disposal (Figure
 
 To do so, we multiplied the total volumes in each $j$ cell of the study grid by the proportion of the area where dredging would take place covering cell $j$:
 
-$$I_{dragage,j} = \sum_{k=1}^{n_j} V_{tot, k} * \frac{A_{j,k}}{A_{tot,k}}$$
+$$I_{dredging,j} = \sum_{k=1}^{n_j} V_{tot, k} * \frac{A_{j,k}}{A_{tot,k}}$$
 
 where $j$ is a study grid cell, $k$ is a dredging or disposal activity, $V_{tot}$ is the total volume dredged or deposited during the dredging or disposal activity, $A$ is the dredging area where dredging would take place $k$ that intersects a $j$ cell, and $A_{tot}$ is the total area where the $k$ dredging or disposal occurs. This formula calculates an assessment of the dredging intensity in $m^3$. Since we have calculated the intensity in cells of 1 $km^2$, the units of this formula are in $m^3 * km^{-2}$.
 

@@ -63,7 +63,7 @@ The diffusion model establishes the zone of influence of the spills by creating 
 
 The intensity and spatial distribution of accidental spills in the study area was evaluated by distributing the relative intensity values modelled by the diffusive model within the 1 $km^2$ study grid. For each concentric ring modelled, we multiplied the intensity value within each $j$ of the study grid by the proportion of the ring area that intersects a $j$ cell:
 
-$$I_{déversement,j} = \sum_{k=1}^{n_j} I_{tot, k} * \frac{A_{j,k}}{A_{tot,k}}$$
+$$I_{spill,j} = \sum_{k=1}^{n_j} I_{tot, k} * \frac{A_{j,k}}{A_{tot,k}}$$
 
 where $j$ is a study grid cell, $k$ is a modelled concentric ring, $I_{tot}$ is the predicted relative intensity within the $k$ ring, $A$ is the area of the $k$ concentric ring that intersects a $j$ cell, and $A_{tot}$ is the total area of the $k$ concentric ring. Since the intensity values correspond to volume categories rather than a continuous quantity, the results of this diffusive model are relative and unitless.
 
