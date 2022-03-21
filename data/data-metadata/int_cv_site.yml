@@ -5,6 +5,7 @@ description: Distribution des sites d’intérêt culturels, patrimoniaux et arc
 id: site
 dataDescription:
   units: presence
+  units_en: presence
   spatial:
     resolution: 1km^2
     extent:

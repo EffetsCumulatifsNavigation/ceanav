@@ -4,7 +4,7 @@
 \alias{fig_cumulative_hotspots}
 \title{Figures hotspots cumulés}
 \usage{
-fig_cumulative_hotspots()
+fig_cumulative_hotspots(lang = "fr")
 }
 \description{
 Fonctions pour générer des figures pour les hotspots cumulés

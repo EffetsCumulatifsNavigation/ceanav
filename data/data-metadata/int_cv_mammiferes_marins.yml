@@ -4,6 +4,7 @@ description: Distribution des mammifères marins dans le Saint-Laurent et le Sag
 id: mammiferes_marins
 dataDescription:
   units: Densité relative des observations
+  units_en: Relative density of observations
   spatial:
     resolution: 1km^2
     extent:

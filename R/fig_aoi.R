@@ -2,7 +2,7 @@
 #'
 #' @export
 
-fig_aoi <- function() {
+fig_aoi <- function(lang = "fr") {
   # ------------------
   data(grid1p)
 
@@ -14,6 +14,13 @@ fig_aoi <- function() {
   basemap("cities")
   basemap("quebec")
 
+  # Labels
+  if (lang == "fr") {
+    labs <- c("Zone d'étude","Secteur fluvial","Secteur maritime","Grille d'étude")
+  } else if (lang == "en") {
+    labs <- c("Study area","Fluvial sector","Marine sector","Study grid")
+  }
+  
   # ------------------
   global_parameters()
 
@@ -41,7 +48,12 @@ fig_aoi <- function() {
 
   # ------------------------------------------------------------------------
   # Graph principal
-  png(glue('./figures/aoi.png'), res = global_param$figures$resolution, width = global_param$figures$width, height = global_param$figures$height, units = "mm", pointsize = global_param$figures$pointsize)
+  fold <- if (lang == "fr") {
+    glue('./figures/aoi.png')
+  } else if (lang == "en") {
+    glue('./figures_en/aoi.png')
+  }
+  png(fold, res = global_param$figures$resolution, width = global_param$figures$width, height = global_param$figures$height, units = "mm", pointsize = global_param$figures$pointsize)
 
   # ------------------
   par(family = 'serif', mar = c(.5, .5, .5, .5))
@@ -60,12 +72,11 @@ fig_aoi <- function() {
   plot0(x = c(bbox$xmin, bbox$xmax), y = c(bbox$ymin, bbox$ymax))
   box()
 
-
   # ------------------
   # Text
   text(x = bbox$xmin + 1000,
        y = bbox$ymax - 10000,
-       labels = "Zone d'étude",
+       labels = labs[1],
        font = 2,
        adj = c(0,.5),
        cex = .8
@@ -91,8 +102,8 @@ fig_aoi <- function() {
   # ------------------
   # Secteurs
   lines(x = rep(-200000, 2), y = c(270000, 370000), lwd = 1.5, lty = 2)
-  text(x = -335000, 350000, labels = c("Secteur fluvial"), cex = .7, font = 3, adj = c(.5,.5), srt = 30)
-  text(x = 60000, 460000, labels = c("Secteur maritime"), cex = .7, font = 3, adj = c(.5,.5), srt = 30)
+  text(x = -335000, 350000, labels = labs[2], cex = .7, font = 3, adj = c(.5,.5), srt = 30)
+  text(x = 60000, 460000, labels = labs[3], cex = .7, font = 3, adj = c(.5,.5), srt = 30)
 
   # ------------------
   rect(lacstpierre[1], lacstpierre[3], lacstpierre[2], lacstpierre[4], lty = 2,
@@ -106,7 +117,7 @@ fig_aoi <- function() {
   plot0(x = c(lacstpierre$xmin, lacstpierre$xmax), y = c(lacstpierre$ymin, lacstpierre$ymax))
   box(col = "#00000088")
   plotDat(trans = "FF")
-  text(x = lacstpierre$xmin + 750, y = lacstpierre$ymax - 3000, labels = "Grille d'étude", cex = .5, font = 3, adj = c(0,.5))
+  text(x = lacstpierre$xmin + 750, y = lacstpierre$ymax - 3000, labels = labs[4], cex = .5, font = 3, adj = c(0,.5))
 
   # ---------------------------
   # Québec

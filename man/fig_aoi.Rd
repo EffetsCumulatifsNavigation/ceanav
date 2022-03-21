@@ -4,7 +4,7 @@
 \alias{fig_aoi}
 \title{Figure of study area}
 \usage{
-fig_aoi()
+fig_aoi(lang = "fr")
 }
 \description{
 Figure of study area

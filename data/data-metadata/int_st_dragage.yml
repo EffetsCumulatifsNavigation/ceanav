@@ -5,6 +5,7 @@ description: Distribution des sites de dragage et de dépôt de dragage dans le 
 id: dragage
 dataDescription:
   units: m^3 * km^{-2}
+  units_en: m^3 * km^{-2}
   spatial:
     resolution: 1km^2
     extent:

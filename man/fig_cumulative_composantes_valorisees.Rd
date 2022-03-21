@@ -4,7 +4,7 @@
 \alias{fig_cumulative_composantes_valorisees}
 \title{Figures composantes valorisées cumulés}
 \usage{
-fig_cumulative_composantes_valorisees()
+fig_cumulative_composantes_valorisees(lang = "fr")
 }
 \description{
 Fonctions pour générer des figures pour les composantes_valorisees cumulés

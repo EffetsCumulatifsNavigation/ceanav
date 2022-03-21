@@ -3,7 +3,7 @@ title_en: Habitats
 description: Distribution des habitats dans le Saint-Laurent et le Saguenay
 id: habitat
 dataDescription:
-  units: presence
+  units_en: presence
   spatial:
     resolution: 1km^2
     extent:

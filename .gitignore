@@ -64,6 +64,13 @@ figures/figures-vulnerability/*.png
 figures/figures-exploration
 report/figures/figures-exploration/
 
+# Figures english----
+figures_en/figures-format/data*
+figures_en/figures-integrated/*.png
+figures_en/figures-output/*.png
+figures_en/figures-vulnerability/*.png
+figures_en/figures-exploration
+
 clean/
 report/contenu/notes/
 literature/

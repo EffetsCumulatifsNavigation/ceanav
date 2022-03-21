@@ -5,6 +5,7 @@ description: Distribution des segments de berge sensibles à l'érosion dans le 
 id: berge
 dataDescription:
   units: presence
+  units_en: presence
   spatial:
     resolution: 1km^2
     extent:

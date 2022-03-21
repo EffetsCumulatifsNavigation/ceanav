@@ -4,7 +4,7 @@
 \alias{fig_cumulative_effects}
 \title{Figures effets cumulatifs0}
 \usage{
-fig_cumulative_effects()
+fig_cumulative_effects(lang = "fr")
 }
 \description{
 Fonctions pour générer des figures pour les effets cumulatifs

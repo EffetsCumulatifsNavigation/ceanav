@@ -4,7 +4,7 @@
 \alias{fig_data0051_ballast}
 \title{Figure of ballast exchange waters - data0051}
 \usage{
-fig_data0051_ballast()
+fig_data0051_ballast(lang = "fr")
 }
 \description{
 Figure of ballast exchange waters - data0051

@@ -4,7 +4,7 @@
 \alias{fig_cumulative_stresseurs}
 \title{Figures stresseurs cumulés}
 \usage{
-fig_cumulative_stresseurs()
+fig_cumulative_stresseurs(lang = "fr")
 }
 \description{
 Fonctions pour générer des figures pour les stresseurs cumulés

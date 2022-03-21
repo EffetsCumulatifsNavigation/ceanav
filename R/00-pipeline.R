@@ -192,22 +192,31 @@ pipeline <- function(
   if (pipeline_figures) {
     # Zone d'étude
     fig_aoi()
-
-    # Données formatées (annexe)
-    # fig_format_all()
+    fig_aoi("en")
+    
+    # Ballast
+    fig_data0051_ballast()
+    fig_data0051_ballast("en")
 
     # Données intégrées (portrait)
     fig_integrated_all()
+    fig_integrated_all("en")
 
     # Matrices vulnérabilité
     fig_vulnerability()
+    fig_vulnerability("en")
 
     # Analyses
     fig_cumulative_stresseurs()
+    fig_cumulative_stresseurs("en")
     fig_cumulative_hotspots()
+    fig_cumulative_hotspots("en")
     fig_cumulative_composantes_valorisees()
+    fig_cumulative_composantes_valorisees("en")
     fig_cumulative_exposure()
+    fig_cumulative_exposure("en")
     fig_cumulative_effects()
+    fig_cumulative_effects("en")
     fig_regional_contribution()
     fig_metanetwork()
     fig_region_cea_km2()
@@ -274,7 +283,8 @@ pipeline <- function(
     # 
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     # English report
-    file.copy("./figures/", "./report_en/", recursive = TRUE)
+    file.copy("./figures_en/", "./report_en/", recursive = TRUE)
+    system("mv report_en/figures_en/ report_en/figures/")
     suppressWarnings({
       setwd('./report_en/')
 

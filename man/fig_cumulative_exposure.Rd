@@ -4,7 +4,7 @@
 \alias{fig_cumulative_exposure}
 \title{Figures exposition cumul/e}
 \usage{
-fig_cumulative_exposure()
+fig_cumulative_exposure(lang = "fr")
 }
 \description{
 Fonctions pour générer des figures pour l'exposition cumulée

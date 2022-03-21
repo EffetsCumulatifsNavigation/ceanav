@@ -8,6 +8,7 @@ rawData:
 - '0035'
 dataDescription:
   units: n*km^{-2}
+  units_en: n*km^{-2}
   spatial:
     resolution: 1km^2
     extent:

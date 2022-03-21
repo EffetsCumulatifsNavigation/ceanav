@@ -10,6 +10,7 @@ rawData:
 - '0047'
 dataDescription:
   units: n transit * km^{-2}
+  units_en: n transit * km^{-2}
   spatial:
     resolution: 1km^2
     extent:

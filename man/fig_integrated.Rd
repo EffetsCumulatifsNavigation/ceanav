@@ -5,9 +5,9 @@
 \alias{fig_integrated_all}
 \title{Figures données intégrées}
 \usage{
-fig_integrated(data_id)
+fig_integrated(data_id, lang = "fr")
 
-fig_integrated_all()
+fig_integrated_all(lang = "fr")
 }
 \description{
 Fonctions pour générer des figures pour les données intégrées

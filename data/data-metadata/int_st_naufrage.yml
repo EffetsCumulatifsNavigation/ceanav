@@ -5,6 +5,7 @@ description: Distribution des sites de naufrages de navires dans le Saint-Lauren
 id: naufrage
 dataDescription:
   units: Sans unité
+  units_en: No units
   spatial:
     resolution: 1km^2
     extent:

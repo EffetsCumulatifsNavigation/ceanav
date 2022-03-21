@@ -5,6 +5,7 @@ description: Distribution des sites d'ancrage de navires dans le Saint-Laurent e
 id: ancrage
 dataDescription:
   units: n sites * km^{-2}
+  units_en: n sites * km^{-2}
   spatial:
     resolution: 1km^2
     extent:

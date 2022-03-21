@@ -2,7 +2,7 @@
 #'
 #' @export
 
-fig_data0051_ballast <- function() {
+fig_data0051_ballast <- function(lang = "fr") {
   # ------------------
   data(aoi)
   aoi <- suppressWarnings(st_simplify(aoi, dTolerance = 100, preserveTopology = F))
@@ -15,8 +15,14 @@ fig_data0051_ballast <- function() {
   global_parameters()
 
   # ------------------------------------------------------------------------
+  if (lang == "fr") {
+    output <- glue('./figures/data0051-ballast.png')   
+  } else {
+    output <- glue('./figures_en/data0051-ballast.png')   
+  }
+  
   # Graph principal
-  png(glue('./figures/data0051-ballast.png'), res = 300, width = 70, height = 70, units = "mm", pointsize = 12)
+  png(output, res = 300, width = 70, height = 70, units = "mm", pointsize = 12)
 
   # ------------------
   par(family = 'serif', mar = c(.5, .5, 1, .5))
@@ -37,14 +43,19 @@ fig_data0051_ballast <- function() {
 
   # ------------------
   # Text
+  
   mtext(side = 3,
-       text = "Zones désignées de renouvellement d’eau de ballast",
+       text = ifelse(lang == "fr", 
+                     "Zones désignées de renouvellement d’eau de ballast",
+                     "Designated alternate ballast water exchange areas"),
        font = 2,
        adj = 0,
        cex = .6
      )
 
-  mtext(text = glue("Donnée(s) brute(s) : 0051"),
+  mtext(text = ifelse(lang == "fr", 
+                      glue("Données brutes : 0051"), 
+                      glue("Raw data: 0051")),
         side = 1,
         font = 3,
         adj = .98,
@@ -91,14 +102,20 @@ fig_data0051_ballast <- function() {
   )
 
   # ---------------------------
+  if (lang == "fr") {
+    lab <- c("Zone d'étude","Zones de","renouvellement")
+  } else {
+    lab <- c("Study area", "Ballast water", "exchange areas")
+  }
+  
   # Legend
   xmin <- par("usr")[1]
   xmax <- par("usr")[2]
   ymin <- par("usr")[3]
   ymax <- par("usr")[4]
-  text(x = xmax-480000, y = ymax-100000, labels = "Zone d'étude", cex = .5, adj = c(0,.5), family = "serif", font = 3)
-  text(x = xmax-480000, y = ymax-225000, labels = "Zones de", cex = .5, adj = c(0,.5), family = "serif", font = 3)
-  text(x = xmax-480000, y = ymax-300000, labels = "renouvellement", cex = .5, adj = c(0,.5), family = "serif", font = 3)
+  text(x = xmax-480000, y = ymax-100000, labels = lab[1], cex = .5, adj = c(0,.5), family = "serif", font = 3)
+  text(x = xmax-480000, y = ymax-225000, labels = lab[2], cex = .5, adj = c(0,.5), family = "serif", font = 3)
+  text(x = xmax-480000, y = ymax-300000, labels = lab[3], cex = .5, adj = c(0,.5), family = "serif", font = 3)
 
   polygon(x = c(rep(xmax-520000,2),rep(xmax-600000,2)),
           y = c(ymax-130000, ymax-70000, ymax-70000, ymax-130000),
