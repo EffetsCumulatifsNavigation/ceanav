@@ -1,3 +1,3 @@
 ## Vulnerability {#vulnportrait}
 
-The following sections present the data, approaches, and results of the vulnerability assessment of valued components to the environmental stressors considered for the marine activities cumulative effects assessment in the study area. A general description of the vulnerability assessment in a cumulative effects assessment context is presented in section \@ref(vulnmethod) of the report.
+The following sections present the data, approaches, and results of the vulnerability assessment of valued components to the environmental stressors considered for the marine vessel activities cumulative effects assessment in the study area. A general description of the vulnerability assessment in a cumulative effects assessment context is presented in section \@ref(vulnmethod) of the report.

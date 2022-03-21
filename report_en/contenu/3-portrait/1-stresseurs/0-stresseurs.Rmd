@@ -4,7 +4,7 @@
 st <- read.csv("../data/data-metadata/metadata_stresseurs.csv")
 ```
 
-Characterization of environmental stressors in the study area resulted in the description of `r length(unique(st$stresseur))` stressors divided into `r nrow(st)` subcategories that are considered for the cumulative effects assessment of marine activities (Table \@ref(tab:stress)). The following sections present the data, methods, and results of the data integration allowing us to characterize the environmental stressors in the study area.
+Characterization of environmental stressors in the study area resulted in the description of `r length(unique(st$stresseur))` stressors divided into `r nrow(st)` subcategories that are considered for the cumulative effects assessment of marine vessel activities (Table \@ref(tab:stress)). The following sections present the data, methods, and results of the data integration allowing us to characterize the environmental stressors in the study area.
 
 <br/>
 
@@ -19,7 +19,7 @@ tab %>%
     col.names = c("Environmental stressors", "Subcategories", "Description", "Source"),
     row.names = FALSE,
     caption = "
-    List of environmental stressor subcategories considered for the cumulative effects assessment of marine activities in the St. Lawrence and the Saguenay river. See [Appendix 1](#annexe1) for more details on data sources."
+    List of environmental stressor subcategories considered for the cumulative effects assessment of marine vessel activities in the St. Lawrence and the Saguenay river. See [Appendix 1](#annexe1) for more details on data sources."
   ) #%>%
   #kableExtra::row_spec(uid, extra_css = "border-bottom: 2px solid")
 ```

@@ -1,6 +1,6 @@
 # Appendix 6 {.unnumbered #annexe6}
 
-Equivalencies between environmental stressors considered for the cumulative effects assessments of marine activities in the St. Lawrence and the Saguenay river and those described in the vulnerability matrix proposed by @clarkemurray2015a.
+Equivalencies between environmental stressors considered for the cumulative effects assessments of marine vessel activities in the St. Lawrence and the Saguenay river and those described in the vulnerability matrix proposed by @clarkemurray2015a.
 
 ```{r stresscomp}
 tab <- data.frame(

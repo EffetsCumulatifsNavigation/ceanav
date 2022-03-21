@@ -4,7 +4,7 @@
 meta <- read_yaml("../data/data-metadata/int_cv_habitat.yml")
 ```
 
-A data search was conducted to characterize various types of habitats characteristic of the St. Lawrence and Saguenay rivers that could be affected by marine activities. The habitats considered are those for which data have been open and accessible from the federal and provincial platforms [Open Government](https://open.canada.ca/en), [Données Québec] (https://www.donneesquebec.ca/) and the [St. Lawrence Global Observatory](https://ogsl.ca/), or data shared by various departments/ministries and partners. This data search enabled us to characterize `r length(meta$dataDescription$categories$accronyme)` habitat types within the study area (Table \@ref(tab:habitatCat)). The habitats were characterized as presence-absence in the study grid. The following sections provide more information on the characterization of the various habitat types.
+A data search was conducted to characterize various types of habitats characteristic of the St. Lawrence and Saguenay rivers that could be affected by marine vessel activities. The habitats considered are those for which data have been open and accessible from the federal and provincial platforms [Open Government](https://open.canada.ca/en), [Données Québec] (https://www.donneesquebec.ca/) and the [St. Lawrence Global Observatory](https://ogsl.ca/), or data shared by various departments/ministries and partners. This data search enabled us to characterize `r length(meta$dataDescription$categories$accronyme)` habitat types within the study area (Table \@ref(tab:habitatCat)). The habitats were characterized as presence-absence in the study grid. The following sections provide more information on the characterization of the various habitat types.
 
 
 

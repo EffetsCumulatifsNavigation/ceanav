@@ -1,6 +1,6 @@
 # Appendix 3 {.unnumbered #annexe3}
 
-Description of the research compendium prepared to structure the cumulative effects assessment of marine activities in the St. Lawrence and the river Saguenay.
+Description of the research compendium prepared to structure the cumulative effects assessment of marine vessel activities in the St. Lawrence and the river Saguenay.
 
 #### ceanav <a href='https://github.com/EffetsCumulatifsNavigation/ceanav'><img src='./figures/logo.png' align="right" height="175" /></a> {.unnumbered}
 
@@ -11,7 +11,7 @@ knitr::include_graphics("./figures/logo.png")
 [![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#preliminary)
 ![](https://img.shields.io/badge/status-preliminary-blue.svg)
 
-This repository contains the research compendium for the pilot project on the cumulative effects assessment of marine activities in the St. Lawrence and the river Saguenay. It contains all the code to import, format, and integrate the datasets, and to run the analyses, create the figures, and render the assessment report. 
+This repository contains the research compendium for the pilot project on the cumulative effects assessment of marine vessel activities in the St. Lawrence and the river Saguenay. It contains all the code to import, format, and integrate the datasets, and to run the analyses, create the figures, and render the assessment report. 
 
 Since the data are not included in the research compendium, the whole pipeline must be executed to reproduce the cumulative effects assessment. It must however be noted that not all data are openly available or accessible through open-data portals due to some data sharing agreements. It is therefore necessary to contact us or the contacts identified to obtain the necessary data.
 
@@ -20,7 +20,7 @@ Since the data are not included in the research compendium, the whole pipeline m
 
 Cite the research compendium as follows: 
 
-> Beauchesne D (2022) Research compendium for the pilot project on the cumulative effects assessment of marine activities in the St. Lawrence and the river Saguenay. Consulted on [AAAA-MM-JJ]. https://github.com/EffetsCumulatifsNavigation/ceanav.
+> Beauchesne D (2022) Research compendium for the pilot project on the cumulative effects assessment of marine vessel activities in the St. Lawrence and the river Saguenay. Consulted on [AAAA-MM-JJ]. https://github.com/EffetsCumulatifsNavigation/ceanav.
 
 #### Content {-}
 

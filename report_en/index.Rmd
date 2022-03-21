@@ -1,5 +1,5 @@
 ---
-title: "Cumulative effects assessment of marine activities in the St. Lawrence and the Saguenay River – Pilot Project"
+title: "Cumulative effects assessment of marine vessel activities in the St. Lawrence and the Saguenay River – Pilot Project"
 # subtitle: "Rapport préliminaire"
 author: "David Beauchesne, Cindy Grant, Philippe Archambault"
 date: "`r Sys.Date()`"
@@ -87,4 +87,4 @@ catherine.guillemette@tc.gc.ca<br/>
 
 #### Citation {-}
 
-Beauchesne D, Grant C, Archambault P (2022) Cumulative effects assessment of marine activities in the St. Lawrence and the Saguenay River – Pilot Project. Report prepared for Transport Canada.
+Beauchesne D, Grant C, Archambault P (2022) Cumulative effects assessment of marine vessel activities in the St. Lawrence and the Saguenay River – Pilot Project. Report prepared for Transport Canada.

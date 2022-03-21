@@ -13,15 +13,15 @@ On the operational discharge side, this decision was made due to the lack of dat
 
 <br/>
 
-```{r ballast, fig.cap = "Location of Canada's designated alternate ballast water exchange areas relative to the position of the study area for the cumulative effects assessment of marine activities in the St. Lawrence and the Saguenay river.", out.width = '80%', fig.link = "./figures/data0051-ballast.png"}
+```{r ballast, fig.cap = "Location of Canada's designated alternate ballast water exchange areas relative to the position of the study area for the cumulative effects assessment of marine vessel activities in the St. Lawrence and the Saguenay river.", out.width = '80%', fig.link = "./figures/data0051-ballast.png"}
 knitr::include_graphics("./figures/data0051-ballast.png")
 ```
 
 <br/>
 
-On the water quality side, this decision was made due to the difficulty of attributing variations in water quality specifically to marine activities. There are many other factors that influence water quality in coastal, aquatic and marine environments, and differentiating these effects was beyond the scope of this pilot project. More details are available in the section on water quality.
+On the water quality side, this decision was made due to the difficulty of attributing variations in water quality specifically to marine vessel activities. There are many other factors that influence water quality in coastal, aquatic and marine environments, and differentiating these effects was beyond the scope of this pilot project. More details are available in the section on water quality.
 
-As in @halpern2019, marine pollution was characterized by combining environmental stressors related to marine activities. This choice assumes that water quality is more at risk from shipping activities and the resulting pollution via operational discharges, gas leaks, waste discharges, etc. In the absence of exhaustive data on operational discharges and the difficulty of establishing a direct link between water quality and cumulative marine activities, we used the marine pollution index as a proxy to identify the environments most at risk from pollution from marine activities.
+As in @halpern2019, marine pollution was characterized by combining environmental stressors related to marine vessel activities. This choice assumes that water quality is more at risk from shipping activities and the resulting pollution via operational discharges, gas leaks, waste discharges, etc. In the absence of exhaustive data on operational discharges and the difficulty of establishing a direct link between water quality and cumulative marine vessel activities, we used the marine pollution index as a proxy to identify the environments most at risk from pollution from marine vessel activities.
 
 The marine pollution index is obtained by combining the relative intensity of all stressors directly associated with shipping activities, *i.e.* anchorage sites, dredging activities, shipping-related activities and commercial fishing. Characterization of the accidental spills is not included since it has already been explained in detail in the issue of toxic spills in the environment rather than as a stressor related to regular shipping problems. The marine pollution intensity ($I_{pollution}$) within a cell $j$ is the sum of the intensity of selected environmental stressors normalized between 0 and 1:
 

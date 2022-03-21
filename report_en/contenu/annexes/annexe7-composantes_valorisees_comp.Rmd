@@ -1,6 +1,6 @@
 # Appendix 7 {.unnumbered #annexe7}
 
-Equivalencies between valued components considered for the cumulative effects assessments of marine activities in the St. Lawrence and the Saguenay river and those described in the vulnerability matrix proposed by @clarkemurray2015a.
+Equivalencies between valued components considered for the cumulative effects assessments of marine vessel activities in the St. Lawrence and the Saguenay river and those described in the vulnerability matrix proposed by @clarkemurray2015a.
 
 ```{r cvcomp}
 tab <- data.frame(

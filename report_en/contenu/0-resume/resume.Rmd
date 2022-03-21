@@ -35,9 +35,9 @@ ct2 <- function(dat) {
 }
 ```
 
-Through the St. Lawrence action plan, the Government of Canada and the Government of Quebec have been collaborating since 2018 on a common framework for the assessment of the cumulative effects of maritime activities on the St. Lawrence and Saguenay River, working closely with First Nations, various stakeholders and coastal communities. A team from Laval University was mandated for a pilot assessment of cumulative effects. The [objective](#objectifs) of the pilot project was to propose and test a cumulative effects assessment approach in a [study area](#zoneetude) that covers the St. Lawrence (fluvial section and estuary) and the Saguenay River (deep water section). This pilot project is centered on the assessment of the cumulative effects of [7 environmental stressors](#stintro) originating from maritime activities on [5 valued components](#cvintro) identified beforehand through consultation workshops with relevant experts, collaborators, and stakeholders. 
+Through the St. Lawrence action plan, the Government of Canada and the Government of Quebec have been collaborating since 2018 on a common framework for the assessment of the cumulative effects of marine vessel activities on the St. Lawrence and Saguenay River, working closely with First Nations, various stakeholders and coastal communities. A team from Laval University was mandated for a pilot assessment of cumulative effects. The [objective](#objectifs) of the pilot project was to propose and test a cumulative effects assessment approach in a [study area](#zoneetude) that covers the St. Lawrence (fluvial section and estuary) and the Saguenay River (deep water section). This pilot project is centered on the assessment of the cumulative effects of [7 environmental stressors](#stintro) originating from marine vessel activities on [5 valued components](#cvintro) identified beforehand through consultation workshops with relevant experts, collaborators, and stakeholders. 
 
-The [method](#methode) selected to assess the [cumulative effects](#sectioncea) of maritime activities in the study area comes from @halpern2008a and requires three types of data: 1) [the spatial presence or absence of valued components](#cvmethod), 2) [the spatial distribution and relative intensity of environmental stressors](#strmethod), and 3) [the relative vulnerability of each valued component to each stressor](#vulnmethod). The proposed method combines those three elements to obtain a [cumulative effects score that is relative and spatially explicit](#ceamethod).
+The [method](#methode) selected to assess the [cumulative effects](#sectioncea) of marine vessel activities in the study area comes from @halpern2008a and requires three types of data: 1) [the spatial presence or absence of valued components](#cvmethod), 2) [the spatial distribution and relative intensity of environmental stressors](#strmethod), and 3) [the relative vulnerability of each valued component to each stressor](#vulnmethod). The proposed method combines those three elements to obtain a [cumulative effects score that is relative and spatially explicit](#ceamethod).
 
 The process of gathering the necessary data to apply this cumulative effects approach is referred to, in this report, as the [portrait](#portrait) of the study area. The characterization of [environmental stressors](#strportrait) was done through the integration of `r src(st)` datasets and results in the description of `r length(unique(st$title))` stressors divided in `r nrow(st)` subcategories: `r ct1(st)`. The characterization of [valued components](#cvportrait), meanwhile, was done through the integration of `r src(cv)` datasets and resulted in the description of `r length(unique(cv$title))` valued components divided in `r nrow(cv)` subcategories: `r ct2(cv)`. Finally, an approach combining metrics of exposure and sensitivity -- *e.g.* stressor frequency, trophic impact, resistance, resilience, legal status -- was used to assess the [relative vulnerability](#vulnportrait) of subcategories of valued components to subcategories of environmental stressors. 
 
@@ -48,7 +48,7 @@ Here, we detail the general observations that arise from the cumulative effects 
 
 
 
-- **Distribution of environmental stressors arising from maritime activities**
+- **Distribution of environmental stressors arising from marine vessel activities**
   - The whole study area is exposed to environmental stressors;
   - Major port cities and the St. Lawrence waterway are particularly exposed to cumulative stressors;
   - Shipping and maritime pollution are the most widely spread stressors in the study area.
@@ -64,7 +64,7 @@ Here, we detail the general observations that arise from the cumulative effects 
 <br/>
 
 - **Distribution of cumulative effects**
-  - The whole study area is affected by the cumulative effects of maritime activities at varying levels of intensity;
+  - The whole study area is affected by the cumulative effects of marine vessel activities at varying levels of intensity;
   - Cumulative effects are particularly intense and concentrated in the fluvial sector; the most intense effects are located in the regions of Quebec and the south of Île d'Orléans, lake Saint-Pierre, and the St. Lawrence waterway between Trois-Rivière and Montreal;
   - Cumulative effects are more diffuse in the maritime sector; the most intense effects are located at the mouth of the Saguenay River.
 
@@ -78,14 +78,14 @@ Here, we detail the general observations that arise from the cumulative effects 
 <br/>
 
 - **Valued components most affected**
-  - Sites of cultural, heritage and archeological interest are particularly exposed to the effects of maritime activities. Although this result is expected considering their high vulnerability in the context of this study, it remains an important observation and showcases the overlap between sites of interest for First Nations and maritime activities in the study area;
-  - Sites of interest for First Nations in the fluvial sector are more exposed to the effects of maritime activities because of the high concentration of effects in the sector;
+  - Sites of cultural, heritage and archeological interest are particularly exposed to the effects of marine vessel activities. Although this result is expected considering their high vulnerability in the context of this study, it remains an important observation and showcases the overlap between sites of interest for First Nations and marine vessel activities in the study area;
+  - Sites of interest for First Nations in the fluvial sector are more exposed to the effects of marine vessel activities because of the high concentration of effects in the sector;
   - Bank integrity in the fluvial sector is particularly affected by shipping, especially in the lake Saint-Pierre;
   - Habitats that were considered are affected by a wide variety of environmental stressors and predicted cumulative effects also varies between habitat types;
-  - Although marine mammals seem less affected than other valued components by the effects of maritime activities, it is important to consider the wide spatial distribution of those species in the maritime sector of the study area. Cumulative effects on marine mammals are instead localized and most intense at the mouth of the Saguenay River.
+  - Although marine mammals seem less affected than other valued components by the effects of marine vessel activities, it is important to consider the wide spatial distribution of those species in the maritime sector of the study area. Cumulative effects on marine mammals are instead localized and most intense at the mouth of the Saguenay River.
 
 <br/>
 
 - **Administrative regions most affected**
-  - The administrative regions of the fluvial sector are the most affected by the cumulative effects of maritime activities, and most especially for the Montérégie region. Cumulative effects are mostly driven by shipping, particularly by freight transport (*e.g.* tankers, dry bulk, cargo, and container carriers)
+  - The administrative regions of the fluvial sector are the most affected by the cumulative effects of marine vessel activities, and most especially for the Montérégie region. Cumulative effects are mostly driven by shipping, particularly by freight transport (*e.g.* tankers, dry bulk, cargo, and container carriers)
   - The Côte Nord region is the administrative region most affected in the maritime sector, mostly due to the effects of shipping on marine mammals.

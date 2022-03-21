@@ -4,7 +4,7 @@
 cv <- read.csv("../data/data-metadata/metadata_composantes_valorisees.csv")
 ```
 
-Characterization of valued components in the study area resulted in the description of `r length(unique(cv$title))` valued components divided into `r nrow(cv)`subcategories that are considered for the marine activities cumulative effects assessment (Table \@ref(tab:cv)). The subcategories were identified primarily by the availability and accessibility of data for the biophysical valued components (*i.e.* bank integrity, habitats, and marine mammals); thus, they should not be considered an exhaustive representation of the diversity of valued component subcategories. In the case of cultural, heritage and archeological areas of interest, the categories identified correspond to the data reported by various First Nations, but should not be interpreted as an exhaustive representation of First Nations land use (see section \@ref(pnportrait) for more details). 
+Characterization of valued components in the study area resulted in the description of `r length(unique(cv$title))` valued components divided into `r nrow(cv)`subcategories that are considered for the marine vessel activities cumulative effects assessment (Table \@ref(tab:cv)). The subcategories were identified primarily by the availability and accessibility of data for the biophysical valued components (*i.e.* bank integrity, habitats, and marine mammals); thus, they should not be considered an exhaustive representation of the diversity of valued component subcategories. In the case of cultural, heritage and archeological areas of interest, the categories identified correspond to the data reported by various First Nations, but should not be interpreted as an exhaustive representation of First Nations land use (see section \@ref(pnportrait) for more details). 
 
 Most of the data were integrated into the study grid as presence-absence; continuous quantitative characterization was performed for marine mammals only. The approach used is described in the section specific to marine mammals. The following sections present the data and results of the data integration enabling us to characterize the valued components in the study area.
 
@@ -23,7 +23,7 @@ tab %>%
   knitr::kable(
     col.names = c("Valued components", "Type", "Subcategories", "Source"),
     row.names = FALSE,
-    caption = "List of valued component subcategories considered for the cumulative effects assessment of marine activities in the St. Lawrence and the Saguenay river. See [Appendix 1](#annexe1) for more details on data sources."
+    caption = "List of valued component subcategories considered for the cumulative effects assessment of marine vessel activities in the St. Lawrence and the Saguenay river. See [Appendix 1](#annexe1) for more details on data sources."
   ) #%>%
   #kableExtra::row_spec(uid, extra_css = "border-bottom: 2px solid")
 ```

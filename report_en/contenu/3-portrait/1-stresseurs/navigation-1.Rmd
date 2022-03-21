@@ -28,7 +28,7 @@ Linear segments overlapping the land environment at a distance of over 2 km were
 To characterize shipping, we used an intensity index characterizing shipping in terms of single use -- or transits. For each vessel category, we assessed shipping intensity within the study area by the number of shipping segments that intersect each 1 $km^2$ cell of the study grid between `r meta$dataDescription$temporal$start` and `r meta$dataDescription$temporal$end`.
 This index results in an assessment of shipping intensity expressed as number of vessels ($n$) per $km^2$ ($n$ $navires$ $*$ $km^{-2}$)
 
-Despite the effort to segment and remove impossible transits, some impossible transits may still remain. For example, a very small number of transits is observed north of Île d’Orléans for cargo shipping (Figure \@ref(fig:CARGO)); these transits could not be removed by the automatic segmentation that was done and the total number of transits makes it impractical to remove them manually. However, there are very few of the impossible transits in the database, so this does not affect the final results of the cumulative effects assessment of marine activities in the study area. 
+Despite the effort to segment and remove impossible transits, some impossible transits may still remain. For example, a very small number of transits is observed north of Île d’Orléans for cargo shipping (Figure \@ref(fig:CARGO)); these transits could not be removed by the automatic segmentation that was done and the total number of transits makes it impractical to remove them manually. However, there are very few of the impossible transits in the database, so this does not affect the final results of the cumulative effects assessment of marine vessel activities in the study area. 
 
 <br/>
 
@@ -44,7 +44,7 @@ tab %>%
   knitr::kable(
     col.names = c("Ship type", "Ships", "Locations", "Tracks"),
     row.names = FALSE,
-    caption = "Description of the types of ships considered for the cumulative effects assessment of marine activities in the St. Lawrence and the Saguenay river and their representation in the Automatic Identification System data used [@tc2020; @tc2020b]. "
+    caption = "Description of the types of ships considered for the cumulative effects assessment of marine vessel activities in the St. Lawrence and the Saguenay river and their representation in the Automatic Identification System data used [@tc2020; @tc2020b]. "
   )
 ```
 

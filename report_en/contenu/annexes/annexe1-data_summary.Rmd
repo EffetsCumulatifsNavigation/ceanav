@@ -1,6 +1,6 @@
 # Appendix 1 {.unnumbered #annexe1} 
 
-List and desription of datasets considsered for the cumulative effects assessments of marine activities in the St. Lawrence and the Saguenay river. The datasets considered for the assessment are identified with a unique identifier used in the report and the research compendium. The datasets that were not retained were kept to document which datasets were considered for the assessment. The datasets were not retained because they were covered by other datasets or because they did not address a specific objective of the assessment.
+List and desription of datasets considsered for the cumulative effects assessments of marine vessel activities in the St. Lawrence and the Saguenay river. The datasets considered for the assessment are identified with a unique identifier used in the report and the research compendium. The datasets that were not retained were kept to document which datasets were considered for the assessment. The datasets were not retained because they were covered by other datasets or because they did not address a specific objective of the assessment.
 
 <div style="overflow-x:auto;">
 ```{r}

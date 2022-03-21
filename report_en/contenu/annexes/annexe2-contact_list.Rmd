@@ -1,6 +1,6 @@
 # Appendix 2 {.unnumbered #annexe2}
 
-List of organizations and experts consulted for the assessment, or data owners; they are identified by a unique identifier of the form `####` that is used in [Appendix 1](#annexe1) to describe the datasets considered for the cumulative effects assessment of marine activities in the St. Lawrence and the Saguenay river. 
+List of organizations and experts consulted for the assessment, or data owners; they are identified by a unique identifier of the form `####` that is used in [Appendix 1](#annexe1) to describe the datasets considered for the cumulative effects assessment of marine vessel activities in the St. Lawrence and the Saguenay river. 
 
 ```{r}
 rep_annexe_contact(lang = "en")

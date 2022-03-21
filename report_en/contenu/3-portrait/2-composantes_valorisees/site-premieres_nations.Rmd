@@ -1,6 +1,6 @@
 #### Areas of interest to First Nations {#pnportrait}
 
-In this pilot project, particular importance was assigned to areas of interest to First Nations. Marine activities may affect the conditions that underlie the exercise of First Nations’ Indigenous rights, especially in terms of access to resources and the land. A collaborative process was therefore initiated with Indigenous nations who conduct activities in the study area now or have done in the past. The following participating Indigenous Nations provided data
+In this pilot project, particular importance was assigned to areas of interest to First Nations. Marine vessel activities may affect the conditions that underlie the exercise of First Nations’ Indigenous rights, especially in terms of access to resources and the land. A collaborative process was therefore initiated with Indigenous nations who conduct activities in the study area now or have done in the past. The following participating Indigenous Nations provided data
 
 - Huron-Wendat Nation
 - Innu Nation of Essipit
@@ -10,7 +10,7 @@ In this pilot project, particular importance was assigned to areas of interest t
 
 An information sharing protocol was developed in cooperation with the participating First Nations. This protocol provides a framework for data use that supports First Nations OCAP principles in research: PCAP$^{MD}$ (Ownership, Control, Access, Possession). Applying these principles serves to protect First Nations’ information and knowledge assets. These principles state that a community, a nation, or a group owns information collectively. These principles apply to all types and fields of research conducted on First Nations lands and/or that concern First Nations.
 
-One-on-one meetings were held with representatives of participating First Nations to present the project and discuss the needs for information in order to incorporate the areas of interest into the cumulative effects assessment. The participating First Nations subsequently proceeded to gather cartographic and non-cartographic information representing their respective Nations’ areas of interest. Our research team therefore did not collect any data; this work was carried out by the participating First Nations, who subsequently sent us data designating areas of interest to be considered in the cumulative effects assessment of marine activities.
+One-on-one meetings were held with representatives of participating First Nations to present the project and discuss the needs for information in order to incorporate the areas of interest into the cumulative effects assessment. The participating First Nations subsequently proceeded to gather cartographic and non-cartographic information representing their respective Nations’ areas of interest. Our research team therefore did not collect any data; this work was carried out by the participating First Nations, who subsequently sent us data designating areas of interest to be considered in the cumulative effects assessment of marine vessel activities.
 
 An open access cartographic atlas developed by the Mi’kmaq and Maliseet Aboriginal Fisheries Management Association [MMAFMA; @arsenault2017] also provided land use data for the Gespeg Mi’kmaq, Gesgapegiag Mi’kmaq and Wolastoqiyik Wahsipekuk Nations.
 
@@ -30,7 +30,7 @@ The areas of interest identified by the Nations have been kept separate rather t
 
 Each Nation organized and categorized its own areas of interest; these categories have been kept as reported despite similarities between the categories having been identified among the participating First Nations. There has been no attempt to harmonize categories among the First Nations. This choice was made in order to avoid distorting the information transmitted by the Nations. In addition, since the areas identified by the various Nations remain separate for the assessment, harmonizing the categories of areas of interest would not have affected the assessment. We thus decided to keep the wording used in the data transmitted.
 
-There are a few points that must be kept in mind regarding areas of interest to First Nations. First, the information reported cannot be considered an exhaustive description of the areas of interest for all members of Indigenous Nations; the consultation process with the members of each Nation from which the information was derived was limited, and the information was integrated only in the context of the project assessing the cumulative effects of marine activities. The areas of interest identified come from other studies whose data were integrated to meet the objectives of this study. In addition, not all First Nations with an area of interest in the study area were able to be involved in the project. For example, despite the areas of interest for the Wolastoqiyik Wahsipekuk Nation being included, a collaborative process similar to that carried out with the other Nations could not be established; the socio-cultural data of the Wolastoqiyik Wahsipekuk Nation could therefore not be included in our assessment. The characterization of the areas of interest cannot be deemed exhaustive for all the First Nations in the region being studied.
+There are a few points that must be kept in mind regarding areas of interest to First Nations. First, the information reported cannot be considered an exhaustive description of the areas of interest for all members of Indigenous Nations; the engagement process with the members of each Nation from which the information was derived was limited, and the information was integrated only in the context of the project assessing the cumulative effects of marine vessel activities. The areas of interest identified come from other studies whose data were integrated to meet the objectives of this study. In addition, not all First Nations with an area of interest in the study area were able to be involved in the project. For example, despite the areas of interest for the Wolastoqiyik Wahsipekuk Nation being included, a collaborative process similar to that carried out with the other Nations could not be established; the socio-cultural data of the Wolastoqiyik Wahsipekuk Nation could therefore not be included in our assessment. The characterization of the areas of interest cannot be deemed exhaustive for all the First Nations in the region being studied.
 
 Second, the First Nations’ connection to place goes beyond a strictly utilitarian and functional perspective; this perspective is difficult to capture through a mapping of areas of interest, which has the effect of objectifying them. This means it is important to consider that the areas of interest identified are part of a broader cultural and ecological context as opposed to a mere geographical location. 
 
@@ -120,7 +120,7 @@ The result of the integration of these data provides the location of areas of in
 - Access to the water
 - Culture and heritage
 
-These categories of area of interest are used in the marine activities cumulative effects assessment in the study area. It is important to note that the original data used cover a wider area than the study area of this assessment, but were intersected and limited to our study area.
+These categories of area of interest are used in the marine vessel activities cumulative effects assessment in the study area. It is important to note that the original data used cover a wider area than the study area of this assessment, but were intersected and limited to our study area.
 
 
 <br>
@@ -303,7 +303,7 @@ The data transmitted by the Mohawk Nation of Kahnawà:ke provide the location of
   - Seigneurie du Sault-Saint-Louis
   - Shipping
 
-The sites making up these eight categories were used for the cumulative effects assessment of marine activities. It is important to note that the original data used cover a wider area than the study area of this assessment, but were intersected and limited to our study area.
+The sites making up these eight categories were used for the cumulative effects assessment of marine vessel activities. It is important to note that the original data used cover a wider area than the study area of this assessment, but were intersected and limited to our study area.
 
 A clause accompanies the shared data, which we take the liberty of transcribing in its entirety in English: 
 
@@ -388,7 +388,7 @@ show_source(lang = "en")
 
 <!-- Pour de plus amples informations, veuillez contacter directement le GCNWA. -->
 
-As part of this pilot project, the Grand Council of the Waban-Aki Nation (Grand Conseil de la Nation Waban-Aki, GCNWA) integrated spatialized and non-spatialized information from semi-directed individual and small group land use interviews previously conducted with members of the Nation. These studies include a sample of 33 respondents from 74 interviews. The mapping is supported by qualitative information primarily from 1) two focus group workshops held in 2016, workshop interviews held between 2019 and 2020 with women from the Nation, and 3) impact assessment analyses of port expansion projects on the Nation’s ancestral rights. This integrative work has led to the production of a report outlining the known concerns of some Nation members about environmental pressures within their territory affecting the valued components covered by our marine activities cumulative effects assessment [@gcnwa2021]. 
+As part of this pilot project, the Grand Council of the Waban-Aki Nation (Grand Conseil de la Nation Waban-Aki, GCNWA) integrated spatialized and non-spatialized information from semi-directed individual and small group land use interviews previously conducted with members of the Nation. These studies include a sample of 33 respondents from 74 interviews. The mapping is supported by qualitative information primarily from 1) two focus group workshops held in 2016, workshop interviews held between 2019 and 2020 with women from the Nation, and 3) impact assessment analyses of port expansion projects on the Nation’s ancestral rights. This integrative work has led to the production of a report outlining the known concerns of some Nation members about environmental pressures within their territory affecting the valued components covered by our marine vessel activities cumulative effects assessment [@gcnwa2021]. 
 
 The data provided by the GCNWA provide the location of areas of interest primarily in the fluvial portion of the St. Lawrence River [@gcnwa2021]. The identified sites are divided into 13 distinct categories: 
 
@@ -408,7 +408,7 @@ The data provided by the GCNWA provide the location of areas of interest primari
   - Archeological sites
   - Sites with archeological potential
 
-These categories of areas of interest are used in the marine activities cumulative effects assessment in the study area. It is important to note that the original data used cover a wider area than the study area of this assessment, but were intersected and limited to our study area.
+These categories of areas of interest are used in the marine vessel activities cumulative effects assessment in the study area. It is important to note that the original data used cover a wider area than the study area of this assessment, but were intersected and limited to our study area.
 
 <br>
 
