@@ -124,7 +124,7 @@ cv_habitat <- function() {
 
 
   # ------------------------------------------------------
-  meta_update <- function(meta, dat, accr, fr, descr = "", type = "", zonesNA = NA) {
+  meta_update <- function(meta, dat, accr, fr, descr = "", type = "", zonesNA = NA, en, descr_en = "", type_en = "") {
     meta$rawData <- c(meta$rawData, dat)
     meta$accronyme <- c(meta$accronyme, accr)
     meta$type <- c(meta$type, type)
@@ -133,6 +133,9 @@ cv_habitat <- function() {
     # meta$superficie <- c(meta$superficie, superficie(dat))
     meta$description <- c(meta$description, descr)
     meta$zonesNA <- c(meta$zonesNA, zonesNA)
+    meta$english <- c(meta$english, en)
+    meta$description_en <- c(meta$description_en, descr_en)
+    meta$type_en <- c(meta$type_en, type_en)
     meta
   }
 
@@ -149,7 +152,15 @@ cv_habitat <- function() {
   # Zostères : 0001, 0002, 0003
   nm <- c("0001", "0002", "0003")
   dat <- load_temp(nm)
-  meta_temp <- meta_update(meta_temp, nm, "zostere", "Zostères", descr = "Distribution de la zostère marine (*Zostera marina*)", type = "Milieux naturels")
+  meta_temp <- meta_update(meta_temp, 
+                           dat = nm, 
+                           accr = "zostere", 
+                           fr = "Zostères", 
+                           descr = "Distribution de la zostère marine (*Zostera marina*)", 
+                           type = "Milieux naturels",
+                           en = "Eelgrass",
+                           descr_en = "Distribution of eelgrass (*Zostera marina*)",
+                           type_en = "Natural areas")
   habitat$zostere <- uid(dat)
   sup <- c(sup, superficie(dat))
 
@@ -157,7 +168,15 @@ cv_habitat <- function() {
   # Zones inondables : 0013, 0014
   nm <- c("0013", "0014")
   dat <- load_temp(nm)
-  meta_temp <- meta_update(meta_temp, nm, "zone_inondable", "Zones inondables", descr = "Territoires ayant une probabilité élevée d'être inondés selon une récurrence des crues sur 2 ans, 20 ans ou sur 100 ans", type = "Milieux naturels")
+  meta_temp <- meta_update(meta_temp, 
+                           dat = nm, 
+                           accr = "zone_inondable", 
+                           fr = "Zones inondables", 
+                           descr = "Territoires ayant une probabilité élevée d'être inondés selon une récurrence des crues sur 2 ans, 20 ans ou sur 100 ans", 
+                           type = "Milieux naturels", 
+                           en = "Floodplain zones", 
+                           descr_en = "Land with a high probability of flooding based on a 2-year, 20-year or 100-year flood recurrence", 
+                           type_en = "Natural areas")
   habitat$zone_inondable <- uid(dat)
   sup <- c(sup, superficie(dat))
 
@@ -169,13 +188,29 @@ cv_habitat <- function() {
   # Eau peu profonde
   nm <- c("0053")
   dat <- load_temp(nm)
-  meta_temp <- meta_update(meta_temp, nm, "eau_peu_profonde", "Eau peu profonde", "Milieu humide dont le niveau d’eau est inférieur à 2 m et présentant des plantes aquatiques flottantes ou submergées ainsi que des plantes émergentes dont le couvert fait moins de 25 % de la superficie du milieu.", type = "Milieux naturels")
+  meta_temp <- meta_update(meta_temp, 
+                           dat = nm, 
+                           accr = "eau_peu_profonde", 
+                           fr = "Eau peu profonde", 
+                           descr = "Milieu humide dont le niveau d’eau est inférieur à 2 m et présentant des plantes aquatiques flottantes ou submergées ainsi que des plantes émergentes dont le couvert fait moins de 25 % de la superficie du milieu.", 
+                           type = "Milieux naturels", 
+                           en = "Shallow water", 
+                           descr_en = "A wetland with a water level of less than 2 m and with floating or submerged aquatic plants and emergent plants that cover less than 25% of the wetland area.", 
+                           type_en = "Natural areas")
   habitat$eau_peu_profonde <- uid(dat, "Eau", "TYPE", clip = TRUE)
   sup <- c(sup, superficie(dat, "Eau", "TYPE"))
 
   # -----
   # Marais
-  meta_temp <- meta_update(meta_temp, nm, "marais", "Marais", "Milieu humide sur dépôt minéral, dominé par une végétation herbacée couvrant plus de 25 % de la superficie. Les arbustes et les arbres, lorsque présents, couvrent moins de 25 % de la superficie du milieu.", type = "Milieux naturels")
+  meta_temp <- meta_update(meta_temp, 
+                           dat = nm, 
+                           accr = "marais", 
+                           fr = "Marais", 
+                           descr = "Milieu humide sur dépôt minéral, dominé par une végétation herbacée couvrant plus de 25 % de la superficie. Les arbustes et les arbres, lorsque présents, couvrent moins de 25 % de la superficie du milieu.", 
+                           type = "Milieux naturels", 
+                           en = "Marshes", 
+                           descr_en = "A wetland on a mineral deposit, dominated by herbaceous vegetation covering more than 25% of the area.  Shrubs and trees, when present, cover less than 25% of the area of the wetland.", 
+                           type_en = "Natural areas")
   habitat$marais <- uid(dat, "Marais", "TYPE", clip = TRUE)
   sup <- c(sup, superficie(dat, "Marais", "TYPE"))
 
@@ -183,14 +218,30 @@ cv_habitat <- function() {
 
   # -----
   # Marécage
-  meta_temp <- meta_update(meta_temp, nm, "marecage", "Marécage", "Milieu humide sur dépôt minéral, dominé par une végétation ligneuse arbustive ou arborescente, avec plus de 25 % de couvert.", type = "Milieux naturels")
+  meta_temp <- meta_update(meta_temp, 
+                           dat = nm, 
+                           accr = "marecage", 
+                           fr = "Marécage", 
+                           descr = "Milieu humide sur dépôt minéral, dominé par une végétation ligneuse arbustive ou arborescente, avec plus de 25 % de couvert.", 
+                           type = "Milieux naturels",
+                           en = "Swamps", 
+                           descr_en = "A wetland on a mineral deposit, dominated by ligneous, shrubby or arborescent vegetation covering more than 25% of the area.", 
+                           type_en = "Natural areas")
   habitat$marecage <- uid(dat, "Marécage", "TYPE", clip = TRUE)
   sup <- c(sup, superficie(dat, "Marécage", "TYPE"))
 
 
   # -----
   # Milieu humide
-  meta_temp <- meta_update(meta_temp, nm, "milieu_humide", "Milieu humide", "Regroupe les milieux humides dont le type est inconnu.", type = "Milieux naturels")
+  meta_temp <- meta_update(meta_temp, 
+                           dat = nm, 
+                           accr = "milieu_humide", 
+                           fr = "Milieu humide", 
+                           descr = "Regroupe les milieux humides dont le type est inconnu.", 
+                           type = "Milieux naturels",
+                           en = "Wetland", 
+                           descr_en = "Includes wetlands of unknown type.", 
+                           type_en = "Natural areas")
   habitat$milieu_humide <- uid(dat, "Milieu humide", "TYPE", clip = TRUE)
   sup <- c(sup, superficie(dat, "Milieu humide", "TYPE"))
 
@@ -216,7 +267,16 @@ cv_habitat <- function() {
   # Sites d'alevinage : 0009
   nm <- "0009"
   dat <- load_temp(nm)
-  meta_temp <- meta_update(meta_temp, nm, "site_alevinage", "Sites d'alevinage", descr = "Sites d'alimentation et de protection pour les stades de vie initiaux des poissons (*e.g.* larves, alevins, juvéniles)", type = "Cycles de vie", zonesNA = "alevinage")
+  meta_temp <- meta_update(meta_temp, 
+                           dat = nm, 
+                           accr = "site_alevinage", 
+                           fr = "Sites d'alevinage", 
+                           descr = "Sites d'alimentation et de protection pour les stades de vie initiaux des poissons (*e.g.* larves, alevins, juvéniles)", 
+                           type = "Cycles de vie", 
+                           zonesNA = "alevinage",
+                           en = "Nursery sites", 
+                           descr_en = "Feeding and protection sites for early life stages of fish (e.g. larvae, fry, juveniles)", 
+                           type_en = "Life cycles")
   habitat$site_alevinage <- uid(dat)
   sup <- c(sup, superficie(dat))
 
@@ -224,7 +284,16 @@ cv_habitat <- function() {
   # Frayères : 0010
   nm <- "0010"
   dat <- load_temp(nm)
-  meta_temp <- meta_update(meta_temp, nm, "frayere", "Frayères", descr = "Sites de reproduction où des poissons femelles pondent des oeufs pour fécondation par les mâles", type = "Cycles de vie", zonesNA = "frayere")
+  meta_temp <- meta_update(meta_temp, 
+                           dat = nm, 
+                           accr = "frayere", 
+                           fr = "Frayères", 
+                           descr = "Sites de reproduction où des poissons femelles pondent des oeufs pour fécondation par les mâles", 
+                           type = "Cycles de vie", 
+                           zonesNA = "frayere",
+                           en = "Spawning sites", 
+                           descr_en = "Spawning sites where female fish lay eggs for fertilization by males", 
+                           type_en = "Life cycles")
   habitat$frayere <- uid(dat)
   sup <- c(sup, superficie(dat))
 
@@ -268,7 +337,15 @@ cv_habitat <- function() {
   # Colonies d'oiseaux : 0043, 0058
   nm <- c("0043", "0058")
   dat <- load_temp(nm)
-  meta_temp <- meta_update(meta_temp, nm, "oiseaux", "Oiseaux", descr = "Sites connus d'importance pour les oiseaux, tels des sites de nidification et des colonies d'oiseaux marins", type = "Cycles de vie")
+  meta_temp <- meta_update(meta_temp, 
+                           dat = nm, 
+                           accr = "oiseaux", 
+                           fr = "Oiseaux", 
+                           descr = "Sites connus d'importance pour les oiseaux, tels des sites de nidification et des colonies d'oiseaux marins", 
+                           type = "Cycles de vie",
+                           en = "Birds", 
+                           descr_en = "Known sites of importance to birds, such as nesting sites and seabird colonies", 
+                           type_en = "Life cycles")
   habitat$oiseaux <- uid(dat)
   sup <- c(sup, superficie(dat))
 
@@ -285,7 +362,15 @@ cv_habitat <- function() {
   # Pétoncle uniquement dans l'estuaire, donc considation de la mactre uniquement (0057)
   nm <- "0057"
   dat <- load_temp(nm)
-  meta_temp <- meta_update(meta_temp, nm, "gisement_coquilliers", "Gisements coquilliers", descr = "Gisements connus et exploités de mactre de Stimpson des eaux côtières du Québec", type = "Milieux naturels")
+  meta_temp <- meta_update(meta_temp, 
+                           dat = nm, 
+                           accr = "gisement_coquilliers", 
+                           fr = "Gisements coquilliers", 
+                           descr = "Gisements connus et exploités de mactre de Stimpson des eaux côtières du Québec", 
+                           type = "Milieux naturels",
+                           en = "Mollusk beds", 
+                           descr_en = "Known and harvested Stimpson’s surf clam deposits in Quebec coastal waters", 
+                           type_en = "Natural areas")
   habitat$gisement_coquilliers <- uid(dat)
   sup <- c(sup, superficie(dat))
 
@@ -296,27 +381,72 @@ cv_habitat <- function() {
   # -----
   nm <- c("0017")
   dat <- load_temp(nm)
-  meta_temp <- meta_update(meta_temp, nm, "meuble_sans_falaise", "Meuble sans falaise", "Dépôt non consolidé sans falaise", type = "Milieux naturels", zonesNA = "berge_fluvial")
+  meta_temp <- meta_update(meta_temp, 
+                           dat = nm, 
+                           accr = "meuble_sans_falaise", 
+                           fr = "Meuble sans falaise", 
+                           descr = "Dépôt non consolidé sans falaise", 
+                           type = "Milieux naturels", 
+                           zonesNA = "berge_fluvial",
+                           en = "Soft without cliff", 
+                           descr_en = "Unconsolidated deposit without cliff", 
+                           type_en = "Natural areas")
   habitat$meuble_sans_falaise <- uid(dat, "MSF", "Type_Berge", clip = FALSE)
   sup <- c(sup, line_length(dat, "MSF", "Type_Berge"))
 
   # -----
-  meta_temp <- meta_update(meta_temp, nm, "rocheuse_sans_falaise", "Rocheux sans falaise", "Roche consolidée sans falaise", type = "Milieux naturels", zonesNA = "berge_fluvial")
+  meta_temp <- meta_update(meta_temp, 
+                           dat = nm, 
+                           accr = "rocheuse_sans_falaise", 
+                           fr = "Rocheux sans falaise", 
+                           descr = "Roche consolidée sans falaise", 
+                           type = "Milieux naturels", 
+                           zonesNA = "berge_fluvial",
+                           en = "Rocky without bluff", 
+                           descr_en = "Rocky bank without bluff", 
+                           type_en = "Natural areas")
   habitat$rocheuse_sans_falaise <- uid(dat, "RSF", "Type_Berge", clip = FALSE)
   sup <- c(sup, line_length(dat, "RSF", "Type_Berge"))
 
   # -----
-  meta_temp <- meta_update(meta_temp, nm, "rocheuse_sans_escarpement", "Rocheux sans escarpement", "Berge de roc sans escarpement", type = "Milieux naturels", zonesNA = "berge_fluvial")
+  meta_temp <- meta_update(meta_temp, 
+                           dat = nm, 
+                           accr = "rocheuse_sans_escarpement", 
+                           fr = "Rocheux sans escarpement", 
+                           descr = "Berge de roc sans escarpement", 
+                           type = "Milieux naturels", 
+                           zonesNA = "berge_fluvial",
+                           en = "Rocky without cliff", 
+                           descr_en = "Consolidated rock without cliff", 
+                           type_en = "Natural areas")
   habitat$rocheuse_sans_escarpement <- uid(dat, "RSE", "Type_Berge", clip = FALSE)
   sup <- c(sup, line_length(dat, "RSE", "Type_Berge"))
 
   # -----
-  meta_temp <- meta_update(meta_temp, nm, "terrasse_fluviale", "Terrasse fluviale", "Banc d'accumulation situé à l'embouchure d'une rivière composé de dépôts non consolidés colonisé par de la végétation", type = "Milieux naturels", zonesNA = "berge_fluvial")
+  meta_temp <- meta_update(meta_temp, 
+                           dat = nm, 
+                           accr = "terrasse_fluviale", 
+                           fr = "Terrasse fluviale", 
+                           descr = "Banc d'accumulation situé à l'embouchure d'une rivière composé de dépôts non consolidés colonisé par de la végétation", 
+                           type = "Milieux naturels", 
+                           zonesNA = "berge_fluvial",
+                           en = "Beach terrace", 
+                           descr_en = "Accumulation area of unconsolidated deposits (sand and/or coastal gravel) formed by a flat colonized by herbaceous vegetation, sometimes flooded only during higher high water high tide. The flat is sometimes bordered on its lower part by an erosional bluff (microcliff) of less than 2 m in height and on its upper part by a dead cliff or a flat terrain", 
+                           type_en = "Natural areas")
   habitat$terrasse_fluviale <- uid(dat, "TF", "Type_Berge", clip = FALSE)
   sup <- c(sup, line_length(dat, "TF", "Type_Berge"))
 
   # -----
-  meta_temp <- meta_update(meta_temp, nm, "terrasse_plage", "Terrasse de plage", "Zone d'accumulation de dépôts non consolidés (sable et/ou de gravier littoral) formée d’un replat colonisé par de la végétation herbacée parfois inondée que lors de surcote pendant la pleine mer supérieure de grande marée. Le replat est parfois bordé sur sa partie inférieure par un talus d’érosion (microfalaise) de moins de 2 m de hauteur et sur sa partie supérieure par une falaise morte ou d’un terrain plat", type = "Milieux naturels", zonesNA = "berge_fluvial")
+  meta_temp <- meta_update(meta_temp, 
+                           dat = nm, 
+                           accr = "terrasse_plage", 
+                           fr = "Terrasse de plage", 
+                           descr = "Zone d'accumulation de dépôts non consolidés (sable et/ou de gravier littoral) formée d’un replat colonisé par de la végétation herbacée parfois inondée que lors de surcote pendant la pleine mer supérieure de grande marée. Le replat est parfois bordé sur sa partie inférieure par un talus d’érosion (microfalaise) de moins de 2 m de hauteur et sur sa partie supérieure par une falaise morte ou d’un terrain plat", 
+                           type = "Milieux naturels", 
+                           zonesNA = "berge_fluvial",
+                           en = "Fluvial terrace", 
+                           descr_en = "Accumulation bank located at the mouth of a river composed of unconsolidated deposits colonized by vegetation", 
+                           type_en = "Natural areas")
   habitat$terrasse_plage <- uid(dat, "TP", "Type_Berge", clip = FALSE)
   sup <- c(sup, line_length(dat, "TP", "Type_Berge"))
 
@@ -335,21 +465,45 @@ cv_habitat <- function() {
   # Diviser par statut
   # Susceptible
   dat2 <- filter(data0059, LOIEMV == "Susceptible")
-  meta_temp <- meta_update(meta_temp, nm, "faune_susceptible", "Espèces fauniques susceptibles", "Espèces fauniques susceptibles d'être désignées menacées ou vulnérables", type = "Espèces à statut")
+  meta_temp <- meta_update(meta_temp, 
+                           dat = nm, 
+                           accr = "faune_susceptible", 
+                           fr = "Espèces fauniques susceptibles", 
+                           descr = "Espèces fauniques susceptibles d'être désignées menacées ou vulnérables", 
+                           type = "Espèces à statut",
+                           en = "Susceptible wildlife species", 
+                           descr_en = "Wildlife species likely to be designated as threatened or vulnerable", 
+                           type_en = "Species at risk")
   habitat$faune_susceptible <- uid(dat2)
   sup <- c(sup, superficie(dat2))
 
   # Diviser par statut
   # Vulnérable
   dat2 <- filter(data0059, LOIEMV == "Vulnérable")
-  meta_temp <- meta_update(meta_temp, nm, "faune_vulnerable", "Espèces fauniques vulnérables", "Espèces fauniques désignées vulnérables", type = "Espèces à statut")
+  meta_temp <- meta_update(meta_temp, 
+                           dat = nm, 
+                           accr = "faune_vulnerable", 
+                           fr = "Espèces fauniques vulnérables", 
+                           descr = "Espèces fauniques désignées vulnérables", 
+                           type = "Espèces à statut",
+                           en = "Vulnerable wildlife species", 
+                           descr_en = "Wildlife species designated as vulnerable", 
+                           type_en = "Species at risk")
   habitat$faune_vulnerable <- uid(dat2)
   sup <- c(sup, superficie(dat2))
 
   # Diviser par statut
   # Menacée
   dat2 <- filter(data0059, LOIEMV == "Menacée")
-  meta_temp <- meta_update(meta_temp, nm, "faune_menacee", "Espèces fauniques menacées", "Espèces fauniques désignées menacées", type = "Espèces à statut")
+  meta_temp <- meta_update(meta_temp, 
+                           dat = nm, 
+                           accr = "faune_menacee", 
+                           fr = "Espèces fauniques menacées", 
+                           descr = "Espèces fauniques désignées menacées", 
+                           type = "Espèces à statut",
+                           en = "Threatened wildlife species", 
+                           descr_en = "Wildlife species designated as threatened", 
+                           type_en = "Species at risk")
   habitat$faune_menacee <- uid(dat2)
   sup <- c(sup, superficie(dat2))
 
@@ -367,21 +521,45 @@ cv_habitat <- function() {
   # Diviser par statut
   # Susceptible
   dat2 <- filter(data0060, LOIEMV == "Susceptible")
-  meta_temp <- meta_update(meta_temp, nm, "flore_susceptible", "Espèces floristiques susceptibles", "Espèces floristiques susceptibles d'être désignées menacées ou vulnérables", type = "Espèces à statut")
+  meta_temp <- meta_update(meta_temp, 
+                           dat = nm, 
+                           accr = "flore_susceptible", 
+                           fr = "Espèces floristiques susceptibles", 
+                           descr = "Espèces floristiques susceptibles d'être désignées menacées ou vulnérables", 
+                           type = "Espèces à statut",
+                           en = "Susceptible plant species", 
+                           descr_en = "Plant species likely to be designated as threatened or vulnerable", 
+                           type_en = "Species at risk")
   habitat$flore_susceptible <- uid(dat2)
   sup <- c(sup, superficie(dat2))
 
   # Diviser par statut
   # Vulnérable
   dat2 <- filter(data0060, LOIEMV == "Vulnérable")
-  meta_temp <- meta_update(meta_temp, nm, "flore_vulnerable", "Espèces floristiques vulnérables", "Espèces floristiques désignées vulnérables", type = "Espèces à statut")
+  meta_temp <- meta_update(meta_temp, 
+                           dat = nm, 
+                           accr = "flore_vulnerable", 
+                           fr = "Espèces floristiques vulnérables", 
+                           descr = "Espèces floristiques désignées vulnérables", 
+                           type = "Espèces à statut",
+                           en = "Vulnerable plant species", 
+                           descr_en = "Plant species designated as vulnerable", 
+                           type_en = "Species at risk")
   habitat$flore_vulnerable <- uid(dat2)
   sup <- c(sup, superficie(dat2))
 
   # Diviser par statut
   # Menacée
   dat2 <- filter(data0060, LOIEMV == "Menacée")
-  meta_temp <- meta_update(meta_temp, nm, "flore_menacee", "Espèces floristiques menacées", "Espèces floristiques désignées menacées", type = "Espèces à statut")
+  meta_temp <- meta_update(meta_temp, 
+                          dat = nm, 
+                          accr = "flore_menacee", 
+                          fr = "Espèces floristiques menacées", 
+                          descr = "Espèces floristiques désignées menacées", 
+                          type = "Espèces à statut",
+                          en = "Threatened plant species", 
+                          descr_en = "Plant species designated as threatened", 
+                          type_en = "Species at risk")
   habitat$flore_menacee <- uid(dat2)
   sup <- c(sup, superficie(dat2))
   # ------------------------------------------------------------------------- #
@@ -402,6 +580,9 @@ cv_habitat <- function() {
   meta$dataDescription$categories$type <- meta_temp$type
   meta$dataDescription$categories$description <- meta_temp$description
   meta$dataDescription$categories$zonesNA <- meta_temp$zonesNA
+  meta$dataDescription$categories$english <- meta_temp$english
+  meta$dataDescription$categories$type_en <- meta_temp$type_en
+  meta$dataDescription$categories$description_en <- meta_temp$description_en
 
   # --- For proper referencing in markdown syntax
   meta$dataDescription$categories$mdref <- modif_md(meta$dataDescription$categories$accronyme)

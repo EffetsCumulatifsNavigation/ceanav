@@ -322,6 +322,13 @@ st_peche_commerciale <- function() {
     "Activités de pêches commerciales à l'aide d'engins de pêche pélagiques avec peu ou en l'absence de prises accessoires et ne causant aucune modification des habitats, e.g. pêche à la ligne, senne bourse.",
     "Activités de pêches commerciales à l'aide d'engins de pêche pélagiques avec d'importantes prises accessoires et ne causant aucune modification des habitats, e.g. filet maillant et palangre.")
 
+  meta$dataDescription$categories$description_en <- c(
+    "Commercial fishing activities using demersal fishing gear that may damage habitats or substrate, e.g. trawling and dragging.",
+    "Commercial fishing activities using demersal fishing gear with little or no bycatch and not causing habitat modification, e.g., deep-sea fishing.",
+    "Commercial fishing activities using demersal fishing gear with high bycatch and not causing habitat modification, e.g., trap and seine.",
+    "Commercial fishing activities using pelagic fishing gear with little or no bycatch and not causing habitat modification, e.g., line fishing, purse seine.",
+    "Commercial fishing activities using pelagic fishing gear with high bycatch and not causing habitat modification, e.g., gillnet and longline.")
+    
   meta$dataDescription$categories$zonesNA <- rep("fluvial_peche", length(meta$dataDescription$categories$accronyme))
   
   # ----- frequence 

@@ -85,8 +85,10 @@ st_naufrage <- function() {
   # -----
   meta$dataDescription$categories$accronyme <-  "naufrage"
   meta$dataDescription$categories$francais <-  "Sites de naufrages répertoriés"
+  meta$dataDescription$categories$english <-  "Recorded shipwreck sites"
   meta$dataDescription$categories$source <-  meta$rawData
   meta$dataDescription$categories$description <- "Épaves échouées ou submergées de navires commerciaux et récréatifs."
+  meta$dataDescription$categories$description_en <- "Grounded or submerged wrecks of commercial and recreational vessels."
 
   # --- For proper referencing in markdown syntax
   meta$dataDescription$categories$mdref <- modif_md(meta$dataDescription$categories$accronyme)

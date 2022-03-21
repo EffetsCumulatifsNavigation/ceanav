@@ -81,8 +81,10 @@ st_pollution_maritime <- function() {
   # -----
   meta$dataDescription$categories$accronyme <-  "pollution_maritime"
   meta$dataDescription$categories$francais <-  "Pollution maritime"
+  meta$dataDescription$categories$english <-  "Marine pollution"
   meta$dataDescription$categories$source <-  paste(meta$rawData, collapse = ",")
   meta$dataDescription$categories$description <- "Pollution reliée aux activités de navigation telles que la navigation commerciale et la pêche. Les stresseurs associés peuvent être des rejets opérationnels, des déchets, des débris, de l'eau de ballast, etc."
+  meta$dataDescription$categories$description_en <- "Pollution related to navigation activities such as commercial navigation and fishing. Associated stressors may be operational discharges, waste, debris, ballast water, etc."
 
   # --- For proper referencing in markdown syntax
   meta$dataDescription$categories$mdref <- modif_md(meta$dataDescription$categories$accronyme)

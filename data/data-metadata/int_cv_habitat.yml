@@ -206,6 +206,83 @@ dataDescription:
     - .na.character
     - .na.character
     - .na.character
+    english:
+    - Eelgrass
+    - Floodplain zones
+    - Shallow water
+    - Marshes
+    - Swamps
+    - Wetland
+    - Nursery sites
+    - Spawning sites
+    - Birds
+    - Mollusk beds
+    - Soft without cliff
+    - Rocky without bluff
+    - Rocky without cliff
+    - Beach terrace
+    - Fluvial terrace
+    - Susceptible wildlife species
+    - Vulnerable wildlife species
+    - Threatened wildlife species
+    - Susceptible plant species
+    - Vulnerable plant species
+    - Threatened plant species
+    type_en:
+    - Natural areas
+    - Natural areas
+    - Natural areas
+    - Natural areas
+    - Natural areas
+    - Natural areas
+    - Life cycles
+    - Life cycles
+    - Life cycles
+    - Natural areas
+    - Natural areas
+    - Natural areas
+    - Natural areas
+    - Natural areas
+    - Natural areas
+    - Species at risk
+    - Species at risk
+    - Species at risk
+    - Species at risk
+    - Species at risk
+    - Species at risk
+    description_en:
+    - Distribution of eelgrass (*Zostera marina*)
+    - Land with a high probability of flooding based on a 2-year, 20-year or 100-year
+      flood recurrence
+    - A wetland with a water level of less than 2 m and with floating or submerged
+      aquatic plants and emergent plants that cover less than 25% of the wetland area.
+    - A wetland on a mineral deposit, dominated by herbaceous vegetation covering
+      more than 25% of the area.  Shrubs and trees, when present, cover less than
+      25% of the area of the wetland.
+    - A wetland on a mineral deposit, dominated by ligneous, shrubby or arborescent
+      vegetation covering more than 25% of the area.
+    - Includes wetlands of unknown type.
+    - Feeding and protection sites for early life stages of fish (e.g. larvae, fry,
+      juveniles)
+    - Spawning sites where female fish lay eggs for fertilization by males
+    - Known sites of importance to birds, such as nesting sites and seabird colonies
+    - Known and harvested Stimpson’s surf clam deposits in Quebec coastal waters
+    - Unconsolidated deposit without cliff
+    - Rocky bank without bluff
+    - Consolidated rock without cliff
+    - Accumulation area of unconsolidated deposits (sand and/or coastal gravel) formed
+      by a flat colonized by herbaceous vegetation, sometimes flooded only during
+      higher high water high tide. The flat is sometimes bordered on its lower part
+      by an erosional bluff (microcliff) of less than 2 m in height and on its upper
+      part by a dead cliff or a flat terrain
+    - Accumulation bank located at the mouth of a river composed of unconsolidated
+      deposits colonized by vegetation
+    - Wildlife species likely to be designated as threatened or vulnerable
+    - Wildlife species designated as vulnerable
+    - Wildlife species designated as threatened
+    - Plant species likely to be designated as threatened or vulnerable
+    - Plant species designated as vulnerable
+    - Plant species designated as threatened
   frayere_alevinage:
     Source:
     - 'Alliance Environnement GDG Conseil-Daniel Arbour & Associés (n.d.) Frayère

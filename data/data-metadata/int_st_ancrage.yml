@@ -16,9 +16,11 @@ dataDescription:
   categories:
     accronyme: ancrage
     francais: Sites d'ancrage commerciaux
+    english: Commercial anchorage sites
     source: '0070,0071'
     mdref: ancrage
     description: Distribution des sites d'ancrage pour la navigation commerciale
+    description_en: Distribution of anchorage sites for commercial shipping
   observations:
     total: 101
 rawData:

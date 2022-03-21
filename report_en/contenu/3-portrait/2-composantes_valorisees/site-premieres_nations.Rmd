@@ -466,7 +466,7 @@ knitr::include_graphics("./figures/figures-integrated/site-gcnwa_zones_activites
 
 <br>
 
-```{r gcnwaproblemesterritoire, fig.cap = "Distribution of sites of cultural, heritage and archeological interest in the St. Lawrence and the Saguenay river - W8banaki Nation - Problems related to access to territory", out.width = '100%', fig.link = "./figures/figures-integrated/site-gcnwa_problemes_territoire.png"}
+```{r gcnwaproblemesterritoire, fig.cap = "Distribution of sites of cultural, heritage and archeological interest in the St. Lawrence and the Saguenay river - W8banaki Nation - Access to territory problems", out.width = '100%', fig.link = "./figures/figures-integrated/site-gcnwa_problemes_territoire.png"}
 knitr::include_graphics("./figures/figures-integrated/site-gcnwa_problemes_territoire.png")
 ```
 

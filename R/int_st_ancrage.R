@@ -82,8 +82,10 @@ st_ancrage <- function() {
   # -----
   meta$dataDescription$categories$accronyme <-  "ancrage"
   meta$dataDescription$categories$francais <-  "Sites d'ancrage commerciaux"
+  meta$dataDescription$categories$english <-  "Commercial anchorage sites"
   meta$dataDescription$categories$source <-  paste(meta$rawData, collapse = ",")
   meta$dataDescription$categories$description <- "Distribution des sites d'ancrage pour la navigation commerciale" 
+  meta$dataDescription$categories$description_en <- "Distribution of anchorage sites for commercial shipping" 
 
   # --- For proper referencing in markdown syntax
   meta$dataDescription$categories$mdref <- modif_md(meta$dataDescription$categories$accronyme)

@@ -124,6 +124,12 @@ st_dragage <- function() {
     "Dragages de capitalisation prévus"
   )
 
+  meta$dataDescription$categories$english <- c(
+    "Dredging sites",
+    "Disposal sites",
+    "Planned capitalization dredging"
+  )
+
   meta$dataDescription$categories$source <- c(
     "0018,0019,0046,0048,0052,0069",
     "0018,0019,0046,0048,0069",
@@ -150,6 +156,12 @@ st_dragage <- function() {
     "Sites de dragage d'entretien, i.e. dragage plus ou moins régulier de la voie navigable afin de maintenir des conditions sécuritaires pour la navigation.",
     "Sites de dépôt en milieu aquatique ou marin des sédiments dragués lors d'opération de dragage d'entretien ou de capitalisation.",
     "Sites de dragage de capitalisation prévus, i.e. dragage visant à approfondir et élargir la voie de navigation."
+  )
+  
+  meta$dataDescription$categories$description <- c(
+    "Maintenance dredging sites, i.e. more or less regular dredging of the waterway in order to maintain safe conditions for navigation.",
+    "Disposal sites in the aquatic or marine environment for sediments dredged during maintenance or capitalization dredging operations.",
+    "Planned capitalization dredging sites, i.e. dredging to deepen and widen the waterway."
   )
 
 

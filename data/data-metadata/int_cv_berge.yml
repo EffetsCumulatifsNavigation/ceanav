@@ -47,17 +47,24 @@ dataDescription:
     - artificiellesemivegetalisee
     - artificiellevive
     description:
-    - Berge naturelle présentant des signes d'érosion apparente ou un couvert végétal
-      de 25 à 75%
-    - Berge naturelle présentant des signes d'érosion apparente ou un couvert végétal
-      < 25%
-    - Berge artificielle présentant des signes d'érosion apparente ou un couvert végétal
-      de 25 à 75%
-    - Berge artificielle présentant des signes d'érosion apparente ou un couvert végétal
-      < 25%
+    - Natural bank with apparent signs of erosion or vegetation cover of 25 to 75%
+    - Natural bank with apparent signs of erosion or vegetation cover of < 25%
+    - Artificial bank with apparent signs of erosion or vegetation cover of 25 to
+      75%
+    - Artificial bank with apparent signs of erosion or vegetation cover of < 25%
     zonesNA:
     - berge_fluvial
-    - berge_fluvial
-    - berge_fluvial
-    - berge_fluvial
+    - .na.character
+    - .na.character
+    - .na.character
+    english:
+    - Natural - Semi-vegetated (EI = 1)
+    - Natural - Active (EI = 2)
+    - Artificial - Semi-vegetated (EI = 1)
+    - Artificial - Active (EI = 2)
+    type_en:
+    - Natural
+    - Natural
+    - Artificial
+    - Artificial
 rawData: '0017'

@@ -193,11 +193,17 @@ st_deversement <- function() {
   # -----
   meta$dataDescription$categories$accronyme <-  c("hydrocarbures","autres","inconnus")
   meta$dataDescription$categories$francais <-  c("Hydrocarbures","Autres","Contenu inconnu")
+  meta$dataDescription$categories$english <-  c("Hydrocarbons","Others","Unknown content")
   meta$dataDescription$categories$source <-  rep(meta$rawData, length(meta$dataDescription$categories$francais))
   meta$dataDescription$categories$description <-  c(
     "Déversement d'hydrocarbures, e.g. carburant, diésel, pétrole, propane, huile hydraulique, etc.",
     "Déversements autres que des hydrocarbures, e.g. des eaux de ballast, des déchets, de l'eau de cale, du charbon, de la matière organique, etc.",
     "Déversements dont le contenu est inconnu")
+
+  meta$dataDescription$categories$description_en <-  c(
+    "Hydrocarbon spills, e.g. fuel, diesel, oil, propane, hydraulic oil, etc.",
+    "Spills other than hydrocarbons, e.g. ballast water, waste, bilge water, coal, organic matter, etc.",
+    "Spills content of which is unknown")
 
   # ---
   meta$dataDescription$categories$observations <- c(
@@ -213,6 +219,13 @@ st_deversement <- function() {
     "Contenu inconnu"
   )
 
+  # ---
+  meta$dataDescription$categories$souscategories_en <- c(
+    "Bunker C, Diesel fuel, Gasoline, Unknown hydrocarbon, Petcoke, Crude oil, Propane, Tar, Lubricating oil, Hydraulic oil, Motor oil, Bilge, BioSpec Hyd 32, Hydrox Bio 100, Lube oil, Biodegradable hydraulic oil, Liquid asphalt",
+    "Hypochlorous acid, Ballast, Debris, Waste, Bilge water, Oily water, Wastewater, Milk, Organic matter, Iron ore, Calcium oxide (lime), Ammonium phosphate, Pollution, Sludge, Soot, Caustic soda, LAPIO oil, Hydraulic vegetable oil, Vegetable oil, Oily mixture, Coal",
+    "Unknown content"
+  )
+
   # -----
   tab <- table(dev$VOLUME_DEVERSE, useNA = "always")
   meta$dataDescription$classes$lvls <- c(
@@ -221,6 +234,14 @@ st_deversement <- function() {
          "3 : 1000 - 7000 litres",
          "4 : 100000 - 1000000 litres",
          "NA : Volume inconnu"
+       )
+
+  meta$dataDescription$classes$lvls_en <- c(
+         "1 : 0 - 100 litres",
+         "2 : 100 - 1000 litres",
+         "3 : 1000 - 7000 litres",
+         "4 : 100000 - 1000000 litres",
+         "NA : Volume unknown"
        )
 
   lvls <- c('0 - 100 litres','100 - 1000 litres','1000 - 7000 litres','100000 - 1000000 litres','<NA>')

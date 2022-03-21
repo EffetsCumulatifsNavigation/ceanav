@@ -16,9 +16,11 @@ dataDescription:
   categories:
     accronyme: naufrage
     francais: Sites de naufrages répertoriés
+    english: Recorded shipwreck sites
     source: '0062'
     mdref: naufrage
     description: Épaves échouées ou submergées de navires commerciaux et récréatifs.
+    description_en: Grounded or submerged wrecks of commercial and recreational vessels.
   observations:
     total: 104
 rawData: '0062'

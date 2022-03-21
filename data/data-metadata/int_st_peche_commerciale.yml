@@ -190,6 +190,12 @@ dataDescription:
     - Activités de pêches commerciales à l'aide d'engins de pêche pélagiques avec
       d'importantes prises accessoires et ne causant aucune modification des habitats,
       e.g. filet maillant et palangre.
+    description_en: 
+    - Commercial fishing activities using demersal fishing gear that may damage habitats or substrate, e.g. trawling and dragging.
+    - Commercial fishing activities using demersal fishing gear with little or no bycatch and not causing habitat modification, e.g., deep-sea fishing.
+    - Commercial fishing activities using demersal fishing gear with high bycatch and not causing habitat modification, e.g., trap and seine.
+    - Commercial fishing activities using pelagic fishing gear with little or no bycatch and not causing habitat modification, e.g., line fishing, purse seine.
+    - Commercial fishing activities using pelagic fishing gear with high bycatch and not causing habitat modification, e.g., gillnet and longline.
     frequence:
     - 2954
     - 6452

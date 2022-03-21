@@ -109,11 +109,24 @@ cv_berge <- function() {
     "Artificielle - Semi-végétalisée (IE = 1)",
     "Artificielle - Vive (IE = 2)"
   )
+  meta$dataDescription$categories$english <-  c(
+    "Natural - Semi-vegetated (EI = 1)",
+    "Natural - Active (EI = 2)",
+    "Artificial - Semi-vegetated (EI = 1)",
+    "Artificial - Active (EI = 2)"
+  )
+
   meta$dataDescription$categories$type <-  c(
     "Naturelle",
     "Naturelle",
     "Artificielle",
     "Artificielle"
+  )
+  meta$dataDescription$categories$type_en <-  c(
+    "Natural",
+    "Natural",
+    "Artificial",
+    "Artificial"
   )
   meta$dataDescription$categories$source <-  rep(meta$rawData, length(categories))
 
@@ -125,6 +138,13 @@ cv_berge <- function() {
     "Berge naturelle présentant des signes d'érosion apparente ou un couvert végétal < 25%",
     "Berge artificielle présentant des signes d'érosion apparente ou un couvert végétal de 25 à 75%",
     "Berge artificielle présentant des signes d'érosion apparente ou un couvert végétal < 25%"
+  )
+
+  meta$dataDescription$categories$description <-  c(
+    "Natural bank with apparent signs of erosion or vegetation cover of 25 to 75%",
+    "Natural bank with apparent signs of erosion or vegetation cover of < 25%",
+    "Artificial bank with apparent signs of erosion or vegetation cover of 25 to 75%",
+    "Artificial bank with apparent signs of erosion or vegetation cover of < 25%"
   )
 
   meta$dataDescription$categories$zonesNA <- c("berge_fluvial", NA, NA, NA)

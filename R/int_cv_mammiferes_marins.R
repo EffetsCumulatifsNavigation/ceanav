@@ -148,6 +148,8 @@ cv_mammiferes_marins <- function() {
                                 "Phoca groenlandica"),
                  type = c("Baleine","Baleine","Baleine","Baleine","Baleine","Baleine",
                           "Phoque","Phoque","Phoque"),
+                 type_en = c("Whale","Whale","Whale","Whale","Whale","Whale",
+                          "Seal","Seal","Seal"),
                  source = c("0027","0027","0027","0027","0027","0054","0054","0054","0054"))
 
   meta$dataDescription$categories$accronyme <-  nm$accronyme
