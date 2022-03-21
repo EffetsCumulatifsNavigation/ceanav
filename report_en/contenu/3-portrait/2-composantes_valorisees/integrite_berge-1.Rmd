@@ -31,8 +31,7 @@ tab %>%
   knitr::kable(
     col.names = c("Categories", "Length (km)"),
     row.names = FALSE,
-    caption = "
-    Categories of bank segments sensitive to erosion according to their artificiality and their erosion index (EI) considered for the CEA analysis and their total length in $km$ within the bank characterization data of the fluvial portion of the St. Lawrence River [@bernier2020; @bernier2021]"
+    caption = "Categories of bank segments sensitive to erosion according to their artificiality and their erosion index (EI) considered for the CEA analysis and their total length in $km$ within the bank characterization data of the fluvial portion of the St. Lawrence River [@bernier2020; @bernier2021]"
   )
 ```
 
@@ -46,13 +45,13 @@ These four categories were then incorporated into the grid to assess the presenc
 
 <br>
 
-```{r artificiellesemivegetalisee, fig.cap = "Distribution of coatlines sensitive to erosion in the St. Lawrence and the Saguenay river - Artificial - Semi-vegetated (EI = 1)", out.width = '100%', fig.link = "./figures/figures-integrated/berge-artificielle_semi_vegetalisee.png"}
+```{r artificiellesemivegetalisee, fig.cap = "Distribution of coastlines sensitive to erosion in the St. Lawrence and the Saguenay river - Artificial - Semi-vegetated (EI = 1)", out.width = '100%', fig.link = "./figures/figures-integrated/berge-artificielle_semi_vegetalisee.png"}
 knitr::include_graphics("./figures/figures-integrated/berge-artificielle_semi_vegetalisee.png")
 ```
 
 <br>
 
-```{r artificiellevive, fig.cap = "Distribution of coatlines sensitive to erosion in the St. Lawrence and the Saguenay river - Artificial - Active (EI = 2)", out.width = '100%', fig.link = "./figures/figures-integrated/berge-artificielle_vive.png"}
+```{r artificiellevive, fig.cap = "Distribution of coastlines sensitive to erosion in the St. Lawrence and the Saguenay river - Artificial - Active (EI = 2)", out.width = '100%', fig.link = "./figures/figures-integrated/berge-artificielle_vive.png"}
 knitr::include_graphics("./figures/figures-integrated/berge-artificielle_vive.png")
 ```
 
@@ -62,13 +61,13 @@ knitr::include_graphics("./figures/figures-integrated/berge-artificielle_vive.pn
 
 <br>
 
-```{r naturellesemivegetalisee, fig.cap = "Distribution of coatlines sensitive to erosion in the St. Lawrence and the Saguenay river - Natural - Semi-vegetated (EI = 1)", out.width = '100%', fig.link = "./figures/figures-integrated/berge-naturelle_semi_vegetalisee.png"}
+```{r naturellesemivegetalisee, fig.cap = "Distribution of coastlines sensitive to erosion in the St. Lawrence and the Saguenay river - Natural - Semi-vegetated (EI = 1)", out.width = '100%', fig.link = "./figures/figures-integrated/berge-naturelle_semi_vegetalisee.png"}
 knitr::include_graphics("./figures/figures-integrated/berge-naturelle_semi_vegetalisee.png")
 ```
 
 <br>
 
-```{r naturellevive, fig.cap = "Distribution of coatlines sensitive to erosion in the St. Lawrence and the Saguenay river - Natural - Active (EI = 2)", out.width = '100%', fig.link = "./figures/figures-integrated/berge-naturelle_vive.png"}
+```{r naturellevive, fig.cap = "Distribution of coastlines sensitive to erosion in the St. Lawrence and the Saguenay river - Natural - Active (EI = 2)", out.width = '100%', fig.link = "./figures/figures-integrated/berge-naturelle_vive.png"}
 knitr::include_graphics("./figures/figures-integrated/berge-naturelle_vive.png")
 ```
 
