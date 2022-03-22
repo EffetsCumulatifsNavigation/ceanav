@@ -71,12 +71,9 @@ figures_en/figures-output/*.png
 figures_en/figures-vulnerability/*.png
 figures_en/figures-exploration
 
-clean/
-report/contenu/notes/
 literature/
-docs
-pkgdown/
-_bookdown2.yml
+report_fr/docs
+report_en/docs
 review/
 report_fr/beauchesne_et_al-ceanav-traduction*
 report_en/beauchesne_et_al-ceanav-traduction*
