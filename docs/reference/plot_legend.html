@@ -58,7 +58,8 @@
   minUp <span class="op">=</span> <span class="fl">0.175</span>,
   mainTitle <span class="op">=</span> <span class="cn">NULL</span>,
   subTitle <span class="op">=</span> <span class="cn">NULL</span>,
-  n <span class="op">=</span> <span class="fl">5</span>
+  n <span class="op">=</span> <span class="fl">5</span>,
+  showNA <span class="op">=</span> <span class="cn">FALSE</span>
 <span class="op">)</span>
 
 <span class="fu">plot_legend_bin</span><span class="op">(</span>
@@ -67,7 +68,8 @@
   cexSub <span class="op">=</span> <span class="fl">0.75</span>,
   minUp <span class="op">=</span> <span class="fl">0.175</span>,
   mainTitle <span class="op">=</span> <span class="cn">NULL</span>,
-  subTitle <span class="op">=</span> <span class="cn">NULL</span>
+  subTitle <span class="op">=</span> <span class="cn">NULL</span>,
+  showNA <span class="op">=</span> <span class="cn">FALSE</span>
 <span class="op">)</span></code></pre></div>
     </div>
 
@@ -83,6 +85,8 @@
 <dd><p>character, type of legend. Choices are 'continuous', 'binary' or 'categorical'</p></dd>
 <dt>subTitle</dt>
 <dd><p>character, type of legend. Choices are 'continuous', 'binary' or 'categorical'</p></dd>
+<dt>showNA</dt>
+<dd><p>logical, add box that shows regions identified as NA in the figure</p></dd>
 <dt>cex.text</dt>
 <dd><p>numeric, cex for legend text</p></dd>
 <dt>type</dt>

@@ -34,6 +34,9 @@
     <loc>/reference/ana_cumulative_exposure.html</loc>
   </url>
   <url>
+    <loc>/reference/ana_cumulative_hotspots.html</loc>
+  </url>
+  <url>
     <loc>/reference/ana_cumulative_stresseurs.html</loc>
   </url>
   <url>
@@ -79,6 +82,9 @@
     <loc>/reference/fig_cumulative_exposure.html</loc>
   </url>
   <url>
+    <loc>/reference/fig_cumulative_hotspots.html</loc>
+  </url>
+  <url>
     <loc>/reference/fig_cumulative_stresseurs.html</loc>
   </url>
   <url>
@@ -97,6 +103,9 @@
     <loc>/reference/fig_metanetwork.html</loc>
   </url>
   <url>
+    <loc>/reference/fig_metanetwork_en.html</loc>
+  </url>
+  <url>
     <loc>/reference/fig_navigation_exploration.html</loc>
   </url>
   <url>
@@ -104,6 +113,9 @@
   </url>
   <url>
     <loc>/reference/fig_regional_contribution.html</loc>
+  </url>
+  <url>
+    <loc>/reference/fig_regional_contribution_en.html</loc>
   </url>
   <url>
     <loc>/reference/fig_vulnerability.html</loc>
@@ -335,6 +347,9 @@
   </url>
   <url>
     <loc>/reference/get_data0072.html</loc>
+  </url>
+  <url>
+    <loc>/reference/get_zonesNA.html</loc>
   </url>
   <url>
     <loc>/reference/global_parameters.html</loc>
