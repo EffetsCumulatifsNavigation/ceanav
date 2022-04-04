@@ -1,4 +1,4 @@
-## Stressors and hotspots accumulated {#strcumresult}
+## Cumulative stressors and hotspots {#strcumresult}
 
 > The method used to obtain the following results is presented in section \@ref(strcummethod) of the report.
 
