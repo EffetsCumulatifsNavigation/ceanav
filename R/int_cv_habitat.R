@@ -40,6 +40,9 @@ cv_habitat <- function() {
   #   - Espèces fauniques à statut : 0059
   #   - Espèces floristiques à statut : 0060
   #
+  # Update hiver 2023:
+  #   - Frayères: ajouter "0073","0074","0075","0076"
+  #
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   # ------------------------------------------------------
   load_temp <- function(dat) {
@@ -282,10 +285,14 @@ cv_habitat <- function() {
 
   # ------------------------------------------------------
   # Frayères : 0010
-  nm <- "0010"
-  dat <- load_temp(nm)
+  nm1 <- "0010"
+  nm2 <- c("0073","0074","0075","0076")
+  dat1 <- load_temp(nm1)
+  dat2 <- load_temp(nm2) |>
+          dplyr::filter(CLASSE_A == "Breeding area")
+  dat <- bind_rows(dat1,dat2)
   meta_temp <- meta_update(meta_temp, 
-                           dat = nm, 
+                           dat = c(nm1,nm2), 
                            accr = "frayere", 
                            fr = "Frayères", 
                            descr = "Sites de reproduction où des poissons femelles pondent des oeufs pour fécondation par les mâles", 
@@ -628,10 +635,31 @@ cv_habitat <- function() {
     frayere$Superficie_frayere[i] <- dat
   }
 
+  # --- Frayères update 2023
+  # Nombre
+  maj_frayere <- bind_rows(data0073,data0074,data0075,data0076)
+  frayere2 <- as.data.frame(table(maj_frayere$REFERENCE), stringsAsFactors = FALSE)
+  colnames(frayere2) <- c("Source","Nombre_frayere")
+
+  # Superficie
+  frayere2$Superficie_frayere <- 0
+  for(i in 1:nrow(frayere2)) {
+    dat <- maj_frayere[maj_frayere$REFERENCE == frayere2[i,"Source"], ] %>%
+           st_union() %>%
+           st_area() %>%
+           as.numeric(.) * 1e-6 %>%
+           sum()
+    frayere2$Superficie_frayere[i] <- dat
+  }
+  
+  # -----
+  frayere <- bind_rows(frayere, frayere2)
+
   # -----
   dat <- left_join(frayere, alevinage, by = "Source")
   iid <- !alevinage$Source %in% dat$Source
   dat <- bind_rows(dat, alevinage[iid,])
+
 
   # -----
   meta$dataDescription$frayere_alevinage$Source <- dat$Source
