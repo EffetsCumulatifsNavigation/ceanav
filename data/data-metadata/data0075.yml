@@ -1,0 +1,21 @@
+data_description:
+  id: "0075"
+  name: "Aires de reproduction, d'alimentation et de concentration de l'esturgeon noir dans le fleuve et l'estuaire du Saint-Laurent"
+  description: "Couche regroupant l’information connue des aires de reproduction, d'alimentation et de concentration de l'esturgeon noir dans le fleuve et l'estuaire du Saint-Laurent selon une revue de littérature de documents réalisés entre 1993 et 2003."
+  access_date: 2023-01-05
+  temporal_start: 1993
+  temporal_end: 2003
+  contact_id: "0005"
+  url: "https://ouvert.canada.ca/data/fr/dataset/bfa19b1c-a248-4dc6-b497-327a8937a07b"
+  identifiant: "bfa19b1c-a248-4dc6-b497-327a8937a07b"
+  availability: "open access"
+  citekey: mpo2019e
+  citation:
+    - "Communication personnelle par Hatin. D. 2003."
+    - "Gagnon, M., Y. Ménard et J.-F. La Rue. 1993. Caractérisation et évaluation des habitats du poisson dans la zone de transition saline du Saint-Laurent. Rapp. tech. can. sci. halieut. aquat. 1920: viii + 104 p."
+    - "Hatin. D., F. Caron et R. Fortin. 1999. Rapport d'opération : Déplacement et caractérisation du stock reproducteur d'esturgeon noir (Acipenser oxyrinchus) dans l'estuaire du fleuve Saint-Laurent. Faune et Parcs Québec, Direction de la faune et des habitats. 91 p."
+    - "Hatin, D. et F. Caron. 2002. Déplacement et caractéristiques des esturgeons noirs (Acipencer oxyrinchus) adultes dans l'estuaire du fleuve Saint-Laurent en 1998 et 1999. Société de la Faune et des Parcs du Québec, Direction de la recherche sur la faune. 151 p."
+    - "Naturam Environnement. 1995. Les possibilités de fraie de l'esturgeon noir dans l'estuaire de la rivière Manicouagan. Rapport présenté au Comité ZIP et à la Corporation d'amélioration et de protection de l'environnement (CAPE). Dossier 95-869. 75 p."
+    - "Therrien, J. 1998. Rapport sur la situation de l'esturgeon noir (Acipenser oxyrinchus) au Québec. Ministère de l'Environnement et de la Faune, Direction de la faune et des habitats, Service de la faune aquatique. 45 p."
+    - "Société de la Faune et des Parcs du Québec. 2000. Atlas des habitats critiques connus ou d'intérêt particulier pour les poissons du fleuve Saint-Laurent entre le port de Montréal et l'Île aux Coudres. Direction du développement de la faune."
+    - "Trencia, G. Communication personnelle."
