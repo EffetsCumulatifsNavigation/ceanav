@@ -366,17 +366,20 @@ cv_habitat <- function() {
 
   # ------------------------------------------------------
   # Gisements coquilliers : 0056, 0057
-  # Pétoncle uniquement dans l'estuaire, donc considation de la mactre uniquement (0057)
-  nm <- "0057"
+  # Pétoncle uniquement dans le Golfe, retrait 0056
+  # MAJ 2023: 
+  # 0078, 0079, 0080, 0081
+  # Mactre de l'Atlantique uniquement aux Îles de la Madeleine, retrait 0080
+  nm <- c("0057","0078","0079","0081")
   dat <- load_temp(nm)
   meta_temp <- meta_update(meta_temp, 
                            dat = nm, 
                            accr = "gisement_coquilliers", 
                            fr = "Gisements coquilliers", 
-                           descr = "Gisements connus et exploités de mactre de Stimpson des eaux côtières du Québec", 
+                           descr = "Gisements connus et exploités de mactre de Stimpson, de clovisse arctique, de couteau de l'Atlantique et de mye commune des eaux côtières du Québec", 
                            type = "Milieux naturels",
                            en = "Mollusk beds", 
-                           descr_en = "Known and harvested Stimpson’s surf clam deposits in Quebec coastal waters", 
+                           descr_en = "Known and harvested Stimpson’s surf clam, Arctic wedge clam, Atlantic razor clam, and softshell clam deposits in Quebec coastal waters", 
                            type_en = "Natural areas")
   habitat$gisement_coquilliers <- uid(dat)
   sup <- c(sup, superficie(dat))
