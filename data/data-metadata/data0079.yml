@@ -1,0 +1,26 @@
+data_description:
+  id: "0079"
+  name: "Aires de concentration connues du Couteau de l'Atlantique dans l’estuaire et le golfe du Saint-Laurent"
+  description: "La couche représente des aires de concentration du Couteau de l'Atlantique (Ensis leei) exploitées (communément appelées « gisements ») ou non exploitées de l’estuaire et du golfe du Saint-Laurent dans la région du Québec. Elle a été conçue pour le Centre national des urgences environnementales (CNUE) pour la préparation et l’intervention en cas de déversements d’hydrocarbures. Les aires de concentration ont été délimitées grâce à des inventaires et divers projets de recherche réalisés par Pêches et Océans Canada (MPO) et de données de pêches commerciales."
+  access_date: 2023-01-06
+  temporal_start: 2000
+  temporal_end: 2020
+  contact_id: "0005"
+  url: "https://open.canada.ca/data/fr/dataset/a0039b2e-7847-4d48-8fd8-638677760f8b"
+  identifiant: "a0039b2e-7847-4d48-8fd8-638677760f8b"
+  availability: "open access"
+  citekey: mpo2022c
+  citation: 
+    - "Anonyme. 1991. Analyse de l'échantillonnage en mer des mactres de Stimpson. Programme d'adaptation des pêches de l'Atlantique. Pesca tec International. Pêches et Océans Canada. 134 p."
+    - "Bernier, L. et L. Poirier. 1979. Évaluation sommaire du stock de mactres de l'Atlantique, Spisula solidissima Dillwyn, des Îles-de-la-Madeleine (golfe du Saint-Laurent). Cahier d'information, ministère de l'Industrie et du Commerce. 42 p."
+    - "Bourdages, H., P. Goudreau, J. Lambert, L. Landry et C. Nozères. 2012. Distribution des bivalves et gastéropodes benthiques dans les zones infralittorale et circalittorale des côtes de l’estuaire et du nord du golfe du Saint-Laurent. Rapp. tech. can. sci. halieut. aquat. 3004 : iv + 103 p"
+    - "Bourget, E. et D. Messier. 1983. Macrobenthic density, biomass, and fauna of intertidal and subtidal sand in a Magdalen Islands lagoon, Gulf of St. Lawrence. Can. J. Zool. 61(11):2509-2518."
+    - "Brulotte, S. Données non-publiées. Pêches et Océans Canada."
+    - "Brulotte, S. 2013. Évaluation des stocks de la mactre de l’Atlantique, Spisula solidissima, des eaux côtières des Îles-de-la-Madeleine – méthodologies et résultats. Secr. can. de consult. sci. du MPO. Doc. de rech. 2013/082: x + 58 p."
+    - "Brulotte, S. 2016. Évaluation des stocks de mactre de l’Atlantique, Spisula solidissima, des Îles-de-la-Madeleine, Québec en 2015 – méthodologie et résultats. Secr. can. de consult. sci. du MPO. Doc. de rech. 2016/074. x + 51 p."
+    - "Brulotte, S., M. Giguère, S. Brillon et F. Bourque. 2006. Évaluation de cinq gisements de mye commune (Mya arenaria) aux Îles-de-la-Madeleine, Québec, de 2000 à 2003. Rapp. tech. can. sci. halieut. aquat. 2640 : xii + 92 p."
+    - "Elouard, B, G. Desrosiers, J.C. Brêthes et Y. Vigneault. 1983. Étude de l'habitat du poisson autour des ilots créés par des déblais de dragage; lagune de Grande-Entrée, Îles-de-la-Madeleine. Can. Tech. Rep. Fish. Aquat. Sci. 1209:viii + 69 p."
+    - "Gendreau, Y. 2018. Base de données MS Access de biodiversité benthique. Pêches et Océans Canada."
+    - "MPO. 2013. Évaluation des stocks du couteau droit des eaux côtières du Québec en 2012. Secr. can. de consult. sci. du MPO, Avis sci. 2013/052."
+    - "Provencher, L. et C. Nozères. 2011. Protocole de suivi des communautés benthiques de la zone de protection marine Manicouagan. Secr. can. de consult. sci. du MPO. Doc. de rech. 2011/051:iv +25 p."
+    - "Thompson, M., D. Drolet et J.H. Himmelman. 2005. Localization of infaunal prey by the sea star Leptasterias polaris. Mar. Biol. 146(5):887-894."

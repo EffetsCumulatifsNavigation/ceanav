@@ -3,8 +3,8 @@ data_description:
   name: "L'habitat essentiel désigné en vertu de la Loi sur les espèces en péril"
   description: "Le Programme des espèces en péril consiste à réaliser le mandat du MPO en vertu de la Loi sur les espèces en péril (LEP) afin d’assurer la protection, le rétablissement et la conservation de toutes les espèces aquatiques en péril inscrites au Canada."
   access_date: 2023-01-05
-  temporal_start: mpo2022
-  temporal_end: 
+  temporal_start: .na.character
+  temporal_end: .na.character
   contact_id: "0005"
   url: "https://ouvert.canada.ca/data/fr/dataset/db177a8c-5d7d-49eb-8290-31e6a45d786c"
   identifiant: "db177a8c-5d7d-49eb-8290-31e6a45d786c"

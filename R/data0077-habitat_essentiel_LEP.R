@@ -42,7 +42,6 @@ get_data0077 <- function() {
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   # Import data
   # ----------------------------------------
-  sf::st_layers("data/data-raw/data0077-habitat_essentiel_LEP/CriticalHabitat_FGP.gdb")
   data0077 <- st_read(
     paste0(folder, 'CriticalHabitat_FGP.gdb'), 
     layer = "DFO_SARA_CritHab_2022_FGP_EN", 
