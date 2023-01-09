@@ -41,7 +41,9 @@ cv_habitat <- function() {
   #   - Espèces floristiques à statut : 0060
   #
   # Update hiver 2023:
-  #   - Frayères: ajouter "0073","0074","0075","0076"
+  #   - Frayères: "0073","0074","0075","0076"
+  #   - Espèces à statut LEP: "0077"
+  #   - Gisements coquilliers: ajouté "0078","0079","0080","0081"
   #
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   # ------------------------------------------------------
@@ -572,6 +574,46 @@ cv_habitat <- function() {
                           type_en = "Species at risk")
   habitat$flore_menacee <- uid(dat2)
   sup <- c(sup, superficie(dat2))
+  
+  # ------------------------------------------------------
+  # Species at risk LEP: 0077
+  nm <- c("0077")
+  data0077 <- load_temp(nm)
+  
+  # Retirer béluga puisqu'on le considère déjà dans la section mammifères marins
+  data0077 <- dplyr::filter(
+    data0077, 
+    !Scientific_Name %in% "Delphinapterus leucas"
+  )
+  
+  # Diviser par statut
+  # Endangered
+  dat2 <- filter(data0077, SARA_Status == "Endangered")
+  meta_temp <- meta_update(meta_temp, 
+                           dat = nm, 
+                           accr = "lep_menacee", 
+                           fr = "Espèces menacées", 
+                           descr = "Espèces désignées menacées en vertu de la Loi sur les espèces en péril (LEP)", 
+                           type = "Espèces à statut",
+                           en = "Endangered species", 
+                           descr_en = "Species listed as Endangered under the Species at Risk Act (SARA)", 
+                           type_en = "Species at risk")
+  habitat$lep_menacee <- uid(dat2)
+  sup <- c(sup, superficie(dat2))
+
+  # Threatened
+  dat2 <- filter(data0077, SARA_Status == "Threatened")
+  meta_temp <- meta_update(meta_temp, 
+                           dat = nm, 
+                           accr = "lep_voie_disparition", 
+                           fr = "Espèces en voie de disparition", 
+                           descr = "Espèces désignées en voie de disparition en vertu de la Loi sur les espèces en péril (LEP)", 
+                           type = "Espèces à statut",
+                           en = "Threatened species", 
+                           descr_en = "Species listed as Threatened under the Species at Risk Act (SARA)", 
+                           type_en = "Species at risk")
+  habitat$lep_voie_disparition <- uid(dat2)
+  sup <- c(sup, superficie(dat2))
   # ------------------------------------------------------------------------- #
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
@@ -768,6 +810,52 @@ cv_habitat <- function() {
   meta$dataDescription$CDPNQ$Flore$Scientific <- datFloreSP$species
   meta$dataDescription$CDPNQ$Flore$Common <- datFloreSP$common
   
+  # <=~ - ~=> <=~ - ~=> <=~ - ~=> <=~ - ~=> #
+  # --- Species at Risk (SARA/LEP)
+  # <=~ - ~=> <=~ - ~=> <=~ - ~=> <=~ - ~=> #
+  uid <- st_intersects(grid1p, data0077) %>% unlist() %>% unique() %>% sort()
+  dat <- data0077[uid, ] %>%
+         mutate(area = units::set_units(st_area(.), km^2)) %>%
+         st_drop_geometry()
+
+  nSp <- length(unique(dat$Scientific_Name))
+  nSite <- nrow(dat)
+
+  datLEP <- dat %>%
+         group_by(SARA_Status) %>%
+         summarize(species = length(unique(Scientific_Name)),
+                   area = round(as.numeric(sum(area)),2)) |>
+         mutate(LEP_Statut = SARA_Status) |>
+         mutate(
+           LEP_Statut = stringr::str_replace(LEP_Statut, "Endangered","Menacée"),
+           LEP_Statut = stringr::str_replace(LEP_Statut, "Threatened","En voie de disparition")
+         )
+         
+  datSp <- dat %>%
+    group_by(SARA_Status) %>%
+    summarize(species = unique(Scientific_Name), 
+              commonEn = unique(Common_Name_EN),
+              commonFr = unique(Common_Name_FR)) %>%
+    mutate(
+      LEP_Statut = SARA_Status,
+      commonEn = str_to_sentence(commonEn),
+      commonFr = str_to_sentence(commonFr),
+      LEP_Statut = stringr::str_replace(LEP_Statut, "Endangered","Menacée"),
+      LEP_Statut = stringr::str_replace(LEP_Statut, "Threatened","En voie de disparition")
+    )
+
+  # -----
+  meta$dataDescription$LEP$NombreSites <- nSite
+  meta$dataDescription$LEP$NombreEspeces <- nSp
+  meta$dataDescription$LEP$details$LEP <- datLEP$LEP_Statut
+  meta$dataDescription$LEP$details$SARA <- datLEP$SARA_Status
+  meta$dataDescription$LEP$details$species <- datLEP$species
+  meta$dataDescription$LEP$details$area <- datLEP$area
+  meta$dataDescription$LEP$Especes$LEP <- datSp$LEP_Statut
+  meta$dataDescription$LEP$Especes$SARA <- datSp$SARA_Status
+  meta$dataDescription$LEP$Especes$Scientific <- datSp$species
+  meta$dataDescription$LEP$Especes$Common_Fr <- datSp$commonFr
+  meta$dataDescription$LEP$Especes$Common_En <- datSp$commonEn
 
   # <=~ - ~=> <=~ - ~=> <=~ - ~=> <=~ - ~=> #
   # --- Zosteres
