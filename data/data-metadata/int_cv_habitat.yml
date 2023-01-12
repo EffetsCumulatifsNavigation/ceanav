@@ -38,6 +38,8 @@ dataDescription:
     - flore_susceptible
     - flore_vulnerable
     - flore_menacee
+    - lep_menacee
+    - lep_voie_disparition
     francais:
     - Zostères
     - Zones inondables
@@ -60,6 +62,8 @@ dataDescription:
     - Espèces floristiques susceptibles
     - Espèces floristiques vulnérables
     - Espèces floristiques menacées
+    - Espèces menacées
+    - Espèces en voie de disparition
     source:
     - '0001,0002,0003'
     - '0013,0014'
@@ -68,9 +72,9 @@ dataDescription:
     - '0053'
     - '0053'
     - 0009
-    - '0010'
+    - '0010,0073,0074,0075,0076'
     - 0043,0058
-    - '0057'
+    - 0057,0078,0079,0081
     - '0017'
     - '0017'
     - '0017'
@@ -82,6 +86,8 @@ dataDescription:
     - '0060'
     - '0060'
     - '0060'
+    - '0077'
+    - '0077'
     superficie:
     - 25.7612478
     - 507.9952407
@@ -90,9 +96,9 @@ dataDescription:
     - 38.4642661
     - 28.5464095
     - 230.0579924
-    - 272.1963119
+    - 1105.3012875
     - 1228.0828922
-    - 31.8019734
+    - 87.8134776
     - 6.0772385
     - 6.1786239
     - 1.7100627
@@ -104,6 +110,8 @@ dataDescription:
     - 0.9460206
     - 0.1262108
     - 2.0416878
+    - 1362.7716688
+    - 0.035478
     mdref:
     - zostere
     - zoneinondable
@@ -126,6 +134,8 @@ dataDescription:
     - floresusceptible
     - florevulnerable
     - floremenacee
+    - lepmenacee
+    - lepvoiedisparition
     type:
     - Milieux naturels
     - Milieux naturels
@@ -142,6 +152,8 @@ dataDescription:
     - Milieux naturels
     - Milieux naturels
     - Milieux naturels
+    - Espèces à statut
+    - Espèces à statut
     - Espèces à statut
     - Espèces à statut
     - Espèces à statut
@@ -167,7 +179,8 @@ dataDescription:
       par les mâles
     - Sites connus d'importance pour les oiseaux, tels des sites de nidification et
       des colonies d'oiseaux marins
-    - Gisements connus et exploités de mactre de Stimpson des eaux côtières du Québec
+    - Gisements connus et exploités de mactre de Stimpson, de clovisse arctique, de
+      couteau de l'Atlantique et de mye commune des eaux côtières du Québec
     - Dépôt non consolidé sans falaise
     - Roche consolidée sans falaise
     - Berge de roc sans escarpement
@@ -185,6 +198,9 @@ dataDescription:
     - Espèces floristiques susceptibles d'être désignées menacées ou vulnérables
     - Espèces floristiques désignées vulnérables
     - Espèces floristiques désignées menacées
+    - Espèces désignées menacées en vertu de la Loi sur les espèces en péril (LEP)
+    - Espèces désignées en voie de disparition en vertu de la Loi sur les espèces
+      en péril (LEP)
     zonesNA:
     - .na.character
     - .na.character
@@ -193,14 +209,16 @@ dataDescription:
     - .na.character
     - .na.character
     - alevinage
-    - frayere
     - .na.character
     - .na.character
+    - .na.character
     - berge_fluvial
     - berge_fluvial
     - berge_fluvial
     - berge_fluvial
     - berge_fluvial
+    - .na.character
+    - .na.character
     - .na.character
     - .na.character
     - .na.character
@@ -229,6 +247,8 @@ dataDescription:
     - Susceptible plant species
     - Vulnerable plant species
     - Threatened plant species
+    - Endangered species
+    - Threatened species
     type_en:
     - Natural areas
     - Natural areas
@@ -251,6 +271,8 @@ dataDescription:
     - Species at risk
     - Species at risk
     - Species at risk
+    - Species at risk
+    - Species at risk
     description_en:
     - Distribution of eelgrass (*Zostera marina*)
     - Land with a high probability of flooding based on a 2-year, 20-year or 100-year
@@ -267,7 +289,8 @@ dataDescription:
       juveniles)
     - Spawning sites where female fish lay eggs for fertilization by males
     - Known sites of importance to birds, such as nesting sites and seabird colonies
-    - Known and harvested Stimpson’s surf clam deposits in Quebec coastal waters
+    - Known and harvested Stimpson’s surf clam, Arctic wedge clam, Atlantic razor
+      clam, and softshell clam deposits in Quebec coastal waters
     - Unconsolidated deposit without cliff
     - Rocky bank without bluff
     - Consolidated rock without cliff
@@ -284,6 +307,8 @@ dataDescription:
     - Plant species likely to be designated as threatened or vulnerable
     - Plant species designated as vulnerable
     - Plant species designated as threatened
+    - Species listed as Endangered under the Species at Risk Act (SARA)
+    - Species listed as Threatened under the Species at Risk Act (SARA)
   frayere_alevinage:
     Source:
     - 'Alliance Environnement GDG Conseil-Daniel Arbour & Associés (n.d.) Frayère
@@ -339,6 +364,93 @@ dataDescription:
       et de ses habitats dans le secteur du pont de l’île d’Orléans : Rapport final.
       Première partie — Description physique et inventaires biologiques, Ministère
       des Forêt*'
+    - 'Argus inc. (Les consultants en environnement). 1995b. Barachois de Malbaie:
+      étude d''avant-projet de conservation et de mise en valeur. Rapport présenté
+      au Club des ornithologues de la Gaspésie dans le cadre du programme Saint-Laurent
+      Vision 2000. 71'
+    - Blais, J.-P. et V. Legendre. 1976.
+    - Boulet, M., J. Leclerc et P. Dumont. 1995; Boulet, M., Y. Chagnon et J. Leclerc.
+      1996; Dumont, P., J. Leclerc et L. Bouthillier. 1989a.
+    - Bouthillier, L., P. Dumont et G. Roy. 1993.
+    - Bouthillier, L., P. Dumont et G. Roy. 1993. Répertoire des habitats du poisson
+      de la région de Montréal, Québec. Ministère du Loisir, de la Chasse et de la
+      Pêche du Québec, Direction régionale de Montréal. ii + 6 p. + fiches et cartes
+    - Dimension Environnement SNC. 1990; LaHaye, M. et R. Fortin. 1990; Desjardins,
+      S. et P. Dumont. 1990; Dumont, P. et R. Fortin. 1977.
+    - Dubé, J., M. Letendre, M. Beaudoin et B. Dumas. 1992. Marina l'Escale inc. Relevés
+      sur l'habitat du poisson au printemps 1992. Lots 6-P, 7-P et littoral de la
+      rivière Richelieu, Notre-Dame-du-Mont-Carmel, MRC du Haut-Richelieu. Québec,
+      MLCP, 13 p.
+    - Dumont,  P., J. Leclerc et Y. Chagnon. 1990. Pêche électrique sur la rivière
+      Yamaska le 18 avril 1990. Québec, Ministère du Loisir de la Chasse et de la
+      Pêche, Service de l'aménagement et de l'exploitation de la faune, Montréal.
+      [Données non pub
+    - Dumont, P. et R. Fortin. 1977.
+    - Dumont, P., J. Leclerc et L. Bouthillier. 1989b.
+    - Dumont, P., J. Leclerc et Y. Chagnon. 1990.
+    - Enquête auprès des agents des pêches du MPO. 1994.
+    - Enquête auprès des pêcheurs et agents du MEF et du MPO. 1995.
+    - Fournier, P. et L.-M. Soyez. 1988.
+    - Fréchet, A., Dodson J.J., Powles, H. 1983; Enquête auprès des agents des pêches
+      du MPO. 1994.
+    - Gagnon, M., Y. Ménard et J.-F. La Rue. 1993.
+    - 'Gagnon, M., Y. Ménard et J.-F. La Rue. 1993. Caractérisation et évaluation
+      des habitats du poisson dans la zone de transition saline du Saint-Laurent.
+      Rapp. tech. can. sci. halieut. aquat. 1920: viii + 104 p.'
+    - Gendron, M. 1986; Gendron, M. 1987; Gendron, M. 1988; Fournier, P. et L.-M.
+      Soyez. 1988.
+    - Guay, G. et M. Couillard. 1985; Laramée, P. 1983; Dumont, P. et S. Desjardins.
+      1989.
+    - Hatin, D. et F. Caron. 2002; Hatin. D. 2003.
+    - Hatin, D. et F. Caron. 2002.
+    - Hatin. D., F. Caron et R. Fortin. 1999.
+    - Jacquaz et coll. 1990. Étude biophysique de l'habitat du poisson de quatre barachois
+      de la baie des Chaleurs.
+    - "Lemieux, C. 1995.Acquisition de connaissances des habitats côtiers dans la
+      région de Rimouski (1995). Rapport du Groupe-Conseil GENIVAR présenté au Ministère
+      des Pêches et des Océans du Canada, Division de la Gestion de l\x92Habitat du
+      Poisson, 52"
+    - Lemieux, C. 1996. Acquisition de connaissances des habitats côtiers de l'Anse
+      Saint-Jean et de la baie Sainte- Marguerite dans la région du Saguenay.  Rap.
+      du Groupe conseil Genivar inc. pour la DGHP, ministère des Pêches et Océans,
+      79 p. + annexes.
+    - Lemieux, C. et R. Lalumière. 1995. Acquisition de connaissances des habitats
+      côtiers du barachois de Saint-Omer.  Rap. du Groupe conseil Genivar inc. pour
+      la DGHP, MPO, 44 pages + 3 ann.
+    - Lesueur, C. 1995. Acquisition de connaissances du milieu côtier dans la batture
+      de Saint-Fulgence. Rapport du Comité ZIP-Saguenay au ministère des Pêches et
+      des Océans du Canada et au Ministère de l'Environnement et de la Faune. 38 p.
+      + annexes.
+    - 'Lesueur, C. 1998. Acquisition de connaissances sur les poissons migrateurs
+      et dulcicoles du Saguenay.  Rapport du projet triennal : résultats obtenus de
+      1995 à 1998. Rapport du Comité ZIP-Saguenay au MPO et EC.  74 p. + annexe.'
+    - Letendre, M., B. Dumas et M. Beaudoin. 1990; Dumont, P. et R. Fortin. 1977.
+    - Letendre, M., B. Dumas et M. Beaudoin. 1990. Inventaire de la rivière des Prairies,
+      au niveau de l'île de Pierre. Québec, Ministère du Loisir de la Chasse et de
+      la Pêche, Service de l'aménagement et de l'exploitation de la faune, Montréal.
+    - Naturam Environnement. 1995.
+    - 'Naturam Environnement. 1997. Acquisition de connaissances et mise en valeur
+      des habitats du poisson du complexe Baie Verte/Baie Laval, phase 3 : rapport
+      final.'
+    - Non disponible
+    - Pesca. 1997. Étude de conservation et de mise en valeur de la Pointe Verte,
+      Maria.  Rapport préliminaire présenté au ministère des Pêches et des Océans.  86p.
+    - Provost, J., L. Verret et P. Dumont. 1984; Leclerc, J. 1983; Environnement Illimité
+      inc. 1994.
+    - Société de la Faune et des Parcs du Québec. 2000; Bouthillier, L., P. Dumont
+      et G. Roy. 1993.
+    - Société de la Faune et des Parcs du Québec. 2000; Hatin, D. et F. Caron. 2002;
+      Hatin. D. 2003.
+    - Société de la Faune et des Parcs du Québec. 2000; Hatin, D. et F. Caron. 2002.
+    - Société de la Faune et des Parcs du Québec. 2000.
+    - Société de la Faune et des Parcs du Québec. 2000. Atlas des habitats critiques
+      connus ou d'intérêt particulier pour les poissons du fleuve Saint-Laurent entre
+      le port de Montréal et l'Île aux Coudres. Direction du développement de la faune.
+    - Therrien, J. 1998.
+    - Thérrien, J., H. Marquis, G Shooner et P. Bérubé.1991.
+    - Therrien, J., Marquis, H., Shooner, G. et Bérubé, P. 1991.
+    - Tremblay, S. 1996; Trencia, G. 2002.
+    - Trencia
     - 'ARGUS. 2001. Mise en valeur du littoral de l’agglomération de la Capitale nationale
       du Québec: élaboration d’un cadre d’analyse régional. Commission de la Capitale
       nationale. 54 p. + annexes.'
@@ -368,6 +480,51 @@ dataDescription:
     - 131
     - 56
     - 14
+    - 1
+    - 3
+    - 1
+    - 1
+    - 2
+    - 1
+    - 1
+    - 1
+    - 34
+    - 4
+    - 1
+    - 1
+    - 2
+    - 2
+    - 2
+    - 3
+    - 1
+    - 2
+    - 1
+    - 1
+    - 2
+    - 1
+    - 3
+    - 1
+    - 6
+    - 1
+    - 5
+    - 3
+    - 2
+    - 1
+    - 2
+    - 1
+    - 6
+    - 2
+    - 1
+    - 1
+    - 1
+    - 2
+    - 12
+    - 5
+    - 11
+    - 2
+    - 10
+    - 4
+    - 13
     - .na.integer
     - .na.integer
     - .na.integer
@@ -391,6 +548,51 @@ dataDescription:
     - 55.9462256
     - 85.4509619
     - 0.6324926
+    - 0.8034886
+    - 0.1403503
+    - 0.1115492
+    - 0.2420731
+    - 0.2849377
+    - 0.0666164
+    - 0.4215126
+    - 0.1081917
+    - 15.2488365
+    - 37.2902381
+    - 0.1081917
+    - 0.1818594
+    - 31.336617
+    - 0.058883
+    - 0.1759463
+    - 394.854272
+    - 336.3899556
+    - 0.0356292
+    - 0.3756485
+    - 0.9180248
+    - 67.4129737
+    - 1.173543
+    - 0.2984754
+    - 15.1037824
+    - 3.1285285
+    - 0.6801152
+    - 6.250229
+    - 12.1428505
+    - 0.6537711
+    - 0.6537707
+    - 0.3917306
+    - 20.9320179
+    - 70.921384
+    - 0.0118523
+    - 0.0650341
+    - 22.5527598
+    - 0.8486163
+    - 58.2279339
+    - 146.6360281
+    - 800.8516852
+    - 676.7527654
+    - 0.2723066
+    - 1.2474211
+    - 535.0651905
+    - 71.6877624
     - .na.real
     - .na.real
     - .na.real
@@ -414,6 +616,51 @@ dataDescription:
     - .na.integer
     - .na.integer
     - .na.integer
+    - .na.integer
+    - .na.integer
+    - .na.integer
+    - .na.integer
+    - .na.integer
+    - .na.integer
+    - .na.integer
+    - .na.integer
+    - .na.integer
+    - .na.integer
+    - .na.integer
+    - .na.integer
+    - .na.integer
+    - .na.integer
+    - .na.integer
+    - .na.integer
+    - .na.integer
+    - .na.integer
+    - .na.integer
+    - .na.integer
+    - .na.integer
+    - .na.integer
+    - .na.integer
+    - .na.integer
+    - .na.integer
+    - .na.integer
+    - .na.integer
+    - .na.integer
+    - .na.integer
+    - .na.integer
+    - .na.integer
+    - .na.integer
+    - .na.integer
+    - .na.integer
+    - .na.integer
+    - .na.integer
+    - .na.integer
+    - .na.integer
+    - .na.integer
+    - .na.integer
+    - .na.integer
+    - .na.integer
+    - .na.integer
+    - .na.integer
+    - .na.integer
     - 15
     - 2917
     - 35
@@ -430,6 +677,51 @@ dataDescription:
     - .na.real
     - 15.8790647
     - 169.5108383
+    - .na.real
+    - .na.real
+    - .na.real
+    - .na.real
+    - .na.real
+    - .na.real
+    - .na.real
+    - .na.real
+    - .na.real
+    - .na.real
+    - .na.real
+    - .na.real
+    - .na.real
+    - .na.real
+    - .na.real
+    - .na.real
+    - .na.real
+    - .na.real
+    - .na.real
+    - .na.real
+    - .na.real
+    - .na.real
+    - .na.real
+    - .na.real
+    - .na.real
+    - .na.real
+    - .na.real
+    - .na.real
+    - .na.real
+    - .na.real
+    - .na.real
+    - .na.real
+    - .na.real
+    - .na.real
+    - .na.real
+    - .na.real
+    - .na.real
+    - .na.real
+    - .na.real
+    - .na.real
+    - .na.real
+    - .na.real
+    - .na.real
+    - .na.real
+    - .na.real
     - .na.real
     - .na.real
     - .na.real
@@ -816,6 +1108,43 @@ dataDescription:
     metis:
       sites: 3
       superficie: < 1
+  LEP:
+    NombreSites: 7
+    NombreEspeces: 3
+    details:
+      LEP:
+      - Menacée
+      - En voie de disparition
+      SARA:
+      - Endangered
+      - Threatened
+      species:
+      - 2
+      - 1
+      area:
+      - 2319.83
+      - 18.81
+    Especes:
+      LEP:
+      - Menacée
+      - Menacée
+      - En voie de disparition
+      SARA:
+      - Endangered
+      - Endangered
+      - Threatened
+      Scientific:
+      - Moxostoma hubbsi
+      - Morone saxatilis
+      - Ammocrypta pellucida
+      Common_Fr:
+      - Chevalier cuivré
+      - Bar rayé
+      - Dard de sable
+      Common_En:
+      - Copper redhorse
+      - Striped bass
+      - Eastern sand darter
 rawData:
 - '0001'
 - '0002'
@@ -828,9 +1157,16 @@ rawData:
 - '0053'
 - 0009
 - '0010'
+- '0073'
+- '0074'
+- '0075'
+- '0076'
 - '0043'
 - 0058
 - '0057'
+- 0078
+- 0079
+- 0081
 - '0017'
 - '0017'
 - '0017'
@@ -842,3 +1178,5 @@ rawData:
 - '0060'
 - '0060'
 - '0060'
+- '0077'
+- '0077'

@@ -299,7 +299,6 @@ cv_habitat <- function() {
                            fr = "Frayères", 
                            descr = "Sites de reproduction où des poissons femelles pondent des oeufs pour fécondation par les mâles", 
                            type = "Cycles de vie", 
-                           zonesNA = "frayere",
                            en = "Spawning sites", 
                            descr_en = "Spawning sites where female fish lay eggs for fertilization by males", 
                            type_en = "Life cycles")

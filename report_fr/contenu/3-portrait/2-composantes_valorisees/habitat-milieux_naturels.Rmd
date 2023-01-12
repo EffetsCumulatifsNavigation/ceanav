@@ -185,6 +185,8 @@ show_source(lang = "fr")
 
 Les données utilisées pour caractériser les gisements coquilliers dans la zone d'étude proviennent d'une description des stocks de mactre de Stimpson (*Mactromeris polynyma*) en milieux côtiers au Québec [@trottier2015; @mpo2019]. Les données fournissent la délimitation de gisements connus et commercialement exploités historiquement ou actuellement pour toute la région québécoise de l'estuaire et du golfe du Saint-Laurent. 
 
+Ces données ont été bonifiées à l'aide de données sur les aires de concentration connues exploitées ou non exploitées de la Clovisse arctique [*Mesodesma arctatum*; @mpo2022b], de le Couteau de l'Atlantique [*Ensis leei*; @mpo2022c] et de la Mye commune [*Mya arenaria*; @mpo2022e]. Ces données ont été conçues pour le Centre national des urgences environnementales (CNUE) et proviennent de divers inventaires et projets de recherche de Pêches et Océans Canada.
+
 <br>
 
 ```{r gisementcoquilliers, fig.cap = "Distribution des habitats dans le Saint-Laurent et le Saguenay - Gisements coquilliers", out.width = '100%', fig.link = "./figures/figures-integrated/habitat-gisement_coquilliers.png"}

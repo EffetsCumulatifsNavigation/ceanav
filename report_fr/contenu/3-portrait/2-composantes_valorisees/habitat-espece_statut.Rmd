@@ -3,7 +3,8 @@
 ```{r statut_data, results = 'asis'}
 uid <- meta$dataDescription$categories$accronyme %in% 
           c("faune_susceptible", "faune_vulnerable", "faune_menacee", 
-            "flore_susceptible", "flore_vulnerable", "flore_menacee")
+            "flore_susceptible", "flore_vulnerable", "flore_menacee",
+            "lep_menacee","lep_voie_disparition")
 meta$dataDescription$categories$source[uid] %>%
 sapply(., function(x) stringr::str_split(x, ",")) %>%
 unlist() %>%
@@ -74,3 +75,33 @@ knitr::include_graphics("./figures/figures-integrated/habitat-flore_menacee.png"
 ```
 
 <br>
+
+
+Les données du CDPNQ ont été bonifiées par les données par des données du Programme des espèces en péril en vertu de la Loi sur les espèces en péril [LEP; @mpo2022]. Tout comme les données du CDPNQ, ces données identifient des sites connus où des espèces à statut ont été observées. Au sein de la zone d'étude, cette base de données compte `r meta$dataDescription$LEP$NombreSites` sites pour `r meta$dataDescription$LEP$NombreEspeces + 1` espèces (Tableau \@ref(tab:statutlep)). Nous avons toutefois retiré le béluga de cette liste, puisque ce dernier est considéré au sein de la composante valorisée [mammifères marins](#mammiferesmarins). 
+
+<br>
+
+```{r statutlep}
+tab <- as.data.frame(meta$dataDescription$LEP$Especes) %>%
+       select(LEP, Scientific, Common_Fr)
+
+
+tab %>%
+  knitr::kable(
+    col.names = c("Statut", "Nom scientifique", "Nom commun"),
+    row.names = FALSE,
+    caption = "Espèces désignées en vertu de la Loi sur les espèces en péril et leur statut [@mpo2022]."
+  )
+```
+
+<br>
+
+```{r lepmenacee, fig.cap = "Distribution des habitats dans le Saint-Laurent et le Saguenay - Espèces menacées", out.width = '100%', fig.link = "./figures/figures-integrated/habitat-lep_menacee.png"}
+knitr::include_graphics("./figures/figures-integrated/habitat-lep_menacee.png")
+```
+
+<br>
+
+```{r lepvoiedisparition, fig.cap = "Distribution des habitats dans le Saint-Laurent et le Saguenay - Espèces en voie de disparition", out.width = '100%', fig.link = "./figures/figures-integrated/habitat-lep_voie_disparition.png"}
+knitr::include_graphics("./figures/figures-integrated/habitat-lep_voie_disparition.png")
+```
