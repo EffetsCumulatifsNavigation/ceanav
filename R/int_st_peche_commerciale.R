@@ -15,7 +15,9 @@ st_peche_commerciale <- function() {
   load_format("data0033")
   load_format("data0034")
   load_format("data0035")
-  data_metadata <- c("0033","0034","0035")
+  # MAJ 2023:
+  load_format("data0083")
+  data_metadata <- c("0033","0034","0035", "0083")
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   # Classify gear types
@@ -279,6 +281,34 @@ st_peche_commerciale <- function() {
   # --------------------------------------------------------------------------------
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  # Pêches secteur fluvial
+  # ----------------------------------
+  #
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  data(aoi)
+  data(grid1p)
+  grid1p$ID <- 1:nrow(grid1p)
+  dat <- dplyr::select(data0083, PECHE) |>
+         sf::st_intersection(aoi) |>
+         dplyr::select(-FID)
+  uid <- sf::st_join(grid1p, dat) |>
+         sf::st_drop_geometry() |>
+         dplyr::group_by(ID) |>
+         dplyr::summarize(
+           PECHE = ifelse(
+             is.na(PECHE),
+             NA,
+             max(PECHE, na.rm = TRUE)
+           )
+         ) |>
+         dplyr::distinct() |>
+         dplyr::rename(peche_fleuve = PECHE)
+  peche_commerciale$ID <- 1:nrow(peche_commerciale)
+  peche_commerciale <- dplyr::left_join(peche_commerciale, uid, by = "ID") |>
+    dplyr::select(-ID)
+  # --------------------------------------------------------------------------------
+
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   # Update metadata
   # ----------------------------------
   #
@@ -329,7 +359,7 @@ st_peche_commerciale <- function() {
     "Commercial fishing activities using pelagic fishing gear with little or no bycatch and not causing habitat modification, e.g., line fishing, purse seine.",
     "Commercial fishing activities using pelagic fishing gear with high bycatch and not causing habitat modification, e.g., gillnet and longline.")
     
-  meta$dataDescription$categories$zonesNA <- rep("fluvial_peche", length(meta$dataDescription$categories$accronyme))
+  # meta$dataDescription$categories$zonesNA <- rep("fluvial_peche", length(meta$dataDescription$categories$accronyme))
   
   # ----- frequence 
   dat <- data.frame(acr = meta$dataDescription$categories$accronyme) %>%
