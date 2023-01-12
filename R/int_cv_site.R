@@ -361,7 +361,8 @@ cv_site <- function() {
   # ================================================================================================
   # ----------------------------
   # Milieux protégés : 0030, 0038, 0039, 0040
-  dat <- c("0030", "0038", "0039")#, "0040")
+  # MAJ 2023: 0082
+  dat <- c("0030", "0038", "0039", "0082")#, "0040")
   meta_temp <- meta_update(meta_temp, 
                            dat = dat, 
                            accr = "public_milieu_protege", 
@@ -394,11 +395,15 @@ cv_site <- function() {
   load_format("data0038")
   load_format("data0039")
   # load_format("data0040") # Pas de données dans notre zone d'étude
-  nm <- c("Habitat faunique","Habitat d'une espèce floristique menacée ou vulnérable",
-          "Réserve de territoire aux fins d'aire protégée")
-  iid <- data0038$DESIG_GR %in% nm
-  data0038 <- data0038[!iid, ]
-  site$public_milieu_protege <- uid2(data0030, data0038, data0039)#, data0040)
+  load_format("data0082")
+  nm <- c(
+    "Habitat faunique",
+    "Habitat d'une espèce floristique menacée ou vulnérable",
+    "Réserve de territoire aux fins d'aire protégée"
+  )
+  data0038 <- data0038[!data0038$DESIG_GR %in% nm, ]
+  data0082 <- data0082[!data0082$DESIG_GR %in% nm, ]
+  site$public_milieu_protege <- uid2(data0030, data0038, data0039, data0082)#, data0040)
 
 
   # ================================================================================================
