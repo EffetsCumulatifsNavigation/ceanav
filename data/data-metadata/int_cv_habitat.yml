@@ -40,6 +40,9 @@ dataDescription:
     - flore_menacee
     - lep_menacee
     - lep_voie_disparition
+    - biovolume_herbier_faible
+    - biovolume_herbier_modere
+    - biovolume_herbier_eleve
     francais:
     - Zostères
     - Zones inondables
@@ -64,6 +67,9 @@ dataDescription:
     - Espèces floristiques menacées
     - Espèces menacées
     - Espèces en voie de disparition
+    - Biovolume herbiers aquatique - faible
+    - Biovolume herbiers aquatique - modéré
+    - Biovolume herbiers aquatique - élevé
     source:
     - '0001,0002,0003'
     - '0013,0014'
@@ -88,6 +94,9 @@ dataDescription:
     - '0060'
     - '0077'
     - '0077'
+    - 0084
+    - 0084
+    - 0084
     superficie:
     - 25.7612478
     - 507.9952407
@@ -112,6 +121,9 @@ dataDescription:
     - 2.0416878
     - 1362.7716688
     - 0.035478
+    - 19.268402
+    - 9.5730915
+    - 13.9776243
     mdref:
     - zostere
     - zoneinondable
@@ -136,6 +148,9 @@ dataDescription:
     - floremenacee
     - lepmenacee
     - lepvoiedisparition
+    - biovolumeherbierfaible
+    - biovolumeherbiermodere
+    - biovolumeherbiereleve
     type:
     - Milieux naturels
     - Milieux naturels
@@ -160,6 +175,9 @@ dataDescription:
     - Espèces à statut
     - Espèces à statut
     - Espèces à statut
+    - Milieux naturels
+    - Milieux naturels
+    - Milieux naturels
     description:
     - Distribution de la zostère marine (*Zostera marina*)
     - Territoires ayant une probabilité élevée d'être inondés selon une récurrence
@@ -201,6 +219,9 @@ dataDescription:
     - Espèces désignées menacées en vertu de la Loi sur les espèces en péril (LEP)
     - Espèces désignées en voie de disparition en vertu de la Loi sur les espèces
       en péril (LEP)
+    - Milieux à faible biovolume d'herbiers aquatiques
+    - Milieux à modéré biovolume d'herbiers aquatiques
+    - Milieux à élevé biovolume d'herbiers aquatiques
     zonesNA:
     - .na.character
     - .na.character
@@ -217,6 +238,9 @@ dataDescription:
     - berge_fluvial
     - berge_fluvial
     - berge_fluvial
+    - .na.character
+    - .na.character
+    - .na.character
     - .na.character
     - .na.character
     - .na.character
@@ -249,6 +273,9 @@ dataDescription:
     - Threatened plant species
     - Endangered species
     - Threatened species
+    - Grassland biovolume - low
+    - Grassland biovolume - moderate
+    - Grassland biovolume - high
     type_en:
     - Natural areas
     - Natural areas
@@ -273,6 +300,9 @@ dataDescription:
     - Species at risk
     - Species at risk
     - Species at risk
+    - Natural areas
+    - Natural areas
+    - Natural areas
     description_en:
     - Distribution of eelgrass (*Zostera marina*)
     - Land with a high probability of flooding based on a 2-year, 20-year or 100-year
@@ -309,6 +339,9 @@ dataDescription:
     - Plant species designated as threatened
     - Species listed as Endangered under the Species at Risk Act (SARA)
     - Species listed as Threatened under the Species at Risk Act (SARA)
+    - Areas with low grassland biovolume
+    - Areas with moderate grassland biovolume
+    - Areas with high grassland biovolume
   frayere_alevinage:
     Source:
     - 'Alliance Environnement GDG Conseil-Daniel Arbour & Associés (n.d.) Frayère
@@ -1180,3 +1213,6 @@ rawData:
 - '0060'
 - '0077'
 - '0077'
+- 0084
+- 0084
+- 0084

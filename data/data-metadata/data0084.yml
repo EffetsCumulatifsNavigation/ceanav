@@ -1,0 +1,15 @@
+data_description:
+  id: "0084"
+  name: "Biovolumes herbiers"
+  description: "Biovolumes d'herbiers aquatiques à partir de données sonar en 2021."
+  access_date: 2022-12-20
+  temporal_start: 2021
+  temporal_end: 2021
+  contact_id: 
+    - "0012"
+    - "0067"
+    - "0068"
+  availability: "available"
+  citekey: "mffp2022b"
+  citation: "Ministère des forêts, de la faune et des parcs (2022) Herbier2021Plus_0_1DeBiovolume [SHP], V2022-11-11, MFFP, gouvernement du Québec, Québec"
+ 

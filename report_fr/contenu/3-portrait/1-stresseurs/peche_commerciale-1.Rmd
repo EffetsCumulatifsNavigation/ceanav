@@ -1,5 +1,8 @@
 ### Pêche commerciale {#pechecommerciale}
 
+> ***Nous remercions Marc Mingelbier, Paschale Bégin et Marie-Josée Gagnon du Ministère de l’Environnement, de la Lutte contre les changements climatiques, de la Faune et des Parcs pour les échanges et le soutien pour la caractérisation des pêches au sein du secteur fluvial de la zone d'étude.***
+
+
 ```{r peche_setup, echo = FALSE, results = 'asis'}
 meta <- read_yaml("../data/data-metadata/int_st_peche_commerciale.yml")
 show_source(meta$rawData, lang = "fr")

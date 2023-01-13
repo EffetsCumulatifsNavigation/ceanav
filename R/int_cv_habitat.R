@@ -44,6 +44,7 @@ cv_habitat <- function() {
   #   - Frayères: "0073","0074","0075","0076"
   #   - Espèces à statut LEP: "0077"
   #   - Gisements coquilliers: ajouté "0078","0079","0080","0081"
+  #   - Herbiers aquatiques: 0084
   #
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   # ------------------------------------------------------
@@ -613,6 +614,65 @@ cv_habitat <- function() {
                            type_en = "Species at risk")
   habitat$lep_voie_disparition <- uid(dat2)
   sup <- c(sup, superficie(dat2))
+  
+  # ------------------------------------------------------
+  # Herbires aquatiques : 0084
+  nm <- c("0084")
+  dat <- load_temp(nm)
+  # Diviser en biovolumes faible, modéré, élevés 
+  quant <- quantile(dat$BioVolume, probs = c(0,0.33,0.66,1)) |> unname()
+  dat_fbl <- dplyr::filter(dat, BioVolume <= quant[2])
+  dat_mod <- dplyr::filter(dat, BioVolume > quant[2] & BioVolume <= quant[3])
+  dat_elv <- dplyr::filter(dat, BioVolume > quant[3])
+  
+  # Biovolume faible
+  meta_temp <- meta_update(meta_temp, 
+                           dat = nm, 
+                           accr = "biovolume_herbier_faible", 
+                           fr = "Biovolume herbiers aquatique - faible", 
+                           descr = "Milieux à faible biovolume d'herbiers aquatiques", 
+                           type = "Milieux naturels", 
+                           en = "Grassland biovolume - low", 
+                           descr_en = "Areas with low grassland biovolume", 
+                           type_en = "Natural areas")
+  habitat$biovolume_herbier_faible <- uid(dat_fbl)
+  sup <- c(sup, superficie(dat_fbl))
+
+  # Biovolume modéré
+  meta_temp <- meta_update(meta_temp, 
+                           dat = nm, 
+                           accr = "biovolume_herbier_modere", 
+                           fr = "Biovolume herbiers aquatique - modéré", 
+                           descr = "Milieux à modéré biovolume d'herbiers aquatiques", 
+                           type = "Milieux naturels", 
+                           en = "Grassland biovolume - moderate", 
+                           descr_en = "Areas with moderate grassland biovolume", 
+                           type_en = "Natural areas")
+  habitat$biovolume_herbier_modere <- uid(dat_mod)
+  sup <- c(sup, superficie(dat_mod))
+
+  # Biovolume élevé
+  meta_temp <- meta_update(meta_temp, 
+                           dat = nm, 
+                           accr = "biovolume_herbier_eleve", 
+                           fr = "Biovolume herbiers aquatique - élevé", 
+                           descr = "Milieux à élevé biovolume d'herbiers aquatiques", 
+                           type = "Milieux naturels", 
+                           en = "Grassland biovolume - high", 
+                           descr_en = "Areas with high grassland biovolume", 
+                           type_en = "Natural areas")
+  habitat$biovolume_herbier_eleve <- uid(dat_elv)
+  sup <- c(sup, superficie(dat_elv))
+  
+  # Single grid cells cannot contain multiple categories. Modify accordingly.
+  habitat <- dplyr::mutate(
+    habitat,
+    biovolume_herbier_modere = ifelse(biovolume_herbier_eleve == 1, 0, biovolume_herbier_modere),
+    biovolume_herbier_faible = ifelse(biovolume_herbier_eleve == 1, 0, biovolume_herbier_faible)
+  ) |>
+  dplyr::mutate(
+    biovolume_herbier_faible = ifelse(biovolume_herbier_modere == 1, 0, biovolume_herbier_faible)
+  )
   # ------------------------------------------------------------------------- #
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
