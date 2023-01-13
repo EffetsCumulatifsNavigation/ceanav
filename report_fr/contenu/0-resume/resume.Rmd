@@ -44,7 +44,7 @@ Dans le cadre de la présente évaluation, le rassemblement des données nécess
 La caractérisation des [composantes valorisées](#cvportrait) a quant à elle été effectuée à partir de l'intégration de `r src(cv)` bases de données et résulté en la description de `r length(unique(cv$title))` composantes valorisées divisées en `r nrow(cv)` sous-catégories : `r ct2(cv)`. 
 Enfin, une approche combinant divers métriques d’exposition et de sensibilité -- *e.g.* fréquence des stresseurs, impacts trophiques, résistance, résilience, statut légaux -- a été utilisée afin de caractériser la [vulnérabilité relative](#vulnportrait) de l'ensemble des catégories de composantes valorisées à l'ensemble des catégories des stresseurs environnementaux.
 
-Nous présentons ici les constats généraux issus de l'évaluation des effets cumulatifs en points de forme. Des constats additionnels sont présentés au sein du rapport et pourraient également être faits en explorant davantage les résultats obtenus; nous invitons le lecteur à s'attarder à la section \@ref(resultats) du rapport pour davantage d'informations et à explorer les figures qui y sont présentées plus en détails.
+Nous présentons ici les constats généraux issus de l'évaluation des effets cumulatifs en points de forme. Des constats additionnels sont présentés au sein du rapport et pourraient également être faits en explorant davantage les résultats obtenus; nous invitons le lecteur à s'attarder à la section \@ref(resultats) du rapport pour davantage d'informations et à explorer les figures qui y sont présentées plus en détails. 
 
 <br/>
 
@@ -89,3 +89,6 @@ Nous présentons ici les constats généraux issus de l'évaluation des effets c
 - **Régions administratives les plus affectées**
   - Les régions administratives du secteur fluvial sont les plus affectées par les effets cumulatifs des activités maritimes, un constat particulièrement important pour la Montérégie. Ces effets sont influencés majoritairement par la navigation et principalement par le transport de marchandise. (*e.g.* pétrolier, cargaison sèche, cargo et porte-conteneurs);
   - La Côte Nord est la région administrative la plus affectée au sein du secteur maritime, principalement dû aux effets de la navigation sur les mammifères marins.
+
+
+L'ensemble des données consultées et utilisées pour l'évaluation des effets cumulatifs peuvent également être consultées à l'[annexe 1](#annexe1) et les mises à jour effectuées sont détaillées à l'[annexe 10](#annexe10).

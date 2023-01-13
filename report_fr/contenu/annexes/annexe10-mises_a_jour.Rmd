@@ -1,0 +1,20 @@
+# Annexe 10 {.unnumbered #annexe10}
+
+## Mises à jour
+
+### 2023-03-31 
+
+A contract was given to inSileco Inc. to update and add additional data to the study area profile and to update the assessment. Here is the list of modifications: 
+
+- Intégration de nouvelles données et de données mises à jour (consultez le [portrait de la zone d'étude](#portrait) et l'[annexe 1](#annexe1) pour plus de détails sur les données et le)
+  - Composantes valorisées
+    - [Habitats floristiques et fauniques](#habitat)
+      - Frayères secteur maritime (id: 0073, 0074, 0075, 0076)
+      - Espèces à statut en vertu de la Loi sur les espèces en péril (id: 0077)
+      - Gisements coquiliers supplémentaires (id: 0078, 0079, 0080, 0081)
+      - Biovolumes herbiers aquatiques (id: 0084)
+    - [Sites d’intérêt culturels, patrimoniaux et archéologiques](#site)
+      - Zones de protection mises à jour (id: 0082)
+  - Stresseurs 
+    - [Pêches commerciales](#pechecommerciale)
+      - Pêches commerciales secteur fluvial (id: 0083)
