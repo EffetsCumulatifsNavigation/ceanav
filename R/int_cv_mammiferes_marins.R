@@ -113,6 +113,55 @@ cv_mammiferes_marins <- function() {
   # Add to marine mammals data
   mammiferes_marins <- cbind(mammiferes_marins, mm)
   # ------------------------------------------------------------------------- #
+  
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  # Update 2023-03: data0085 large whales dfo
+  # ------------------------------------
+  # Replace species with better data from the DFO modeling work
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
+  load_format("data0085")
+  data(grid1p)
+  data0085 <- as(data0085, "Raster")
+
+
+  # -------
+  # Identify cells in the aoi that are only terrestrial and hence shouldn't be included.
+  data(aoi)
+  uid <- st_intersects(aoi, grid1p) %>% unlist()
+  nid <- !1:nrow(grid1p) %in% uid
+
+  # -------
+  grid1p_2 <- st_transform(grid1p, st_crs(data0085))
+  mm <- exact_extract(data0085, grid1p_2, 'mean', progress = FALSE)
+  for(i in 1:ncol(mm)) mm[nid,i] <- NA
+
+  # -------
+  for(i in 1:ncol(mm)) {
+    suppressWarnings({
+      mm[,i] <- mm[,i] / max(mm[,i], na.rm = TRUE)
+    })
+  }
+
+  # -------
+  mm <- cbind(grid1p_2, mm) %>%
+        st_transform(global_parameters()$crs) |>
+        dplyr::rename(
+          rorqual_bleu = mean.Blue_pred.tif,
+          rorqual_commun = mean.Fin_pred.tif,
+          rorqual_a_bosse = mean.Humpback_pred.tif,
+          petit_rorqual = mean.Minke_pred.tif
+        )
+
+  # -------
+  # Replace species in mammiferes_marins
+  mammiferes_marins <- dplyr::mutate(
+    mammiferes_marins,
+    rorqual_bleu = mm$rorqual_bleu,
+    rorqual_commun = mm$rorqual_commun,
+    rorqual_a_bosse = mm$rorqual_a_bosse,
+    petit_rorqual = mm$petit_rorqual 
+  )
+  # ------------------------------------------------------------------------- #
 
 
 
@@ -124,7 +173,7 @@ cv_mammiferes_marins <- function() {
   meta <- load_metadata("int_cv_mammiferes_marins")
 
   # -----
-  meta$rawData <- c("0027","0054")
+  meta$rawData <- c("0027","0054","0085")
 
   # -----
   meta$dataDescription$spatial$extent <- st_bbox(mammiferes_marins)
@@ -150,7 +199,7 @@ cv_mammiferes_marins <- function() {
                           "Phoque","Phoque","Phoque"),
                  type_en = c("Whale","Whale","Whale","Whale","Whale","Whale",
                           "Seal","Seal","Seal"),
-                 source = c("0027","0027","0027","0027","0027","0054","0054","0054","0054"))
+                 source = c("0085","0085","0085","0027","0085","0054","0054","0054","0054"))
 
   meta$dataDescription$categories$accronyme <-  nm$accronyme
   meta$dataDescription$categories$francais <-  nm$francais
