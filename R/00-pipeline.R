@@ -117,6 +117,8 @@ pipeline <- function(
     get_data0083()
     get_data0084()
     get_data0085()
+    get_data0086()
+    get_data0087()
   }
 
 

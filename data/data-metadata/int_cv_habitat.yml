@@ -77,8 +77,8 @@ dataDescription:
     - '0053'
     - '0053'
     - '0053'
-    - 0009
-    - '0010,0073,0074,0075,0076'
+    - 0086
+    - 0087,0073,0074,0075,0076
     - 0043,0058
     - 0057,0078,0079,0081
     - '0017'
@@ -104,8 +104,8 @@ dataDescription:
     - 169.4216081
     - 38.4642661
     - 28.5464095
-    - 230.0579924
-    - 1105.3012875
+    - 991.4657098
+    - 1199.0767769
     - 1228.0828922
     - 87.8134776
     - 6.0772385
@@ -229,7 +229,7 @@ dataDescription:
     - .na.character
     - .na.character
     - .na.character
-    - alevinage
+    - .na.character
     - .na.character
     - .na.character
     - .na.character
@@ -344,32 +344,57 @@ dataDescription:
     - Areas with high grassland biovolume
   frayere_alevinage:
     Source:
+    - ' '
     - 'Alliance Environnement GDG Conseil-Daniel Arbour & Associés (n.d.) Frayère
       PLIO adapté de Lavoie et Talbot  1984 [document cartographique]. 1 : 340 000,
       Alliance Environnement GDG Conseil-Daniel Arbour & Associés, Trois-Rivières,
-      Québec. '
+      Québec.'
     - Benoit, J., J.-C. Bourgeois, S. Desjardins et J. Picard. 1988. Plan de conservation
       et de mise en valeur des habitats et de la faune de la région du lac Saint-Pierre.
-      Ministère des Loisirs, de la Chasse et de la Pêche du Québec, Directions régionale*
+      Ministère des Loisirs, de la Chasse et de la Pêche du Québec, Directions régio
     - Bernatchez, S., Valiquette, E., Vachon, N., Brodeur, P., Côté, C., Hatin, D.,
       L’Italien, L. et Y. Paradis. 2019. Lake Sturgeon (Acipenserfulvescens) spawning
       sites in the St. Lawrence river system, Québec, Canada. Ministère des Forêts,
-      de la Faune e*
+      de la F
     - Bouchard, D. 1976. Localisation des frayères des principales espèces de poissons
       d'intérêt sportif et commercial, dans le fleuve Saint-Laurent. (Phase 1). Québec,
-      Ministère du Loisir, de la Chasse et de la Pêche, Service de la recherche biologique,
-      *
-    - 'DGFa 05-06-13-16 (2020) Base de données frayères [FGDB]. V.2020, 1 : 20 000,
-      DGFa 05-06-13-16, Longueuil.'
+      Ministère du Loisir, de la Chasse et de la Pêche, Service de la recherche biolog
+    - Bourque, M. et J.Malouin (2009). Guide d'intervention en matière de conservation
+      et de mise en valeur des littoraux de la MRC de Sept-Rivières. Comité ZIP Côte-Nord
+      du Golfe, 153 p. + 1 annexe.
+    - Bourque, M., V. Provost et G. Mazo (2009). Guide d'intervention en matière de
+      conservation et de mise en valeur des habitats littoraux d'intérêt en Basse-Côte-Nord.
+      Comité ZIP Côte-Nord du Golfe, vi + 166 p.
+    - Comité d’étude sur le fleuve Saint-Laurent (1975). Études biologiques, Annexe
+      cartographique au vol. 1, Dimension environnement Ltée, Montréal, 1413 p.
+    - Comité ZIP de la rive nord de l'estuaire (2001). Plan de protection et de mise
+      en valeur du banc de Portneuf. Rédigé par Naturam Environnement Inc. et déposé
+      au Comité ZIP de la rive nord de l'estuaire, 70 p.
+    - Comité ZIP de la rive nord de l'estuaire (2008). Guide d'intervention en matière
+      de protection et de mise en valeur des habitats littoraux d'intérêt de la rive
+      nord de l'estuaire maritime (fiches 14 à 20), 8 p. + 7 fiches + annexe.
+    - Comité Zone d'intervention Prioritaire Côte-Nord du Golfe (2008). Une histoire
+      de pêche...Le savoir des aînés au service de la communauté! Rapport final remis
+      au programme Nouveaux horizons pour les ainés, 18 p.
+    - Guay G. et M. Couillard. 1985. Étude de l'utilisation printanière et automnale
+      des rapides de Lachine par les poissons. Projet d'archipel de Montréal (1984).
+      Environnement illimité Inc., 1976 p.
+    - HEPPELL, M., I. PICARD, F. BÉLISLE et C. THÉBERGE (2000). Guide d'intervention
+      en matière de protection et de mise en valeur des habitats littoraux d'intérêt
+      de la rive nord de l'estuaire maritime. Version finale.
     - 'L’italien, L. (2017) Frayère d’esturgeon noir [shp]. V.2017, 1 : 50 000, DGFa
       03-12, Québec.'
+    - L’ITALIEN, L., J. MAINGUY et E. VALIQUETTE (2020). Dynamique et habitats de
+      reproduction de la population réintroduite de bars rayés (Morone saxatilis)
+      dans le fleuve Saint-Laurent, ministère des Forêts, de la Faune et des Parcs,
+      Québec, XVI +
     - 'Mailhot, Y. et R. Morrissette (20 juin 2012) Atlas des frayères potentielles
       ou confirmées et de certains autres sites d’intérêt dans les rivières de la
       plaine du Saint-Laurent. V.2012, 1 : 400 000, MFFP – DGFa 04-17, Trois-Rivières.'
     - Mailhot, Y. et R. Morrissette (20 juin 2012) Atlas des habitats fauniques critiques
       et des exploitations halieutiques d’importance dans le fleuve Saint-Laurent
       et l’aval des tributaires à privilégier pour les interventions en cas d’urgence
-      maritime *
+      ma
     - Massé, G. 1974. Frayères à poissons d’eau chaude du couloir fluvial, entre Montréal
       et el lac Saint-Pierre. Service de l’Aménagement de la Faune, Ministère du Tourisme,
       de la Chasse et de la Pêche. 20 p.
@@ -378,25 +403,30 @@ dataDescription:
       River Ecosystem, Cornwall, Ontario.
     - Ministère de l’Environnement et de la Faune. 1994. Cartographie des sites d’intérêt
       et des sites protégés et fiches synthèses descriptives des sites d’intérêt faunique.
-      Direction régionale de la Montérégie, Service de l’aménagement et de l’exploitat*
-    - 'Ministère des Forêts, de la Faune et des Parcs (2019b) Géobase-Faune -  Hab_aqua_part_s
-      [FGDB]. V2019-11-19, MFFP, Québec, Qc. '
-    - Ministère des Forêts, de la Faune et des Parcs (2019b) Géobase-Faune - Hab_aqua_part_p  [FGDB].
-      V2019-11-19, MFFP, Québec, Qc
-    - Ministère des Forêts, de la Faune et des Parcs (2019b) Géobase-Faune - SFI_s  [FGDB].
-      V2019-11-19, MFFP, Québec, Qc
+      Direction régionale de la Montérégie, Service de l’aménagemen
+    - Ministère des Forêts, de la Faune et des Parcs (2023) Géobase-Faune -  SFI_p  [FGDB].
+      V2023-01-17, MFFP, Québec, Qc.
+    - Ministère des Forêts, de la Faune et des Parcs (2023) Géobase-Faune - SFI_s  [FGDB].
+      V2023-01-17, MFFP, Québec, Qc.
     - 'Ministère des Forêts, de la Faune et des Parcs (25 mars 2013) Frayère de Shooner
       [shp]. V.2013, 1 : 400 000, DGFa 04-17, Trois-Rivières.'
     - 'Ministère des Ressources naturelles (2013) Habitats essentiels [shp]. 2e trimestre,
       1 : 170 000, Direction de l’expertise Énergie -Faune -Forêt-Mines-Territoire
-      de la Mauricie et du Centre -du-Québec, Québec. '
+      de la Mauricie et du Centre -du-Québec, Québec.'
+    - PÉROT, A. et V. PROVOST (2008). Guide d'intervention en matière de protection
+      et de mise en valeur des habitats littoraux d'intérêt dans la MRC de la Minganie.
+      Comité ZIP Côte-Nord du Golfe, vii p. + 127 p.
     - Société de la faune et des parcs du Québec. 2000. Atlas des habitats critiques
       connus ou d’intérêt particulier pour les poissons du fleuve Saint-Laurent entre
-      le port de Montréal et l’Île aux Coudres. Direction du développement de la faune.
-    - 'VALIQUETTE, E., M. LEGAULT et V. HARVEY. 2016. État référence de la faune aquatique
-      et de ses habitats dans le secteur du pont de l’île d’Orléans : Rapport final.
-      Première partie — Description physique et inventaires biologiques, Ministère
-      des Forêt*'
+      le port de Montréal et l’Île aux Coudres. Direction du développement de la faun
+    - Therrien, J., H. Marquis, G. Shooner et P. Bérubé. (1991). Caractérisation des
+      habitats recherchés pour la fraie des principales espèces de poissons du fleuve
+      Saint-Laurent (Cornwall-Montmagny). Étude réalisée par le Groupe Environnement
+      Shoo
+    - 'VALIQUETTE,LEGAULT, HARVEY. 2016. État référence de la faune aquatique et de
+      ses habitats dans le secteur du pont de l’île d’Orléans : rapport final. Première
+      partie — Description physique et inventaires biologiques, MFFP, DGGFH, DEFA,
+      Qc'
     - 'Argus inc. (Les consultants en environnement). 1995b. Barachois de Malbaie:
       étude d''avant-projet de conservation et de mise en valeur. Rapport présenté
       au Club des ornithologues de la Gaspésie dans le cadre du programme Saint-Laurent
@@ -487,31 +517,55 @@ dataDescription:
     - 'ARGUS. 2001. Mise en valeur du littoral de l’agglomération de la Capitale nationale
       du Québec: élaboration d’un cadre d’analyse régional. Commission de la Capitale
       nationale. 54 p. + annexes.'
+    - Benoit, J., J.-C. Bourgeois, S. Desjardins et J. Picard. 1988. Plan de conservation
+      et de mise en valeur des habitats et de la faune de la région du lac Saint-Pierre.
+      Ministère des Loisirs, de la Chasse et de la Pêche du Québec, Directions régionale*
+    - COMITÉ ZIP DES SEIGNEURIES, 2010. Atlas des habitats du chevalier cuivré (Moxostoma
+      hubbsi). 2e édition. Joliette. vii + 67 pages.
     - 'DGFa 04-17 (2019a) Base de données Poisson Fleuve [shp]. V.26 mars 2019, 1
       : 20 000, DGFa 04-17, Trois-Rivières.'
     - 'DGFa 04-17 (2019b) Base de données Historique partielle [shp]. V.11 décembre
       2019, 1 : 20 000, DGFa 04-17, Trois-Rivières.'
-    - 'Ministère des Ressources naturelles (2013) Habitats essentiels [shp]. 2e trimestre,
-      1 : 170 000, Direction de l’expertise Énergie -Faune -Forêt-Mines-Territoire
-      de la Mauricie et du Centre -du-Québec, Québec.'
+    - 'DGFa 05-06-13-16 (2020) Base de données frayères [FGDB]. V.2020, 1 : 20 000,
+      DGFa 05-06-13-16, Longueuil.'
+    - Mailhot, Y. et R. Morrissette (20 juin 2012) Atlas des habitats fauniques critiques
+      et des exploitations halieutiques d’importance dans le fleuve Saint-Laurent
+      et l’aval des tributaires à privilégier pour les interventions en cas d’urgence
+      maritime *
+    - Ministère de l’Environnement et de la Faune. 1994. Cartographie des sites d’intérêt
+      et des sites protégés et fiches synthèses descriptives des sites d’intérêt faunique.
+      Direction régionale de la Montérégie, Service de l’aménagement et de l’exploitat*
+    - Société de la faune et des parcs du Québec. 2000. Atlas des habitats critiques
+      connus ou d’intérêt particulier pour les poissons du fleuve Saint-Laurent entre
+      le port de Montréal et l’Île aux Coudres. Direction du développement de la faune.
     Nombre_frayere:
-    - 49
-    - 5
-    - 41
+    - 18639
+    - 23
+    - 4
+    - 127
     - 35
-    - 25
-    - 1
-    - 9
-    - 7
-    - 105
-    - 2388
-    - 111
-    - 19
-    - 63
     - 10
-    - 419
-    - 131
+    - 28
+    - 124
+    - 5
+    - 3
+    - 38
+    - 356
+    - 29
+    - 1
+    - 2
+    - 26
+    - 11
+    - 142
+    - 2803
+    - 60
+    - 990
+    - 4100
+    - 372
+    - 154
+    - 6
     - 56
+    - 1356
     - 14
     - 1
     - 3
@@ -562,24 +616,39 @@ dataDescription:
     - .na.integer
     - .na.integer
     - .na.integer
+    - .na.integer
+    - .na.integer
+    - .na.integer
+    - .na.integer
+    - .na.integer
     Superficie_frayere:
-    - 28.9148116
-    - 0.5623565
-    - 0.3454173
+    - 738.9583
+    - 75.2583665
+    - 0.9050905
+    - 1.0362519
     - 3.5589308
-    - 2.0979734
-    - 5.425339
-    - 102.5265787
-    - 0.2877534
-    - 36.9372541
-    - 99.5836881
-    - 174.2352564
-    - 7.6994431
-    - 1.1831584
-    - 0.0605606
-    - 80.0744534
-    - 55.9462256
-    - 85.4509619
+    - 0.3140157
+    - 0.8792441
+    - 33.5707601
+    - 1.9611967
+    - 0.0976075
+    - 0.0
+    - 1.7402213
+    - 23.3837225
+    - 6.2710621
+    - 1.4651344
+    - 2.0730909
+    - 103.0480118
+    - 39.2685047
+    - 125.6755659
+    - 271.6746052
+    - 28.7640341
+    - 122.8177534
+    - 105.5580506
+    - 108.798051
+    - 0.3587327
+    - 85.4509622
+    - 320.603467
     - 0.6324926
     - 0.8034886
     - 0.1403503
@@ -630,21 +699,36 @@ dataDescription:
     - .na.real
     - .na.real
     - .na.real
+    - .na.real
+    - .na.real
+    - .na.real
+    - .na.real
+    - .na.real
     Nombre_alevinage:
     - .na.integer
     - .na.integer
     - .na.integer
     - .na.integer
-    - 10
-    - .na.integer
-    - .na.integer
-    - 1
-    - .na.integer
-    - 84
-    - 91
     - .na.integer
     - .na.integer
     - .na.integer
+    - .na.integer
+    - .na.integer
+    - 2
+    - .na.integer
+    - .na.integer
+    - 2
+    - .na.integer
+    - .na.integer
+    - .na.integer
+    - .na.integer
+    - .na.integer
+    - 116
+    - .na.integer
+    - .na.integer
+    - .na.integer
+    - .na.integer
+    - 60
     - .na.integer
     - .na.integer
     - .na.integer
@@ -695,24 +779,39 @@ dataDescription:
     - .na.integer
     - .na.integer
     - 15
-    - 2917
-    - 35
-    - 20
+    - 76
+    - 69
+    - 3014
+    - 54
+    - 10
+    - 10
+    - 55
+    - 17
     Superficie_alevinage:
     - .na.real
     - .na.real
     - .na.real
     - .na.real
-    - 0.8542994
-    - .na.real
-    - .na.real
-    - 0.236292
-    - .na.real
-    - 15.8790647
-    - 169.5108383
     - .na.real
     - .na.real
     - .na.real
+    - .na.real
+    - .na.real
+    - 0.0314016
+    - .na.real
+    - .na.real
+    - 3.520042
+    - .na.real
+    - .na.real
+    - .na.real
+    - .na.real
+    - .na.real
+    - 24.2260418
+    - .na.real
+    - .na.real
+    - .na.real
+    - .na.real
+    - 105.5879381
     - .na.real
     - .na.real
     - .na.real
@@ -763,9 +862,14 @@ dataDescription:
     - .na.real
     - .na.real
     - 67.2101373
-    - 29.7396009
-    - 0.2751184
-    - 105.5879387
+    - 51.1657422
+    - 0.7812877
+    - 30.36968
+    - 0.30652
+    - 2.5389263
+    - 105.5879287
+    - 243.6533983
+    - 817.9615146
   ZICO:
     Nombre: 41
     Superficie: 1701.26
@@ -1188,8 +1292,8 @@ rawData:
 - '0053'
 - '0053'
 - '0053'
-- 0009
-- '0010'
+- 0086
+- 0087
 - '0073'
 - '0074'
 - '0075'

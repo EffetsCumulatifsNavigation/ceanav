@@ -45,6 +45,8 @@ cv_habitat <- function() {
   #   - Espèces à statut LEP: "0077"
   #   - Gisements coquilliers: ajouté "0078","0079","0080","0081"
   #   - Herbiers aquatiques: 0084
+  #   - Sites d'alevinage: 0086
+  #   - Frayères: 0087
   #
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   # ------------------------------------------------------
@@ -271,7 +273,8 @@ cv_habitat <- function() {
 
   # ------------------------------------------------------
   # Sites d'alevinage : 0009
-  nm <- "0009"
+  # MAJ 2023-03: Replace 0009 with 0086
+  nm <- "0086"
   dat <- load_temp(nm)
   meta_temp <- meta_update(meta_temp, 
                            dat = nm, 
@@ -279,7 +282,7 @@ cv_habitat <- function() {
                            fr = "Sites d'alevinage", 
                            descr = "Sites d'alimentation et de protection pour les stades de vie initiaux des poissons (*e.g.* larves, alevins, juvéniles)", 
                            type = "Cycles de vie", 
-                           zonesNA = "alevinage",
+                           zonesNA = NA,
                            en = "Nursery sites", 
                            descr_en = "Feeding and protection sites for early life stages of fish (e.g. larvae, fry, juveniles)", 
                            type_en = "Life cycles")
@@ -288,7 +291,8 @@ cv_habitat <- function() {
 
   # ------------------------------------------------------
   # Frayères : 0010
-  nm1 <- "0010"
+  # MAJ 2023-03: Replace 0010 with 0087
+  nm1 <- "0087"
   nm2 <- c("0073","0074","0075","0076")
   dat1 <- load_temp(nm1)
   dat2 <- load_temp(nm2) |>
@@ -709,13 +713,13 @@ cv_habitat <- function() {
   # <=~ - ~=> <=~ - ~=> <=~ - ~=> <=~ - ~=> #
   # --- Alevinage
   # Nombre
-  alevinage <- as.data.frame(table(data0009$Source), stringsAsFactors = FALSE)
+  alevinage <- as.data.frame(table(data0086$Source), stringsAsFactors = FALSE)
   colnames(alevinage) <- c("Source","Nombre_alevinage")
 
   # Superficie
   alevinage$Superficie_alevinage <- 0
   for(i in 1:nrow(alevinage)) {
-    dat <- data0009[data0009$Source == alevinage[i,"Source"], ] %>%
+    dat <- data0086[data0086$Source == alevinage[i,"Source"], ] %>%
            st_union() %>%
            st_area() %>%
            as.numeric(.) * 1e-6 %>%
@@ -725,13 +729,13 @@ cv_habitat <- function() {
 
   # --- Frayères
   # Nombre
-  frayere <- as.data.frame(table(data0010$Source), stringsAsFactors = FALSE)
+  frayere <- as.data.frame(table(data0087$Source), stringsAsFactors = FALSE)
   colnames(frayere) <- c("Source","Nombre_frayere")
 
   # Superficie
   frayere$Superficie_frayere <- 0
   for(i in 1:nrow(frayere)) {
-    dat <- data0010[data0010$Source == frayere[i,"Source"], ] %>%
+    dat <- data0087[data0087$Source == frayere[i,"Source"], ] %>%
            st_union() %>%
            st_area() %>%
            as.numeric(.) * 1e-6 %>%

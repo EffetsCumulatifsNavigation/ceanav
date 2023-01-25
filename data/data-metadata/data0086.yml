@@ -1,0 +1,26 @@
+data_description:
+  id: "0086"
+  name: "Sites d'alevinage"
+  description: "Identification des sites d'alevinage dans le Saint-Laurent fluvial"
+  access_date: 2023-01-25
+  temporal_start: 1974
+  temporal_end: 2020
+  contact_id: 
+    - "0012"
+    - "0067"
+  availability: "data sharing agreement"
+  citekey: "mffp2023a"
+  citation: 
+    - "ARGUS. 2001. Mise en valeur du littoral de l’agglomération de la Capitale nationale du Québec: élaboration d’un cadre d’analyse régional. Commission de la Capitale natio nale. 54 p. + annexes."
+    - "Benoit, J., J.-C. Bourgeois, S. Desjardins et J. Picard. 1988. Plan de conservation et de mise en valeur des habitats et de la faune de la région du lac Saint-Pierre. Ministère des Loisirs, de la Chasse et de la Pêche du Québec, Directions régionale*"
+    - "Comité ZIP de la rive nord de l'estuaire (2008). Guide d'intervention en matière de protection et de mise en valeur des habitats littoraux d'intérêt de la rive nord de l'estuaire maritime (fiches 14 à 20), 8 p. + 7 fiches + annexe."
+    - "COMITÉ ZIP DES SEIGNEURIES, 2010. Atlas des habitats du chevalier cuivré (Moxostoma hubbsi). 2e édition. Joliette. vii + 67 pages."
+    - "DGFa 04-17 (2019a) Base de données Poisson Fleuve [shp]. V.26 mars 2019, 1 : 20 000, DGFa 04-17, Trois-Rivières."
+    - "DGFa 04-17 (2019b) Base de données Historique partielle [shp]. V.11 décembre 2019, 1 : 20 000, DGFa 04-17, Trois-Rivières."
+    - "DGFa 05-06-13-16 (2020) Base de données frayères [FGDB]. V.2020, 1 : 20 000, DGFa 05-06-13-16, Longueuil."
+    - "HEPPELL, M., I. PICARD, F. BÉLISLE et C. THÉBERGE (2000). Guide d'intervention en matière de protection et de mise en valeur des habitats littoraux d'intérêt de la rive nord de l'estuaire maritime. Version finale."
+    - "Mailhot, Y. et R. Morrissette (20 juin 2012) Atlas des habitats fauniques critiques et des exploitations halieutiques d’importance dans le fleuve Saint-Laurent et l’aval des tributaires à privilégier pour les interventions en cas d’urgence maritime *"
+    - "Mingelbier, M. et J., Leclerc. 2001. Preliminary atlas of fish habitat in the fluvial St. Lawrence River. 8th Annual International Conference on the St Lawrence River Ecosystem, Cornwall, Ontario."
+    - "Ministère de l’Environnement et de la Faune. 1994. Cartographie des sites d’intérêt et des sites protégés et fiches synthèses descriptives des sites d’intérêt faunique. Direction régionale de la Montérégie, Service de l’aménagement et de l’exploitat*"
+    - "Ministère des Ressources naturelles (2013) Habitats essentiels [shp]. 2e trimestre, 1 : 170 000, Direction de l’expertise Énergie -Faune -Forêt-Mines-Territoire de la Mauricie et du Centre -du-Québec, Québec."
+    - "Société de la faune et des parcs du Québec. 2000. Atlas des habitats critiques connus ou d’intérêt particulier pour les poissons du fleuve Saint-Laurent entre le port de Montréal et l’Île aux Coudres. Direction du développement de la faune."

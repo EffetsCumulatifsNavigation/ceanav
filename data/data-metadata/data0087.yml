@@ -1,0 +1,40 @@
+data_description:
+  id: "0087"
+  name: "Frayères"
+  description: "Identification des frayères dans le Saint-Laurent fluvial"
+  access_date: 2023-01-25
+  temporal_start: 1974
+  temporal_end: 2023
+  contact_id: 
+    - "0012"
+    - "0067"
+  availability: "data sharing agreement"
+  citekey: mffp2023b
+  citation:
+    - "Alliance Environnement GDG Conseil-Daniel Arbour & Associés (n.d.) Frayère PLIO adapté de Lavoie et Talbot  1984 [document cartographique]. 1:340 000, Alliance Environnement GDG Conseil-Daniel Arbour & Associés, Trois-Rivières, Québec."
+    - "Benoit, J., J.-C. Bourgeois, S. Desjardins et J. Picard. 1988. Plan de conservation et de mise en valeur des habitats et de la faune de la région du lac Saint-Pierre. Ministère des Loisirs, de la Chasse et de la Pêche du Québec, Directions régio"
+    - "Bernatchez, S., Valiquette, E., Vachon, N., Brodeur, P., Côté, C., Hatin, D., L’Italien, L. et Y. Paradis. 2019. Lake Sturgeon (Acipenserfulvescens) spawning sites in the St. Lawrence river system, Québec, Canada. Ministère des Forêts, de la F"
+    - "Bouchard, D. 1976. Localisation des frayères des principales espèces de poissons d'intérêt sportif et commercial, dans le fleuve Saint-Laurent. (Phase 1). Québec, Ministère du Loisir, de la Chasse et de la Pêche, Service de la recherche biolog"
+    - "Bourque, M. et J.Malouin (2009). Guide d'intervention en matière de conservation et de mise en valeur des littoraux de la MRC de Sept-Rivières. Comité ZIP Côte-Nord du Golfe, 153 p. + 1 annexe."
+    - "Bourque, M., V. Provost et G. Mazo (2009). Guide d'intervention en matière de conservation et de mise en valeur des habitats littoraux d'intérêt en Basse-Côte-Nord. Comité ZIP Côte-Nord du Golfe, vi + 166 p."
+    - "Comité d’étude sur le fleuve Saint-Laurent (1975). Études biologiques, Annexe cartographique au vol. 1, Dimension environnement Ltée, Montréal, 1413 p."
+    - "Comité ZIP de la rive nord de l'estuaire (2001). Plan de protection et de mise en valeur du banc de Portneuf. Rédigé par Naturam Environnement Inc. et déposé au Comité ZIP de la rive nord de l'estuaire, 70 p."
+    - "Comité ZIP de la rive nord de l'estuaire (2008). Guide d'intervention en matière de protection et de mise en valeur des habitats littoraux d'intérêt de la rive nord de l'estuaire maritime (fiches 14 à 20), 8 p. + 7 fiches + annexe."
+    - "Comité Zone d'intervention Prioritaire Côte-Nord du Golfe (2008). Une histoire de pêche...Le savoir des aînés au service de la communauté! Rapport final remis au programme Nouveaux horizons pour les ainés, 18 p."
+    - "Guay G. et M. Couillard. 1985. Étude de l'utilisation printanière et automnale des rapides de Lachine par les poissons. Projet d'archipel de Montréal (1984). Environnement illimité Inc., 1976 p."
+    - "HEPPELL, M., I. PICARD, F. BÉLISLE et C. THÉBERGE (2000). Guide d'intervention en matière de protection et de mise en valeur des habitats littoraux d'intérêt de la rive nord de l'estuaire maritime. Version finale."
+    - "L’italien, L. (2017) Frayère d’esturgeon noir [shp]. V.2017, 1:50 000, DGFa 03-12, Québec."
+    - "L’ITALIEN, L., J. MAINGUY et E. VALIQUETTE (2020). Dynamique et habitats de reproduction de la population réintroduite de bars rayés (Morone saxatilis) dans le fleuve Saint-Laurent, ministère des Forêts, de la Faune et des Parcs, Québec, XVI +"
+    - "Mailhot, Y. et R. Morrissette (20 juin 2012) Atlas des frayères potentielles ou confirmées et de certains autres sites d’intérêt dans les rivières de la plaine du Saint-Laurent. V.2012, 1:400 000, MFFP – DGFa 04-17, Trois-Rivières."
+    - "Mailhot, Y. et R. Morrissette (20 juin 2012) Atlas des habitats fauniques critiques et des exploitations halieutiques d’importance dans le fleuve Saint-Laurent et l’aval des tributaires à privilégier pour les interventions en cas d’urgence ma"
+    - "Massé, G. 1974. Frayères à poissons d’eau chaude du couloir fluvial, entre Montréal et el lac Saint-Pierre. Service de l’Aménagement de la Faune, Ministère du Tourisme, de la Chasse et de la Pêche. 20 p."
+    - "Mingelbier, M. et J., Leclerc. 2001. Preliminary atlas of fish habitat in the fluvial St. Lawrence River. 8th Annual International Conference on the St Lawrence River Ecosystem, Cornwall, Ontario."
+    - "Ministère de l’Environnement et de la Faune. 1994. Cartographie des sites d’intérêt et des sites protégés et fiches synthèses descriptives des sites d’intérêt faunique. Direction régionale de la Montérégie, Service de l’aménagemen"
+    - "Ministère des Forêts, de la Faune et des Parcs (2023) Géobase-Faune -  SFI_p  [FGDB]. V2023-01-17, MFFP, Québec, Qc."
+    - "Ministère des Forêts, de la Faune et des Parcs (2023) Géobase-Faune - SFI_s  [FGDB]. V2023-01-17, MFFP, Québec, Qc."
+    - "Ministère des Forêts, de la Faune et des Parcs (25 mars 2013) Frayère de Shooner [shp]. V.2013, 1:400 000, DGFa 04-17, Trois-Rivières."
+    - "Ministère des Ressources naturelles (2013) Habitats essentiels [shp]. 2e trimestre, 1:170 000, Direction de l’expertise Énergie -Faune -Forêt-Mines-Territoire de la Mauricie et du Centre -du-Québec, Québec."
+    - "PÉROT, A. et V. PROVOST (2008). Guide d'intervention en matière de protection et de mise en valeur des habitats littoraux d'intérêt dans la MRC de la Minganie. Comité ZIP Côte-Nord du Golfe, vii p. + 127 p."
+    - "Société de la faune et des parcs du Québec. 2000. Atlas des habitats critiques connus ou d’intérêt particulier pour les poissons du fleuve Saint-Laurent entre le port de Montréal et l’Île aux Coudres. Direction du développement de la faun"
+    - "Therrien, J., H. Marquis, G. Shooner et P. Bérubé. (1991). Caractérisation des habitats recherchés pour la fraie des principales espèces de poissons du fleuve Saint-Laurent (Cornwall-Montmagny). Étude réalisée par le Groupe Environnement Shoo"
+    - "VALIQUETTE,LEGAULT, HARVEY. 2016. État référence de la faune aquatique et de ses habitats dans le secteur du pont de l’île d’Orléans:rapport final. Première partie — Description physique et inventaires biologiques, MFFP, DGGFH, DEFA, Qc"
