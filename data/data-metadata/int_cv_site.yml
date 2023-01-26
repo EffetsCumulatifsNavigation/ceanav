@@ -58,6 +58,7 @@ dataDescription:
     - gcnwa_navigation
     - gcnwa_sites_archeologiques
     - gcnwa_sites_potentiel_archeologique
+    - public_epaves
     francais:
     - Pêche commerciale
     - Pêche traditionnelle
@@ -102,6 +103,7 @@ dataDescription:
     - Navigation
     - Sites archéologiques
     - Sites à potentiel archéologique
+    - Épaves
     type:
     - Association de gestion halieutique Mi'kmaq et Malécite
     - Association de gestion halieutique Mi'kmaq et Malécite
@@ -146,6 +148,7 @@ dataDescription:
     - Nation W8banaki
     - Nation W8banaki
     - Nation W8banaki
+    - Public
     source:
     - '0022'
     - '0023'
@@ -166,7 +169,7 @@ dataDescription:
     - '0032'
     - '0032'
     - '0032'
-    - 0030,0038,0039
+    - 0030,0038,0039,0082
     - '0044,0045'
     - '0055'
     - '0055'
@@ -190,6 +193,7 @@ dataDescription:
     - '0066'
     - '0067'
     - 0068
+    - 0088
     mdref:
     - aghammpechecommerciale
     - aghammpechetraditionnelle
@@ -234,6 +238,7 @@ dataDescription:
     - gcnwanavigation
     - gcnwasitesarcheologiques
     - gcnwasitespotentielarcheologique
+    - publicepaves
     english:
     - Commercial fishing
     - Traditional fishing
@@ -278,6 +283,7 @@ dataDescription:
     - Shipping
     - Archeological sites
     - Sites with archeological potential
+    - Shipwrecks
     type_en:
     - Mi'kmaq and Maliseet Aboriginal Fisheries Management Association
     - Mi'kmaq and Maliseet Aboriginal Fisheries Management Association
@@ -322,6 +328,7 @@ dataDescription:
     - W8banaki Nation
     - W8banaki Nation
     - W8banaki Nation
+    - Public
 rawData:
 - '0022'
 - '0023'
@@ -346,6 +353,7 @@ rawData:
 - '0030'
 - 0038
 - 0039
+- 0082
 - '0044'
 - '0045'
 - '0055'
@@ -370,3 +378,4 @@ rawData:
 - '0066'
 - '0067'
 - 0068
+- 0088

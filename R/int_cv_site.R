@@ -64,6 +64,10 @@ cv_site <- function() {
   #   - GCNWA - Sites archéologiques : 0067
   #   - GCNWA - Sites à potentiel archéologique : 0068
   #
+  # -------------------------
+  # Mise à jour 2023-03
+  # Épaves (MELCCFP): 0088
+  # Milieux protégés : 0082
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   # ------------------------------------------------------
   load_temp <- function(dat) {
@@ -678,6 +682,18 @@ cv_site <- function() {
                            en = "Sites with archeological potential",
                            type_en = "W8banaki Nation")
   site$gcnwa_sites_potentiel_archeologique <- uid(dat)
+
+  # ================================================================================================
+  # Public - Épaves : 0088
+  dat <- "0088"
+  meta_temp <- meta_update(meta_temp, 
+                           dat = dat, 
+                           accr = "public_epaves", 
+                           fr = "Épaves", 
+                           type = "Public",
+                           en = "Shipwrecks",
+                           type_en = "Public")
+  site$public_epaves <- uid(dat)
 
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #

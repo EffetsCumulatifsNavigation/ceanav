@@ -23,6 +23,7 @@ A contract was given to inSileco Inc. to update and add additional data to the s
         - Rorqual commun (*Balaenoptera physalus*)
     - [Sites d’intérêt culturels, patrimoniaux et archéologiques](#site)
       - Zones de protection mises à jour (id: 0082)
+      - Épaves (id: 0088)
   - Stresseurs 
     - [Pêches commerciales](#pechecommerciale)
       - Pêches commerciales secteur fluvial (id: 0083)
