@@ -1,8 +1,8 @@
 # Annexe 10 {.unnumbered #annexe10}
 
-## Mises à jour
+## Mises à jour {.unnumbered}
 
-### 2023-03-31 
+### 2023-03-31 {.unnumbered}
 
 A contract was given to inSileco Inc. to update and add additional data to the study area profile and to update the assessment. Here is the list of modifications: 
 
@@ -29,11 +29,16 @@ A contract was given to inSileco Inc. to update and add additional data to the s
       - Pêches commerciales secteur fluvial ajoutées (id: 0083)
   - [Vulnérabilité](vulnportrait)
     - Pêches commerciales secteur fluvial
-      - Habitats floristiques et fauniques: à faire
+      - Habitats floristiques et fauniques
         - Milieux naturels: équivalence attribuée aux pêches démersale destructive, prises accessoires élevées qui contiennent les pêches avec casiers.
         - Habitats d’importance pour les espèces fauniques et floristiques (id: 0063)
           - Les valeurs de vulnérabilité attribuées aux activités de pêches commerciales dans le secteur maritime ont été utilisées pour les pêches commerciales en milieux fluvial
       - Intégrité des berges: vulnérabilité nulle
       - Mammifères marins: vulnérabilité nulle (id: 0064)
       - Sites d’intérêt culturels, patrimoniaux et archéologiques: vulnérabilité égale à 1 comme pour tous les autres stresseurs
+    - Biovolumes herbiers aquatiques
+      - Vulnérabilité obtenue à partir de @kappel2012 en utilisant les valeurs de vulnérabilité des zostères et zones algales
+      - Diminution de la vulnérabilité de 10% par catégorie de biovolumes (élevé = 100%; modéré = 90%; faible = 80%)
+    - Espèces à statut en vertu de la Loi sur les espèces en péril
+      - Approche similaire avec les espèces à statut en vertu de la Loi
       

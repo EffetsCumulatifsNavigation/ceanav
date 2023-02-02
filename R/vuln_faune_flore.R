@@ -61,7 +61,9 @@ vuln_faune_flore <- function() {
 
 
   # Espèces à statut
-  uid <- data0063$cv %in% c("susceptible","vulnerable","menace")
+  uid <- data0063$cv %in% c(
+    "susceptible","vulnerable","menace","lep_menacee", "lep_voie_disparition"
+  )
   statut <- data0063[uid, c("categories","cv","frequence","population","statut")]
   statut$vulnerabilite <- rowSums(statut[, c("frequence","population","statut")])
 
@@ -100,8 +102,8 @@ vuln_faune_flore <- function() {
   vulnerability_faune_flore[,'flore_susceptible'] <- vuln$susceptible
   vulnerability_faune_flore[,'flore_vulnerable'] <- vuln$vulnerable
   vulnerability_faune_flore[,'flore_menacee'] <- vuln$menace
-
-
+  vulnerability_faune_flore[,'lep_menacee'] <- vuln$lep_menacee
+  vulnerability_faune_flore[,'lep_voie_disparition'] <- vuln$lep_voie_disparition
   # _____________________________________________________________________________ #
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #

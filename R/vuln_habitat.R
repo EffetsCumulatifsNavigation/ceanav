@@ -108,7 +108,9 @@ vuln_habitat <- function() {
   hb_eq <- equiv("rocheuse_sans_escarpement", "rocky_intertidal")
   hb_eq <- equiv("terrasse_fluviale", "saltmarsh")
   hb_eq <- equiv("terrasse_plage", "beach")
-  # TODO: hb_eq <- equiv("herbier_aquatique", "Algal zone")
+  hb_eq <- equiv("biovolume_herbier_faible", "algal_zone;eelgrass")
+  hb_eq <- equiv("biovolume_herbier_modere", "algal_zone;eelgrass")
+  hb_eq <- equiv("biovolume_herbier_eleve", "algal_zone;eelgrass")
   # TODO: hb_eq <- equiv("marais_maritime","Salt marsh")
   # TODO: hb_eq <- equiv("marecage_intertidal","Salt marsh")
   # TODO: hb_eq <- equiv("bas_estran_rocheux","Rocky intertidal")
@@ -160,6 +162,10 @@ vuln_habitat <- function() {
 
   # Observation terrasse_plage = NA for now. Change to 0
   vulnerability_habitat["Observation","terrasse_plage"] <- 0
+
+  # Biovolumes herbiers aquatiques
+  vulnerability_habitat[,"biovolume_herbier_faible"] <- vulnerability_habitat[,"biovolume_herbier_eleve"] * .8
+  vulnerability_habitat[,"biovolume_herbier_modere"] <- vulnerability_habitat[,"biovolume_herbier_eleve"] * .9
 
   # Normalize between 0 and 1
   norm <- function(x, dat) round(x / max(dat, na.rm = TRUE), 4)
