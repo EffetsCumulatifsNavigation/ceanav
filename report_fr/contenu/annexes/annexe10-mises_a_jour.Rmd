@@ -16,7 +16,7 @@ A contract was given to inSileco Inc. to update and add additional data to the s
       - Sites d'alevinage (id: 0086 remplace id: 0009)
       - Frayères (id: 0087 remplace id: 0010)
     - [Mammifères marins](#mammiferesmarins)
-      - Baleines à fanon (id: 0085 remplace certaines espèces dans id:0027):
+      - Baleines à fanon (id: 0085 remplace espèces dans id:0027):
         - Petit rorqual (*Balaenoptera acutorostrata*)
         - Rorqual à bosse (*Megaptera novaeangliae*)
         - Rorqual bleu (*Balaenoptera musculus*)
@@ -26,4 +26,4 @@ A contract was given to inSileco Inc. to update and add additional data to the s
       - Épaves (id: 0088)
   - Stresseurs 
     - [Pêches commerciales](#pechecommerciale)
-      - Pêches commerciales secteur fluvial (id: 0083)
+      - Pêches commerciales secteur fluvial ajoutées (id: 0083)
