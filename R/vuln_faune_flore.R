@@ -37,7 +37,8 @@ vuln_faune_flore <- function() {
     # 2. Sites of importance for flora and fauna
   # TODO: remove this code once the process of dividing habitats and sites has been completed
   rm <- c("site_alevinage","frayere","oiseaux","faune_susceptible","faune_vulnerable",
-          "faune_menacee","flore_susceptible","flore_vulnerable","flore_menacee")
+          "faune_menacee","flore_susceptible","flore_vulnerable","flore_menacee",
+          "lep_menacee", "lep_voie_disparition")
   hab <- hab[hab$accronyme %in% rm, ]
   # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
   # ------------------------------------------------------------------------- #

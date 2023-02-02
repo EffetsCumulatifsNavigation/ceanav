@@ -35,7 +35,8 @@ vuln_habitat <- function() {
     # 2. Sites of importance for flora and fauna
   # TODO: remove this code once the process of dividing habitats and sites has been completed
   rm <- c("site_alevinage","frayere","oiseaux","faune_susceptible","faune_vulnerable",
-          "faune_menacee","flore_susceptible","flore_vulnerable","flore_menacee")
+          "faune_menacee","flore_susceptible","flore_vulnerable","flore_menacee",
+          "lep_menacee", "lep_voie_disparition")
   hab <- hab[!hab$accronyme %in% rm, ]
   # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -80,6 +81,7 @@ vuln_habitat <- function() {
   st_eq <- equiv("DNH", "Fishing: demersal non-habitat-modifying high bycatch")
   st_eq <- equiv("PLB", "Fishing: pelagic low bycatch")
   st_eq <- equiv("PHB", "Fishing: pelagic high bycatch")
+  st_eq <- equiv("peche_fleuve","Fishing: demersal non-habitat-modifying low bycatch")
   st_eq <- equiv("pollution_maritime", "Ocean pollution (from ships, ports, etc.)")
   st_eq <- equiv("naufrage", "Ocean dumping: shipwrecks")
   st_eq <- equiv("PASSENGER.FERRY.RO.RO", "Shipping (commercial, cruise, ferry)")

@@ -27,3 +27,13 @@ A contract was given to inSileco Inc. to update and add additional data to the s
   - Stresseurs 
     - [Pêches commerciales](#pechecommerciale)
       - Pêches commerciales secteur fluvial ajoutées (id: 0083)
+  - [Vulnérabilité](vulnportrait)
+    - Pêches commerciales secteur fluvial
+      - Habitats floristiques et fauniques: à faire
+        - Milieux naturels: équivalence attribuée aux pêches démersale destructive, prises accessoires élevées qui contiennent les pêches avec casiers.
+        - Habitats d’importance pour les espèces fauniques et floristiques (id: 0063)
+          - Les valeurs de vulnérabilité attribuées aux activités de pêches commerciales dans le secteur maritime ont été utilisées pour les pêches commerciales en milieux fluvial
+      - Intégrité des berges: vulnérabilité nulle
+      - Mammifères marins: vulnérabilité nulle (id: 0064)
+      - Sites d’intérêt culturels, patrimoniaux et archéologiques: vulnérabilité égale à 1 comme pour tous les autres stresseurs
+      
