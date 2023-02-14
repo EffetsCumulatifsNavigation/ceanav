@@ -30,7 +30,7 @@ A contract was given to inSileco Inc. to update and add additional data to the s
   - [Vulnérabilité](vulnportrait)
     - Pêches commerciales secteur fluvial
       - Habitats floristiques et fauniques
-        - Milieux naturels: équivalence attribuée aux pêches démersale destructive, prises accessoires élevées qui contiennent les pêches avec casiers.
+        - Milieux naturels: équivalence attribuée aux pêches démersale non destructive, prises accessoires élevées qui contiennent les pêches avec casiers.
         - Habitats d’importance pour les espèces fauniques et floristiques (id: 0063)
           - Les valeurs de vulnérabilité attribuées aux activités de pêches commerciales dans le secteur maritime ont été utilisées pour les pêches commerciales en milieux fluvial
       - Intégrité des berges: vulnérabilité nulle
