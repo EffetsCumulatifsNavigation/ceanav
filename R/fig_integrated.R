@@ -43,12 +43,20 @@ fig_integrated <- function(data_id, lang = "fr") {
     main <- meta$title
     tp <- meta$dataDescription$categories$type
     subt <- meta$dataDescription$categories$francais  
-    un <- meta$dataDescription$units  
+    if (meta$dataDescription$units == "in_categories") {
+      un <- meta$dataDescription$categories$units
+    } else {
+      un <- rep(meta$dataDescription$units, length(nm))      
+    }
   } else if (lang == "en") {
     main <- meta$title_en
     tp <- meta$dataDescription$categories$type_en
     subt <- meta$dataDescription$categories$english
-    un <- meta$dataDescription$units_en
+    if (meta$dataDescription$units_en == "in_categories") {
+      un <- meta$dataDescription$categories$units_en
+    } else {
+      un <- rep(meta$dataDescription$units_en, length(nm))      
+    }
   }
 
   for(i in 1:length(nm)) {
@@ -64,7 +72,7 @@ fig_integrated <- function(data_id, lang = "fr") {
       main = main,
       type = tp[i],
       subtitle = subt[i],
-      unit_data = un,
+      unit_data = un[i],
       references = ref[i],
       zones_NA = na[i],
       lang = lang

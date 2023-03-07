@@ -123,12 +123,21 @@ cv_mammiferes_marins <- function() {
   data(grid1p)
   data0085 <- as(data0085, "Raster")
 
-
   # -------
   # Identify cells in the aoi that are only terrestrial and hence shouldn't be included.
   data(aoi)
   uid <- st_intersects(aoi, grid1p) %>% unlist()
   nid <- !1:nrow(grid1p) %in% uid
+
+  # -------
+  # Remove outliers in data, likely along the coast
+  for(i in 1:raster::nlayers(data0085)) {
+    dat <- raster::values(data0085[[i]])
+    out <- boxplot.stats(dat, coef = 3)$stat[c(1,5)]
+    cap <- quantile(dat, probs=c(.05, .95), na.rm = T)
+    dat[dat > out[2]] <- cap[2]
+    raster::values(data0085[[i]]) <- dat
+  }
 
   # -------
   grid1p_2 <- st_transform(grid1p, st_crs(data0085))
@@ -199,6 +208,28 @@ cv_mammiferes_marins <- function() {
                           "Phoque","Phoque","Phoque"),
                  type_en = c("Whale","Whale","Whale","Whale","Whale","Whale",
                           "Seal","Seal","Seal"),
+                 units = c(
+                   "Probabilités relatives d'occurrence",
+                   "Probabilités relatives d'occurrence",
+                   "Probabilités relatives d'occurrence",
+                   "Densité relative des observations",
+                   "Probabilités relatives d'occurrence",
+                   "Densité relative des observations",
+                   "Densité relative des observations",
+                   "Densité relative des observations",
+                   "Densité relative des observations"
+                 ),
+                 units_en = c(
+                   "Relative probability of occurrence",
+                   "Relative probability of occurrence",
+                   "Relative probability of occurrence",
+                   "Relative density of observations",
+                   "Relative probability of occurrence",
+                   "Relative density of observations",
+                   "Relative density of observations",
+                   "Relative density of observations",
+                   "Relative density of observations"
+                 ),
                  source = c("0085","0085","0085","0027","0085","0054","0054","0054","0054"))
 
   meta$dataDescription$categories$accronyme <-  nm$accronyme
@@ -206,6 +237,8 @@ cv_mammiferes_marins <- function() {
   meta$dataDescription$categories$english <-  nm$english
   meta$dataDescription$categories$scientific <-  nm$scientific
   meta$dataDescription$categories$type <-  nm$type
+  meta$dataDescription$categories$units <-  nm$units
+  meta$dataDescription$categories$units_en <-  nm$units_en
   meta$dataDescription$categories$source <-  nm$source
 
   meta$dataDescription$categories$description <- glue("Distribution du {tolower(nm$francais)}")
