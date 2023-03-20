@@ -46,7 +46,8 @@ show_source(lang = "fr")
 
 <br/>
 
-La caractérisation des zones inondables dans la zone d'étude a été faite en combinant les données de la base de données des zones à risque d'inondation [BDZI; @melcc2020] et de données sur la présence de zones inondables préparées par les MRC [@mamh2020]. Ces bases de données fournissent la délimitation de territoires côtiers à risque d'inondation sur le territoire québécois.
+La caractérisation des zones inondables dans la zone d'étude a été faite en combinant les données de la base de données des zones à risque d'inondation [BDZI; @melcc2020] et de données sur la présence de zones inondables préparées par les MRC [@mamh2020]. Ces bases de données fournissent la délimitation de territoires côtiers à risque d'inondation sur le territoire québécois selon une récurrence des crues sur 2 ans, 20 ans ou sur 100 ans. Nous avons utilisé l'ensemble de ces zones pour caractériser les zones inondables au sein de la zone d'étude.
+
 
 
 <br>
@@ -217,7 +218,7 @@ show_source(lang = "fr")
 
 <br/>
 
-Les biovolumes d'herbiers aquatiques ont été obtenus à partir de données sonar effectués en 2021 dans la portion fluviale de la zone d'étude. Seules les localisations ayant affichant un volume supérieur à 0.1 ont été conservées pour représenter les herbiers au sein de l'évaluation. De plus, nous avond divisé les hebiers en trois catégories de biovolumes, soit faible (`r herbsup["biovolume_herbier_faible"]` $km^2$), modéré (`r herbsup["biovolume_herbier_modere"]` $km^2$) et élevé (`r herbsup["biovolume_herbier_eleve"]` $km^2$), en utilisant les 33e et 66e quantiles de la distribution des biovolumes observés au sein de la base de données complète. Les catégories de biovolumes d'herbiers aquatiques ont ensuite été intégrés à la grille d'étude en s'assurant que chaque cellule ne puisse inclure qu'une seule catégorie. Lorsque plusieurs catégories chevauchaient une même cellule, la catégorie la plus élevée a été utilisée. Il est à noter que ce travail est en cours et qu'il est prévu de caractériser d'autres zones au cours des prochaines années. 
+Les biovolumes d'herbiers aquatiques ont été obtenus à partir de données sonar effectués en 2021 dans la portion fluviale de la zone d'étude [@melccfp2022]. Seules les localisations ayant affichant un biovolume supérieur à 0.1 ont été conservées pour représenter les herbiers au sein de l'évaluation. De plus, nous avons divisé les hebiers en trois catégories de biovolumes, soit faible (`r herbsup["biovolume_herbier_faible"]` $km^2$), modéré (`r herbsup["biovolume_herbier_modere"]` $km^2$) et élevé (`r herbsup["biovolume_herbier_eleve"]` $km^2$), en utilisant les 33e et 66e quantiles de la distribution des biovolumes observés au sein de la base de données complète. Les catégories de biovolumes d'herbiers aquatiques ont ensuite été intégrés à la grille d'étude en s'assurant que chaque cellule ne puisse inclure qu'une seule catégorie. Lorsque plusieurs catégories chevauchaient une même cellule, la catégorie la plus élevée a été utilisée. Il est à noter que ce travail est en cours et qu'il est prévu de caractériser d'autres zones au cours des prochaines années. 
 
 <br>
 

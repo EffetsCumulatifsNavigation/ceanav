@@ -35,11 +35,11 @@
 - [***Vulnérabilité***](vulnportrait)
   - Pêches commerciales secteur fluvial
     - Habitats floristiques et fauniques
-      - Milieux naturels: équivalence attribuée aux pêches démersale non destructive, prises accessoires élevées qui contiennent les pêches avec casiers.
+      - Milieux naturels: équivalence attribuée aux pêches démersales non destructives, prises accessoires élevées qui contiennent les pêches avec casiers.
       - Habitats d’importance pour les espèces fauniques et floristiques (id: 0063)
         - Les valeurs de vulnérabilité attribuées aux activités de pêches commerciales dans le secteur maritime ont été utilisées pour les pêches commerciales en milieux fluvial
-    - Intégrité des berges: vulnérabilité nulle
-    - Mammifères marins: vulnérabilité nulle (id: 0064)
+    - Intégrité des berges: vulnérabilité nulle face aux pêches commerciales
+    - Mammifères marins: vulnérabilité nulle face aux pêches commerciales en milieu fluvial (id: 0064)
     - Sites d’intérêt culturels, patrimoniaux et archéologiques: vulnérabilité égale à 1 comme pour tous les autres stresseurs
   - Biovolumes herbiers aquatiques
     - Vulnérabilité obtenue à partir de @kappel2012 en utilisant les valeurs de vulnérabilité des zostères et zones algales
@@ -63,9 +63,9 @@
     - Constats similaires à l'exposition cumulée
   - [Chemins d'effet](#chemins-deffet)
     - Augmentation du nombre de chemins d'effet prédits, mais les effets relatifs moyens demeurent inchangés
-    - La pêche commerciale en milieu fluvial semble avoir un effet global supérieur aux activités de pêche en milieu maritime, sans doute dû à l'étendue spatiale restreint du secteur fluvial comparativement à celui du secteur maritime
+    - La pêche commerciale en milieu fluvial semble avoir un effet global supérieur aux activités de pêche en milieu maritime, sans doute dû à l'étendue spatiale restreinte du secteur fluvial comparativement à celui du secteur maritime
     - Effets prédits des pêches commerciales en milieu fluvial principalement sur les sites d'intérêt et quelques habitats. Il y a toutefois un nombre important de sites d'intérêt dans cette région et leur vulnérabilité est considérée pour tous les stresseurs considérés. 
-    - Herbiers aquatiques parmis les habitats les plus affectés. Il faut toutefois considérer que la caractérisation des herbiers aquatiques n'est pas exhaustive pour l'ensemble de la zone d'étude.
+    - Herbiers aquatiques parmi les habitats les plus affectés. Il faut toutefois considérer que la caractérisation des herbiers aquatiques n'est pas exhaustive pour l'ensemble de la zone d'étude. Il est donc impossible d'émettre des conclusions pour l'ensemble des herbiers aquatiques de la zone d'étude et les conclusions doivent se limiter aux zones qui ont été caractérisées. 
   - [Régions administratives](#régions-administratives)
     - La pêche commerciale affiche un effet important au sein du secteur fluvial, et ce particulièrement pour les régions du Centre-du-Québec, de Lanaudière et de la Mauricie
     
@@ -73,7 +73,7 @@
 
 - [***Sommaire***](#sommaire)
   - Stresseurs environnementaux les plus importants
-    - Les pêches commerciales affectent certaines catégories de composantes valorisées plus intensément, comme plusieurs sites d'intérêt et des habitats du milieu fluvial et les gisements coquilliers du milieu maritime. La pêche commerciale en milieu fluvial semble avoir un effet global supérieur aux activités de pêche en milieu maritime, sans doute dû à l'étendue spatiale restreint du secteur fluvial comparativement à celui du secteur maritime;
+    - Les pêches commerciales affectent certaines catégories de composantes valorisées plus intensément, comme plusieurs sites d'intérêt et des habitats du milieu fluvial et les gisements coquilliers du milieu maritime. La pêche commerciale en milieu fluvial semble avoir un effet global supérieur aux activités de pêche en milieu maritime, sans doute dû à l'étendue spatiale restreinte du secteur fluvial comparativement à celui du secteur maritime;
   - Régions administratives les plus affectées
     - Les régions administratives du secteur fluvial sont les plus affectées par les effets cumulatifs des activités maritimes, un constat particulièrement important pour la Montérégie et le Centre-du-Québec. Ces effets sont influencés majoritairement par la navigation marchande (e.g. pétrolier, cargaison sèche, cargo et porte-conteneurs), la pêche commerciale et la pollution maritime;
   
@@ -84,7 +84,7 @@
     - Herbiers aquatiques
       - Conservé dans les perspectives, mais il est indiqué que l'intégration a débuté avec des données qui permettent de caractériser une partie de la zone d'étude et que des données supplémentaires pourraient être ajoutées dans le futur.
     - Pêches commerciales dans le secteur fluvial 
-      - Conservé dans les perspective, mais il est maintenant indiqué que la caractérisation nouvellement intégrée devrait être remplacée par une caractérisation plus fine et à jour lors d'une prochaine itération de l'évaluation.
+      - Conservées dans les perspective, mais il est maintenant indiqué que la caractérisation nouvellement intégrée devrait être remplacée par une caractérisation plus fine et à jour lors d'une prochaine itération de l'évaluation.
     - Épaves
       - Retrait de la perspective sur les épaves
   
