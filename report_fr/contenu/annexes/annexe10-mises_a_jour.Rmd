@@ -6,29 +6,36 @@
 
 *Sommaire des modifications:*
 
-- ***Intégration de données*** (consultez le [portrait de la zone d'étude](#portrait) et l'[annexe 1](#annexe1) pour plus de détails sur les données). Un astérisque ($^*$) indique l'intégration d'une nouvelle base de données. Les données sans astérisques représentent une mise à jour d'une donnée préexistante. 
-  - Composantes valorisées
-    - Habitats floristiques et fauniques
-      - [Frayères secteur maritime](#frayères-et-sites-dalevinage) (id: 0073$^*$, 0074$^*$, 0075$^*$, 0076$^*$)
-      - [Espèces à statut en vertu de la Loi sur les espèces en péril](#espèces-fauniques-et-floristiques-à-statut) (id: 0077$^*$)
-      - [Gisements coquiliers](#gisements-coquilliers) (id: 0078$^*$, 0079$^*$, 0080$^*$, 0081$^*$)
-      - [Biovolumes herbiers aquatiques](#herbiers-aquatiques) (id: 0084$^*$)
-      - [Sites d'alevinage](#frayères-et-sites-dalevinage) (id: 0086 remplace id: 0009)
-      - [Frayères](#frayères-et-sites-dalevinage) (id: 0087 remplace id: 0010)
-    - [Mammifères marins](#mammiferesmarins)
-      - Baleines à fanon (id: 0085 remplace espèces dans id:0027):
-        - Petit rorqual (*Balaenoptera acutorostrata*)
-        - Rorqual à bosse (*Megaptera novaeangliae*)
-        - Rorqual bleu (*Balaenoptera musculus*)
-        - Rorqual commun (*Balaenoptera physalus*)
-    - Sites d’intérêt culturels, patrimoniaux et archéologiques
-      - [Zones de protection](#milieux-protégés) (id: 0082)
-      - [Épaves](#épaves) (id: 0088$^*$)
-  - Stresseurs 
-    - Pêches commerciales
-      - [Pêches commerciales secteur fluvial](#secteur-fluvial) (id: 0083$^*$)
-    - [Pollution maritime](#pollutionmaritime)
-      - Mise à jour pour considérer les pêches du secteur fluvial
+- ***Intégration de données*** (consultez le [portrait de la zone d'étude](#portrait) et l'[annexe 1](#annexe1) pour plus de détails sur les données). 
+  - Mise à jour de stresseurs et/ou de composantes valorisées
+    - Composantes valorisées
+      - Habitats floristiques et fauniques
+        - [Frayères secteur maritime](#frayères-et-sites-dalevinage) (id: 0073, 0074, 0075, 0076)
+        - [Gisements coquiliers](#gisements-coquilliers) (id: 0078, 0079, 0080, 0081)
+        - [Sites d'alevinage](#frayères-et-sites-dalevinage) (id: 0086 remplace id: 0009)
+        - [Frayères](#frayères-et-sites-dalevinage) (id: 0087 remplace id: 0010)
+      - [Mammifères marins](#mammiferesmarins)
+        - Baleines à fanon (id: 0085 remplace espèces dans id:0027):
+          - Petit rorqual (*Balaenoptera acutorostrata*)
+          - Rorqual à bosse (*Megaptera novaeangliae*)
+          - Rorqual bleu (*Balaenoptera musculus*)
+          - Rorqual commun (*Balaenoptera physalus*)
+      - Sites d’intérêt culturels, patrimoniaux et archéologiques
+        - [Zones de protection](#milieux-protégés) (id: 0082)
+    - Stresseurs
+      - [Pollution maritime](#pollutionmaritime)
+        - Mise à jour pour considérer les pêches du secteur fluvial
+
+  - Nouvelles catégories de stresseurs et/ou de composantes valorisées
+    - Composantes valorisées
+      - Habitats floristiques et fauniques
+        - [Espèces aquatiques à statut en vertu de la Loi sur les espèces en péril](#espèces-fauniques-et-floristiques-à-statut) (id: 0077)
+        - [Biovolumes herbiers aquatiques](#herbiers-aquatiques) (id: 0084)    
+      - Sites d’intérêt culturels, patrimoniaux et archéologiques
+        - [Épaves](#épaves) (id: 0088)
+    - Stresseurs 
+      - Pêches commerciales
+        - [Pêches commerciales secteur fluvial](#secteur-fluvial) (id: 0083)
 
 <br>
 
@@ -57,7 +64,7 @@
     - Interprétation inchangée
   - [Exposition cumulée](#cumexpresult)
     - Interprétation inchangée pour la distribution de l'exposition cumulée
-    - Augmentation de l'intensité de l'exposition cumulée au sein du secteur fluvial pour les habitats et les sites d'intérêt dû à l'intégration de la pêche commerciale qui chevauche de milieux qui étaient déjà exposés à haute intensité
+    - Augmentation de l'intensité de l'exposition cumulée au sein du secteur fluvial pour les habitats et les sites d'intérêt dû à l'intégration de la pêche commerciale qui chevauche des milieux qui étaient déjà exposés à haute intensité
     - Exposition des mammifères marins plus étendue du Saguenay vers le Golfe dû à l'intégration des nouveaux modèles de distribution 
   - [Effets cumulatifs](#cearesult)
     - Constats similaires à l'exposition cumulée

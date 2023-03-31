@@ -77,7 +77,7 @@ knitr::include_graphics("./figures/figures-integrated/habitat-flore_menacee.png"
 <br>
 
 
-Les données du CDPNQ ont été bonifiées par les données par des données du Programme des espèces en péril en vertu de la Loi sur les espèces en péril [LEP; @mpo2022]. Tout comme les données du CDPNQ, ces données identifient des sites connus où des espèces à statut ont été observées. Au sein de la zone d'étude, cette base de données compte `r meta$dataDescription$LEP$NombreSites` sites pour `r meta$dataDescription$LEP$NombreEspeces + 1` espèces (Tableau \@ref(tab:statutlep)). Nous avons toutefois retiré le béluga de cette liste, puisque ce dernier est considéré au sein de la composante valorisée [mammifères marins](#mammiferesmarins). 
+Les données du CDPNQ ont été bonifiées par les données par des données d'espèces aquatiques du Programme des espèces en péril en vertu de la Loi sur les espèces en péril [LEP; @mpo2022]. Tout comme les données du CDPNQ, ces données identifient des sites connus où des espèces aquatiques à statut ont été observées. Au sein de la zone d'étude, cette base de données compte `r meta$dataDescription$LEP$NombreSites` sites pour `r meta$dataDescription$LEP$NombreEspeces + 1` espèces aquatiques (Tableau \@ref(tab:statutlep)). Nous avons toutefois retiré le béluga de cette liste, puisque ce dernier est considéré au sein de la composante valorisée [mammifères marins](#mammiferesmarins). 
 
 <br>
 
@@ -90,7 +90,7 @@ tab %>%
   knitr::kable(
     col.names = c("Statut", "Nom scientifique", "Nom commun"),
     row.names = FALSE,
-    caption = "Espèces désignées en vertu de la Loi sur les espèces en péril et leur statut [@mpo2022]."
+    caption = "Espèces aquatiques désignées en vertu de la Loi sur les espèces en péril et leur statut [@mpo2022]."
   )
 ```
 
