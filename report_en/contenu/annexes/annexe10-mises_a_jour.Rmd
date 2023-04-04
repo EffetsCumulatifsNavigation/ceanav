@@ -1,0 +1,96 @@
+# Appendix 10 {.unnumbered #annexe10}
+
+#### ***Updates*** {.unnumbered}
+
+##### ***2023-03-31*** {.unnumbered}
+
+*Summary of modifications:*
+
+- ***Data integration*** (refer to the [profile of the study area](#portrait) and to [appendix 1](#annexe1) for more details on the data). 
+  - Updates to environmental stressors and/or valued components
+    - Valued components
+      - Plant and wildlife habitats
+        - [Spawning sites marine sector](#frayères-et-sites-dalevinage) (id: 0073, 0074, 0075, 0076)
+        - [Mollusk beds](#gisements-coquilliers) (id: 0078, 0079, 0080, 0081)
+        - [Nursery sites](#frayères-et-sites-dalevinage) (id: 0086 remplace id: 0009)
+        - [Spawning sites](#frayères-et-sites-dalevinage) (id: 0087 remplace id: 0010)
+      - [Marine mammals](#mammiferesmarins)
+        - Baleen whales (id: 0085 replace species in id:0027):
+          - Minke whale (*Balaenoptera acutorostrata*)
+          - Humpback whale (*Megaptera novaeangliae*)
+          - Blue whale (*Balaenoptera musculus*)
+          - Fin whale (*Balaenoptera physalus*)
+      - Areas of cultural, heritage and archeological interest
+        - [Protected areas](#milieux-protégés) (id: 0082)
+    - Stressors
+      - [Marine pollution](#pollutionmaritime)
+        - Updated to consider commercial fisheries in fluvial sector
+
+  - New categories of environmental stressors and/or valued components
+    - Valued components
+      - Plant and wildlife habitats
+        - [Endangered aquatic species under the Species at Risk Act](#espèces-fauniques-et-floristiques-à-statut) (id: 0077)
+        - [Grassland biovolume](#herbiers-aquatiques) (id: 0084)    
+      - Areas of cultural, heritage and archeological interest
+        - [Shipwrecks](#épaves) (id: 0088)
+    - Stressors 
+      - Commercial fisheries
+        - [Commercial fisheries in fluvial sector](#secteur-fluvial) (id: 0083)
+
+<br>
+
+- [***Vulnerability***](vulnportrait)
+  - Commercial fisheries in fluvial sector
+    - Plant and wildlife habitats
+      - Natural areas: same vulnerability as that of demersal, destructive, high-bycatch fisheries, which contain trap fisheries      
+      - Habitats of importance for wildlife and plant species (id: 0063)
+        - The vulnerability scores used for commercial fisheries in the marine sector were used for commercial fisheries in the fluvial sector
+    - Bank integrity: null vulnerability to commercial fisheries
+    - Marine mammals: null vulnerability to commercial fisheries in fluvial sector (id: 0064)
+    - Areas of cultural, heritage and archeological interest: as for other stressors, vulnerability equal to 1
+  - Grassland biovolume
+    - Vulnerability obtained from @kappel2012 by using the vulnerability scores for eelgrass and algal zones
+    - Decrease of vulnerability by 10% per biovolume category (high = 100%; moderate = 90%; low = 80%)
+  - Endangered aquatic species under the Species at Risk Act
+    - Similar approach to that used for endangered species from CDPNQ
+
+<br>
+
+- ***Results interpretation***
+  - [Stressors and cumulative hotspots](#strcumresult)
+    - Commercial fisheries are now present in the fluvial sector
+    - Marine pollution increased in fluvial sector due to the inclusion of commercial fisheries
+  - [Cumulative valued components](#cvcumresult)
+    - Similar interpretation 
+  - [Cumulative exposure](#cumexpresult)
+    - Similar interpretation for the distribution of cumulative exposure
+    - Increase of the intensity of cumulative exposure in the fluvial sector for habitats and areas of interest due to the inclusion of commercial fisheries overlapping with areas already exposed to high levels of stress 
+    - Marine mammals exposure more extensive from the Saguenay river towards the Gulf of St. Lawrence due to the inclusion of improved distribution modeling
+  - [Cumulative effects](#cearesult)
+    - Similar interpretation to that of cumulative exposure
+  - [Pathways of effect](#chemins-deffet)
+    - Increase in the number of predicted pathways of effects, but the average intensity remains similar
+    - Commercial fisheries in the fluvial sector seem to have a greater global effect than that of commercial fisheries in the marine sector, likely due to the smaller spatial extent of the fluvial sector compared to that of the marine sector.
+    - Effects of commercial fisheries in the fluvial sector are mainly predicted on areas of interest and a few habitats. There are however an important number of areas of interest in that area, which are all considered as vulnerable to all stressors
+    - Grasslands are among the most affected habitats. It must however be noted that the data used to characterize grassland is not exhaustive in the study area. It is therefore impossible to make inference on grasslands in general; conclusions should be limited to those zones for which data was available.
+  - [Administrative regions](#régions-administratives)
+    - Commercial fisheries have an important effect in the fluvial sector, particularly for the Centre-du-Québec, Lanaudière and Mauricie regions
+    
+<br>
+
+- [***Summary***](#sommaire)
+  - Most important environmental stressors
+    - Commercial fisheries affect certain valued component categories more intensively, such as many sites of interest, habitats of the fluvial sector and mollusk beds in the marine sector. Commercial fisheries in the fluvial sector seem to have a greater global effect than that of commercial fisheries in the marine sector, likely due to the smaller spatial extent of the fluvial sector compared to that of the marine sector.
+  - Administrative regions most affected
+    - Administrative regions of the fluvial sector are the most affected by the cumulative effects of marine activities, particularly for the Montérégie and Centre-du-Québec regions. Those effects are primarily influenced by commercial shipping (*e.g.* tankers, dry bulk, cargo, and container carriers), commercial fisheries and marine pollution.
+  
+<br>
+
+- ***Perspectives***
+  - [Enhancing the profile of the study area](#donneesperspective)
+    - Grasslands
+      - Kept in the perspectives, but it is noted that the data integrated only covers a small portion of the study area and that additional data could be integrated in the future. 
+    - Commercial fisheries in the fluvial sector
+      - Kept in the perspectives, and noted that the data used should be replaced by an improved assessment of commercial fisheries of the fluvial sector in a new iteration of the assessment
+    - Shipwrecks
+      - Perspective removed
