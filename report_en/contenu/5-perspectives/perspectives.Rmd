@@ -75,20 +75,11 @@ Marine noise is recognized as a shipping-related stressor that should be conside
 
 *** Aquatic grass beds ***
 
-Aquatic grass beds are important environments for several species and the Ministry of Forests, Wildlife and Parks (Ministère des Forêts, de la Faune et des Parcs, MFFP) and the Ministry of the Environment and the Fight Against Climate Change (Ministère de l'Environnement et de la Lutte contre les changements climatiques, MELCC), as part of the knowledge acquisition projects for the Centre of Expertise in Maritime Incident Risk Management (Centre d'expertise en gestion des risques d'incidents maritimes, CEGRIM), are working on an update of the characterization of aquatic grass beds in various sectors of the study area. Once completed, this update could be integrated into the habitat characterization.
-
-
-
+Aquatic grass beds are important environments for several species and the Ministry of Forests, Wildlife and Parks (Ministère des Forêts, de la Faune et des Parcs, MFFP) and the Ministry of the Environment and the Fight Against Climate Change (Ministère de l'Environnement et de la Lutte contre les changements climatiques, MELCC), as part of the knowledge acquisition projects for the Centre of Expertise in Maritime Incident Risk Management (Centre d'expertise en gestion des risques d'incidents maritimes, CEGRIM), are working on an update of the characterization of aquatic grass beds in various sectors of the study area. The 2023 update of the assessment included the integration of grass beds biovolumes in certain sectors of the study area (see section \@ref(herbiers-aquatiques)). Similar surveys could be added in the future to obtain a more exhaustive characterization of grass beds in the study area.
 
 ***Commercial fisheries in the fluvial sector***
 
-Commercial fishing is conducted in the fluvial sector of the study area. However, the available data could not be obtained since the Ministry of Agriculture, Fisheries and Food (Ministère de l'Agriculture, des Pêcheries et de l'Alimentation du Québec, MAPAQ) and the Ministry of Forests, Wildlife and Parks (Ministère des Forêts, de la Faune et des Parcs, MFFP) are currently working on the production of a cartographic atlas of the fishing areas that should be published in 2022. When available, data from this atlas should be integrated into the cumulative effects assessment to improve the characterization of commercial fishing activities in the study area.
-
-
-
-***Shipwrecks***
-
-Our assessment currently deems shipwreck sites environmental stressors. However, shipwrecks are also archeological sites that are part of Quebec’s heritage; they could therefore be considered a valued component of areas of cultural, heritage and archeological interest. A characterization of the archeological areas of interest is available through the Inventory of Archeological Sites in Quebec (Inventaire des sites archéologiques du Québec) of the Ministry of Culture and Communications (Ministère de la Culture et des Communications). However, we were not able to access this inventory during our assessment. It would therefore be relevant to add the data from this inventory if an update of the cumulative effects assessment is performed. 
+Commercial fishing is conducted in the fluvial sector of the study area. However, the available data could not be obtained since the Ministry of Agriculture, Fisheries and Food (Ministère de l'Agriculture, des Pêcheries et de l'Alimentation du Québec, MAPAQ) and the Ministry of Forests, Wildlife and Parks (Ministère des Forêts, de la Faune et des Parcs, MFFP) are currently working on the production of a cartographic atlas of the fishing areas that should be published in 2022. When available, data from this atlas should be integrated into the cumulative effects assessment to improve the characterization of commercial fishing activities in the study area. In the interim, we used a characterization of commercial fisheries using fyke nets in the fluvial sector from a 2012 assessment of environmental pressures in the St. Lawrence [see section \@ref(secteur-fluvial); @mingelbier2012]. This work was currently the best available assessment of the intensity of commercial fisheries in the fluvial sector. It would however be important to replace tis work with a more refined and up to date assessment of commercial fisheries in future updates of the assessment.
 
 
 ## Cumulative Effects Hotspots {.unlisted .unnumbered}
