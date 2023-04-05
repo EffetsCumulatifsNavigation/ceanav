@@ -1,11 +1,15 @@
 ### Commercial fishing {#pechecommerciale}
 
+> ***We thank Marc Mingelbier, Paschale Noël Bégin et Marie-Josée Gagnon from the Ministère de l’Environnement, de la Lutte contre les changements climatiques, de la Faune et des Parcs for the discussions and support in characterizing commercial fisheries in the fluvial sector.***
+
 ```{r peche_setup, echo = FALSE, results = 'asis'}
 meta <- read_yaml("../data/data-metadata/int_st_peche_commerciale.yml")
 show_source(meta$rawData, lang = "en")
 ```
 
 <br/>
+
+#### Marine sector
 
 The intensity of commercial fishing activity within the study area was assessed using data from the Fisheries and Oceans Canada logbook program [@mpo2021; @mpo2021b; @mpo2021c]. Although logbooks are not mandatory for all fisheries, they still provide a sufficiently exhaustive assessment of commercial fishing activity distribution and intensity in the study area. Although there is a commercial fishery in the fluvial sector and in the Saguenay River, we were unable to obtain data enabling us to characterize its distribution and intensity. The lack of data in these areas should therefore not be interpreted as an absence of commercial fishing; this gap should be addressed for a future assessment.
 
@@ -48,6 +52,7 @@ Types of gear were characterized using a commercial fisheries fishing gear index
 
 ```{r pecheEnginFreq}
 tab <- as.data.frame(meta$dataDescription$categories) %>%
+       filter(source == "0033,0034,0035") %>%
        select(english, description_en, frequence)
 beg <- meta$dataDescription$temporal$start
 end <- meta$dataDescription$temporal$end
@@ -116,3 +121,13 @@ knitr::include_graphics("./figures/figures-integrated/peche_commerciale-PLB.png"
 ```
 
 <br>
+
+
+#### Fluvial sector 
+
+Data characterizing commercial fisheries in the fluvial sector were included to the cumulative effects assessment during the 2023 assessment update. Those data come from a description of the main pressures observed in the St. Lawrence in 2012 [@mingelbier2012]. Commercial fisheries activities using fyke nets during the spring, the summer and the fall before 2011 were characterized in segments of 5 km, and dividing the St. Lawrence between the southern and northern shores using the waterway. The intensity of commercial fisheries was measured as the mean number of fyke nets deployed par day in each segment dividing the fluvial sector of the study area; data were then given a value of 1, 3 or 5, corresponding to low, moderate and high fisheries intensity. Those values were integrated in the study grid for the assessment. It should be noted that those data are not exhaustive or representative of all commercial fisheries activities in the fluvial sector; they are, however, the most up to date information available at this time. 
+
+
+```{r pechefleuve, fig.cap = "Distribution and intensity of commercial fisheries in the St. Lawrence and the Saguenay river - Fluvial commercial fisheries", out.width = '100%', fig.link = "./figures/figures-integrated/peche_commerciale-peche_fleuve.png"}
+knitr::include_graphics("./figures/figures-integrated/peche_commerciale-peche_fleuve.png")
+```
