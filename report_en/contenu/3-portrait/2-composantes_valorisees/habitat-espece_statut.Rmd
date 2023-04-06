@@ -3,7 +3,8 @@
 ```{r statut_data, results = 'asis'}
 uid <- meta$dataDescription$categories$accronyme %in% 
           c("faune_susceptible", "faune_vulnerable", "faune_menacee", 
-            "flore_susceptible", "flore_vulnerable", "flore_menacee")
+            "flore_susceptible", "flore_vulnerable", "flore_menacee",
+            "lep_menacee","lep_voie_disparition")
 meta$dataDescription$categories$source[uid] %>%
 sapply(., function(x) stringr::str_split(x, ",")) %>%
 unlist() %>%
@@ -72,3 +73,30 @@ knitr::include_graphics("./figures/figures-integrated/habitat-flore_menacee.png"
 ```
 
 <br>
+
+The CDPNQ data were completed with data on aquatic species at risk designated under the Species at Risk Act [SARA; @mpo2022]. Like the CDPNQ data, the SARA data identify sites here endangered species have been observed. In the study area, the SARA data contains `r meta$dataDescription$LEP$NombreSites` sites for `r meta$dataDescription$LEP$NombreEspeces + 1` aquatic species (Table \@ref(tab:statutlep)). We however removed data on the beluga whale, since that species is already considered through the [marine mammals](#mammiferesmarins) valued component.
+
+<br>
+
+```{r statutlep}
+tab <- as.data.frame(meta$dataDescription$LEP$Especes) %>%
+       select(SARA, Scientific, Common_En)
+tab %>%
+  knitr::kable(
+    col.names = c("Status", "Scientific name", "Common name"),
+    row.names = FALSE,
+    caption = "Endangered aquatic species designated under the Species at Risk Act (SARA) and their status [@mpo2022]."
+  )
+```
+
+<br>
+
+```{r lepmenacee, fig.cap = "Distribution of habitats in the St. Lawrence and the Saguenay river - Endangered species", out.width = '100%', fig.link = "./figures/figures-integrated/habitat-lep_menacee.png"}
+knitr::include_graphics("./figures/figures-integrated/habitat-lep_menacee.png")
+```
+
+<br>
+
+```{r lepvoiedisparition, fig.cap = "Distribution of habitats in the St. Lawrence and the Saguenay river - Threatened species", out.width = '100%', fig.link = "./figures/figures-integrated/habitat-lep_voie_disparition.png"}
+knitr::include_graphics("./figures/figures-integrated/habitat-lep_voie_disparition.png")
+```
