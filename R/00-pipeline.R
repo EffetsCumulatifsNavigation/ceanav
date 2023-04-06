@@ -299,7 +299,7 @@ pipeline <- function(
     # unlink("../Rapport/docs/", recursive = TRUE) # uncomment
     unlink("./report_fr/figures/", recursive = TRUE)
     # file.copy("./report_fr/docs", "../Rapport/", recursive = TRUE) # uncomment
-    file.copy("./report_fr/docs/", "./", recursive = TRUE) # delete
+    # file.copy("./report_fr/docs/", "./", recursive = TRUE) # delete
     
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     # English report
@@ -324,9 +324,9 @@ pipeline <- function(
     # WARNING: Temporary pipeline to export report only to another repo.
     # TODO: This is not reproducible and should be removed from the pipeline as soon as this
     #       repository can be made available publicly
-    unlink("../Report/docs/", recursive = TRUE)
+    # unlink("../Report/docs/", recursive = TRUE)
     unlink("./report_en/figures/", recursive = TRUE)
-    file.copy("./report_en/docs", "../Report/", recursive = TRUE)
+    # file.copy("./report_en/docs", "../Report/", recursive = TRUE)
   }
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~
