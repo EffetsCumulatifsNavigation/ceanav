@@ -273,9 +273,9 @@ dataDescription:
     - Threatened plant species
     - Endangered species
     - Threatened species
-    - Grassland biovolume - low
-    - Grassland biovolume - moderate
-    - Grassland biovolume - high
+    - Aquatic grass beds biovolume - low
+    - Aquatic grass beds biovolume - moderate
+    - Aquatic grass beds biovolume - high
     type_en:
     - Natural areas
     - Natural areas
@@ -339,9 +339,9 @@ dataDescription:
     - Plant species designated as threatened
     - Species listed as Endangered under the Species at Risk Act (SARA)
     - Species listed as Threatened under the Species at Risk Act (SARA)
-    - Areas with low grassland biovolume
-    - Areas with moderate grassland biovolume
-    - Areas with high grassland biovolume
+    - Areas with low aquatic grass beds biovolume
+    - Areas with moderate aquatic grass beds biovolume
+    - Areas with high aquatic grass beds biovolume
   frayere_alevinage:
     Source:
     - ' '

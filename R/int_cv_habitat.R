@@ -636,8 +636,8 @@ cv_habitat <- function() {
                            fr = "Biovolume herbiers aquatique - faible", 
                            descr = "Milieux à faible biovolume d'herbiers aquatiques", 
                            type = "Milieux naturels", 
-                           en = "Grassland biovolume - low", 
-                           descr_en = "Areas with low grassland biovolume", 
+                           en = "Aquatic grass beds biovolume - low", 
+                           descr_en = "Areas with low aquatic grass beds biovolume", 
                            type_en = "Natural areas")
   habitat$biovolume_herbier_faible <- uid(dat_fbl)
   sup <- c(sup, superficie(dat_fbl))
@@ -649,8 +649,8 @@ cv_habitat <- function() {
                            fr = "Biovolume herbiers aquatique - modéré", 
                            descr = "Milieux à modéré biovolume d'herbiers aquatiques", 
                            type = "Milieux naturels", 
-                           en = "Grassland biovolume - moderate", 
-                           descr_en = "Areas with moderate grassland biovolume", 
+                           en = "Aquatic grass beds biovolume - moderate", 
+                           descr_en = "Areas with moderate aquatic grass beds biovolume", 
                            type_en = "Natural areas")
   habitat$biovolume_herbier_modere <- uid(dat_mod)
   sup <- c(sup, superficie(dat_mod))
@@ -662,8 +662,8 @@ cv_habitat <- function() {
                            fr = "Biovolume herbiers aquatique - élevé", 
                            descr = "Milieux à élevé biovolume d'herbiers aquatiques", 
                            type = "Milieux naturels", 
-                           en = "Grassland biovolume - high", 
-                           descr_en = "Areas with high grassland biovolume", 
+                           en = "Aquatic grass beds biovolume - high", 
+                           descr_en = "Areas with high aquatic grass beds biovolume", 
                            type_en = "Natural areas")
   habitat$biovolume_herbier_eleve <- uid(dat_elv)
   sup <- c(sup, superficie(dat_elv))

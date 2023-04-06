@@ -11,6 +11,8 @@ tab <- data.frame(
     "Species at risk: Threatened plant species",
     "Species at risk: Susceptible plant species",
     "Species at risk: Vulnerable plant species",
+    "Species at risk: Endangered species SARA",
+    "Species at risk: Threatened species SARA",
     "Natural areas: Soft without cliff",
     "Natural areas: Rocky without bluff",
     "Natural areas: Rocky without cliff",
@@ -27,9 +29,14 @@ tab <- data.frame(
     "Natural areas: Eelgrass",
     "Natural areas: Aquatic grass beds",
     "Natural areas: Floodplain zones"
+    "Natural areas: Aquatic grass beds biovolume - low",
+    "Natural areas: Aquatic grass beds biovolume - moderate",
+    "Natural areas: Aquatic grass beds biovolume - high"
   ),
 
   clark = c(
+    "NA",
+    "NA",
     "NA",
     "NA",
     "NA",
@@ -51,7 +58,10 @@ tab <- data.frame(
     "Nearshore soft bottom",
     "Seagrass",
     "Kelp forest",
-    "Rocky intertidal, tidal flats, saltmarsh"
+    "Rocky intertidal, tidal flats, saltmarsh",
+    "Algal zone, Eelgrass",
+    "Algal zone, Eelgrass",
+    "Algal zone, Eelgrass"
   ))
 
 tab %>%
