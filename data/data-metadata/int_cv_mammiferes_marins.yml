@@ -3,15 +3,15 @@ title_en: Marine mammals
 description: Distribution des mammifères marins dans le Saint-Laurent et le Saguenay
 id: mammiferes_marins
 dataDescription:
-  units: Densité relative des observations
-  units_en: Relative density of observations
+  units: "in_categories"
+  units_en: "in_categories"
   spatial:
     resolution: 1km^2
     extent:
     - -413830.0813864
     - 168655.5276494
     - 130169.9186136
-    - 594655.527648
+    - 594655.5276494
   temporal:
     resolution: Event based
     start: '2015'
@@ -78,11 +78,11 @@ dataDescription:
     - Seal
     - Seal
     source:
+    - 0085
+    - 0085
+    - 0085
     - '0027'
-    - '0027'
-    - '0027'
-    - '0027'
-    - '0027'
+    - 0085
     - '0054'
     - '0054'
     - '0054'
@@ -107,6 +107,27 @@ dataDescription:
     - Distribution du phoque gris
     - Distribution du phoque commun
     - Distribution du phoque du groenland
+    units:
+    - Probabilités relatives d'occurrence
+    - Probabilités relatives d'occurrence
+    - Probabilités relatives d'occurrence
+    - Densité relative des observations
+    - Probabilités relatives d'occurrence
+    - Densité relative des observations
+    - Densité relative des observations
+    - Densité relative des observations
+    - Densité relative des observations
+    units_en:
+    - Relative probability of occurrence
+    - Relative probability of occurrence
+    - Relative probability of occurrence
+    - Relative density of observations
+    - Relative probability of occurrence
+    - Relative density of observations
+    - Relative density of observations
+    - Relative density of observations
+    - Relative density of observations
 rawData:
 - '0027'
 - '0054'
+- 0085

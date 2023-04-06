@@ -1,0 +1,31 @@
+data_description:
+  id: "0074"
+  name: "Aires de reproduction, d'alimentation et de concentration de l'esturgeon jaune dans le fleuve et l'estuaire du Saint-Laurent"
+  description: "Couche regroupant l’information connue des aires de reproduction, d'alimentation et de concentration de l'esturgeon jaune dans le fleuve et l'estuaire du Saint-Laurent selon une revue de littérature de documents réalisés entre 1976 et 2002."
+  access_date: 2023-01-05
+  temporal_start: 1976
+  temporal_end: 2002
+  contact_id: "0005"
+  url: "https://ouvert.canada.ca/data/fr/dataset/0db67020-7521-4356-bd53-3132cb7804a3"
+  identifiant: "0db67020-7521-4356-bd53-3132cb7804a3"
+  availability: "open access"
+  citekey: mpo2019d
+  citation:
+    - "Blais, J.-P. et V. Legendre. 1976. La ouananiche, Salmo salar, du lac Tremblant, Québec. Québec, Ministère du Loisir, de la Chasse et de la Pêche, Direction régionale de Montréal, Rapp. tech. 06-11, 116 p."
+    - "Bouthillier, L., P. Dumont et G. Roy. 1993. Répertoire des habitats du poisson de la région de Montréal, Québec. Ministère du Loisir, de la Chasse et de la Pêche du Québec, Direction régionale de Montréal. ii + 6 p. + fiches d'habitats + 18 cartes d'habitats à l'échelle 1:50 000 + bibliographie 15 p."
+    - "Desjardins, S. et P. Dumont. 1990. Avis du ministère du Loisir, de la Chasse et de la Pêche au sujet de l'acceptabilité environnementale du projet Soligaz. Québec, Ministère du Loisir, de la Chasse et de la Pêche, Direction régionale de Montréal."
+    - "Dimension Environnement SNC. 1990. Évaluation de l'abondance de l'Esturgeon jaune (Acipenser fulvescens) dans la baie du Cap St-Michel. Rapport complémentaire présenté au ministère de l'Environnement du Québec dans le cadre de l'étude d'impact sur l'environnement du projet Soligaz, Montréal, 24 p."
+    - "Dumont, P. et R. Fortin. 1977. Relations entre les niveaux d'eau printaniers et la reproduction du Grand Brochet du Haut-Richelieu et de la baie Missisquoi. Université du Québec à Montréal, Département des sciences biologiques, pour le Bureau international Champlain Richelieu, Comité d'impact sur l'environnement, x + 108 p."
+    - "Dumont, P., J. Leclerc et L. Bouthillier. 1989b. Données d'inventaire, marais Fraser, lac Saint-François, Cazaville. Été 1989. Québec, Ministère du Loisir, de la Chasse et de la Pêche, Service de l'aménage¬ment et de l'exploitation de la faune, Montréal. [Données non publiées]."
+    - "Dumont, P., J. Leclerc et Y. Chagnon. 1990. Pêche électrique sur la rivière Yamaska le 18 avril 1990. Québec, Ministère du Loisir de la Chasse et de la Pêche, Service de l'aménagement et de l'exploitation de la faune, Montréal. [Données non publiées]."
+    - "Enquête auprès des pêcheurs et agents du MEF et du MPO. 1995."
+    - "Fournier, P. et L.-M. Soyez. 1988. Étude de l'utilisation faunique printanière du marais de Rosemère. Québec, Ministre du Loisir, de la Chasse et de la Pêche, Service de l'aménagement et de l'exploitation de la faune, Montréal, 13 p."
+    - "Gendron, M. 1986. Rivière-des-Prairies. Aménagement d'un haut-fond, printemps 1986. Groupe de recherche SEEEQ ltée pour la Direction Environnement d'Hydro-Québec, 103 p."
+    - "Gendron, M. 1987. Rivière-des-Prairies. Suivi de l'aménagement d'un haut-fond, printemps 1987. Le Groupe de recherche SEEEQ ltée pour la Direction Environnement d'Hydro-Québec, 60 p."
+    - "Gendron, M. 1988. Rivière-des-Prairies. Suivi de l'aménagement du haut-fond, synthèse 1982-1988. Le Groupe de recherche SEEEQ ltée pour le Service de recherche en environnement et santé publique, Vice-Présidence Environnement, Hydro-Québec, 95 p."
+    - "LaHaye, M. et R. Fortin. 1990. Caractérisation de l'habitat de fraie et de l'habitat des juvéniles de l'Esturgeon jaune (Acipenser fulvescens) dans la région de Montréal. Rapport de recherche préparé pour le Département des sciences biologiques de l'Université du Québec à Montréal, 81 p. + annexes."
+    - "Letendre, M., B. Dumas et M. Beaudoin. 1990. Inventaire de la rivière des Prairies, au niveau de l'île de Pierre. Québec, Ministère du Loisir de la Chasse et de la Pêche, Service de l'aménagement et de l'exploitation de la faune, Montréal. [Travaux en cours]."
+    - "Société de la Faune et des Parcs du Québec. 2000. Atlas des habitats critiques connus ou d'intérêt particulier pour les poissons du fleuve Saint-Laurent entre le port de Montréal et l'Île aux Coudres. Direction du développement de la faune."
+    - "Therrien, J., Marquis, H., Shooner, G. et Bérubé, P. 1991. Caractérisation des habitats recherchés pour la fraie des principales espèces de poisson du fleuve Saint-Laurent (Cornwall à Montmagny). Études réalisées par le Groupe Environnement Shooner inc. Pour le compte des ministères des Pêches et des Océans et de l'Environnement du Canada. 16 pages. Un atlas accompagne ce document."
+    - "Tremblay, S. 1996. Caractérisation de la pêcherie commerciale à l'esturgeon noir (Acipenser oxyrinchus) dans le secteur de Montmagny en 1994. Ministère de l'Environnement et de la Faune, Direction de la faune et des habitats. Rapport technique. 27 p."
+    - "Trencia, G. 2002. Communication personnelle avec Guy Trencia, Faune et Parcs Québec."

@@ -2,6 +2,8 @@
 
 ##### Milieux protégés
 
+> ***Nous remercions Joannie Ferland du Ministère de l'Environnement, de la Lutte contre les changements climatiques, de la Faune et des Parcs pour les échanges et le soutien.***
+
 ```{r mpa_data, results = 'asis'}
 uid <- meta$dataDescription$categories$accronyme %in% 
           c("public_milieu_protege")
@@ -15,11 +17,10 @@ show_source(lang = "fr")
 
 <br/>
 
-Les milieux protégés ont été caractérisés par l'intégration de trois bases de données. La première base de données correspond à la délimitation des différentes mesures de gestion spatiale mises en place dans le parc marin du Saguenay–Saint-Laurent [@apc2021]. Cette base de données regroupe la délimitation de mesures spatiales réglementaires (*e.g.* zones d'interdiction de navigation et zones de ralentissement) ainsi que des mesures spatiales volontaires (*e.g.* zones de ralentissement et zones à éviter). La deuxième base de données provient du Gouvernement du Canada et délimite des milieux où des mesures de gestion reconnues comme *autres mesures efficaces de conservation par zone* [EMCEZ; @mpo2021d]. Au sein de notre zone d'étude, cette base de données présente une seule zone protégée [en amont de la Rivière Saguenay](https://www.dfo-mpo.gc.ca/oceans/oecm-amcepz/refuges/saguenay-fra.html) qui limite les activités de pêche pour protéger l'habitat du béluga et pour éviter la remise en suspension de sédiments contaminés.
+Les milieux protégés ont été caractérisés par l'intégration de quatre bases de données. La première base de données correspond à la délimitation des différentes mesures de gestion spatiale mises en place dans le parc marin du Saguenay–Saint-Laurent [@apc2021]. Cette base de données regroupe la délimitation de mesures spatiales réglementaires (*e.g.* zones d'interdiction de navigation et zones de ralentissement) ainsi que des mesures spatiales volontaires (*e.g.* zones de ralentissement et zones à éviter). La deuxième base de données provient du Gouvernement du Canada et délimite des milieux où des mesures de gestion reconnues comme *autres mesures efficaces de conservation par zone* [EMCEZ; @mpo2021d]. Au sein de notre zone d'étude, cette base de données présente une seule zone protégée [en amont de la Rivière Saguenay](https://www.dfo-mpo.gc.ca/oceans/oecm-amcepz/refuges/saguenay-fra.html) qui limite les activités de pêche pour protéger l'habitat du béluga et pour éviter la remise en suspension de sédiments contaminés.
 
 
-Finalement, les données du Registre des aires protégées au Québec [@melcc2021] ont été utilisées afin de compléter le portrait. Ce registre offre une compilation des aires protégées au Québec -- identifiés selon les définitions de la Loi sur la conservation du patrimoine naturel (LCPN; RLRQ, chapitre C-61.01) ou de l'Union internationale pour la conservation de la nature (UICN) -- et des territoires d'importance pour la conservation -- identifiés par le ministère de l'Environnement et de la Lutte contre les changements climatiques (MELCC) ou une instance du gouvernement du Québec. Nous avons retiré de cette base de données les habitats fauniques, les habitats d'une espèces floristique menacée ou vulnérable et les réserves de territoire aux fins d'aire protégée puis ces catégories couvraient l'entièreté de la zone d'étude ou parce qu'elles étaient couvertes par d'autres composantes valorisées. 
-
+Finalement, les données du Registre des aires protégées au Québec [@melcc2021] ont été utilisées afin de compléter le portrait. Ce registre offre une compilation des aires protégées au Québec -- identifiés selon les définitions de la Loi sur la conservation du patrimoine naturel (LCPN; RLRQ, chapitre C-61.01) ou de l'Union internationale pour la conservation de la nature (UICN) -- et des territoires d'importance pour la conservation -- identifiés par le ministère de l'Environnement et de la Lutte contre les changements climatiques, de la Faune et des Parcs (MELCCFP) ou une instance du gouvernement du Québec. Lors de la mise à jour de mars 2023, ces données ont été bonifiées par un travail d'intégration de données effectué par la direction de la connaissance écologique du MELCCFP intégrant une mise à jour du Registre des aires protégées aux Québec ainsi que ses territoires d'importance sur le territoire [[@melcc2022]], du Répertoire des sites de conservation volontaire du Québec [@rmnp2022], des habitats fauniques [@mffp2021b] et des écosystèmes forestiers exceptionnels ne figurant pas au Registre [@mffp2022]. Nous avons retiré de ces bases de données les habitats fauniques et les réserves de territoire aux fins d'aire protégée parce que ces catégories couvraient l'entièreté de la zone d'étude, ainsi que les habitats d'une espèce floristique menacée ou vulnérable parce qu'elles étaient couvertes par d'autres composantes valorisées. 
 
 <br>
 
@@ -55,3 +56,25 @@ knitr::include_graphics("./figures/figures-integrated/site-public_sites_patrimon
 ```
 
 <br>
+
+##### Épaves
+
+> ***Nous remercions Francis Bouchard et Virginie Galindo du Ministère de l’Environnement, de la Lutte contre les changements climatiques, de la Faune et des Parcs pour les échanges et le soutien.***
+
+```{r epaves_data, results = 'asis'}
+uid <- meta$dataDescription$categories$accronyme %in% 
+          c("public_epaves")
+meta$dataDescription$categories$source[uid] %>%
+sapply(., function(x) stringr::str_split(x, ",")) %>%
+unlist() %>%
+unique() %>%
+sort() %>%
+show_source(lang = "fr")
+```
+
+Les épaves faisant partie du patrimoine archéologique au sein de la zone d'étude ont été caractérisées grâce à des données du Ministère de l’Environnement, de la Lutte contre les changements climatiques, de la Faune et des Parcs [MELCCFP; @melccfp2023]. Les données proviennent d’une revue de littérature sur le  potentiel archéologique subaquatique au sein des réserves de territoires aux fins d’aires protégées du secteur de L’Isle-aux-Grues, du secteur de Kamouraska, du secteur des Basques, de l’aire marine protégée du Banc-des-Américains ainsi que de la réserve aquatique projetée de Manicouagan effectué par AECOM [@aecom2021]. Les données fournies contiennent la potentielle localisation des épaves au sein du Saint-Laurent et un total de 428 épaves sont répertoriées entre Québec et la limite est de la zone d’étude. Puisque ces données sont de nature sensible, une zone tampon de 1km a été utilisée autour de chaque site; les zones résultantes ont ensuite été combinées en une seule couche. Cette couche a été intégrée au sein de notre grille d’étude de 1 $km^2$ afin d’identifier les cellules ayant un potentiel archéologique subaquatique. Cette approche a été utilisée afin d’éviter que les sites précis puissent être localisés précisément. 
+
+
+```{r publicepaves, fig.cap = "Distribution des sites d’intérêt culturels, patrimoniaux et archéologiques dans le Saint-Laurent et le Saguenay - Public - Épaves", out.width = '100%', fig.link = "./figures/figures-integrated/site-public_epaves.png"}
+knitr::include_graphics("./figures/figures-integrated/site-public_epaves.png")
+```

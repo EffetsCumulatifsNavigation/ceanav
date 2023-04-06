@@ -41,7 +41,7 @@ The [method](#methode) selected to assess the [cumulative effects](#sectioncea) 
 
 The process of gathering the necessary data to apply this cumulative effects approach is referred to, in this report, as the [portrait](#portrait) of the study area. The characterization of [environmental stressors](#strportrait) was done through the integration of `r src(st)` datasets and results in the description of `r length(unique(st$title))` stressors divided in `r nrow(st)` subcategories: `r ct1(st)`. The characterization of [valued components](#cvportrait), meanwhile, was done through the integration of `r src(cv)` datasets and resulted in the description of `r length(unique(cv$title))` valued components divided in `r nrow(cv)` subcategories: `r ct2(cv)`. Finally, an approach combining metrics of exposure and sensitivity -- *e.g.* stressor frequency, trophic impact, resistance, resilience, legal status -- was used to assess the [relative vulnerability](#vulnportrait) of subcategories of valued components to subcategories of environmental stressors. 
 
-Here, we detail the general observations that arise from the cumulative effects assessment as bullet points. Additional observations are presented in the report and can also be done by exploring the results of the assessment; we invite the reader to explore section \@ref(resultats) of the report for more information, and in particular to explore the figures provided.
+Here, we detail the general observations that arise from the cumulative effects assessment as bullet points. Additional observations are presented in the report and can also be done by exploring the results of the assessment; we invite the reader to explore section \@ref(resultats) of the report for more information, and in particular to explore the figures provided. All the data evaluated and used for this assessment are available in [appendix 1](#annexe1) and updates to the assessment are detailed in [appendix 10](#annexe10).
 
 
 <br/>
@@ -72,7 +72,7 @@ Here, we detail the general observations that arise from the cumulative effects 
 
 - **Most important environmental stressors**
   - Shipping and maritime pollution have the most important cumulative effects predicted at the regional scale, as they are also the most widespread in the study area;
-  - Commercial fisheries have an important effect on a limited number of valued components, namely clam beds and some sites of cultural, heritage and archeological interest; 
+  - Commercial fisheries affect certain valued component categories more intensively, such as many sites of interest, habitats of the fluvial sector and mollusk beds in the marine sector. Commercial fisheries in the fluvial sector seem to have a greater global effect than that of commercial fisheries in the marine sector, likely due to the smaller spatial extent of the fluvial sector compared to that of the marine sector.
   - Anchorages, accidental spills and dredging activities have localized effects on certain valued components. Those stressors, even if less widespread, combine with shipping and maritime pollution and are generally located in areas that are the most affected to cumulative effects (*e.g.* lake Saint-Pierre).
 
 <br/>
@@ -87,5 +87,7 @@ Here, we detail the general observations that arise from the cumulative effects 
 <br/>
 
 - **Administrative regions most affected**
-  - The administrative regions of the fluvial sector are the most affected by the cumulative effects of marine vessel activities, and most especially for the Montérégie region. Cumulative effects are mostly driven by shipping, particularly by freight transport (*e.g.* tankers, dry bulk, cargo, and container carriers)
+  - Administrative regions of the fluvial sector are the most affected by the cumulative effects of marine activities, particularly for the Montérégie and Centre-du-Québec regions. Those effects are primarily influenced by commercial shipping (*e.g.* tankers, dry bulk, cargo, and container carriers), commercial fisheries and marine pollution.
   - The Côte Nord region is the administrative region most affected in the maritime sector, mostly due to the effects of shipping on marine mammals.
+
+

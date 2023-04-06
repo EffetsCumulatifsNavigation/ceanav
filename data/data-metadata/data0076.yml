@@ -1,0 +1,33 @@
+data_description:
+  id: "0076"
+  name: "Aires de reproduction et d'alimentation de l'éperlan-arc-en-ciel dans la Rivière Saguenay, le fleuve et l'estuaire du Saint-Laurent"
+  description: "Couche regroupant l’information connue des aires de reproduction et d'alimentation de l'éperlan-arc-en-ciel, dans la Rivière Saguenay, le fleuve et l'estuaire du Saint-Laurent selon une revue de littérature de documents réalisés entre 1977 et 2000."
+  access_date: 2023-01-05
+  temporal_start: 1977
+  temporal_end: 2000
+  contact_id: "0005"
+  url: "https://ouvert.canada.ca/data/fr/dataset/9ddbf6ff-4314-47d8-ac0f-8d2f7278edcf"
+  identifiant: "9ddbf6ff-4314-47d8-ac0f-8d2f7278edcf"
+  availability: "open access"
+  citekey: mpo2019f
+  citation: 
+    - "Argus inc. (Les consultants en environnement). 1995b. Barachois de Malbaie: étude d'avant-projet de conservation et de mise en valeur. Rapport présenté au Club des ornithologues de la Gaspésie dans le cadre du programme Saint-Laurent Vision 2000. 71 p. + ann."
+    - "Bouthillier, L., P. Dumont et G. Roy. 1993. Répertoire des habitats du poisson de la région de Montréal, Québec. Ministère du Loisir, de la Chasse et de la Pêche du Québec, Direction régionale de Montréal. ii + 6 p. + fiches d'habitats + 18 cartes d'habitats à l'échelle 1:50 000 + bibliographie 15 p."
+    - "Dubé, J., M. Letendre, M. Beaudoin et B. Dumas. 1992. Marina l'Escale inc. Relevés sur l'habitat du poisson au printemps 1992. Lots 6-P, 7-P et littoral de la rivière Richelieu, Notre-Dame-du-Mont-Carmel, MRC du Haut-Richelieu. Québec, Ministère du Loisir, de la Chasse et de la Pêche, Service de l'aménagement et de l'exploitation de la faune, Montréal, 13 p. + annexes."
+    - "Dumont, P. et R. Fortin. 1977. Relations entre les niveaux d'eau printaniers et la reproduction du Grand Brochet du Haut-Richelieu et de la baie Missisquoi. Université du Québec à Montréal, Département des sciences biologiques, pour le Bureau international Champlain Richelieu, Comité d'impact sur l'environnement, x + 108 p."
+    - "Dumont, P., J. Leclerc et Y. Chagnon. 1990. Pêche électrique sur la rivière Yamaska le 18 avril 1990. Québec, Ministère du Loisir de la Chasse et de la Pêche, Service de l'aménagement et de l'exploitation de la faune, Montréal. [Données non publiées]."
+    - "Enquête auprès des agents des pêches du MPO. 1994."
+    - "Fréchet, A., Dodson J.J., Powles, H. 1983. Les parasites de l'éperlan d'amérique (Osmerus mordax) anadrome du Québec et leur utilité comme étiquettes biologiques. Canadian journal of zoology no 61: 621-626."
+    - "Gagnon, M., Y. Ménard et J.-F. La Rue. 1993. Caractérisation et évaluation des habitats du poisson dans la zone de transition saline du Saint-Laurent. Rapp. tech. can. sci. halieut. aquat. 1920: viii + 104 p."
+    - "Jacquaz et coll. 1990. Étude biophysique de l'habitat du poisson de quatre barachois de la baie des Chaleurs."
+    - "Lemieux, C. 1995. Acquisition de connaissances des habitats côtiers dans la région de Rimouski (1995). Rapport du Groupe-Conseil GENIVAR présenté au Ministère des Pêches et des Océans du Canada, Division de la Gestion de l’Habitat du Poisson, 52 pages + 2 annexes."
+    - "Lemieux, C. et R. Lalumière. 1995. Acquisition de connaissances des habitats côtiers du barachois de Saint-Omer. Rap. du Groupe conseil Genivar inc. pour la DGHP, MPO, 44 pages + 3 ann."
+    - "Lemieux, C. 1996. Acquisition de connaissances des habitats côtiers de l'Anse Saint-Jean et de la baie Sainte- Marguerite dans la région du Saguenay. Rap. du Groupe conseil Genivar inc. pour la DGHP, ministère des Pêches et Océans, 79 p. + annexes."
+    - "Lesueur, C. 1995. Acquisition de connaissances du milieu côtier dans la batture de Saint-Fulgence. Rapport du Comité ZIP-Saguenay au ministère des Pêches et des Océans du Canada et au Ministère de l'Environnement et de la Faune. 38 p. + annexes."
+    - "Lesueur, C. 1998. Acquisition de connaissances sur les poissons migrateurs et dulcicoles du Saguenay. Rapport du projet triennal : résultats obtenus de 1995 à 1998. Rapport du Comité ZIP-Saguenay au ministère des Pêches et des Océans Canada, au ministère de l'Environnement et de la Faune et à Patrimoine Canada. 74 p. + annexe."
+    - "Letendre, M., B. Dumas et M. Beaudoin. 1990. Inventaire de la rivière des Prairies, au niveau de l'île de Pierre. Québec, Ministère du Loisir de la Chasse et de la Pêche, Service de l'aménagement et de l'exploitation de la faune, Montréal. [Travaux en cours]."
+    - "Logimer. 1985. Développement d'un programme de conservation et de reconstitution des habitats lagunaires gaspésiens. Rapport présenté à Pêches et Océans Canada, section Habitat du poisson. 306 p. et annexes."
+    - "Naturam Environnement. 1997. Acquisition de connaissances et mise en valeur des habitats du poisson du complexe Baie Verte/Baie Laval, phase 3 : rapport final. Document réalisé par la Corporation de développpement de la Baie Verte avec l'aide du MPO dans le cadre du Plan d'action pour l'habitat du poisson."
+    - "Pageau, G. et R. Tanguay. 1977. Frayères, sites propices à la reproduction, et sites de concentration de jeunes poissons d'intérêt sportif et commercial dans le fleuve Saint-Laurent. Rapport soumis au Comité d'étude sur le fleuve Saint-Laurent par le Ministère du Tourisme, de la Chasse et de la Pêche, Rapp. tech. 3, 436 p."
+    - "Pesca. 1997. Étude de conservation et de mise en valeur de la Pointe Verte, Maria. Rapport préliminaire présenté au ministère des Pêches et des Océans. 86p."
+    - "Société de la Faune et des Parcs du Québec. 2000. Atlas des habitats critiques connus ou d'intérêt particulier pour les poissons du fleuve Saint-Laurent entre le port de Montréal et l'Île aux Coudres. Direction du développement de la faune."

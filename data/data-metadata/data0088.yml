@@ -1,0 +1,22 @@
+data_description:
+  id: "0088"
+  name: "Épaves"
+  description: "Localisation des épaves au sein du Saint-Laurent"
+  access_date: 2023-01-25
+  temporal_start: 
+  temporal_end: 
+  contact_id: 
+    - "0070"
+    - "0071"
+  availability: "data sharing agreement"
+  citekey: 
+    - "melccfp2023"
+    - "aecom2021"
+  citation:
+    - "Ministère de l’Environnement, de la Lutte contre les changements climatiques, de la Faune et des Parcs (2023) Localisation des épaves au sein du Saint-Laurent. Base de données. "
+    - "AECOM. 2021. Potentiel archéologique subaquatique sur les réserves de territoires aux fins d’aires protégées des secteurs de L’Isle-aux-Grues, Kamouraska, des Basques, du Banc-des-Américains ainsi que la réserve aquatique projetée de Manicouagan. 140 p. et annexes."
+  disclaimer:
+    - Ne pas diffuser ce rapport, ou le suivant, en dehors de votre équipe de travail;
+    - Produire des cartes comme celles des espèces à statut dans le rapport du patrimoine naturel du CEGRIM, soit avec un degré d’imprécision quant à la localisation;
+    - Mentionner que l’information provient du MELCCFP;
+    - Faire réviser les cartes obtenues en utilisant les positions des sites archéologiques par les chargées de projet mentionnées ci-bas

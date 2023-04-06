@@ -6,6 +6,7 @@ rawData:
 - '0033'
 - '0034'
 - '0035'
+- '0083'
 dataDescription:
   units: n*km^{-2}
   units_en: n*km^{-2}
@@ -153,30 +154,35 @@ dataDescription:
     - DNH
     - PLB
     - PHB
+    - peche_fleuve
     english:
     - Demersal, destructive, high-bycatch
     - Demersal, non-destructive, low-bycatch
     - Demersal, non-destructive, high-bycatch
     - Pelagic, low-bycatch
     - Pelagic, high-bycatch
+    - Commercial fisheries in fluvial sector
     francais:
     - Démersale destructive, prises accessoires élevées
     - Démersale non-destructive, prises accessoires faibles
     - Démersale non-destructive, prises accessoires élevées
     - Pélagique prises accessoires faibles
     - Pélagique prises accessoires élevées
+    - Pêches commerciales au sein du secteur fluvial
     mdref:
     - DD
     - DNL
     - DNH
     - PLB
     - PHB
+    - pechefleuve
     source:
     - '0033,0034,0035'
     - '0033,0034,0035'
     - '0033,0034,0035'
     - '0033,0034,0035'
     - '0033,0034,0035'
+    - '0083'
     description:
     - Activités de pêches commerciales à l'aide d'engins de pêche démersaux pouvant
       causer des dommages aux habitats ou au substrat, e.g. chalut et drague.
@@ -192,21 +198,25 @@ dataDescription:
     - Activités de pêches commerciales à l'aide d'engins de pêche pélagiques avec
       d'importantes prises accessoires et ne causant aucune modification des habitats,
       e.g. filet maillant et palangre.
+    - Activités de pêches commerciales à l'aide de verveux au printemps, à l'été et à l'automne, caclculé en nombre moyen de verveux déployés par jour au sein de segments divisant la section fluviale de l'aire d'étude.
     description_en: 
     - Commercial fishing activities using demersal fishing gear that may damage habitats or substrate, e.g. trawling and dragging.
     - Commercial fishing activities using demersal fishing gear with little or no bycatch and not causing habitat modification, e.g., deep-sea fishing.
     - Commercial fishing activities using demersal fishing gear with high bycatch and not causing habitat modification, e.g., trap and seine.
     - Commercial fishing activities using pelagic fishing gear with little or no bycatch and not causing habitat modification, e.g., line fishing, purse seine.
     - Commercial fishing activities using pelagic fishing gear with high bycatch and not causing habitat modification, e.g., gillnet and longline.
+    - Commercial fisheries activities using fyke nets during the spring, the summer and the fall, measured as the mean number of fyke nets deployed par day in segments dividing the fluvial sector of the study area.
     frequence:
     - 2954
     - 6452
     - 18793
     - 8
     - 8429
+    - 0
     zonesNA:
     - fluvial_peche
     - fluvial_peche
     - fluvial_peche
     - fluvial_peche
     - fluvial_peche
+    - berge_fluvial

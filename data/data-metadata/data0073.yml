@@ -1,0 +1,31 @@
+data_description:
+  id: "0073"
+  name: "Aires de reproduction de l'alose savoureuse dans le fleuve et l'estuaire du Saint-Laurent"
+  description: "Couche regroupant l’information connue des aires de reproduction de l'alose savoureuse dans le fleuve et l'estuaire du Saint-Laurent selon une revue de littérature de documents réalisés entre 1976 et 1997."
+  access_date: 2023-01-05
+  temporal_start: 1976
+  temporal_end: 1997
+  contact_id: "0005"
+  url: "https://ouvert.canada.ca/data/fr/dataset/a0817db6-42cb-4fa2-a601-48246c812e94"
+  identifiant: "a0817db6-42cb-4fa2-a601-48246c812e94"
+  availability: "open access"
+  citekey: mpo2019c
+  citation:
+    - "Blais, J.-P. et V. Legendre. 1976. La ouananiche, Salmo salar, du lac Tremblant, Québec. Québec, Ministère du Loisir, de la Chasse et de la Pêche, Direction régionale de Montréal, Rapp. tech. 06-11, 116 p."
+    - "Boulet, M., J. Leclerc et P. Dumont. 1995. Programme triennal d'étude sur le suceur cuivré. Québec, Ministère de l'Environnement et de la Faune, Service de l'aménagement et de l'exploitation de la faune, Montréal, Rapp. d'étape, 61 p."
+    - "Boulet, M., Y. Chagnon et J. Leclerc. 1996. Recherche et caractérisation des aires de fraye des suceurs cuivré et ballot au bief d'aval du barrage de Saint-Ours (rivière Richelieu) en 1992. Québec, Ministère de l'Environnement et de la Faune, Service de l'aménagement et de l'exploitation de la faune, Longueuil, Rapp. trav. 06-38, xi + 37 p."
+    - "Dumont, P. et R. Fortin. 1977. Relations entre les niveaux d'eau printaniers et la reproduction du Grand Brochet du Haut-Richelieu et de la baie Missisquoi. Université du Québec à Montréal, Département des sciences biologiques, pour le Bureau international Champlain Richelieu, Comité d'impact sur l'environnement, x + 108 p."
+    - "Dumont, P. et S. Desjardins. 1989. Lettre adressée à M. André Poulin du Département de géographie, Université de Sherbrooke, au sujet de la faune et les habitats de la portion aval de la rivière aux Brochets. Québec, Ministère du Loisir, de la Chasse et de la Pêche, Direction régionale de Montréal."
+    - "Dumont, P., J. Leclerc et L. Bouthillier. 1989a. Données d'inventaire, baie Brazeau, rivière des Outaouais, été 1989. Québec, Ministère du Loisir, de la Chasse et de la Pêche, Service de l'aménagement et de l'exploitation de la faune, Montréal. [Données non publiées]."
+    - "Environnement Illimité inc. 1994. Centrale Les Cèdres - Nouvel aménagement. Avant-projet phase 2, études environnementales. Description du milieu biologique. Volumes 1 et 2. Rapport préparé pour la Vice-Présidence Environnement Hydro-Québec, Service production, réfection et localisation, 241 p. + annexes."
+    - "Fournier, P. et L.-M. Soyez. 1988. Étude de l'utilisation faunique printanière du marais de Rosemère. Québec, Ministre du Loisir, de la Chasse et de la Pêche, Service de l'aménagement et de l'exploitation de la faune, Montréal, 13 p."
+    - "Gagnon, M., Y. Ménard et J.-F. La Rue. 1993. Caractérisation et évaluation des habitats du poisson dans la zone de transition saline du Saint-Laurent. Rapp. tech. can. sci. halieut. aquat. 1920: viii + 104 p."
+    - "Gendron, M. 1986. Rivière-des-Prairies. Aménagement d'un haut-fond, printemps 1986. Groupe de recherche SEEEQ ltée pour la Direction Environnement d'Hydro-Québec, 103 p."
+    - "Gendron, M. 1987. Rivière-des-Prairies. Suivi de l'aménagement d'un haut-fond, printemps 1987. Le Groupe de recherche SEEEQ ltée pour la Direction Environnement d'Hydro-Québec, 60 p."
+    - "Gendron, M. 1988. Rivière-des-Prairies. Suivi de l'aménagement du haut-fond, synthèse 1982-1988. Le Groupe de recherche SEEEQ ltée pour le Service de recherche en environnement et santé publique, Vice-Présidence Environnement, Hydro-Québec, 95 p."
+    - "Guay, G. et M. Couillard. 1985. Étude de l'utilisation printannière et autonmale des rapides de Lachine par les poissons. Environnement Illimité inc. pour le Secrétariat Archipel, 167 pages + annexes."
+    - "Laramée, P. 1983. La vie printanière dans les rapides de Lachine : Reproduction des poissons. Éco-Recherches inc. pour Vice-Présidence Environnement Hydro-Québec et le Secrétariat Archipel, 30 p. + 7 annexes."
+    - "Leclerc, J. 1983. La montaison de l'Alose savoureuse dans la rivière des Mille Iles en 1983. Rapport réalisé par Bio-Conseil inc. pour le compte du Service des études hydrauliques et écologiques, Ministère de l'Environnement du Québec, 45 p."
+    - "Letendre, M., B. Dumas et M. Beaudoin. 1990. Inventaire de la rivière des Prairies, au niveau de l'île de Pierre. Québec, Ministère du Loisir de la Chasse et de la Pêche, Service de l'aménagement et de l'exploitation de la faune, Montréal."
+    - "Provost, J., L. Verret et P. Dumont. 1984. L'Alose savoureuse au Québec : synthèse des connaissances biologiques et perspectives d'aménagement d'habitats. Canada, Ministère des Pêches et Océans, Direction de la recherche sur les pêches, Laboratoire de Québec, Rapport manuscrit canadien des sciences halieutiques et aquatiques no 1793, xi + 114 p."
+    - "Thérrien, J., H. Marquis, G Shooner et P. Bérubé.1991. Caractérisation des habitats recherchés pour la fraie des principales espèces de poisson du fleuve Saint-Laurent (Cornwall à Montmagny). Étude réalisée pas le Groupe Environnement Shooner inc. Pour le compte du Ministère des Pêches et des Océans du Canada. 16 p."

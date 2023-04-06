@@ -108,7 +108,7 @@ get_data0027 <- function() {
 
   # Transform projection
   # data0027 <- st_transform(data0027, crs = global_parameters()$crs)
-  message("Id 0027: Only dataset that is not transformed to project coordinate system since it is a raster and the transformation makes it curvilinear. Make sure that the integration script transforms the data to avoid errors.")
+  message("Id 0027: Dataset is not transformed to project coordinate system since it is a raster and the transformation makes it curvilinear. Make sure that the integration script transforms the data to avoid errors.")
   # _________________________________________________________________________ #
 
 

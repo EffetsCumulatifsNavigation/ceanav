@@ -46,7 +46,8 @@ show_source(lang = "fr")
 
 <br/>
 
-La caractérisation des zones inondables dans la zone d'étude a été faite en combinant les données de la base de données des zones à risque d'inondation [BDZI; @melcc2020] et de données sur la présence de zones inondables préparées par les MRC [@mamh2020]. Ces bases de données fournissent la délimitation de territoires côtiers à risque d'inondation sur le territoire québécois.
+La caractérisation des zones inondables dans la zone d'étude a été faite en combinant les données de la base de données des zones à risque d'inondation [BDZI; @melcc2020] et de données sur la présence de zones inondables préparées par les MRC [@mamh2020]. Ces bases de données fournissent la délimitation de territoires côtiers à risque d'inondation sur le territoire québécois selon une récurrence des crues sur 2 ans, 20 ans ou sur 100 ans. Nous avons utilisé l'ensemble de ces zones pour caractériser les zones inondables au sein de la zone d'étude.
+
 
 
 <br>
@@ -185,10 +186,53 @@ show_source(lang = "fr")
 
 Les données utilisées pour caractériser les gisements coquilliers dans la zone d'étude proviennent d'une description des stocks de mactre de Stimpson (*Mactromeris polynyma*) en milieux côtiers au Québec [@trottier2015; @mpo2019]. Les données fournissent la délimitation de gisements connus et commercialement exploités historiquement ou actuellement pour toute la région québécoise de l'estuaire et du golfe du Saint-Laurent. 
 
+Ces données ont été bonifiées à l'aide de données sur les aires de concentration connues exploitées ou non exploitées de la Clovisse arctique [*Mesodesma arctatum*; @mpo2022b], de le Couteau de l'Atlantique [*Ensis leei*; @mpo2022c] et de la Mye commune [*Mya arenaria*; @mpo2022e]. Ces données ont été conçues pour le Centre national des urgences environnementales (CNUE) et proviennent de divers inventaires et projets de recherche de Pêches et Océans Canada.
+
 <br>
 
 ```{r gisementcoquilliers, fig.cap = "Distribution des habitats dans le Saint-Laurent et le Saguenay - Gisements coquilliers", out.width = '100%', fig.link = "./figures/figures-integrated/habitat-gisement_coquilliers.png"}
 knitr::include_graphics("./figures/figures-integrated/habitat-gisement_coquilliers.png")
 ```
 
+<br>
+
+
+##### Herbiers aquatiques
+
+> ***Nous remercions Marc Mingelbier et Marie-Josée Gagnon du Ministère de l’Environnement, de la Lutte contre les changements climatiques, de la Faune et des Parcs pour les échanges et le soutien.***
+
+```{r herbier_data, results = 'asis'}
+uid <- meta$dataDescription$categories$accronyme %in% 
+          c("biovolume_herbier_faible",
+            "biovolume_herbier_modere",
+            "biovolume_herbier_eleve")
+herbsup <- round(meta$dataDescription$categories$superficie[uid],2)
+names(herbsup) <- meta$dataDescription$categories$accronyme[uid] 
+meta$dataDescription$categories$source[uid] %>%
+sapply(., function(x) stringr::str_split(x, ",")) %>%
+unlist() %>%
+unique() %>%
+sort() %>%
+show_source(lang = "fr")
+```
+
+<br/>
+
+Les biovolumes d'herbiers aquatiques ont été obtenus à partir de données sonar effectués en 2021 dans la portion fluviale de la zone d'étude [@melccfp2022]. Seules les localisations ayant affichant un biovolume supérieur à 0.1 ont été conservées pour représenter les herbiers au sein de l'évaluation. De plus, nous avons divisé les hebiers en trois catégories de biovolumes, soit faible (`r herbsup["biovolume_herbier_faible"]` $km^2$), modéré (`r herbsup["biovolume_herbier_modere"]` $km^2$) et élevé (`r herbsup["biovolume_herbier_eleve"]` $km^2$), en utilisant les 33e et 66e quantiles de la distribution des biovolumes observés au sein de la base de données complète. Les catégories de biovolumes d'herbiers aquatiques ont ensuite été intégrés à la grille d'étude en s'assurant que chaque cellule ne puisse inclure qu'une seule catégorie. Lorsque plusieurs catégories chevauchaient une même cellule, la catégorie la plus élevée a été utilisée. Il est à noter que ce travail est en cours et qu'il est prévu de caractériser d'autres zones au cours des prochaines années. 
+
+<br>
+
+```{r biovolumeherbiereleve, fig.cap = "Distribution des habitats dans le Saint-Laurent et le Saguenay - Biovolume herbiers aquatique - élevé", out.width = '100%', fig.link = "./figures/figures-integrated/habitat-biovolume_herbier_eleve.png"}
+knitr::include_graphics("./figures/figures-integrated/habitat-biovolume_herbier_eleve.png")
+```
+<br>
+
+```{r biovolumeherbiermodere, fig.cap = "Distribution des habitats dans le Saint-Laurent et le Saguenay - Biovolume herbiers aquatique - modéré", out.width = '100%', fig.link = "./figures/figures-integrated/habitat-biovolume_herbier_modere.png"}
+knitr::include_graphics("./figures/figures-integrated/habitat-biovolume_herbier_modere.png")
+```
+<br>
+
+```{r biovolumeherbierfaible, fig.cap = "Distribution des habitats dans le Saint-Laurent et le Saguenay - Biovolume herbiers aquatique - faible", out.width = '100%', fig.link = "./figures/figures-integrated/habitat-biovolume_herbier_faible.png"}
+knitr::include_graphics("./figures/figures-integrated/habitat-biovolume_herbier_faible.png")
+```
 <br>

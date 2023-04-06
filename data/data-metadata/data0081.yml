@@ -1,0 +1,23 @@
+data_description:
+  id: "0081"
+  name: "Aires de concentration connues de la Mye commune dans la zone intertidale de l’estuaire et du golfe du Saint-Laurent"
+  description: "La couche représente des aires de concentration de la Mye commune (Mya arenaria) exploitées (communément appelées « gisements ») ou non exploitées présentes dans la zone intertidale de l’estuaire et du golfe du Saint-Laurent de la région du Québec. Elle a été conçue pour le Centre national des urgences environnementales (CNUE) pour la préparation et l’intervention en cas de déversement pétrolier. Les aires de concentration ont été délimitées grâce à des inventaires réalisés par le Pêches et Océans Canada (MPO) entre les années 2000 et 2020. À noter que cette couche est tributaire des inventaires effectués et ne représente ainsi que les aires de Mye commune connues. Par exemple, pour la Haute-Côte-Nord, les inventaires ont été limités aux secteurs ouverts à la cueillette (à l'exception de 4 secteurs), mais il est connu que la Mye commune est présente aussi à l'extérieur de ces secteurs. De plus, peu d'informations étaient disponibles pour la Moyenne et la Basse-Côte-Nord."
+  access_date: 2023-01-06
+  temporal_start: 2000
+  temporal_end: 2020
+  contact_id: "0005"
+  url: "https://open.canada.ca/data/fr/dataset/83fc6c4f-8a13-4e42-8d22-4dbacb5fa8c3"
+  identifiant: "83fc6c4f-8a13-4e42-8d22-4dbacb5fa8c3"
+  availability: "open access"
+  citekey: mpo2022e
+  citation: 
+    - "Brulotte, S. 2011. Évaluation des stocks de mye commune des eaux côtières du Québec. Secr. can. de consult. sci. du MPO. Doc. de rech. 2011/044. x + 53 p."
+    - "Brulotte, S. 2018. Évaluation de la mye commune (Mya arenaria) des eaux côtières du Québec en 2016 – méthodologie et résultats. Secr. can. de consult. sci. du MPO. Doc. de rech. 2018/004. ix + 60 p."
+    - "Brulotte, S. 2020. Évaluation des stocks de la mye commune (Mya arenaria) des eaux côtières du Québec en 2019 – méthodologie et résultats. Secr. can. de consult. sci. du MPO. Doc. de rech. 2020/055. vii + 43 p."
+    - "Brulotte, S. 2022. Résultats des inventaires de gisements de mye commune (Mya arenaria) réalisés de 2016 à 2020 et mise à jour des résultats de ceux effectués de 2001 à 2014 au Québec. Secr. can. de consult. sci. du MPO. Doc. de rech. 2022/xxx. (en préparation)"
+    - "Brulotte, S. et M. Giguère. 2003. Évaluation d'un gisement de mye commune (Mya arenaria) de l'embouchure de la rivière Mingan, Québec, Rapp. can. ind. sci. halieut. aquat. No. 2511: xi + 58."
+    - "Brulotte, S., M. Giguère, S. Brillon et F. Bourque. 2006. Évaluation de cinq gisements de mye commune (Mya arenaria) aux Îles-de-la-Madeleine, Québec, de 2000 à 2003. Rapp. tech. can. sci. halieut. aquat. 2640 : xii + 92 p."
+    - "Brulotte, S., Giguère, M. et Duluc, C. 2015. Essais de techniques de captage du naissain de mye commune (Mya arenaria) sur la rive nord de l’estuaire et du golfe du Saint-Laurent. Rapp. tech. can. sci. halieut. aquat. 3084 : ix + 60 p."
+    - "Giguère, M., S. Brulotte et F. Hartog.2007. Évaluation de quelques gisements de mye commune (Mya arenaria) de la rive sud de l'estuaire du Saint-Laurent en 2005 et 2006. Rapp. can. ind. sci. halieut. aquat. No. 2738: xi + 107."
+    - "Giguère, M., S. Brulotte, M. Boudreau et M.-F. Dréan. 2008. Évaluation de huit gisements de mye commune (Mya arenaria) de la rive nord de l’estuaire du Saint-Laurent de 2002 à 2008. Rapp. tech. can. sci. halieut. aquat. 2821 : x + 91 p."
+    - "Roy, I., M. Giguère, S. Brulotte et M. Gagnon. 2003. Évaluation de douze gisements de mye commune (Mya arenaria) du sud de la Gaspésie, Rapp. Tech. can. sci. halieut. aquat. 2469: xvi + 140 p."

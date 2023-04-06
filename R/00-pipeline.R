@@ -14,10 +14,10 @@ pipeline <- function(
   pipeline_data = FALSE,
   pipeline_integration = FALSE,
   pipeline_vulnerability = FALSE,
-  pipeline_analysis = FALSE,
+  pipeline_analysis = TRUE,
   pipeline_figures = FALSE,
   pipeline_fiches = FALSE,
-  pipeline_report = TRUE,
+  pipeline_report = FALSE,
   pipeline_pkgsite = FALSE,
   pipeline_logo = FALSE
 ) {
@@ -104,6 +104,22 @@ pipeline <- function(
     get_data0070()
     get_data0071()
     get_data0072()
+    get_data0073()
+    get_data0074()
+    get_data0075()
+    get_data0076()
+    get_data0077()
+    get_data0078()
+    get_data0079()
+    get_data0080()
+    get_data0081()
+    get_data0082()
+    get_data0083()
+    get_data0084()
+    get_data0085()
+    get_data0086()
+    get_data0087()
+    get_data0088()
   }
 
 
@@ -280,9 +296,10 @@ pipeline <- function(
     # WARNING: Temporary pipeline to export report only to another repo.
     # TODO: This is not reproducible and should be removed from the pipeline as soon as this
     #       repository can be made available publicly
-    unlink("../Rapport/docs/", recursive = TRUE)
+    # unlink("../Rapport/docs/", recursive = TRUE) # uncomment
     unlink("./report_fr/figures/", recursive = TRUE)
-    file.copy("./report_fr/docs", "../Rapport/", recursive = TRUE)
+    # file.copy("./report_fr/docs", "../Rapport/", recursive = TRUE) # uncomment
+    # file.copy("./report_fr/docs/", "./", recursive = TRUE) # delete
     
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     # English report
@@ -307,9 +324,9 @@ pipeline <- function(
     # WARNING: Temporary pipeline to export report only to another repo.
     # TODO: This is not reproducible and should be removed from the pipeline as soon as this
     #       repository can be made available publicly
-    unlink("../Report/docs/", recursive = TRUE)
+    # unlink("../Report/docs/", recursive = TRUE)
     unlink("./report_en/figures/", recursive = TRUE)
-    file.copy("./report_en/docs", "../Report/", recursive = TRUE)
+    # file.copy("./report_en/docs", "../Report/", recursive = TRUE)
   }
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~

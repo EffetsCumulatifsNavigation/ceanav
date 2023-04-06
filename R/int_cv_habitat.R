@@ -40,6 +40,14 @@ cv_habitat <- function() {
   #   - Espèces fauniques à statut : 0059
   #   - Espèces floristiques à statut : 0060
   #
+  # Update hiver 2023:
+  #   - Frayères: "0073","0074","0075","0076"
+  #   - Espèces à statut LEP: "0077"
+  #   - Gisements coquilliers: ajouté "0078","0079","0080","0081"
+  #   - Herbiers aquatiques: 0084
+  #   - Sites d'alevinage: 0086
+  #   - Frayères: 0087
+  #
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
   # ------------------------------------------------------
   load_temp <- function(dat) {
@@ -265,7 +273,8 @@ cv_habitat <- function() {
 
   # ------------------------------------------------------
   # Sites d'alevinage : 0009
-  nm <- "0009"
+  # MAJ 2023-03: Replace 0009 with 0086
+  nm <- "0086"
   dat <- load_temp(nm)
   meta_temp <- meta_update(meta_temp, 
                            dat = nm, 
@@ -273,7 +282,7 @@ cv_habitat <- function() {
                            fr = "Sites d'alevinage", 
                            descr = "Sites d'alimentation et de protection pour les stades de vie initiaux des poissons (*e.g.* larves, alevins, juvéniles)", 
                            type = "Cycles de vie", 
-                           zonesNA = "alevinage",
+                           zonesNA = NA,
                            en = "Nursery sites", 
                            descr_en = "Feeding and protection sites for early life stages of fish (e.g. larvae, fry, juveniles)", 
                            type_en = "Life cycles")
@@ -282,15 +291,19 @@ cv_habitat <- function() {
 
   # ------------------------------------------------------
   # Frayères : 0010
-  nm <- "0010"
-  dat <- load_temp(nm)
+  # MAJ 2023-03: Replace 0010 with 0087
+  nm1 <- "0087"
+  nm2 <- c("0073","0074","0075","0076")
+  dat1 <- load_temp(nm1)
+  dat2 <- load_temp(nm2) |>
+          dplyr::filter(CLASSE_A == "Breeding area")
+  dat <- bind_rows(dat1,dat2)
   meta_temp <- meta_update(meta_temp, 
-                           dat = nm, 
+                           dat = c(nm1,nm2), 
                            accr = "frayere", 
                            fr = "Frayères", 
                            descr = "Sites de reproduction où des poissons femelles pondent des oeufs pour fécondation par les mâles", 
                            type = "Cycles de vie", 
-                           zonesNA = "frayere",
                            en = "Spawning sites", 
                            descr_en = "Spawning sites where female fish lay eggs for fertilization by males", 
                            type_en = "Life cycles")
@@ -359,17 +372,20 @@ cv_habitat <- function() {
 
   # ------------------------------------------------------
   # Gisements coquilliers : 0056, 0057
-  # Pétoncle uniquement dans l'estuaire, donc considation de la mactre uniquement (0057)
-  nm <- "0057"
+  # Pétoncle uniquement dans le Golfe, retrait 0056
+  # MAJ 2023: 
+  # 0078, 0079, 0080, 0081
+  # Mactre de l'Atlantique uniquement aux Îles de la Madeleine, retrait 0080
+  nm <- c("0057","0078","0079","0081")
   dat <- load_temp(nm)
   meta_temp <- meta_update(meta_temp, 
                            dat = nm, 
                            accr = "gisement_coquilliers", 
                            fr = "Gisements coquilliers", 
-                           descr = "Gisements connus et exploités de mactre de Stimpson des eaux côtières du Québec", 
+                           descr = "Gisements connus et exploités de mactre de Stimpson, de clovisse arctique, de couteau de l'Atlantique et de mye commune des eaux côtières du Québec", 
                            type = "Milieux naturels",
                            en = "Mollusk beds", 
-                           descr_en = "Known and harvested Stimpson’s surf clam deposits in Quebec coastal waters", 
+                           descr_en = "Known and harvested Stimpson’s surf clam, Arctic wedge clam, Atlantic razor clam, and softshell clam deposits in Quebec coastal waters", 
                            type_en = "Natural areas")
   habitat$gisement_coquilliers <- uid(dat)
   sup <- c(sup, superficie(dat))
@@ -562,6 +578,105 @@ cv_habitat <- function() {
                           type_en = "Species at risk")
   habitat$flore_menacee <- uid(dat2)
   sup <- c(sup, superficie(dat2))
+  
+  # ------------------------------------------------------
+  # Species at risk LEP: 0077
+  nm <- c("0077")
+  data0077 <- load_temp(nm)
+  
+  # Retirer béluga puisqu'on le considère déjà dans la section mammifères marins
+  data0077 <- dplyr::filter(
+    data0077, 
+    !Scientific_Name %in% "Delphinapterus leucas"
+  )
+  
+  # Diviser par statut
+  # Endangered
+  dat2 <- filter(data0077, SARA_Status == "Endangered")
+  meta_temp <- meta_update(meta_temp, 
+                           dat = nm, 
+                           accr = "lep_menacee", 
+                           fr = "Espèces menacées", 
+                           descr = "Espèces désignées menacées en vertu de la Loi sur les espèces en péril (LEP)", 
+                           type = "Espèces à statut",
+                           en = "Endangered species", 
+                           descr_en = "Species listed as Endangered under the Species at Risk Act (SARA)", 
+                           type_en = "Species at risk")
+  habitat$lep_menacee <- uid(dat2)
+  sup <- c(sup, superficie(dat2))
+
+  # Threatened
+  dat2 <- filter(data0077, SARA_Status == "Threatened")
+  meta_temp <- meta_update(meta_temp, 
+                           dat = nm, 
+                           accr = "lep_voie_disparition", 
+                           fr = "Espèces en voie de disparition", 
+                           descr = "Espèces désignées en voie de disparition en vertu de la Loi sur les espèces en péril (LEP)", 
+                           type = "Espèces à statut",
+                           en = "Threatened species", 
+                           descr_en = "Species listed as Threatened under the Species at Risk Act (SARA)", 
+                           type_en = "Species at risk")
+  habitat$lep_voie_disparition <- uid(dat2)
+  sup <- c(sup, superficie(dat2))
+  
+  # ------------------------------------------------------
+  # Herbires aquatiques : 0084
+  nm <- c("0084")
+  dat <- load_temp(nm)
+  # Diviser en biovolumes faible, modéré, élevés 
+  quant <- quantile(dat$BioVolume, probs = c(0,0.33,0.66,1)) |> unname()
+  dat_fbl <- dplyr::filter(dat, BioVolume <= quant[2])
+  dat_mod <- dplyr::filter(dat, BioVolume > quant[2] & BioVolume <= quant[3])
+  dat_elv <- dplyr::filter(dat, BioVolume > quant[3])
+  
+  # Biovolume faible
+  meta_temp <- meta_update(meta_temp, 
+                           dat = nm, 
+                           accr = "biovolume_herbier_faible", 
+                           fr = "Biovolume herbiers aquatique - faible", 
+                           descr = "Milieux à faible biovolume d'herbiers aquatiques", 
+                           type = "Milieux naturels", 
+                           en = "Aquatic grass beds biovolume - low", 
+                           descr_en = "Areas with low aquatic grass beds biovolume", 
+                           type_en = "Natural areas")
+  habitat$biovolume_herbier_faible <- uid(dat_fbl)
+  sup <- c(sup, superficie(dat_fbl))
+
+  # Biovolume modéré
+  meta_temp <- meta_update(meta_temp, 
+                           dat = nm, 
+                           accr = "biovolume_herbier_modere", 
+                           fr = "Biovolume herbiers aquatique - modéré", 
+                           descr = "Milieux à modéré biovolume d'herbiers aquatiques", 
+                           type = "Milieux naturels", 
+                           en = "Aquatic grass beds biovolume - moderate", 
+                           descr_en = "Areas with moderate aquatic grass beds biovolume", 
+                           type_en = "Natural areas")
+  habitat$biovolume_herbier_modere <- uid(dat_mod)
+  sup <- c(sup, superficie(dat_mod))
+
+  # Biovolume élevé
+  meta_temp <- meta_update(meta_temp, 
+                           dat = nm, 
+                           accr = "biovolume_herbier_eleve", 
+                           fr = "Biovolume herbiers aquatique - élevé", 
+                           descr = "Milieux à élevé biovolume d'herbiers aquatiques", 
+                           type = "Milieux naturels", 
+                           en = "Aquatic grass beds biovolume - high", 
+                           descr_en = "Areas with high aquatic grass beds biovolume", 
+                           type_en = "Natural areas")
+  habitat$biovolume_herbier_eleve <- uid(dat_elv)
+  sup <- c(sup, superficie(dat_elv))
+  
+  # Single grid cells cannot contain multiple categories. Modify accordingly.
+  habitat <- dplyr::mutate(
+    habitat,
+    biovolume_herbier_modere = ifelse(biovolume_herbier_eleve == 1, 0, biovolume_herbier_modere),
+    biovolume_herbier_faible = ifelse(biovolume_herbier_eleve == 1, 0, biovolume_herbier_faible)
+  ) |>
+  dplyr::mutate(
+    biovolume_herbier_faible = ifelse(biovolume_herbier_modere == 1, 0, biovolume_herbier_faible)
+  )
   # ------------------------------------------------------------------------- #
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #
@@ -598,13 +713,13 @@ cv_habitat <- function() {
   # <=~ - ~=> <=~ - ~=> <=~ - ~=> <=~ - ~=> #
   # --- Alevinage
   # Nombre
-  alevinage <- as.data.frame(table(data0009$Source), stringsAsFactors = FALSE)
+  alevinage <- as.data.frame(table(data0086$Source), stringsAsFactors = FALSE)
   colnames(alevinage) <- c("Source","Nombre_alevinage")
 
   # Superficie
   alevinage$Superficie_alevinage <- 0
   for(i in 1:nrow(alevinage)) {
-    dat <- data0009[data0009$Source == alevinage[i,"Source"], ] %>%
+    dat <- data0086[data0086$Source == alevinage[i,"Source"], ] %>%
            st_union() %>%
            st_area() %>%
            as.numeric(.) * 1e-6 %>%
@@ -614,13 +729,13 @@ cv_habitat <- function() {
 
   # --- Frayères
   # Nombre
-  frayere <- as.data.frame(table(data0010$Source), stringsAsFactors = FALSE)
+  frayere <- as.data.frame(table(data0087$Source), stringsAsFactors = FALSE)
   colnames(frayere) <- c("Source","Nombre_frayere")
 
   # Superficie
   frayere$Superficie_frayere <- 0
   for(i in 1:nrow(frayere)) {
-    dat <- data0010[data0010$Source == frayere[i,"Source"], ] %>%
+    dat <- data0087[data0087$Source == frayere[i,"Source"], ] %>%
            st_union() %>%
            st_area() %>%
            as.numeric(.) * 1e-6 %>%
@@ -628,10 +743,31 @@ cv_habitat <- function() {
     frayere$Superficie_frayere[i] <- dat
   }
 
+  # --- Frayères update 2023
+  # Nombre
+  maj_frayere <- bind_rows(data0073,data0074,data0075,data0076)
+  frayere2 <- as.data.frame(table(maj_frayere$REFERENCE), stringsAsFactors = FALSE)
+  colnames(frayere2) <- c("Source","Nombre_frayere")
+
+  # Superficie
+  frayere2$Superficie_frayere <- 0
+  for(i in 1:nrow(frayere2)) {
+    dat <- maj_frayere[maj_frayere$REFERENCE == frayere2[i,"Source"], ] %>%
+           st_union() %>%
+           st_area() %>%
+           as.numeric(.) * 1e-6 %>%
+           sum()
+    frayere2$Superficie_frayere[i] <- dat
+  }
+  
+  # -----
+  frayere <- bind_rows(frayere, frayere2)
+
   # -----
   dat <- left_join(frayere, alevinage, by = "Source")
   iid <- !alevinage$Source %in% dat$Source
   dat <- bind_rows(dat, alevinage[iid,])
+
 
   # -----
   meta$dataDescription$frayere_alevinage$Source <- dat$Source
@@ -737,6 +873,52 @@ cv_habitat <- function() {
   meta$dataDescription$CDPNQ$Flore$Scientific <- datFloreSP$species
   meta$dataDescription$CDPNQ$Flore$Common <- datFloreSP$common
   
+  # <=~ - ~=> <=~ - ~=> <=~ - ~=> <=~ - ~=> #
+  # --- Species at Risk (SARA/LEP)
+  # <=~ - ~=> <=~ - ~=> <=~ - ~=> <=~ - ~=> #
+  uid <- st_intersects(grid1p, data0077) %>% unlist() %>% unique() %>% sort()
+  dat <- data0077[uid, ] %>%
+         mutate(area = units::set_units(st_area(.), km^2)) %>%
+         st_drop_geometry()
+
+  nSp <- length(unique(dat$Scientific_Name))
+  nSite <- nrow(dat)
+
+  datLEP <- dat %>%
+         group_by(SARA_Status) %>%
+         summarize(species = length(unique(Scientific_Name)),
+                   area = round(as.numeric(sum(area)),2)) |>
+         mutate(LEP_Statut = SARA_Status) |>
+         mutate(
+           LEP_Statut = stringr::str_replace(LEP_Statut, "Endangered","Menacée"),
+           LEP_Statut = stringr::str_replace(LEP_Statut, "Threatened","En voie de disparition")
+         )
+         
+  datSp <- dat %>%
+    group_by(SARA_Status) %>%
+    summarize(species = unique(Scientific_Name), 
+              commonEn = unique(Common_Name_EN),
+              commonFr = unique(Common_Name_FR)) %>%
+    mutate(
+      LEP_Statut = SARA_Status,
+      commonEn = str_to_sentence(commonEn),
+      commonFr = str_to_sentence(commonFr),
+      LEP_Statut = stringr::str_replace(LEP_Statut, "Endangered","Menacée"),
+      LEP_Statut = stringr::str_replace(LEP_Statut, "Threatened","En voie de disparition")
+    )
+
+  # -----
+  meta$dataDescription$LEP$NombreSites <- nSite
+  meta$dataDescription$LEP$NombreEspeces <- nSp
+  meta$dataDescription$LEP$details$LEP <- datLEP$LEP_Statut
+  meta$dataDescription$LEP$details$SARA <- datLEP$SARA_Status
+  meta$dataDescription$LEP$details$species <- datLEP$species
+  meta$dataDescription$LEP$details$area <- datLEP$area
+  meta$dataDescription$LEP$Especes$LEP <- datSp$LEP_Statut
+  meta$dataDescription$LEP$Especes$SARA <- datSp$SARA_Status
+  meta$dataDescription$LEP$Especes$Scientific <- datSp$species
+  meta$dataDescription$LEP$Especes$Common_Fr <- datSp$commonFr
+  meta$dataDescription$LEP$Especes$Common_En <- datSp$commonEn
 
   # <=~ - ~=> <=~ - ~=> <=~ - ~=> <=~ - ~=> #
   # --- Zosteres

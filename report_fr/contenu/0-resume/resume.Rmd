@@ -44,7 +44,7 @@ Dans le cadre de la présente évaluation, le rassemblement des données nécess
 La caractérisation des [composantes valorisées](#cvportrait) a quant à elle été effectuée à partir de l'intégration de `r src(cv)` bases de données et résulté en la description de `r length(unique(cv$title))` composantes valorisées divisées en `r nrow(cv)` sous-catégories : `r ct2(cv)`. 
 Enfin, une approche combinant divers métriques d’exposition et de sensibilité -- *e.g.* fréquence des stresseurs, impacts trophiques, résistance, résilience, statut légaux -- a été utilisée afin de caractériser la [vulnérabilité relative](#vulnportrait) de l'ensemble des catégories de composantes valorisées à l'ensemble des catégories des stresseurs environnementaux.
 
-Nous présentons ici les constats généraux issus de l'évaluation des effets cumulatifs en points de forme. Des constats additionnels sont présentés au sein du rapport et pourraient également être faits en explorant davantage les résultats obtenus; nous invitons le lecteur à s'attarder à la section \@ref(resultats) du rapport pour davantage d'informations et à explorer les figures qui y sont présentées plus en détails.
+Nous présentons ici les constats généraux issus de l'évaluation des effets cumulatifs en points de forme. Des constats additionnels sont présentés au sein du rapport et pourraient également être faits en explorant davantage les résultats obtenus; nous invitons le lecteur à s'attarder à la section \@ref(resultats) du rapport pour davantage d'informations et à explorer les figures qui y sont présentées plus en détails. L'ensemble des données consultées et utilisées pour l'évaluation des effets cumulatifs peuvent également être consultées à l'[annexe 1](#annexe1) et les mises à jour à l'évaluation qui ont été effectuées sont détaillées à l'[annexe 10](#annexe10).
 
 <br/>
 
@@ -72,7 +72,7 @@ Nous présentons ici les constats généraux issus de l'évaluation des effets c
 
 - **Stresseurs environnementaux les plus importants**
   - La navigation et la pollution maritime ont les effets prédits les plus importants à l'échelle régionale puisqu'ils sont les stresseurs les plus répandus au sein de la zone d'étude;
-  - Les pêches commerciales ont des effets importants sur un nombre limité de composantes valorisées considérées, comme les gisements coquilliers et certains sites d'intérêt culturels, patrimoniaux et archéologiques;
+  - Les pêches commerciales affectent certaines catégories de composantes valorisées plus intensément, comme plusieurs sites d'intérêt et des habitats du milieu fluvial et les gisements coquilliers du milieu maritime. La pêche commerciale en milieu fluvial semble avoir un effet global supérieur aux activités de pêche en milieu maritime, sans doute dû à l'étendue spatiale restreinte du secteur fluvial comparativement à celui du secteur maritime;
   - Les sites d'ancrage, les déversements accidentels et les activités de dragage ont des effets localisés sur certaines composantes valorisées. Ces stresseurs, bien que moins répandus, ajoutent leurs effets à ceux de la navigation et de la pollution maritime et sont généralement présents au sein des milieux qui sont les plus affectés par les effets cumulatifs (*e.g.* lac Saint-Pierre).
 
   <br/>
@@ -87,5 +87,7 @@ Nous présentons ici les constats généraux issus de l'évaluation des effets c
   <br/>
 
 - **Régions administratives les plus affectées**
-  - Les régions administratives du secteur fluvial sont les plus affectées par les effets cumulatifs des activités maritimes, un constat particulièrement important pour la Montérégie. Ces effets sont influencés majoritairement par la navigation et principalement par le transport de marchandise. (*e.g.* pétrolier, cargaison sèche, cargo et porte-conteneurs);
+  - Les régions administratives du secteur fluvial sont les plus affectées par les effets cumulatifs des activités maritimes, un constat particulièrement important pour la Montérégie et le Centre-du-Québec. Ces effets sont influencés majoritairement par la navigation marchande (e.g. pétrolier, cargaison sèche, cargo et porte-conteneurs), la pêche commerciale et la pollution maritime;
   - La Côte Nord est la région administrative la plus affectée au sein du secteur maritime, principalement dû aux effets de la navigation sur les mammifères marins.
+
+

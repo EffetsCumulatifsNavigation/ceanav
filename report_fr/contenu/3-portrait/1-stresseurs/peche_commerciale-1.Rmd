@@ -1,11 +1,16 @@
 ### Pêche commerciale {#pechecommerciale}
 
+> ***Nous remercions Marc Mingelbier, Paschale Noël Bégin et Marie-Josée Gagnon du Ministère de l’Environnement, de la Lutte contre les changements climatiques, de la Faune et des Parcs pour les échanges et le soutien pour la caractérisation des pêches au sein du secteur fluvial de la zone d'étude.***
+
+
 ```{r peche_setup, echo = FALSE, results = 'asis'}
 meta <- read_yaml("../data/data-metadata/int_st_peche_commerciale.yml")
 show_source(meta$rawData, lang = "fr")
 ```
 
 <br/>
+
+#### Secteur maritime 
 
 L'intensité des activités de pêche commerciale au sein de la zone d'étude a été
 évaluée à l'aide de données provenant du programme de journaux de bord de Pêches
@@ -75,7 +80,8 @@ de données des journaux de bord [@mpo2021b]
 
 ```{r pecheEnginFreq}
 tab <- as.data.frame(meta$dataDescription$categories) %>%
-       select(francais, description, frequence)
+       filter(source == "0033,0034,0035") %>%
+       select(francais, description, frequence) 
 beg <- meta$dataDescription$temporal$start
 end <- meta$dataDescription$temporal$end
 
@@ -143,3 +149,12 @@ knitr::include_graphics("./figures/figures-integrated/peche_commerciale-PLB.png"
 ```
 
 <br>
+
+#### Secteur fluvial
+
+Lors de la mise à jour de mars 2023, des données caractérisant les pêches commerciales au sein du secteur fluvial de la zone d'étude ont été ajoutées à l'évaluation des effets cumulatifs. Ces données proviennent d'une caractérisation des principales pressions exercées sur le Saint-Laurent [@mingelbier2012]. Des données de pêches commerciales à l'aide de verveux au printemps, à l'été et à l'automne avant 2011 ont été caractérisées au sein de segments du fleuve corresponsant à des unités de 5 km et divisant le Saint-Laurent entre les rives nord et sud de la rive jusqu'à la voie navigable. La pêche commerciale a été calculée en nombre moyen de verveux déployés par jour au sein de chaque segment; les données ont ensuite été transformées en un indice d'une valeur de 1, 3 ou 5, correspondant à des intensités faibles, moyennes ou fortes, respectivement. Ces valeurs ont directement été intégrées au sein de la grille d'étude pour l'évaluation des effets cumulatifs. Il est toutefois important de mentionner que ces données ne sont pas exhaustive de l'ensemble des activités de pêches commerciales en milieu fluvial, bien qu'elles correspondent aux informations les plus à jour qui étaient à notre disposition. 
+
+
+```{r pechefleuve, fig.cap = "Intensité des activités de pêche commerciale dans le Saint-Laurent - Pêches commerciales secteur fluvial", out.width = '100%', fig.link = "./figures/figures-integrated/peche_commerciale-peche_fleuve.png"}
+knitr::include_graphics("./figures/figures-integrated/peche_commerciale-peche_fleuve.png")
+```

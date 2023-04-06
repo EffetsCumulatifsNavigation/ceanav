@@ -35,7 +35,8 @@ vuln_habitat <- function() {
     # 2. Sites of importance for flora and fauna
   # TODO: remove this code once the process of dividing habitats and sites has been completed
   rm <- c("site_alevinage","frayere","oiseaux","faune_susceptible","faune_vulnerable",
-          "faune_menacee","flore_susceptible","flore_vulnerable","flore_menacee")
+          "faune_menacee","flore_susceptible","flore_vulnerable","flore_menacee",
+          "lep_menacee", "lep_voie_disparition")
   hab <- hab[!hab$accronyme %in% rm, ]
   # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -80,6 +81,7 @@ vuln_habitat <- function() {
   st_eq <- equiv("DNH", "Fishing: demersal non-habitat-modifying high bycatch")
   st_eq <- equiv("PLB", "Fishing: pelagic low bycatch")
   st_eq <- equiv("PHB", "Fishing: pelagic high bycatch")
+  st_eq <- equiv("peche_fleuve","Fishing: demersal non-habitat-modifying low bycatch")
   st_eq <- equiv("pollution_maritime", "Ocean pollution (from ships, ports, etc.)")
   st_eq <- equiv("naufrage", "Ocean dumping: shipwrecks")
   st_eq <- equiv("PASSENGER.FERRY.RO.RO", "Shipping (commercial, cruise, ferry)")
@@ -106,7 +108,9 @@ vuln_habitat <- function() {
   hb_eq <- equiv("rocheuse_sans_escarpement", "rocky_intertidal")
   hb_eq <- equiv("terrasse_fluviale", "saltmarsh")
   hb_eq <- equiv("terrasse_plage", "beach")
-  # TODO: hb_eq <- equiv("herbier_aquatique", "Algal zone")
+  hb_eq <- equiv("biovolume_herbier_faible", "algal_zone;eelgrass")
+  hb_eq <- equiv("biovolume_herbier_modere", "algal_zone;eelgrass")
+  hb_eq <- equiv("biovolume_herbier_eleve", "algal_zone;eelgrass")
   # TODO: hb_eq <- equiv("marais_maritime","Salt marsh")
   # TODO: hb_eq <- equiv("marecage_intertidal","Salt marsh")
   # TODO: hb_eq <- equiv("bas_estran_rocheux","Rocky intertidal")
@@ -158,6 +162,10 @@ vuln_habitat <- function() {
 
   # Observation terrasse_plage = NA for now. Change to 0
   vulnerability_habitat["Observation","terrasse_plage"] <- 0
+
+  # Biovolumes herbiers aquatiques
+  vulnerability_habitat[,"biovolume_herbier_faible"] <- vulnerability_habitat[,"biovolume_herbier_eleve"] * .8
+  vulnerability_habitat[,"biovolume_herbier_modere"] <- vulnerability_habitat[,"biovolume_herbier_eleve"] * .9
 
   # Normalize between 0 and 1
   norm <- function(x, dat) round(x / max(dat, na.rm = TRUE), 4)

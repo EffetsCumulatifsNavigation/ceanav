@@ -1,0 +1,13 @@
+data_description:
+  id: "0085"
+  name: "Seasonal distribution and concentration of four baleen whale species in the St. Lawrence Estuary."
+  description: "The Estuary and the Gulf of St. Lawrence are feeding grounds for several North Atlantic whales, including minke, humpback, endangered blue whales and fin whales which are designated by COSEWIC as Special Concern. Observations of these species collected during aerial and boat surveys conducted between 1995 to 2017 were used to produce maps presenting raw sightings, relative densities from kernel analyses and predicted relative probability of occurrence from spatial distribution modelling."
+  access_date: 2023-01-12
+  temporal_start: 2022
+  temporal_end: 2022
+  contact_id: 
+    - "0069"
+  availability: "available"
+  citekey: "mosnier2022"
+  citation: "Mosnier, A., Gosselin, J.-F., and Lesage, V. 2022. Seasonal distribution and concentration of four baleen whale species in the St. Lawrence Estuary based on 22 years of DFO observation data. DFO Can. Sci. Advis. Sec. Res. Doc. 2020/053. iv + 119 p."
+ 

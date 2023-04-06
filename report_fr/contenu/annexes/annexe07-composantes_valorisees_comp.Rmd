@@ -11,6 +11,8 @@ tab <- data.frame(
     "Espèces à statut : Espèces floristiques menacées",
     "Espèces à statut : Espèces floristiques susceptibles",
     "Espèces à statut : Espèces floristiques vulnérables",
+    "Espèces à statut : Espèces menacées LEP",
+    "Espèces à statut : Espèces en voie de disparition LEP",
     "Milieux naturels : Meuble sans falaise",
     "Milieux naturels : Rocheuse sans escarpement",
     "Milieux naturels : Rocheuse sans falaise",
@@ -26,10 +28,15 @@ tab <- data.frame(
     "Milieux naturels : Gisements coquilliers",
     "Milieux naturels : Zostères",
     "Milieux naturels : Herbiers aquatiques",
-    "Milieux naturels : Zones inondables"
+    "Milieux naturels : Zones inondables",
+    "Milieux naturels : Biovolume herbiers aquatique - faible",
+    "Milieux naturels : Biovolume herbiers aquatique - modéré",
+    "Milieux naturels : Biovolume herbiers aquatique - élevé"
   ),
 
   clark = c(
+    "NA",
+    "NA",
     "NA",
     "NA",
     "NA",
@@ -51,7 +58,10 @@ tab <- data.frame(
     "Nearshore soft bottom",
     "Seagrass",
     "Kelp forest",
-    "Rocky intertidal, tidal flats, saltmarsh"
+    "Rocky intertidal, tidal flats, saltmarsh",
+    "Algal zone, Eelgrass",
+    "Algal zone, Eelgrass",
+    "Algal zone, Eelgrass"
   ))
 
 tab %>%

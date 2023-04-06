@@ -1,0 +1,15 @@
+data_description:
+  id: "0083"
+  name: "Cartographie des principales pressions exercées sur le Saint-Laurent en 2012"
+  description: "Cartographie de six pressions susceptibles d’avoir des impacts sur les poissons dans le fleuve Saint-Laurent: agriculture, artificialisation des berges, navigation commerciale, pêche commerciale, régularisation du débit, industrialisation/urbanisation. Un indice a été calculé pour chacune d’elles et aux fins de comparaison, les valeurs ont été remplacées par les cotes 1, 3 ou 5 correspondant aux niveaux faible, moyen ou fort. Pour cartographier les pressions, ces calculs ont été effectués dans chaque segment du fleuve, correspondant à des unités de 5 km de long partant des rives nord ou sud et allant jusqu’à la voie navigable."
+  access_date: 2022-12-20
+  temporal_start: 2012
+  temporal_end: 2012
+  contact_id: 
+    - "0012"
+    - "0067"
+    - "0068"
+  availability: "available"
+  citekey: "mingelbier2012"
+  citation: "Mingelbier M, Reyjol Y, Brodeur P, Côté C, Dumont P, Lecomte F, Mailhot Y, Paradis Y, Richard G, Vachon N (2012) Cartographie des principales pressions exercées sur le Saint-Laurent en 2012."
+ 

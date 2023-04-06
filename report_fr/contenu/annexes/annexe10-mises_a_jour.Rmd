@@ -1,0 +1,103 @@
+# Annexe 10 {.unnumbered #annexe10}
+
+#### ***Mises à jour*** {.unnumbered}
+
+##### ***2023-03-31*** {.unnumbered}
+
+*Sommaire des modifications:*
+
+- ***Intégration de données*** (consultez le [portrait de la zone d'étude](#portrait) et l'[annexe 1](#annexe1) pour plus de détails sur les données). 
+  - Mise à jour de stresseurs et/ou de composantes valorisées
+    - Composantes valorisées
+      - Habitats floristiques et fauniques
+        - [Frayères secteur maritime](#frayères-et-sites-dalevinage) (id: 0073, 0074, 0075, 0076)
+        - [Gisements coquiliers](#gisements-coquilliers) (id: 0078, 0079, 0080, 0081)
+        - [Sites d'alevinage](#frayères-et-sites-dalevinage) (id: 0086 remplace id: 0009)
+        - [Frayères](#frayères-et-sites-dalevinage) (id: 0087 remplace id: 0010)
+      - [Mammifères marins](#mammiferesmarins)
+        - Baleines à fanon (id: 0085 remplace espèces dans id:0027):
+          - Petit rorqual (*Balaenoptera acutorostrata*)
+          - Rorqual à bosse (*Megaptera novaeangliae*)
+          - Rorqual bleu (*Balaenoptera musculus*)
+          - Rorqual commun (*Balaenoptera physalus*)
+      - Sites d’intérêt culturels, patrimoniaux et archéologiques
+        - [Zones de protection](#milieux-protégés) (id: 0082)
+    - Stresseurs
+      - [Pollution maritime](#pollutionmaritime)
+        - Mise à jour pour considérer les pêches du secteur fluvial
+
+  - Nouvelles catégories de stresseurs et/ou de composantes valorisées
+    - Composantes valorisées
+      - Habitats floristiques et fauniques
+        - [Espèces aquatiques à statut en vertu de la Loi sur les espèces en péril](#espèces-fauniques-et-floristiques-à-statut) (id: 0077)
+        - [Biovolumes herbiers aquatiques](#herbiers-aquatiques) (id: 0084)    
+      - Sites d’intérêt culturels, patrimoniaux et archéologiques
+        - [Épaves](#épaves) (id: 0088)
+    - Stresseurs 
+      - Pêches commerciales
+        - [Pêches commerciales secteur fluvial](#secteur-fluvial) (id: 0083)
+
+<br>
+
+- [***Vulnérabilité***](#vulnportrait)
+  - Pêches commerciales secteur fluvial
+    - Habitats floristiques et fauniques
+      - Milieux naturels: équivalence attribuée aux pêches démersales non destructives, prises accessoires élevées qui contiennent les pêches avec casiers.
+      - Habitats d’importance pour les espèces fauniques et floristiques (id: 0063)
+        - Les valeurs de vulnérabilité attribuées aux activités de pêches commerciales dans le secteur maritime ont été utilisées pour les pêches commerciales en milieux fluvial
+    - Intégrité des berges: vulnérabilité nulle face aux pêches commerciales
+    - Mammifères marins: vulnérabilité nulle face aux pêches commerciales en milieu fluvial (id: 0064)
+    - Sites d’intérêt culturels, patrimoniaux et archéologiques: vulnérabilité égale à 1 comme pour tous les autres stresseurs
+  - Biovolumes herbiers aquatiques
+    - Vulnérabilité obtenue à partir de @kappel2012 en utilisant les valeurs de vulnérabilité des zostères et zones algales
+    - Diminution de la vulnérabilité de 10% par catégorie de biovolumes (élevé = 100%; modéré = 90%; faible = 80%)
+  - Espèces à statut en vertu de la Loi sur les espèces en péril
+    - Approche similaire avec les espèces à statut du CDPNQ
+
+<br>
+
+- ***Interprétation des résultats***
+  - [Stresseurs et hotspots cumulés](#strcumresult)
+    - Pêche commerciale maintenant présente au sein du secteur fluvial.
+    - Pollution maritime augmentée au sein du secteur fluvial dû à la pêche commerciale
+  - [Composantes valorisées cumulées](#cvcumresult)
+    - Interprétation inchangée
+  - [Exposition cumulée](#cumexpresult)
+    - Interprétation inchangée pour la distribution de l'exposition cumulée
+    - Augmentation de l'intensité de l'exposition cumulée au sein du secteur fluvial pour les habitats et les sites d'intérêt dû à l'intégration de la pêche commerciale qui chevauche des milieux qui étaient déjà exposés à haute intensité
+    - Exposition des mammifères marins plus étendue du Saguenay vers le Golfe dû à l'intégration des nouveaux modèles de distribution 
+  - [Effets cumulatifs](#cearesult)
+    - Constats similaires à l'exposition cumulée
+  - [Chemins d'effet](#chemins-deffet)
+    - Augmentation du nombre de chemins d'effet prédits, mais les effets relatifs moyens demeurent inchangés
+    - La pêche commerciale en milieu fluvial semble avoir un effet global supérieur aux activités de pêche en milieu maritime, sans doute dû à l'étendue spatiale restreinte du secteur fluvial comparativement à celui du secteur maritime
+    - Effets prédits des pêches commerciales en milieu fluvial principalement sur les sites d'intérêt et quelques habitats. Il y a toutefois un nombre important de sites d'intérêt dans cette région et leur vulnérabilité est considérée pour tous les stresseurs considérés. 
+    - Herbiers aquatiques parmi les habitats les plus affectés. Il faut toutefois considérer que la caractérisation des herbiers aquatiques n'est pas exhaustive pour l'ensemble de la zone d'étude. Il est donc impossible d'émettre des conclusions pour l'ensemble des herbiers aquatiques de la zone d'étude et les conclusions doivent se limiter aux zones qui ont été caractérisées. 
+  - [Régions administratives](#régions-administratives)
+    - La pêche commerciale affiche un effet important au sein du secteur fluvial, et ce particulièrement pour les régions du Centre-du-Québec, de Lanaudière et de la Mauricie
+    
+<br>
+
+- [***Sommaire***](#sommaire)
+  - Stresseurs environnementaux les plus importants
+    - Les pêches commerciales affectent certaines catégories de composantes valorisées plus intensément, comme plusieurs sites d'intérêt et des habitats du milieu fluvial et les gisements coquilliers du milieu maritime. La pêche commerciale en milieu fluvial semble avoir un effet global supérieur aux activités de pêche en milieu maritime, sans doute dû à l'étendue spatiale restreinte du secteur fluvial comparativement à celui du secteur maritime;
+  - Régions administratives les plus affectées
+    - Les régions administratives du secteur fluvial sont les plus affectées par les effets cumulatifs des activités maritimes, un constat particulièrement important pour la Montérégie et le Centre-du-Québec. Ces effets sont influencés majoritairement par la navigation marchande (e.g. pétrolier, cargaison sèche, cargo et porte-conteneurs), la pêche commerciale et la pollution maritime;
+  
+<br>
+
+- ***Perspectives***
+  - [Bonifier le portrait](#donneesperspective)
+    - Herbiers aquatiques
+      - Conservé dans les perspectives, mais il est indiqué que l'intégration a débuté avec des données qui permettent de caractériser une partie de la zone d'étude et que des données supplémentaires pourraient être ajoutées dans le futur.
+    - Pêches commerciales dans le secteur fluvial 
+      - Conservées dans les perspective, mais il est maintenant indiqué que la caractérisation nouvellement intégrée devrait être remplacée par une caractérisation plus fine et à jour lors d'une prochaine itération de l'évaluation.
+    - Épaves
+      - Retrait de la perspective sur les épaves
+  
+
+
+    
+    
+    
+    

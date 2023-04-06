@@ -1,0 +1,19 @@
+data_description:
+  id: "0082"
+  name: "Aires protégées publiques et privées"
+  description: "Couche de données intégrées qui inclue les aires protégées inscrites au Registre des Aires protégées du Québec, les territoires d’importance, le Réseau de Milieux Naturels protégés (RMN) en plus des habitats fauniques et des écosystèmes forestiers exceptionnels qui ne sont pas inscrits au registre. Les multiparties ont été séparées en partie et les coordonnées des centroides de chaque polygone ont été ajoutées pour servir de localisation gps. Cette couche a été intégrée le 2022/10/13."
+  access_date: 2023-01-10
+  temporal_start: .na.character
+  temporal_end: .na.character
+  contact_id: "0066"
+  availability: "available"
+  citekey: 
+    - melcc2022
+    - rmnp2022
+    - mffp2022
+    - mffp2021b
+  citation: 
+    - "Registre des aires protégées au Québec ainsi que ces territoires d’importance, 2022. Ministère de l’Environnement et de la Lutte contre les changements climatiques. Données de SIG [ArcMap, ESRICanada], Québec (Québec)." 
+    - "Réseau de milieux naturels protégés, 2022. Répertoire des sites de conservation volontaire du Québec (RMN), Données de SIG [ArcMap, ESRICanada], Québec (Québec)."
+    - "Écosystèmes Forestiers Exceptionnels, 2022. Ministère de la forêt, de la faune et des Parcs. Données de SIG [ArcMap, ESRICanada], Québec (Québec)."
+    - "Habitats fauniques, 2021. Ministère de la forêt, de la faune et des Parcs. Données de SIG [ArcMap, ESRICanada], Québec (Québec)."

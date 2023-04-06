@@ -37,7 +37,8 @@ vuln_faune_flore <- function() {
     # 2. Sites of importance for flora and fauna
   # TODO: remove this code once the process of dividing habitats and sites has been completed
   rm <- c("site_alevinage","frayere","oiseaux","faune_susceptible","faune_vulnerable",
-          "faune_menacee","flore_susceptible","flore_vulnerable","flore_menacee")
+          "faune_menacee","flore_susceptible","flore_vulnerable","flore_menacee",
+          "lep_menacee", "lep_voie_disparition")
   hab <- hab[hab$accronyme %in% rm, ]
   # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
   # ------------------------------------------------------------------------- #
@@ -60,7 +61,9 @@ vuln_faune_flore <- function() {
 
 
   # Espèces à statut
-  uid <- data0063$cv %in% c("susceptible","vulnerable","menace")
+  uid <- data0063$cv %in% c(
+    "susceptible","vulnerable","menace","lep_menacee", "lep_voie_disparition"
+  )
   statut <- data0063[uid, c("categories","cv","frequence","population","statut")]
   statut$vulnerabilite <- rowSums(statut[, c("frequence","population","statut")])
 
@@ -99,8 +102,8 @@ vuln_faune_flore <- function() {
   vulnerability_faune_flore[,'flore_susceptible'] <- vuln$susceptible
   vulnerability_faune_flore[,'flore_vulnerable'] <- vuln$vulnerable
   vulnerability_faune_flore[,'flore_menacee'] <- vuln$menace
-
-
+  vulnerability_faune_flore[,'lep_menacee'] <- vuln$lep_menacee
+  vulnerability_faune_flore[,'lep_voie_disparition'] <- vuln$lep_voie_disparition
   # _____________________________________________________________________________ #
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~= #

@@ -2,8 +2,7 @@
 
 ##### Spawning and nursery sites
 
-> ***We thank Marc Mingelbier at the Quebec Ministry of Forests, Wildlife and Parks for the discussions and support.***
-
+> ***We thank Marc Mingelbier and Marie-Josée Gagnon from the Ministère de l’Environnement, de la Lutte contre les changements climatiques, de la Faune et des Parcs du Québec for the discussions and support.***
 
 ```{r frayere_data, results = 'asis'}
 uid <- meta$dataDescription$categories$accronyme %in% c("site_alevinage","frayere")
@@ -19,9 +18,10 @@ show_source(lang = "en")
 
 Spawning sites are environments critical to the maintenance of fish populations; indeed, disturbances to these sites, or to species behaviour during the spawning period, can have major impacts on fish population dynamics. Similarly, feeding and protection sites for early life stages of fish (*e.g.* larvae, fry, juveniles) are much more susceptible to disturbances to their habitat. These sites, called nursery areas, are thus critical to fish survival. This means that the protection of spawning and nursery sites is of major importance since they constitute a bottleneck for fish population dynamics.
 
-The data used to characterize spawning and nursery areas come from an *in situ* observation data integration exercise covering the period from 1974 to 2019 [@mffp2020; Table \@ref(tab:frayerealevinage)]. The identified spawning and nursery sites aggregate data for 71 and 49 fish species, respectively, and cover an area of approximately 275 and 230 $km^2$ within the study area. The data aggregate confirmed or potential spawning and nursery sites where habitats were deemed suitable for fish spawning or rearing. Therefore, it is likely that these data are partial and should not be considered an exhaustive description of spawning and nursery sites in the study area. The data are composed of points and polygons. We added a 100 $m$ buffer zone around the points, and then incorporated the presence of spawning sites within our 1 $km^2$ study grid.
+The data used to characterize spawning and nursery areas in the study area come from an *in situ* observation data integration exercise covering the period from 1974 to 2019 [@mffp2020]. Those were updated through the 2023 update with more recent data [@melccfp2023a; @melccfp2023b; Tableau \@ref(tab:frayerealevinage)].The identified spawning and nursery sites aggregate data for 71 and 49 fish species, respectively, and cover an area of approximately 275 and 230 $km^2$ within the study area. The data aggregate confirmed or potential spawning and nursery sites where habitats were deemed suitable for fish spawning or rearing. Therefore, it is likely that these data are partial and should not be considered an exhaustive description of spawning and nursery sites in the study area. The data are composed of points and polygons. We added a 100 $m$ buffer zone around the points, and then incorporated the presence of spawning sites within our 1 $km^2$ study grid.
 
-It should be noted that the data used covers only the fluvial portion of the study area; additional data should be added to properly characterize the entire study area.
+
+The data used to characterize spawning areas in the marine sector come from the integration of 4 datasets from the Department of Fisheries and Oceans Canada describing the spawning areas of American shad [*Alosa sapidissima*; @mpo2019c], lake sturgeon [*Acipenser fulvescens*; @mpo2019d], Atlantic sturgeon [*Acipenser oxyrhynchus*; @mpo2019e] and rainbow smelt [*Osmerus mordax*; @mpo2019f]. Those data were integrated in the study grid along with data from the fluvial sector.
 
 <br/>
 

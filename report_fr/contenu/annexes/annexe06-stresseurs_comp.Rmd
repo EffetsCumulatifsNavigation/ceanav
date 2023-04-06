@@ -28,6 +28,7 @@ tab <- data.frame(
     "Pêche commerciale : Démersale non-destructive, prises accessoires élevées",
     "Pêche commerciale : Pélagique prises accessoires faibles",
     "Pêche commerciale : Pélagique prises accessoires élevées",
+    "Pêche commerciale : Pêches commerciales au sein du secteur fluvial",
     "Naufrages : Sites de naufrage",
     "Pollution maritime : Pollution maritime"
   ),
@@ -56,6 +57,7 @@ tab <- data.frame(
     "Fishing: demersal, non-habitat-modifying, high bycatch",
     "Fishing: pelagic, low bycatch",
     "Fishing: pelagic, high bycatch",
+    "Fishing: demersal, non-habitat-modifying, high bycatch",
     "Ocean dumping: shipwrecks",
     "Ocean pollution from ships and ports"
   ))

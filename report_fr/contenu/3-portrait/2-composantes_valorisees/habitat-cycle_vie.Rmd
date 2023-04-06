@@ -2,7 +2,7 @@
 
 ##### Frayères et sites d'alevinage
 
-> ***Nous remercions Marc Mingelbier du Ministère des Forêts, de la Faune et des Parcs du Québec pour les échanges et le soutien.***
+> ***Nous remercions Marc Mingelbier et Marie-Josée Gagnon du Ministère de l’Environnement, de la Lutte contre les changements climatiques, de la Faune et des Parcs du Québec pour les échanges et le soutien.***
 
 ```{r frayere_data, results = 'asis'}
 uid <- meta$dataDescription$categories$accronyme %in% c("site_alevinage","frayere")
@@ -16,11 +16,11 @@ show_source(lang = "fr")
 
 <br/>
 
-Les frayères sont des milieux essentiels au maintien de populations de poissons; en effet, des perturbations à ces sites, ou au comportement des espèces pendant la période de fraie, peuvent avoir des impacts majeurs sur la dynamique des populations de poissons. Similairement, les sites d'alimentation et de protection pour les stades de vie initiaux des poissons (*e.g.* larves, alevins, juvéniles), qui sont beaucoup plus susceptibles aux effets de perturbations à leur habitat. Ces sites, nommés aires d'alevinage, sont ainsi essentiels à leur survie. La protection des frayères et des aires d'alevinage est ainsi d'une importance majeure puisqu'ils constituent un goulot d'étranglement pour la dynamique des populations de poissons.
+Les frayères sont des milieux essentiels au maintien de populations de poissons; en effet, des perturbations à ces sites, ou au comportement des espèces pendant la période de fraie, peuvent avoir des impacts majeurs sur la dynamique des populations de poissons. Similairement, les sites d'alimentation et de protection pour les stades de vie initiaux des poissons (*e.g.* larves, alevins, juvéniles) sont beaucoup plus susceptibles aux effets de perturbations à leur habitat. Ces sites, nommés aires d'alevinage, sont ainsi essentiels à leur survie. La protection des frayères et des aires d'alevinage est ainsi d'une importance majeure puisqu'elles constituent un goulot d'étranglement pour la dynamique des populations de poissons.
 
-Les données utilisées pour caractériser les frayères et les aires d'alevinage proviennent d'un exercice d'intégration de données d'observation *in situ* couvrant la période de 1974 à 2019 [@mffp2020; Tableau \@ref(tab:frayerealevinage)]. Les frayères et aires d'alevinage identifiées regroupent des données pour 71 et 49 espèces de poissons, respectivement, et couvrent une superficie d'environ 275 et 230 $km^2$ au sein de la zone d'étude. Les données regroupent des frayères et des aires d'alevinage confirmées ou potentielles lorsque les habitats étaient jugés propices à la fraie ou l'alevinage des poissons. Il est donc probable que ces données soient partielles et ne devraient pas être considérées comme un portrait exhaustif des frayères et des aires d'alevinage dans la zone d'étude. Les données sont composées de points et de polygones. Nous avons ajouté une zone tampon de 100 $m$ autour des points, puis avons intégré la présence de frayères au sein de notre grille d'étude de 1 $km^2$.
+Les données utilisées pour caractériser les frayères et les aires d'alevinage au sein de la zone d'étude proviennent d'un exercice d'intégration de données d'observation *in situ* couvrant la période de 1974 à 2019 [@mffp2020]. Ces données ont été mises à jour en mars 2023 à l'aide de données plus récentes et bonifiées [@melccfp2023a; @melccfp2023b; Tableau \@ref(tab:frayerealevinage)]. Les données regroupent des frayères et des aires d'alevinage confirmées ou potentielles lorsque les habitats étaient jugés propices à la fraie ou l'alevinage des poissons. Il est donc probable que ces données soient partielles et ne devraient pas être considérées comme un portrait exhaustif des frayères et des aires d'alevinage dans la zone d'étude. Les données sont composées de points et de polygones. Nous avons ajouté une zone tampon de 100 $m$ autour des points, puis avons intégré la présence de frayères au sein de notre grille d'étude de 1 $km^2$.
 
-Il est à noter que les données utilisées couvrent uniquement la portion fluviale de la zone d'étude; d'autres données devraient être ajoutées afin de caractériser convenablement l'entièreté de la zone d'étude.
+Les données utilisées pour caractériser les frayères dans le secteur maritime de la zone d'étude proviennent de l'intégration de 4 jeux de données différents provenant de Pêches et Océans Canada, décrivant les aires de reproduction de l'alose savoureuse [*Alosa sapidissima*; @mpo2019c], de l'esturgeon jaune [*Acipenser fulvescens*; @mpo2019d], de l'esturgeon noir [*Acipenser oxyrhynchus*; @mpo2019e] et de l'éperlan arc-en-ciel [*Osmerus mordax*; @mpo2019f]. Ces données ont été intégrées à la grille d'étude conjointement aux données du secteur fluvial. 
 
 <br/>
 

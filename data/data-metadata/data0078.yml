@@ -1,0 +1,13 @@
+data_description:
+  id: "0078"
+  name: "Aires de concentration connues de la Clovisse arctique dans l’estuaire et le golfe du Saint-Laurent"
+  description: "La couche représente des aires de concentration connues de la Clovisse arctique (Mesodesma arctatum) exploitées (communément appelées 'gisements') ou non exploitées de l'estuaire et du golfe du Saint-Laurent, région du Québec. Elle a été conçue pour le Centre national des urgences environnementales (CNUE) pour la préparation et l'intervention en cas de déversements pétroliers. Les aires de concentration ont été délimitées grâce à des inventaires réalisés par Pêches et Océans Canada (MPO) entre les années 2000 et 2020 et des données de divers projets de recherche du MPO. Pour plus d’information sur la façon dont la couche de données a été construite, consultez les métadonnées incluses dans son fichier de forme (.shp), particulièrement la section 'Lineage'."
+  access_date: 2023-01-06
+  temporal_start: 2000
+  temporal_end: 2020
+  contact_id: "0005"
+  url: "https://open.canada.ca/data/fr/dataset/b0633101-18e6-483a-b668-4e1f76789696"
+  identifiant: "b0633101-18e6-483a-b668-4e1f76789696"
+  availability: "open access"
+  citekey: mpo2022b
+  citation: "Pêches et Océans Canada (2022). Aires de concentration connues de la Clovisse arctique dans l’estuaire et le golfe du Saint-Laurent. url: https://open.canada.ca/data/fr/dataset/b0633101-18e6-483a-b668-4e1f76789696."
