@@ -28,7 +28,7 @@ tab <- data.frame(
     "Natural areas: Mollusk beds",
     "Natural areas: Eelgrass",
     "Natural areas: Aquatic grass beds",
-    "Natural areas: Floodplain zones"
+    "Natural areas: Floodplain zones",
     "Natural areas: Aquatic grass beds biovolume - low",
     "Natural areas: Aquatic grass beds biovolume - moderate",
     "Natural areas: Aquatic grass beds biovolume - high"
